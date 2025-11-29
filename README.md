@@ -8,6 +8,9 @@
 
 # 维护方式
 
+#＃ 内容编写
+大部分的插件已启用，案例可参考：[参考案例](https://squidfunk.github.io/mkdocs-material/reference/)
+
 ## 拉取代码
 
 ```bash
