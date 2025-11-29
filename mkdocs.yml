@@ -14,9 +14,20 @@ theme:
   icon:
     repo: simple/github
   features:
-    - content.action.edit
-    - content.action.view
+    - content.action.edit # 编辑按钮
+    - content.action.view # 查看按钮
+    - navigation.instant # 即时加载
+    - navigation.instant.prefetch # 预加载
+    - navigation.instant.progress # 指示进度器
+    - navigation.tracking # 锚点跟踪
+    - navigation.path # 面包屑导航
+    - toc.follow # 目录
+    - navigation.top # 返回顶部按钮
+    - search.suggest # 搜索建议
+    - search.highlight # 搜索高亮
+    - search.share # 搜索分享
 
+    
 # repo
 repo_url: https://github.com/qsnctf/qsnctf.github.io
 repo_name: qsnctf/qsnctf.github.io
@@ -24,12 +35,39 @@ edit_uri: edit/docs/docs/
 
 # plugins
 plugins:
-  - git-committers:
+  - git-committers: # 贡献人
       repository: qsnctf/qsnctf.github.io
       branch: main
-  - git-authors
+  - git-authors # 展示作者
+  - search # 内置搜索
+  - tags # 标签
 
 
 docs_dir: docs
 site_dir: site
 
+extra:
+  generator: false
+  social:
+    - icon: simple/qq
+      link: https://qm.qq.com/q/Ibz8EXRckO
+    - icon: fontawesome/brands/github
+      link: https://github.com/qsnctf    
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:lqn@sierting.com
+
+
+copyright: Copyright 青少年CTF &copy; 2025 版权所有
+
+# markdown 拓展
+markdown_extensions:
+# 详细参考 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
+  - abbr # 添加词汇表 https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-a-glossary 添加缩写：https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-abbreviations
+  - admonition # 警告 https://squidfunk.github.io/mkdocs-material/reference/admonitions/#usage
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
