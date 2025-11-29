@@ -20,7 +20,7 @@ theme:
 # repo
 repo_url: https://github.com/qsnctf/qsnctf.github.io
 repo_name: qsnctf/qsnctf.github.io
-edit_uri: edit/main/docs/
+edit_uri: edit/docs/docs/
 
 # plugins
 plugins:
