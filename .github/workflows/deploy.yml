@@ -13,11 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout docs branch
+        uses: actions/checkout@v3
         with:
           ref: docs
 
-      - uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
@@ -25,28 +27,31 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material mkdocs-git-committers-plugin-2 mkdocs-git-authors-plugin
 
-      - name: Build site (no dirty workspace)
+      - name: Build site into temporary directory
         run: |
-          mkdocs build --site-dir ../_site_output
+          mkdocs build --site-dir /tmp/site_output
 
       - name: Deploy to main
         run: |
+          # ensure we're in repository root
+          cd "$GITHUB_WORKSPACE"
+
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          # 获取 main 分支
+          # fetch main branch
           git fetch origin main
 
-          # 切换到 main
-          git switch main
+          # switch to main
+          git checkout main
 
-          # 删除旧内容（保留 .github）
-          find . -maxdepth 1 ! -name '.' ! -name '.github' -exec rm -rf {} \;
+          # remove old files except .github
+          find . -maxdepth 1 ! -name '.' ! -name '.git' ! -name '.github' -exec rm -rf {} \;
 
-          # 复制构建输出
-          cp -r ../_site_output/* .
+          # copy new site content
+          cp -r /tmp/site_output/* .
 
-          # GitHub Pages 防 Jekyll
+          # prevent Jekyll processing
           echo > .nojekyll
 
           git add .
