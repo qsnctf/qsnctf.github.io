@@ -148,4 +148,10 @@ nav:
   - 基础知识:
       - 什么是 CTF: basic/intro.md
       - CTF的历史: basic/history.md
+  - Misc: Misc/index.md
+  - Crypto: Crypto/index.md
+  - Web: Web/index.md
+  - Reverse: Reverse/index.md
+  - Pwn: Pwn/index.md
+  - 工具: Tools/index.md
   - 关于: about.md
