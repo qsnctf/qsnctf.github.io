@@ -15,20 +15,38 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: docs
+
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - run: |
-          pip install mkdocs mkdocs-material mkdocs-git-committers-plugin-2 mkdocs-git-authors-plugin    # 如果你用 theme/material
-      - run: |
-          mkdocs build
-      - run: |
+
+      - name: Install MkDocs & plugins
+        run: |
+          pip install mkdocs mkdocs-material mkdocs-git-committers-plugin-2 mkdocs-git-authors-plugin
+
+      - name: Build MkDocs
+        run: mkdocs build
+
+      - name: Deploy to main
+        run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+
+          # ⭐⭐ 必须有这行：拉取 main 分支，否则无法切换
+          git fetch origin main
+
+          # 切换到 main
           git switch main
-          rm -rf .   # 小心，不要删除隐藏 .github/ 目录
+
+          # 删除全部旧文件（保留 .github）
+          find . -maxdepth 1 ! -name '.' ! -name '.github' -exec rm -rf {} \;
+
+          # 复制新构建内容
           cp -r site/* .
-          echo .nojekyll > .nojekyll
+
+          # GitHub Pages 防 Jekyll
+          echo > .nojekyll
+
           git add .
-          git commit -m "Auto-build from docs"
+          git commit -m "Auto-build from docs" || echo "No changes to commit"
           git push origin main
