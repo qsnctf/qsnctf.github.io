@@ -1,27 +1,27 @@
 @echo off
 echo ======================================
-echo   MkDocs Material è‡ªåŠ¨éƒ¨ç½²è„šæœ¬
+echo   MkDocs Material ×Ô¶¯²¿Êğ½Å±¾
 echo ======================================
 echo.
 
-REM 1. æäº¤ docs åˆ†æ”¯çš„å†…å®¹
-echo æäº¤å½“å‰åˆ†æ”¯æ‰€æœ‰æ›´æ”¹...
+REM 1. Ìá½» docs ·ÖÖ§µÄÄÚÈİ
+echo Ìá½»µ±Ç°·ÖÖ§ËùÓĞ¸ü¸Ä...
 git add .
 git commit -m "update docs"
 echo.
 
-REM 2. æ¨é€ docs åˆ†æ”¯
-echo æ¨é€ docs åˆ†æ”¯åˆ°è¿œç¨‹...
+REM 2. ÍÆËÍ docs ·ÖÖ§
+echo ÍÆËÍ docs ·ÖÖ§µ½Ô¶³Ì...
 git push origin docs --force
 echo.
 
-REM 3. æ‰§è¡Œ mkdocs éƒ¨ç½²åˆ° main åˆ†æ”¯
-echo å¼€å§‹æ„å»ºå¹¶éƒ¨ç½²åˆ° main åˆ†æ”¯...
+REM 3. Ö´ĞĞ mkdocs ²¿Êğµ½ main ·ÖÖ§
+echo ¿ªÊ¼¹¹½¨²¢²¿Êğµ½ main ·ÖÖ§...
 mkdocs gh-deploy --remote-branch=main --force
 echo.
 
 echo ======================================
-echo      éƒ¨ç½²å®Œæˆï¼ç½‘ç«™å·²æ›´æ–°
+echo      ²¿ÊğÍê³É£¡ÍøÕ¾ÒÑ¸üĞÂ
 echo   https://qsnctf.github.io
 echo ======================================
 pause
