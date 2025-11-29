@@ -142,3 +142,5 @@ markdown_extensions:
 nav:
   - 首页: index.html
   - 起始页: home.md
+  - 基础知识:
+      - 什么是 CTF: basic/intro.md
