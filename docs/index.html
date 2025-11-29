@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>青少年CTF文库</title>
+  <meta name="description" content="适合你快速入门的CTF百科全书" />
+  <link rel="icon" href="/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- 核心变量 --- */
+    :root {
+      --primary-text: #1f2937;
+      --secondary-text: #6b7280;
+      --accent-color: #0066ff;
+      --accent-hover: #0052cc;
+      --glass-bg: rgba(255, 255, 255, 0.65); /* 卡片半透明白 */
+      --glass-border: rgba(255, 255, 255, 0.8);
+      --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    }
+
+    body, html {
+      margin: 0; padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--primary-text);
+      line-height: 1.6;
+      width: 100%;
+      overflow-x: hidden;
+      /* 这是一个 fallback 背景，如果 canvas 加载失败 */
+      /* background-color: #f9fafb;  */
+    }
+
+    a { text-decoration: none; color: var(--accent-color); transition: 0.2s; }
+    a:hover { color: var(--accent-hover); }
+
+    /* --- 层级 1: 静态网格背景 (CSS 实现) --- */
+    .bg-grid {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -2;
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px; /* 网格大小 */
+      background-color: #ffffff; /* 底色纯白 */
+    }
+
+    /* --- 层级 2: 动态粒子画布 --- */
+    #canvas-particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+
+    /* --- 层级 3: 内容区域 --- */
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      padding: 140px 20px 80px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin: 0 0 20px;
+      color: #111827;
+      letter-spacing: -0.03em;
+    }
+
+    /* 渐变标题 */
+    .title-gradient {
+      background: linear-gradient(135deg, #111827 0%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.25rem;
+      color: var(--secondary-text);
+    }
+
+    /* 按钮组 */
+    .btn-group {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .btn-primary {
+      background: var(--accent-color);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+      color: #fff;
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.5); /* 半透明背景 */
+      backdrop-filter: blur(4px);
+      color: var(--accent-color);
+      border-color: rgba(0, 102, 255, 0.3);
+    }
+    .btn-outline:hover {
+      background: var(--accent-color);
+      color: #fff;
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+    /* --- Features Section (Glassmorphism) --- */
+    .features-container {
+      padding: 60px 20px 100px;
+    }
+
+    .features {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      /* 强制 4 列 */
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .feature {
+      /* 毛玻璃核心代码 */
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px); 
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: var(--card-shadow);
+      transition: all 0.4s ease;
+      text-align: left;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.85); /* 悬停时更白一点，增加可读性 */
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border-color: var(--accent-color);
+    }
+
+    .feature h3 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* 标题下的装饰短线 */
+    .feature h3::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 3px;
+      background: var(--accent-color);
+      transition: width 0.3s;
+      border-radius: 2px;
+    }
+    
+    
+
+    .feature p {
+      color: var(--secondary-text);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 0.9rem;
+      color: #888;
+      /* 确保 footer 也是半透明的，与环境融合 */
+      background: linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0) 100%);
+    }
+
+    footer a { color: #555; font-weight: 600; margin: 0 8px;}
+    footer a:hover { color: var(--accent-color); }
+
+    /* --- 响应式 --- */
+    @media (max-width: 1024px) {
+      .features { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2.5rem; }
+      .features { grid-template-columns: 1fr; }
+      .btn { width: 100%; box-sizing: border-box; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+
+  <canvas id="canvas-particles"></canvas>
+
+  <div class="content-wrapper">
+    
+    <div class="hero">
+      <h1><span class="title-gradient">青少年CTF文库</span></h1>
+      <p>适合你快速入门的 CTF 百科全书，让网安学习之旅清晰、高效、专业。</p>
+
+      <div class="btn-group">
+        <a class="btn btn-primary" href="/home/">📘 开始学习</a>
+        <a class="btn btn-outline" href="https://www.qsnctf.com" target="_blank">⚔️ 练习平台</a>
+        <a class="btn btn-outline" href="https://tools.qsnctf.com" target="_blank">🛠️ 在线工具</a>
+        <a class="btn btn-outline" href="https://bbs.qsnctf.com" target="_blank">💬 社区论坛</a>
+      </div>
+    </div>
+
+    <div class="features-container">
+      <div class="features">
+        <div class="feature">
+          <h3>全面知识体系</h3>
+          <p>覆盖 Web、逆向、密码、Pwn、杂项等方向，从基础到进阶，构建完整技能树。</p>
+        </div>
+
+        <div class="feature">
+          <h3>实战题解与教程</h3>
+          <p>精选高质量题目与深度解析，拒绝死记硬背，注重逻辑复现与思路启发。</p>
+        </div>
+
+        <div class="feature">
+          <h3>CTF 训练生态</h3>
+          <p>无缝衔接练习平台、在线工具与社区讨论，打造学、练、赛一体化的成长闭环。</p>
+        </div>
+
+        <div class="feature">
+          <h3>社区驱动协作</h3>
+          <p>与全国各地的 CTF 爱好者一起讨论、组队、切磋，在交流中共同进步。</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 青少年CTF文库 | 社区驱动 
+      <br><br>
+      加入我们：
+      <a href="https://qm.qq.com/q/wX8VEyRq6I" target="_blank">QQ群</a> ·
+      <a href="https://space.bilibili.com/2066710972" target="_blank">Bilibili</a>
+    </footer>
+
+  </div>
+
+  <script>
+    /* 动态粒子脚本 (Light Mode)
+      特点：浅灰色粒子，鼠标互动时连线变蓝
+    */
+    const canvas = document.getElementById('canvas-particles');
+    const ctx = canvas.getContext('2d');
+
+    let w, h;
+    let particles = [];
+    
+    // 配置
+    const config = {
+      count: 80, // 粒子数量
+      radius: 2,
+      distance: 120, // 连线距离
+      mouseDist: 150, // 鼠标互动距离
+      color: 'rgba(31, 41, 55, 0.15)', // 粒子颜色 (深灰，低透明度)
+      lineColor: 'rgba(0, 102, 255, 0.05)', // 普通连线颜色
+      activeColor: 'rgba(0, 102, 255, 0.2)' // 激活连线颜色 (蓝色)
+    };
+
+    const mouse = { x: null, y: null };
+
+    // 监听窗口大小和鼠标
+    window.addEventListener('resize', init);
+    window.addEventListener('mousemove', e => {
+      mouse.x = e.x;
+      mouse.y = e.y;
+    });
+    // 鼠标移出窗口时清除坐标
+    window.addEventListener('mouseout', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    function init() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+      createParticles();
+    }
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * w;
+        this.y = Math.random() * h;
+        // 速度稍慢一点，保持优雅
+        this.vx = (Math.random() - 0.5) * 0.8;
+        this.vy = (Math.random() - 0.5) * 0.8;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        // 边界反弹
+        if(this.x < 0 || this.x > w) this.vx *= -1;
+        if(this.y < 0 || this.y > h) this.vy *= -1;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, config.radius, 0, Math.PI * 2);
+        ctx.fillStyle = config.color;
+        ctx.fill();
+      }
+    }
+
+    function createParticles() {
+      particles = [];
+      let count = window.innerWidth < 768 ? 40 : config.count;
+      for(let i=0; i<count; i++) particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, w, h);
+
+      for (let i = 0; i < particles.length; i++) {
+        let p1 = particles[i];
+        p1.update();
+        p1.draw();
+
+        // 粒子间连线
+        for (let j = i; j < particles.length; j++) {
+          let p2 = particles[j];
+          let dx = p1.x - p2.x;
+          let dy = p1.y - p2.y;
+          let dist = Math.sqrt(dx*dx + dy*dy);
+
+          if (dist < config.distance) {
+            ctx.beginPath();
+            ctx.strokeStyle = config.lineColor;
+            ctx.lineWidth = 1;
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          }
+        }
+
+        // 鼠标连线互动
+        if (mouse.x) {
+          let dx = mouse.x - p1.x;
+          let dy = mouse.y - p1.y;
+          let dist = Math.sqrt(dx*dx + dy*dy);
+
+          if (dist < config.mouseDist) {
+            ctx.beginPath();
+            // 距离越近，线条越明显
+            ctx.strokeStyle = config.activeColor; 
+            ctx.lineWidth = 1.5;
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+
+    // 启动
+    init();
+    animate();
+  </script>
+</body>
+</html>

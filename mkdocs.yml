@@ -1,5 +1,6 @@
 site_name: 青少年CTF文库
 site_url: https://qsnctf.github.io
+site_description: 适合你快速入门的CTF百科全书
 theme:
   name: material
   language: zh # 中文模式
@@ -7,21 +8,43 @@ theme:
   favicon: assets/logo.png
   # 主题配色
   palette:
-    scheme: default
-    primary: white
-    accent: blue
+    - scheme: default
+      primary: white
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  # 字体配置        
+  font:
+    text: Noto Sans
+    code: Source Code Pro
   # 图标
   icon:
     repo: simple/github
   features:
     - content.action.edit # 编辑按钮
     - content.action.view # 查看按钮
+    - content.code.annotate # 代码注释
+    - content.code.copy # 复制代码
+    - content.tabs.link # 标签链接
+    - content.tooltips  # 工具提示
+    - navigation.indexes # 导航索引
     - navigation.instant # 即时加载
+    - navigation.tabs # 导航标签
     - navigation.instant.prefetch # 预加载
     - navigation.instant.progress # 指示进度器
     - navigation.tracking # 锚点跟踪
     - navigation.path # 面包屑导航
-    - toc.follow # 目录
+    - navigation.top # 导航顶部
+    - navigation.tracking # 导航跟踪
+    - toc.follow # 目录跟随
     - navigation.top # 返回顶部按钮
     - search.suggest # 搜索建议
     - search.highlight # 搜索高亮
@@ -51,10 +74,23 @@ extra:
   social:
     - icon: simple/qq
       link: https://qm.qq.com/q/Ibz8EXRckO
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/2066710972
     - icon: fontawesome/brands/github
       link: https://github.com/qsnctf    
     - icon: fontawesome/solid/paper-plane
       link: mailto:lqn@sierting.com
+
+extra_javascript:
+  # - javascripts/mathjax.js
+  # - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  # ----- katex -----
+  - javascripts/katex.js 
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
+  - https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+
+
 
 
 copyright: Copyright 青少年CTF &copy; 2025 版权所有
@@ -69,5 +105,40 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - tables
-  - toc:
-      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      #linenums: true # 显示行号
+      #auto_title: true # 显示编程语言名称
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# nav
+nav:
+  - 首页: index.html
+  - 起始页: home.md
