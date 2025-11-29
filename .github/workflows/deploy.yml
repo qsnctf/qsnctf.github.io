@@ -1,0 +1,34 @@
+name: Build MkDocs and deploy to main
+
+on:
+  push:
+    branches:
+      - docs
+
+permissions:
+  contents: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: docs-src
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: |
+          pip install mkdocs mkdocs-material mkdocs-git-committers-plugin-2 mkdocs-git-authors-plugin    # 如果你用 theme/material
+      - run: |
+          mkdocs build
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git switch main
+          rm -rf .   # 小心，不要删除隐藏 .github/ 目录
+          cp -r site/* .
+          echo .nojekyll > .nojekyll
+          git add .
+          git commit -m "Auto-build from docs-src"
+          git push origin main
