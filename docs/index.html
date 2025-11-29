@@ -192,6 +192,20 @@
       transition: width 0.3s;
       border-radius: 2px;
     }
+    header {
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    header .nav-links a {
+      margin-right: 16px;
+      color: #0066ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
     
     
 
@@ -226,7 +240,16 @@
   </style>
 </head>
 <body>
-
+<header>
+    <div class="logo"><strong>青少年CTF文库</strong></div>
+    <div class="nav-links">
+      <a href="/home/">开始学习</a>
+      <a href="https://www.qsnctf.com" target="_blank">练习平台</a>
+      <a href="https://tools.qsnctf.com" target="_blank">在线工具</a>
+      <a href="https://bbs.qsnctf.com" target="_blank">社区论坛</a>
+      <a href="https://github.com/qsnctf" target="_blank">GitHub</a>
+    </div>
+  </header>
   <div class="bg-grid"></div>
 
   <canvas id="canvas-particles"></canvas>
