@@ -1,0 +1,8 @@
+site_name: 青少年CTF文库
+site_url: https://qsnctf.github.io
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: white
+    accent: blue
