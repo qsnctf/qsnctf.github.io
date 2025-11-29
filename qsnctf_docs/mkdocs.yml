@@ -2,7 +2,34 @@ site_name: 青少年CTF文库
 site_url: https://qsnctf.github.io
 theme:
   name: material
+  language: zh # 中文模式
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  # 主题配色
   palette:
     scheme: default
     primary: white
     accent: blue
+  # 图标
+  icon:
+    repo: simple/github
+  features:
+    - content.action.edit
+    - content.action.view
+
+# repo
+repo_url: https://github.com/qsnctf/qsnctf.github.io
+repo_name: qsnctf/qsnctf.github.io
+edit_uri: edit/main/docs/
+
+# plugins
+plugins:
+  - git-committers:
+      repository: qsnctf/qsnctf.github.io
+      branch: main
+  - git-authors
+
+
+docs_dir: docs
+site_dir: site
+
