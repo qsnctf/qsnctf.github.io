@@ -60,7 +60,7 @@ flag{S0m3_RanD0m_Str1nG}
 
 #### 📚Jeopardy 题目主要类别
 
-目前 CTF 解题模式主要包含 6 大类别：
+目前 CTF 解题模式主要包含 8 大类别：
 
 - **Web** — 网站与网络攻防
 - **Reverse** — 程序逆向分析
