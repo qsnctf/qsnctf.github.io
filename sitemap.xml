@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://qsnctf.github.io/about/</loc>
+         <loc>https://docs.qsnctf.com/about/</loc>
          <lastmod>2025-11-29</lastmod>
     </url>
     <url>
-         <loc>https://qsnctf.github.io/home/</loc>
+         <loc>https://docs.qsnctf.com/home/</loc>
          <lastmod>2025-11-29</lastmod>
     </url>
     <url>
-         <loc>https://qsnctf.github.io/Crypto/</loc>
+         <loc>https://docs.qsnctf.com/Crypto/</loc>
          <lastmod>2025-11-29</lastmod>
     </url>
     <url>
-         <loc>https://qsnctf.github.io/Misc/</loc>
+         <loc>https://docs.qsnctf.com/Misc/</loc>
          <lastmod>2025-11-29</lastmod>
     </url>
     <url>
-         <loc>https://qsnctf.github.io/Misc/encoding/ASCII/</loc>
+         <loc>https://docs.qsnctf.com/Misc/encoding/ASCII/</loc>
          <lastmod>2025-11-29</lastmod>
     </url>
     <url>
-         <loc>https://qsnctf.github.io/Misc/encoding/Hex/</loc>
+         <loc>https://docs.qsnctf.com/Misc/encoding/Hex/</loc>
          <lastmod>2025-11-29</lastmod>
     </url>
     <url>
-         <loc>https://qsnctf.github.io/Pwn/</loc>
+         <loc>https://docs.qsnctf.com/Pwn/</loc>
          <lastmod>2025-11-29</lastmod>
     </url>
     <url>
-         <loc>https://qsnctf.github.io/Reverse/</loc>
+         <loc>https://docs.qsnctf.com/Reverse/</loc>
          <lastmod>2025-11-29</lastmod>
     </url>
     <url>
-         <loc>https://qsnctf.github.io/Tools/</loc>
+         <loc>https://docs.qsnctf.com/Tools/</loc>
          <lastmod>2025-11-29</lastmod>
     </url>
     <url>
-         <loc>https://qsnctf.github.io/Web/</loc>
+         <loc>https://docs.qsnctf.com/Web/</loc>
          <lastmod>2025-11-29</lastmod>
     </url>
     <url>
-         <loc>https://qsnctf.github.io/basic/history/</loc>
+         <loc>https://docs.qsnctf.com/basic/history/</loc>
          <lastmod>2025-11-29</lastmod>
     </url>
     <url>
-         <loc>https://qsnctf.github.io/basic/intro/</loc>
+         <loc>https://docs.qsnctf.com/basic/intro/</loc>
          <lastmod>2025-11-29</lastmod>
     </url>
 </urlset>
