@@ -146,9 +146,13 @@ nav:
   - 首页: index.html
   - 起始页: home.md
   - 基础知识:
-      - 什么是 CTF: basic/intro.md
-      - CTF的历史: basic/history.md
-  - Misc: Misc/index.md
+    - 什么是 CTF: basic/intro.md
+    - CTF的历史: basic/history.md
+  - Misc: 
+    - 介绍: Misc/index.md
+    - 编码:
+      - ASCII: Misc\encoding\ASCII.md
+      - Hex: Misc\encoding\Hex.md
   - Crypto: Crypto/index.md
   - Web: Web/index.md
   - Reverse: Reverse/index.md
