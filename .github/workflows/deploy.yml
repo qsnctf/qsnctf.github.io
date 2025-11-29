@@ -11,6 +11,7 @@ permissions:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
         with:
@@ -24,25 +25,26 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material mkdocs-git-committers-plugin-2 mkdocs-git-authors-plugin
 
-      - name: Build MkDocs
-        run: mkdocs build
+      - name: Build site (no dirty workspace)
+        run: |
+          mkdocs build --site-dir ../_site_output
 
       - name: Deploy to main
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          # ⭐⭐ 必须有这行：拉取 main 分支，否则无法切换
+          # 获取 main 分支
           git fetch origin main
 
           # 切换到 main
           git switch main
 
-          # 删除全部旧文件（保留 .github）
+          # 删除旧内容（保留 .github）
           find . -maxdepth 1 ! -name '.' ! -name '.github' -exec rm -rf {} \;
 
-          # 复制新构建内容
-          cp -r site/* .
+          # 复制构建输出
+          cp -r ../_site_output/* .
 
           # GitHub Pages 防 Jekyll
           echo > .nojekyll
