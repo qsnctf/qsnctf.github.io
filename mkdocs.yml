@@ -151,8 +151,8 @@ nav:
   - Misc: 
     - 介绍: Misc/index.md
     - 编码:
-      - ASCII: Misc\encoding\ASCII.md
-      - Hex: Misc\encoding\Hex.md
+      - ASCII: Misc/encoding/ASCII.md
+      - Hex: Misc/encoding/Hex.md
   - Crypto: Crypto/index.md
   - Web: Web/index.md
   - Reverse: Reverse/index.md
