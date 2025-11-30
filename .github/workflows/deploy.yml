@@ -17,6 +17,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: docs
+          clean: true   # <— prevents dirty tree
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -28,32 +29,27 @@ jobs:
           pip install mkdocs mkdocs-material mkdocs-git-committers-plugin-2 mkdocs-git-authors-plugin
 
       - name: Build site into temporary directory
+        env:
+          MKDOCS_GIT_COMMITTERS_CACHE: '0'   # <— prevents cache writing
         run: |
           mkdocs build --site-dir /tmp/site_output
 
       - name: Deploy to main
         run: |
-          # ensure we're in repository root
           cd "$GITHUB_WORKSPACE"
 
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          # fetch main branch
           git fetch origin main
-
-          # switch to main
           git checkout main
 
-          # remove old files except .github
           find . -maxdepth 1 ! -name '.' ! -name '.git' ! -name '.github' -exec rm -rf {} \;
 
-          # copy new site content
           cp -r /tmp/site_output/* .
-
-          # prevent Jekyll processing
           echo > .nojekyll
 
           git add .
           git commit -m "Auto-build from docs" || echo "No changes to commit"
           git push origin main
+
