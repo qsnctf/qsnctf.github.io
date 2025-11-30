@@ -1,10 +1,14 @@
+## ⚙️ Build MkDocs and deploy to main
+
 name: Build MkDocs and deploy to main
 
+# 当 'docs' 分支有 push 操作时触发此工作流程
 on:
   push:
     branches:
       - docs
 
+# 授予工作流程写入 contents 的权限，以便推送到 main 分支
 permissions:
   contents: write
 
@@ -30,7 +34,8 @@ jobs:
 
       - name: Build site into temporary directory
         env:
-          MKDOCS_GIT_COMMITTERS_CACHE: '0'  # 禁用插件写 .cache
+          # 禁用插件写入 .cache (尽管我们下面会强制删除它，但保留此配置以提高安全性)
+          MKDOCS_GIT_COMMITTERS_CACHE: '0' 
         run: |
           mkdocs build --site-dir /tmp/site_output
 
@@ -38,18 +43,25 @@ jobs:
         run: |
           cd "$GITHUB_WORKSPACE"
 
+          # [修复步骤] 强制删除 MkDocs 插件在构建过程中生成的缓存文件。
+          # 这一步确保工作区干净，避免 'local changes would be overwritten' 错误。
+          rm -rf .cache 
+
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
+          # 准备切换到 main 分支
           git fetch origin main
           git checkout main
 
+          # 清理 main 分支的根目录，只保留 .git 和 .github 目录
           find . -maxdepth 1 ! -name '.' ! -name '.git' ! -name '.github' -exec rm -rf {} \;
 
+          # 复制新生成的站点文件到工作区
           cp -r /tmp/site_output/* .
           echo > .nojekyll
 
+          # 提交并推送到 main 分支
           git add .
           git commit -m "Auto-build from docs" || echo "No changes to commit"
           git push origin main
-
