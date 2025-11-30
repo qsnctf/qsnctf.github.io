@@ -148,6 +148,8 @@ nav:
   - 基础知识:
     - 什么是 CTF: basic/intro.md
     - CTF的历史: basic/history.md
+    - 练习CTF: basic/practice.md
+  - 编程: Code/index.md
   - Misc: 
     - 介绍: Misc/index.md
     - 编码:
