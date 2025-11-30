@@ -98,7 +98,7 @@ copyright: Copyright 青少年CTF &copy; 2025 版权所有
 # markdown 拓展
 markdown_extensions:
 # 详细参考 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
-  - abbr # 添加词汇表 https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-a-glossary 添加缩写：https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-abbreviations
+  - abbr # 添加词汇表 https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-a-glossary 添加缩写: https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-abbreviations
   - admonition # 警告 https://squidfunk.github.io/mkdocs-material/reference/admonitions/#usage
   - attr_list
   - def_list
@@ -155,9 +155,652 @@ nav:
     - 编码:
       - ASCII: Misc/encoding/ASCII.md
       - Hex: Misc/encoding/Hex.md
-  - Crypto: Crypto/index.md
-  - Web: Web/index.md
-  - Reverse: Reverse/index.md
-  - Pwn: Pwn/index.md
-  - 工具: Tools/index.md
-  - 关于: about.md
+    - 文件类隐写: 
+      - 文件内容隐写: Misc/Chapter1/1-1.md
+      - 文件属性隐写: Misc/Chapter1/1-2.md
+      - 数据逆序隐写: Misc/Chapter1/1-3.md
+      - DMG 文件隐写: Misc/Chapter1/1-4.md
+      - 文件格式隐写: Misc/Chapter1/1-5.md
+      - Snow 文件隐写: Misc/Chapter1/1-6.md
+      - NTFS 文件隐写: Misc/Chapter1/1-7.md
+      - 文件时间戳隐写: Misc/Chapter1/1-8.md
+      - 文件合并隐写: Misc/Chapter1/1-9.md
+      - 字频统计隐写: Misc/Chapter1/1-10.md
+      - TTL 隐写: Misc/Chapter1/1-11.md
+      - 零宽字符隐写: Misc/Chapter1/1-12.md
+      - 文件异或隐写: Misc/Chapter1/1-13.md
+      - Picke 序列化隐写: Misc/Chapter1/1-14.md
+      - PYC 或 PYO 隐写: Misc/Chapter1/1-15.md
+      - Word 文字隐写: Misc/Chapter1/1-16.md
+      - Base64 隐写: Misc/Chapter1/1-17.md
+      - 文件二进制图像化隐写: Misc/Chapter1/1-18.md
+      - .rock 隐写: Misc/Chapter1/1-19.md
+      - XORTools 隐写: Misc/Chapter1/1-20.md
+      - Base32 隐写: Misc/Chapter1/1-21.md
+      - .lnk 隐写: Misc/Chapter1/1-22.md
+      - 隐藏文件隐写: Misc/Chapter1/1-23.md
+      - .kdbx 隐写（Key）: Misc/Chapter1/1-24.md
+      - 加密 Word 的宏隐写（Key）: Misc/Chapter1/1-25.md
+      - LOLCODE 隐写: Misc/Chapter1/1-26.md
+      - Folders  隐写: Misc/Chapter1/1-27.md
+      - Minecraft JSON 隐写: Misc/Chapter1/1-28.md
+      - Git 历史版本隐写: Misc/Chapter1/1-29.md
+      - Git Stash 隐写: Misc/Chapter1/1-30.md
+      - YARA 恶意软件检测: Misc/Chapter1/1-31.md
+    - 图片类隐写: 
+      - PNG CRC 宽高爆破: Misc/Chapter2/2-1.md
+      - 坐标点隐写: Misc/Chapter2/2-2.md
+      - 盲水印隐写: Misc/Chapter2/2-3.md
+      - ZSteg 隐写: Misc/Chapter2/2-4.md
+      - 键盘 WASD 绘图: Misc/Chapter2/2-5.md
+      - StegSolve 隐写: Misc/Chapter2/2-6.md
+      - 通道隐写: Misc/Chapter2/2-7.md
+      - GIF 帧隐写: Misc/Chapter2/2-8.md
+      - 图片拼接隐写（十六进制）: Misc/Chapter2/2-9.md
+      - 图片内容隐写: Misc/Chapter2/2-10.md
+      - StegHide 隐写（Key）: Misc/Chapter2/2-11.md
+      - ExifTools 隐写: Misc/Chapter2/2-12.md
+      - Extract 隐写（Key）: Misc/Chapter2/2-13.md
+      - SilentEye 隐写（图片）: Misc/Chapter2/2-14.md
+      - JPHS 隐写（Key）: Misc/Chapter2/2-15.md
+      - 抽象画隐写: Misc/Chapter2/2-16.md
+      - FFC 隐写（Key）: Misc/Chapter2/2-17.md
+      - Java 盲水印隐写: Misc/Chapter2/2-18.md
+      - S-Tools 隐写（Key）: Misc/Chapter2/2-19.md
+      - Stegpy 隐写: Misc/Chapter2/2-20.md
+      - PDF 密码爆破: Misc/Chapter2/2-21.md
+      - StegSeek 爆破: Misc/Chapter2/2-22.md
+      - PPT 隐写: Misc/Chapter2/2-23.md
+      - PDF 哈希爆破: Misc/Chapter2/2-24.md
+      - F5-steganography 隐写: Misc/Chapter2/2-25.md
+      - Outguess 隐写（Key）: Misc/Chapter2/2-26.md
+      - 视频帧隐写: Misc/Chapter2/2-27.md
+      - BPG 隐写: Misc/Chapter2/2-28.md
+      - APNG 隐写: Misc/Chapter2/2-29.md
+      - 频域盲水印隐写: Misc/Chapter2/2-30.md
+      - WbStego 隐写（Key）: Misc/Chapter2/2-31.md
+      - GPS 数据隐写: Misc/Chapter2/2-32.md
+      - 图片拼接隐写（Online）: Misc/Chapter2/2-33.md
+      - TIFF 图层隐写: Misc/Chapter2/2-34.md
+      - BMP 隐写: Misc/Chapter2/2-35.md
+      - GIF 帧像素隐写: Misc/Chapter2/2-36.md
+      - Cloacked-pixel 隐写: Misc/Chapter2/2-37.md
+      - 二维码手动修补隐写: Misc/Chapter2/2-38.md
+      - OGG/WAV 单色图像隐写: Misc/Chapter2/2-39.md
+      - 傅里叶盲水印隐写: Misc/Chapter2/2-40.md
+      - 隐写水印工具隐写: Misc/Chapter2/2-41.md
+      - Arnold 加密隐写: Misc/Chapter2/2-42.md
+      - Tupper 隐写: Misc/Chapter2/2-43.md
+      - Strings 隐写: Misc/Chapter2/2-44.md
+      - 塔珀自指公式（Tupper's self-referential formula）隐写: Misc/Chapter2/2-45.md
+      - GIF 宽高隐写: Misc/Chapter2/2-46.md
+      - 图像合成隐写: Misc/Chapter2/2-47.md
+    - 压缩包类隐写: 
+      - ZIP 伪加密破解: Misc/Chapter3/3-1.md
+      - ZIP 明文破解（相同文件）: Misc/Chapter3/3-2.md
+      - RAR 文件头修复: Misc/Chapter3/3-3.md
+      - 压缩密码爆破: Misc/Chapter3/3-4.md
+      - ZIP 明文破解（文件头）: Misc/Chapter3/3-5.md
+      - ZIP 明文破解（Key）: Misc/Chapter3/3-6.md
+      - CRC 碰撞: Misc/Chapter3/3-7.md
+      - RAR 伪加密破解: Misc/Chapter3/3-8.md
+      - 加密 Word 爆破: Misc/Chapter3/3-9.md
+      - 加密宏破解: Misc/Chapter3/3-10.md
+      - 不可见字符密码爆破: Misc/Chapter3/3-11.md
+      - PKZIP 密钥还原: Misc/Chapter3/3-12.md
+    - 音频类隐写: 
+      - MP3 隐写（Key）: Misc/Chapter4/4-1.md
+      - 波形隐写（Wav）: Misc/Chapter4/4-2.md
+      - 音频倒放隐写: Misc/Chapter4/4-3.md
+      - 频谱图隐写: Misc/Chapter4/4-4.md
+      - SSTV 隐写: Misc/Chapter4/4-5.md
+      - 按键式电话隐写: Misc/Chapter4/4-6.md
+      - SilentEye 隐写（音频）: Misc/Chapter4/4-7.md
+      - DeepSound 隐写（Key）: Misc/Chapter4/4-8.md
+      - Velato 编译隐写（Mid）: Misc/Chapter4/4-9.md
+      - Wav 文件 LSB 隐写: Misc/Chapter4/4-10.md
+      - 慢扫描电视隐写: Misc/Chapter4/4-11.md
+      - Private Bit 隐写: Misc/Chapter4/4-12.md
+      - 采样率隐写: Misc/Chapter4/4-13.md
+      - Raw 无线电 AFSK1200 隐写: Misc/Chapter4/4-14.md
+      - DeEgger Embedder 隐写: Misc/Chapter4/4-15.md
+      - OGG/WAV 单色图像隐写: Misc/Chapter4/4-16.md
+      - MP3 原版标志位隐写: Misc/Chapter4/4-17.md
+    - 流量类隐写: 
+      - TLS 流量隐写: Misc/Chapter5/5-1.md
+      - WPA 密钥爆破: Misc/Chapter5/5-2.md
+      - 鼠标运动轨迹隐写: Misc/Chapter5/5-3.md
+      - USB 流量隐写: Misc/Chapter5/5-4.md
+      - DNS 请求域名隐写: Misc/Chapter5/5-5.md
+      - UDP 流量隐写: Misc/Chapter5/5-6.md
+      - FTP-DATA 隐写: Misc/Chapter5/5-7.md
+      - HTTP 流量隐写: Misc/Chapter5/5-8.md
+      - SQL 时间盲注隐写: Misc/Chapter5/5-9.md
+      - 键盘流量隐写: Misc/Chapter5/5-10.md
+      - 冰蝎流量隐写: Misc/Chapter5/5-11.md
+      - TCP 流量隐写: Misc/Chapter5/5-12.md
+      - RTP 流量隐写: Misc/Chapter5/5-13.md
+      - IP 流量隐写: Misc/Chapter5/5-14.md
+      - HTTPS 流量隐写: Misc/Chapter5/5-15.md
+      - 端口扫描隐写: Misc/Chapter5/5-16.md
+      - EV3 隐写: Misc/Chapter5/5-17.md
+      - Web 目录爆破隐写: Misc/Chapter5/5-18.md
+      - 哥斯拉流量隐写: Misc/Chapter5/5-19.md
+      - 蚁剑流量隐写: Misc/Chapter5/5-20.md
+      - SQL 布尔盲注隐写: Misc/Chapter5/5-21.md
+      - 哥斯拉流量隐写: Misc/Chapter5/5-22.md
+      - SMB3 流量隐写: Misc/Chapter5/5-23.md
+      - Ceph 流量隐写: Misc/Chapter5/5-24.md
+      - UDP 端口流量隐写: Misc/Chapter5/5-25.md
+      - 测信道流量隐写: Misc/Chapter5/5-26.md
+      - ICMP Length 流量隐写: Misc/Chapter5/5-27.md
+      - RDP 流量隐写: Misc/Chapter5/5-28.md
+      - MSF 流量隐写: Misc/Chapter5/5-29.md
+      - WIFI 流量隐写: Misc/Chapter5/5-30.md
+      - MySQL 流量隐写: Misc/Chapter5/5-31.md
+      - Redis 流量隐写: Misc/Chapter5/5-32.md
+      - MongoDB 流量隐写: Misc/Chapter5/5-33.md
+    - 社会工程学: 
+      - 图片日期: Misc/Chapter6/6-1.md
+      - 电子邮件域名: Misc/Chapter6/6-2.md
+      - 社交头像: Misc/Chapter6/6-3.md
+      - 电子邮件日历文件: Misc/Chapter6/6-4.md
+      - 基站定位: Misc/Chapter6/6-5.md
+      - 汽车黑匣子定位: Misc/Chapter6/6-6.md
+      - 安卓模拟触屏: Misc/Chapter6/6-7.md
+    - 工控类隐写: 
+      - G-code 绘图: Misc/Chapter7/7-1.md
+      - SPI 协议隐写: Misc/Chapter7/7-2.md
+      - L2C 协议隐写: Misc/Chapter7/7-3.md
+      - 手柄流量隐写: Misc/Chapter7/7-4.md
+      - 车钥匙信号隐写: Misc/Chapter7/7-5.md
+      - 玩具车运动轨迹隐写: Misc/Chapter7/7-6.md
+      - 4442 式接触卡隐写: Misc/Chapter7/7-7.md
+  - Crypto: 
+    - 介绍: Crypto/index.md
+    - 计算机编码类: 
+      - Base64: Crypto/Chapter1/1-1.md
+      - URL: Crypto/Chapter1/1-2.md
+      - Quoted-printable: Crypto/Chapter1/1-3.md
+      - 中文电码: Crypto/Chapter1/1-4.md
+      - Unencode: Crypto/Chapter1/1-5.md
+      - 核心价值观: Crypto/Chapter1/1-6.md
+      - Ook!: Crypto/Chapter1/1-7.md
+      - AAEncode: Crypto/Chapter1/1-8.md
+      - 音符: Crypto/Chapter1/1-9.md
+      - Base32: Crypto/Chapter1/1-10.md
+      - JSFuck: Crypto/Chapter1/1-11.md
+      - 曼彻斯特: Crypto/Chapter1/1-12.md
+      - WhiteSpace: Crypto/Chapter1/1-13.md
+      - 虚假电子表格: Crypto/Chapter1/1-14.md
+      - XXencode: Crypto/Chapter1/1-15.md
+      - 垃圾电子邮件: Crypto/Chapter1/1-16.md
+    - 不可逆加密类: 
+      - MD5: Crypto/Chapter2/2-1.md
+      - SHA-1: Crypto/Chapter2/2-2.md
+      - SHA-256: Crypto/Chapter2/2-3.md
+    - 流加密算法类: 
+      - Rabbit: Crypto/Chapter3/3-1.md
+      - OTP: Crypto/Chapter3/3-2.md
+      - XOR 密钥重用: Crypto/Chapter3/3-3.md
+      - 随机数异或: Crypto/Chapter3/3-4.md
+    - 替换加密类: 
+      - Rot13: Crypto/Chapter4/4-1.md
+      - 摩斯密码: Crypto/Chapter4/4-2.md
+      - 凯撒密码: Crypto/Chapter4/4-3.md
+      - 猪圈密码: Crypto/Chapter4/4-4.md
+      - Quipqiup: Crypto/Chapter4/4-5.md
+      - 与佛论禅: Crypto/Chapter4/4-6.md
+      - Playfair: Crypto/Chapter4/4-7.md
+      - Base 换表: Crypto/Chapter4/4-8.md
+      - 银河字母密码: Crypto/Chapter4/4-9.md
+      - 圣堂武士密码: Crypto/Chapter4/4-10.md
+      - Vigenere: Crypto/Chapter4/4-11.md
+      - 四方密码: Crypto/Chapter4/4-12.md
+      - Polybius: Crypto/Chapter4/4-13.md
+      - 培根密码: Crypto/Chapter4/4-14.md
+      - 仿射密码: Crypto/Chapter4/4-15.md
+      - Nihilist 密码: Crypto/Chapter4/4-16.md
+      - 键盘密码: Crypto/Chapter4/4-17.md
+      - 二进制幂数加密法: Crypto/Chapter4/4-18.md
+      - Poem Codes 密码: Crypto/Chapter4/4-19.md
+      - 海嗣文密码: Crypto/Chapter4/4-20.md
+      - 日期网格坐标密码: Crypto/Chapter4/4-21.md
+    - 置换加密类: 
+      - 栅栏密码: Crypto/Chapter5/5-1.md
+      - 杰斐逊转轮密码: Crypto/Chapter5/5-2.md
+    - RSA 类: 
+      - 加密私钥 d: Crypto/Chapter6/6-1.md
+      - 解密原文 m: Crypto/Chapter6/6-2.md
+      - 在线分解 n: Crypto/Chapter6/6-3.md
+      - n 为素数推出 phi: Crypto/Chapter6/6-4.md
+      - 低加密指数爆破攻击（e 较小）: Crypto/Chapter6/6-5.md
+      - 低加密指数分解攻击（e 较小）: Crypto/Chapter6/6-6.md
+      - Coppersmith 攻击（p 高位、q 低位泄露）: Crypto/Chapter6/6-7.md
+      - 低加密指数广播攻击（n、c 为列表 e 较小）: Crypto/Chapter6/6-8.md
+      - 维纳攻击（e 过大或过小）: Crypto/Chapter6/6-9.md
+      - Coppersmith 攻击（p 高位泄露）: Crypto/Chapter6/6-10.md
+      - Coppersmith 攻击（CRT）: Crypto/Chapter6/6-11.md
+      - Coppersmith 攻击（二次剩余）: Crypto/Chapter6/6-12.md
+      - 费马小定理（离散数学）: Crypto/Chapter6/6-13.md
+      - 共模攻击（相同 n）: Crypto/Chapter6/6-14.md
+      - 公共 p（n 均不相同）: Crypto/Chapter6/6-15.md
+      - Yafu 因式分解（n 过小分解出多个 p）: Crypto/Chapter6/6-16.md
+      - RSA 私钥恢复: Crypto/Chapter6/6-17.md
+      - 离散对数（g^m ≡ c mod p）: Crypto/Chapter6/6-18.md
+      - Lattice 求解模数 n（存在小量 ，提供多个方程组参数）: Crypto/Chapter6/6-19.md
+      - 爆破还原 p、q（p、q 均较小）: Crypto/Chapter6/6-20.md
+      - 爆破还原 m（已知 m 范围）: Crypto/Chapter6/6-21.md
+      - n 为偶数推出 p = 2: Crypto/Chapter6/6-22.md
+      - 提公因数 p 构造简易方程求解: Crypto/Chapter6/6-23.md
+      - 利用斐波那契数列周期重复性爆破: Crypto/Chapter6/6-24.md
+      - 利用 p 信息泄露 GCD 攻击: Crypto/Chapter6/6-25.md
+    - CBC 类: 
+      - 填充 Oracle 攻击: Crypto/Chapter7/7-1.md
+    - ECC 类: 
+      - 公钥 k: Crypto/Chapter8/8-1.md
+    - RC 类: 
+      - RC4: Crypto/Chapter9/9-1.md
+    - LFSR 类: 
+      - 爆破: Crypto/Chapter10/10-1.md
+      - Sage 求解: Crypto/Chapter10/10-2.md
+    - AES 类: 
+      - AES-ECB 模式 MTP 攻击: Crypto/Chapter11/11-1.md
+      - Emoji-AES 解密: Crypto/Chapter11/11-2.md
+    - 国密算法: 
+      - SM1: Crypto/Chapter12/12-1.md
+    - 附录: 
+      - 模运算: Crypto/Chapter99/99-1.md
+      - 线性同余方程: Crypto/Chapter99/99-2.md
+      - 欧几里得算法（GCD）: Crypto/Chapter99/99-3.md
+      - 扩展欧几里得算法-贝祖定理: Crypto/Chapter99/99-4.md
+      - 整数线性组合: Crypto/Chapter99/99-5.md
+      - 中国剩余定理（CRT）: Crypto/Chapter99/99-6.md
+      - 同余方程组的合并（非互质情况）: Crypto/Chapter99/99-7.md
+      - 模数的等效性: Crypto/Chapter99/99-8.md
+      - 斐波那契数列: Crypto/Chapter99/99-9.md
+  - Web: 
+    - 介绍: Web/index.md
+    - 敏感信息泄露: 
+      - 代码注释泄露: Web/Chapter1/1-1.md
+      - JavaScript 源码泄露: Web/Chapter1/1-2.md
+      - .git 文件泄露: Web/Chapter1/1-3.md
+      - .bak 文件泄露: Web/Chapter1/1-4.md
+      - robots.txt 文件泄露: Web/Chapter1/1-5.md
+      - SSL 证书泄露: Web/Chapter1/1-6.md
+      - 网站历史信息泄露: Web/Chapter1/1-7.md
+      - JavaScript 接口泄露: Web/Chapter1/1-8.md
+      - .swp 文件泄露: Web/Chapter1/1-9.md
+      - .DS_Store 文件泄露: Web/Chapter1/1-10.md
+      - .svn 文件泄露: Web/Chapter1/1-11.md
+      - .hg 文件泄露: Web/Chapter1/1-12.md
+    - PHP 代码审计: 
+      - 数字字符串绕过 ==: Web/Chapter2/2-1.md
+      - 双写绕过 str_replace(): Web/Chapter2/2-2.md
+      - 0e 科学计数法绕过 MD5 弱比较: Web/Chapter2/2-3.md
+      - $$ 超级全局变量泄露: Web/Chapter2/2-4.md
+      - 数组绕过 strcmp(): Web/Chapter2/2-5.md
+      - 数组绕过 SHA1(): Web/Chapter2/2-6.md
+      - '%00 绕过 eregi()': Web/Chapter2/2-7.md
+      - 大小写绕过 strpos(): Web/Chapter2/2-8.md
+      - <?= 替换 <? echo: Web/Chapter2/2-9.md
+      - 空格绕过 WAF: Web/Chapter2/2-10.md
+      - data 伪协议: Web/Chapter2/2-11.md
+      - call_user_func() 函数: Web/Chapter2/2-12.md
+      - 科学计数法 e 符号绕过 intval(): Web/Chapter2/2-13.md
+      - 0e 科学计数法绕过双重 md5 弱比较: Web/Chapter2/2-14.md
+      - filter 伪协议: Web/Chapter2/2-15.md
+      - MD5 强碰撞: Web/Chapter2/2-16.md
+      - 换行符绕过 preg_match(): Web/Chapter2/2-17.md
+      - /bin 绕过环境变量: Web/Chapter2/2-18.md
+      - ff 绕过 basename(): Web/Chapter2/2-19.md
+      - . 和 + 替换 _: Web/Chapter2/2-20.md
+      - 大小写绕过 strstr(): Web/Chapter2/2-21.md
+      - 0e 科学计数法绕过 MD4 弱比较: Web/Chapter2/2-22.md
+      - extract() 变量覆盖: Web/Chapter2/2-23.md
+      - 浮点数绕过 intval(): Web/Chapter2/2-24.md
+      - call_user_func() 动态调用: Web/Chapter2/2-25.md
+      - md5($pass,true) 绕过: Web/Chapter2/2-26.md
+    - HTTP 请求: 
+      - HTTP 响应头泄露: Web/Chapter3/3-1.md
+      - 伪造 XFF 地址: Web/Chapter3/3-2.md
+      - 伪造 Referer 地址: Web/Chapter3/3-3.md
+      - 伪造 Cookie: Web/Chapter3/3-4.md
+      - 伪造请求头: Web/Chapter3/3-5.md
+      - 伪造 Client-IP 地址: Web/Chapter3/3-6.md
+      - 伪造 JWT: Web/Chapter3/3-7.md
+      - Arjun FUZZ 参数: Web/Chapter3/3-8.md
+      - Curl 传参: Web/Chapter3/3-9.md
+      - JWT 算法混淆绕过（CVE-2015-9235）: Web/Chapter3/3-10.md
+      - 自定义 Code 验证爆破: Web/Chapter3/3-11.md
+      - 伪造 X-Real-IP 地址: Web/Chapter3/3-12.md
+      - gopher 协议伪造 HTTP 请求: Web/Chapter3/3-13.md
+      - JWT 篡改算法绕过: Web/Chapter3/3-14.md
+    - JavaScript 逆向: 
+      - URL 参数破解: Web/Chapter4/4-1.md
+      - HTTP 字段破解: Web/Chapter4/4-2.md
+      - JWT 破解: Web/Chapter4/4-3.md
+      - JavaScript 反混淆: Web/Chapter4/4-4.md
+    - 弱口令漏洞: 
+      - 后台密码爆破: Web/Chapter5/5-1.md
+      - JWT 密钥爆破: Web/Chapter5/5-2.md
+    - RCE 漏洞: 
+      - 'assert() RCE': Web/Chapter6/6-1.md
+      - 'eval() RCE': Web/Chapter6/6-2.md
+      - '自增代替关键字绕过': Web/Chapter6/6-3.md
+      - '&& 代替 & 绕过': Web/Chapter6/6-4.md
+      - '$IFS$num 代替空格绕过': Web/Chapter6/6-5.md
+      - 'preg_replace() /e 修饰符 RCE 绕过 foreach': Web/Chapter6/6-6.md
+      - 'escapeshellarg/cmd RCE': Web/Chapter6/6-7.md
+      - 'PHP 函数嵌套绕过': Web/Chapter6/6-8.md
+      - 'LD_PRELOAD 环境变量提权': Web/Chapter6/6-9.md
+      - '20+关键字绕过': Web/Chapter6/6-10.md
+      - '关键字加 \\ 绕过': Web/Chapter6/6-11.md
+      - '进制转换绕过': Web/Chapter6/6-12.md
+      - 'URL 编码取反加 ~ 绕过': Web/Chapter6/6-13.md
+      - '输出重定向绕过无回显': Web/Chapter6/6-14.md
+      - '\\t 代替空格绕过': Web/Chapter6/6-15.md
+      - '单引号代替命令执行函数绕过': Web/Chapter6/6-16.md
+      - 'passthru() RCE': Web/Chapter6/6-17.md
+      - 'more 代替 cat 绕过': Web/Chapter6/6-18.md
+      - 'data 伪协议 RCE': Web/Chapter6/6-19.md
+      - 'Create_function() RCE': Web/Chapter6/6-20.md
+      - 'Java MVEL 表达式注入': Web/Chapter6/6-21.md
+      - 'Java 反射机制 RCE': Web/Chapter6/6-22.md
+      - 'PHP 8.1.0 dev RCE': Web/Chapter6/6-23.md
+      - 'nl /* 绕过长度限制': Web/Chapter6/6-24.md
+      - 'Nginx 日志 RCE': Web/Chapter6/6-25.md
+      - 'data 伪协议去掉双斜杠绕过': Web/Chapter6/6-26.md
+      - '关键字+双引号绕过': Web/Chapter6/6-27.md
+      - 'Tab 键代替空格绕过': Web/Chapter6/6-28.md
+      - '< 加 |Base64 绕过空格': Web/Chapter6/6-29.md
+      - '; 代替 & 与 | 绕过': Web/Chapter6/6-30.md
+      - '星号代替部分关键字绕过': Web/Chapter6/6-31.md
+      - '0a 代替 ; 绕过': Web/Chapter6/6-32.md
+      - SSRF FastCGI 协议 RCE: Web/Chapter6/6-33.md
+      - Redis 协议 RCE: Web/Chapter6/6-34.md
+      - Shellshock 提权: Web/Chapter6/6-35.md
+      - Apache Mod CGI 提权: Web/Chapter6/6-36.md
+      - PHP-FPM 提权: Web/Chapter6/6-37.md
+      - GC UAF 提权: Web/Chapter6/6-38.md
+      - Json Serializer UAF 提权: Web/Chapter6/6-39.md
+      - Backtrace UAF 提权: Web/Chapter6/6-40.md
+      - FFI 扩展提权: Web/Chapter6/6-41.md
+      - iconv 提权: Web/Chapter6/6-42.md
+      - 动态加载器提权: Web/Chapter6/6-43.md
+      - 符号链接提权: Web/Chapter6/6-44.md
+      - Bash 错误 RCE（仅支持数字+符号）: Web/Chapter6/6-45.md
+      - 修改 IFS 绕过 Bash 中禁用空格: Web/Chapter6/6-46.md
+      - sudo vi 提权: Web/Chapter6/6-47.md
+    - 文件包含漏洞: 
+      - input: Web/Chapter7/7-1.md
+      - filter: Web/Chapter7/7-2.md
+      - Nginx 日志 RCE: Web/Chapter7/7-3.md
+      - data 伪协议 RCE: Web/Chapter7/7-4.md
+      - data 伪协议 RCE 绕过双斜杠: Web/Chapter7/7-5.md
+    - SQL 注入漏洞: 
+      - 联合注入: Web/Chapter8/8-1.md
+      - 万能密码: Web/Chapter8/8-2.md
+      - () 绕过空格过滤: Web/Chapter8/8-3.md
+      - <> 绕过 = 过滤: Web/Chapter8/8-4.md
+      - substr()+reverse()+ord() 绕过逗号过滤: Web/Chapter8/8-5.md
+      - 约束攻击: Web/Chapter8/8-6.md
+      - 堆叠注入: Web/Chapter8/8-7.md
+      - set sql_mode=PIPES_AS_CONCAT 修改 || 为连接符: Web/Chapter8/8-8.md
+      - rename()+alter() 改表绕过: Web/Chapter8/8-9.md
+      - 十六进制绕过: Web/Chapter8/8-10.md
+      - handler 代替 select: Web/Chapter8/8-11.md
+      - 双写绕过: Web/Chapter8/8-12.md
+      - updatexml() 报错注入: Web/Chapter8/8-13.md
+      - extractvalue() 报错注入: Web/Chapter8/8-14.md
+      - 布尔盲注: Web/Chapter8/8-15.md
+      - / ** / 绕过空格: Web/Chapter8/8-16.md
+      - innodb_table_stats 绕过: Web/Chapter8/8-17.md
+      - group by 代替 order by 绕过: Web/Chapter8/8-18.md
+      - 无列名注入: Web/Chapter8/8-19.md
+      - 异或盲注: Web/Chapter8/8-20.md
+      - ord() 绕过: Web/Chapter8/8-21.md
+      - 二次注入: Web/Chapter8/8-22.md
+      - SQLMap GetShell: Web/Chapter8/8-23.md
+      - MP3 元数据注入: Web/Chapter8/8-24.md
+      - 报错注入: Web/Chapter8/8-25.md
+      - like 绕过 = 过滤: Web/Chapter8/8-26.md
+      - right 绕过显示字符限制: Web/Chapter8/8-27.md
+      - ^ 代替 or: Web/Chapter8/8-28.md
+      - into outfile GetShell: Web/Chapter8/8-29.md
+      - 时间盲注: Web/Chapter8/8-30.md
+      - Cookie 注入: Web/Chapter8/8-31.md
+      - User-Agent 注入: Web/Chapter8/8-32.md
+      - Refer 注入: Web/Chapter8/8-33.md
+      - MongoDB NoSQL 注入: Web/Chapter8/8-34.md
+    - XSS 漏洞: 
+      - 存储型 XSS: Web/Chapter9/9-1.md
+      - URL XSS: Web/Chapter9/9-2.md
+      - 闭合绕过: Web/Chapter9/9-3.md
+      - 事件绕过: Web/Chapter9/9-4.md
+      - a href 绕过: Web/Chapter9/9-5.md
+      - 大小写绕过: Web/Chapter9/9-6.md
+      - 双写绕过: Web/Chapter9/9-7.md
+      - Unicode 编码绕过: Web/Chapter9/9-8.md
+      - 注释绕过: Web/Chapter9/9-9.md
+      - Referer XSS: Web/Chapter9/9-10.md
+      - User-Agent XSS: Web/Chapter9/9-11.md
+      - Cookie XSS: Web/Chapter9/9-12.md
+      - Angular JS ng-include XSS: Web/Chapter9/9-13.md
+      - 回车代替空格绕过: Web/Chapter9/9-14.md
+      - 短标签绕过: Web/Chapter9/9-15.md
+      - Angular JS 模板注入 XSS: Web/Chapter9/9-16.md
+      - DOM 跳转 XSS: Web/Chapter9/9-17.md
+      - / 代替空格绕过: Web/Chapter9/9-18.md
+    - 文件上传漏洞: 
+      - JavaScript WebShell: Web/Chapter10/10-1.md
+      - Python WebShell: Web/Chapter10/10-2.md
+      - JavaScript 加密绕过: Web/Chapter10/10-3.md
+      - Content-type 图片绕过: Web/Chapter10/10-4.md
+      - disable_functions 绕过: Web/Chapter10/10-5.md
+      - phtml 后缀绕过: Web/Chapter10/10-6.md
+      - GIF 文件头绕过: Web/Chapter10/10-7.md
+      - JavaScript 验证绕过: Web/Chapter10/10-8.md
+      - .htaccess 解析绕过: Web/Chapter10/10-9.md
+      - .user.ini 解析绕过: Web/Chapter10/10-10.md
+      - Content-type 大小写混淆绕过: Web/Chapter10/10-11.md
+      - php4 后缀绕过: Web/Chapter10/10-12.md
+      - 参数置空绕过: Web/Chapter10/10-13.md
+      - Apache 多后缀解析漏洞: Web/Chapter10/10-14.md
+      - 00 截断绕过: Web/Chapter10/10-15.md
+      - 双写后缀绕过: Web/Chapter10/10-16.md
+      - PNG 图片马绕过: Web/Chapter10/10-17.md
+      - 文件名加 / 绕过: Web/Chapter10/10-18.md
+      - 文件名加 / 绕过: Web/Chapter10/10-19.md
+      - Nginx 文件名绕过（CVE-2013-4547）: Web/Chapter10/10-20.md
+    - Flask 漏洞: 
+      - SSTI 添加路由: Web/Chapter11/11-1.md
+      - Secret_key 泄露: Web/Chapter11/11-2.md
+      - Session 伪造: Web/Chapter11/11-3.md
+      - Unicode 编码绕过 strlower(): Web/Chapter11/11-4.md
+      - 模板注入攻击: Web/Chapter11/11-5.md
+      - url_for 函数模板注入攻击: Web/Chapter11/11-6.md
+      - 字符拼接绕过: Web/Chapter11/11-7.md
+      - 解密 PIN 码: Web/Chapter11/11-8.md
+      - Unicdoe 编码绕过: Web/Chapter11/11-9.md
+      - config 对象模板注入攻击: Web/Chapter11/11-10.md
+      - attr 过滤器模板注入攻击: Web/Chapter11/11-11.md
+      - 十六进制编码绕过: Web/Chapter11/11-12.md
+    - 反序列化漏洞: 
+      - PHP 字符串序列化: Web/Chapter12/12-1.md
+      - PHP POP 链: Web/Chapter12/12-2.md
+      - PHP 个数不等绕过__wakeup(): Web/Chapter12/12-3.md
+      - PHP 反序列化字符逃逸: Web/Chapter12/12-4.md
+      - Python Pickle 反序列化之 subprocess: Web/Chapter12/12-5.md
+      - Python Pickle 反序列化之 commands: Web/Chapter12/12-6.md
+      - PHP Create_function() 反序列化: Web/Chapter12/12-7.md
+      - PHP %00 绕过 Private: Web/Chapter12/12-8.md
+      - PHP \00 绕过 Private: Web/Chapter12/12-9.md
+      - PHP 反序列化之 __toString() 魔术方法: Web/Chapter12/12-10.md
+      - PHP & 引用相同内存: Web/Chapter12/12-11.md
+    - Tornado 漏洞: 
+      - 环境配置泄露: Web/Chapter13/13-1.md
+    - 任意文件下载漏洞: 
+      - Java Web 泄露: Web/Chapter14/14-1.md
+    - SSRF 漏洞: 
+      - file 伪协议读取任意文件: Web/Chapter15/15-1.md
+      - 域名代替 IP 绕过: Web/Chapter15/15-2.md
+      - 302 跳转绕过: Web/Chapter15/15-3.md
+      - 127.0.0.x 代替 IP 绕过: Web/Chapter15/15-4.md
+      - 0.0.0.0 代替 IP 绕过: Web/Chapter15/15-5.md
+      - 端口扫描: Web/Chapter15/15-6.md
+      - gopher 协议伪造 HTTP 请求: Web/Chapter15/15-7.md
+      - FastCGI 协议 RCE: Web/Chapter15/15-8.md
+      - Redis 协议 RCE: Web/Chapter15/15-9.md
+      - 指定域名绕过: Web/Chapter15/15-10.md
+      - IP 转十六进制绕过: Web/Chapter15/15-11.md
+      - localhost 代替 IP 绕过: Web/Chapter15/15-12.md
+      - DNS 重绑定绕过: Web/Chapter15/15-13.md
+    - XXE 漏洞: 
+      - 文件读取注入: Web/Chapter16/16-1.md
+    - Twig 漏洞: 
+      - 模板注入攻击: Web/Chapter17/17-1.md
+    - SSI 注入漏洞: 
+      - shtml 注入: Web/Chapter18/18-1.md
+    - JavaScript 原型链污染: 
+      - 变量覆盖: Web/Chapter19/19-1.md
+    - ThinkPHP 漏洞: 
+      - ThinkPHP v5.0.20 RCE: Web/Chapter20/20-1.md
+      - ThinkPHP 反序列化利用链: Web/Chapter20/20-2.md
+    - Apache 漏洞: 
+      - Apache Log4j2 RCE: Web/Chapter21/21-1.md
+    - Java 代码审计: 
+      - RCE 字符串拼接绕过: Web/Chapter22/22-1.md
+      - Solon 框架任意文件读取: Web/Chapter22/22-2.md
+    - 任意文件读取漏洞: 
+      - 双写绕过: Web/Chapter23/23-1.md
+      - JSP 网站敏感文件遍历读取: Web/Chapter23/23-2.md
+      - Vite 任意文件读取（CVE-2025-30208）: Web/Chapter23/23-3.md
+      - /proc/self/ 获取当前进程相关信息: Web/Chapter23/23-4.md
+    - 目录穿越漏洞: 
+      - 压缩包解压绕过: Web/Chapter24/24-1.md
+      - include() 目录穿越: Web/Chapter24/24-2.md
+    - Swagger UI 漏洞: 
+      - API 接口泄露: Web/Chapter25/25-1.md
+    - 逻辑漏洞: 
+      - 并发漏洞: Web/Chapter26/26-1.md
+  - Reverse: 
+    - 介绍: Reverse/index.md
+    - Windows: 
+      - Dll 反编译: Reverse/Chapter1/1-1.md
+      - EXE 反编译: Reverse/Chapter1/1-2.md
+    - Python: 
+      - EXE 反编译: Reverse/Chapter2/2-1.md
+      - PYC 反编译: Reverse/Chapter2/2-2.md
+    - Flash: 
+      - SWF 反编译: Reverse/Chapter3/3-1.md
+    - JavaScript: 
+      - JavaScript 破解: Reverse/Chapter4/4-1.md
+    - 算法逆向: 
+      - Strcmp() 破解: Reverse/Chapter5/5-1.md
+      - 字符替换破解: Reverse/Chapter5/5-2.md
+      - 移位运算破解: Reverse/Chapter5/5-3.md
+      - 字符串爆破: Reverse/Chapter5/5-4.md
+      - 异或运算破解: Reverse/Chapter5/5-5.md
+      - Base64 换表破解: Reverse/Chapter5/5-6.md
+      - 多线程破解: Reverse/Chapter5/5-7.md
+      - 字符读取长度破解: Reverse/Chapter5/5-8.md
+      - '!= 破解': Reverse/Chapter5/5-9.md
+      - AES 破解: Reverse/Chapter5/5-10.md
+      - cmp 比较破解: Reverse/Chapter5/5-11.md
+      - RC4 加密破解: Reverse/Chapter5/5-12.md
+      - 魔改 RC4 加密破解: Reverse/Chapter5/5-13.md
+    - 软件脱壳: 
+      - 万能脱壳工具: Reverse/Chapter6/6-1.md
+      - UPX 脱壳: Reverse/Chapter6/6-2.md
+    - 代码混淆: 
+      - 花指令破解: Reverse/Chapter7/7-1.md
+      - INT3 反调试破解: Reverse/Chapter7/7-2.md
+    - 动态调试: 
+      - GDB 断点读取寄存器: Reverse/Chapter8/8-1.md
+      - OllyDbg 修改汇编指令: Reverse/Chapter8/8-2.md
+      - IDA 断点读取内存: Reverse/Chapter8/8-3.md
+    - Java: 
+      - Jar 反编译: Reverse/Chapter9/9-1.md
+    - 迷宫逆向: 
+      - 广度优先搜索: Reverse/Chapter10/10-1.md
+    - Rust: 
+      - 修复代码: Reverse/Chapter11/11-1.md
+  - Pwn: 
+    - 介绍: Pwn/index.md
+    - 栈溢出漏洞: 
+      - Gets 栈溢出（BackDoor 函数）: Pwn/Chapter1/1-1.md
+      - Gets 栈溢出（堆栈平衡）: Pwn/Chapter1/1-2.md
+      - Gets 栈溢出（变量覆盖）: Pwn/Chapter1/1-3.md
+      - Gets 栈溢出（32 位程序返回）: Pwn/Chapter1/1-4.md
+      - Read 栈溢出: Pwn/Chapter1/1-5.md
+      - 32 位 ROP: Pwn/Chapter1/1-6.md
+      - 64 位 ROP: Pwn/Chapter1/1-7.md
+      - 仅有 sh ROP: Pwn/Chapter1/1-8.md
+      - 32 位栈迁移 ROP: Pwn/Chapter1/1-9.md
+      - 32 位连续 ROP: Pwn/Chapter1/1-10.md
+      - __libc_csu_init ROP: Pwn/Chapter1/1-11.md
+      - Canary 泄露绕过: Pwn/Chapter1/1-12.md
+      - ROPgadget ROP: Pwn/Chapter1/1-13.md
+      - int 0x80 ROP: Pwn/Chapter1/1-14.md
+      - Call system ROP: Pwn/Chapter1/1-15.md
+      - Pwndbg 动态调试偏移: Pwn/Chapter1/1-16.md
+      - 报错参数溯源: Pwn/Chapter1/1-17.md
+      - 64 位栈迁移 ret 滑梯: Pwn/Chapter1/1-18.md
+      - Sigreturn ROP: Pwn/Chapter1/1-19.md
+      - 逐字节枚举 Canary: Pwn/Chapter1/1-20.md
+      - call_read 迁移到 BSS 段: Pwn/Chapter1/1-21.md
+      - Gets 栈溢出（BackDoor 指令）: Pwn/Chapter1/1-22.md
+    - 格式化字符串漏洞: 
+      - Printf 指定地址修改: Pwn/Chapter2/2-1.md
+      - Printf 指定地址泄露 Canary: Pwn/Chapter2/2-2.md
+      - Printf 指定地址泄露 libc: Pwn/Chapter2/2-3.md
+      - Fmtstr_payload 获取 shell: Pwn/Chapter2/2-4.md
+    - 整数溢出漏洞: 
+      - Abs 有符号整数溢出: Pwn/Chapter3/3-1.md
+      - Unsigned int 无符号整数溢出: Pwn/Chapter3/3-2.md
+    - 信息泄露漏洞: 
+      - Puts 泄露 Libc: Pwn/Chapter4/4-1.md
+      - Scanf 绕过泄露 Libc: Pwn/Chapter4/4-2.md
+      - Strlen 绕过泄露 Libc: Pwn/Chapter4/4-3.md
+      - Write 泄露 Libc: Pwn/Chapter4/4-4.md
+      - Printf 泄露 Libc: Pwn/Chapter4/4-5.md
+      - Printf  指定地址泄露 Canary: Pwn/Chapter4/4-6.md
+      - Unsortedbin Attack 泄露 Libc: Pwn/Chapter4/4-7.md
+      - Write 泄露 Libc 结合 32 位栈迁移: Pwn/Chapter4/4-8.md
+      - Debug 泄露数据传输过程: Pwn/Chapter4/4-9.md
+      - Printf 指定地址泄露 Libc: Pwn/Chapter4/4-10.md
+      - Puts 泄露 Canary: Pwn/Chapter4/4-11.md
+      - ECX 寄存器泄露栈初始地址: Pwn/Chapter4/4-12.md
+      - Puts 泄露 Libc 结合 64 位栈迁移: Pwn/Chapter4/4-13.md
+      - Write 泄露 Libc 结合 .so 文件: Pwn/Chapter4/4-14.md
+      - 泄露栈地址绕过 PIE: Pwn/Chapter4/4-15.md
+    - 代码注入漏洞: 
+      - ShellCode 注入: Pwn/Chapter5/5-1.md
+      - \x00 绕过 strcmp(): Pwn/Chapter5/5-2.md
+      - XOR 编码注入: Pwn/Chapter5/5-3.md
+      - SysCall 绕过 Prctl Seccomp: Pwn/Chapter5/5-4.md
+      - Call eax 注入: Pwn/Chapter5/5-5.md
+      - Jmp esp GetShell: Pwn/Chapter5/5-6.md
+      - 内平栈注入: Pwn/Chapter5/5-7.md
+      - One_gadget 注入: Pwn/Chapter5/5-8.md
+      - Bss 段注入: Pwn/Chapter5/5-9.md
+      - 汇编 ShellCode 注入: Pwn/Chapter5/5-10.md
+      - 字节 ShellCode 注入: Pwn/Chapter5/5-11.md
+      - 返回地址之后 ShellCode 注入: Pwn/Chapter5/5-12.md
+    - 堆溢出漏洞: 
+      - Scanf 堆溢出覆盖相邻堆块: Pwn/Chapter6/6-1.md
+      - Fastbin Attack（两次 Double Free）: Pwn/Chapter6/6-2.md
+      - Fastbin Attack（伪造堆块劫持 GOT 表）: Pwn/Chapter6/6-3.md
+      - UAF（修改堆地址）: Pwn/Chapter6/6-4.md
+      - Unsorted Bin Attack（修改 bk 指针）: Pwn/Chapter6/6-5.md
+      - Off By One 结合 Chunk Overlap（伪造堆块修改指针）: Pwn/Chapter6/6-6.md
+    - 内核漏洞: 
+      - 时间侧信道攻击: Pwn/Chapter7/7-1.md
+    - GDB 调试: 
+      - 32 位 Gets 栈溢出: Pwn/Chapter99/99-1.md
+      - 固定偏移量绕过 PIE: Pwn/Chapter99/99-2.md
+  - 工具: 
+    - 介绍: Tools/index.md
+  - 关于: 
+    - 介绍: about.md

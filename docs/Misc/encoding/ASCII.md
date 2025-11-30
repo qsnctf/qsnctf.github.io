@@ -1,5 +1,4 @@
-# ASCII
-
+﻿# ASCII
 ## ASCII是什么？
 
 **ASCII**（American Standard Code for Information Interchange，美国信息交换标准代码）是最早被广泛采用的字符编码标准之一。它主要用于显示现代英语，而其扩展版本延伸美国标准信息交换码则可以部分支持其他西欧语言，并等同于国际标准ISO/IEC 646。它把字符（如字母、数字、标点符号、控制符号等）映射为 **7 位二进制数（0–127）**。也是现代所有字符编码（如 UTF-8、Unicode）的基础。
