@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: docs
-          clean: true   # <— prevents dirty tree
+          clean: true  # 清理未跟踪文件
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -30,7 +30,7 @@ jobs:
 
       - name: Build site into temporary directory
         env:
-          MKDOCS_GIT_COMMITTERS_CACHE: '0'   # <— prevents cache writing
+          MKDOCS_GIT_COMMITTERS_CACHE: '0'  # 禁用插件写 .cache
         run: |
           mkdocs build --site-dir /tmp/site_output
 
