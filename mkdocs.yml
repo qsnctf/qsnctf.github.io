@@ -58,9 +58,9 @@ edit_uri: edit/docs/docs/
 
 # plugins
 plugins:
-  - git-committers: # 贡献人
-      repository: qsnctf/qsnctf.github.io
-      branch: main
+  # - git-committers: # 贡献人
+  #     repository: qsnctf/qsnctf.github.io
+  #     branch: main
   # - git-authors # 展示作者
   - search # 内置搜索
   - tags # 标签
@@ -82,14 +82,8 @@ extra:
       link: mailto:lqn@sierting.com
 
 extra_javascript:
-  # - javascripts/mathjax.js
-  # - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-  # ----- katex -----
-  - javascripts/katex.js 
-  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
-  - https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/katex.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
-
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 
 
