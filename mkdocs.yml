@@ -151,6 +151,7 @@ nav:
       - Hex: Misc/encoding/Hex.md
       - Base家族:
         - Base64: Misc/encoding/Base/Base64.md
+        - Base32: Misc/encoding/Base/Base32.md
   - Crypto: 
     - 介绍: Crypto/index.md
   - Web: 
