@@ -1,19 +1,20 @@
+// docs/javascripts/mathjax.js
 window.MathJax = {
   tex: {
-    inlineMath: [["\\(", "\\)"]],
-    displayMath: [["\\[", "\\]"]],
+    inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
     processEscapes: true,
-    processEnvironments: true
   },
   options: {
-    ignoreHtmlClass: ".*|",
-    processHtmlClass: "arithmatex"
-  }
+    // 关键：别让它全页乱扫
+    ignoreHtmlClass: ".*",
+    processHtmlClass: "arithmatex",
+  },
 };
 
-document$.subscribe(() => { 
-  MathJax.startup.output.clearCache()
-  MathJax.typesetClear()
-  MathJax.texReset()
-  MathJax.typesetPromise()
-})
+document$.subscribe(() => {
+  if (!window.MathJax?.typesetPromise) return;
+  const nodes = document.querySelectorAll(".arithmatex");
+  window.MathJax.typesetClear?.(nodes);
+  window.MathJax.typesetPromise(nodes);
+});
