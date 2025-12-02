@@ -803,6 +803,6 @@ nav:
   - 工具: 
     - 介绍: Tools/index.md
     - 编码工具:
-      - CyberChef: Tools/CyberChef.md
+      - CyberChef: Tools/encoding/CyberChef.md
   - 关于: 
     - 介绍: about.md
