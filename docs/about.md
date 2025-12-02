@@ -19,8 +19,6 @@
 
 感谢以下贡献者对本项目的帮助（不分先后顺序）：
 
-## 贡献者
-
 <style>
 .md-typeset table td { text-align: center; vertical-align: top; }
 .md-typeset table { width: 100%; }
@@ -28,4 +26,4 @@
 
 |                                                              |                                                              |                                                              |      |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ---- |
-| <a href="https://github.com/qsnctf"><img src="attachments/qsnctf.png" width="72" height="72"><br><sub>@qsnctf</sub></a> | <a href="https://github.com/Moxin1044"><img src="attachments/Moxin1044.jpeg" width="72" height="72"><br><sub>@Moxin1044</sub></a> | <a href="https://github.com/duckpigdog"><img src="attachments/duckpigdog.jpeg" width="72" height="72"><br><sub>@duckpigdog</sub></a> |      |      |
+| <a href="https://github.com/qsnctf"><img src="https://github.com/qsnctf.png?size=120" width="72" height="72"><br><sub>@qsnctf</sub></a> | <a href="https://github.com/Moxin1044"><img src="https://github.com/Moxin1044.png?size=120" width="72" height="72"><br><sub>@Moxin1044</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/duckpigdog.png?size=120" width="72" height="72"><br><sub>@duckpigdog</sub></a> |      |      |
