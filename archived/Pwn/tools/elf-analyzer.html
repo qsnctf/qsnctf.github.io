@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ELF 分析器 - 青少年CTF工具</title>
+  <meta name="description" content="在线分析 ELF 文件，检测安全特性和危险函数，提供 Pwn 做题思路" />
+  <link rel="icon" href="https://docs.qsnctf.com/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-text: #1f2937;
+      --secondary-text: #6b7280;
+      --accent-color: #0066ff;
+      --accent-hover: #0052cc;
+      --glass-bg: rgba(255, 255, 255, 0.65);
+      --glass-border: rgba(255, 255, 255, 0.8);
+      --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+      --success-color: #10b981;
+      --warning-color: #f59e0b;
+      --danger-color: #ef4444;
+    }
+
+    body, html {
+      margin: 0; padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--primary-text);
+      line-height: 1.6;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: var(--accent-color); transition: 0.2s; }
+    a:hover { color: var(--accent-hover); }
+
+    .bg-grid {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -2;
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-color: #ffffff;
+    }
+
+    #canvas-particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    header .nav-links a {
+      margin-right: 16px;
+      color: #0066ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 0 0 15px;
+      color: #111827;
+      letter-spacing: -0.03em;
+    }
+
+    .title-gradient {
+      background: linear-gradient(135deg, #111827 0%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: var(--secondary-text);
+    }
+
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* Upload Area */
+    .upload-area {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 2px dashed rgba(0, 102, 255, 0.3);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 30px;
+    }
+
+    .upload-area:hover {
+      border-color: var(--accent-color);
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .upload-area.dragover {
+      border-color: var(--accent-color);
+      background: rgba(0, 102, 255, 0.1);
+    }
+
+    .upload-icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .upload-area h3 {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+    }
+
+    .upload-area p {
+      color: var(--secondary-text);
+      margin: 0;
+    }
+
+    #file-input {
+      display: none;
+    }
+
+    /* Result Cards */
+    .result-section {
+      display: none;
+    }
+
+    .result-section.visible {
+      display: block;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 15px;
+      font-size: 1.2rem;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-full {
+      grid-column: 1 / -1;
+    }
+
+    /* Info Table */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .info-table td {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .info-table td:first-child {
+      color: var(--secondary-text);
+      width: 40%;
+    }
+
+    .info-table td:last-child {
+      font-family: 'Source Code Pro', monospace;
+      font-weight: 600;
+    }
+
+    /* Security Badge */
+    .security-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .security-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 15px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .security-item.enabled {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .security-item.disabled {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .security-item.partial {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .security-badge {
+      font-size: 1.2rem;
+    }
+
+    .security-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .security-status {
+      font-size: 0.8rem;
+      color: var(--secondary-text);
+    }
+
+    /* Dangerous Functions */
+    .func-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .func-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.9rem;
+    }
+
+    .func-tag.danger {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #dc2626;
+    }
+
+    .func-tag.useful {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #059669;
+    }
+
+    .func-tag.warning {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #d97706;
+    }
+
+    .no-items {
+      color: var(--secondary-text);
+      font-style: italic;
+    }
+
+    /* Hints Section */
+    .hints-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hints-list li {
+      padding: 15px;
+      margin-bottom: 10px;
+      background: rgba(0, 102, 255, 0.05);
+      border-left: 4px solid var(--accent-color);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .hints-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .hint-title {
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: #111827;
+    }
+
+    .hint-desc {
+      color: var(--secondary-text);
+      font-size: 0.95rem;
+    }
+
+    /* Sections/Segments Table */
+    .segments-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .segments-table th,
+    .segments-table td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .segments-table th {
+      background: rgba(0, 0, 0, 0.02);
+      font-weight: 600;
+      color: var(--secondary-text);
+    }
+
+    .segments-table td {
+      font-family: 'Source Code Pro', monospace;
+    }
+
+    .table-container {
+      overflow-x: auto;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 0.9rem;
+      color: #888;
+      background: linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0) 100%);
+    }
+
+    footer a { color: #555; font-weight: 600; margin: 0 8px;}
+    footer a:hover { color: var(--accent-color); }
+
+    /* Loading Indicator */
+    .loading {
+      display: none;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .loading.visible {
+      display: block;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(0, 102, 255, 0.1);
+      border-top-color: var(--accent-color);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 15px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Error Message */
+    .error-message {
+      display: none;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #dc2626;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .error-message.visible {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><strong>青少年CTF工具</strong></div>
+    <div class="nav-links">
+      <a href="https://docs.qsnctf.com/home/">文库</a>
+      <a href="https://www.qsnctf.com" target="_blank">练习平台</a>
+      <a href="https://tools.qsnctf.com" target="_blank">工具站</a>
+      <a href="https://bbs.qsnctf.com" target="_blank">社区论坛</a>
+    </div>
+  </header>
+
+  <div class="bg-grid"></div>
+  <canvas id="canvas-particles"></canvas>
+
+  <div class="content-wrapper">
+    <div class="hero">
+      <h1><span class="title-gradient">ELF 文件分析器</span></h1>
+      <p>上传 ELF 可执行文件，自动分析安全特性、危险函数，并提供 Pwn 做题思路</p>
+    </div>
+
+    <div class="main-container">
+      <!-- Upload Area -->
+      <div class="upload-area" id="upload-area">
+        <div class="upload-icon">📁</div>
+        <h3>拖放 ELF 文件到这里</h3>
+        <p>或者点击选择文件</p>
+        <input type="file" id="file-input" accept=".elf,.so,.out,">
+      </div>
+
+      <!-- Loading Indicator -->
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>正在分析文件...</p>
+      </div>
+
+      <!-- Error Message -->
+      <div class="error-message" id="error-message"></div>
+
+      <!-- Results Section -->
+      <div class="result-section" id="result-section">
+        <div class="result-grid">
+          <!-- Basic Info Card -->
+          <div class="card">
+            <h3>📄 基本信息</h3>
+            <table class="info-table" id="basic-info">
+            </table>
+          </div>
+
+          <!-- Security Features Card -->
+          <div class="card">
+            <h3>🛡️ 安全特性</h3>
+            <div class="security-grid" id="security-features">
+            </div>
+          </div>
+
+          <!-- Dangerous Functions Card -->
+          <div class="card">
+            <h3>⚠️ 危险函数</h3>
+            <div class="func-list" id="dangerous-funcs">
+            </div>
+          </div>
+
+          <!-- Useful Functions Card -->
+          <div class="card">
+            <h3>🎯 可利用函数</h3>
+            <div class="func-list" id="useful-funcs">
+            </div>
+          </div>
+
+          <!-- Hints Card -->
+          <div class="card card-full">
+            <h3>💡 做题思路</h3>
+            <ul class="hints-list" id="hints-list">
+            </ul>
+          </div>
+
+          <!-- Program Headers Card -->
+          <div class="card card-full">
+            <h3>📊 程序头表 (Program Headers)</h3>
+            <div class="table-container">
+              <table class="segments-table" id="program-headers">
+              </table>
+            </div>
+          </div>
+
+          <!-- Section Headers Card -->
+          <div class="card card-full">
+            <h3>📋 节区头表 (Section Headers)</h3>
+            <div class="table-container">
+              <table class="segments-table" id="section-headers">
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 青少年CTF · <a href="https://docs.qsnctf.com">文库</a> · <a href="https://tools.qsnctf.com">工具站</a>
+    </footer>
+  </div>
+
+  <script>
+    // Particle Animation (same as main site)
+    const canvas = document.getElementById('canvas-particles');
+    const ctx = canvas.getContext('2d');
+
+    let w, h;
+    let particles = [];
+    
+    const config = {
+      count: 60,
+      radius: 2,
+      distance: 120,
+      mouseDist: 150,
+      color: 'rgba(31, 41, 55, 0.15)',
+      lineColor: 'rgba(0, 102, 255, 0.05)',
+      activeColor: 'rgba(0, 102, 255, 0.2)'
+    };
+
+    const mouse = { x: null, y: null };
+
+    window.addEventListener('resize', init);
+    window.addEventListener('mousemove', e => {
+      mouse.x = e.x;
+      mouse.y = e.y;
+    });
+    window.addEventListener('mouseout', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    function init() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+      createParticles();
+    }
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * w;
+        this.y = Math.random() * h;
+        this.vx = (Math.random() - 0.5) * 0.8;
+        this.vy = (Math.random() - 0.5) * 0.8;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        if(this.x < 0 || this.x > w) this.vx *= -1;
+        if(this.y < 0 || this.y > h) this.vy *= -1;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, config.radius, 0, Math.PI * 2);
+        ctx.fillStyle = config.color;
+        ctx.fill();
+      }
+    }
+
+    function createParticles() {
+      particles = [];
+      let count = window.innerWidth < 768 ? 30 : config.count;
+      for(let i=0; i<count; i++) particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, w, h);
+
+      for (let i = 0; i < particles.length; i++) {
+        let p1 = particles[i];
+        p1.update();
+        p1.draw();
+
+        for (let j = i; j < particles.length; j++) {
+          let p2 = particles[j];
+          let dx = p1.x - p2.x;
+          let dy = p1.y - p2.y;
+          let dist = Math.sqrt(dx*dx + dy*dy);
+
+          if (dist < config.distance) {
+            ctx.beginPath();
+            ctx.strokeStyle = config.lineColor;
+            ctx.lineWidth = 1;
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          }
+        }
+
+        if (mouse.x) {
+          let dx = mouse.x - p1.x;
+          let dy = mouse.y - p1.y;
+          let dist = Math.sqrt(dx*dx + dy*dy);
+
+          if (dist < config.mouseDist) {
+            ctx.beginPath();
+            ctx.strokeStyle = config.activeColor;
+            ctx.lineWidth = 1.5;
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
+
+    // ELF Parser
+    class ELFParser {
+      constructor(buffer) {
+        this.buffer = buffer;
+        this.view = new DataView(buffer);
+        this.littleEndian = true;
+        this.is64Bit = false;
+        this.elfHeader = null;
+        this.programHeaders = [];
+        this.sectionHeaders = [];
+        this.symbols = [];
+        this.dynamicSymbols = [];
+        this.stringTable = null;
+        this.dynstrTable = null;
+      }
+
+      parse() {
+        // Check ELF magic
+        const magic = this.readBytes(0, 4);
+        if (magic[0] !== 0x7f || magic[1] !== 0x45 || magic[2] !== 0x4c || magic[3] !== 0x46) {
+          throw new Error('不是有效的 ELF 文件');
+        }
+
+        // Parse ELF header
+        this.parseELFHeader();
+        
+        // Parse program headers
+        this.parseProgramHeaders();
+        
+        // Parse section headers
+        this.parseSectionHeaders();
+        
+        // Load string tables and symbols
+        this.loadStringTables();
+        this.loadSymbols();
+
+        return this;
+      }
+
+      readBytes(offset, length) {
+        const bytes = new Uint8Array(this.buffer, offset, length);
+        return Array.from(bytes);
+      }
+
+      readUInt8(offset) {
+        return this.view.getUint8(offset);
+      }
+
+      readUInt16(offset) {
+        return this.view.getUint16(offset, this.littleEndian);
+      }
+
+      readUInt32(offset) {
+        return this.view.getUint32(offset, this.littleEndian);
+      }
+
+      readUInt64(offset) {
+        if (this.littleEndian) {
+          const low = this.view.getUint32(offset, true);
+          const high = this.view.getUint32(offset + 4, true);
+          return BigInt(low) + (BigInt(high) << 32n);
+        } else {
+          const high = this.view.getUint32(offset, false);
+          const low = this.view.getUint32(offset + 4, false);
+          return BigInt(low) + (BigInt(high) << 32n);
+        }
+      }
+
+      readAddr(offset) {
+        return this.is64Bit ? this.readUInt64(offset) : BigInt(this.readUInt32(offset));
+      }
+
+      parseELFHeader() {
+        // EI_CLASS (32/64 bit)
+        const eiClass = this.readUInt8(4);
+        this.is64Bit = eiClass === 2;
+
+        // EI_DATA (endianness)
+        const eiData = this.readUInt8(5);
+        this.littleEndian = eiData === 1;
+
+        this.elfHeader = {
+          class: eiClass === 1 ? 'ELF32' : 'ELF64',
+          data: eiData === 1 ? 'Little Endian' : 'Big Endian',
+          version: this.readUInt8(6),
+          osabi: this.getOSABI(this.readUInt8(7)),
+          type: this.getELFType(this.readUInt16(16)),
+          machine: this.getMachine(this.readUInt16(18)),
+          entryPoint: this.is64Bit ? this.readUInt64(24) : BigInt(this.readUInt32(24)),
+          phoff: this.is64Bit ? this.readUInt64(32) : BigInt(this.readUInt32(28)),
+          shoff: this.is64Bit ? this.readUInt64(40) : BigInt(this.readUInt32(32)),
+          flags: this.is64Bit ? this.readUInt32(48) : this.readUInt32(36),
+          ehsize: this.is64Bit ? this.readUInt16(52) : this.readUInt16(40),
+          phentsize: this.is64Bit ? this.readUInt16(54) : this.readUInt16(42),
+          phnum: this.is64Bit ? this.readUInt16(56) : this.readUInt16(44),
+          shentsize: this.is64Bit ? this.readUInt16(58) : this.readUInt16(46),
+          shnum: this.is64Bit ? this.readUInt16(60) : this.readUInt16(48),
+          shstrndx: this.is64Bit ? this.readUInt16(62) : this.readUInt16(50)
+        };
+      }
+
+      getOSABI(value) {
+        const osabis = {
+          0: 'UNIX - System V',
+          1: 'HP-UX',
+          2: 'NetBSD',
+          3: 'Linux',
+          6: 'Solaris',
+          9: 'FreeBSD',
+          12: 'OpenBSD'
+        };
+        return osabis[value] || `Unknown (${value})`;
+      }
+
+      getELFType(value) {
+        const types = {
+          0: 'NONE (Unknown)',
+          1: 'REL (Relocatable)',
+          2: 'EXEC (Executable)',
+          3: 'DYN (Shared Object)',
+          4: 'CORE (Core Dump)'
+        };
+        return types[value] || `Unknown (${value})`;
+      }
+
+      getMachine(value) {
+        const machines = {
+          0: 'No machine',
+          2: 'SPARC',
+          3: 'x86 (i386)',
+          8: 'MIPS',
+          20: 'PowerPC',
+          21: 'PowerPC64',
+          40: 'ARM',
+          50: 'IA-64',
+          62: 'x86-64 (AMD64)',
+          183: 'AArch64 (ARM64)',
+          243: 'RISC-V'
+        };
+        return machines[value] || `Unknown (${value})`;
+      }
+
+      parseProgramHeaders() {
+        const phoff = Number(this.elfHeader.phoff);
+        const phnum = this.elfHeader.phnum;
+        const phentsize = this.elfHeader.phentsize;
+
+        for (let i = 0; i < phnum; i++) {
+          const offset = phoff + i * phentsize;
+          const ph = this.parseProgramHeader(offset);
+          this.programHeaders.push(ph);
+        }
+      }
+
+      parseProgramHeader(offset) {
+        if (this.is64Bit) {
+          return {
+            type: this.getPHType(this.readUInt32(offset)),
+            flags: this.readUInt32(offset + 4),
+            offset: this.readUInt64(offset + 8),
+            vaddr: this.readUInt64(offset + 16),
+            paddr: this.readUInt64(offset + 24),
+            filesz: this.readUInt64(offset + 32),
+            memsz: this.readUInt64(offset + 40),
+            align: this.readUInt64(offset + 48)
+          };
+        } else {
+          return {
+            type: this.getPHType(this.readUInt32(offset)),
+            offset: BigInt(this.readUInt32(offset + 4)),
+            vaddr: BigInt(this.readUInt32(offset + 8)),
+            paddr: BigInt(this.readUInt32(offset + 12)),
+            filesz: BigInt(this.readUInt32(offset + 16)),
+            memsz: BigInt(this.readUInt32(offset + 20)),
+            flags: this.readUInt32(offset + 24),
+            align: BigInt(this.readUInt32(offset + 28))
+          };
+        }
+      }
+
+      getPHType(value) {
+        const types = {
+          0: 'NULL',
+          1: 'LOAD',
+          2: 'DYNAMIC',
+          3: 'INTERP',
+          4: 'NOTE',
+          5: 'SHLIB',
+          6: 'PHDR',
+          7: 'TLS',
+          0x6474e550: 'GNU_EH_FRAME',
+          0x6474e551: 'GNU_STACK',
+          0x6474e552: 'GNU_RELRO',
+          0x6474e553: 'GNU_PROPERTY'
+        };
+        return types[value] || `0x${value.toString(16)}`;
+      }
+
+      parseSectionHeaders() {
+        const shoff = Number(this.elfHeader.shoff);
+        const shnum = this.elfHeader.shnum;
+        const shentsize = this.elfHeader.shentsize;
+
+        if (shoff === 0) return;
+
+        // First, parse all section headers
+        for (let i = 0; i < shnum; i++) {
+          const offset = shoff + i * shentsize;
+          const sh = this.parseSectionHeader(offset);
+          this.sectionHeaders.push(sh);
+        }
+
+        // Load section names from shstrtab
+        const shstrndx = this.elfHeader.shstrndx;
+        if (shstrndx < shnum) {
+          const shstrtab = this.sectionHeaders[shstrndx];
+          const shstrtabOffset = Number(shstrtab.offset);
+          const shstrtabSize = Number(shstrtab.size);
+          
+          for (let sh of this.sectionHeaders) {
+            sh.name = this.readString(shstrtabOffset + sh.nameOffset);
+          }
+        }
+      }
+
+      parseSectionHeader(offset) {
+        if (this.is64Bit) {
+          return {
+            nameOffset: this.readUInt32(offset),
+            type: this.getSHType(this.readUInt32(offset + 4)),
+            typeValue: this.readUInt32(offset + 4),
+            flags: this.readUInt64(offset + 8),
+            addr: this.readUInt64(offset + 16),
+            offset: this.readUInt64(offset + 24),
+            size: this.readUInt64(offset + 32),
+            link: this.readUInt32(offset + 40),
+            info: this.readUInt32(offset + 44),
+            addralign: this.readUInt64(offset + 48),
+            entsize: this.readUInt64(offset + 56),
+            name: ''
+          };
+        } else {
+          return {
+            nameOffset: this.readUInt32(offset),
+            type: this.getSHType(this.readUInt32(offset + 4)),
+            typeValue: this.readUInt32(offset + 4),
+            flags: BigInt(this.readUInt32(offset + 8)),
+            addr: BigInt(this.readUInt32(offset + 12)),
+            offset: BigInt(this.readUInt32(offset + 16)),
+            size: BigInt(this.readUInt32(offset + 20)),
+            link: this.readUInt32(offset + 24),
+            info: this.readUInt32(offset + 28),
+            addralign: BigInt(this.readUInt32(offset + 32)),
+            entsize: BigInt(this.readUInt32(offset + 36)),
+            name: ''
+          };
+        }
+      }
+
+      getSHType(value) {
+        const types = {
+          0: 'NULL',
+          1: 'PROGBITS',
+          2: 'SYMTAB',
+          3: 'STRTAB',
+          4: 'RELA',
+          5: 'HASH',
+          6: 'DYNAMIC',
+          7: 'NOTE',
+          8: 'NOBITS',
+          9: 'REL',
+          10: 'SHLIB',
+          11: 'DYNSYM',
+          14: 'INIT_ARRAY',
+          15: 'FINI_ARRAY',
+          0x6ffffff6: 'GNU_HASH',
+          0x6ffffffd: 'GNU_verdef',
+          0x6ffffffe: 'GNU_verneed',
+          0x6fffffff: 'GNU_versym'
+        };
+        return types[value] || `0x${value.toString(16)}`;
+      }
+
+      readString(offset) {
+        let str = '';
+        let i = offset;
+        while (i < this.buffer.byteLength) {
+          const byte = this.readUInt8(i);
+          if (byte === 0) break;
+          str += String.fromCharCode(byte);
+          i++;
+        }
+        return str;
+      }
+
+      loadStringTables() {
+        for (let sh of this.sectionHeaders) {
+          if (sh.name === '.strtab') {
+            this.stringTable = {
+              offset: Number(sh.offset),
+              size: Number(sh.size)
+            };
+          }
+          if (sh.name === '.dynstr') {
+            this.dynstrTable = {
+              offset: Number(sh.offset),
+              size: Number(sh.size)
+            };
+          }
+        }
+      }
+
+      loadSymbols() {
+        // Load dynamic symbols (most common for detecting functions)
+        for (let sh of this.sectionHeaders) {
+          if (sh.type === 'DYNSYM' && this.dynstrTable) {
+            this.loadSymbolTable(sh, this.dynstrTable, this.dynamicSymbols);
+          }
+          if (sh.type === 'SYMTAB' && this.stringTable) {
+            this.loadSymbolTable(sh, this.stringTable, this.symbols);
+          }
+        }
+      }
+
+      loadSymbolTable(section, strtab, targetArray) {
+        const offset = Number(section.offset);
+        const size = Number(section.size);
+        const entsize = Number(section.entsize);
+        
+        if (entsize === 0) return;
+
+        const count = size / entsize;
+        
+        for (let i = 0; i < count; i++) {
+          const symOffset = offset + i * entsize;
+          const sym = this.parseSymbol(symOffset, strtab);
+          if (sym.name) {
+            targetArray.push(sym);
+          }
+        }
+      }
+
+      parseSymbol(offset, strtab) {
+        let sym;
+        if (this.is64Bit) {
+          const nameOffset = this.readUInt32(offset);
+          const info = this.readUInt8(offset + 4);
+          const other = this.readUInt8(offset + 5);
+          const shndx = this.readUInt16(offset + 6);
+          const value = this.readUInt64(offset + 8);
+          const size = this.readUInt64(offset + 16);
+          
+          sym = {
+            name: this.readString(strtab.offset + nameOffset),
+            info,
+            other,
+            shndx,
+            value,
+            size,
+            type: info & 0xf,
+            bind: info >> 4
+          };
+        } else {
+          const nameOffset = this.readUInt32(offset);
+          const value = this.readUInt32(offset + 4);
+          const size = this.readUInt32(offset + 8);
+          const info = this.readUInt8(offset + 12);
+          const other = this.readUInt8(offset + 13);
+          const shndx = this.readUInt16(offset + 14);
+          
+          sym = {
+            name: this.readString(strtab.offset + nameOffset),
+            info,
+            other,
+            shndx,
+            value: BigInt(value),
+            size: BigInt(size),
+            type: info & 0xf,
+            bind: info >> 4
+          };
+        }
+        return sym;
+      }
+
+      // Security Checks
+      checkSecurity() {
+        const security = {
+          nx: this.checkNX(),
+          pie: this.checkPIE(),
+          relro: this.checkRELRO(),
+          canary: this.checkCanary(),
+          fortify: this.checkFortify()
+        };
+        return security;
+      }
+
+      checkNX() {
+        // Check for GNU_STACK segment
+        for (let ph of this.programHeaders) {
+          if (ph.type === 'GNU_STACK') {
+            // Check if execute flag (0x1) is NOT set
+            return (ph.flags & 0x1) === 0;
+          }
+        }
+        // If no GNU_STACK, assume NX is enabled (modern default)
+        return true;
+      }
+
+      checkPIE() {
+        // PIE binaries are of type DYN (3)
+        return this.elfHeader.type.includes('DYN');
+      }
+
+      checkRELRO() {
+        let hasRelro = false;
+        let hasBind = false;
+
+        for (let ph of this.programHeaders) {
+          if (ph.type === 'GNU_RELRO') {
+            hasRelro = true;
+          }
+        }
+
+        // Check for BIND_NOW in dynamic section
+        for (let sh of this.sectionHeaders) {
+          if (sh.name === '.dynamic') {
+            // Parse dynamic entries to look for DT_FLAGS with DF_BIND_NOW
+            // or DT_BIND_NOW
+            const offset = Number(sh.offset);
+            const size = Number(sh.size);
+            const entsize = this.is64Bit ? 16 : 8;
+            
+            for (let i = 0; i < size; i += entsize) {
+              const tag = this.is64Bit ? 
+                Number(this.readUInt64(offset + i)) : 
+                this.readUInt32(offset + i);
+              
+              // DT_BIND_NOW = 24, DT_FLAGS = 30, DF_BIND_NOW = 0x8
+              if (tag === 24) {
+                hasBind = true;
+                break;
+              }
+              if (tag === 30) {
+                const val = this.is64Bit ?
+                  Number(this.readUInt64(offset + i + 8)) :
+                  this.readUInt32(offset + i + 4);
+                if (val & 0x8) {
+                  hasBind = true;
+                  break;
+                }
+              }
+              // DT_FLAGS_1 = 0x6ffffffb, DF_1_NOW = 0x1
+              if (tag === 0x6ffffffb) {
+                const val = this.is64Bit ?
+                  Number(this.readUInt64(offset + i + 8)) :
+                  this.readUInt32(offset + i + 4);
+                if (val & 0x1) {
+                  hasBind = true;
+                  break;
+                }
+              }
+              if (tag === 0) break; // DT_NULL
+            }
+          }
+        }
+
+        if (hasRelro && hasBind) return 'Full';
+        if (hasRelro) return 'Partial';
+        return 'No';
+      }
+
+      checkCanary() {
+        // Look for __stack_chk_fail in symbols
+        const allSymbols = [...this.symbols, ...this.dynamicSymbols];
+        for (let sym of allSymbols) {
+          if (sym.name === '__stack_chk_fail' || sym.name === '__stack_chk_guard') {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      checkFortify() {
+        // Look for __*_chk functions
+        const allSymbols = [...this.symbols, ...this.dynamicSymbols];
+        for (let sym of allSymbols) {
+          if (sym.name.includes('_chk') && !sym.name.includes('stack_chk')) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      // Dangerous Function Detection
+      getDangerousFunctions() {
+        const dangerousFuncs = [
+          'gets', 'scanf', 'strcpy', 'strcat', 'sprintf', 'vsprintf',
+          'strncpy', 'strncat', 'snprintf', 'vsnprintf',
+          'read', 'recv', 'recvfrom', 'fgets', 'fread',
+          'memcpy', 'memmove', 'bcopy'
+        ];
+
+        const allSymbols = [...this.symbols, ...this.dynamicSymbols];
+        const found = [];
+
+        for (let sym of allSymbols) {
+          for (let func of dangerousFuncs) {
+            if (sym.name === func || sym.name === `__${func}` || 
+                sym.name === `${func}@plt` || sym.name === `__isoc99_${func}`) {
+              if (!found.includes(func)) {
+                found.push(func);
+              }
+            }
+          }
+        }
+
+        return found;
+      }
+
+      getUsefulFunctions() {
+        const usefulFuncs = [
+          'system', 'execve', 'execl', 'execlp', 'execle', 'execv', 'execvp',
+          'popen', 'mprotect', 'mmap', 'dlopen', 'dlsym',
+          'setuid', 'setgid', 'seteuid', 'setegid',
+          'open', 'write', 'sendfile'
+        ];
+
+        const allSymbols = [...this.symbols, ...this.dynamicSymbols];
+        const found = [];
+
+        for (let sym of allSymbols) {
+          for (let func of usefulFuncs) {
+            if (sym.name === func || sym.name === `__${func}` || 
+                sym.name === `${func}@plt`) {
+              if (!found.includes(func)) {
+                found.push(func);
+              }
+            }
+          }
+        }
+
+        return found;
+      }
+
+      // Check for /bin/sh string
+      hasShellString() {
+        const searchStrings = ['/bin/sh', '/bin/bash', 'sh'];
+        const buffer = new Uint8Array(this.buffer);
+        
+        for (let searchStr of searchStrings) {
+          const searchBytes = new TextEncoder().encode(searchStr);
+          
+          for (let i = 0; i < buffer.length - searchBytes.length; i++) {
+            let found = true;
+            for (let j = 0; j < searchBytes.length; j++) {
+              if (buffer[i + j] !== searchBytes[j]) {
+                found = false;
+                break;
+              }
+            }
+            if (found && (i + searchBytes.length >= buffer.length || buffer[i + searchBytes.length] === 0)) {
+              return true;
+            }
+          }
+        }
+        return false;
+      }
+
+      // Generate hints based on analysis
+      generateHints() {
+        const hints = [];
+        const security = this.checkSecurity();
+        const dangerous = this.getDangerousFunctions();
+        const useful = this.getUsefulFunctions();
+        const hasShell = this.hasShellString();
+
+        // Basic vulnerability hints
+        if (dangerous.includes('gets')) {
+          hints.push({
+            title: '🔴 gets() 函数 - 经典栈溢出',
+            desc: 'gets() 不检查输入长度，可以无限制输入导致栈溢出。尝试覆盖返回地址控制程序流程。'
+          });
+        }
+
+        if (dangerous.includes('scanf') || dangerous.includes('__isoc99_scanf')) {
+          hints.push({
+            title: '🟠 scanf() 函数 - 可能的格式化字符串/溢出',
+            desc: '如果 scanf 使用 %s 且没有长度限制，可能存在栈溢出。检查格式化字符串的使用方式。'
+          });
+        }
+
+        if (dangerous.includes('strcpy') || dangerous.includes('strcat')) {
+          hints.push({
+            title: '🟠 strcpy/strcat - 不安全的字符串操作',
+            desc: '这些函数不检查目标缓冲区大小，如果源字符串过长可能导致溢出。'
+          });
+        }
+
+        if (dangerous.includes('sprintf') || dangerous.includes('vsprintf')) {
+          hints.push({
+            title: '🟠 sprintf/vsprintf - 格式化字符串漏洞',
+            desc: '可能存在格式化字符串漏洞，尝试使用 %p、%x 泄露栈内容，或用 %n 写入内存。'
+          });
+        }
+
+        // Security feature based hints
+        if (!security.nx) {
+          hints.push({
+            title: '💉 NX 未启用 - 可执行栈',
+            desc: '栈可以执行代码！可以直接注入 shellcode 到栈上并跳转执行。'
+          });
+        }
+
+        if (!security.pie) {
+          hints.push({
+            title: '📍 非 PIE 程序 - 固定地址',
+            desc: '程序加载地址固定，可以直接使用 ROP gadgets 或跳转到已知地址。'
+          });
+        }
+
+        if (security.relro === 'No' || security.relro === 'Partial') {
+          hints.push({
+            title: '📝 RELRO 不完整 - GOT 可写',
+            desc: `${security.relro === 'No' ? 'GOT 表完全可写' : 'GOT 表部分可写'}，可以考虑 GOT 覆写攻击，修改函数指针。`
+          });
+        }
+
+        if (!security.canary) {
+          hints.push({
+            title: '🐦 无 Canary 保护',
+            desc: '没有栈保护，可以直接进行栈溢出覆盖返回地址，无需泄露 Canary。'
+          });
+        }
+
+        // Exploitation path hints
+        if (useful.includes('system')) {
+          if (hasShell) {
+            hints.push({
+              title: '🎯 存在 system() 和 /bin/sh',
+              desc: '程序中存在 system 函数和 /bin/sh 字符串，可以构造 ret2libc 或直接调用获取 shell。'
+            });
+          } else {
+            hints.push({
+              title: '🎯 存在 system() 函数',
+              desc: '可以尝试寻找 /bin/sh 字符串或者使用 libc 中的字符串来调用 system。'
+            });
+          }
+        }
+
+        if (useful.includes('mprotect')) {
+          hints.push({
+            title: '🔧 存在 mprotect()',
+            desc: '可以尝试 ret2mprotect，修改内存页权限为可执行后执行 shellcode。'
+          });
+        }
+
+        // Architecture specific hints
+        if (this.elfHeader.machine.includes('x86-64')) {
+          hints.push({
+            title: '📐 64位程序注意事项',
+            desc: '函数参数通过寄存器传递 (rdi, rsi, rdx, rcx, r8, r9)。需要找 pop rdi; ret 等 gadgets 来控制参数。'
+          });
+        } else if (this.elfHeader.machine.includes('x86')) {
+          hints.push({
+            title: '📐 32位程序注意事项',
+            desc: '函数参数通过栈传递。溢出时需要在返回地址后依次放置参数。'
+          });
+        }
+
+        // ROP hints
+        if (security.nx && !security.pie) {
+          hints.push({
+            title: '🔗 ROP 攻击可行',
+            desc: 'NX 启用但非 PIE，可以在程序中寻找 ROP gadgets 构建攻击链。使用 ROPgadget 或 ropper 工具搜索。'
+          });
+        }
+
+        if (hints.length === 0) {
+          hints.push({
+            title: '📋 基础分析完成',
+            desc: '未发现明显的漏洞函数，建议进一步使用 IDA/Ghidra 进行逆向分析，检查程序逻辑漏洞。'
+          });
+        }
+
+        return hints;
+      }
+    }
+
+    // UI Handling
+    const uploadArea = document.getElementById('upload-area');
+    const fileInput = document.getElementById('file-input');
+    const loading = document.getElementById('loading');
+    const errorMessage = document.getElementById('error-message');
+    const resultSection = document.getElementById('result-section');
+
+    uploadArea.addEventListener('click', () => fileInput.click());
+
+    uploadArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadArea.classList.add('dragover');
+    });
+
+    uploadArea.addEventListener('dragleave', () => {
+      uploadArea.classList.remove('dragover');
+    });
+
+    uploadArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadArea.classList.remove('dragover');
+      const files = e.dataTransfer.files;
+      if (files.length > 0) {
+        analyzeFile(files[0]);
+      }
+    });
+
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        analyzeFile(e.target.files[0]);
+      }
+    });
+
+    function showError(message) {
+      errorMessage.textContent = message;
+      errorMessage.classList.add('visible');
+      loading.classList.remove('visible');
+      resultSection.classList.remove('visible');
+    }
+
+    function hideError() {
+      errorMessage.classList.remove('visible');
+    }
+
+    function analyzeFile(file) {
+      hideError();
+      loading.classList.add('visible');
+      resultSection.classList.remove('visible');
+
+      const reader = new FileReader();
+      
+      reader.onload = function(e) {
+        try {
+          const buffer = e.target.result;
+          const parser = new ELFParser(buffer);
+          parser.parse();
+          displayResults(parser, file.name);
+        } catch (error) {
+          showError(error.message || '解析文件时发生错误');
+        }
+        loading.classList.remove('visible');
+      };
+
+      reader.onerror = function() {
+        showError('读取文件失败');
+        loading.classList.remove('visible');
+      };
+
+      reader.readAsArrayBuffer(file);
+    }
+
+    function displayResults(parser, filename) {
+      // Basic Info
+      const basicInfo = document.getElementById('basic-info');
+      basicInfo.innerHTML = `
+        <tr><td>文件名</td><td>${escapeHtml(filename)}</td></tr>
+        <tr><td>文件类型</td><td>${parser.elfHeader.class}</td></tr>
+        <tr><td>字节序</td><td>${parser.elfHeader.data}</td></tr>
+        <tr><td>目标架构</td><td>${parser.elfHeader.machine}</td></tr>
+        <tr><td>文件类型</td><td>${parser.elfHeader.type}</td></tr>
+        <tr><td>OS/ABI</td><td>${parser.elfHeader.osabi}</td></tr>
+        <tr><td>入口点</td><td>0x${parser.elfHeader.entryPoint.toString(16)}</td></tr>
+      `;
+
+      // Security Features
+      const security = parser.checkSecurity();
+      const securityFeatures = document.getElementById('security-features');
+      securityFeatures.innerHTML = `
+        <div class="security-item ${security.nx ? 'enabled' : 'disabled'}">
+          <span class="security-badge">${security.nx ? '✅' : '❌'}</span>
+          <div>
+            <div class="security-name">NX</div>
+            <div class="security-status">${security.nx ? '已启用' : '未启用'}</div>
+          </div>
+        </div>
+        <div class="security-item ${security.pie ? 'enabled' : 'disabled'}">
+          <span class="security-badge">${security.pie ? '✅' : '❌'}</span>
+          <div>
+            <div class="security-name">PIE</div>
+            <div class="security-status">${security.pie ? '已启用' : '未启用'}</div>
+          </div>
+        </div>
+        <div class="security-item ${security.relro === 'Full' ? 'enabled' : security.relro === 'Partial' ? 'partial' : 'disabled'}">
+          <span class="security-badge">${security.relro === 'Full' ? '✅' : security.relro === 'Partial' ? '⚠️' : '❌'}</span>
+          <div>
+            <div class="security-name">RELRO</div>
+            <div class="security-status">${security.relro}</div>
+          </div>
+        </div>
+        <div class="security-item ${security.canary ? 'enabled' : 'disabled'}">
+          <span class="security-badge">${security.canary ? '✅' : '❌'}</span>
+          <div>
+            <div class="security-name">Canary</div>
+            <div class="security-status">${security.canary ? '已启用' : '未启用'}</div>
+          </div>
+        </div>
+        <div class="security-item ${security.fortify ? 'enabled' : 'disabled'}">
+          <span class="security-badge">${security.fortify ? '✅' : '❌'}</span>
+          <div>
+            <div class="security-name">FORTIFY</div>
+            <div class="security-status">${security.fortify ? '已启用' : '未启用'}</div>
+          </div>
+        </div>
+      `;
+
+      // Dangerous Functions
+      const dangerous = parser.getDangerousFunctions();
+      const dangerousFuncs = document.getElementById('dangerous-funcs');
+      if (dangerous.length > 0) {
+        dangerousFuncs.innerHTML = dangerous.map(f => 
+          `<span class="func-tag danger">⚠️ ${f}</span>`
+        ).join('');
+      } else {
+        dangerousFuncs.innerHTML = '<span class="no-items">未发现常见危险函数</span>';
+      }
+
+      // Useful Functions
+      const useful = parser.getUsefulFunctions();
+      const usefulFuncs = document.getElementById('useful-funcs');
+      if (useful.length > 0) {
+        usefulFuncs.innerHTML = useful.map(f => 
+          `<span class="func-tag useful">🎯 ${f}</span>`
+        ).join('');
+      } else {
+        usefulFuncs.innerHTML = '<span class="no-items">未发现常见可利用函数</span>';
+      }
+
+      // Hints
+      const hints = parser.generateHints();
+      const hintsList = document.getElementById('hints-list');
+      hintsList.innerHTML = hints.map(h => `
+        <li>
+          <div class="hint-title">${h.title}</div>
+          <div class="hint-desc">${h.desc}</div>
+        </li>
+      `).join('');
+
+      // Program Headers
+      const programHeaders = document.getElementById('program-headers');
+      if (parser.programHeaders.length > 0) {
+        programHeaders.innerHTML = `
+          <thead>
+            <tr>
+              <th>类型</th>
+              <th>偏移</th>
+              <th>虚拟地址</th>
+              <th>文件大小</th>
+              <th>内存大小</th>
+              <th>标志</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${parser.programHeaders.map(ph => `
+              <tr>
+                <td>${ph.type}</td>
+                <td>0x${ph.offset.toString(16)}</td>
+                <td>0x${ph.vaddr.toString(16)}</td>
+                <td>0x${ph.filesz.toString(16)}</td>
+                <td>0x${ph.memsz.toString(16)}</td>
+                <td>${formatPHFlags(ph.flags)}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        `;
+      }
+
+      // Section Headers
+      const sectionHeaders = document.getElementById('section-headers');
+      if (parser.sectionHeaders.length > 0) {
+        sectionHeaders.innerHTML = `
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>类型</th>
+              <th>地址</th>
+              <th>偏移</th>
+              <th>大小</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${parser.sectionHeaders.map(sh => `
+              <tr>
+                <td>${escapeHtml(sh.name) || '(null)'}</td>
+                <td>${sh.type}</td>
+                <td>0x${sh.addr.toString(16)}</td>
+                <td>0x${sh.offset.toString(16)}</td>
+                <td>0x${sh.size.toString(16)}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        `;
+      }
+
+      resultSection.classList.add('visible');
+    }
+
+    function formatPHFlags(flags) {
+      let result = '';
+      if (flags & 0x4) result += 'R';
+      if (flags & 0x2) result += 'W';
+      if (flags & 0x1) result += 'X';
+      return result || '-';
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+  </script>
+</body>
+</html>
