@@ -182,7 +182,7 @@ Base64 索引表规则：`A=0 ... Z=25 ... a=26 ... 0=52 ... +=62 /=63`
 
 ## 练习题
 
-题目地址：https://www.qsnctf.com/#/main/driving-range?page=1&keyword=NO.0502
+题目地址：[NO.0502 - Base64](https://www.qsnctf.com/#/main/driving-range?page=1&keyword=NO.0502){ .md-button .md-button--primary target="_blank" rel="noopener"}
 
 ![](attachments/image-20251202225038752.png)
 
@@ -192,4 +192,5 @@ Base64 索引表规则：`A=0 ... Z=25 ... a=26 ... 0=52 ... +=62 /=63`
 
 ## 在线工具
 
-https://tools.qsnctf.com/#//misc/base
+[在线Base64解码工具](https://tools.qsnctf.com/#//misc/base){ .md-button .md-button--primary target="_blank" rel="noopener"}
+
