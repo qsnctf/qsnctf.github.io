@@ -155,6 +155,8 @@ nav:
     - 编码:
       - ASCII: Misc/encoding/ASCII.md
       - Hex: Misc/encoding/Hex.md
+      - Base家族:
+        - Base64: Misc/encoding/Base/Base64.md
     - 文件类隐写: 
       - 文件内容隐写: Misc/Chapter1/1-1.md
       - 文件属性隐写: Misc/Chapter1/1-2.md
