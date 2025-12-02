@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#认识misc" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -22675,6 +22680,158 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#认识misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        认识Misc
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="认识Misc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#misc题到底在考什么" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misc题到底在考什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#常见的子类型与典型套路" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见的子类型与典型套路
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见的子类型与典型套路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-编码--加密--混淆最常见" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 编码 / 加密 / 混淆（最常见）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-文件格式与伪装文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 文件格式与“伪装文件”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-压缩包与压缩套娃" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 压缩包与“压缩套娃”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-隐写steganography" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 隐写（Steganography）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-流量包--网络取证pcap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 流量包 / 网络取证（PCAP）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-日志--系统取证forensics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 日志 / 系统取证（Forensics）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-osint开源情报" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. OSINT（开源情报）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-规则小游戏脑洞题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 规则/小游戏/脑洞题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#常见坑点" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见坑点
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -22756,8 +22913,143 @@
 
   <h1>介绍</h1>
 
-<p>在CTF（Capture The Flag）竞赛中，Misc（杂项）是一个包罗万象的类别。它以“脑洞大”“技巧多”著称，要求选手具备广博的知识储备和敏锐的观察力。
-作者正在编写中</p>
+<p>在CTF（Capture The Flag）竞赛中，Misc（杂项）是一个包罗万象的类别。它以“脑洞大”“技巧多”著称，要求选手具备广博的知识储备和敏锐的观察力。通常就是“啥都可能塞进来”的题：不强依赖某一种漏洞利用链，而是考 <strong>信息提取、格式识别、编码/压缩/隐写、脚本自动化、流量/日志分析、OSINT、脑洞小游戏</strong> 等综合能力。</p>
+<h2 id="认识misc">认识Misc<a class="headerlink" href="#认识misc" title="Permanent link">&para;</a></h2>
+<h3 id="misc题到底在考什么">Misc题到底在考什么？<a class="headerlink" href="#misc题到底在考什么" title="Permanent link">&para;</a></h3>
+<p>其实说到底，Misc核心考点就是三件事：</p>
+<ol>
+<li>识别：这是什么文件/协议/编码？有没有伪装？</li>
+<li>被怎么处理过？（编码→压缩→加密？分段？异或？）</li>
+<li>提取：flag 在哪一层？如何稳定地把它“抠”出来？</li>
+</ol>
+<blockquote>
+<p>很多 Misc 题的本质是：把“现实里常见的数据处理链”搬进比赛——你只要能把链条逆向回去，就能拿到 flag。</p>
+</blockquote>
+<h3 id="常见的子类型与典型套路">常见的子类型与典型套路<a class="headerlink" href="#常见的子类型与典型套路" title="Permanent link">&para;</a></h3>
+<h4 id="1-编码--加密--混淆最常见">1. 编码 / 加密 / 混淆（最常见）<a class="headerlink" href="#1-编码--加密--混淆最常见" title="Permanent link">&para;</a></h4>
+<p><strong>特点</strong>：给你一段字符串/一堆看似乱码的文本。</p>
+<p><strong>常见手法</strong>：</p>
+<ul>
+<li>Base 家族：Base64/32/58/85、URL 编码、Hex、Rot13、凯撒、栅栏、维吉尼亚</li>
+<li>多层套娃：<code>base64 -&gt; gzip -&gt; base64 -&gt; xor -&gt; ...</code></li>
+<li>XOR/单字节异或/重复 key 异或</li>
+<li>伪加密：看着像 AES，其实 key 就在提示里或附件里</li>
+</ul>
+<p><strong>做题顺序</strong>：</p>
+<ul>
+<li>先“肉眼特征识别”：</li>
+<li><code>=</code> 结尾、字符集像 <code>A-Za-z0-9+/</code> → Base64 概率高</li>
+<li><code>0x</code>/仅 <code>[0-9a-f]</code> → hex</li>
+<li>大量 <code>%xx</code> → URL encode</li>
+<li>再“统计学”：频率、可打印字符比例、是否有固定前缀 <code>flag{</code> / <code>ctf{</code></li>
+<li>套娃就写脚本循环解：</li>
+<li>每解一层就检测“是否像文本/是否像压缩头/是否像图片头”</li>
+</ul>
+<blockquote>
+<p>虽说加密应该放在密码学？不过我们只是在这里提到了，加密的内容还是会写到密码学中的。</p>
+</blockquote>
+<h4 id="2-文件格式与伪装文件">2. 文件格式与“伪装文件”<a class="headerlink" href="#2-文件格式与伪装文件" title="Permanent link">&para;</a></h4>
+<p><strong>特点</strong>：给你一个文件，说是 <code>.jpg</code> 但打不开，或打开不对劲。
+<strong>常见点</strong>：</p>
+<ul>
+<li>扩展名骗人，真实格式靠文件头（magic bytes）</li>
+<li>文件尾追加了数据（图片后面拼接 zip / 文本）</li>
+<li>多文件拼接、头部损坏、CRC/尺寸被改</li>
+<li>Office/PDF 里藏附件或对象流</li>
+</ul>
+<p><strong>做题顺序</strong>：</p>
+<ul>
+<li>先判断文件真实类型（看头/结构）</li>
+<li>看是否有“多段”：例如图片末尾还能当压缩包解</li>
+<li>能修就修：比如 PNG 的 IHDR 尺寸异常、CRC 错误、JFIF 头错位等</li>
+</ul>
+<h4 id="3-压缩包与压缩套娃">3. 压缩包与“压缩套娃”<a class="headerlink" href="#3-压缩包与压缩套娃" title="Permanent link">&para;</a></h4>
+<p><strong>特点</strong>：zip/7z/rar，解出来还是压缩包，或者要密码。
+ <strong>常见手法</strong>：</p>
+<ul>
+<li>多层压缩、递归解压</li>
+<li>密码在注释/文件名/图片像素/流量里</li>
+<li>伪加密（加密标志位搞事、明文可恢复）</li>
+<li>分卷压缩/损坏压缩包修复</li>
+</ul>
+<p><strong>套路</strong>：</p>
+<ul>
+<li>优先找“提示载体”：readme、注释、文件名规律、字典线索</li>
+<li>套娃建议写脚本：自动识别类型→解→继续</li>
+</ul>
+<h4 id="4-隐写steganography">4. 隐写（Steganography）<a class="headerlink" href="#4-隐写steganography" title="Permanent link">&para;</a></h4>
+<p><strong>特点</strong>：给你图片/音频/视频，说“就一张图”。
+<strong>常见手法</strong>：</p>
+<ul>
+<li>图片：LSB（最低有效位）、RGB 通道、alpha 通道、调色板、EXIF、像素差分、二维码拼图</li>
+<li>音频：频谱图、相位、LSB、倒放、变速</li>
+<li>视频：抽帧、特定帧藏信息、字幕轨、音轨隐写</li>
+</ul>
+<p><strong>通用思路</strong>：</p>
+<ul>
+<li>先做“非破坏性检查”：元数据、文件尾、附加块</li>
+<li>再做“可视化”：分离通道、拉对比度、频谱/直方图</li>
+<li>最后尝试“LSB/位平面”类的系统性扫描（别只盯一层）</li>
+</ul>
+<h4 id="5-流量包--网络取证pcap">5. 流量包 / 网络取证（PCAP）<a class="headerlink" href="#5-流量包--网络取证pcap" title="Permanent link">&para;</a></h4>
+<p><strong>特点</strong>：给你 <code>.pcap/.pcapng</code>，让你找 flag。</p>
+<p><strong>常见场景</strong>：</p>
+<ul>
+<li>HTTP 里 GET/POST 参数、cookie、下载文件</li>
+<li>DNS 隧道、ICMP 隧道、TCP 流里手动拼接</li>
+<li>TLS 前的明文（SNI/证书信息），或给了 keylog 解密</li>
+<li>Websocket、MQTT、FTP、SMB 等协议文件传输</li>
+</ul>
+<p><strong>套路</strong>：</p>
+<ul>
+<li>先按协议过滤：http/dns/tcp/udp</li>
+<li>追踪 TCP Stream / 导出对象（HTTP 导出文件巨常见）</li>
+<li>看异常：高频 DNS 查询、可疑长子域、固定间隔心跳包</li>
+</ul>
+<h4 id="6-日志--系统取证forensics">6. 日志 / 系统取证（Forensics）<a class="headerlink" href="#6-日志--系统取证forensics" title="Permanent link">&para;</a></h4>
+<p><strong>特点</strong>：给你一堆日志、磁盘镜像、内存镜像、浏览器数据等。
+<strong>常见方向</strong>：</p>
+<ul>
+<li>Web 访问日志找被访问的 flag 路径</li>
+<li>Bash history、计划任务、注册表、最近打开文件</li>
+<li>浏览器缓存/SQLite（history、cookies、localStorage）</li>
+<li>内存取证：进程、网络连接、字符串搜索</li>
+</ul>
+<p><strong>套路</strong>：</p>
+<ul>
+<li>先找“时间线”：哪段时间发生了事？</li>
+<li>再找“关键字”：flag、ctf、pass、token、key、login</li>
+<li>数据库就直接 SQL 查可疑字段</li>
+</ul>
+<h4 id="7-osint开源情报">7. OSINT（开源情报）<a class="headerlink" href="#7-osint开源情报" title="Permanent link">&para;</a></h4>
+<p><strong>特点</strong>：题目让你“找一个人/地点/事件/拍摄位置”。
+<strong>常见手法</strong>：</p>
+<ul>
+<li>图片地理定位（地标、路牌、阴影）</li>
+<li>ID/用户名复用（GitHub、推特、论坛）</li>
+<li>文档元数据泄露作者/路径</li>
+<li>时间线推断（航班、比赛、发布记录）</li>
+</ul>
+<p><strong>套路</strong>：</p>
+<ul>
+<li>先从题面明确“要的是什么格式的答案”</li>
+<li>画像：地点→地貌/语言/车牌/路牌；人→用户名足迹</li>
+<li>信息交叉验证：不少题会故意放“相似地点”干扰</li>
+</ul>
+<h4 id="8-规则小游戏脑洞题">8. 规则/小游戏/脑洞题<a class="headerlink" href="#8-规则小游戏脑洞题" title="Permanent link">&para;</a></h4>
+<p><strong>特点</strong>：给你一个程序输出、一堆坐标、迷宫、棋局、音符等。
+<strong>套路</strong>：</p>
+<ul>
+<li>把数据“转成可视化”：点阵→图；值→音；坐标→折线</li>
+<li>寻找“编码到媒介”的映射：ASCII、摩斯、电报码、二维码等</li>
+<li>自动化比手算稳：写脚本还原规则</li>
+</ul>
+<h2 id="常见坑点">常见坑点<a class="headerlink" href="#常见坑点" title="Permanent link">&para;</a></h2>
+<p><strong>不要只看扩展名</strong>：很多题就是靠这点骗你。</p>
+<p><strong>别过早假设加密</strong>：大量“看似加密”其实是编码+压缩+异或。</p>
+<p><strong>flag 可能被拆分</strong>：分散在多个文件/多段流里。</p>
+<p><strong>大小写/格式严格</strong>：<code>flag{}</code> / <code>ctf{}</code> / <code>FLAG{}</code> 常作为验题点。</p>
+<p><strong>题面文字也是数据</strong>：标点、行数、首字母、时间戳都可能是线索。</p>
 
 
 
