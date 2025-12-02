@@ -1033,6 +1033,18 @@
          <lastmod>2025-12-02</lastmod>
     </url>
     <url>
+         <loc>https://docs.qsnctf.com/Misc/encoding/Base/Base16/</loc>
+         <lastmod>2025-12-02</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Misc/encoding/Base/Base32/</loc>
+         <lastmod>2025-12-02</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Misc/encoding/Base/Base64/</loc>
+         <lastmod>2025-12-02</lastmod>
+    </url>
+    <url>
          <loc>https://docs.qsnctf.com/Pwn/</loc>
          <lastmod>2025-12-02</lastmod>
     </url>
