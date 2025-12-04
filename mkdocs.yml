@@ -143,7 +143,15 @@ nav:
     - 什么是 CTF: basic/intro.md
     - CTF的历史: basic/history.md
     - 练习CTF: basic/practice.md
-  - 编程: Code/index.md
+  - 编程: 
+    - 介绍: Code/index.md
+    - 汇编语言: 
+      - 常见指令集: Code/Assembly/instruction_sets.md
+      - 寄存器: Code/Assembly/registers.md
+      - 栈操作: Code/Assembly/stack_operations.md
+    - C/C++: Code/CPP.md
+    - Python: Code/Python.md
+    - PHP: Code/PHP.md
   - Misc: 
     - 介绍: Misc/index.md
     - 编码:
