@@ -310,22 +310,17 @@ def frequency_analysis(ciphertext):
 - **维吉尼亚密码**：使用关键词的多表替换密码
 - **自动密钥密码**：使用明文自身作为部分密钥
 
-## 实践练习
+## 练习题
 
-### 练习1：基础加密
-加密以下文本（使用标准凯撒密码，移位3）：
-```
-明文： "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
-```
+题目地址：[NO.0007 - 凯撒大帝的征讨之路](https://www.qsnctf.com/#/main/driving-range?page=1&keyword=NO.0007){ .md-button .md-button--primary target="_blank" rel="noopener"}
 
-### 练习2：解密挑战
-解密以下凯撒密码密文（移位量未知）：
-```
-密文： "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"
-```
+![](attachments/image-20251205174903473.png)
 
-### 练习3：ROT13应用
-使用ROT13加密解密以下文本：
-```
-原文： "HELLO PYTHON"
-```
+- 题目名称：凯撒大帝的征讨之路
+- 题目难度：1
+- 题目ID：NO.0007
+
+## 在线工具
+
+[在线凯撒编码](https://tools.qsnctf.com/#//crypto/caesar){ .md-button .md-button--primary target="_blank" rel="noopener"}
+

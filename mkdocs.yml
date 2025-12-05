@@ -196,6 +196,7 @@ nav:
     - 古典密码:
       - 单表替换:
         - 凯撒密码: Crypto/Classical_Cryptography/Single_Table_Replacement/Caesar.md
+        - 埃特巴什码: Crypto/Classical_Cryptography/Single_Table_Replacement/Atbash.md
   - Web: 
     - 介绍: Web/index.md
   - Reverse: 
