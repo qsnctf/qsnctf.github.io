@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://docs.qsnctf.com/Code/Python/Python_Basic_Operators/">
       
       
+        <link rel="prev" href="../Python_Comment/">
+      
+      
+        <link rel="next" href="../../PHP/">
       
       
         
@@ -23,7 +27,7 @@
     
     
       
-        <title>Python 基本运算符 - 青少年CTF文库</title>
+        <title>Python运算符 - 青少年CTF文库</title>
       
     
     
@@ -107,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python 基本运算符
+              Python运算符
             
           </span>
         </div>
@@ -283,10 +287,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../" class="md-tabs__link">
           
   
@@ -706,6 +712,8 @@
       
   
   
+    
+  
   
   
     
@@ -727,14 +735,17 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -756,13 +767,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -957,8 +968,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -983,11 +996,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -1008,7 +1021,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1163,10 +1176,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Python_Basic_Operators.md." class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python运算符
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1182,6 +1222,454 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-运算符概述" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 运算符概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-算术运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 算术运算符
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 算术运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本算术运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本算术运算符
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#算术运算符的特殊用法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        算术运算符的特殊用法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-比较关系运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 比较（关系）运算符
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 比较（关系）运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本比较运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本比较运算符
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#字符串比较" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        字符串比较
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#链式比较" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        链式比较
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-赋值运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 赋值运算符
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 赋值运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本赋值运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本赋值运算符
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#复合赋值运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复合赋值运算符
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#复合赋值运算符的特殊用法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复合赋值运算符的特殊用法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-逻辑运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 逻辑运算符
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 逻辑运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本逻辑运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本逻辑运算符
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#逻辑运算符的短路特性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        逻辑运算符的短路特性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#逻辑运算符的实际应用" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        逻辑运算符的实际应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-位运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 位运算符
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 位运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本位运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本位运算符
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#位运算符的实际应用" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        位运算符的实际应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-成员运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 成员运算符
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 成员运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-和-not-in-运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        in 和 not in 运算符
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#成员运算符的实际应用" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        成员运算符的实际应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-身份运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 身份运算符
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 身份运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-和-is-not-运算符" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        is 和 is not 运算符
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#身份运算符与比较运算符的区别" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        身份运算符与比较运算符的区别
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#身份运算符的实际应用" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        身份运算符的实际应用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-运算符优先级" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 运算符优先级
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. 运算符优先级">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#运算符优先级表从高到低" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运算符优先级表（从高到低）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#优先级示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        优先级示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#优先级最佳实践" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        优先级最佳实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-综合应用示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 综合应用示例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. 综合应用示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#计算器程序" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        计算器程序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#数据验证工具" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据验证工具
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2566,6 +3054,64 @@
 
   
 
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    编程
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../Python_Intro/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Python
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
 
               
               <article class="md-content__inner md-typeset">
