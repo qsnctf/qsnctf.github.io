@@ -156,7 +156,7 @@ nav:
       - Python数据类型: Code/Python/Python_Data_Type.md
       - Python类型转换: Code/Python/Python_Type_Conversion.md
       - Python注释: Code/Python/Python_Comment.md
-      - Python运算符: Code/Python/Python_Basic_Operators.md.
+      - Python运算符: Code/Python/Python_Basic_Operators.md
       - Python条件控制: Code/Python/Python_Conditional_Control.md
     - PHP: Code/PHP.md
   - Misc: 
