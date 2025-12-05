@@ -41,6 +41,10 @@
          <lastmod>2025-12-05</lastmod>
     </url>
     <url>
+         <loc>https://docs.qsnctf.com/Code/Python/Python_Class/</loc>
+         <lastmod>2025-12-05</lastmod>
+    </url>
+    <url>
          <loc>https://docs.qsnctf.com/Code/Python/Python_Comment/</loc>
          <lastmod>2025-12-05</lastmod>
     </url>
@@ -65,6 +69,14 @@
          <lastmod>2025-12-05</lastmod>
     </url>
     <url>
+         <loc>https://docs.qsnctf.com/Code/Python/Python_Errors_Execptions/</loc>
+         <lastmod>2025-12-05</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Python/Python_File/</loc>
+         <lastmod>2025-12-05</lastmod>
+    </url>
+    <url>
          <loc>https://docs.qsnctf.com/Code/Python/Python_Functions/</loc>
          <lastmod>2025-12-05</lastmod>
     </url>
@@ -85,7 +97,19 @@
          <lastmod>2025-12-05</lastmod>
     </url>
     <url>
+         <loc>https://docs.qsnctf.com/Code/Python/Python_Namespace_Scope/</loc>
+         <lastmod>2025-12-05</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Python/Python_OS/</loc>
+         <lastmod>2025-12-05</lastmod>
+    </url>
+    <url>
          <loc>https://docs.qsnctf.com/Code/Python/Python_Type_Conversion/</loc>
+         <lastmod>2025-12-05</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Python/Python_Venv/</loc>
          <lastmod>2025-12-05</lastmod>
     </url>
     <url>
