@@ -166,6 +166,8 @@ nav:
       - Python Lambda: Code/Python/Python_Lambda.md
       - Python 装饰器: Code/Python/Python_Decorators.md
       - Python 数据结构: Code/Python/Python_Data_Structure.md
+      - Python模块: Code/Python/Python_module.md
+      - Python内置变量: Code/Python/Python_Internal_Variable.md
     - PHP: Code/PHP.md
   - Misc: 
     - 介绍: Misc/index.md
