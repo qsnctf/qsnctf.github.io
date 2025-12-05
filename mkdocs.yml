@@ -163,11 +163,18 @@ nav:
       - Python迭代器生成器: Code/Python/Python_Iterator-Generator.md
       - Python-With: Code/Python/Python_With.md
       - Python函数: Code/Python/Python_Functions.md
-      - Python Lambda: Code/Python/Python_Lambda.md
+      - Python Lambda: Code/Python/Python_lambda.md
       - Python 装饰器: Code/Python/Python_Decorators.md
       - Python 数据结构: Code/Python/Python_Data_Structure.md
       - Python模块: Code/Python/Python_module.md
       - Python内置变量: Code/Python/Python_Internal_Variable.md
+      - Python文件操作: Code/Python/Python_File.md
+      - Python OS: Code/Python/Python_OS.md
+      - Python错误和异常处理: Code/Python/Python_Errors_Execptions.md
+      - Python面向对象: Code/Python/Python_Class.md
+      - Python命名空间/作用域: Code/Python/Python_Namespace_Scope.md
+      - Python虚拟环境: Code/Python/Python_Venv.md
+
     - PHP: Code/PHP.md
   - Misc: 
     - 介绍: Misc/index.md
