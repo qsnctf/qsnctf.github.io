@@ -152,6 +152,7 @@ nav:
     - C/C++: Code/CPP.md
     - Python:
       - Python介绍: Code/Python/Python_Intro.md
+      - Python基础语法: Code/Python/Python_Basic_Syntax.md
     - PHP: Code/PHP.md
   - Misc: 
     - 介绍: Misc/index.md
