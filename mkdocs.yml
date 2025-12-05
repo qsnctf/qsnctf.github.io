@@ -176,7 +176,6 @@ nav:
       - Python虚拟环境: Code/Python/Python_Venv.md
       - Python标准库: Code/Python/Python_stdlib.md
       - Python类型注解: Code/Python/Python_Type_Hints.md
-
     - PHP: Code/PHP.md
   - Misc: 
     - 介绍: Misc/index.md
@@ -186,6 +185,10 @@ nav:
       - Base家族:
         - Base64: Misc/encoding/Base/Base64.md
         - Base32: Misc/encoding/Base/Base32.md
+    - 文件结构:
+      - 各种文件的结构: 
+        - PNG: Misc/File_Structure/File_Structure/PNG_Structure.md
+        - JPG: Misc/File_Structure/File_Structure/JPG_Structure.md
   - Crypto: 
     - 介绍: Crypto/index.md
   - Web: 
