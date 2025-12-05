@@ -161,6 +161,8 @@ nav:
       - Python循环控制: Code/Python/Python_Loop.md
       - Python推导式: Code/Python/Python_Comprehensions.md
       - Python迭代器生成器: Code/Python/Python_Iterator-Generator.md
+      - Python-With: Code/Python/Python_With.md
+      - Python函数: Code/Python/Python_Functions.md
     - PHP: Code/PHP.md
   - Misc: 
     - 介绍: Misc/index.md
