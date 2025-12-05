@@ -150,7 +150,8 @@ nav:
       - 寄存器: Code/Assembly/register.md
       - 栈操作: Code/Assembly/stack_operation.md
     - C/C++: Code/CPP.md
-    - Python: Code/Python.md
+    - Python:
+      - Python介绍: Code/Python/Python_Intro.md
     - PHP: Code/PHP.md
   - Misc: 
     - 介绍: Misc/index.md
