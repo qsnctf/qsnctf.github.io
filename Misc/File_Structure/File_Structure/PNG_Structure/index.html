@@ -3465,10 +3465,10 @@
 
 
 <h1 id="png-文件格式详解">PNG 文件格式详解<a class="headerlink" href="#png-文件格式详解" title="Permanent link">&para;</a></h1>
-<p>PNG（Portable Network Graphics）是一种**无损压缩**的位图图像格式，常用于网页与图像处理。PNG 通过“<strong>签名 + 多个数据块（Chunk）</strong>”来组织整个文件，具备透明度、伽马/色彩信息、可扩展元数据等特性。</p>
+<p>PNG（Portable Network Graphics）是一种 <strong>无损压缩</strong> 的位图图像格式，常用于网页与图像处理。PNG 通过“<strong>签名 + 多个数据块（Chunk）</strong>”来组织整个文件，具备透明度、伽马/色彩信息、可扩展元数据等特性。</p>
 <hr />
 <h2 id="1-png-文件整体结构">1. PNG 文件整体结构<a class="headerlink" href="#1-png-文件整体结构" title="Permanent link">&para;</a></h2>
-<p>PNG 文件从 <strong>8 字节签名（Signature）**开始，之后由若干个 Chunk 顺序组成，最后以 **IEND</strong> 结束。</p>
+<p>PNG 文件从 <strong>8 字节签名</strong> （Signature）开始，之后由若干个 Chunk 顺序组成，最后以 <strong>IEND</strong> 结束。</p>
 <p>常见结构如下：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌──────────────────────┐
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│ PNG Signature (8B)    │
