@@ -157,7 +157,7 @@ nav:
       - Python类型转换: Code/Python/Python_Type_Conversion.md
       - Python注释: Code/Python/Python_Comment.md
       - Python运算符: Code/Python/Python_Basic_Operators.md
-      - Python条件控制: Code/Python/Python_Conditional_Control.md
+      - Python条件控制: Code/Python/Python_Conditional_Statements.md
     - PHP: Code/PHP.md
   - Misc: 
     - 介绍: Misc/index.md
