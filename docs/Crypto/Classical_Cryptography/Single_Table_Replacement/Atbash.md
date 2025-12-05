@@ -42,7 +42,7 @@ def atbash_encrypt(char):
 
 ### 自反特性
 
-Atbash密码的一个重要特性是**自反性**（Reflexive Property）：
+Atbash密码的一个重要特性是 **自反性** （Reflexive Property）：
 - 加密和解密使用相同的算法
 - 对密文再次应用Atbash加密会恢复原始明文
 - 数学上表示为：Atbash(Atbash(text)) = text
@@ -51,7 +51,6 @@ Atbash密码的一个重要特性是**自反性**（Reflexive Property）：
 
 ### 基础示例
 
-使用您提供的例子进行演示：
 
 ```
 明文：the quick brown fox jumps over the lazy dog
@@ -60,7 +59,7 @@ Atbash密码的一个重要特性是**自反性**（Reflexive Property）：
 
 ### 详细加密过程
 
-让我们详细分析"hello"的加密过程：
+比如 hello :
 
 ```
 步骤1：逐个字母处理
