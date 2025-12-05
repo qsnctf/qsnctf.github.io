@@ -193,6 +193,9 @@ nav:
         - GIF: Misc/File_Structure/File_Structure/GIF_Structure.md
   - Crypto: 
     - 介绍: Crypto/index.md
+    - 古典密码:
+      - 单表替换:
+        - 凯撒密码: Crypto/Classical_Cryptography/Single_Table_Replacement/Caesar.md
   - Web: 
     - 介绍: Web/index.md
   - Reverse: 
