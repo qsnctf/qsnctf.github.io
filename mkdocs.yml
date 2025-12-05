@@ -159,7 +159,7 @@ nav:
       - Python运算符: Code/Python/Python_Basic_Operators.md
       - Python条件控制: Code/Python/Python_Conditional_Statements.md
       - Python循环控制: Code/Python/Python_Loop.md
-      - Python推导式: Code/Python/Python_Comprehension.md
+      - Python推导式: Code/Python/Python_Comprehensions.md
       - Python迭代器生成器: Code/Python/Python_Iterator-Generator.md
     - PHP: Code/PHP.md
   - Misc: 
