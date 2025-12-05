@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://docs.qsnctf.com/Code/Python/Python_Comprehensions/">
       
       
+        <link rel="prev" href="../Python_Loop/">
+      
+      
+        <link rel="next" href="../Python_Iterator-Generator/">
       
       
         
@@ -23,7 +27,7 @@
     
     
       
-        <title>Python 推导式 - 青少年CTF文库</title>
+        <title>Python推导式 - 青少年CTF文库</title>
       
     
     
@@ -107,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python 推导式
+              Python推导式
             
           </span>
         </div>
@@ -283,10 +287,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../" class="md-tabs__link">
           
   
@@ -706,6 +712,8 @@
       
   
   
+    
+  
   
   
     
@@ -727,14 +735,17 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -756,13 +767,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -957,8 +968,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -989,11 +1002,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -1014,7 +1027,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1253,10 +1266,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Python_Comprehension.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python推导式
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1272,6 +1312,594 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#概述" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#推导式的优势" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推导式的优势
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#推导式的基本结构" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推导式的基本结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#列表list推导式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        列表(list)推导式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="列表(list)推导式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本语法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本语法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本用法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本用法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#带条件的列表推导式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        带条件的列表推导式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#嵌套循环的列表推导式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        嵌套循环的列表推导式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#复杂的条件判断" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂的条件判断
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#字典dict推导式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        字典(dict)推导式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="字典(dict)推导式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本语法_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本语法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#示例_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本用法_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本用法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#带条件的字典推导式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        带条件的字典推导式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#处理嵌套结构" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        处理嵌套结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#集合set推导式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集合(set)推导式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="集合(set)推导式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本语法_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本语法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#示例_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本用法_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本用法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#带条件的集合推导式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        带条件的集合推导式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#集合运算" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集合运算
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#元组tuple推导式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        元组(tuple)推导式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="元组(tuple)推导式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本语法_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本语法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#示例_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本用法_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本用法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#生成器表达式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        生成器表达式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#推导式的嵌套使用" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推导式的嵌套使用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="推导式的嵌套使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#示例_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#推导式与普通循环的对比" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推导式与普通循环的对比
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="推导式与普通循环的对比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#传统循环方式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        传统循环方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#推导式方式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推导式方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#推导式的性能考虑" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推导式的性能考虑
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="推导式的性能考虑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#内存效率" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        内存效率
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#性能比较" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性能比较
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#推导式的最佳实践" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推导式的最佳实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="推导式的最佳实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-保持简洁" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 保持简洁
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-避免副作用" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 避免副作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-使用适当的推导式类型" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 使用适当的推导式类型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-注意可读性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 注意可读性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实际应用示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实际应用示例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实际应用示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#数据处理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#配置文件处理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置文件处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#数据分析" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2796,6 +3424,64 @@
 
   
 
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    编程
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../Python_Intro/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Python
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
 
               
               <article class="md-content__inner md-typeset">
