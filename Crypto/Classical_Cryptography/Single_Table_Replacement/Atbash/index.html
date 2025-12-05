@@ -4009,18 +4009,17 @@
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="k">return</span> <span class="n">char</span>
 </code></pre></div>
 <h3 id="自反特性">自反特性<a class="headerlink" href="#自反特性" title="Permanent link">&para;</a></h3>
-<p>Atbash密码的一个重要特性是**自反性**（Reflexive Property）：
+<p>Atbash密码的一个重要特性是 <strong>自反性</strong> （Reflexive Property）：
 - 加密和解密使用相同的算法
 - 对密文再次应用Atbash加密会恢复原始明文
 - 数学上表示为：Atbash(Atbash(text)) = text</p>
 <h2 id="加密示例">加密示例<a class="headerlink" href="#加密示例" title="Permanent link">&para;</a></h2>
 <h3 id="基础示例">基础示例<a class="headerlink" href="#基础示例" title="Permanent link">&para;</a></h3>
-<p>使用您提供的例子进行演示：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>明文：the quick brown fox jumps over the lazy dog
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>密文：gsv jfrxp yildm ulc qfnkh levi gsv ozab wlt
 </code></pre></div>
 <h3 id="详细加密过程">详细加密过程<a class="headerlink" href="#详细加密过程" title="Permanent link">&para;</a></h3>
-<p>让我们详细分析"hello"的加密过程：</p>
+<p>比如 hello :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>步骤1：逐个字母处理
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>h → s  (h是第8个字母，对称位置是第18个字母s)
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>e → v  (e是第5个字母，对称位置是第21个字母v)
