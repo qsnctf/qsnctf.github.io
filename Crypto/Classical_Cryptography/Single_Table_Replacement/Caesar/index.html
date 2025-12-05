@@ -4145,7 +4145,7 @@
 - 为后来的密码学发展奠定了基础</p>
 <h2 id="加密原理">加密原理<a class="headerlink" href="#加密原理" title="Permanent link">&para;</a></h2>
 <h3 id="基本概念">基本概念<a class="headerlink" href="#基本概念" title="Permanent link">&para;</a></h3>
-<p>凯撒密码是一种**移位密码**（Shift Cipher），其核心思想是将字母表中的每个字母按照固定的位数进行移位：</p>
+<p>凯撒密码是一种 <strong>移位密码</strong> （Shift Cipher），其核心思想是将字母表中的每个字母按照固定的位数进行移位：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>加密公式：C = (P + K) mod 26
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>解密公式：P = (C - K) mod 26
 </code></pre></div>
@@ -4155,7 +4155,7 @@
 - <code>K</code>：移位量（密钥）
 - <code>mod 26</code>：取模26运算，确保结果在0-25范围内</p>
 <h3 id="移位规则">移位规则<a class="headerlink" href="#移位规则" title="Permanent link">&para;</a></h3>
-<p>凯撒密码通常使用**右移3位**的规则（K=3），这也是凯撒本人使用的标准移位量：</p>
+<p>凯撒密码通常使用 <strong>右移3位</strong> 的规则（K=3），这也是凯撒本人使用的标准移位量：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>原始字母：A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>加密后：  D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 </code></pre></div>
