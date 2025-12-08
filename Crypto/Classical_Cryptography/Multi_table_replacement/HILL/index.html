@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.qsnctf.com/Crypto/Classical_Cryptography/Multi_table_replacement/Playfair/">
+        <link rel="canonical" href="https://docs.qsnctf.com/Crypto/Classical_Cryptography/Multi_table_replacement/HILL/">
       
       
-        <link rel="prev" href="../../Single_Table_Replacement/Atbash/">
+        <link rel="prev" href="../Playfair/">
       
       
-        <link rel="next" href="../HILL/">
+        <link rel="next" href="../../../../Web/">
       
       
         
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#playfair密码详解" class="md-skip">
+        <a href="#hill密码详解" class="md-skip">
           跳转至
         </a>
       
@@ -2796,6 +2796,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Playfair/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playfair密码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2870,17 +2898,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#历史背景" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        历史背景
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#加密原理" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2888,56 +2905,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="加密原理">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#基本概念" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        基本概念
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#密钥方阵构造" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        密钥方阵构造
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#替换规则" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        替换规则
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#可逆性解密原理" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        可逆性(解密原理)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2949,34 +2916,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="加密示例">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#基础示例" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        基础示例
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#详细加密过程" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        详细加密过程
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2993,17 +2932,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#python完整代码实现" class="md-nav__link">
+  <a href="#python完整代码" class="md-nav__link">
     <span class="md-ellipsis">
       
-        python完整代码实现
+        Python完整代码
       
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#安全性分析" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3041,29 +2985,24 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#攻击方法" class="md-nav__link">
+  <a href="#hill-密码的攻击方法" class="md-nav__link">
     <span class="md-ellipsis">
       
-        攻击方法
+        HILL 密码的攻击方法
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="攻击方法">
+    <nav class="md-nav" aria-label="HILL 密码的攻击方法">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#频率分析" class="md-nav__link">
+  <a href="#1-仅密文攻击" class="md-nav__link">
     <span class="md-ellipsis">
       
-        频率分析
+        (1) 仅密文攻击
       
     </span>
   </a>
@@ -3071,10 +3010,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#构造矩阵" class="md-nav__link">
+  <a href="#2-已知明文攻击" class="md-nav__link">
     <span class="md-ellipsis">
       
-        构造矩阵
+        (2) 已知明文攻击
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-选择明文攻击" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (3) 选择明文攻击
       
     </span>
   </a>
@@ -3101,34 +3051,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../HILL/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Playfair密码
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -3649,17 +3571,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#历史背景" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        历史背景
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#加密原理" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3667,56 +3578,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="加密原理">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#基本概念" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        基本概念
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#密钥方阵构造" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        密钥方阵构造
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#替换规则" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        替换规则
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#可逆性解密原理" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        可逆性(解密原理)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3728,34 +3589,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="加密示例">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#基础示例" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        基础示例
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#详细加密过程" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        详细加密过程
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3772,17 +3605,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#python完整代码实现" class="md-nav__link">
+  <a href="#python完整代码" class="md-nav__link">
     <span class="md-ellipsis">
       
-        python完整代码实现
+        Python完整代码
       
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#安全性分析" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3820,29 +3658,24 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#攻击方法" class="md-nav__link">
+  <a href="#hill-密码的攻击方法" class="md-nav__link">
     <span class="md-ellipsis">
       
-        攻击方法
+        HILL 密码的攻击方法
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="攻击方法">
+    <nav class="md-nav" aria-label="HILL 密码的攻击方法">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#频率分析" class="md-nav__link">
+  <a href="#1-仅密文攻击" class="md-nav__link">
     <span class="md-ellipsis">
       
-        频率分析
+        (1) 仅密文攻击
       
     </span>
   </a>
@@ -3850,10 +3683,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#构造矩阵" class="md-nav__link">
+  <a href="#2-已知明文攻击" class="md-nav__link">
     <span class="md-ellipsis">
       
-        构造矩阵
+        (2) 已知明文攻击
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-选择明文攻击" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (3) 选择明文攻击
       
     </span>
   </a>
@@ -3963,7 +3807,7 @@
     
     
       <li class="md-path__item">
-        <a href="./" class="md-path__link">
+        <a href="../Playfair/" class="md-path__link">
           
   <span class="md-ellipsis">
     多表替换
@@ -3985,7 +3829,7 @@
 
 
   
-    <a href="https://github.com/qsnctf/qsnctf.github.io/edit/docs/docs/Crypto/Classical_Cryptography/Multi_table_replacement/Playfair.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/qsnctf/qsnctf.github.io/edit/docs/docs/Crypto/Classical_Cryptography/Multi_table_replacement/HILL.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3994,255 +3838,307 @@
     
       
     
-    <a href="https://github.com/qsnctf/qsnctf.github.io/raw/docs/docs/Crypto/Classical_Cryptography/Multi_table_replacement/Playfair.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/qsnctf/qsnctf.github.io/raw/docs/docs/Crypto/Classical_Cryptography/Multi_table_replacement/HILL.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="playfair密码详解">PlayFair密码详解<a class="headerlink" href="#playfair密码详解" title="Permanent link">&para;</a></h1>
+<h1 id="hill密码详解">HILL密码详解<a class="headerlink" href="#hill密码详解" title="Permanent link">&para;</a></h1>
 <h2 id="概述">概述<a class="headerlink" href="#概述" title="Permanent link">&para;</a></h2>
-<p>PlayFair密码(PlayFair Cipher)是一种经典的双字母替换密码，属于古典人工加密体系。它通过将明文按两个字母一组进行加密，并借助一个5x5的密钥方阵完成替换，相比单字母替换更不易被简单频率分析破解。其名称来源于英国政治家莱昂·普莱费尔（Lord Playfair），他推广了这一方法；该密码最早由查尔斯·惠斯通（Charles Wheatstone）在19世纪提出。</p>
-<h2 id="历史背景">历史背景<a class="headerlink" href="#历史背景" title="Permanent link">&para;</a></h2>
-<p>查尔斯·惠斯通于 1854 年发明了这种密码，莱尔德·普莱费尔倡导使用这种密码，并以他的名字命名。与仅加密单个字母的传统替换密码不同，Playfair 密码方法对二元组或字母片段进行编码。英国和澳大利亚军队在第一次世界大战、第二次布尔战争和第二次世界大战期间战术性地使用了它。加密的主要目的是在实际战斗中保护非关键但重要的数据。当敌方密码分析员解密它时，这些信息已毫无用处。</p>
+<p>HILL密码(HILL Cipher)是一种经典的多字母替换密码，基于线性代数的矩阵乘法来对明文分组加密。它由Lester S.HILL在1929年提出：把字母映射为数字，将明文按固定长度组成向量，与一个nxn的密钥矩阵相乘并对26取模得到密文；解密则需要该密钥矩阵在模26下可逆，才能计算逆矩阵恢复明文</p>
 <h2 id="加密原理">加密原理<a class="headerlink" href="#加密原理" title="Permanent link">&para;</a></h2>
-<h3 id="基本概念">基本概念<a class="headerlink" href="#基本概念" title="Permanent link">&para;</a></h3>
-<p>Playfair 密码可以视为多表替换一种经典形式：它不是逐个字母替换，而是把明文按两个字母一组进行替换。加密的依据来自一个 5×5 密钥方阵，两字母在方阵中的相对位置（同一行/同一列/构成长方形）决定替换结果。</p>
-<h3 id="密钥方阵构造">密钥方阵构造<a class="headerlink" href="#密钥方阵构造" title="Permanent link">&para;</a></h3>
-<p>选取一串英文字母，除去重复出现的字母，将剩下的字母逐个逐个加入 5 × 5 的矩阵内，剩下的空间由未加入的英文字母依 a-z 的顺序加入。注意，将 q 去除，或将 i 和 j 视作同一字。</p>
-<h3 id="替换规则">替换规则<a class="headerlink" href="#替换规则" title="Permanent link">&para;</a></h3>
-<p>对每一组明文字母 A B，在 5×5 方阵中找到它们的位置：</p>
-<p><strong>规则1:同一行</strong></p>
-<p>A替换成其右侧字母</p>
-<p>B同理</p>
-<p><strong>规则2：同一列</strong></p>
-<p>A替换成其下方字母</p>
-<p>B同理</p>
-<p><strong>规则3:长方形</strong></p>
-<p>若A与B不在同一行也不在同一列，则它们构成长方形的对角</p>
-<p>替换成长方形的另外两个角：保持各自行不变，交换列</p>
-<p>A -&gt; (row(A), col(B))</p>
-<p>B -&gt; (row(B), col(A))</p>
-<p><strong>伪代码表示</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">playfair_encrypt_pair</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">square</span><span class="p">):</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">ra</span><span class="p">,</span> <span class="n">ca</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">rb</span><span class="p">,</span> <span class="n">cb</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">if</span> <span class="n">ra</span> <span class="o">==</span> <span class="n">rb</span><span class="p">:</span> <span class="c1">#同一行</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="k">return</span> <span class="n">square</span><span class="p">[</span><span class="n">ra</span><span class="p">][(</span><span class="n">ca</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span><span class="p">],</span> <span class="n">square</span><span class="p">[</span><span class="n">rb</span><span class="p">][(</span><span class="n">cb</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span><span class="p">]</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">elif</span> <span class="n">ca</span> <span class="o">==</span> <span class="n">cb</span><span class="p">:</span> <span class="c1">#同一列</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="k">return</span> <span class="n">square</span><span class="p">[(</span><span class="n">ra</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span><span class="p">][</span><span class="n">ca</span><span class="p">],</span> <span class="n">square</span><span class="p">[(</span><span class="n">rb</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span><span class="p">][</span><span class="n">cb</span><span class="p">]</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">else</span><span class="p">:</span> <span class="c1">#长方形</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="k">return</span> <span class="n">square</span><span class="p">[</span><span class="n">ra</span><span class="p">][</span><span class="n">cb</span><span class="p">],</span> <span class="n">square</span><span class="p">[</span><span class="n">rb</span><span class="p">][</span><span class="n">ca</span><span class="p">]</span>
-</code></pre></div>
-<h3 id="可逆性解密原理">可逆性(解密原理)<a class="headerlink" href="#可逆性解密原理" title="Permanent link">&para;</a></h3>
-<p>Playfair <strong>不是自反</strong>（不像 Atbash 那样同一算法既加密又解密）。</p>
-<p>但它是**可逆的对称加密**：解密使用同一方阵、规则相同但方向相反：</p>
-<p>同一行：向**左**（(c-1) mod 5）</p>
-<p>同一列：向**上**（(r-1) mod 5）</p>
-<p>长方形：仍然是**交换列**（与加密相同）</p>
-<h2 id="加密示例">加密示例<a class="headerlink" href="#加密示例" title="Permanent link">&para;</a></h2>
-<h3 id="基础示例">基础示例<a class="headerlink" href="#基础示例" title="Permanent link">&para;</a></h3>
-<p>以playfair example为密钥，得到</p>
+<p>1.对于每一个字母，我们将其转换成对应的数字，一般来说我们使用的是A对应0，B对应1，然后这样依次对应，也可以自己指定一个字母表，然后对应。</p>
+<p>2.将明文转换成一个1维的向量，然后将这个1维向量和一个nxn的密钥矩阵相乘，得到一个1维向量，然后对这个矩阵模26，然后通过对照的表把这个矩阵转换成对应的字母</p>
+<p><strong>注意用作加密的矩阵（即密匙）在mod26下必须是可逆的，否则就不可能解码。</strong></p>
+<p><strong>只有矩阵的行列式和 26 互质，才是可逆的。</strong></p>
+<p>下面的表就是A&lt;-&gt;0然后B&lt;-&gt;1以此类推</p>
 <table>
 <thead>
 <tr>
-<th>P</th>
-<th>L</th>
 <th>A</th>
-<th>Y</th>
+<th>0</th>
+<th>B</th>
+<th>1</th>
+<th>C</th>
+<th>2</th>
+<th>D</th>
+<th>3</th>
+<th>E</th>
+<th>4</th>
 <th>F</th>
+<th>5</th>
+<th>G</th>
+<th>6</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>I</td>
-<td>R</td>
-<td>E</td>
-<td>X</td>
-<td>M</td>
-</tr>
-<tr>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>G</td>
 <td>H</td>
-</tr>
-<tr>
+<td>7</td>
+<td>I</td>
+<td>8</td>
+<td>J</td>
+<td>9</td>
 <td>K</td>
+<td>10</td>
+<td>L</td>
+<td>11</td>
+<td>M</td>
+<td>12</td>
 <td>N</td>
-<td>O</td>
-<td>Q</td>
-<td>S</td>
+<td>13</td>
 </tr>
 <tr>
+<td>O</td>
+<td>14</td>
+<td>P</td>
+<td>15</td>
+<td>Q</td>
+<td>16</td>
+<td>R</td>
+<td>17</td>
+<td>S</td>
+<td>18</td>
 <td>T</td>
+<td>19</td>
 <td>U</td>
+<td>20</td>
+</tr>
+<tr>
 <td>V</td>
+<td>21</td>
 <td>W</td>
+<td>22</td>
+<td>X</td>
+<td>23</td>
+<td>Y</td>
+<td>24</td>
 <td>Z</td>
+<td>25</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>比如有重复的a还有e和l我们填写时候就不用再去填写第二次</p>
-<p>比如我们需要加密的内容为：<strong>Hide the gold in the tree stump</strong></p>
-<p>两两分组<code>HI DE TH EG OL DI NT HE TR EX ES TU MP</code></p>
-<p>**如果有重复的我们就换成X**比如分组时候tree，TR后面是EE这时候我们就需要用EX。</p>
-<p>加密后的密文<code>BM OD ZB XD NA BE KU DM UI XM MO UV IF</code></p>
-<h3 id="详细加密过程">详细加密过程<a class="headerlink" href="#详细加密过程" title="Permanent link">&para;</a></h3>
-<p>比如上面举的例子</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>需要加密的：HI DE TH EG OL DI NT HE TR EX ES TU MP
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>H和I我们看到上面的表格，既不在同一列也不在同一行，那么就是用长方形的原则
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>(A -&gt; (row(A), col(B))B -&gt; (row(B), col(A)))
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>然后可以得到H对应B，I对应M --&gt;BM
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>D和E在同一列就是替换成下面的字母
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>D--&gt;O  E--&gt;D得到DE对应OD
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>以此类推
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>得到加密后的密文：
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>BM OD ZB XD NA BE KU DM UI XM MO UV IF
-</code></pre></div>
+<h2 id="加密示例">加密示例<a class="headerlink" href="#加密示例" title="Permanent link">&para;</a></h2>
+<p>比如说CTF这个字符串加密</p>
+<p>首先这个字符串会被转换成矩阵，根据上面的对照表</p>
+<p><span class="arithmatex">\(\begin{bmatrix} 2 &amp;19&amp;5\end{bmatrix}\)</span></p>
+<p>然后我们需要自己设置一个加密的密钥矩阵，密钥矩阵就是我们自己设置的，但是我们设置的时候需要记住一点，就是两个矩阵的列数要相同</p>
+<p>比如下面就是我们设置的密钥矩阵</p>
+<p><span class="arithmatex">\(\begin{bmatrix} 2 &amp;4&amp;5\\2&amp;6&amp;2\\4&amp;3&amp;7\end{bmatrix}\)</span></p>
+<p>然后我们将两个矩阵相乘</p>
+<p><span class="arithmatex">\(\begin{bmatrix} 2 &amp;19&amp;5\end{bmatrix}\)</span> x <span class="arithmatex">\(\begin{bmatrix} 2 &amp;4&amp;5\\2&amp;6&amp;2\\4&amp;3&amp;7\end{bmatrix}\)</span> = <span class="arithmatex">\(\begin{bmatrix} 62 &amp;137&amp;83\end{bmatrix}\)</span></p>
+<p>我们算出来了结果但是我们发现，这些数都超出了0-25的范围，这时候我们就需要mod26了</p>
+<p><span class="arithmatex">\(\begin{bmatrix} 2 &amp;19&amp;5\end{bmatrix}\)</span> x <span class="arithmatex">\(\begin{bmatrix} 2 &amp;4&amp;5\\2&amp;6&amp;2\\4&amp;3&amp;7\end{bmatrix}\)</span> = $\begin{bmatrix} 62 &amp;137&amp;83\end{bmatrix} mod26 =  $ <span class="arithmatex">\(\begin{bmatrix} 10 &amp;7&amp;5\end{bmatrix}\)</span></p>
+<p>然后根据对照表可以得到</p>
+<p>10对应的是k</p>
+<p>7对应的是h</p>
+<p>5对应的是f</p>
 <h2 id="代码实现">代码实现<a class="headerlink" href="#代码实现" title="Permanent link">&para;</a></h2>
-<h4 id="python完整代码实现">python完整代码实现<a class="headerlink" href="#python完整代码实现" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">string</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">PlayfairCipher</span><span class="p">:</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">merge_ij</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">filler</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;X&quot;</span><span class="p">):</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">merge_ij</span> <span class="o">=</span> <span class="n">merge_ij</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">filler</span> <span class="o">=</span> <span class="n">filler</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">square</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_square_from_key</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">square</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">c</span><span class="p">]:</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)}</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_norm_char</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ch</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="n">ch</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">ch</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">merge_ij</span> <span class="ow">and</span> <span class="n">ch</span> <span class="o">==</span> <span class="s2">&quot;J&quot;</span><span class="p">:</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>            <span class="k">return</span> <span class="s2">&quot;I&quot;</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        <span class="k">return</span> <span class="n">ch</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_build_square_from_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        <span class="n">seen</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        <span class="n">seq</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">key</span><span class="p">:</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>            <span class="n">ch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_norm_char</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>            <span class="k">if</span> <span class="n">ch</span> <span class="ow">and</span> <span class="n">ch</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>                <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>                <span class="n">seq</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>        <span class="n">alpha</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_uppercase</span><span class="p">)</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">merge_ij</span><span class="p">:</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>            <span class="n">alpha</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;J&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">alpha</span><span class="p">:</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>            <span class="n">ch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_norm_char</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>            <span class="k">if</span> <span class="n">ch</span> <span class="ow">and</span> <span class="n">ch</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>                <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>                <span class="n">seq</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>        <span class="k">return</span> <span class="p">[</span><span class="n">seq</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">5</span><span class="p">:(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_prepare_pairs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>        <span class="n">cleaned</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_norm_char</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">text</span> <span class="k">if</span> <span class="n">ch</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()]</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>        <span class="n">cleaned</span> <span class="o">=</span> <span class="p">[</span><span class="n">ch</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">cleaned</span> <span class="k">if</span> <span class="n">ch</span><span class="p">]</span>
-<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>
-<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>        <span class="n">pairs</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned</span><span class="p">):</span>
-<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>            <span class="n">a</span> <span class="o">=</span> <span class="n">cleaned</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>            <span class="n">b</span> <span class="o">=</span> <span class="n">cleaned</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
-<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>
-<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>            <span class="k">if</span> <span class="n">b</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>                <span class="n">pairs</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">filler</span><span class="p">))</span>
-<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>            <span class="k">elif</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span>
-<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>                <span class="n">pairs</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">filler</span><span class="p">))</span>
-<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>            <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>                <span class="n">pairs</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
-<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>                <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
-<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>        <span class="k">return</span> <span class="n">pairs</span>
-<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>
-<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_crypt_pair</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">decrypt</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>        <span class="n">ra</span><span class="p">,</span> <span class="n">ca</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
-<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>        <span class="n">rb</span><span class="p">,</span> <span class="n">cb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
-<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>
-<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>        <span class="k">if</span> <span class="n">ra</span> <span class="o">==</span> <span class="n">rb</span><span class="p">:</span>  <span class="c1"># same row</span>
-<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>            <span class="n">shift</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">decrypt</span> <span class="k">else</span> <span class="mi">1</span>
-<a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>            <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">square</span><span class="p">[</span><span class="n">ra</span><span class="p">][(</span><span class="n">ca</span> <span class="o">+</span> <span class="n">shift</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span><span class="p">],</span>
-<a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a>                    <span class="bp">self</span><span class="o">.</span><span class="n">square</span><span class="p">[</span><span class="n">rb</span><span class="p">][(</span><span class="n">cb</span> <span class="o">+</span> <span class="n">shift</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span><span class="p">])</span>
-<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>
-<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a>        <span class="k">if</span> <span class="n">ca</span> <span class="o">==</span> <span class="n">cb</span><span class="p">:</span>  <span class="c1"># same column</span>
-<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a>            <span class="n">shift</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">decrypt</span> <span class="k">else</span> <span class="mi">1</span>
-<a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a>            <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">square</span><span class="p">[(</span><span class="n">ra</span> <span class="o">+</span> <span class="n">shift</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span><span class="p">][</span><span class="n">ca</span><span class="p">],</span>
-<a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a>                    <span class="bp">self</span><span class="o">.</span><span class="n">square</span><span class="p">[(</span><span class="n">rb</span> <span class="o">+</span> <span class="n">shift</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span><span class="p">][</span><span class="n">cb</span><span class="p">])</span>
-<a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a>
-<a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a>        <span class="c1"># rectangle</span>
-<a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a>        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">square</span><span class="p">[</span><span class="n">ra</span><span class="p">][</span><span class="n">cb</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">square</span><span class="p">[</span><span class="n">rb</span><span class="p">][</span><span class="n">ca</span><span class="p">])</span>
-<a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a>
-<a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">encrypt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plaintext</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a>        <span class="n">pairs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prepare_pairs</span><span class="p">(</span><span class="n">plaintext</span><span class="p">)</span>
-<a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a>        <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a>        <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">pairs</span><span class="p">:</span>
-<a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a>            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_crypt_pair</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">decrypt</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<a id="__codelineno-2-83" name="__codelineno-2-83" href="#__codelineno-2-83"></a>            <span class="n">out</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">])</span>
-<a id="__codelineno-2-84" name="__codelineno-2-84" href="#__codelineno-2-84"></a>        <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<a id="__codelineno-2-85" name="__codelineno-2-85" href="#__codelineno-2-85"></a>
-<a id="__codelineno-2-86" name="__codelineno-2-86" href="#__codelineno-2-86"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">decrypt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ciphertext</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a id="__codelineno-2-87" name="__codelineno-2-87" href="#__codelineno-2-87"></a>        <span class="n">cleaned</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_norm_char</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">ciphertext</span> <span class="k">if</span> <span class="n">ch</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()]</span>
-<a id="__codelineno-2-88" name="__codelineno-2-88" href="#__codelineno-2-88"></a>        <span class="n">cleaned</span> <span class="o">=</span> <span class="p">[</span><span class="n">ch</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">cleaned</span> <span class="k">if</span> <span class="n">ch</span><span class="p">]</span>
-<a id="__codelineno-2-89" name="__codelineno-2-89" href="#__codelineno-2-89"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-2-90" name="__codelineno-2-90" href="#__codelineno-2-90"></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;密文长度必须为偶数（两两一组）。&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-91" name="__codelineno-2-91" href="#__codelineno-2-91"></a>
-<a id="__codelineno-2-92" name="__codelineno-2-92" href="#__codelineno-2-92"></a>        <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-2-93" name="__codelineno-2-93" href="#__codelineno-2-93"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
-<a id="__codelineno-2-94" name="__codelineno-2-94" href="#__codelineno-2-94"></a>            <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">cleaned</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">cleaned</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
-<a id="__codelineno-2-95" name="__codelineno-2-95" href="#__codelineno-2-95"></a>            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_crypt_pair</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">decrypt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-2-96" name="__codelineno-2-96" href="#__codelineno-2-96"></a>            <span class="n">out</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">])</span>
-<a id="__codelineno-2-97" name="__codelineno-2-97" href="#__codelineno-2-97"></a>        <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<a id="__codelineno-2-98" name="__codelineno-2-98" href="#__codelineno-2-98"></a>
-<a id="__codelineno-2-99" name="__codelineno-2-99" href="#__codelineno-2-99"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">pretty_square</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a id="__codelineno-2-100" name="__codelineno-2-100" href="#__codelineno-2-100"></a>        <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">square</span><span class="p">)</span>
-<a id="__codelineno-2-101" name="__codelineno-2-101" href="#__codelineno-2-101"></a>
-<a id="__codelineno-2-102" name="__codelineno-2-102" href="#__codelineno-2-102"></a>
-<a id="__codelineno-2-103" name="__codelineno-2-103" href="#__codelineno-2-103"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-2-104" name="__codelineno-2-104" href="#__codelineno-2-104"></a>    <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;PLAYFAIR EXAMPLE&quot;</span>
-<a id="__codelineno-2-105" name="__codelineno-2-105" href="#__codelineno-2-105"></a>    <span class="n">pf</span> <span class="o">=</span> <span class="n">PlayfairCipher</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">merge_ij</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">filler</span><span class="o">=</span><span class="s2">&quot;X&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-106" name="__codelineno-2-106" href="#__codelineno-2-106"></a>
-<a id="__codelineno-2-107" name="__codelineno-2-107" href="#__codelineno-2-107"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 密钥方阵 ===&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-108" name="__codelineno-2-108" href="#__codelineno-2-108"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">pf</span><span class="o">.</span><span class="n">pretty_square</span><span class="p">())</span>
-<a id="__codelineno-2-109" name="__codelineno-2-109" href="#__codelineno-2-109"></a>
-<a id="__codelineno-2-110" name="__codelineno-2-110" href="#__codelineno-2-110"></a>    <span class="n">plaintext</span> <span class="o">=</span> <span class="s2">&quot;HIDE THE GOLD IN THE TREE STUMP&quot;</span>
-<a id="__codelineno-2-111" name="__codelineno-2-111" href="#__codelineno-2-111"></a>    <span class="n">ciphertext</span> <span class="o">=</span> <span class="n">pf</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">plaintext</span><span class="p">)</span>
-<a id="__codelineno-2-112" name="__codelineno-2-112" href="#__codelineno-2-112"></a>
-<a id="__codelineno-2-113" name="__codelineno-2-113" href="#__codelineno-2-113"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== 加密演示 ===&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-114" name="__codelineno-2-114" href="#__codelineno-2-114"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;关键词：&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
-<a id="__codelineno-2-115" name="__codelineno-2-115" href="#__codelineno-2-115"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;明文：&quot;</span><span class="p">,</span> <span class="n">plaintext</span><span class="p">)</span>
-<a id="__codelineno-2-116" name="__codelineno-2-116" href="#__codelineno-2-116"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;密文：&quot;</span><span class="p">,</span> <span class="n">ciphertext</span><span class="p">)</span>
-<a id="__codelineno-2-117" name="__codelineno-2-117" href="#__codelineno-2-117"></a>
-<a id="__codelineno-2-118" name="__codelineno-2-118" href="#__codelineno-2-118"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== 解密演示 ===&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-119" name="__codelineno-2-119" href="#__codelineno-2-119"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;解密结果：&quot;</span><span class="p">,</span> <span class="n">pf</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">))</span>
+<h3 id="python完整代码">Python完整代码<a class="headerlink" href="#python完整代码" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># 判断矩阵是否存在逆矩阵</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">judge_inverse_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">except</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># 输入列表并转换为矩阵</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">def</span><span class="w"> </span><span class="nf">inputmatrix</span><span class="p">():</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">row_num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入矩阵的行数：&quot;</span><span class="p">))</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">all_list</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">row_num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        <span class="n">row</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;请输入加密矩阵第</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">行(以空格为分隔)：&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;输入有误，第一位不该为空格&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>            <span class="n">row_list</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        <span class="c1"># 将列表中str转换为int</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">row_list</span><span class="p">)</span> <span class="o">==</span> <span class="n">row_num</span><span class="p">:</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>            <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">row_list</span><span class="p">:</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>                <span class="n">row_list</span><span class="p">[</span><span class="n">row_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">row_list</span><span class="p">[</span><span class="n">row_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">n</span><span class="p">)])</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>            <span class="n">all_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row_list</span><span class="p">)</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;前后输入的行数不一致,请重修输入&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>            <span class="k">break</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    <span class="n">encrypt_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">all_list</span><span class="p">)</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">judge_inverse_matrix</span><span class="p">(</span><span class="n">encrypt_matrix</span><span class="p">):</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;该矩阵不存在逆矩阵，请重修输入&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    <span class="k">return</span> <span class="n">encrypt_matrix</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="c1"># 生成矩阵的逆矩阵。如果逆矩阵含有小数，就四舍五入</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="k">def</span><span class="w"> </span><span class="nf">generate_inverse_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    <span class="n">inverse_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">inverse_matrix</span><span class="p">:</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>            <span class="n">num</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;加密矩阵的逆矩阵为：&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    <span class="k">for</span> <span class="n">array</span> <span class="ow">in</span> <span class="n">inverse_matrix</span><span class="p">:</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    <span class="k">return</span> <span class="n">inverse_matrix</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="c1"># 生成字母-数字对应的字典</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="k">def</span><span class="w"> </span><span class="nf">alphabet_number</span><span class="p">():</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    <span class="n">alphabet_number_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">97</span><span class="p">,</span> <span class="mi">123</span><span class="p">):</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>        <span class="n">alphabet_number_dict</span><span class="p">[</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">97</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    <span class="k">return</span> <span class="n">alphabet_number_dict</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="k">def</span><span class="w"> </span><span class="nf">encrypt</span><span class="p">():</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>    <span class="c1"># 明文字母转换成对应数字</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>    <span class="n">input_plaintext</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入明文：&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>    <span class="n">num_list</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    <span class="n">dic</span> <span class="o">=</span> <span class="n">alphabet_number</span><span class="p">()</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">input_plaintext</span><span class="p">:</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>        <span class="n">num_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dic</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>    <span class="c1"># 如果矩阵行数不能整除明文，则用&#39;z&#39;的数字25补全</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>    <span class="n">matrix</span> <span class="o">=</span> <span class="n">inputmatrix</span><span class="p">()</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>    <span class="n">row_num</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>    <span class="n">supple_num</span> <span class="o">=</span> <span class="n">row_num</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">num_list</span><span class="p">)</span> <span class="o">%</span> <span class="n">row_num</span><span class="p">)</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">num_list</span><span class="p">)</span> <span class="o">%</span> <span class="n">row_num</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">supple_num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>            <span class="n">num_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">添加了</span><span class="si">{</span><span class="n">supple_num</span><span class="si">}</span><span class="s2">个z补全明文&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>    <span class="c1"># 分组加密</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>    <span class="n">group_num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">num_list</span><span class="p">)</span> <span class="o">/</span> <span class="n">row_num</span><span class="p">)</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>    <span class="n">whole_encrypt_num_list</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>    <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">group_num</span><span class="p">):</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>        <span class="n">plaintext_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">num_list</span><span class="p">[</span><span class="mi">0</span> <span class="o">+</span> <span class="n">g</span> <span class="o">*</span> <span class="n">row_num</span><span class="p">:</span> <span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">row_num</span><span class="p">])</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>        <span class="n">encrypt_num_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">plaintext_matrix</span><span class="p">,</span> <span class="n">matrix</span><span class="p">)</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">encrypt_num_list</span><span class="p">:</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>            <span class="n">whole_encrypt_num_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>
+<a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>    <span class="c1"># 将加密后的数字转换为字母</span>
+<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>    <span class="n">ciphertext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>    <span class="k">for</span> <span class="n">ennum</span> <span class="ow">in</span> <span class="n">whole_encrypt_num_list</span><span class="p">:</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>        <span class="c1"># 对超出范围的数字取模</span>
+<a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>        <span class="k">if</span> <span class="n">ennum</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+<a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>            <span class="n">ennum</span> <span class="o">=</span> <span class="n">ennum</span> <span class="o">%</span> <span class="mi">26</span>
+<a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">:</span>
+<a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>            <span class="k">if</span> <span class="n">dic</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">ennum</span><span class="p">:</span>
+<a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>                <span class="n">ciphertext</span> <span class="o">=</span> <span class="n">ciphertext</span> <span class="o">+</span> <span class="n">k</span>
+<a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;加密后密文为：&quot;</span><span class="p">,</span> <span class="n">ciphertext</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>
+<a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>
+<a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a><span class="k">def</span><span class="w"> </span><span class="nf">decrypt</span><span class="p">():</span>
+<a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>    <span class="c1"># 输入密文并转换为对应数字</span>
+<a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>    <span class="n">input_ciphertext</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入密文：&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>    <span class="n">num_list2</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>    <span class="n">dic2</span> <span class="o">=</span> <span class="n">alphabet_number</span><span class="p">()</span>
+<a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">input_ciphertext</span><span class="p">:</span>
+<a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a>        <span class="n">num_list2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dic2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a>
+<a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a>    <span class="c1"># 解密就不添加&#39;z&#39;来补全密文了</span>
+<a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a>    <span class="n">matrix</span> <span class="o">=</span> <span class="n">inputmatrix</span><span class="p">()</span>
+<a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a>    <span class="n">row_num2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a>    <span class="n">supple_num2</span> <span class="o">=</span> <span class="n">row_num2</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">num_list2</span><span class="p">)</span> <span class="o">%</span> <span class="n">row_num2</span><span class="p">)</span>
+<a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a>
+<a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a>    <span class="c1"># 用逆矩阵分组解密</span>
+<a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a>    <span class="n">inserve_matrix</span> <span class="o">=</span> <span class="n">generate_inverse_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a>    <span class="n">group_num2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">num_list2</span><span class="p">)</span> <span class="o">/</span> <span class="n">row_num2</span><span class="p">)</span>
+<a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a>    <span class="n">whole_decrypt_num_list</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a>    <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">group_num2</span><span class="p">):</span>
+<a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a>        <span class="n">plaintext_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">num_list2</span><span class="p">[</span><span class="mi">0</span> <span class="o">+</span> <span class="n">g</span> <span class="o">*</span> <span class="n">row_num2</span><span class="p">:</span> <span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">row_num2</span><span class="p">])</span>
+<a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a>        <span class="n">decrypt_num_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">plaintext_matrix</span><span class="p">,</span> <span class="n">inserve_matrix</span><span class="p">)</span>
+<a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a>        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">decrypt_num_list</span><span class="p">:</span>
+<a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a>            <span class="n">whole_decrypt_num_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a>
+<a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a>    <span class="c1"># 将解密后的数字转换为对应字母</span>
+<a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a>    <span class="n">plaintext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a>    <span class="k">for</span> <span class="n">denum</span> <span class="ow">in</span> <span class="n">whole_decrypt_num_list</span><span class="p">:</span>
+<a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a>        <span class="k">if</span> <span class="n">denum</span> <span class="o">&gt;</span> <span class="mi">25</span> <span class="ow">or</span> <span class="n">denum</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">26</span><span class="p">:</span>
+<a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a>            <span class="n">denum</span> <span class="o">=</span> <span class="n">denum</span> <span class="o">%</span> <span class="mi">26</span>
+<a id="__codelineno-0-125" name="__codelineno-0-125" href="#__codelineno-0-125"></a>
+<a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a>        <span class="c1"># 防止取模后是负数，字典中找不到对应的字母</span>
+<a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a>        <span class="k">if</span> <span class="n">denum</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-0-128" name="__codelineno-0-128" href="#__codelineno-0-128"></a>            <span class="n">denum</span> <span class="o">=</span> <span class="n">denum</span> <span class="o">+</span> <span class="mi">26</span>
+<a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a>        <span class="c1"># 字典中寻找与数字对应的字母</span>
+<a id="__codelineno-0-130" name="__codelineno-0-130" href="#__codelineno-0-130"></a>        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">dic2</span><span class="p">:</span>
+<a id="__codelineno-0-131" name="__codelineno-0-131" href="#__codelineno-0-131"></a>            <span class="k">if</span> <span class="n">dic2</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">denum</span><span class="p">:</span>
+<a id="__codelineno-0-132" name="__codelineno-0-132" href="#__codelineno-0-132"></a>                <span class="n">plaintext</span> <span class="o">=</span> <span class="n">plaintext</span> <span class="o">+</span> <span class="n">k</span>
+<a id="__codelineno-0-133" name="__codelineno-0-133" href="#__codelineno-0-133"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;解密后明文为：&quot;</span><span class="p">,</span> <span class="n">plaintext</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-134" name="__codelineno-0-134" href="#__codelineno-0-134"></a>
+<a id="__codelineno-0-135" name="__codelineno-0-135" href="#__codelineno-0-135"></a>
+<a id="__codelineno-0-136" name="__codelineno-0-136" href="#__codelineno-0-136"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-0-137" name="__codelineno-0-137" href="#__codelineno-0-137"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-0-138" name="__codelineno-0-138" href="#__codelineno-0-138"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;========Hill密码========</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-139" name="__codelineno-0-139" href="#__codelineno-0-139"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1.加密</span><span class="se">\n</span><span class="s2">2.解密</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-140" name="__codelineno-0-140" href="#__codelineno-0-140"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;注意：如果输入矩阵的逆矩阵中含有小数，采用四舍五入的方法</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-141" name="__codelineno-0-141" href="#__codelineno-0-141"></a>        <span class="n">pattern</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请选择模式：&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-142" name="__codelineno-0-142" href="#__codelineno-0-142"></a>        <span class="k">if</span> <span class="n">pattern</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+<a id="__codelineno-0-143" name="__codelineno-0-143" href="#__codelineno-0-143"></a>            <span class="n">encrypt</span><span class="p">()</span>
+<a id="__codelineno-0-144" name="__codelineno-0-144" href="#__codelineno-0-144"></a>        <span class="k">elif</span> <span class="n">pattern</span> <span class="o">==</span> <span class="s1">&#39;2&#39;</span><span class="p">:</span>
+<a id="__codelineno-0-145" name="__codelineno-0-145" href="#__codelineno-0-145"></a>            <span class="n">decrypt</span><span class="p">()</span>
+<a id="__codelineno-0-146" name="__codelineno-0-146" href="#__codelineno-0-146"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-0-147" name="__codelineno-0-147" href="#__codelineno-0-147"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;输入有误，请重修输入&quot;</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="安全性分析">安全性分析<a class="headerlink" href="#安全性分析" title="Permanent link">&para;</a></h3>
-<h4 id="优点">优点<a class="headerlink" href="#优点" title="Permanent link">&para;</a></h4>
-<p>双字母加密：以二元组替换代替单字母替换，较不容易被简单的单字母频率分析直接破解</p>
-<p>规则明确易实现：只需一个 5×5 密钥方阵，按“同行/同列/长方形”三条规则即可完成加解密</p>
-<p>手工可操作：不依赖机器也能执行，适合教学与演示古典密码思想</p>
-<h4 id="缺点">缺点<a class="headerlink" href="#缺点" title="Permanent link">&para;</a></h4>
-<p>安全性不足：仍可通过二元组频率统计、约束推理等方法在足够密文长度下被破译</p>
-<p>密钥空间有限且结构泄露：方阵结构固定（常见 I/J 合并、填充字母等约定），会暴露可利用的规律</p>
-<p>填充字母引入特征：为处理重复字母与补齐长度常插入 X 等填充字母，可能形成可识别模式，辅助攻击者分析</p>
-<h2 id="攻击方法">攻击方法<a class="headerlink" href="#攻击方法" title="Permanent link">&para;</a></h2>
-<h3 id="频率分析">频率分析<a class="headerlink" href="#频率分析" title="Permanent link">&para;</a></h3>
-<p>Playfair密码的密文中仍然保留了明文的结构特征，攻击者可以利用频率分析来破解。通过统计密文中双字母组合的出现频率，攻击者可以推测出明文中最常见的字母组合，从而进行破解。 
-由于Playfair密码是基于双字母的替换，攻击者可以构建一个676个条目的频率统计表，分析密文中的双字母组合，寻找规律。</p>
-<h3 id="构造矩阵">构造矩阵<a class="headerlink" href="#构造矩阵" title="Permanent link">&para;</a></h3>
-<p>攻击者可以尝试重建加密所用的5x5字母矩阵。通过分析密文中出现的字母频率，攻击者可以推测出密钥的某些部分，从而重建矩阵。</p>
+<h2 id="安全性分析">安全性分析<a class="headerlink" href="#安全性分析" title="Permanent link">&para;</a></h2>
+<h3 id="优点"><strong>优点</strong><a class="headerlink" href="#优点" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>多字母替换</strong>：按分组（n 个字母）一起加密，相比单字母替换更能打乱简单的字母频率特征</li>
+<li><strong>扩散性较好</strong>：同一组内任意一个字母变化，通常会影响整组输出（矩阵乘法带来的联动）</li>
+<li><strong>实现清晰</strong>：规则就是线性代数（矩阵乘法 + 模运算）</li>
+</ul>
+<h3 id="缺点"><strong>缺点</strong><a class="headerlink" href="#缺点" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>线性结构导致可破</strong>：Hill 本质是线性变换，容易被线性代数方法还原密钥矩阵</li>
+<li><strong>已知明文/选择明文攻击很弱</strong>：只要收集到足够的“明文块—密文块”对，就能解出密钥矩阵</li>
+<li>对 $n\times n $Hill，理论上拿到 n 个线性无关的明文块（及对应密文块）就可能解出密钥</li>
+<li><strong>仍会泄露分组统计特征</strong>：虽然不是单字母频率，但会保留“n 元组”的统计规律，密文足够长仍可做统计分析</li>
+<li><strong>密钥矩阵有可逆性限制</strong>：必须满足$ \gcd(\det(K), 26)=1$ 才能解密，这会缩小可用密钥空间</li>
+<li><strong>安全性不符合现代标准</strong>：在现代计算能力下，Hill 适合学习，不适合真实通信/数据保护</li>
+</ul>
+<h2 id="hill-密码的攻击方法">HILL 密码的攻击方法<a class="headerlink" href="#hill-密码的攻击方法" title="Permanent link">&para;</a></h2>
+<h3 id="1-仅密文攻击">(1) 仅密文攻击<a class="headerlink" href="#1-仅密文攻击" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>n 元组频率分析</strong>：Hill 是按 n 个字母分组加密的，所以攻击者会统计密文中的二元组/三元组的出现规律，结合语言特征推测明文结构。</li>
+<li><strong>尝试还原密钥（难度较高）</strong>：纯密文下要直接解出矩阵通常不如已知明文有效，但在密文足够长、语言规律明显时仍可能被分析。</li>
+</ul>
+<h3 id="2-已知明文攻击">(2) 已知明文攻击<a class="headerlink" href="#2-已知明文攻击" title="Permanent link">&para;</a></h3>
+<p>核心利用：Hill 是线性的</p>
+<p><span class="arithmatex">\(C \equiv K P \pmod{26}\)</span></p>
+<p>如果攻击者拿到足够多的明文块 P及对应密文块 C，就能解出密钥矩阵 K。</p>
+<ul>
+<li>
+<p>把多组明文块拼成矩阵 <span class="arithmatex">\(P=[P_1\ P_2\ ...\ P_n]\)</span></p>
+</li>
+<li>
+<p>把对应密文块拼成矩阵$ C=[C_1 C_2 ... C_n]$</p>
+</li>
+<li>
+<p>若 P 在模 26 下可逆，则：</p>
+</li>
+</ul>
+<p><span class="arithmatex">\(K \equiv C P^{-1}\pmod{26}\)</span></p>
+<p><strong>结论</strong>：对 n\times n Hill，拿到 **n 个线性无关**的明文块及其密文块，往往就足以恢复密钥。</p>
+<h3 id="3-选择明文攻击">(3) 选择明文攻击<a class="headerlink" href="#3-选择明文攻击" title="Permanent link">&para;</a></h3>
+<p>如果攻击者能让你加密他指定的明文块:</p>
+<ul>
+<li>例如构造单位向量块（思想上）：</li>
+<li>输入 $P_1=(1,0,0,\dots)^T $得到的密文就是 K 的第 1 列</li>
+<li>输入$ P_2=(0,1,0,\dots)^T $得到 K 的第 2 列</li>
+<li>实际在字母系统里等价于精心挑选字母组合，使明文矩阵 P 可逆并便于求解</li>
+</ul>
+<p>结果：在很少查询次数下就能直接还原整个 K。</p>
 <h2 id="在线工具">在线工具<a class="headerlink" href="#在线工具" title="Permanent link">&para;</a></h2>
-<p><a class="md-button md-button--primary" href="https://tools.qsnctf.com/#//crypto/Playfair" rel="noopener" target="_blank">在线Playfair密码工具</a></p>
+<p><a class="md-button md-button--primary" href="https://tools.qsnctf.com/#//crypto/HILL" rel="noopener" target="_blank">在线HILL密码工具</a></p>
 
 
 
