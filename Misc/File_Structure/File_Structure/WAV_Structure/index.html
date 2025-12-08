@@ -2735,10 +2735,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#92-编程语言支持" class="md-nav__link">
+  <a href="#92-python读取" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.2 编程语言支持
+        9.2 Python读取
       
     </span>
   </a>
@@ -3867,10 +3867,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#92-编程语言支持" class="md-nav__link">
+  <a href="#92-python读取" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.2 编程语言支持
+        9.2 Python读取
       
     </span>
   </a>
@@ -4042,17 +4042,17 @@
 </ol>
 <h3 id="22-整体结构图">2.2 整体结构图<a class="headerlink" href="#22-整体结构图" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────┐
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                  RIFF Chunk                     │
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│  ID: &quot;RIFF&quot;    Size: 文件总大小-8  Type: &quot;WAVE&quot;   │
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                  RIFF Chunk                      │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│  ID: &quot;RIFF&quot;    Size: 文件总大小-8  Type: &quot;WAVE&quot;  │
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├─────────────────────────────────────────────────┤
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│               Format Chunk (必须)                │
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│               Format Chunk (必须)                 │
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│  ID: &quot;fmt &quot;    Size: 16/18/40  音频格式信息       │
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├─────────────────────────────────────────────────┤
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│               Fact Chunk (可选)                  │
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│  ID: &quot;fact&quot;    Size: ≥4        采样总数           │
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│  ID: &quot;fact&quot;    Size: ≥4        采样总数          │
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├─────────────────────────────────────────────────┤
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│                Data Chunk (必须)                 │
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│  ID: &quot;data&quot;    Size: N         音频数据           │
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│  ID: &quot;data&quot;    Size: N         音频数据          │
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>└─────────────────────────────────────────────────┘
 </code></pre></div>
 <h2 id="3各个-chunk-的具体内容">3、各个 Chunk 的具体内容<a class="headerlink" href="#3各个-chunk-的具体内容" title="Permanent link">&para;</a></h2>
@@ -4278,14 +4278,14 @@
 <h2 id="5format-chunk-扩展块">5、Format Chunk 扩展块<a class="headerlink" href="#5format-chunk-扩展块" title="Permanent link">&para;</a></h2>
 <p>当 WAV 文件使用非 PCM 编码时，需要扩展格式块：</p>
 <p>扩展块结构：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>┌─────────────┬──────────────────────────────────────┐
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>| cbSize      | cbContent                            |
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>| (2字节)      | (0或22字节)                           |
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├─────────────┼──────────────────────────────────────┤
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>|             | valid_bits_per_sample (2字节)         |
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>|             | channel_mask (4字节)                  |
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>|             | sub_format (16字节)                   |
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>└─────────────┴──────────────────────────────────────┘
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>┌─────────────┬─────────────┬────────────────────────┐
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>| cbSize      | cbContent                           |
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>| (2字节)     | (0或22字节)                         |
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├─────────────┼─────────────┼────────────────────────┤
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>|             | valid_bits_per_sample (2字节)       |
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>|             | channel_mask (4字节)                |
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>|             | sub_format (16字节)                 |
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>└─────────────┴─────────────┴────────────────────────┘
 </code></pre></div>
 <p><strong>字段说明：</strong></p>
 <ul>
@@ -4524,7 +4524,7 @@
 <p>xxd（命令行，跨平台）</p>
 </li>
 </ul>
-<h3 id="92-编程语言支持">9.2 编程语言支持<a class="headerlink" href="#92-编程语言支持" title="Permanent link">&para;</a></h3>
+<h3 id="92-python读取">9.2 Python读取<a class="headerlink" href="#92-python读取" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;audio.wav&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
