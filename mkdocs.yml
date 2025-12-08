@@ -185,6 +185,8 @@ nav:
       - Base家族:
         - Base64: Misc/encoding/Base/Base64.md
         - Base32: Misc/encoding/Base/Base32.md
+        - Base36: Misc/encoding/Base/Base36.md
+        - Base58: Misc/encoding/Base/Base58.md
     - 文件结构:
       - 各种文件的结构: 
         - PNG: Misc/File_Structure/File_Structure/PNG_Structure.md
