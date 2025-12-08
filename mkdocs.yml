@@ -203,6 +203,7 @@ nav:
         - 埃特巴什码: Crypto/Classical_Cryptography/Single_Table_Replacement/Atbash.md
       - 多表替换:
         - Playfair密码: Crypto/Classical_Cryptography/Multi_table_replacement/Playfair.md
+        - Playfair密码: Crypto/Classical_Cryptography/Multi_table_replacement/HILL.md
         
     
   - Web: 
