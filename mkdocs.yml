@@ -193,6 +193,7 @@ nav:
         - JPG: Misc/File_Structure/File_Structure/JPG_Structure.md
         - ZIP: Misc/File_Structure/File_Structure/ZIP_Structure.md
         - GIF: Misc/File_Structure/File_Structure/GIF_Structure.md
+        - WAV: Misc/File_Structure/File_Structure/WAV_Structure.md
   - Crypto: 
     - 介绍: Crypto/index.md
     - 古典密码:
