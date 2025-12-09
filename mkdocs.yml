@@ -204,6 +204,7 @@ nav:
       - 多表替换:
         - Playfair密码: Crypto/Classical_Cryptography/Multi_table_replacement/Playfair.md
         - HILL密码: Crypto/Classical_Cryptography/Multi_table_replacement/HILL.md
+        - 维吉尼亚密码: Crypto/Classical_Cryptography/Multi_table_replacement/Vigen.md
         
     
   - Web: 
