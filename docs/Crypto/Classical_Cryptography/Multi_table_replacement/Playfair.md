@@ -268,4 +268,4 @@ Playfair密码的密文中仍然保留了明文的结构特征，攻击者可以
 
 ## 在线工具
 
-[在线Playfair密码工具](https://tools.qsnctf.com/#//crypto/Playfair){ .md-button .md-button--primary target="_blank" rel="noopener"}
+[在线Playfair密码工具](https://tools.qsnctf.com/#//crypto/playfair){ .md-button .md-button--primary target="_blank" rel="noopener"}
