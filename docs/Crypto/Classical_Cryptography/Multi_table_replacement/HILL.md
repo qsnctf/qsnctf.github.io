@@ -263,4 +263,4 @@ $C \equiv K P \pmod{26}$
 
 ## 在线工具
 
-[在线HILL密码工具](https://tools.qsnctf.com/#//crypto/HILL){ .md-button .md-button--primary target="_blank" rel="noopener"}
+[在线HILL密码工具](https://tools.qsnctf.com/#//crypto/hill){ .md-button .md-button--primary target="_blank" rel="noopener"}
