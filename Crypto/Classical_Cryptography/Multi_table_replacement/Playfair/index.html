@@ -4039,10 +4039,10 @@
 </code></pre></div>
 <h3 id="可逆性解密原理">可逆性(解密原理)<a class="headerlink" href="#可逆性解密原理" title="Permanent link">&para;</a></h3>
 <p>Playfair <strong>不是自反</strong>（不像 Atbash 那样同一算法既加密又解密）。</p>
-<p>但它是**可逆的对称加密**：解密使用同一方阵、规则相同但方向相反：</p>
-<p>同一行：向**左**（(c-1) mod 5）</p>
-<p>同一列：向**上**（(r-1) mod 5）</p>
-<p>长方形：仍然是**交换列**（与加密相同）</p>
+<p>但它是 <strong>可逆的对称加密</strong> ：解密使用同一方阵、规则相同但方向相反：</p>
+<p>同一行：向 <strong>左</strong> （(c-1) mod 5）</p>
+<p>同一列：向 <strong>上</strong> （(r-1) mod 5）</p>
+<p>长方形：仍然是 <strong>交换列</strong> （与加密相同）</p>
 <h2 id="加密示例">加密示例<a class="headerlink" href="#加密示例" title="Permanent link">&para;</a></h2>
 <h3 id="基础示例">基础示例<a class="headerlink" href="#基础示例" title="Permanent link">&para;</a></h3>
 <p>以playfair example为密钥，得到</p>
@@ -4090,7 +4090,7 @@
 <p>比如有重复的a还有e和l我们填写时候就不用再去填写第二次</p>
 <p>比如我们需要加密的内容为：<strong>Hide the gold in the tree stump</strong></p>
 <p>两两分组<code>HI DE TH EG OL DI NT HE TR EX ES TU MP</code></p>
-<p>**如果有重复的我们就换成X**比如分组时候tree，TR后面是EE这时候我们就需要用EX。</p>
+<p><strong>如果有重复的我们就换成X</strong> 比如分组时候tree，TR后面是EE这时候我们就需要用EX。</p>
 <p>加密后的密文<code>BM OD ZB XD NA BE KU DM UI XM MO UV IF</code></p>
 <h3 id="详细加密过程">详细加密过程<a class="headerlink" href="#详细加密过程" title="Permanent link">&para;</a></h3>
 <p>比如上面举的例子</p>
