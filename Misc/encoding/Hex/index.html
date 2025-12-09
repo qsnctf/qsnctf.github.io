@@ -3756,22 +3756,26 @@
 <h2 id="例子">例子<a class="headerlink" href="#例子" title="Permanent link">&para;</a></h2>
 <h3 id="16进制转换10进制">16进制转换10进制<a class="headerlink" href="#16进制转换10进制" title="Permanent link">&para;</a></h3>
 <p>16进制到10进制的转换，其实和2进制到10进制的转换方式一致，都是按位的权值展开。</p>
-<p>在2进制的情况下，位权值是2的幂次，16进制的情况下，就是16的幂次，从右往左依次排列如下：
-$$</p>
-<p>16^0 、 16^1、 16^2、 16^3、 16^4 、 16^5、 16^6、 16^7 、16^8 、 16^9、 16^10、 16^11 16^12 、 16^13、 16^14、 16^15，其中A=10, B=11, C=12, D=13, E=14, F=15。
-$$</p>
-<p>例如：66（f）和6c（l）
-$$
-66=6∗16<sup>1+6∗16</sup>0\</p>
-<p>=6∗16+6\</p>
-<p>=96+6\</p>
-<p>=102
-$$</p>
+<p>在2进制的情况下，位权值是2的幂次，16进制的情况下，就是16的幂次，从右往左依次排列如下：</p>
 <div class="arithmatex">\[
-6𝑐=6∗16^1+12∗16^0\\
-     =6∗16+12\\
-     =96+12\\
-     =108
+16^0, 16^1, 16^2, \ldots, 16^{15},\quad \text{其中 } A=10, B=11, \ldots, F=15
+\]</div>
+<p>例如：66（f）和6c（l）</p>
+<div class="arithmatex">\[
+\begin{aligned}
+66 &amp;= 6 \times 16^1 + 6 \times 16^0 \\
+   &amp;= 6 \times 16 + 6 \\
+   &amp;= 96 + 6 \\
+   &amp;= 102
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+6c &amp;= 6 \times 16^1 + 12 \times 16^0 \\
+   &amp;= 6 \times 16 + 12 \\
+   &amp;= 96 + 12 \\
+   &amp;= 108
+\end{aligned}
 \]</div>
 <h3 id="字符串ctf">字符串："CTF"<a class="headerlink" href="#字符串ctf" title="Permanent link">&para;</a></h3>
 <p>ASCII 字节为：</p>
