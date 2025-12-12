@@ -195,10 +195,10 @@ nav:
         - GIF: Misc/File_Structure/File_Structure/GIF_Structure.md
         - WAV: Misc/File_Structure/File_Structure/WAV_Structure.md
         - MP3: Misc/File_Structure/File_Structure/MP3_Structure.md
-    - 文件修复
+    - 文件修复:
         - PNG: Misc/File_Repair/PNG_Repair.md
         - JPG: Misc/File_Repair/JPG_Repair.md
-        
+
   - Crypto: 
     - 介绍: Crypto/index.md
     - 古典密码:
