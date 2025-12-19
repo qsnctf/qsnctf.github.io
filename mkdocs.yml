@@ -199,8 +199,6 @@ nav:
         - PNG: Misc/File_Repair/PNG_Repair.md
         - JPG: Misc/File_Repair/JPG_Repair.md
         - ZIP: Misc/File_Repair/ZIP_Repair.md
-    - 隐写术:
-        - PNG:     
   - Crypto: 
     - 介绍: Crypto/index.md
     - 古典密码:
