@@ -202,7 +202,7 @@ nav:
     - 隐写术:
       - PNG文件:
         - 像素隐写:
-          - LSB隐写: Misc/Steganography/PNG_FILE/Pixel/PNG_Steganography.md
+          - LSB隐写: Misc/Steganography/PNG_FILE/Pixel/LSB_Steganography.md
   - Crypto: 
     - 介绍: Crypto/index.md
     - 古典密码:
