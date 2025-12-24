@@ -201,6 +201,7 @@ nav:
         - ZIP: Misc/File_Repair/ZIP_Repair.md
     - 隐写术:
       - PNG文件:
+        - 宽高修改: Misc/Steganography/PNG_FILE/WH/WH_Steganography.md
         - 像素隐写:
           - LSB隐写: Misc/Steganography/PNG_FILE/Pixel/LSB_Steganography.md
   - Crypto: 
