@@ -87,3 +87,11 @@ http://www.caesum.com/handbook/Stegsolve.jar
 
 由PNG文件头可以看出隐写内容为PNG文件，按save Bin键保存为PNG文件。
 
+## 在线工具
+
+[图片LSB/块信息/CRC校验工具](https://tools.qsnctf.com/#//misc/image_chunk_info){ .md-button .md-button--primary target="_blank" rel="noopener"}
+
+[zsteg隐写分析工具](https://tools.qsnctf.com/#//misc/zsteg){ .md-button .md-button--primary target="_blank" rel="noopener"}
+
+
+
