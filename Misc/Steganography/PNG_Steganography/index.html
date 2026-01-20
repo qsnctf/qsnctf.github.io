@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.qsnctf.com/Misc/Steganography/PNG_FILE/Pixel/LSB_Steganography/">
+        <link rel="canonical" href="https://docs.qsnctf.com/Misc/Steganography/PNG_Steganography/">
       
       
-        <link rel="prev" href="../../WH/WH_Steganography/">
+        <link rel="prev" href="../../File_Repair/ZIP_Repair/">
       
       
-        <link rel="next" href="../../../../../Crypto/">
+        <link rel="next" href="../../../Crypto/">
       
       
         
       
       
-      <link rel="icon" href="../../../../../assets/logo.png">
+      <link rel="icon" href="../../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>LSB隐写 - 青少年CTF文库</title>
+        <title>PNG - 青少年CTF文库</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lsb隐写" class="md-skip">
+        <a href="#png-隐写术" class="md-skip">
           跳转至
         </a>
       
@@ -92,9 +92,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../../.." title="青少年CTF文库" class="md-header__button md-logo" aria-label="青少年CTF文库" data-md-component="logo">
+    <a href="../../.." title="青少年CTF文库" class="md-header__button md-logo" aria-label="青少年CTF文库" data-md-component="logo">
       
-  <img src="../../../../../assets/logo.png" alt="logo">
+  <img src="../../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LSB隐写
+              PNG
             
           </span>
         </div>
@@ -229,7 +229,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -248,7 +248,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../home/" class="md-tabs__link">
+      <a href="../../../home/" class="md-tabs__link">
         
   
   
@@ -269,7 +269,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../basic/intro/" class="md-tabs__link">
+        <a href="../../../basic/intro/" class="md-tabs__link">
           
   
   
@@ -291,7 +291,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../Code/" class="md-tabs__link">
+        <a href="../../../Code/" class="md-tabs__link">
           
   
   
@@ -315,7 +315,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -337,7 +337,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../Crypto/" class="md-tabs__link">
+        <a href="../../../Crypto/" class="md-tabs__link">
           
   
   
@@ -359,7 +359,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../Web/" class="md-tabs__link">
+        <a href="../../../Web/" class="md-tabs__link">
           
   
   
@@ -381,7 +381,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../Reverse/" class="md-tabs__link">
+        <a href="../../../Reverse/" class="md-tabs__link">
           
   
   
@@ -403,7 +403,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../Pwn/" class="md-tabs__link">
+        <a href="../../../Pwn/" class="md-tabs__link">
           
   
   
@@ -425,7 +425,29 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../Tools/" class="md-tabs__link">
+        <a href="../../../AI/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Tools/" class="md-tabs__link">
           
   
   
@@ -447,7 +469,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../about/" class="md-tabs__link">
+        <a href="../../../about/" class="md-tabs__link">
           
   
   
@@ -483,9 +505,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="青少年CTF文库" class="md-nav__button md-logo" aria-label="青少年CTF文库" data-md-component="logo">
+    <a href="../../.." title="青少年CTF文库" class="md-nav__button md-logo" aria-label="青少年CTF文库" data-md-component="logo">
       
-  <img src="../../../../../assets/logo.png" alt="logo">
+  <img src="../../../assets/logo.png" alt="logo">
 
     </a>
     青少年CTF文库
@@ -512,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -539,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../home/" class="md-nav__link">
+      <a href="../../../home/" class="md-nav__link">
         
   
   
@@ -624,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../basic/intro/" class="md-nav__link">
+      <a href="../../../basic/intro/" class="md-nav__link">
         
   
   
@@ -652,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../basic/history/" class="md-nav__link">
+      <a href="../../../basic/history/" class="md-nav__link">
         
   
   
@@ -680,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../basic/practice/" class="md-nav__link">
+      <a href="../../../basic/practice/" class="md-nav__link">
         
   
   
@@ -744,7 +766,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../Code/" class="md-nav__link ">
+            <a href="../../../Code/" class="md-nav__link ">
               
   
   
@@ -846,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Assembly/instruction_set/" class="md-nav__link">
+      <a href="../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -874,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Assembly/register/" class="md-nav__link">
+      <a href="../../../Code/Assembly/register/" class="md-nav__link">
         
   
   
@@ -902,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Assembly/stack_operation/" class="md-nav__link">
+      <a href="../../../Code/Assembly/stack_operation/" class="md-nav__link">
         
   
   
@@ -938,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/CPP/" class="md-nav__link">
+      <a href="../../../Code/CPP/" class="md-nav__link">
         
   
   
@@ -1068,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Intro/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Intro/" class="md-nav__link">
         
   
   
@@ -1096,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Basic_Syntax/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Basic_Syntax/" class="md-nav__link">
         
   
   
@@ -1124,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Data_Type/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Data_Type/" class="md-nav__link">
         
   
   
@@ -1152,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Type_Conversion/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Type_Conversion/" class="md-nav__link">
         
   
   
@@ -1180,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Comment/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Comment/" class="md-nav__link">
         
   
   
@@ -1208,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Basic_Operators/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Basic_Operators/" class="md-nav__link">
         
   
   
@@ -1236,7 +1258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Conditional_Statements/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Conditional_Statements/" class="md-nav__link">
         
   
   
@@ -1264,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Loop/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Loop/" class="md-nav__link">
         
   
   
@@ -1292,7 +1314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Comprehensions/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Comprehensions/" class="md-nav__link">
         
   
   
@@ -1320,7 +1342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Iterator-Generator/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Iterator-Generator/" class="md-nav__link">
         
   
   
@@ -1348,7 +1370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_With/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_With/" class="md-nav__link">
         
   
   
@@ -1376,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Functions/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Functions/" class="md-nav__link">
         
   
   
@@ -1404,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_lambda/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_lambda/" class="md-nav__link">
         
   
   
@@ -1432,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Decorators/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Decorators/" class="md-nav__link">
         
   
   
@@ -1460,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Data_Structure/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Data_Structure/" class="md-nav__link">
         
   
   
@@ -1488,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_module/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_module/" class="md-nav__link">
         
   
   
@@ -1516,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Internal_Variable/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Internal_Variable/" class="md-nav__link">
         
   
   
@@ -1544,7 +1566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_File/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_File/" class="md-nav__link">
         
   
   
@@ -1572,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_OS/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_OS/" class="md-nav__link">
         
   
   
@@ -1600,7 +1622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Errors_Execptions/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Errors_Execptions/" class="md-nav__link">
         
   
   
@@ -1628,7 +1650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Class/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Class/" class="md-nav__link">
         
   
   
@@ -1656,7 +1678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Namespace_Scope/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Namespace_Scope/" class="md-nav__link">
         
   
   
@@ -1684,7 +1706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Venv/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Venv/" class="md-nav__link">
         
   
   
@@ -1712,7 +1734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_stdlib/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_stdlib/" class="md-nav__link">
         
   
   
@@ -1740,7 +1762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/Python/Python_Type_Hints/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Type_Hints/" class="md-nav__link">
         
   
   
@@ -1776,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Code/PHP/" class="md-nav__link">
+      <a href="../../../Code/PHP/" class="md-nav__link">
         
   
   
@@ -1845,7 +1867,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -1947,7 +1969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../encoding/ASCII/" class="md-nav__link">
+      <a href="../../encoding/ASCII/" class="md-nav__link">
         
   
   
@@ -1975,7 +1997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../encoding/Hex/" class="md-nav__link">
+      <a href="../../encoding/Hex/" class="md-nav__link">
         
   
   
@@ -2063,7 +2085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../encoding/Base/Base64/" class="md-nav__link">
+      <a href="../../encoding/Base/Base64/" class="md-nav__link">
         
   
   
@@ -2091,7 +2113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../encoding/Base/Base32/" class="md-nav__link">
+      <a href="../../encoding/Base/Base32/" class="md-nav__link">
         
   
   
@@ -2119,7 +2141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../encoding/Base/Base36/" class="md-nav__link">
+      <a href="../../encoding/Base/Base36/" class="md-nav__link">
         
   
   
@@ -2147,7 +2169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../encoding/Base/Base58/" class="md-nav__link">
+      <a href="../../encoding/Base/Base58/" class="md-nav__link">
         
   
   
@@ -2309,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../File_Structure/File_Structure/PNG_Structure/" class="md-nav__link">
+      <a href="../../File_Structure/File_Structure/PNG_Structure/" class="md-nav__link">
         
   
   
@@ -2337,7 +2359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../File_Structure/File_Structure/JPG_Structure/" class="md-nav__link">
+      <a href="../../File_Structure/File_Structure/JPG_Structure/" class="md-nav__link">
         
   
   
@@ -2365,7 +2387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../File_Structure/File_Structure/ZIP_Structure/" class="md-nav__link">
+      <a href="../../File_Structure/File_Structure/ZIP_Structure/" class="md-nav__link">
         
   
   
@@ -2393,7 +2415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../File_Structure/File_Structure/GIF_Structure/" class="md-nav__link">
+      <a href="../../File_Structure/File_Structure/GIF_Structure/" class="md-nav__link">
         
   
   
@@ -2421,7 +2443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../File_Structure/File_Structure/WAV_Structure/" class="md-nav__link">
+      <a href="../../File_Structure/File_Structure/WAV_Structure/" class="md-nav__link">
         
   
   
@@ -2449,7 +2471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../File_Structure/File_Structure/MP3_Structure/" class="md-nav__link">
+      <a href="../../File_Structure/File_Structure/MP3_Structure/" class="md-nav__link">
         
   
   
@@ -2551,7 +2573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../File_Repair/PNG_Repair/" class="md-nav__link">
+      <a href="../../File_Repair/PNG_Repair/" class="md-nav__link">
         
   
   
@@ -2579,7 +2601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../File_Repair/JPG_Repair/" class="md-nav__link">
+      <a href="../../File_Repair/JPG_Repair/" class="md-nav__link">
         
   
   
@@ -2607,7 +2629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../File_Repair/ZIP_Repair/" class="md-nav__link">
+      <a href="../../File_Repair/ZIP_Repair/" class="md-nav__link">
         
   
   
@@ -2700,152 +2722,12 @@
   
   
   
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_1" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5_5_1" id="__nav_5_5_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PNG文件
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_5_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    PNG文件
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../WH/WH_Steganography/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    宽高修改
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_1_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5_5_1_2" id="__nav_5_5_1_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    像素隐写
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_5_1_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_5_1_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    像素隐写
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -2855,7 +2737,7 @@
   <span class="md-ellipsis">
     
   
-    LSB隐写
+    PNG
   
 
     
@@ -2873,7 +2755,7 @@
   <span class="md-ellipsis">
     
   
-    LSB隐写
+    PNG
   
 
     
@@ -2888,6 +2770,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2964,10 +2848,99 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#在线工具" class="md-nav__link">
+  <a href="#cloacked-pixel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        在线工具
+        cloacked-pixel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#盲水印" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        盲水印
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="盲水印">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#原理_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        原理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#水印是怎么加密打乱的" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        水印是怎么“加密/打乱”的
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#为什么要镜像到整张图" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么要镜像到整张图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#在频域里做加法嵌入fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在频域里做加法嵌入（FFT）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#提取decode为什么必须要原图" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        提取（decode）为什么必须要原图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idat块隐写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IDAT块隐写
       
     </span>
   </a>
@@ -2977,22 +2950,6 @@
     </ul>
   
 </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -3044,7 +3001,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../Crypto/" class="md-nav__link ">
+            <a href="../../../Crypto/" class="md-nav__link ">
               
   
   
@@ -3089,8 +3046,6 @@
   
     
     
-      
-        
       
         
       
@@ -3202,7 +3157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Crypto/Classical_Cryptography/Single_Table_Replacement/Caesar/" class="md-nav__link">
+      <a href="../../../Crypto/Classical_Cryptography/Single_Table_Replacement/Caesar/" class="md-nav__link">
         
   
   
@@ -3230,7 +3185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Crypto/Classical_Cryptography/Single_Table_Replacement/Atbash/" class="md-nav__link">
+      <a href="../../../Crypto/Classical_Cryptography/Single_Table_Replacement/Atbash/" class="md-nav__link">
         
   
   
@@ -3324,7 +3279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Crypto/Classical_Cryptography/Multi_table_replacement/Playfair/" class="md-nav__link">
+      <a href="../../../Crypto/Classical_Cryptography/Multi_table_replacement/Playfair/" class="md-nav__link">
         
   
   
@@ -3352,7 +3307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Crypto/Classical_Cryptography/Multi_table_replacement/HILL/" class="md-nav__link">
+      <a href="../../../Crypto/Classical_Cryptography/Multi_table_replacement/HILL/" class="md-nav__link">
         
   
   
@@ -3380,7 +3335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Crypto/Classical_Cryptography/Multi_table_replacement/Vigen/" class="md-nav__link">
+      <a href="../../../Crypto/Classical_Cryptography/Multi_table_replacement/Vigen/" class="md-nav__link">
         
   
   
@@ -3388,96 +3343,6 @@
     
   
     维吉尼亚密码
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_2_3" id="__nav_6_2_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    其他密码
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_2_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    其他密码
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../Crypto/Classical_Cryptography/Other_crypto/Bacon/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    培根密码
   
 
     
@@ -3542,7 +3407,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../Web/" class="md-nav__link ">
+            <a href="../../../Web/" class="md-nav__link ">
               
   
   
@@ -3609,7 +3474,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../Reverse/" class="md-nav__link ">
+            <a href="../../../Reverse/" class="md-nav__link ">
               
   
   
@@ -3676,7 +3541,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../Pwn/" class="md-nav__link ">
+            <a href="../../../Pwn/" class="md-nav__link ">
               
   
   
@@ -3730,6 +3595,8 @@
       
         
       
+        
+      
     
     
     
@@ -3745,14 +3612,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../Tools/" class="md-nav__link ">
+            <a href="../../../AI/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    工具
+    AI
   
 
     
@@ -3774,6 +3641,136 @@
             <span class="md-nav__icon md-icon"></span>
             
   
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/Environmental/Environmental_preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境准备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/Basic/Basic_knowledge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Tools/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
     工具
   
 
@@ -3804,10 +3801,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
         
           
-          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
             
   
   
@@ -3825,8 +3822,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3843,7 +3840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Tools/encoding/CyberChef/" class="md-nav__link">
+      <a href="../../../Tools/encoding/CyberChef/" class="md-nav__link">
         
   
   
@@ -3901,10 +3898,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   
@@ -3922,8 +3919,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3940,7 +3937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   
@@ -3984,6 +3981,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -4060,10 +4059,99 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#在线工具" class="md-nav__link">
+  <a href="#cloacked-pixel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        在线工具
+        cloacked-pixel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#盲水印" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        盲水印
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="盲水印">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#原理_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        原理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#水印是怎么加密打乱的" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        水印是怎么“加密/打乱”的
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#为什么要镜像到整张图" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么要镜像到整张图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#在频域里做加法嵌入fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在频域里做加法嵌入（FFT）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#提取decode为什么必须要原图" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        提取（decode）为什么必须要原图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idat块隐写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IDAT块隐写
       
     </span>
   </a>
@@ -4095,7 +4183,7 @@
   
   
     <li class="md-path__item">
-      <a href="../../../../.." class="md-path__link">
+      <a href="../../.." class="md-path__link">
         
   <span class="md-ellipsis">
     首页
@@ -4113,54 +4201,10 @@
     
     
       <li class="md-path__item">
-        <a href="../../../../" class="md-path__link">
+        <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
     Misc
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-    
-    
-      
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="../../WH/WH_Steganography/" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    隐写术
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-    
-  
-
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="../../WH/WH_Steganography/" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    PNG文件
   </span>
 
         </a>
@@ -4178,7 +4222,7 @@
         <a href="./" class="md-path__link">
           
   <span class="md-ellipsis">
-    像素隐写
+    隐写术
   </span>
 
         </a>
@@ -4197,7 +4241,7 @@
 
 
   
-    <a href="https://github.com/qsnctf/qsnctf.github.io/edit/docs/docs/Misc/Steganography/PNG_FILE/Pixel/LSB_Steganography.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/qsnctf/qsnctf.github.io/edit/docs/docs/Misc/Steganography/PNG_Steganography.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -4206,15 +4250,15 @@
     
       
     
-    <a href="https://github.com/qsnctf/qsnctf.github.io/raw/docs/docs/Misc/Steganography/PNG_FILE/Pixel/LSB_Steganography.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/qsnctf/qsnctf.github.io/raw/docs/docs/Misc/Steganography/PNG_Steganography.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-  <h1>LSB隐写</h1>
-
+<h1 id="png-隐写术">PNG 隐写术<a class="headerlink" href="#png-隐写术" title="Permanent link">&para;</a></h1>
+<p>对于PNG来说，隐写术有很多很多，比如我们前面所讲的一个高宽问题，针对于这种我们只需要修改高宽就可以解决，但是后面也有很多更复杂的隐写术。</p>
 <h2 id="lsb隐写">LSB隐写<a class="headerlink" href="#lsb隐写" title="Permanent link">&para;</a></h2>
 <p><strong>LSB(Least Significant Bit) 隐写</strong> 是一种常见的信息隐藏技术，主要用于在图像中嵌入秘密信息。它通过修改图像像素的最低有效位来实现信息的隐藏，而这种修改对人眼几乎不可察觉。</p>
 <h3 id="原理">原理<a class="headerlink" href="#原理" title="Permanent link">&para;</a></h3>
@@ -4278,9 +4322,95 @@
 <p>当隐写的内容为图片时如下所示：</p>
 <p><img alt="" src="../attachments/image2.png" /></p>
 <p>由PNG文件头可以看出隐写内容为PNG文件，按save Bin键保存为PNG文件。</p>
-<h2 id="在线工具">在线工具<a class="headerlink" href="#在线工具" title="Permanent link">&para;</a></h2>
-<p><a class="md-button md-button--primary" href="https://tools.qsnctf.com/#//misc/image_chunk_info" rel="noopener" target="_blank">图片LSB/块信息/CRC校验工具</a></p>
-<p><a class="md-button md-button--primary" href="https://tools.qsnctf.com/#//misc/zsteg" rel="noopener" target="_blank">zsteg隐写分析工具</a></p>
+<h2 id="cloacked-pixel">cloacked-pixel<a class="headerlink" href="#cloacked-pixel" title="Permanent link">&para;</a></h2>
+<p>这个本质上也是一个LSB的隐写，只不过加上了密码，工具链接如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://github.com/livz/cloacked-pixel.git
+</code></pre></div>
+<p>区别如下：</p>
+<ol>
+<li>AES 加密层</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">crypt</span><span class="w"> </span><span class="kn">import</span> <span class="n">AESCipher</span>  <span class="c1"># 导入AES加密模块</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># 嵌入时</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">cipher</span> <span class="o">=</span> <span class="n">AESCipher</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">data_enc</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># 先加密再嵌入</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># 提取时</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">cipher</span> <span class="o">=</span> <span class="n">AESCipher</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">data_dec</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">data_out</span><span class="p">)</span>  <span class="c1"># 先提取后解密</span>
+</code></pre></div>
+2. 文件长度头机制</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># 分解时添加4字节文件长度</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">fSize</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">bytes</span> <span class="o">=</span> <span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="n">fSize</span><span class="p">)]</span>  <span class="c1"># 4字节int</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">bytes</span> <span class="o">+=</span> <span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>  <span class="c1"># 实际数据</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># 组装时读取长度</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">payload_size</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">[:</span><span class="mi">4</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 读取头4字节</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">return</span> <span class="nb">bytes</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span> <span class="n">payload_size</span> <span class="o">+</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># 按长度截取</span>
+</code></pre></div>
+<p>普通的LSB通常只提取bit，而这个工具处理提取所有的bit，然后组装字节数据，AES解密，最后写入文件。</p>
+<h2 id="盲水印">盲水印<a class="headerlink" href="#盲水印" title="Permanent link">&para;</a></h2>
+<p>工具链接：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>https://github.com/chishaxie/BlindWaterMark
+</code></pre></div>
+<h3 id="原理_1">原理<a class="headerlink" href="#原理_1" title="Permanent link">&para;</a></h3>
+<p><code>bwm.py/bwnforpy3.py</code>实现的是一种**频域加性水印 + 随机置乱加密**的方案： 把水印先用伪随机方式“打散”，再把它作为扰动加到原图的频谱（FFT）里；提取时用“带水印图——原图”的频域差把扰动还原出来，再用同一把“随机钥匙”（seed）把水印拼回去。他的decode需要原图，所以严格说不是“盲提取” 的<code>blind watermark</code>，而是“不可见水印 + 需要原图的提取”。</p>
+<h4 id="水印是怎么加密打乱的">水印是怎么“加密/打乱”的<a class="headerlink" href="#水印是怎么加密打乱的" title="Permanent link">&para;</a></h4>
+<p>在<code>encode</code>里，代码先做一个半高的画布<code>hwm</code>，然后把水印图wm复制到这个画布的左上角。</p>
+<ul>
+<li>
+<p><code>hwm = zeros((h*0.5, w, c))</code></p>
+</li>
+<li>
+<p><code>hwm2 = copy(hwm)</code></p>
+</li>
+<li>
+<p><code>hwm2[i][j] = wm[i][j]</code>（把水印贴进左上角）</p>
+</li>
+</ul>
+<p>接着用随机种子 seed 生成两个置乱序列（行序列 m、列序列 n），并 shuffle：</p>
+<ul>
+<li>
+<p><code>random.seed(seed)</code></p>
+</li>
+<li>
+<p><code>m = [0..hwm_h-1]</code> 打乱</p>
+</li>
+<li>
+<p><code>n = [0..w-1]</code> 打乱</p>
+</li>
+</ul>
+<p>最后用这两个置乱序列做二维置乱，把“左上角那块水印”扩散到整个半高区域：</p>
+<ul>
+<li><code>hwm[i][j] = hwm2[m[i]][n[j]]</code></li>
+</ul>
+<p>直观理解：水印先被“贴”到角落，再被“按 seed 指定的乱序”重新排布，变成一张看起来像噪声的“加密水印”。</p>
+<h4 id="为什么要镜像到整张图">为什么要镜像到整张图<a class="headerlink" href="#为什么要镜像到整张图" title="Permanent link">&para;</a></h4>
+<p>置乱后的<code>hwm</code>只有半张高，代码会把它写入一个与原图同尺寸的<code>rwm</code>，并且做中心对称镜像复制：</p>
+<ul>
+<li><code>rwn[i][j] = hwm[i][j]</code></li>
+<li><code>rwn[H-i-1][W-j-1] = hwm[i][j]</code></li>
+</ul>
+<p>这样<code>rwm</code>覆盖整张图，而且带有对称结构（这样也有助于后面FFT逆变化后取实部时更“稳定”）。</p>
+<h4 id="在频域里做加法嵌入fft">在频域里做加法嵌入（FFT）<a class="headerlink" href="#在频域里做加法嵌入fft" title="Permanent link">&para;</a></h4>
+<p>核心嵌入就是两行：</p>
+<ul>
+<li><code>f1 = fft2(img)</code>（原图频谱）</li>
+<li><code>f2 = f1 + alpha * rwm</code>（把加密水印当作频谱扰动叠加进去）</li>
+<li><code>img_wm = real(iff2(f2))</code>（逆变换回图像，取实部保存）</li>
+</ul>
+<p>这里的<code>alpha</code>的水印强度系数：越大越容易提取，但越可能引入肉眼可见失真；越小月隐蔽，但更脆弱。</p>
+<h4 id="提取decode为什么必须要原图">提取（decode）为什么必须要原图<a class="headerlink" href="#提取decode为什么必须要原图" title="Permanent link">&para;</a></h4>
+<p>decode 做的是频域“差分还原”：</p>
+<ol>
+<li>读入原图<code>img</code>和带水印图<code>img_wm</code></li>
+<li><code>f1 = fft(img)</code>,<code>f2 = fft2(img_wm)</code></li>
+<li><code>rwm = real((f2 - f1) / alpha)</code> ——直接把当初加进去的扰动“减出来”</li>
+</ol>
+<p>然后再用相同的<code>seed</code>生成同样的<code>m,n</code>，把置乱逆回去（把<code>rwm</code>的上半部分按<code>m,n</code>，放回正确的位置），最后再用对称性把另一半补齐，写出水印图。</p>
+<h2 id="idat块隐写">IDAT块隐写<a class="headerlink" href="#idat块隐写" title="Permanent link">&para;</a></h2>
 
 
 
@@ -4385,12 +4515,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../../../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
