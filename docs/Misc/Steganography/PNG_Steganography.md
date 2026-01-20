@@ -91,3 +91,112 @@ http://www.caesum.com/handbook/Stegsolve.jar
 
 由PNG文件头可以看出隐写内容为PNG文件，按save Bin键保存为PNG文件。
 
+## cloacked-pixel
+
+这个本质上也是一个LSB的隐写，只不过加上了密码，工具链接如下：
+
+```text
+https://github.com/livz/cloacked-pixel.git
+```
+
+区别如下：
+
+1. AES 加密层
+
+```python
+from crypt import AESCipher  # 导入AES加密模块
+
+# 嵌入时
+cipher = AESCipher(password)
+data_enc = cipher.encrypt(data)  # 先加密再嵌入
+
+# 提取时
+cipher = AESCipher(password)
+data_dec = cipher.decrypt(data_out)  # 先提取后解密
+```
+2. 文件长度头机制
+
+```py
+# 分解时添加4字节文件长度
+fSize = len(data)
+bytes = [ord(b) for b in struct.pack("i", fSize)]  # 4字节int
+bytes += [ord(b) for b in data]  # 实际数据
+
+# 组装时读取长度
+payload_size = struct.unpack("i", bytes[:4])[0]  # 读取头4字节
+return bytes[4: payload_size + 4]  # 按长度截取
+```
+
+普通的LSB通常只提取bit，而这个工具处理提取所有的bit，然后组装字节数据，AES解密，最后写入文件。
+
+## 盲水印
+
+工具链接：
+
+```text
+https://github.com/chishaxie/BlindWaterMark
+```
+
+### 原理
+
+`bwm.py/bwnforpy3.py`实现的是一种**频域加性水印 + 随机置乱加密**的方案： 把水印先用伪随机方式“打散”，再把它作为扰动加到原图的频谱（FFT）里；提取时用“带水印图——原图”的频域差把扰动还原出来，再用同一把“随机钥匙”（seed）把水印拼回去。他的decode需要原图，所以严格说不是“盲提取” 的`blind watermark`，而是“不可见水印 + 需要原图的提取”。
+
+#### 水印是怎么“加密/打乱”的
+在`encode`里，代码先做一个半高的画布`hwm`，然后把水印图wm复制到这个画布的左上角。
+
+
++ `hwm = zeros((h*0.5, w, c))`
+
++ `hwm2 = copy(hwm)`
+
++ `hwm2[i][j] = wm[i][j]`（把水印贴进左上角）
+
+
+接着用随机种子 seed 生成两个置乱序列（行序列 m、列序列 n），并 shuffle：
+
++ `random.seed(seed)`
+
++ `m = [0..hwm_h-1]` 打乱
+
++ `n = [0..w-1]` 打乱
+
+
+最后用这两个置乱序列做二维置乱，把“左上角那块水印”扩散到整个半高区域：
+
+
++ `hwm[i][j] = hwm2[m[i]][n[j]]`
+
+
+直观理解：水印先被“贴”到角落，再被“按 seed 指定的乱序”重新排布，变成一张看起来像噪声的“加密水印”。
+
+#### 为什么要镜像到整张图
+
+置乱后的`hwm`只有半张高，代码会把它写入一个与原图同尺寸的`rwm`，并且做中心对称镜像复制：
+
++ `rwn[i][j] = hwm[i][j]`
++ `rwn[H-i-1][W-j-1] = hwm[i][j]`
+
+这样`rwm`覆盖整张图，而且带有对称结构（这样也有助于后面FFT逆变化后取实部时更“稳定”）。
+
+#### 在频域里做加法嵌入（FFT）
+
+核心嵌入就是两行：
+
++ `f1 = fft2(img)`（原图频谱）
++ `f2 = f1 + alpha * rwm`（把加密水印当作频谱扰动叠加进去）
++ `img_wm = real(iff2(f2))`（逆变换回图像，取实部保存）
+
+这里的`alpha`的水印强度系数：越大越容易提取，但越可能引入肉眼可见失真；越小月隐蔽，但更脆弱。
+
+#### 提取（decode）为什么必须要原图
+
+decode 做的是频域“差分还原”：
+
+1. 读入原图`img`和带水印图`img_wm`
+2. `f1 = fft(img)`,`f2 = fft2(img_wm)`
+3. `rwm = real((f2 - f1) / alpha)` ——直接把当初加进去的扰动“减出来”
+
+然后再用相同的`seed`生成同样的`m,n`，把置乱逆回去（把`rwm`的上半部分按`m,n`，放回正确的位置），最后再用对称性把另一半补齐，写出水印图。
+
+## IDAT块隐写
+
