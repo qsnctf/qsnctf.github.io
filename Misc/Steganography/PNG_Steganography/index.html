@@ -16,7 +16,7 @@
         <link rel="prev" href="../../File_Repair/ZIP_Repair/">
       
       
-        <link rel="next" href="../../../Crypto/">
+        <link rel="next" href="../JPG_Steganography/">
       
       
         
@@ -2671,6 +2671,8 @@
       
         
       
+        
+      
     
     
     
@@ -2947,10 +2949,60 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#自定义像素隐写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自定义像素隐写
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#练习题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        练习题
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JPG_Steganography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JPG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -4228,6 +4280,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#自定义像素隐写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自定义像素隐写
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#练习题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        练习题
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4481,6 +4555,37 @@
 </ol>
 <p>然后再用相同的<code>seed</code>生成同样的<code>m,n</code>，把置乱逆回去（把<code>rwm</code>的上半部分按<code>m,n</code>，放回正确的位置），最后再用对称性把另一半补齐，写出水印图。</p>
 <h2 id="idat块隐写">IDAT块隐写<a class="headerlink" href="#idat块隐写" title="Permanent link">&para;</a></h2>
+<p>在正常的图片里，所有的数据都是写入IDAT块中的，且是按顺序依次进行填充的，也就是说，第一个IDAT块填满以后才会开启第二块，并且每个IDAT块都有独属于它自己的CRC。</p>
+<p>那么这就会出现一个问题，可以通过伪造IDAT的CRC值进行编码，这是一个考点，也是一个出题点，这种会造成图片传输损坏，但是也会隐藏传输数据。</p>
+<p>另外也会出现一种情况，一个完整图片，所有的IDAT块都是正常的，那么有没有可能去添加一个不属于这张图片的IDAT块呢？</p>
+<p>答案是有可能的，我们可以构造一个IDAT块，里面隐藏要传输的信息，然后伪造一下IDAT的文件特征，插到最后一个IDAT块之后，IEND块之前，即可。</p>
+<p>对于这种的隐写，我们怎么去提取呢？</p>
+<p>第一可以使用binwalk去分解，binwalk可以分解不属于这个文件的信息，foremost不行。</p>
+<p>第二我们可以在010editor中手动去分离，选择我们要去提取的IDAT块，然后选择保存即可。</p>
+<h2 id="自定义像素隐写">自定义像素隐写<a class="headerlink" href="#自定义像素隐写" title="Permanent link">&para;</a></h2>
+<p>在比赛中我们都可以看到基本上都是一个题目携带一个脚本，对于PNG来说，自定义像素隐写也是可以的，出题人根据自己的思路，写脚本进行加密，我们需要对这个图片，写脚本进行解码即可。</p>
+<h2 id="练习题">练习题<a class="headerlink" href="#练习题" title="Permanent link">&para;</a></h2>
+<p>题目地址：<a class="md-button md-button--primary" href="https://www.qsnctf.com/#/main/driving-range?page=1&amp;keyword=NO.0715" rel="noopener" target="_blank">NO.0715 - LSB</a></p>
+<p><img alt="" src="../attachments/ScreenShot_2026-01-22_113759_896.png" /></p>
+<ul>
+<li>题目名称：LSB</li>
+<li>题目难度：1</li>
+<li>题目ID：NO.0715</li>
+</ul>
+<p>题目地址：<a class="md-button md-button--primary" href="https://www.qsnctf.com/#/main/driving-range?page=1&amp;keyword=NO.1075" rel="noopener" target="_blank">NO.1075 - LSB？</a></p>
+<p><img alt="" src="../attachments/ScreenShot_2026-01-22_145327_939.png" /></p>
+<ul>
+<li>题目名称：LSB？</li>
+<li>题目难度：1</li>
+<li>题目ID：NO.1075</li>
+</ul>
+<p>题目地址：<a class="md-button md-button--primary" href="https://www.qsnctf.com/#/main/driving-range?page=1&amp;keyword=NO.1076" rel="noopener" target="_blank">NO.1076 - BWM</a></p>
+<p><img alt="" src="../attachments/ScreenShot_2026-01-22_153344_413.png" /></p>
+<ul>
+<li>题目名称：BWM</li>
+<li>题目难度：1</li>
+<li>题目ID：NO.1076</li>
+</ul>
 
 
 
