@@ -83,11 +83,11 @@ Windows系统下，客户端可用有2个版本。
 
 ![](assets/image-20260122133924657.png)
 
-![](assets/image-20260122134026544.png)
+![](assets/image-20260122134639621.png)
 
 **下载文件和删除文件请右键文件菜单**
 
-## 基于.NET的Windows客户端（AnyCPU）
+#### 基于.NET的Windows客户端（AnyCPU）
 
 为了兼容部分用户的ARM架构系统，提供了AnyCPU打包构建的Windows客户端。
 
@@ -104,3 +104,69 @@ Windows系统下，客户端可用有2个版本。
 ![](assets/image-20260122134406598.png)
 
 ![](assets/image-20260122134417227.png)
+
+#### 基于Python的可视化客户端（Python_GUI）
+
+为了兼容部分用户的MacOS、Linux系统，提供了基于Python的客户端。
+
+**安装包名称：**
+
+```
+青少年CTF靶场助手-客户端 Python_GUI.zip
+```
+
+**样式预览：**
+
+![](assets/image-20260122134900351.png)
+
+确保系统包含`Python 3.8`版本以上环境，随后执行：
+
+```bash
+pip install -r requirements.txt
+```
+
+安装完成依赖库后，执行：
+
+```bash
+python mian.py
+```
+
+即可正常运行
+
+![](assets/image-20260122135045080.png)
+
+#### 无图形化界面的支持
+
+对于无图形化界面，系统提供`青少年CTF靶场助手-CLI.py`脚本允许使用。
+
+需要安装`pyperclip`和`requests`这两个基础依赖
+
+![](assets/image-20260122135624635.png)
+
+#### 低版本Windows靶场环境
+
+对于低版本Windows环境，暂不提供图形化界面版本，仅提供命令行版本。
+
+![](assets/image-20260122135848073.png)
+
+![](assets/image-20260122135900245.png)
+
+一般提供X64和X86两种架构程序，此版本多为低版本系统内内置环境，部分系统环境可能内置一个命令行版本和图形化界面，图形化界面在靶场内一般内置为Python版本。
+
+Linux（无图形化）界面一般提供Python脚本，图形化界面一般提供Python图形化。
+
+#### 下载
+
+链接: https://pan.baidu.com/s/1Urb_oeiiAM-TCRLgGyVIwA?pwd=m66s 提取码: m66s 
+
+
+#### 建议
+
+一般建议主系统运行环境为Python客户端或.NET客户端
+
+不建议安装多个版本在系统中
+
+![](assets/image-20260122140233140.png)
+
+在客户端（自己电脑上）一般使用账号密码登陆，在靶场中一般使用随机码和安全码进行登陆。否则会出现冲突导致已登录的账号退出。
+
