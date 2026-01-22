@@ -169,10 +169,6 @@
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Crypto/Graphic_Cryptography/</loc>
-         <lastmod>2026-01-22</lastmod>
-    </url>
-    <url>
          <loc>https://docs.qsnctf.com/Misc/</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
@@ -210,6 +206,10 @@
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/File_Structure/File_Structure/ZIP_Structure/</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Misc/Steganography/JPG_Steganography/</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
