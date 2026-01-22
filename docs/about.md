@@ -163,6 +163,8 @@ Linux（无图形化）界面一般提供Python脚本，图形化界面一般提
 
 链接: https://pan.baidu.com/s/1Urb_oeiiAM-TCRLgGyVIwA?pwd=m66s 提取码: m66s 
 
+链接: https://pan.quark.cn/s/8dc9592d7401
+
 
 #### 建议
 
