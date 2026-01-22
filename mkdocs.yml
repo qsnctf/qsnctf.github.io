@@ -211,6 +211,8 @@ nav:
         - Playfair密码: Crypto/Classical_Cryptography/Multi_table_replacement/Playfair.md
         - HILL密码: Crypto/Classical_Cryptography/Multi_table_replacement/HILL.md
         - 维吉尼亚密码: Crypto/Classical_Cryptography/Multi_table_replacement/Vigen.md
+    - 图形密码: 
+      - 介绍: Crypto/Graphic_Cryptography/index.md
   - Web: 
     - 介绍: Web/index.md
   - Reverse: 
