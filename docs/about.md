@@ -29,3 +29,150 @@
 | <a href="https://github.com/qsnctf"><img src="https://github.com/qsnctf.png?size=120" width="72" height="72"><br><sub>@qsnctf</sub></a> | <a href="https://github.com/Moxin1044"><img src="https://github.com/Moxin1044.png?size=120" width="72" height="72"><br><sub>@Moxin1044</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/duckpigdog.png?size=120" width="72" height="72"><br><sub>@duckpigdog</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/Abyssun.png?size=120" width="72" height="72"><br/><sub>@Abyssun</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/xinyi72.png?size=120" width="72" height="72"><br/><sub>@xinyi72</sub></a> |
 | <a href="https://github.com/duckpigdog"><img src="https://github.com/tangjunyi23.png?size=120" width="72" height="72"><br/><sub>@tangjunyi23</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/xhh1h.png?size=120" width="72" height="72"><br/><sub>@xhh1h</sub></a> |                                                              |                                                              |                                                              |
 
+## 关于靶场
+
+!!! warning "关于靶场的文件传输"
+
+    靶场文件传输自2026年1月20日起，因用户反馈问题较多，如SMB连接后文件列表不更新、部分软件SFTP连接失败、没有剪切板共享等问题，故不再支持原先的SFTP与SMB传输，目前使用新的方式进行文件传输。
+
+![](assets/image-20260122132750742.png)
+
+### 客户端使用
+
+!!! note "客户端"
+
+    客户端（又称用户端）指的是用户日常使用的设备。
+
+为满足不同用户的需求，我们的客户端提供了广泛的系统兼容性，支持 Windows 7 及以上、Linux 以及 MacOS 等主流操作系统。
+
+### Windows系统下客户端
+
+Windows系统下，客户端可用有2个版本。
+
+#### 基于.NET的Windows客户端
+
+**安装包名称：**
+
+```
+青少年CTF靶场助手-客户端.exe
+```
+
+**样式预览：**
+
+![](assets/image-20260122133414373.png)
+
+![](assets/image-20260122133616260.png)
+
+![](assets/image-20260122133658487.png)
+
+本客户端采用 .NET 框架开发，是一个功能完备的解决方案。它集成了个人签到、动态码（随机码/安全码）展示、跨设备剪切板共享等核心工具，并提供了完整的文件生命周期管理功能，包括上传、下载、存储空间概览。
+
+**下载文件和删除文件请右键文件菜单**
+
+#### 基于Python的Windows客户端
+
+**安装包名称：**
+
+```
+青少年CTF靶场助手-主机端（新版本系统兼容 非靶场内部）.exe
+```
+
+**样式预览：**
+
+![](assets/image-20260122133918494.png)
+
+![](assets/image-20260122133924657.png)
+
+![](assets/image-20260122134639621.png)
+
+**下载文件和删除文件请右键文件菜单**
+
+#### 基于.NET的Windows客户端（AnyCPU）
+
+为了兼容部分用户的ARM架构系统，提供了AnyCPU打包构建的Windows客户端。
+
+**安装包名称：**
+
+```
+青少年CTF靶场助手-客户端 AnyCPU.zip
+```
+
+**样式预览：**
+
+解压后运行“QSNCTF_Range_Assistant_Client.exe”即可。
+
+![](assets/image-20260122134406598.png)
+
+![](assets/image-20260122134417227.png)
+
+### 兼容Mac、Linux的客户端
+
+#### 基于Python的可视化客户端（Python_GUI）
+
+为了兼容部分用户的MacOS、Linux系统，提供了基于Python的客户端。
+
+**安装包名称：**
+
+```
+青少年CTF靶场助手-客户端 Python_GUI.zip
+```
+
+**样式预览：**
+
+![](assets/image-20260122134900351.png)
+
+确保系统包含`Python 3.8`版本以上环境，随后执行：
+
+```bash
+pip install -r requirements.txt
+```
+
+安装完成依赖库后，执行：
+
+```bash
+python mian.py
+```
+
+即可正常运行
+
+![](assets/image-20260122135045080.png)
+
+### 对无图形化及旧版本系统的支持
+
+#### 无图形化界面的支持
+
+对于无图形化界面，系统提供`青少年CTF靶场助手-CLI.py`脚本允许使用。
+
+需要安装`pyperclip`和`requests`这两个基础依赖
+
+![](assets/image-20260122135624635.png)
+
+#### 低版本Windows靶场环境
+
+对于低版本Windows环境，暂不提供图形化界面版本，仅提供命令行版本。
+
+![](assets/image-20260122135848073.png)
+
+![](assets/image-20260122135900245.png)
+
+一般提供X64和X86两种架构程序，此版本多为低版本系统内内置环境，部分系统环境可能内置一个命令行版本和图形化界面，图形化界面在靶场内一般内置为Python版本。
+
+Linux（无图形化）界面一般提供Python脚本，图形化界面一般提供Python图形化。
+
+#### 下载
+
+链接: https://pan.baidu.com/s/1Urb_oeiiAM-TCRLgGyVIwA?pwd=m66s 提取码: m66s 
+
+链接: https://pan.quark.cn/s/8dc9592d7401
+
+
+#### 建议
+
+一般建议主系统运行环境为Python客户端或.NET客户端
+
+不建议安装多个版本在系统中
+
+![](assets/image-20260122140233140.png)
+
+在客户端（自己电脑上）一般使用账号密码登录，在靶场中一般使用随机码和安全码进行登录。否则会出现冲突导致已登录的账号退出。
+
