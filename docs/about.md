@@ -105,6 +105,8 @@ Windows系统下，客户端可用有2个版本。
 
 ![](assets/image-20260122134417227.png)
 
+### 兼容Mac、Linux的客户端
+
 #### 基于Python的可视化客户端（Python_GUI）
 
 为了兼容部分用户的MacOS、Linux系统，提供了基于Python的客户端。
@@ -134,6 +136,8 @@ python mian.py
 即可正常运行
 
 ![](assets/image-20260122135045080.png)
+
+### 对无图形化及旧版本系统的支持
 
 #### 无图形化界面的支持
 
