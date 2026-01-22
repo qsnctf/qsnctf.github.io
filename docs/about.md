@@ -87,3 +87,20 @@ Windows系统下，客户端可用有2个版本。
 
 **下载文件和删除文件请右键文件菜单**
 
+## 基于.NET的Windows客户端（AnyCPU）
+
+为了兼容部分用户的ARM架构系统，提供了AnyCPU打包构建的Windows客户端。
+
+**安装包名称：**
+
+```
+青少年CTF靶场助手-客户端 AnyCPU.zip
+```
+
+**样式预览：**
+
+解压后运行“QSNCTF_Range_Assistant_Client.exe”即可。
+
+![](assets/image-20260122134406598.png)
+
+![](assets/image-20260122134417227.png)
