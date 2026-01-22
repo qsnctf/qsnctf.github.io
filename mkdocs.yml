@@ -201,6 +201,7 @@ nav:
         - ZIP: Misc/File_Repair/ZIP_Repair.md
     - 隐写术:
         - PNG: Misc/Steganography/PNG_Steganography.md
+        - JPG: Misc/Steganography/JPG_Steganography.md
   - Crypto: 
     - 介绍: Crypto/index.md
     - 古典密码:

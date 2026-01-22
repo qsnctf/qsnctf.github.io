@@ -200,3 +200,46 @@ decode 做的是频域“差分还原”：
 
 ## IDAT块隐写
 
+在正常的图片里，所有的数据都是写入IDAT块中的，且是按顺序依次进行填充的，也就是说，第一个IDAT块填满以后才会开启第二块，并且每个IDAT块都有独属于它自己的CRC。
+
+那么这就会出现一个问题，可以通过伪造IDAT的CRC值进行编码，这是一个考点，也是一个出题点，这种会造成图片传输损坏，但是也会隐藏传输数据。
+
+另外也会出现一种情况，一个完整图片，所有的IDAT块都是正常的，那么有没有可能去添加一个不属于这张图片的IDAT块呢？
+
+答案是有可能的，我们可以构造一个IDAT块，里面隐藏要传输的信息，然后伪造一下IDAT的文件特征，插到最后一个IDAT块之后，IEND块之前，即可。
+
+对于这种的隐写，我们怎么去提取呢？
+
+第一可以使用binwalk去分解，binwalk可以分解不属于这个文件的信息，foremost不行。
+
+第二我们可以在010editor中手动去分离，选择我们要去提取的IDAT块，然后选择保存即可。
+
+## 自定义像素隐写
+
+在比赛中我们都可以看到基本上都是一个题目携带一个脚本，对于PNG来说，自定义像素隐写也是可以的，出题人根据自己的思路，写脚本进行加密，我们需要对这个图片，写脚本进行解码即可。
+
+## 练习题
+
+题目地址：[NO.0715 - LSB](https://www.qsnctf.com/#/main/driving-range?page=1&keyword=NO.0715){ .md-button .md-button--primary target="_blank" rel="noopener"}
+
+![](attachments/ScreenShot_2026-01-22_113759_896.png)
+
+- 题目名称：LSB
+- 题目难度：1
+- 题目ID：NO.0715
+
+题目地址：[NO.1075 - LSB？](https://www.qsnctf.com/#/main/driving-range?page=1&keyword=NO.1075){ .md-button .md-button--primary target="_blank" rel="noopener"}
+
+![](attachments/ScreenShot_2026-01-22_145327_939.png)
+
+- 题目名称：LSB？
+- 题目难度：1
+- 题目ID：NO.1075
+
+题目地址：[NO.1076 - BWM](https://www.qsnctf.com/#/main/driving-range?page=1&keyword=NO.1076){ .md-button .md-button--primary target="_blank" rel="noopener"}
+
+![](attachments/ScreenShot_2026-01-22_153344_413.png)
+
+- 题目名称：BWM
+- 题目难度：1
+- 题目ID：NO.1076
