@@ -29,3 +29,8 @@
 | <a href="https://github.com/qsnctf"><img src="https://github.com/qsnctf.png?size=120" width="72" height="72"><br><sub>@qsnctf</sub></a> | <a href="https://github.com/Moxin1044"><img src="https://github.com/Moxin1044.png?size=120" width="72" height="72"><br><sub>@Moxin1044</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/duckpigdog.png?size=120" width="72" height="72"><br><sub>@duckpigdog</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/Abyssun.png?size=120" width="72" height="72"><br/><sub>@Abyssun</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/xinyi72.png?size=120" width="72" height="72"><br/><sub>@xinyi72</sub></a> |
 | <a href="https://github.com/duckpigdog"><img src="https://github.com/tangjunyi23.png?size=120" width="72" height="72"><br/><sub>@tangjunyi23</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/xhh1h.png?size=120" width="72" height="72"><br/><sub>@xhh1h</sub></a> |                                                              |                                                              |                                                              |
 
+# 关于靶场
+
+!!! note "关于靶场的文件传输"
+
+    靶场文件传输自2026年1月20日起，不再支持原先的SFTP与SMB传输，目前使用新的方式进行文件传输。
