@@ -3512,34 +3512,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#实用脚本集合" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        实用脚本集合
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="实用脚本集合">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#自动化分析脚本" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        自动化分析脚本
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -5326,34 +5298,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#实用脚本集合" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        实用脚本集合
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="实用脚本集合">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#自动化分析脚本" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        自动化分析脚本
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -6266,49 +6210,6 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="c1"># 使用extract_palette脚本</span>
 <a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="n">extract_palette</span><span class="p">(</span><span class="s1">&#39;image.bmp&#39;</span><span class="p">)</span>
 </code></pre></div></p>
-<h2 id="实用脚本集合">实用脚本集合<a class="headerlink" href="#实用脚本集合" title="Permanent link">&para;</a></h2>
-<h3 id="自动化分析脚本">自动化分析脚本<a class="headerlink" href="#自动化分析脚本" title="Permanent link">&para;</a></h3>
-<p>```python
-import struct
-from PIL import Image
-import os</p>
-<p>def analyze_bmp(filepath):
-    """BMP文件全面分析"""
-    print(f"=== 分析文件: {filepath} ===\n")</p>
-<div class="highlight"><pre><span></span><code>with open(filepath, &#39;rb&#39;) as f:
-    data = f.read()
-
-# 检查文件签名
-if data[:2] != b&#39;BM&#39;:
-    print(&quot;错误: 不是有效的BMP文件!&quot;)
-    return
-
-# 解析文件头
-file_size = struct.unpack(&#39;&lt;I&#39;, data[0x02:0x06])[0]
-pixel_offset = struct.unpack(&#39;&lt;I&#39;, data[0x0A:0x0E])[0]
-width = struct.unpack(&#39;&lt;I&#39;, data[0x12:0x16])[0]
-height = struct.unpack(&#39;&lt;I&#39;, data[0x16:0x1A])[0]
-bits_per_pixel = struct.unpack(&#39;&lt;H&#39;, data[0x1C:0x1E])[0]
-
-print(f&quot;文件大小: {file_size} 字节&quot;)
-print(f&quot;实际大小: {len(data)} 字节&quot;)
-print(f&quot;像素偏移: {pixel_offset}&quot;)
-print(f&quot;宽度: {width}, 高度: {height}&quot;)
-print(f&quot;位深度: {bits_per_pixel} bits&quot;)
-
-# 检查尺寸异常
-row_size = ((width * 3 + 3) // 4) * 4
-expected_pixel_size = row_size * height
-actual_pixel_size = len(data) - pixel_offset
-
-print(f&quot;\n期望像素数据: {expected_pixel_size} 字节&quot;)
-print(f&quot;实际像素数据: {actual_pixel_size} 字节&quot;)
-
-if actual_pixel_size &gt; expected_pixel_size:
-    print(f&quot;⚠️  检测到额外数据: {actual_pixel_size - expected_pixel_size} 字节&quot;)
-
-# 检查文
-</code></pre></div>
 
 
 
