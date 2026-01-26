@@ -203,6 +203,7 @@ nav:
         - PNG: Misc/Steganography/PNG_Steganography.md
         - JPG: Misc/Steganography/JPG_Steganography.md
         - BMP: Misc/Steganography/BMP_Steganography.md
+        - WAV: Misc/Steganography/WAV_Steganography.md
   - Crypto: 
     - 介绍: Crypto/index.md
     - 古典密码:
