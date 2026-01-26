@@ -224,7 +224,8 @@ nav:
   - AI:
     - 介绍: AI/index.md
     - 环境准备: AI/Environmental/Environmental_preparation.md
-    - 基础知识: AI/Basic/Basic_knowledge.md
+    - 基础知识1: AI/Basic/Basic_knowledge.md
+    - 基础知识2: AI/Basic/Basic_knowledge_2.md
   - 工具: 
     - 介绍: Tools/index.md
     - 编码工具:

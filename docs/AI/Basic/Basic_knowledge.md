@@ -2,7 +2,7 @@
 
 ## 1 基本概念
 
-### 训练集（Training Set）
+### 1.1 训练集（Training Set）
 
 **形式化定义：**
 
@@ -58,7 +58,7 @@ $$\epsilon_{\text{generalization}} \leq \epsilon_{\text{train}} + O\left(\sqrt{\
    - 标签噪声模型：$P(y|\mathbf{x}) = (1-\eta)P_{\text{true}}(y|\mathbf{x}) + \eta P_{\text{noise}}(y)$
    - 高噪声率会增加贝叶斯误差下界
 
-### 测试集（Test Set）
+### 1.2 测试集（Test Set）
 
 **形式化定义：**
 
@@ -105,7 +105,7 @@ $$\epsilon_{\text{true}} \in \left[\hat{\epsilon}_{\text{test}} - \sqrt{\frac{\l
 
 例如，若测试集有1000个样本，$\delta=0.05$，则95%置信区间的半径约为 $\pm 3\%$。
 
-### 验证集（Validation Set）
+### 1.3 验证集（Validation Set）
 
 **形式化定义：**
 
@@ -157,7 +157,7 @@ $$\epsilon_{\text{LOOCV}} = \frac{1}{n}\sum_{i=1}^{n} \mathcal{L}(f^{(-i)}(\math
 优点：几乎无偏估计
 缺点：计算成本高（需要训练 $n$ 次）
 
-### 特征（Features）
+### 1.4 特征（Features）
 
 **形式化定义：**
 
@@ -243,7 +243,7 @@ $$x'_{ij} = \frac{x_{ij} - \min_i x_{ij}}{\max_i x_{ij} - \min_i x_{ij}}$$
 
 归一化后：$x'_{ij} \in [0, 1]$
 
-### 标签（Labels）
+### 1.5 标签（Labels）
 
 **形式化定义：**
 
@@ -1380,7 +1380,7 @@ $$\|\boldsymbol{\theta}^{(t+1)} - \boldsymbol{\theta}^*\| \leq C\|\boldsymbol{\t
 
 线性回归是最基础的机器学习模型，用于建模输入特征与连续输出之间的线性关系。
 
-### 问题设定
+### 3.1 问题设定
 
 **目标：**
 
@@ -1390,7 +1390,7 @@ $$f(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + b$$
 
 使得能够预测新样本的输出。
 
-### 最小二乘法（Least Squares）
+### 3.2 最小二乘法（Least Squares）
 
 **损失函数：**
 
@@ -1441,7 +1441,7 @@ $\tilde{\mathbf{X}}\tilde{\mathbf{w}}^*$ 是 $\mathbf{y}$ 在 $\tilde{\mathbf{X}
 1. 使用QR分解或SVD
 2. 添加正则化（Ridge回归）
 
-### Ridge回归（L2正则化）
+### 3.3 Ridge回归（L2正则化）
 
 **优化目标：**
 
@@ -1461,7 +1461,7 @@ $$\tilde{\mathbf{w}}^*_{\text{ridge}} = (\tilde{\mathbf{X}}^T\tilde{\mathbf{X}} 
 - 减小参数值，防止过拟合
 - 对共线性问题更鲁棒
 
-### 梯度下降求解
+### 3.4 梯度下降求解
 
 **梯度计算：**
 
@@ -1475,7 +1475,7 @@ $$= \tilde{\mathbf{w}}^{(t)} - \frac{\eta}{n}\tilde{\mathbf{X}}^T(\tilde{\mathbf
 
 $$= (1 - \eta\lambda)\tilde{\mathbf{w}}^{(t)} - \frac{\eta}{n}\tilde{\mathbf{X}}^T(\tilde{\mathbf{X}}\tilde{\mathbf{w}}^{(t)} - \mathbf{y})$$
 
-### 概率视角
+### 3.5 概率视角
 
 **假设：**
 
@@ -1519,7 +1519,7 @@ $$= -\frac{1}{2\sigma^2}\sum_{i=1}^{n}(y_i - \mathbf{w}^T\mathbf{x}_i - b)^2 - \
 
 偏差-方差分解（Bias-Variance Decomposition）是理解模型泛化误差来源的重要工具。
 
-### 问题设定
+### 4.1 问题设定
 
 考虑回归问题，真实关系为：
 
@@ -1529,7 +1529,7 @@ $$y = f^*(\mathbf{x}) + \epsilon, \quad \epsilon \sim \mathcal{N}(0, \sigma^2)$$
 
 给定训练集 $\mathcal{D}$，学习得到模型 $\hat{f}(\mathbf{x}; \mathcal{D})$。
 
-### 期望泛化误差分解
+### 4.2 期望泛化误差分解
 
 对于新样本 $(\mathbf{x}, y)$，预测的期望平方误差：
 
@@ -1560,7 +1560,7 @@ $$\begin{align}
 
 $\mathbb{E}_{\mathcal{D}, y}[(y - \hat{f}(\mathbf{x}; \mathcal{D}))^2] = \underbrace{\sigma^2}_{\text{Noise}} + \underbrace{(f^*(\mathbf{x}) - \bar{f}(\mathbf{x}))^2}_{\text{Bias}^2} + \underbrace{\mathbb{E}_{\mathcal{D}}[(\bar{f}(\mathbf{x}) - \hat{f}(\mathbf{x}; \mathcal{D}))^2]}_{\text{Variance}}$
 
-### 三个组成部分
+### 4.3 三个组成部分
 
 **1. 噪声（Irreducible Error）：**
 
@@ -1598,7 +1598,7 @@ $\text{Variance}(\mathbf{x}) = \mathbb{E}_{\mathcal{D}}[(\bar{f}(\mathbf{x}) - \
 - 训练数据不足
 - 例：高阶多项式拟合少量数据点
 
-### 偏差-方差权衡（Bias-Variance Tradeoff）
+### 4.4 偏差-方差权衡（Bias-Variance Tradeoff）
 
 **核心矛盾：**
 
@@ -1624,7 +1624,7 @@ $\text{Total Error} = \text{Bias}^2 + \text{Variance} + \text{Noise}$
 
 $\text{Complexity}^* = \arg\min_{\text{Complexity}} [\text{Bias}^2(\text{Complexity}) + \text{Variance}(\text{Complexity})]$
 
-### 示例：多项式回归
+### 4.5 示例：多项式回归
 
 考虑用 $d$ 阶多项式拟合数据：
 
@@ -1634,7 +1634,7 @@ $\hat{f}(\mathbf{x}) = \sum_{j=0}^{d} w_j x^j$
 - $d = 10$（高阶多项式）：低偏差，高方差
 - 最优 $d$ 取决于数据复杂度和样本量
 
-### 如何平衡偏差和方差
+### 4.6 如何平衡偏差和方差
 
 **减少偏差：**
 
@@ -1936,7 +1936,7 @@ $\nabla_{\theta} J(\theta) = \mathbb{E}_{\pi_{\theta}}[\nabla_{\theta} \log \pi_
 - 推荐系统
 - 资源分配
 
-### 2.5.5 其他学习范式
+### 5.5 其他学习范式
 
 **迁移学习（Transfer Learning）：**
 
