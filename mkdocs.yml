@@ -149,7 +149,8 @@ nav:
       - 常见指令集: Code/Assembly/instruction_set.md
       - 寄存器: Code/Assembly/register.md
       - 栈操作: Code/Assembly/stack_operation.md
-    - C/C++: Code/CPP.md
+    - C/C++: 
+      - C/C++介绍: Code/CPP/cpp-tutorial.md
     - Python:
       - Python介绍: Code/Python/Python_Intro.md
       - Python基础语法: Code/Python/Python_Basic_Syntax.md
