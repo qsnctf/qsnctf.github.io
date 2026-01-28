@@ -90,3 +90,67 @@
 **开源操作系统**
 
 - Linux、FreeBSD、OpenBSD、Android（AOSP 版本）
+
+## Windows系统命令
+
+在Windows下，按下【Win徽标键】+【R】可以打开运行窗口，输入程序名称可以快速打开。
+
+![](assets/image-20260128175115681.png)
+
+如上图所示，输入CMD后回车，即打开了命令提示符。
+
+![](assets/image-20260128175139233.png)
+
+### cd命令（通用）
+
+`cd` 是 **change directory（切换目录）** 的缩写，用于在 **命令行**（Linux、Mac、Windows 的命令提示符/PowerShell）中切换当前工作目录。
+
+```bash
+cd [目录路径]
+```
+
+可以使用“绝对路径”、“相对路径”及一些快捷方式。
+
+#### 绝对路径
+
+> **绝对路径**是从根目录（如Windows下是C:\、Linux和MacOS是/）开始，完整描述文件或文件夹位置的路径。它不依赖于当前工作目录，在任何位置都能唯一确定目标。
+
+```bash
+cd /home/user/Documents   # Linux/Mac
+cd C:\Users\Alice\Documents   # Windows
+```
+
+#### 相对路径
+
+> **相对路径**是以当前工作目录为基准，描述目标位置的路径。它省略了从根目录到当前目录的部分，只描述从当前目录到目标的路径。
+
+```bash
+cd Documents   # 进入当前目录下的 Documents 文件夹
+cd ../         # 返回上一级目录
+cd ../../      # 返回上两级目录
+```
+
+#### 快捷方式
+
+`cd ~` → 回到当前用户的主目录
+
+`cd -` → 回到上一次所在的目录
+
+`cd` 或 `cd ~` → 在 Linux/Mac 下也能直接返回用户主目录
+
+#### Windows的特殊情况
+
+Windows 的路径分隔符是反斜杠 `\`，但大部分命令行也支持正斜杠 `/`。
+
+切换盘符需要先输入盘符：
+
+```bash
+D:
+cd D:\Projects
+```
+
+#### 小技巧
+
+使用 `pwd`（Linux/Mac）或 `cd`（Windows）可以显示当前路径。
+
+使用 Tab 键可以 **自动补全文件夹名**，避免拼写错误。
