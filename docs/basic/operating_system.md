@@ -151,6 +151,8 @@ cd D:\Projects
 
 #### 小技巧
 
-使用 `pwd`（Linux/Mac）或 `cd`（Windows）可以显示当前路径。
+!!! note
 
-使用 Tab 键可以 **自动补全文件夹名**，避免拼写错误。
+    使用 `pwd`（Linux/Mac）或 `cd`（Windows）可以显示当前路径。
+    
+    使用 Tab 键可以 **自动补全文件夹名**，避免拼写错误。
