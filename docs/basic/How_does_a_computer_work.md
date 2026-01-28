@@ -85,13 +85,17 @@
     <img src="assets/250px-大稻埕乾元參藥行二五分珠算盤.jpg">
 </p>
 
+<p align="center">
+    <img src="assets/330px-NAMA_Machine_d'Anticythère_1.jpg">
+</p>
 
 
-![安迪基西拉机械装置 (碎片 A – 正面)](assets/330px-NAMA_Machine_d'Anticythère_1.jpg)
 
 早期计算设备的祖先可以追溯到 **算盘** ，以及公元前 87 年左右由古希腊人制造、用于计算行星运行的 **安迪基西拉机械装置** 。中世纪末期，随着欧洲数学与工程学的复兴，机械计算技术迎来了新的发展。
 
-![威廉·希卡德肖像画 （绘于1632年）](assets/250px-C_Melperger_-_Wilhelm_Schickard_1632.jpg)
+<p align="center">
+    <img src="assets/250px-C_Melperger_-_Wilhelm_Schickard_1632.jpg">
+</p>
 
 1623 年，德国博学家 **威廉·席卡德（Wilhelm Schickard）** 研制出欧洲第一台机械计算设备——“计算钟”。该装置能够完成六位数以内的加减运算，并通过铃声提示计算结果，其核心机制是齿轮传动。
 
