@@ -99,13 +99,19 @@
 
 1623 年，德国博学家 **威廉·席卡德（Wilhelm Schickard）** 研制出欧洲第一台机械计算设备——“计算钟”。该装置能够完成六位数以内的加减运算，并通过铃声提示计算结果，其核心机制是齿轮传动。
 
-![1652年生产的一台带有帕斯卡签名的滚轮式加法器](assets/250px-Pascaline-CnAM_823-1-IMG_1506-black.jpg)
+
+
+<p align="center">
+    <img src="../assets/250px-Pascaline-CnAM_823-1-IMG_1506-black.jpg">
+</p>
 
 1642 年，法国数学家 **布莱士·帕斯卡** 在英国数学家 **威廉·奥特雷德** 发明的计算尺基础上加以改进，研制出可进行八位运算的机械计算器。这种设备曾被大量制造和销售，一度成为当时的时髦商品。
 
 1801 年，法国发明家 **约瑟夫·玛丽·雅卡尔** 改进了织布机的设计，首次使用一系列打孔纸卡来控制复杂织纹的生成。这种 **“雅卡尔织布机”** 虽然并非真正意义上的计算机，但其 **可编程思想** 被视为现代计算机发展的重要里程碑。
 
-![苏格兰国家博物馆内的雅卡尔织布机，右侧为[打孔卡](https://zh.wikipedia.org/wiki/打孔卡)](assets/330px-A_Jacquard_loom_showing_information_punchcards%2C_National_Museum_of_Scotland.jpg)
+<p align="center">
+    <img src="../assets/330px-A_Jacquard_loom_showing_information_punchcards%2C_National_Museum_of_Scotland.jpg">
+</p>
 
 1820 年，英国数学家 **查尔斯·巴贝奇** 构想并设计了世界上第一台完全可程序化的计算机。然而，由于当时技术条件不足、资金匮乏以及设计反复修改，该机器在他有生之年始终未能完成。
  19 世纪末，一系列对计算机科学影响深远的关键技术相继出现，包括 **打孔卡片** 和 **真空管** 。德裔美籍统计学家 **赫尔曼·何乐礼** 设计了使用打孔卡片进行大规模数据处理的制表机，为自动化信息处理奠定了基础。
@@ -120,18 +126,32 @@
 
 沿着这条漫长的发展路径，要定义 **“第一台电子计算机”** 并不容易。
 
-![Z3的复制品](assets/250px-Z3_Deutsches_Museum_b.jpg) 
+
+
+<p align="center">
+    <img src="../assets/250px-Z3_Deutsches_Museum_b.jpg">
+</p>
 
 1941 年 5 月 12 日，德国工程师 **康拉德·楚泽** 完成了其机电一体化计算机 **Z3** 。该设备具备自动二进制运算和可行的程序控制能力，是第一台 **图灵完备的可编程计算机** ，但仍不属于纯电子计算机。
 
-![阿塔纳索夫-贝瑞计算机的复制品](assets/250px-Atanasoff-Berry_Computer_at_Durhum_Center.jpg)
+
+
+<p align="center">
+    <img src="../assets/250px-Atanasoff-Berry_Computer_at_Durhum_Center.jpg">
+</p>
 
 1941 年夏，美国研制成功 **阿塔纳索夫—贝瑞计算机（ABC）** ，它使用真空管、二进制表示和可复用存储器，被普遍认为是世界上第一台电子计算机。
 
-![多萝西-杜博松（左）和埃尔西-布克（右）正在操作的 Colossus Mark 2 破译计算机，1943 年](assets/250px-Colossus.jpg) 
+<p align="center">
+    <img src="../assets/250px-Colossus.jpg">
+</p>
 
 1943 年，英国展示了高度保密的 **巨人（Colossus）计算机** ，虽然其程序能力有限，但证明了真空管计算的可行性。
  此外，还有哈佛大学的 **哈佛 Mark I** ，以及宾夕法尼亚大学研制的 **ENIAC（电子数值积分计算机)** 。ENIAC 是第一台具有通用设计意图的电子计算机，但由于采用硬连线方式，每次重新编程都需要重新布线。
+
+<p align="center">
+    <img src="../assets/250px-ENIAC_Penn1.jpg">
+</p>
 
 二战期间，美国海军希望开发一套能够实时驱动飞行模拟器的计算系统。麻省理工学院因此启动了 **旋风工程（Whirlwind Project）** ，成功研制出世界上第一台具备实时处理能力的计算机，并发明了 **磁芯存储器** ，为后来的个人计算机发展奠定了关键技术基础。
 
