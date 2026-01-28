@@ -1063,6 +1063,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#计算机运行的总体逻辑" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        计算机运行的总体逻辑
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="计算机运行的总体逻辑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#运行流程详解" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行流程详解
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#运行逻辑的特点" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行逻辑的特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4590,6 +4629,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#计算机运行的总体逻辑" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        计算机运行的总体逻辑
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="计算机运行的总体逻辑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#运行流程详解" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行流程详解
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#运行逻辑的特点" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行逻辑的特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4818,6 +4896,115 @@
 <p><img alt="" src="../assets/image-20260128165040627.png" /></p>
 <h3 id="硬件的功能逻辑关系">硬件的功能逻辑关系<a class="headerlink" href="#硬件的功能逻辑关系" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../assets/image-20260128165054245.png" /></p>
+<h2 id="计算机运行的总体逻辑">计算机运行的总体逻辑<a class="headerlink" href="#计算机运行的总体逻辑" title="Permanent link">&para;</a></h2>
+<p>计算机的运行逻辑可以用一句话概括：</p>
+<blockquote>
+<p><strong>输入信息 → 存储/处理 → 输出结果</strong></p>
+</blockquote>
+<p>本质上，计算机就是一个**高速数据处理和控制系统**。在硬件层面，这个流程通常包括：</p>
+<ol>
+<li><strong>取指令（Fetch）</strong></li>
+<li><strong>指令解码（Decode）</strong></li>
+<li><strong>执行指令（Execute）</strong></li>
+<li><strong>访问存储器（Memory Access）</strong></li>
+<li><strong>写回结果（Write Back）</strong></li>
+</ol>
+<p>这就是所谓的 <strong>指令周期（Instruction Cycle）</strong>。</p>
+<h3 id="运行流程详解">运行流程详解<a class="headerlink" href="#运行流程详解" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>输入阶段（Input）</strong></p>
+</li>
+<li>
+<p>外界通过**输入设备**（键盘、鼠标、摄像头、网络接口等）将数据和命令输入计算机。</p>
+</li>
+<li>输入设备将物理信号转换为**二进制信号**（0 和 1）。</li>
+<li>数据被送入 <strong>内存</strong> 或直接进入 <strong>CPU 寄存器</strong> 等待处理。</li>
+</ol>
+<hr />
+<ol>
+<li>
+<p><strong>指令获取（Fetch）</strong></p>
+</li>
+<li>
+<p>CPU 从 <strong>主存/内存（RAM）</strong> 中按程序计数器（PC）指定的地址获取下一条指令。</p>
+</li>
+<li>指令被加载到 CPU 的指令寄存器（IR）中。</li>
+</ol>
+<hr />
+<ol>
+<li>
+<p><strong>指令解码（Decode）</strong></p>
+</li>
+<li>
+<p>CPU 控制器（CU）分析指令的操作码（Opcode）和操作数（Operand）。</p>
+</li>
+<li>确定：</li>
+<li>需要执行的运算类型（加减乘除、逻辑运算、数据移动等）</li>
+<li>数据来源（寄存器、内存或输入设备）</li>
+<li>数据去向（寄存器、内存或输出设备）</li>
+</ol>
+<p>4.<strong>执行阶段（Execute）</strong></p>
+<ul>
+<li>ALU（算术逻辑单元）根据解码结果执行操作：</li>
+<li>算术运算（加减乘除）</li>
+<li>逻辑运算（与、或、非、异或）</li>
+<li>数据搬运（寄存器或内存间移动）</li>
+<li>CPU 同时可能更新标志寄存器（零标志、溢出标志等）。</li>
+</ul>
+<hr />
+<ol>
+<li>
+<p><strong>访问存储器（Memory Access）</strong></p>
+</li>
+<li>
+<p>如果操作数存储在内存中：</p>
+</li>
+<li>CPU 会通过**地址总线**访问对应内存单元</li>
+<li>读取或写入数据</li>
+<li>如果操作数在寄存器中，则无需访问内存，提高执行速度</li>
+</ol>
+<hr />
+<ol>
+<li>
+<p><strong>写回阶段（Write Back）</strong></p>
+</li>
+<li>
+<p>运算结果返回到：</p>
+</li>
+<li><strong>寄存器</strong>（CPU 内部快速存储）</li>
+<li><strong>内存</strong>（长期存储）</li>
+<li>或通过 <strong>输出设备</strong> 呈现给用户</li>
+<li>指令计数器（PC）更新，指向下一条指令地址</li>
+</ol>
+<hr />
+<ol>
+<li>
+<p><strong>输出阶段（Output）</strong></p>
+</li>
+<li>
+<p>处理结果通过输出设备显示或传输：</p>
+</li>
+<li>显示器、打印机、网络接口</li>
+<li>形成用户可理解的信息或控制信号</li>
+</ol>
+<h3 id="运行逻辑的特点">运行逻辑的特点<a class="headerlink" href="#运行逻辑的特点" title="Permanent link">&para;</a></h3>
+<p><strong>顺序执行为主</strong></p>
+<ul>
+<li>CPU 按指令顺序执行，但可通过跳转、条件分支改变流程</li>
+</ul>
+<p><strong>二进制逻辑运算</strong></p>
+<ul>
+<li>所有计算和判断都基于 0、1 的逻辑运算</li>
+</ul>
+<p><strong>存储程序原则</strong></p>
+<ul>
+<li>指令与数据都存储在内存中，允许程序自修改、自控制</li>
+</ul>
+<p><strong>输入—处理—输出闭环</strong></p>
+<ul>
+<li>保证计算机能从外界获取数据，处理后返回结果</li>
+</ul>
 
 
 
