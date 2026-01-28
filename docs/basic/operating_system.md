@@ -151,7 +151,7 @@ cd D:\Projects
 
 #### 小技巧
 
-!!! note
+!!! note "小技巧"
 
     使用 `pwd`（Linux/Mac）或 `cd`（Windows）可以显示当前路径。
     
