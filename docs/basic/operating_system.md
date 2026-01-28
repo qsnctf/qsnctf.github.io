@@ -34,3 +34,59 @@
 ### 简明定义
 
 > 操作系统是管理计算机硬件与软件资源，为用户和应用程序提供统一、方便的运行环境的系统软件。
+
+## 操作系统的分类
+
+![](assets/image-20260128174724124.png)
+
+### 1.按用户分类
+
+**桌面/个人电脑操作系统（PC）**
+
+- Windows（如 Windows 10、11）
+- macOS（苹果电脑）
+- Linux 桌面版（如 Ubuntu、Fedora、Debian）
+
+**移动设备操作系统**
+
+- Android
+- iOS
+- HarmonyOS（华为）
+- KaiOS（功能机常用）
+
+### 2.按内核类型分类
+
+- **单内核/宏内核（Monolithic kernel）**
+  - Linux、Windows NT 内核
+- **微内核（Microkernel）**
+  - QNX、Minix、L4 系列
+- **混合内核（Hybrid kernel）**
+  - Windows NT、macOS 的 XNU 内核
+
+### 3.按使用场景分类
+
+**服务器操作系统**
+
+- Windows Server、Ubuntu Server、Red Hat Enterprise Linux
+
+**嵌入式操作系统**
+
+- FreeRTOS、VxWorks、RTEMS
+
+**实时操作系统（RTOS）**
+
+- 用于航空航天、工业控制，如 QNX、RTEMS
+
+**分布式操作系统**
+
+- 如 Google Fuchsia、Plan 9
+
+### 4.按授权方式分类
+
+**专有/商业操作系统**
+
+- Windows、macOS、iOS
+
+**开源操作系统**
+
+- Linux、FreeBSD、OpenBSD、Android（AOSP 版本）
