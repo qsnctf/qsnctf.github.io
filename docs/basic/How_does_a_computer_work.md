@@ -81,7 +81,11 @@
 
 “Computer”一词最初并非指机器，而是指 **从事数据计算的人** 。这些人通常借助各种机械计算工具或模拟计算装置来完成工作。
 
-![算盘](assets/250px-大稻埕乾元參藥行二五分珠算盤.jpg)
+<p align="center">
+    <img src="assets/250px-大稻埕乾元參藥行二五分珠算盤.jpg">
+</p>
+
+
 
 ![安迪基西拉机械装置 (碎片 A – 正面)](assets/330px-NAMA_Machine_d'Anticythère_1.jpg)
 
