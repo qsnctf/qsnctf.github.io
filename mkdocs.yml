@@ -143,6 +143,8 @@ nav:
     - 什么是 CTF: basic/intro.md
     - CTF的历史: basic/history.md
     - 练习CTF: basic/practice.md
+    - 计算机基础: 
+      - 计算机是怎么工作的？: basic/How_does_a_computer_work.md
   - 编程: 
     - 介绍: Code/index.md
     - 汇编语言: 
