@@ -24,8 +24,6 @@
 - 隐藏加密后的数据
 - 传递多阶段提示信息
 
----
-
 ## WAV文件格式详解
 
 ### RIFF结构原理
@@ -305,7 +303,7 @@ def advanced_lsb_extract(wav_file, num_lsb=1, bits_per_byte=8):
 data = advanced_lsb_extract('audio.wav', num_lsb=2)
 ```
 
-### 7. 十六进制编辑器
+### 4. 十六进制编辑器
 
 #### 010 Editor
 
@@ -368,7 +366,7 @@ file extra.bin
 binwalk extra.bin
 ```
 
-### 8. DTMF解码工具
+### 5. DTMF解码工具
 
 #### multimon-ng (Linux)
 
@@ -406,7 +404,7 @@ sox audio.wav -t raw -r 22050 -e signed -b 16 -c 1 - | multimon-ng -t raw -a DTM
 3. 显示对应的数字序列
 ```
 
-### 9. 摩尔斯电码工具
+### 6. 摩尔斯电码工具
 
 #### 在线解码器
 
@@ -501,7 +499,7 @@ def morse_to_text(morse_code, separator=' '):
     return ' '.join(result)
 ```
 
-### 10. 频谱分析工具
+### 7. 频谱分析工具
 
 #### Spek
 
@@ -521,7 +519,7 @@ def morse_to_text(morse_code, separator=' '):
 可以保存为PNG图片
 ```
 
-### 11. 其他实用工具
+### 8. 其他实用工具
 
 #### SoX (Sound eXchange)
 
@@ -605,4 +603,1209 @@ binwalk -v audio.wav
 
 # 扫描特定签名
 binwalk --signature audio.wav
+```
+
+## 1. 文件基本信息
+
+```bash
+# 查看文件类型
+file audio.wav
+# 输出: audio.wav: RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, stereo 44100 Hz
+
+# 查看文件大小
+ls -lh audio.wav
+# 检查是否异常大
+
+# 计算哈希值(用于对比)
+md5sum audio.wav
+sha256sum audio.wav
+
+# 查看元数据
+exiftool audio.wav
+```
+
+**关注点**:
+
+- 文件大小是否异常
+- 采样率和位深度
+- 声道数
+- 是否有特殊的元数据字段
+
+## 2. 试听音频
+
+```
+使用任何播放器播放音频:
+- VLC
+- Windows Media Player
+- macOS QuickTime
+
+注意听:
+- 是否有人声
+- 是否有规律的嘀嘀声(可能是摩尔斯电码)
+- 是否有DTMF音(电话拨号音)
+- 是否有异常的噪音或失真
+- 左右声道是否有差异
+```
+
+## 3. 快速字符串检查
+
+```bash
+# 搜索可打印字符串
+strings audio.wav | less
+
+# 搜索flag关键字
+strings audio.wav | grep -i flag
+strings audio.wav | grep -i ctf
+strings audio.wav | grep -i key
+strings audio.wav | grep -i password
+
+# 搜索常见文件头
+strings audio.wav | grep -i "PK"  # ZIP
+strings audio.wav | grep -i "�PNG"  # PNG
+strings audio.wav | grep -i "JFIF"  # JPEG
+```
+
+## 4. 十六进制初步检查
+
+```bash
+# 查看文件头部
+hexdump -C audio.wav | head -n 10
+
+# 查看文件尾部
+hexdump -C audio.wav | tail -n 20
+
+# 检查是否有追加数据
+# 计算理论大小并与实际大小对比
+```
+
+## 1. Audacity频谱分析
+
+```
+详细步骤:
+1. 打开Audacity
+2. 导入音频文件
+3. 切换到频谱图视图
+4. 调整参数寻找最佳显示:
+   
+   窗口大小设置建议:
+   - 256: 时间分辨率高,适合快速变化
+   - 2048: 平衡,最常用
+   - 8192: 频率分辨率高,适合查看细节文字
+   
+   颜色方案尝试:
+   - Grayscale
+   - Inverse grayscale (黑底白字)
+   - Color (spectrum)
+   
+5. 仔细查看整个频谱图
+6. 特别注意:
+   - 顶部区域(高频)
+   - 底部区域(低频)  
+   - 是否有文字
+   - 是否有图案或二维码
+   - 是否有规律的条纹
+```
+
+**常见频谱隐藏位置**:
+
+```
+高频区域 (10kHz - 20kHz):
+- 人耳不敏感
+- 常用于隐藏文字
+- 需要调整频谱范围才能看清
+
+中频区域 (1kHz - 10kHz):
+- 可能混合在正常音频中
+- 需要仔细观察
+
+低频区域 (0 - 1kHz):
+- 较少使用
+- 但也需要检查
+```
+
+## 2. 波形分析
+
+```
+在Audacity中:
+1. 切换到波形视图
+2. 使用放大工具(Ctrl + 1)逐步放大
+3. 查看是否有:
+   - 数字形状
+   - 字母形状
+   - 规律的高低变化(摩尔斯)
+   - 周期性模式
+```
+
+**摩尔斯电码识别**:
+
+```
+视觉特征:
+短音(点): ▂
+长音(划): ▂▂▂
+间隔: 空白
+
+示例:
+SOS: ▂▂▂ (···) 空白 ▂▂▂▂▂▂ (---) 空白 ▂▂▂ (···)
+```
+
+## 3. 立体声分析
+
+```
+步骤:
+1. 确认是立体声文件
+2. 在Audacity中分离声道:
+   轨道菜单 → 分离立体声为单声道
+3. 单独查看每个声道:
+   - 左声道的频谱图
+   - 右声道的频谱图
+4. 对比差异
+5. 尝试反相操作:
+   - 选中一个声道
+   - 效果 → 反相
+   - 混合两个声道
+6. 计算声道差:
+   使用插件或导出后用Python处理
+```
+
+## 1. Python脚本提取
+
+```python
+# 使用前面提供的extract_lsb函数
+for num_bits in range(1, 5):
+    print(f"\n尝试提取 {num_bits} 位LSB...")
+    data = extract_lsb('audio.wav', num_lsb=num_bits)
+    
+    # 保存到文件
+    filename = f'lsb_{num_bits}bit.bin'
+    with open(filename, 'wb') as f:
+        f.write(data)
+    
+    # 尝试识别文件类型
+    print(f"文件大小: {len(data)} 字节")
+    print(f"前20字节: {data[:20].hex()}")
+    
+    # 尝试解析为文本
+    try:
+        text = data.decode('utf-8', errors='ignore')
+        if 'flag' in text.lower() or 'ctf' in text.lower():
+            print(f"可能找到flag: {text[:200]}")
+    except:
+        pass
+    
+    # 使用file命令识别(Linux)
+    import subprocess
+    result = subprocess.run(['file', filename], capture_output=True, text=True)
+    print(f"文件类型: {result.stdout}")
+```
+
+## 2. 分析提取的数据
+
+```bash
+# 查看文件类型
+file lsb_1bit.bin
+
+# 如果是压缩包
+unzip lsb_1bit.bin
+# 或
+7z x lsb_1bit.bin
+
+# 如果是图片
+mv lsb_1bit.bin extracted.png
+xdg-open extracted.png
+
+# 如果是文本
+cat lsb_1bit.bin
+
+# 查找可打印字符
+strings lsb_1bit.bin
+
+# 熵分析(检查是否加密)
+ent lsb_1bit.bin
+```
+
+## 1. Steghide扫描
+
+```bash
+# 查看信息
+steghide info audio.wav
+
+# 尝试常见密码
+passwords=("" "password" "123456" "admin" "ctf" "flag" "audio" "secret")
+
+for pass in "${passwords[@]}"; do
+    echo "尝试密码: $pass"
+    steghide extract -sf audio.wav -p "$pass" -xf output_$pass.txt 2>/dev/null
+    if [ $? -eq 0 ]; then
+        echo "成功! 密码是: $pass"
+        cat output_$pass.txt
+        break
+    fi
+done
+```
+
+## 2. DeepSound检测
+
+```
+Windows GUI操作:
+1. 打开DeepSound
+2. 加载音频文件
+3. 查看是否显示"contains hidden data"
+4. 尝试提取
+5. 如果需要密码,尝试:
+   - 空密码
+   - 文件名
+   - 题目描述中的关键词
+   - 常见密码字典
+```
+
+## 3. 其他工具尝试
+
+```bash
+# SilentEye(需要图形界面)
+# WavSteg
+# OpenStego
+```
+
+## 1. DTMF解码
+
+```bash
+# 使用multimon-ng
+multimon-ng -t wav -a DTMF audio.wav > dtmf_output.txt
+cat dtmf_output.txt
+
+# 或使用在线工具
+# 上传到 http://dialabc.com/sound/detect/
+```
+
+## 2. 摩尔斯解码
+
+```bash
+# 如果是明显的嘀嘀声
+# 使用在线工具:
+# https://morsecode.world/international/decoder/audio-decoder-adaptive.html
+
+# 或使用Python脚本(前面提供的)
+python decode_morse.py audio.wav
+```
+
+## 3. 频谱水印检测
+
+```python
+import numpy as np
+from scipy.io import wavfile
+from scipy import fft
+import matplotlib.pyplot as plt
+
+def analyze_spectrum(wav_file):
+    """详细的频谱分析"""
+    rate, data = wavfile.read(wav_file)
+    
+    # 转单声道
+    if len(data.shape) > 1:
+        data = data[:, 0]
+    
+    # FFT
+    fft_data = fft.fft(data)
+    freqs = fft.fftfreq(len(data), 1/rate)
+    
+    # 只看正频率
+    positive_freqs = freqs[:len(freqs)//2]
+    positive_fft = np.abs(fft_data[:len(fft_data)//2])
+    
+    # 绘图
+    plt.figure(figsize=(12, 6))
+    plt.plot(positive_freqs, positive_fft)
+    plt.xlabel('Frequency (Hz)')
+    plt.ylabel('Magnitude')
+    plt.title('Frequency Spectrum')
+    plt.xlim(0, rate/2)
+    plt.savefig('spectrum.png')
+    
+    # 查找异常峰值
+    threshold = np.mean(positive_fft) + 3 * np.std(positive_fft)
+    peaks = positive_freqs[positive_fft > threshold]
+    print(f"异常频率峰值: {peaks}")
+
+analyze_spectrum('audio.wav')
+```
+
+## 4. 回声检测
+
+```python
+import numpy as np
+from scipy.io import wavfile
+from scipy import signal
+
+def detect_echo(wav_file, max_delay_ms=10):
+    """检测回声隐写"""
+    rate, data = wavfile.read(wav_file)
+    
+    if len(data.shape) > 1:
+        data = data[:, 0]
+    
+    # 计算自相关
+    max_delay_samples = int(max_delay_ms * rate / 1000)
+    autocorr = signal.correlate(data, data, mode='full')
+    autocorr = autocorr[len(autocorr)//2:]
+    
+    # 查找峰值
+    peaks, _ = signal.find_peaks(autocorr[:max_delay_samples], 
+                                   height=np.max(autocorr)*0.1)
+    
+    if len(peaks) > 0:
+        delays_ms = peaks * 1000 / rate
+        print(f"检测到可能的回声延迟: {delays_ms} ms")
+        return delays_ms
+    else:
+        print("未检测到明显回声")
+        return None
+
+detect_echo('audio.wav')
+```
+
+## 典型题型案例
+
+### 案例1: 频谱图隐藏FLAG
+
+**题目描述**: 
+给定一个WAV文件,提示"有时候,你需要换个角度看问题"
+
+**解题步骤**:
+
+```
+1. 用Audacity打开文件
+2. 切换到频谱图视图
+3. 调整参数:
+   - 窗口大小: 4096
+   - 颜色方案: Inverse grayscale
+4. 在高频区域发现文字: "FLAG{SP3CTR0GRAM_1S_FUN}"
+```
+
+**关键点**:
+
+- 频谱图是最常见的视觉隐写
+- 通常在高频区域(人耳听不到)
+- 需要调整窗口大小才能看清
+
+**脚本解法**:
+
+```python
+from scipy.io import wavfile
+from scipy import signal
+import matplotlib.pyplot as plt
+
+rate, data = wavfile.read('challenge.wav')
+f, t, Sxx = signal.spectrogram(data[:, 0], rate, nperseg=4096)
+
+plt.figure(figsize=(15, 8))
+plt.pcolormesh(t, f, 10 * np.log10(Sxx), shading='gouraud')
+plt.ylabel('Frequency [Hz]')
+plt.xlabel('Time [sec]')
+plt.ylim(10000, 20000)  # 只看高频
+plt.savefig('flag_spectrum.png', dpi=300)
+```
+
+### 案例2: LSB隐藏ZIP文件
+
+**题目描述**:
+一个正常的音乐文件,但文件大小异常大
+
+**解题步骤**:
+
+```bash
+# 1. 提取LSB
+python extract_lsb.py audio.wav
+
+# 2. 检查提取的数据
+file lsb_1bit.bin
+# 输出: lsb_1bit.bin: Zip archive data
+
+# 3. 解压
+unzip lsb_1bit.bin
+# 或
+mv lsb_1bit.bin hidden.zip
+unzip hidden.zip
+
+# 4. 查看解压的文件
+cat flag.txt
+# FLAG{LSB_H1DD3N_Z1P}
+```
+
+**Python脚本**:
+
+```python
+import wave
+import struct
+import zipfile
+
+def extract_and_unzip(wav_file):
+    # 提取LSB
+    wav = wave.open(wav_file, 'rb')
+    frames = wav.readframes(wav.getnframes())
+    samples = struct.unpack(f'{len(frames)//2}h', frames)
+    wav.close()
+    
+    bits = [(s & 1) for s in samples]
+    
+    bytes_data = bytearray()
+    for i in range(0, len(bits), 8):
+        byte = sum(bits[i+j] << j for j in range(8) if i+j < len(bits))
+        bytes_data.append(byte)
+    
+    # 查找ZIP文件头 (PK\x03\x04)
+    zip_start = bytes_data.find(b'PK\x03\x04')
+    if zip_start != -1:
+        print(f"[+] 在偏移 {zip_start} 找到ZIP文件头")
+        zip_data = bytes_data[zip_start:]
+        
+        # 保存并解压
+        with open('hidden.zip', 'wb') as f:
+            f.write(zip_data)
+        
+        with zipfile.ZipFile('hidden.zip', 'r') as z:
+            z.extractall('extracted')
+            print(f"[+] 解压完成,文件列表:")
+            for name in z.namelist():
+                print(f"    - {name}")
+
+extract_and_unzip('challenge.wav')
+```
+
+### 案例3: 摩尔斯电码
+
+**题目描述**:
+音频中有规律的嘀嘀声
+
+**解题步骤**:
+
+```
+1. 播放音频,确认是摩尔斯电码
+2. 方法1: 人工识别
+   - 短音 = .
+   - 长音 = -
+   - 记录下来: ... --- ...
+   - 查表: SOS
+
+3. 方法2: 使用在线工具
+   - 上传到 https://morsecode.world/international/decoder/audio-decoder-adaptive.html
+   - 自动识别
+
+4. 方法3: Audacity手动分析
+   - 放大波形
+   - 测量音调长度
+   - 手动转换
+```
+
+**完整摩尔斯字典**:
+
+```
+A .-      B -...    C -.-.    D -..     E .
+F ..-.    G --.     H ....    I ..      J .---
+K -.-     L .-..    M --      N -.      O ---
+P .--.    Q --.-    R .-.     S ...     T -
+U ..-     V ...-    W .--     X -..-    Y -.--
+Z --..
+
+0 -----   1 .----   2 ..---   3 ...--   4 ....-
+5 .....   6 -....   7 --...   8 ---..   9 ----.
+```
+
+### 案例4: DTMF隐藏电话号码
+
+**题目描述**:
+音频听起来像电话拨号音
+
+**解题步骤**:
+
+```bash
+# 使用multimon-ng
+multimon-ng -t wav -a DTMF challenge.wav
+
+# 输出:
+# DTMF: 3
+# DTMF: 1
+# DTMF: 4
+# DTMF: 1
+# DTMF: 5
+# DTMF: 9
+
+# 得到数字序列: 314159
+# 可能是密码或flag的一部分
+```
+
+**DTMF频率表**:
+
+```
+按键  低频(Hz)  高频(Hz)
+1     697       1209
+2     697       1336
+3     697       1477
+4     770       1209
+5     770       1336
+6     770       1477
+7     852       1209
+8     852       1336
+9     852       1477
+0     941       1336
+```
+
+### 案例5: 立体声声道隐藏
+
+**题目描述**:
+一个立体声音频文件,左右声道似乎不同
+
+**解题步骤**:
+
+```
+Audacity步骤:
+1. 打开文件
+2. 点击轨道名称 → "分离立体声为单声道"
+3. 单独分析每个声道
+4. 发现左声道是正常音乐,右声道是噪音
+5. 对右声道:
+   - 切换到频谱图
+   - 发现隐藏的二维码
+6. 截图保存
+7. 用手机扫描二维码
+8. 得到flag
+```
+
+**Python脚本分析**:
+
+```python
+from scipy.io import wavfile
+import matplotlib.pyplot as plt
+
+rate, data = wavfile.read('stereo_challenge.wav')
+
+left = data[:, 0]
+right = data[:, 1]
+
+# 绘制两个声道的频谱图
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(15, 10))
+
+from scipy import signal
+
+# 左声道
+f1, t1, Sxx1 = signal.spectrogram(left, rate, nperseg=2048)
+ax1.pcolormesh(t1, f1, 10 * np.log10(Sxx1), shading='gouraud')
+ax1.set_title('Left Channel')
+ax1.set_ylabel('Frequency [Hz]')
+
+# 右声道
+f2, t2, Sxx2 = signal.spectrogram(right, rate, nperseg=2048)
+ax2.pcolormesh(t2, f2, 10 * np.log10(Sxx2), shading='gouraud')
+ax2.set_title('Right Channel - QR Code Here')
+ax2.set_ylabel('Frequency [Hz]')
+ax2.set_xlabel('Time [sec]')
+
+plt.tight_layout()
+plt.savefig('stereo_analysis.png', dpi=300)
+```
+
+### 案例6: 文件末尾追加数据
+
+**题目描述**:
+WAV文件大小异常,但音频播放正常
+
+**解题步骤**:
+
+```bash
+# 1. 解析WAV头部
+hexdump -C challenge.wav | head -n 3
+# 找到data chunk的大小
+
+# 假设输出:
+# 00000000  52 49 46 46 24 00 01 00  57 41 56 45 66 6d 74 20  |RIFF$...WAVEfmt |
+# 00000010  10 00 00 00 01 00 02 00  44 ac 00 00 10 b1 02 00  |........D.......|
+# 00000020  04 00 10 00 64 61 74 61  00 00 01 00 ...          |....data....|
+#                                     ^^^^^^^^^^
+# data chunk大小 = 0x00010000 = 65536字节
+
+# 2. 计算偏移
+# 偏移 = 0x2C (44字节header) + 0x10000 = 0x1002C
+
+# 3. 提取额外数据
+dd if=challenge.wav of=extra.bin bs=1 skip=$((0x1002C))
+
+# 4. 分析
+file extra.bin
+# 输出: extra.bin: PNG image data
+
+# 5. 查看图片
+mv extra.bin hidden.png
+xdg-open hidden.png
+# 图片中有flag
+```
+
+### 案例7: Steghide密码爆破
+
+**题目描述**:
+怀疑使用了steghide,但不知道密码
+
+**解题步骤**:
+
+```bash
+# 1. 确认有隐藏数据
+steghide info challenge.wav
+# 提示输入密码
+
+# 2. 创建密码字典
+# 常见CTF密码
+cat > passwords.txt << EOF
+password
+123456
+admin
+ctf
+flag
+challenge
+audio
+secret
+hidden
+steghide
+EOF
+
+# 也可以从题目描述生成
+echo "challenge_title_2024" >> passwords.txt
+
+# 3. 爆破脚本
+#!/bin/bash
+while IFS= read -r pass; do
+    echo "尝试密码: $pass"
+    steghide extract -sf challenge.wav -p "$pass" -xf output.txt 2>/dev/null
+    if [ $? -eq 0 ]; then
+        echo "[+] 成功! 密码是: $pass"
+        cat output.txt
+        exit 0
+    fi
+done < passwords.txt
+
+echo "[-] 未找到正确密码"
+```
+
+**Python爆破脚本**:
+
+```python
+import subprocess
+import sys
+
+passwords = [
+    "", "password", "123456", "admin", "ctf",
+    "flag", "challenge", "audio", "secret", "hidden"
+]
+
+def try_steghide(wav_file, password):
+    cmd = [
+        "steghide", "extract",
+        "-sf", wav_file,
+        "-p", password,
+        "-xf", f"output_{password}.txt",
+        "-f"
+    ]
+    
+    result = subprocess.run(
+        cmd,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
+    )
+    
+    return result.returncode == 0
+
+if len(sys.argv) < 2:
+    print("用法: python steghide_crack.py <file.wav>")
+    sys.exit(1)
+
+wav_file = sys.argv[1]
+
+for pwd in passwords:
+    print(f"[*] 尝试密码: '{pwd}'")
+    if try_steghide(wav_file, pwd):
+        print(f"[+] 成功! 密码是: '{pwd}'")
+        with open(f"output_{pwd}.txt", 'r') as f:
+            print(f.read())
+        break
+else:
+    print("[-] 未找到正确密码")
+```
+
+### 案例8: 多层隐写
+
+**题目描述**:
+复杂的多层隐写,需要多个步骤
+
+**解题流程**:
+
+```
+层次1: 频谱图
+1. Audacity打开,查看频谱图
+2. 发现提示: "LSB 2 bits"
+
+层次2: LSB提取
+3. 提取2位LSB
+   python extract_lsb.py challenge.wav 2
+4. 得到一个ZIP文件
+
+层次3: 压缩包
+5. 解压ZIP,需要密码
+6. 回到频谱图,仔细查看,发现密码: "pass123"
+7. 解压得到一个PNG图片
+
+层次4: 图片隐写
+8. 查看图片,看起来正常
+9. 使用zsteg或stegsolve分析
+   zsteg hidden.png
+10. 在图片的LSB中发现最终flag
+
+Flag: FLAG{MULT1_L4Y3R_ST3G0}
+```
+
+**自动化脚本**:
+
+```python
+#!/usr/bin/env python3
+import subprocess
+import zipfile
+import os
+
+def solve_multilayer(wav_file):
+    print("[*] 阶段1: 提取LSB")
+    # 提取2位LSB (根据频谱图提示)
+    lsb_data = extract_lsb(wav_file, num_lsb=2)
+    
+    print("[*] 阶段2: 保存为ZIP")
+    with open('layer1.zip', 'wb') as f:
+        f.write(lsb_data)
+    
+    print("[*] 阶段3: 尝试解压ZIP")
+    passwords = ['pass123', 'password', '123456']  # 从频谱图得到
+    
+    for pwd in passwords:
+        try:
+            with zipfile.ZipFile('layer1.zip', 'r') as z:
+                z.extractall('layer2', pwd=pwd.encode())
+            print(f"[+] ZIP密码: {pwd}")
+            break
+        except:
+            continue
+    
+    print("[*] 阶段4: 分析图片")
+    # 假设解压出hidden.png
+    result = subprocess.run(
+        ['zsteg', 'layer2/hidden.png'],
+        capture_output=True,
+        text=True
+    )
+    
+    print("[+] 最终flag:")
+    print(result.stdout)
+
+solve_multilayer('challenge.wav')
+```
+
+## 常用工具详解
+
+### 1. Audacity
+
+#### 简介
+
+Audacity是一款免费开源的跨平台音频编辑软件,功能强大且易于使用,是CTF音频隐写分析的首选工具之一。
+
+#### 安装
+
+**Windows**:
+
+```
+1. 访问 https://www.audacityteam.org/
+2. 下载 Windows 安装程序
+3. 运行安装程序并按提示操作
+```
+
+**Linux**:
+
+```bash
+sudo apt-get update
+sudo apt-get install audacity
+
+# 或从源码编译
+git clone https://github.com/audacity/audacity.git
+cd audacity
+cmake -S . -B build
+cmake --build build
+```
+
+**macOS**:
+
+```bash
+brew install audacity
+```
+
+#### 核心功能详解
+
+**1. 频谱图分析**
+
+操作步骤:
+
+```
+1. 文件 → 打开 → 选择WAV文件
+2. 点击音轨名称左侧的下拉箭头
+3. 选择 "频谱图"
+4. 菜单栏: 查看 → 频谱图设置
+   - 窗口大小: 建议2048-8192
+   - 窗口类型: Hanning (最常用)
+   - 零填充因子: 1
+   - 颜色方案: 尝试不同方案
+```
+
+频谱图参数说明:
+
+- **窗口大小**: 越大频率分辨率越高,但时间分辨率越低
+- **零填充**: 提高显示平滑度
+- **颜色方案**: 根据对比度选择,推荐试试"Inverse grayscale"
+
+**2. 声道分离**
+
+```
+菜单: 音轨 → 立体声音轨转换为单声道
+或
+点击音轨名称 → 分离立体声为单声道
+```
+
+分离后可以:
+
+- 单独分析左右声道
+- 删除一个声道查看另一个
+- 对比两个声道的差异
+
+**3. 反相处理**
+
+```
+选中音轨 → 效果 → 反相
+```
+
+应用场景:
+
+- 消除相同部分,保留差异
+- 与另一个音轨混合以提取隐藏信息
+
+**4. 速度/音调调整**
+
+```
+效果 → 改变速度 (保持音调)
+效果 → 改变音调 (保持速度)
+效果 → 改变速度和音调
+```
+
+用途:
+
+- 识别变速隐藏的摩尔斯电码
+- 调整音调以识别DTMF音
+- 慢放以听清快速变化
+
+**5. 降噪**
+
+```
+1. 选择一段纯噪音
+2. 效果 → 噪音消除 → 获取噪音配置文件
+3. 选择整个音轨
+4. 效果 → 噪音消除 → 确定
+```
+
+**6. 导出选区**
+
+```
+选中特定区域 → 文件 → 导出 → 导出选中部分
+```
+
+#### 高级技巧
+
+**查看样本数据**:
+
+```
+查看 → 显示剪辑信息
+可以看到采样率、位深度等信息
+```
+
+**绘制波形图**:
+
+```
+分析 → 绘制频谱
+可以生成更详细的频谱分析
+```
+
+### 2. Sonic Visualiser
+
+#### 简介
+
+Sonic Visualiser是专业的音频分析工具,提供多种可视化层和插件,特别适合深度频谱分析。
+
+#### 安装
+
+```
+官网: https://www.sonicvisualiser.org/
+支持: Windows, macOS, Linux
+下载对应平台的安装包
+```
+
+#### 核心功能
+
+**1. 多层可视化**
+
+```
+Layer → Add Spectrogram
+Layer → Add Melodic Range Spectrogram  
+Layer → Add Peak Frequency Spectrogram
+```
+
+每层可以独立配置:
+
+- 颜色方案
+- 频率范围
+- 窗口大小
+
+**2. 时间标记**
+
+```
+Layer → Add Time Instants
+手动标记重要时间点
+用于分析节奏或模式
+```
+
+**3. 插件系统**
+
+Sonic Visualiser支持Vamp插件:
+
+```
+Transform → Vamp Plugins
+常用插件:
+- Beat Tracker: 节奏检测
+- Onset Detector: 起始点检测
+- DTMF Detector: DTMF解码
+```
+
+**4. 导出数据**
+
+```
+File → Export Annotation Layer
+可以导出标记、频率数据等
+```
+
+### 3. DeepSound
+
+#### 简介
+
+DeepSound是Windows上的图形化音频隐写工具,支持在音频文件中嵌入和提取文件。
+
+#### 下载与安装
+
+```
+官网: http://jpinsoft.net/deepsound/
+仅支持Windows
+下载后直接运行,无需安装
+```
+
+#### 使用方法
+
+**提取隐藏文件**:
+
+```
+1. 运行DeepSound.exe
+2. 点击 "Open carrier files"
+3. 选择可疑的WAV文件
+4. 点击 "Extract secret files"
+5. 如果需要密码:
+   - 尝试常见密码: password, 123456, admin
+   - 题目描述中的关键词
+   - 文件名或元数据中的提示
+6. 选择输出目录
+7. 提取完成后查看文件
+```
+
+**查看信息**:
+
+```
+打开文件后,界面会显示:
+- 文件是否包含隐藏数据
+- 使用的加密方式
+- 数据大小估计
+```
+
+#### 支持的格式
+
+- 载体: WAV, FLAC, APE, MP3
+- 隐藏: 任意文件类型
+
+#### 加密选项
+
+- AES 128/192/256
+- 可选密码保护
+
+### 4. Steghide
+
+#### 简介
+
+Steghide是功能强大的命令行隐写工具,支持JPEG、BMP、WAV、AU等格式。
+
+#### 安装
+
+**Linux**:
+
+```bash
+sudo apt-get install steghide
+```
+
+**macOS**:
+
+```bash
+brew install steghide
+```
+
+**Windows**:
+
+```
+下载预编译版本:
+https://steghide.sourceforge.net/
+解压到PATH目录
+```
+
+#### 命令详解
+
+**提取数据**:
+
+```bash
+steghide extract -sf audio.wav
+
+# 参数说明:
+# -sf: specify file (指定载体文件)
+# -p: passphrase (密码)
+# -xf: extract file (提取文件名)
+# -v: verbose (详细输出)
+
+# 有密码时:
+steghide extract -sf audio.wav -p "password"
+
+# 指定输出文件名:
+steghide extract -sf audio.wav -xf output.txt
+```
+
+**查看文件信息**:
+
+```bash
+steghide info audio.wav
+
+# 输出示例:
+# "audio.wav":
+#   format: wave audio, PCM encoding
+#   capacity: 2.1 KB
+# Try to get information about embedded data ? (y/n) y
+# Enter passphrase:
+# embedded data:
+#   size: 157.0 Byte
+#   encrypted: rijndael-128, cbc
+#   compressed: yes
+```
+
+**嵌入数据** (制作题目用):
+
+```bash
+steghide embed -cf audio.wav -ef secret.txt
+
+# 参数:
+# -cf: cover file (载体文件)
+# -ef: embed file (要隐藏的文件)
+# -p: 设置密码
+# -e: 加密算法 (rijndael-128, rijndael-192, rijndael-256等)
+# -z: 压缩级别 (1-9)
+
+# 完整示例:
+steghide embed -cf audio.wav -ef flag.txt -p "ctf2024" -e rijndael-256 -z 9
+```
+
+#### 支持的加密算法
+
+- none (无加密)
+- rijndael-128 (AES-128)
+- rijndael-192 (AES-192)
+- rijndael-256 (AES-256)
+
+#### 常见错误
+
+**错误1**: "could not extract any data"
+
+```
+原因: 文件中没有隐藏数据,或密码错误
+解决: 尝试不同密码,或文件使用了其他隐写方法
+```
+
+**错误2**: "the file format is not supported"
+
+```
+原因: WAV文件格式不符合要求
+解决: 确认是PCM编码的WAV文件
+```
+
+### 5. SilentEye
+
+#### 简介
+
+SilentEye是跨平台的图形化隐写工具,支持图像和音频文件。
+
+#### 安装
+
+```
+官网: https://silenteye.v1kings.io/
+支持: Windows, Linux, macOS
+下载对应平台的安装包
+```
+
+#### 使用方法
+
+**解码**:
+
+```
+1. 启动SilentEye
+2. 点击 "Decode"
+3. 选择WAV文件
+4. 如果需要密码,输入密码
+5. 选择输出位置
+6. 点击 "Decode"
+```
+
+**选项**:
+
+- 格式选择: WAV, BMP, JPEG
+- 加密: AES
+- 压缩: GZIP
+
+### 6. WavSteg (Python)
+
+#### 简介
+
+WavSteg是Python实现的LSB隐写工具,可以自定义和扩展。
+
+#### 安装
+
+```bash
+pip install stego-lsb
+# 或
+pip install stepic
+```
+
+#### 使用示例
+
+**使用stego-lsb库**:
+
+```python
+from stego_lsb import LSBSteg
+
+# 提取数据
+steg = LSBSteg()
+data = steg.decode_binary('audio.wav')
+
+# 保存为文件
+with open('extracted.bin', 'wb') as f:
+    f.write(data)
+
+# 如果是文本
+text = data.decode('utf-8')
+print(text)
 ```
