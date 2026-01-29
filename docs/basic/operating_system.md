@@ -251,3 +251,40 @@ dir == ls == Get-ChildItem
 🧠 **PowerShell 脚本 / 自动化 / DevOps** → `ls`
 
 🐧 **Linux 用户转 Windows** → `ls`（更顺手）
+
+### 创建目录
+
+#### CMD下的创建目录
+
+```cmd
+mkdir test
+```
+
+或
+
+```cmd
+md test
+```
+
+![](assets/image-20260129105050593.png)
+
+#### PowerShell下的目录创建
+
+**推荐写法：**
+
+```powershell
+New-Item -ItemType Directory 你好啊
+```
+
+![](assets/image-20260129105313783.png)
+
+**简写**：
+
+```powershell
+mkdir test
+md test
+```
+
+!!! tip ""
+
+    PowerShell 里的 mkdir / md 是 别名，底层还是 New-Item
