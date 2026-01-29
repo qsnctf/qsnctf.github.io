@@ -1240,6 +1240,67 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#删除目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        删除目录
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="删除目录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmd下的删除目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMD下的删除目录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powershell-下的删除目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PowerShell 下的删除目录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmd-vs-powershell-对照表" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMD vs PowerShell 对照表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#高危操作" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        高危操作
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4921,6 +4982,67 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#删除目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        删除目录
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="删除目录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmd下的删除目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMD下的删除目录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powershell-下的删除目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PowerShell 下的删除目录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmd-vs-powershell-对照表" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMD vs PowerShell 对照表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#高危操作" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        高危操作
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5283,6 +5405,95 @@
 <div class="admonition tip">
 <p>PowerShell 里的 mkdir / md 是 别名，底层还是 New-Item</p>
 </div>
+<p><strong>创建多级目录：</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">mkdir</span> <span class="n">a</span><span class="p">\</span><span class="n">b</span><span class="p">\</span><span class="n">c</span>
+</code></pre></div>
+<h3 id="删除目录">删除目录<a class="headerlink" href="#删除目录" title="Permanent link">&para;</a></h3>
+<h4 id="cmd下的删除目录">CMD下的删除目录<a class="headerlink" href="#cmd下的删除目录" title="Permanent link">&para;</a></h4>
+<div class="admonition danger">
+<p class="admonition-title">⚠️</p>
+<p>只能删空目录</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>rmdir test
+</code></pre></div>
+<p>或</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>rd test
+</code></pre></div>
+<p><img alt="" src="../assets/image-20260129110301129.png" /></p>
+<p><strong>删除目录+所有子目录和文件：</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>rmdir /s test
+</code></pre></div>
+<p><strong>静默删除：</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>rmdir /s /q test
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">⚠️</p>
+<p>属于危险命令，一旦执行就不能撤销。</p>
+</div>
+<h4 id="powershell-下的删除目录">PowerShell 下的删除目录<a class="headerlink" href="#powershell-下的删除目录" title="Permanent link">&para;</a></h4>
+<p><strong>默认不能删非空目录：</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">Remove-Item</span> <span class="n">test</span>
+</code></pre></div>
+<p><strong>删除目录 + 内容（等价于 <code>rd /s</code>）：</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">Remove-Item</span> <span class="n">test</span> <span class="n">-Recurse</span>
+</code></pre></div>
+<p><strong>静默删除：</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nb">Remove-Item</span> <span class="n">test</span> <span class="n">-Recurse</span> <span class="n">-Force</span>
+</code></pre></div>
+<p><strong>别名写法：</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">rm </span><span class="n">test</span> <span class="n">-Recurse</span> <span class="n">-Force</span>
+</code></pre></div>
+<h4 id="cmd-vs-powershell-对照表">CMD vs PowerShell 对照表<a class="headerlink" href="#cmd-vs-powershell-对照表" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>CMD</th>
+<th>PowerShell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>创建目录</td>
+<td><code>mkdir test</code></td>
+<td><code>mkdir test</code></td>
+</tr>
+<tr>
+<td>创建多级目录</td>
+<td><code>mkdir a\b\c</code></td>
+<td><code>mkdir a\b\c</code></td>
+</tr>
+<tr>
+<td>删除空目录</td>
+<td><code>rmdir test</code></td>
+<td><code>Remove-Item test</code></td>
+</tr>
+<tr>
+<td>删除非空目录</td>
+<td><code>rmdir /s test</code></td>
+<td><code>Remove-Item test -Recurse</code></td>
+</tr>
+<tr>
+<td>强制删除</td>
+<td><code>rmdir /s /q test</code></td>
+<td><code>Remove-Item -Recurse -Force</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="高危操作">高危操作<a class="headerlink" href="#高危操作" title="Permanent link">&para;</a></h4>
+<div class="admonition danger">
+<p class="admonition-title">⚠️</p>
+<p>一定不要乱用下面代码！！！</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">rm </span><span class="n">-Recurse</span> <span class="n">-Force</span> <span class="p">*</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nb">rmdir </span><span class="p">/</span><span class="n">s</span> <span class="p">/</span><span class="n">q</span> <span class="n">C</span><span class="p">:\</span>
+</code></pre></div>
+<p>删除前建议先：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>ls
+</code></pre></div>
+<p>或</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>dir
+</code></pre></div>
 
 
 
