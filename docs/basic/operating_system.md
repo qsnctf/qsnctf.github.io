@@ -553,3 +553,147 @@ Remove-Item a.txt -Force
 ```
 Remove-Item dir -Recurse -Force
 ```
+
+### PING连通测试
+
+```powershell
+ping 8.8.8.8
+ping www.baidu.com
+```
+
+**常用参数：**
+
+```powershell
+ping -n 4 8.8.8.8     # 发送 4 次（Windows）
+ping -t 8.8.8.8      # 一直 ping（Ctrl+C 停止）
+```
+
+### taskkill 结束进程
+
+```powershell
+taskkill /PID 1234
+taskkill /IM notepad.exe
+taskkill /IM notepad.exe /F
+```
+
+`/F`：强制结束
+
+`/IM`：进程名
+
+### netstat
+
+```
+netstat -ano
+```
+
+常用组合：
+
+```
+netstat -ano | findstr 8080
+```
+
+参数说明：
+
+- `-a`：所有连接
+- `-n`：数字显示
+- `-o`：显示 PID
+
+### `find` / `findstr`（文本查找）
+
+#### CMD：`find`
+
+```
+type a.txt | find "error"
+```
+
+#### CMD 推荐：`findstr`
+
+```
+findstr "error" a.txt
+```
+
+#### PowerShell（更强）
+
+```
+Select-String "error" a.txt
+```
+
+### `tracert`（路由追踪）
+
+```
+tracert www.baidu.com
+```
+
+显示：
+
+- 每一跳路由
+- 延迟时间
+
+PowerShell 也能用：
+
+```
+tracert 8.8.8.8
+```
+
+###  `type`（查看文件内容）
+
+#### CMD
+
+```
+type a.txt
+```
+
+#### PowerShell（等价但更强）
+
+```
+Get-Content a.txt
+```
+
+别名：
+
+```
+cat a.txt
+```
+
+### CMD 特殊符号（⚠️重点）
+
+| 符号 | 含义               |
+| ---- | ------------------ |
+| `>`  | 输出重定向（覆盖） |
+| `>>` | 追加输出           |
+| `<`  | 输入重定向         |
+| `    | `                  |
+| `&`  | 顺序执行           |
+| `&&` | 前一个成功才执行   |
+| `    |                    |
+| `^`  | 转义符             |
+| `%`  | 变量               |
+| `*`  | 通配符             |
+
+#### 示例
+
+```
+dir > list.txt
+type list.txt | find "exe"
+```
+
+### PowerShell 符号
+
+| 符号       | 作用       |
+| ---------- | ---------- |
+| `          | `          |
+| `>` / `>>` | 输出到文件 |
+| `$`        | 变量       |
+| `*`        | 通配符     |
+| `?`        | 单字符通配 |
+| `@()`      | 数组       |
+| `{}`       | 代码块     |
+| `()`       | 表达式     |
+| `$_`       | 当前对象   |
+| `;`        | 分隔命令   |
+
+#### 例子
+
+查看8080的端口占用
+
+![](assets/image-20260129134952999.png)
