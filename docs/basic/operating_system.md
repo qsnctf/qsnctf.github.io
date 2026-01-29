@@ -375,7 +375,7 @@ rm test -Recurse -Force
 
 !!! danger "⚠️"
 
-    一定不要乱用下面代码！！！
+    一定不要乱用下面命令！！！
 
 ```powershell
 rm -Recurse -Force *
