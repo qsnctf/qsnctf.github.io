@@ -504,7 +504,7 @@ Move-Item src dst
 Move-Item src dst -Force
 ```
 
-#### 删除文件
+### 删除文件
 
 #### CMD
 
