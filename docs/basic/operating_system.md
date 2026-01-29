@@ -292,3 +292,104 @@ md test
 !!! tip ""
 
     PowerShell 里的 mkdir / md 是 别名，底层还是 New-Item
+
+**创建多级目录：**
+
+```powershell
+mkdir a\b\c
+```
+
+### 删除目录
+
+#### CMD下的删除目录
+
+!!! danger "⚠️"
+
+    只能删空目录
+
+```
+rmdir test
+```
+
+或
+
+```
+rd test
+```
+
+![](assets/image-20260129110301129.png)
+
+**删除目录+所有子目录和文件：**
+
+```cmd
+rmdir /s test
+```
+
+**静默删除：**
+
+```cmd
+rmdir /s /q test
+```
+
+!!! danger "⚠️"
+
+    属于危险命令，一旦执行就不能撤销。
+
+#### PowerShell 下的删除目录
+
+**默认不能删非空目录：**
+
+```powershell
+Remove-Item test
+```
+
+**删除目录 + 内容（等价于 `rd /s`）：**
+
+```powershell
+Remove-Item test -Recurse
+```
+
+**静默删除：**
+
+```powershell
+Remove-Item test -Recurse -Force
+```
+
+**别名写法：**
+
+```powershell
+rm test -Recurse -Force
+```
+
+#### CMD vs PowerShell 对照表
+
+| 操作         | CMD                | PowerShell                    |
+| ------------ | ------------------ | ----------------------------- |
+| 创建目录     | `mkdir test`       | `mkdir test`                  |
+| 创建多级目录 | `mkdir a\b\c`      | `mkdir a\b\c`                 |
+| 删除空目录   | `rmdir test`       | `Remove-Item test`            |
+| 删除非空目录 | `rmdir /s test`    | `Remove-Item test -Recurse`   |
+| 强制删除     | `rmdir /s /q test` | `Remove-Item -Recurse -Force` |
+
+#### 高危操作
+
+!!! danger "⚠️"
+
+    一定不要乱用下面代码！！！
+
+```powershell
+rm -Recurse -Force *
+rmdir /s /q C:\
+```
+
+删除前建议先：
+
+```
+ls
+```
+
+或
+
+```
+dir
+```
