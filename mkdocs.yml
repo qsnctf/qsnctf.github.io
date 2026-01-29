@@ -148,6 +148,7 @@ nav:
       - 操作系统: basic/operating_system.md
     - 计算机网络:
       - 网络基础: basic/network/intro.md
+      - OSI七层模型: basic/network/osi.md
   - 编程: 
     - 介绍: Code/index.md
     - 汇编语言: 
