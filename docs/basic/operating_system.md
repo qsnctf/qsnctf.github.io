@@ -393,3 +393,163 @@ ls
 ```
 dir
 ```
+
+### 查看本机IP地址
+
+```cmd
+ipconfig
+```
+
+
+
+**PowerShell下，可以使用`ipconfig`，当然也可以使用：**
+
+```powershell
+Get-NetIPAddress
+```
+
+### 清空输出
+
+```cmd
+cls
+```
+
+> 类似于Linux下的clear
+
+### 复制文件
+
+#### CMD
+
+##### 复制文件
+
+```
+copy a.txt b.txt
+```
+
+##### 复制到目录
+
+```
+copy a.txt D:\backup\
+```
+
+##### 复制整个目录（必须用 xcopy / robocopy）
+
+```
+xcopy src dst /e /i
+```
+
+> ✅ 推荐新系统直接用 `robocopy`（更强更稳）
+
+#### PowerShell
+
+##### 复制文件（推荐）
+
+```
+Copy-Item a.txt b.txt
+```
+
+##### 复制到目录
+
+```
+Copy-Item a.txt D:\backup\
+```
+
+##### 复制整个目录
+
+```
+Copy-Item src dst -Recurse
+```
+
+##### 强制覆盖
+
+```
+Copy-Item a.txt dst -Force
+```
+
+### 移动文件
+
+#### CMD
+
+##### 移动 / 重命名文件
+
+```
+move a.txt D:\backup\
+move a.txt b.txt
+```
+
+##### 移动目录
+
+```
+move src dst
+```
+
+#### PowerShell
+
+##### 移动 / 重命名
+
+```
+Move-Item a.txt D:\backup\
+Move-Item a.txt b.txt
+```
+
+##### 移动目录
+
+```
+Move-Item src dst
+```
+
+##### 强制覆盖
+
+```
+Move-Item src dst -Force
+```
+
+#### 删除文件
+
+#### CMD
+
+##### 删除文件
+
+```
+del a.txt
+```
+
+##### 静默删除
+
+```
+del /q a.txt
+```
+
+##### 删除多个文件
+
+```
+del *.log
+```
+
+⚠️ `del` **不能删除目录**
+
+#### PowerShell
+
+##### 删除文件
+
+```
+Remove-Item a.txt
+```
+
+##### 删除多个
+
+```
+Remove-Item *.log
+```
+
+##### 强制删除
+
+```
+Remove-Item a.txt -Force
+```
+
+##### 删除目录 + 内容（高危⚠️）
+
+```
+Remove-Item dir -Recurse -Force
+```
