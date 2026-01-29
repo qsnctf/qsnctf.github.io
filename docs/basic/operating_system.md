@@ -203,7 +203,11 @@ dir /b        # 仅显示文件名（bare）
 
 #### ls命令
 
-ls命令在**PowerShell**中是允许的，但是在PowerShell中，`ls` 里其实是 **别名（alias）**
+!!! tip ""
+
+    ls命令在 **PowerShell** 中是允许的，但是在PowerShell中，`ls` 里其实是 **别名（alias）**
+
+
 
 ```powershell
 ls
