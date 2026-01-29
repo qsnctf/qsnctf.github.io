@@ -146,6 +146,8 @@ nav:
     - 计算机基础: 
       - 计算机是怎么工作的？: basic/How_does_a_computer_work.md
       - 操作系统: basic/operating_system.md
+    - 计算机网络:
+      - 网络基础: basic/network/intro.md
   - 编程: 
     - 介绍: Code/index.md
     - 汇编语言: 
