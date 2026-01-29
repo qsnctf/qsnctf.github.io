@@ -1201,6 +1201,45 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#创建目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建目录
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="创建目录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmd下的创建目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMD下的创建目录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powershell下的目录创建" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PowerShell下的目录创建
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4843,6 +4882,45 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#创建目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建目录
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="创建目录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmd下的创建目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMD下的创建目录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powershell下的目录创建" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PowerShell下的目录创建
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5183,6 +5261,26 @@
 <p>👴 <strong>老 Windows 用户 / 批处理</strong> → <code>dir</code></p>
 <p>🧠 <strong>PowerShell 脚本 / 自动化 / DevOps</strong> → <code>ls</code></p>
 <p>🐧 <strong>Linux 用户转 Windows</strong> → <code>ls</code>（更顺手）</p>
+<h3 id="创建目录">创建目录<a class="headerlink" href="#创建目录" title="Permanent link">&para;</a></h3>
+<h4 id="cmd下的创建目录">CMD下的创建目录<a class="headerlink" href="#cmd下的创建目录" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>mkdir test
+</code></pre></div>
+<p>或</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>md test
+</code></pre></div>
+<p><img alt="" src="../assets/image-20260129105050593.png" /></p>
+<h4 id="powershell下的目录创建">PowerShell下的目录创建<a class="headerlink" href="#powershell下的目录创建" title="Permanent link">&para;</a></h4>
+<p><strong>推荐写法：</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">New-Item</span> <span class="n">-ItemType</span> <span class="n">Directory</span> <span class="n">你好啊</span>
+</code></pre></div>
+<p><img alt="" src="../assets/image-20260129105313783.png" /></p>
+<p><strong>简写</strong>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">mkdir</span> <span class="n">test</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nb">md </span><span class="n">test</span>
+</code></pre></div>
+<div class="admonition tip">
+<p>PowerShell 里的 mkdir / md 是 别名，底层还是 New-Item</p>
+</div>
 
 
 
