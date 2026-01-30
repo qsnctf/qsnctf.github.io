@@ -165,6 +165,7 @@ nav:
       - C++数据类型: Code/CPP/cpp-data-types.md
       - C++变量类型: Code/CPP/cpp-variable-types.md
       - C++变量作用域: Code/CPP/cpp-variable-scope.md
+      - C++常量: Code/CPP/cpp-constants-literals.md
     - Python:
       - Python介绍: Code/Python/Python_Intro.md
       - Python基础语法: Code/Python/Python_Basic_Syntax.md
