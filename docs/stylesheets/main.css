@@ -496,6 +496,16 @@ html[data-md-color-scheme="slate"] .md-nav__link--active {
   background: rgba(var(--md-accent-fg-color--rgb), .28);
 }
 
+/* 图片可点击提示 */
+.md-content .md-typeset img {
+  cursor: zoom-in;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.md-content .md-typeset img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
 
 
 /* 防盗水印
