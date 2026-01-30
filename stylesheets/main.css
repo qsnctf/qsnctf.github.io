@@ -1,3 +1,19 @@
+.md-content {
+  padding-bottom: 3rem;
+}
+
+.md-content article {
+  background: var(--md-default-bg-color);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+/* 防盗水印
+Author: Moxin
+Date: 2026-01-30
+Email: moxin1044@gmail.com
+*/
 body::before {
     content: "";
     position: fixed;
