@@ -1,0 +1,28 @@
+/* ======================================
+   全局防盗水印
+   文本：青少年CTF文库
+   ====================================== */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 2147483647;
+    pointer-events: none;
+
+    background-repeat: repeat;
+    background-size: 360px 240px;
+
+    background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='360' height='240'>\
+  <text x='50%' y='50%' \
+        text-anchor='middle' \
+        dominant-baseline='middle' \
+        transform='rotate(-35 180 120)' \
+        fill='rgba(0,0,0,0.05)' \
+        font-size='32' \
+        font-family='Segoe UI, Arial, sans-serif'>\
+    青少年CTF文库\
+  </text>\
+</svg>");
+}
