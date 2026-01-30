@@ -306,6 +306,195 @@ html[data-md-color-scheme="slate"] .md-path__link:hover {
   margin: 1.2em auto;
 }
 
+/* 搜索栏 */
+/* =====================================================
+   右侧目录（TOC）- 高级卡片风格（紧凑版）
+   ===================================================== */
+
+.md-nav--secondary {
+  background: var(--md-default-bg-color);
+  border-radius: 14px;
+  padding: .7rem .7rem;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.04),
+    inset 0 0 0 1px rgba(255,255,255,.4);
+}
+
+/* 标题 */
+.md-nav--secondary .md-nav__title {
+  font-size: .85rem;
+  font-weight: 600;
+  padding-bottom: .35rem;
+  margin-bottom: .4rem;
+  border-bottom: 1px dashed rgba(0,0,0,.12);
+  color: var(--md-default-fg-color);
+}
+
+/* 列表 */
+.md-nav--secondary .md-nav__list {
+  padding-left: 0;
+}
+
+/* 单项 */
+.md-nav--secondary .md-nav__item {
+  margin: 0;
+}
+
+/* 链接 */
+.md-nav--secondary .md-nav__link {
+  padding: .18rem .45rem;
+  font-size: .78rem;
+  line-height: 1.25;
+  border-radius: 6px;
+  color: var(--md-default-fg-color--light);
+  transition: background .15s ease, color .15s ease;
+}
+
+/* hover */
+.md-nav--secondary .md-nav__link:hover {
+  background: rgba(var(--md-accent-fg-color--rgb), .08);
+  color: var(--md-accent-fg-color);
+}
+
+/* 当前高亮 */
+.md-nav--secondary .md-nav__link--active {
+  background: rgba(var(--md-accent-fg-color--rgb), .14);
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* === 层级 === */
+
+/* 一级 */
+.md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+/* 二级 */
+.md-nav--secondary .md-nav__item .md-nav__list .md-nav__link {
+  padding-left: 1.1rem;
+  font-size: .76rem;
+  opacity: .95;
+  position: relative;
+}
+
+/* 二级竖线 */
+.md-nav--secondary .md-nav__item .md-nav__list .md-nav__link::before {
+  content: "";
+  position: absolute;
+  left: .45rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 50%;
+  background: rgba(0,0,0,.15);
+  border-radius: 2px;
+}
+
+/* 三级 */
+.md-nav--secondary .md-nav__item .md-nav__item .md-nav__list .md-nav__link {
+  padding-left: 1.8rem;
+  font-size: .72rem;
+  opacity: .85;
+}
+
+/* 深色模式 */
+html[data-md-color-scheme="slate"] .md-nav--secondary {
+  border-color: rgba(255,255,255,.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,.45);
+}
+
+html[data-md-color-scheme="slate"]
+.md-nav--secondary .md-nav__item .md-nav__list .md-nav__link::before {
+  background: rgba(255,255,255,.25);
+}
+
+/* =====================================================
+   左侧导航栏（Primary Sidebar）- 紧凑卡片式
+   ===================================================== */
+
+.md-sidebar--primary {
+  font-size: .88rem;
+}
+
+/* 滚动区 */
+.md-sidebar__scrollwrap {
+  padding: .4rem .35rem;
+}
+
+/* 单项通用 */
+.md-nav__link {
+  padding: .3rem .55rem;
+  margin: 0;
+  line-height: 1.35;
+  border-radius: 6px;
+  color: var(--md-default-fg-color--light);
+  transition: background .15s ease, color .15s ease;
+}
+
+/* hover */
+.md-nav__link:hover {
+  background: rgba(var(--md-accent-fg-color--rgb), .07);
+  color: var(--md-accent-fg-color);
+}
+
+/* 当前项 */
+.md-nav__link--active {
+  background: rgba(var(--md-accent-fg-color--rgb), .16);
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* 左侧强调条 */
+.md-nav__item--active > .md-nav__link {
+  border-left: 2px solid var(--md-accent-fg-color);
+  padding-left: calc(.55rem - 2px);
+}
+
+/* === 层级 === */
+
+/* 一级 */
+.md-nav[data-md-level="1"] > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-size: .9rem;
+  font-weight: 600;
+  margin-top: .15rem;
+}
+
+/* 二级 */
+.md-nav[data-md-level="2"] .md-nav__link {
+  padding-left: 1.3rem;
+  font-size: .85rem;
+  opacity: .95;
+}
+
+/* 三级 */
+.md-nav[data-md-level="3"] .md-nav__link {
+  padding-left: 2.1rem;
+  font-size: .8rem;
+  opacity: .88;
+}
+
+/* 四级兜底 */
+.md-nav[data-md-level="4"] .md-nav__link {
+  padding-left: 2.8rem;
+  font-size: .76rem;
+  opacity: .8;
+}
+
+/* 深色模式 */
+html[data-md-color-scheme="slate"] .md-nav__link {
+  color: rgba(255,255,255,.8);
+}
+
+html[data-md-color-scheme="slate"] .md-nav__link:hover {
+  background: rgba(255,255,255,.06);
+}
+
+html[data-md-color-scheme="slate"] .md-nav__link--active {
+  background: rgba(var(--md-accent-fg-color--rgb), .28);
+}
 
 
 
