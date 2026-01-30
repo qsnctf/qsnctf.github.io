@@ -5162,26 +5162,26 @@
   
 
 
-<h1 id="python-语言介绍">Python 语言介绍<a class="headerlink" href="#python-语言介绍" title="Permanent link">&para;</a></h1>
-<h2 id="python-简介">Python 简介<a class="headerlink" href="#python-简介" title="Permanent link">&para;</a></h2>
+<h1 id="python-语言介绍">Python 语言介绍<a class="headerlink" href="#python-语言介绍" title="Permanent link">¶</a></h1>
+<h2 id="python-简介">Python 简介<a class="headerlink" href="#python-简介" title="Permanent link">¶</a></h2>
 <p>Python 是一种高级编程语言，由吉多·范罗苏姆（Guido van Rossum）于1989年设计，1991年首次发布。Python 以其简洁明了的语法、强大的功能和丰富的库生态系统而闻名，被广泛应用于 Web 开发、数据科学、人工智能、自动化脚本、网络编程等领域。</p>
 <p>Python 的设计哲学强调代码的可读性和简洁性，它的语法允许开发者用更少的代码行表达概念。Python 支持多种编程范式，包括面向对象、命令式、函数式和过程式编程。</p>
-<h2 id="发展历史">发展历史<a class="headerlink" href="#发展历史" title="Permanent link">&para;</a></h2>
-<h3 id="起源与早期发展1989-2000">起源与早期发展（1989-2000）<a class="headerlink" href="#起源与早期发展1989-2000" title="Permanent link">&para;</a></h3>
+<h2 id="发展历史">发展历史<a class="headerlink" href="#发展历史" title="Permanent link">¶</a></h2>
+<h3 id="起源与早期发展1989-2000">起源与早期发展（1989-2000）<a class="headerlink" href="#起源与早期发展1989-2000" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>1989年</strong>：吉多·范罗苏姆在荷兰国家数学和计算机科学研究中心（CWI）开始开发 Python</li>
 <li><strong>1991年</strong>：Python 0.9.0 版本发布，发布于 alt.sources 新闻组</li>
 <li><strong>1994年</strong>：Python 1.0 发布，增加了函数、类和异常处理等特性</li>
 <li><strong>2000年</strong>：Python 2.0 发布，引入了列表推导式、垃圾回收机制等新特性</li>
 </ul>
-<h3 id="python-2-时代2000-2008">Python 2 时代（2000-2008）<a class="headerlink" href="#python-2-时代2000-2008" title="Permanent link">&para;</a></h3>
+<h3 id="python-2-时代2000-2008">Python 2 时代（2000-2008）<a class="headerlink" href="#python-2-时代2000-2008" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>2001年</strong>：Python 软件基金会（PSF）成立</li>
 <li><strong>2004年</strong>：Django 框架发布，极大地推动了 Python 在 Web 开发领域的应用</li>
 <li><strong>2006年</strong>：Python 2.5 发布，增加了 with 语句等语法糖</li>
 <li><strong>2008年</strong>：Python 2.6 发布，这是最后一个支持 Python 2.0 系列特性的版本</li>
 </ul>
-<h3 id="python-3-时代与现代化2008-至今">Python 3 时代与现代化（2008-至今）<a class="headerlink" href="#python-3-时代与现代化2008-至今" title="Permanent link">&para;</a></h3>
+<h3 id="python-3-时代与现代化2008-至今">Python 3 时代与现代化（2008-至今）<a class="headerlink" href="#python-3-时代与现代化2008-至今" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>2008年</strong>：Python 3.0 发布，进行了向后不兼容的重大更新，统一了字符串处理</li>
 <li><strong>2010年</strong>：Python 2.7 发布，作为 Python 2.x 系列的最后一个版本</li>
@@ -5191,64 +5191,64 @@
 <li><strong>2021年</strong>：Python 3.10 发布，引入了结构化模式匹配</li>
 <li><strong>2023年</strong>：Python 3.12 发布，性能进一步提升，移除了 GIL 的部分限制</li>
 </ul>
-<h2 id="python-特点">Python 特点<a class="headerlink" href="#python-特点" title="Permanent link">&para;</a></h2>
-<h3 id="1-简洁易读的语法">1. 简洁易读的语法<a class="headerlink" href="#1-简洁易读的语法" title="Permanent link">&para;</a></h3>
+<h2 id="python-特点">Python 特点<a class="headerlink" href="#python-特点" title="Permanent link">¶</a></h2>
+<h3 id="1-简洁易读的语法">1. 简洁易读的语法<a class="headerlink" href="#1-简洁易读的语法" title="Permanent link">¶</a></h3>
 <ul>
 <li>语法清晰简洁，接近自然语言</li>
 <li>强制缩进提高了代码可读性</li>
 <li>代码行数相对较少，开发效率高</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Python 代码示例</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">hello_world</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Python 代码示例</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">hello_world</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!"</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">hello_world</span><span class="p">(</span><span class="s2">"Python"</span><span class="p">))</span>
 </code></pre></div>
-<h3 id="2-解释型语言">2. 解释型语言<a class="headerlink" href="#2-解释型语言" title="Permanent link">&para;</a></h3>
+<h3 id="2-解释型语言">2. 解释型语言<a class="headerlink" href="#2-解释型语言" title="Permanent link">¶</a></h3>
 <ul>
 <li>无需编译，直接运行</li>
 <li>支持交互式编程</li>
 <li>快速原型开发</li>
 </ul>
-<h3 id="3-跨平台性">3. 跨平台性<a class="headerlink" href="#3-跨平台性" title="Permanent link">&para;</a></h3>
+<h3 id="3-跨平台性">3. 跨平台性<a class="headerlink" href="#3-跨平台性" title="Permanent link">¶</a></h3>
 <ul>
 <li>可在 Windows、Linux、Mac OS 等多种操作系统上运行</li>
 <li>一次编写，到处运行</li>
 <li>良好的平台兼容性</li>
 </ul>
-<h3 id="4-丰富的标准库">4. 丰富的标准库<a class="headerlink" href="#4-丰富的标准库" title="Permanent link">&para;</a></h3>
+<h3 id="4-丰富的标准库">4. 丰富的标准库<a class="headerlink" href="#4-丰富的标准库" title="Permanent link">¶</a></h3>
 <ul>
 <li>"内置电池"（Batteries Included）哲学</li>
 <li>涵盖网络、文件处理、数据结构等各个方面</li>
 <li>减少对外部依赖的需求</li>
 </ul>
-<h3 id="5-强大的第三方生态系统">5. 强大的第三方生态系统<a class="headerlink" href="#5-强大的第三方生态系统" title="Permanent link">&para;</a></h3>
+<h3 id="5-强大的第三方生态系统">5. 强大的第三方生态系统<a class="headerlink" href="#5-强大的第三方生态系统" title="Permanent link">¶</a></h3>
 <ul>
 <li>PyPI（Python Package Index）包含数十万个包</li>
 <li>NumPy、Pandas、Matplotlib 等科学计算库</li>
 <li>Django、Flask 等 Web 框架</li>
 <li>TensorFlow、PyTorch 等机器学习框架</li>
 </ul>
-<h3 id="6-多编程范式支持">6. 多编程范式支持<a class="headerlink" href="#6-多编程范式支持" title="Permanent link">&para;</a></h3>
+<h3 id="6-多编程范式支持">6. 多编程范式支持<a class="headerlink" href="#6-多编程范式支持" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>面向对象编程</strong>：支持类、继承、多态</li>
 <li><strong>函数式编程</strong>：支持高阶函数、lambda 表达式</li>
 <li><strong>过程式编程</strong>：传统的函数调用和流程控制</li>
 <li><strong>异步编程</strong>：async/await 语法支持</li>
 </ul>
-<h3 id="7-动态类型系统">7. 动态类型系统<a class="headerlink" href="#7-动态类型系统" title="Permanent link">&para;</a></h3>
+<h3 id="7-动态类型系统">7. 动态类型系统<a class="headerlink" href="#7-动态类型系统" title="Permanent link">¶</a></h3>
 <ul>
 <li>变量无需声明类型</li>
 <li>运行时类型检查</li>
 <li>灵活的类型转换</li>
 </ul>
-<h3 id="8-内存管理自动化">8. 内存管理自动化<a class="headerlink" href="#8-内存管理自动化" title="Permanent link">&para;</a></h3>
+<h3 id="8-内存管理自动化">8. 内存管理自动化<a class="headerlink" href="#8-内存管理自动化" title="Permanent link">¶</a></h3>
 <ul>
 <li>自动垃圾回收机制</li>
 <li>无需手动内存管理</li>
 <li>减少内存泄漏风险</li>
 </ul>
-<h3 id="9-广泛的应用领域">9. 广泛的应用领域<a class="headerlink" href="#9-广泛的应用领域" title="Permanent link">&para;</a></h3>
+<h3 id="9-广泛的应用领域">9. 广泛的应用领域<a class="headerlink" href="#9-广泛的应用领域" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Web 开发</strong>：Django、Flask、FastAPI</li>
 <li><strong>数据科学与机器学习</strong>：NumPy、Pandas、Scikit-learn</li>
@@ -5257,7 +5257,7 @@
 <li><strong>科学计算</strong>：SciPy、Matplotlib、SymPy</li>
 <li><strong>游戏开发</strong>：Pygame、Panda3D</li>
 </ul>
-<h3 id="10-活跃的社区支持">10. 活跃的社区支持<a class="headerlink" href="#10-活跃的社区支持" title="Permanent link">&para;</a></h3>
+<h3 id="10-活跃的社区支持">10. 活跃的社区支持<a class="headerlink" href="#10-活跃的社区支持" title="Permanent link">¶</a></h3>
 <ul>
 <li>庞大的开发者社区</li>
 <li>丰富的学习资源</li>
@@ -5377,8 +5377,6 @@
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
       
     
   </body>

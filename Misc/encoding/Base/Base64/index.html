@@ -5113,8 +5113,8 @@
   <h1>Base64</h1>
 
 <p>Base64 是一种把 <strong>二进制数据文本化</strong> 的编码方式：它把任意字节流（图片、文件、密钥、压缩数据等）转换成只包含 <strong>A–Z、a–z、0–9、+、/</strong>（以及用于补齐的 <strong>=</strong>）这些可打印字符的字符串，方便在只适合传文本的场景里传输和存储（比如邮件、URL 参数、JSON、HTTP 头等）。注意：<strong>Base64 不是加密</strong>，只是编码，任何人都能解回原始数据。</p>
-<h2 id="base64-的原理">Base64 的原理<a class="headerlink" href="#base64-的原理" title="Permanent link">&para;</a></h2>
-<h3 id="1-核心思想">(1) 核心思想<a class="headerlink" href="#1-核心思想" title="Permanent link">&para;</a></h3>
+<h2 id="base64-的原理">Base64 的原理<a class="headerlink" href="#base64-的原理" title="Permanent link">¶</a></h2>
+<h3 id="1-核心思想">(1) 核心思想<a class="headerlink" href="#1-核心思想" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>3 字节 → 4 个字符</p>
 </blockquote>
@@ -5134,7 +5134,7 @@
 <li>63 → <code>/</code></li>
 </ul>
 <p>所以本质就是：<strong>把 24 位切成 4 个 6 位，然后按索引映射成字符</strong>。</p>
-<h3 id="2-具体流程编码">(2) 具体流程（编码）<a class="headerlink" href="#2-具体流程编码" title="Permanent link">&para;</a></h3>
+<h3 id="2-具体流程编码">(2) 具体流程（编码）<a class="headerlink" href="#2-具体流程编码" title="Permanent link">¶</a></h3>
 <p>假设有 3 个字节：<code>b1 b2 b3</code>（每个 8 bit）</p>
 <ol>
 <li>拼成 24 bit：<code>b1(8) | b2(8) | b3(8)</code></li>
@@ -5150,7 +5150,7 @@
 <li><code>i4 = b3 &amp; 0x3F</code>
    然后 <code>i1..i4</code> 分别映射到字母表字符。</li>
 </ul>
-<h3 id="3-为什么会有-">(3) 为什么会有 <code>=</code><a class="headerlink" href="#3-为什么会有-" title="Permanent link">&para;</a></h3>
+<h3 id="3-为什么会有-">(3) 为什么会有 <code>=</code><a class="headerlink" href="#3-为什么会有-" title="Permanent link">¶</a></h3>
 <p>当输入字节数不是 3 的倍数时，最后一组不够 24 bit，就要补齐，让输出长度总是 4 的倍数（便于解析）。</p>
 <ul>
 <li><strong>剩 1 个字节（8 bit）</strong>：
@@ -5167,7 +5167,7 @@
 <li>余 1 字节 → <code>==</code></li>
 <li>余 2 字节 → <code>=</code></li>
 </ul>
-<h3 id="4-解码过程反向还原">(4) 解码过程（反向还原）<a class="headerlink" href="#4-解码过程反向还原" title="Permanent link">&para;</a></h3>
+<h3 id="4-解码过程反向还原">(4) 解码过程（反向还原）<a class="headerlink" href="#4-解码过程反向还原" title="Permanent link">¶</a></h3>
 <p>解码就是把流程倒过来：</p>
 <ol>
 <li>每 4 个 Base64 字符一组</li>
@@ -5176,7 +5176,7 @@
 <li>再切成 3 个 8-bit 字节输出</li>
 <li>遇到 <code>=</code> 就知道末尾哪些字节是补出来的，不输出这些补的部分</li>
 </ol>
-<h3 id="5-空间开销与为什么是-64">(5) 空间开销与“为什么是 64”<a class="headerlink" href="#5-空间开销与为什么是-64" title="Permanent link">&para;</a></h3>
+<h3 id="5-空间开销与为什么是-64">(5) 空间开销与“为什么是 64”<a class="headerlink" href="#5-空间开销与为什么是-64" title="Permanent link">¶</a></h3>
 <ul>
 <li>Base64 把每 <strong>3 字节</strong> 变成  <strong>4 字符</strong>，如果按 1 字符 1 字节存储（ASCII/UTF-8），体积大约变为：</li>
 <li><code>4/3 ≈ 1.333...</code> → <strong>膨胀约 33%</strong></li>
@@ -5184,19 +5184,19 @@
 <li><code>2^6 = 64</code>，用  <strong>6 bit</strong> 刚好表示 64 种符号</li>
 <li>输出字符能选成“基本可打印字符”，适配早期和现代的文本通道</li>
 </ul>
-<h2 id="rfc-4648-标准的-base64-索引表">RFC 4648 标准的 Base64 索引表<a class="headerlink" href="#rfc-4648-标准的-base64-索引表" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../attachments/image-20251202222114131.png" /></p>
-<h2 id="例子">例子<a class="headerlink" href="#例子" title="Permanent link">&para;</a></h2>
-<h3 id="例1无需补">例1.无需补=<a class="headerlink" href="#例1无需补" title="Permanent link">&para;</a></h3>
+<h2 id="rfc-4648-标准的-base64-索引表">RFC 4648 标准的 Base64 索引表<a class="headerlink" href="#rfc-4648-标准的-base64-索引表" title="Permanent link">¶</a></h2>
+<p><img alt="" src="../attachments/image-20251202222114131.png"/></p>
+<h2 id="例子">例子<a class="headerlink" href="#例子" title="Permanent link">¶</a></h2>
+<h3 id="例1无需补">例1.无需补=<a class="headerlink" href="#例1无需补" title="Permanent link">¶</a></h3>
 <p><strong>为大家举个例子，<code>Man</code> 的编码过程：</strong></p>
 <p><code>M a n</code> 的ASCII十进制是：<code>77 97 110</code></p>
 <p>转换为24位的（<span class="arithmatex">\(3×8=24\)</span> Bit）二进制：<code>01001101 01100001 01101110</code></p>
 <p>把这24位的二进制每6个一组切开，得到4组6 Bit 值（<span class="arithmatex">\(24÷6=4\)</span>）：<code>010011 010110 000101 101110</code></p>
 <p>根据Base64字母表查找对应字符的索引</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>010011  = 19
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>010110 = 22
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>000101 = 5
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>101110 = 46
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>010011  = 19
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>010110 = 22
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>000101 = 5
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>101110 = 46
 </code></pre></div>
 <p>所以索引序列是：<code>19 22 5 46</code></p>
 <p>查Base64字母表映射成字符：</p>
@@ -5209,7 +5209,7 @@
 <li>46 → <code>u</code></li>
 </ul>
 <p>最终结果：<code>Man</code> → <strong><code>TWFu</code></strong></p>
-<h3 id="例2补">例2.补=<a class="headerlink" href="#例2补" title="Permanent link">&para;</a></h3>
+<h3 id="例2补">例2.补=<a class="headerlink" href="#例2补" title="Permanent link">¶</a></h3>
 <p>以字符 <code>M</code> 为例子，ASCII值等于 <code>77</code> ，转为二进制得到 <code>01001101</code>，由于只有1字节，不够3个字节，所以先进行补0：<code>01001101 000000000 00000000</code>，接着按6 bit进行切分：<code>010011 010000 000000 000000</code>，再转十进制的索引：</p>
 <ul>
 <li><code>010011</code> = 19</li>
@@ -5228,7 +5228,7 @@
 <p>得到：<code>TQAA</code></p>
 <p>因为原始数据只有 <strong>1 个字节</strong>，实际只够生成 <strong>前 2 个 Base64 字符</strong>，后面 2 个字符是补出来的，所以用 <code>==</code> 标记：</p>
 <p>最终：<code>"M"</code> → <strong><code>TQ==</code></strong></p>
-<h3 id="例3解码">例3.解码<a class="headerlink" href="#例3解码" title="Permanent link">&para;</a></h3>
+<h3 id="例3解码">例3.解码<a class="headerlink" href="#例3解码" title="Permanent link">¶</a></h3>
 <p>以<code>UQ==</code>为例子，解码过程如下：</p>
 <p>Base64 索引表规则：<code>A=0 ... Z=25 ... a=26 ... 0=52 ... +=62 /=63</code></p>
 <ul>
@@ -5242,7 +5242,7 @@
 <li>16 → <code>010000</code></li>
 </ul>
 <p>拼成 24 bit（padding 对应补 0）</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>010100 010000 000000 000000
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>010100 010000 000000 000000
 </code></pre></div>
 <p>连起来：
  <code>010100010000000000000000</code></p>
@@ -5256,15 +5256,15 @@
 <p><code>==</code> 表示原始数据只有 <strong>1 个字节</strong>，所以只取第一个字节：</p>
 <p><code>01010001</code> = 十进制 <strong>81</strong> = ASCII 字符 <strong><code>'Q'</code></strong></p>
 <p>所以：<code>UQ==</code> → <strong><code>Q</code></strong></p>
-<h2 id="练习题">练习题<a class="headerlink" href="#练习题" title="Permanent link">&para;</a></h2>
+<h2 id="练习题">练习题<a class="headerlink" href="#练习题" title="Permanent link">¶</a></h2>
 <p>题目地址：<a class="md-button md-button--primary" href="https://www.qsnctf.com/#/main/driving-range?page=1&amp;keyword=NO.0502" rel="noopener" target="_blank">NO.0502 - Base64</a></p>
-<p><img alt="" src="../attachments/image-20251202225038752.png" /></p>
+<p><img alt="" src="../attachments/image-20251202225038752.png"/></p>
 <ul>
 <li>题目名称：Base64</li>
 <li>题目难度：1</li>
 <li>题目ID：NO.0502</li>
 </ul>
-<h2 id="在线工具">在线工具<a class="headerlink" href="#在线工具" title="Permanent link">&para;</a></h2>
+<h2 id="在线工具">在线工具<a class="headerlink" href="#在线工具" title="Permanent link">¶</a></h2>
 <p><a class="md-button md-button--primary" href="https://tools.qsnctf.com/#//misc/base" rel="noopener" target="_blank">在线Base64解码工具</a></p>
 
 
@@ -5378,8 +5378,6 @@
         <script src="../../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
       
     
   </body>

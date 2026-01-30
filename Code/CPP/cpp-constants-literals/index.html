@@ -5220,8 +5220,8 @@
   
 
 
-<h1 id="c-常量constants">C++ 常量（Constants）<a class="headerlink" href="#c-常量constants" title="Permanent link">&para;</a></h1>
-<p><strong>常量**是指在程序执行期间 **值不会发生改变的数据</strong> ，也称为 <strong>字面量（Literal）</strong> 。</p>
+<h1 id="c-常量constants">C++ 常量（Constants）<a class="headerlink" href="#c-常量constants" title="Permanent link">¶</a></h1>
+<p><strong>常量</strong> 是指在程序执行期间 <strong>值不会发生改变的数据</strong> ，也称为 <strong>字面量（Literal）</strong> 。</p>
 <p>常量可以是任何基本数据类型，例如：</p>
 <ul>
 <li>整型</li>
@@ -5231,8 +5231,8 @@
 <li>布尔型</li>
 </ul>
 <p>常量在使用方式上类似变量，但 <strong>一旦定义，其值不可修改</strong> 。</p>
-<hr />
-<h2 id="一整数常量integer-literals">一、整数常量（Integer Literals）<a class="headerlink" href="#一整数常量integer-literals" title="Permanent link">&para;</a></h2>
+<hr/>
+<h2 id="一整数常量integer-literals">一、整数常量（Integer Literals）<a class="headerlink" href="#一整数常量integer-literals" title="Permanent link">¶</a></h2>
 <p>整数常量可以用以下进制表示：</p>
 <table>
 <thead>
@@ -5260,7 +5260,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="整数后缀">整数后缀<a class="headerlink" href="#整数后缀" title="Permanent link">&para;</a></h3>
+<h3 id="整数后缀">整数后缀<a class="headerlink" href="#整数后缀" title="Permanent link">¶</a></h3>
 <p>整数常量可以带后缀，用于指定类型：</p>
 <ul>
 <li><code>U / u</code>：无符号整数（unsigned）</li>
@@ -5268,49 +5268,49 @@
 </ul>
 <p>后缀可以组合，顺序不限。</p>
 <p><strong>示例：</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="mi">212</span><span class="w">         </span><span class="c1">// 合法</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="mi">215u</span><span class="w">        </span><span class="c1">// 合法</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="mh">0xFeeL</span><span class="w">      </span><span class="c1">// 合法</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="mo">07</span><span class="mi">8</span><span class="w">         </span><span class="c1">// 非法：8 不是八进制数字</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="mo">032U</span><span class="n">U</span><span class="w">       </span><span class="c1">// 非法：重复后缀</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="mi">212</span><span class="w">         </span><span class="c1">// 合法</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="mi">215u</span><span class="w">        </span><span class="c1">// 合法</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="mh">0xFeeL</span><span class="w">      </span><span class="c1">// 合法</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="mo">07</span><span class="mi">8</span><span class="w">         </span><span class="c1">// 非法：8 不是八进制数字</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="mo">032U</span><span class="n">U</span><span class="w">       </span><span class="c1">// 非法：重复后缀</span>
 </code></pre></div>
-<h3 id="不同形式的整数常量示例">不同形式的整数常量示例<a class="headerlink" href="#不同形式的整数常量示例" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="mi">85</span><span class="w">          </span><span class="c1">// 十进制</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="mo">0213</span><span class="w">        </span><span class="c1">// 八进制</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="mh">0x4b</span><span class="w">        </span><span class="c1">// 十六进制</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="mi">30</span><span class="w">          </span><span class="c1">// int</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="mi">30u</span><span class="w">         </span><span class="c1">// unsigned int</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="mf">30l</span><span class="w">         </span><span class="c1">// long</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="mi">30ul</span><span class="w">        </span><span class="c1">// unsigned long</span>
+<h3 id="不同形式的整数常量示例">不同形式的整数常量示例<a class="headerlink" href="#不同形式的整数常量示例" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="mi">85</span><span class="w">          </span><span class="c1">// 十进制</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="mo">0213</span><span class="w">        </span><span class="c1">// 八进制</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="mh">0x4b</span><span class="w">        </span><span class="c1">// 十六进制</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="mi">30</span><span class="w">          </span><span class="c1">// int</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="mi">30u</span><span class="w">         </span><span class="c1">// unsigned int</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="mf">30l</span><span class="w">         </span><span class="c1">// long</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="mi">30ul</span><span class="w">        </span><span class="c1">// unsigned long</span>
 </code></pre></div>
-<hr />
-<h2 id="二浮点常量floating-point-literals">二、浮点常量（Floating-point Literals）<a class="headerlink" href="#二浮点常量floating-point-literals" title="Permanent link">&para;</a></h2>
+<hr/>
+<h2 id="二浮点常量floating-point-literals">二、浮点常量（Floating-point Literals）<a class="headerlink" href="#二浮点常量floating-point-literals" title="Permanent link">¶</a></h2>
 <p>浮点常量可以使用：</p>
 <ul>
 <li><strong>小数形式</strong></li>
 <li><strong>指数形式（科学计数法）</strong></li>
 </ul>
-<h3 id="合法的浮点常量">合法的浮点常量<a class="headerlink" href="#合法的浮点常量" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="mf">3.14159</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="mf">314159E-5L</span>
+<h3 id="合法的浮点常量">合法的浮点常量<a class="headerlink" href="#合法的浮点常量" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="mf">3.14159</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="mf">314159E-5L</span>
 </code></pre></div>
-<h3 id="非法的浮点常量">非法的浮点常量<a class="headerlink" href="#非法的浮点常量" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="mi">510</span><span class="n">E</span><span class="w">        </span><span class="c1">// 不完整的指数</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="mf">210f</span><span class="w">        </span><span class="c1">// 没有小数或指数</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">.</span><span class="n">e55</span><span class="w">        </span><span class="c1">// 缺少整数或小数部分</span>
+<h3 id="非法的浮点常量">非法的浮点常量<a class="headerlink" href="#非法的浮点常量" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="mi">510</span><span class="n">E</span><span class="w">        </span><span class="c1">// 不完整的指数</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="mf">210f</span><span class="w">        </span><span class="c1">// 没有小数或指数</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">.</span><span class="n">e55</span><span class="w">        </span><span class="c1">// 缺少整数或小数部分</span>
 </code></pre></div>
-<hr />
-<h2 id="三布尔常量boolean-literals">三、布尔常量（Boolean Literals）<a class="headerlink" href="#三布尔常量boolean-literals" title="Permanent link">&para;</a></h2>
+<hr/>
+<h2 id="三布尔常量boolean-literals">三、布尔常量（Boolean Literals）<a class="headerlink" href="#三布尔常量boolean-literals" title="Permanent link">¶</a></h2>
 <p>C++ 只有两个布尔常量：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">true</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">false</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nb">true</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nb">false</span>
 </code></pre></div>
 <p>⚠️ 注意：
  不要简单地把 <code>true</code> 当作 <code>1</code>、<code>false</code> 当作 <code>0</code>，虽然在底层实现中可能如此，但**语义上它们是布尔值**。</p>
-<hr />
-<h2 id="四字符常量character-literals">四、字符常量（Character Literals）<a class="headerlink" href="#四字符常量character-literals" title="Permanent link">&para;</a></h2>
-<p>字符常量使用**单引号 <code>' '</code>**括起来。</p>
-<h3 id="普通字符与宽字符">普通字符与宽字符<a class="headerlink" href="#普通字符与宽字符" title="Permanent link">&para;</a></h3>
+<hr/>
+<h2 id="四字符常量character-literals">四、字符常量（Character Literals）<a class="headerlink" href="#四字符常量character-literals" title="Permanent link">¶</a></h2>
+<p>字符常量使用 <strong>单引号 <code>' '</code></strong> 括起来。</p>
+<h3 id="普通字符与宽字符">普通字符与宽字符<a class="headerlink" href="#普通字符与宽字符" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -5332,14 +5332,14 @@
 </tr>
 </tbody>
 </table>
-<h3 id="字符常量的形式">字符常量的形式<a class="headerlink" href="#字符常量的形式" title="Permanent link">&para;</a></h3>
+<h3 id="字符常量的形式">字符常量的形式<a class="headerlink" href="#字符常量的形式" title="Permanent link">¶</a></h3>
 <ul>
 <li>普通字符：<code>'a'</code></li>
 <li>转义字符：<code>'\n'</code></li>
 <li>Unicode 字符：<code>'\u02C0'</code></li>
 </ul>
-<hr />
-<h2 id="五转义序列escape-sequences">五、转义序列（Escape Sequences）<a class="headerlink" href="#五转义序列escape-sequences" title="Permanent link">&para;</a></h2>
+<hr/>
+<h2 id="五转义序列escape-sequences">五、转义序列（Escape Sequences）<a class="headerlink" href="#五转义序列escape-sequences" title="Permanent link">¶</a></h2>
 <p>某些字符需要用反斜杠 <code>\</code> 表示特殊含义：</p>
 <table>
 <thead>
@@ -5392,20 +5392,20 @@
 </tbody>
 </table>
 <p><strong>示例：</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">{</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello</span><span class="se">\t</span><span class="s">World</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">;</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">{</span>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Hello</span><span class="se">\t</span><span class="s">World</span><span class="se">\n\n</span><span class="s">"</span><span class="p">;</span>
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">}</span>
 </code></pre></div>
 <p><strong>输出：</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Hello   World
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>Hello   World
 </code></pre></div>
-<hr />
-<h2 id="六字符串常量string-literals">六、字符串常量（String Literals）<a class="headerlink" href="#六字符串常量string-literals" title="Permanent link">&para;</a></h2>
+<hr/>
+<h2 id="六字符串常量string-literals">六、字符串常量（String Literals）<a class="headerlink" href="#六字符串常量string-literals" title="Permanent link">¶</a></h2>
 <p>字符串常量使用 **双引号 <code>" "</code>**括起来。</p>
 <p>字符串可以包含：</p>
 <ul>
@@ -5413,54 +5413,54 @@
 <li>转义序列</li>
 <li>Unicode 字符</li>
 </ul>
-<h3 id="多行字符串">多行字符串<a class="headerlink" href="#多行字符串" title="Permanent link">&para;</a></h3>
+<h3 id="多行字符串">多行字符串<a class="headerlink" href="#多行字符串" title="Permanent link">¶</a></h3>
 <p>可以使用反斜杠 <code>\</code> 进行换行连接：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">{</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">greeting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello, runoob&quot;</span><span class="p">;</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">greeting</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">greeting2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello, \</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="s">runoob&quot;</span><span class="p">;</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">greeting2</span><span class="p">;</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">{</span>
+<a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">greeting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"hello, runoob"</span><span class="p">;</span>
+<a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">greeting</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a>
+<a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">greeting2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"hello, \</span>
+<a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="s">runoob"</span><span class="p">;</span>
+<a href="#__codelineno-7-12" id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">greeting2</span><span class="p">;</span>
+<a href="#__codelineno-7-13" id="__codelineno-7-13" name="__codelineno-7-13"></a>
+<a href="#__codelineno-7-14" id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-7-15" id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="p">}</span>
 </code></pre></div>
 <p><strong>输出：</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">hello</span><span class="p">,</span><span class="w"> </span><span class="n">runoob</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">hello</span><span class="p">,</span><span class="w"> </span><span class="n">runoob</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">hello</span><span class="p">,</span><span class="w"> </span><span class="n">runoob</span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">hello</span><span class="p">,</span><span class="w"> </span><span class="n">runoob</span>
 </code></pre></div>
-<hr />
-<h2 id="七定义常量的方式">七、定义常量的方式<a class="headerlink" href="#七定义常量的方式" title="Permanent link">&para;</a></h2>
+<hr/>
+<h2 id="七定义常量的方式">七、定义常量的方式<a class="headerlink" href="#七定义常量的方式" title="Permanent link">¶</a></h2>
 <p>C++ 中定义常量主要有两种方式：</p>
 <p>1️⃣ 使用 <code>#define</code> 预处理器
  2️⃣ 使用 <code>const</code> 关键字（ <strong>推荐</strong> ）</p>
-<hr />
-<h3 id="1-使用-define">1️⃣ 使用 <code>#define</code><a class="headerlink" href="#1-使用-define" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="cp">#define identifier value</span>
+<hr/>
+<h3 id="1-使用-define">1️⃣ 使用 <code>#define</code><a class="headerlink" href="#1-使用-define" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="cp">#define identifier value</span>
 </code></pre></div>
 <p><strong>示例：</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="cp">#define LENGTH 10</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="cp">#define WIDTH  5</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="cp">#define NEWLINE &#39;\n&#39;</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="p">{</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LENGTH</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">WIDTH</span><span class="p">;</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">NEWLINE</span><span class="p">;</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="cp">#define LENGTH 10</span>
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="cp">#define WIDTH  5</span>
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="cp">#define NEWLINE '\n'</span>
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="p">{</span>
+<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LENGTH</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">WIDTH</span><span class="p">;</span>
+<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">NEWLINE</span><span class="p">;</span>
+<a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="p">}</span>
 </code></pre></div>
 <p><strong>输出：</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>50
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>50
 </code></pre></div>
 <p>⚠️ 特点：</p>
 <ul>
@@ -5468,37 +5468,37 @@
 <li>不进行类型检查</li>
 <li>不受作用域限制</li>
 </ul>
-<hr />
-<h3 id="2-使用-const更安全">2️⃣ 使用 <code>const</code>（更安全）<a class="headerlink" href="#2-使用-const更安全" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">const</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<hr/>
+<h3 id="2-使用-const更安全">2️⃣ 使用 <code>const</code>（更安全）<a class="headerlink" href="#2-使用-const更安全" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">const</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
 </code></pre></div>
 <p><strong>示例：</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">{</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LENGTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">WIDTH</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">NEWLINE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LENGTH</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">WIDTH</span><span class="p">;</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">NEWLINE</span><span class="p">;</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a>
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="p">{</span>
+<a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LENGTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">WIDTH</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a href="#__codelineno-13-8" id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">NEWLINE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+<a href="#__codelineno-13-9" id="__codelineno-13-9" name="__codelineno-13-9"></a>
+<a href="#__codelineno-13-10" id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LENGTH</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">WIDTH</span><span class="p">;</span>
+<a href="#__codelineno-13-11" id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">NEWLINE</span><span class="p">;</span>
+<a href="#__codelineno-13-12" id="__codelineno-13-12" name="__codelineno-13-12"></a>
+<a href="#__codelineno-13-13" id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-13-14" id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="p">}</span>
 </code></pre></div>
 <p><strong>输出：</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>50
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>50
 </code></pre></div>
-<p>✅ 优点：</p>
+<p>优点：</p>
 <ul>
 <li>有类型检查</li>
 <li>遵守作用域规则</li>
 <li>更安全、可调试性更好</li>
 </ul>
-<hr />
-<h2 id="八本章小结">八、本章小结<a class="headerlink" href="#八本章小结" title="Permanent link">&para;</a></h2>
+<hr/>
+<h2 id="八本章小结">八、本章小结<a class="headerlink" href="#八本章小结" title="Permanent link">¶</a></h2>
 <ul>
 <li>常量的值在程序运行期间 <strong>不可改变</strong></li>
 <li>常量包括：</li>
@@ -5619,8 +5619,6 @@
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
       
     
   </body>

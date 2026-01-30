@@ -5122,27 +5122,27 @@
   
 
 
-<h1 id="什么是ctf">什么是CTF？<a class="headerlink" href="#什么是ctf" title="Permanent link">&para;</a></h1>
-<h2 id="ctf的介绍">CTF的介绍<a class="headerlink" href="#ctf的介绍" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../attachments/image-20251129233528182.png" /></p>
+<h1 id="什么是ctf">什么是CTF？<a class="headerlink" href="#什么是ctf" title="Permanent link">¶</a></h1>
+<h2 id="ctf的介绍">CTF的介绍<a class="headerlink" href="#ctf的介绍" title="Permanent link">¶</a></h2>
+<p><img alt="" src="../attachments/image-20251129233528182.png"/></p>
 <p><strong>CTF（Capture The Flag）中文叫“夺旗赛”</strong>，是一种模拟真实网络攻防场景的竞赛形式。
  参赛者通过分析、逆向、破解、构造 payload、发现漏洞等方式来“夺取”目标系统中的 <strong>Flag（旗子）</strong>，以此得分。它是目前全世界最流行的 <strong>网络安全技术竞赛形式</strong>。</p>
 <p>比赛中，主办方会将一个特定的字符串、文件或代码片段（即“Flag”，旗子）秘密地隐藏在预先设置好漏洞的系统、程序或网站中。参赛队伍需要运用专业的安全知识和技术，通过解密、分析、渗透等方式找到这个“旗子”并提交给裁判系统，从而得分。</p>
 <p>CTF 比赛不仅考验选手的个人技术水平，也强调团队合作、临场应变和压力下的快速学习能力。</p>
-<h2 id="旗子是什么">旗子是什么？<a class="headerlink" href="#旗子是什么" title="Permanent link">&para;</a></h2>
+<h2 id="旗子是什么">旗子是什么？<a class="headerlink" href="#旗子是什么" title="Permanent link">¶</a></h2>
 <p>Flag 是一个“隐藏的秘密字符串”，通常形如：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flag{S0m3_RanD0m_Str1nG}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>flag{S0m3_RanD0m_Str1nG}
 </code></pre></div>
 <p>当你成功利用漏洞、解密算法或逆向程序后，就能从系统中拿到这个字符串，这表示：</p>
 <p>✔ 你成功突破了题目的安全防护</p>
 <p>✔ 你完成了挑战</p>
 <p>✔ 你获得了得分</p>
-<h2 id="ctf-有哪些比赛形式">CTF 有哪些比赛形式？<a class="headerlink" href="#ctf-有哪些比赛形式" title="Permanent link">&para;</a></h2>
-<h3 id="jeopardy解题赛">Jeopardy（解题赛）<a class="headerlink" href="#jeopardy解题赛" title="Permanent link">&para;</a></h3>
+<h2 id="ctf-有哪些比赛形式">CTF 有哪些比赛形式？<a class="headerlink" href="#ctf-有哪些比赛形式" title="Permanent link">¶</a></h2>
+<h3 id="jeopardy解题赛">Jeopardy（解题赛）<a class="headerlink" href="#jeopardy解题赛" title="Permanent link">¶</a></h3>
 <p>解题模式（Jeopardy）常见于线上选拔比赛。在解题模式 CTF 赛制中，参赛队伍可以通过互联网或现场网络参与，通过与在线环境交互或对题目文件进行离线分析，解决网络安全技术挑战并获取相应分值。</p>
 <p>这种模式类似于 <strong>ACM 编程竞赛</strong> 或 <strong>信息学奥林匹克竞赛</strong>，根据 <strong>总分与解题时间</strong> 来排名。</p>
 <p>简单地说就是，每道题独立解题 → 拿到 Flag → 得分。</p>
-<h4 id="-一血--二血--三血first-blood-系统">🩸 一血 / 二血 / 三血（First Blood 系统）<a class="headerlink" href="#-一血--二血--三血first-blood-系统" title="Permanent link">&para;</a></h4>
+<h4 id="-一血--二血--三血first-blood-系统">🩸 一血 / 二血 / 三血（First Blood 系统）<a class="headerlink" href="#-一血--二血--三血first-blood-系统" title="Permanent link">¶</a></h4>
 <p>解题模式下通常会设置：</p>
 <ul>
 <li><strong>一血（First Blood）</strong></li>
@@ -5150,7 +5150,7 @@
 <li><strong>三血（Third Blood）</strong></li>
 </ul>
 <p>即最先解出该题目的三支队伍会获得额外积分，用于鼓励快速且准确的解题能力。这也是团队整体实力的体现。</p>
-<h4 id="-降分机制动态分值">📉 降分机制（动态分值）<a class="headerlink" href="#-降分机制动态分值" title="Permanent link">&para;</a></h4>
+<h4 id="-降分机制动态分值">📉 降分机制（动态分值）<a class="headerlink" href="#-降分机制动态分值" title="Permanent link">¶</a></h4>
 <p>一些比赛采用所谓的 <strong>降分机制（Dynamic Score）</strong>：</p>
 <ul>
 <li>题目刚发布时具有较高初始分</li>
@@ -5159,7 +5159,7 @@
 <li>最终下降到一个最低保底分</li>
 </ul>
 <p>这使得题目难度与得分更加平衡，也增加了比赛的策略性。</p>
-<h4 id="jeopardy-题目主要类别">📚Jeopardy 题目主要类别<a class="headerlink" href="#jeopardy-题目主要类别" title="Permanent link">&para;</a></h4>
+<h4 id="jeopardy-题目主要类别">📚Jeopardy 题目主要类别<a class="headerlink" href="#jeopardy-题目主要类别" title="Permanent link">¶</a></h4>
 <p>目前 CTF 解题模式主要包含 8 大类别：</p>
 <ul>
 <li><strong>Web</strong> — 网站与网络攻防</li>
@@ -5171,10 +5171,10 @@
 <li><strong>IOT</strong> — 物联网方向挑战</li>
 <li><strong>Osint</strong> — 开源情报方向挑战</li>
 </ul>
-<h3 id="awd攻防对抗-attack--defense">AWD（攻防对抗  Attack &amp; Defense）<a class="headerlink" href="#awd攻防对抗-attack--defense" title="Permanent link">&para;</a></h3>
+<h3 id="awd攻防对抗-attack--defense">AWD（攻防对抗  Attack &amp; Defense）<a class="headerlink" href="#awd攻防对抗-attack--defense" title="Permanent link">¶</a></h3>
 <p>攻防赛常见于 <strong>线下决赛</strong>，模式真实、激烈、节奏快。</p>
 <p>所有参赛队伍会获得一套相同的系统环境，通常称为：<code>gamebox</code>（靶机），每个 Gamebox 上运行多个带漏洞的服务。</p>
-<p><img alt="" src="../attachments/image-20251130001351652.png" /></p>
+<p><img alt="" src="../attachments/image-20251130001351652.png"/></p>
 <p>参赛队伍必须：</p>
 <ul>
 <li><strong>攻击别人</strong> → 拿 Flag 得分</li>
@@ -5190,8 +5190,8 @@
 <blockquote>
 <p>一般情况下，主办方会提供网线，但并不会提供网线转接口，对于部分使用没有 RJ45 网口的笔记本设备的选手而言，其通常需要自行准备转换器。</p>
 </blockquote>
-<h4 id="attack--defense-基本规则">Attack &amp; Defense 基本规则<a class="headerlink" href="#attack--defense-基本规则" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="../attachments/image-20251130001412807.png" /></p>
+<h4 id="attack--defense-基本规则">Attack &amp; Defense 基本规则<a class="headerlink" href="#attack--defense-基本规则" title="Permanent link">¶</a></h4>
+<p><img alt="" src="../attachments/image-20251130001412807.png"/></p>
 <ul>
 <li>战队初始分数均为指值分。</li>
 <li>比赛以指定时间段（通常为 5/10 分钟）为一个回合，每回合主办方会更新已放出服务的 Flag。</li>
@@ -5204,16 +5204,16 @@
 <li>请参赛队伍在比赛开始时对所有服务进行备份，若因自身原因导致服务永久损坏或丢失，无法恢复，主办方不提供重置服务。</li>
 <li>禁止对赛题以外的比赛平台发起攻击，包括但不限于在 gamebox 提权 root、利用主办方平台漏洞等，违规者立刻被取消参赛资格。</li>
 </ul>
-<h4 id="网络环境">网络环境<a class="headerlink" href="#网络环境" title="Permanent link">&para;</a></h4>
+<h4 id="网络环境">网络环境<a class="headerlink" href="#网络环境" title="Permanent link">¶</a></h4>
 <p>一般AWD比赛在开始前会给选手同步文档，你需要根据主办方提供的文档熟悉环境，文档上一般都会有比赛环境的 <strong>网络拓扑图</strong> （如下图），每支队伍会维护若干的 <strong>Gamebox（己方服务器）</strong> ，Gamebox 上部署有存在漏洞的服务。</p>
-<h5 id="拓扑结构1">拓扑结构1<a class="headerlink" href="#拓扑结构1" title="Permanent link">&para;</a></h5>
-<p><img alt="" src="../attachments/image-20251130001436617.png" /></p>
-<h5 id="拓扑结构2">拓扑结构2<a class="headerlink" href="#拓扑结构2" title="Permanent link">&para;</a></h5>
-<p><img alt="" src="../attachments/image-20251130001508122.png" /></p>
-<h5 id="拓扑结构3">拓扑结构3<a class="headerlink" href="#拓扑结构3" title="Permanent link">&para;</a></h5>
-<p><img alt="" src="../attachments/image-20251130001522779.png" /></p>
-<h5 id="拓扑结构4">拓扑结构4<a class="headerlink" href="#拓扑结构4" title="Permanent link">&para;</a></h5>
-<p><img alt="" src="../attachments/network.jpg" /></p>
+<h5 id="拓扑结构1">拓扑结构1<a class="headerlink" href="#拓扑结构1" title="Permanent link">¶</a></h5>
+<p><img alt="" src="../attachments/image-20251130001436617.png"/></p>
+<h5 id="拓扑结构2">拓扑结构2<a class="headerlink" href="#拓扑结构2" title="Permanent link">¶</a></h5>
+<p><img alt="" src="../attachments/image-20251130001508122.png"/></p>
+<h5 id="拓扑结构3">拓扑结构3<a class="headerlink" href="#拓扑结构3" title="Permanent link">¶</a></h5>
+<p><img alt="" src="../attachments/image-20251130001522779.png"/></p>
+<h5 id="拓扑结构4">拓扑结构4<a class="headerlink" href="#拓扑结构4" title="Permanent link">¶</a></h5>
+<p><img alt="" src="../attachments/network.jpg"/></p>
 
 
 
@@ -5326,8 +5326,6 @@
         <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
       
     
   </body>

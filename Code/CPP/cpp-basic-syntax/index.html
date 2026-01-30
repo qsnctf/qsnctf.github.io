@@ -4996,7 +4996,7 @@
   
 
 
-<h1 id="c基本语法">C++基本语法<a class="headerlink" href="#c基本语法" title="Permanent link">&para;</a></h1>
+<h1 id="c基本语法">C++基本语法<a class="headerlink" href="#c基本语法" title="Permanent link">¶</a></h1>
 <p>C++ 程序可以看作是 <strong>对象的集合</strong> ，这些对象通过相互调用各自的方法来完成协作与交互。下面我们简要介绍 <strong>类（Class）</strong> 、 <strong>对象（Object）</strong> 、 <strong>方法（Method）</strong> 以及 <strong>实例变量（Instance Variable）</strong> 的概念。</p>
 <p><strong>对象（Object）</strong>
  对象具有 <strong>状态</strong> 和 <strong>行为</strong> 。例如，一只狗的状态包括颜色、名字、品种等，行为包括摇尾巴、叫唤、进食等。对象是类的一个具体实例。</p>
@@ -5006,19 +5006,19 @@
  方法本质上表示对象的一种行为。一个类可以包含多个方法。方法中可以编写程序逻辑，用于操作数据并完成特定功能。</p>
 <p><strong>实例变量（Instance Variable）</strong>
  每个对象都拥有一组独立的实例变量。对象的状态正是由这些实例变量的取值所决定的，不同对象之间的实例变量互不影响。</p>
-<h2 id="c程序结构">C++程序结构<a class="headerlink" href="#c程序结构" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// main 函数是程序的入口，程序从这里开始执行</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">{</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="c1">// 向标准输出打印字符串 &quot;Hello World&quot;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="c1">// 返回 0，表示程序正常结束</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
+<h2 id="c程序结构">C++程序结构<a class="headerlink" href="#c程序结构" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1">// main 函数是程序的入口，程序从这里开始执行</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">{</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="c1">// 向标准输出打印字符串 "Hello World"</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Hello World"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="c1">// 返回 0，表示程序正常结束</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">}</span>
 </code></pre></div>
 <p>接下来我们讲解一下上面这段程序：</p>
 <p><code>#include &lt;iostream&gt;</code>
@@ -5031,7 +5031,7 @@
  将字符串输出到控制台。</p>
 <p><code>return 0;</code>
  表示程序成功执行并正常退出。</p>
-<h2 id="编译和执行">编译和执行<a class="headerlink" href="#编译和执行" title="Permanent link">&para;</a></h2>
+<h2 id="编译和执行">编译和执行<a class="headerlink" href="#编译和执行" title="Permanent link">¶</a></h2>
 <p>接下来，我们来看如何将源代码保存为文件，并对其进行**编译和运行**。具体步骤如下：</p>
 <ol>
 <li>
@@ -5047,7 +5047,7 @@
 <p>输入以下命令并按回车键，对源代码进行编译：</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>g++ hello.cpp
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>g++ hello.cpp
 </code></pre></div>
 <p>如果代码中没有错误，编译器将不会输出任何提示，并在当前目录下生成一个可执行文件：</p>
 <ul>
@@ -5059,17 +5059,17 @@
 <p><strong>运行生成的可执行文件</strong>：</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./a.out
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>./a.out
 </code></pre></div>
 <ol>
 <li>屏幕上将显示如下输出结果：</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Hello World
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>Hello World
 </code></pre></div>
 <p><strong>示例完整过程：</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ g++ hello.cpp
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>$ ./a.out
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Hello World
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>$ g++ hello.cpp
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>$ ./a.out
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>Hello World
 </code></pre></div>
 <p>请确保：</p>
 <ul>
@@ -5077,33 +5077,33 @@
 <li>当前终端所在目录中包含源文件 <code>hello.cpp</code>。</li>
 </ul>
 <p>此外，在实际项目中，您还可以使用 <strong>Makefile</strong> 来管理和自动化 C/C++ 程序的编译过程，以提高开发效率。</p>
-<h2 id="c-中的分号与语句块">C++ 中的分号与语句块<a class="headerlink" href="#c-中的分号与语句块" title="Permanent link">&para;</a></h2>
+<h2 id="c-中的分号与语句块">C++ 中的分号与语句块<a class="headerlink" href="#c-中的分号与语句块" title="Permanent link">¶</a></h2>
 <p>在 C++ 中，<strong>分号（<code>;</code>）是语句的结束符</strong>。也就是说，每一条语句都必须以分号结束，用来标识一个逻辑语句的完成。</p>
 <p>例如，下面是三条不同的语句：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>x = y;
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>y = y + 1;
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>add(x, y);
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>x = y;
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>y = y + 1;
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>add(x, y);
 </code></pre></div>
-<h3 id="语句块block">语句块（Block）<a class="headerlink" href="#语句块block" title="Permanent link">&para;</a></h3>
+<h3 id="语句块block">语句块（Block）<a class="headerlink" href="#语句块block" title="Permanent link">¶</a></h3>
 <p>**语句块**是由一对大括号 <code>{}</code> 包含的一组按逻辑组织的语句，通常用于函数体、条件语句或循环结构中。</p>
 <p>例如：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>{
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    cout &lt;&lt; &quot;Hello World&quot;; // 输出 Hello World
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    return 0;
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>{
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>    cout &lt;&lt; "Hello World"; // 输出 Hello World
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>    return 0;
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>}
 </code></pre></div>
-<h3 id="多条语句与换行">多条语句与换行<a class="headerlink" href="#多条语句与换行" title="Permanent link">&para;</a></h3>
+<h3 id="多条语句与换行">多条语句与换行<a class="headerlink" href="#多条语句与换行" title="Permanent link">¶</a></h3>
 <p>C++ <strong>不以行末作为语句结束的标志</strong>，而是以分号作为判断依据。因此，一行中可以书写多条语句：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>x = y;
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>y = y + 1;
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>add(x, y);
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>x = y;
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>y = y + 1;
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>add(x, y);
 </code></pre></div>
 <p>等同于：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>x = y; y = y + 1; add(x, y);
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>x = y; y = y + 1; add(x, y);
 </code></pre></div>
 <p>不过，为了提高代码的**可读性和可维护性**，通常建议一行只写一条语句。</p>
-<hr />
-<h2 id="c-标识符">C++ 标识符<a class="headerlink" href="#c-标识符" title="Permanent link">&para;</a></h2>
+<hr/>
+<h2 id="c-标识符">C++ 标识符<a class="headerlink" href="#c-标识符" title="Permanent link">¶</a></h2>
 <p>**标识符（Identifier）**用于标识变量、函数、类、模块或其他用户自定义的名称。</p>
 <p>标识符的命名规则如下：</p>
 <ul>
@@ -5113,33 +5113,33 @@
 <li>C++ <strong>区分大小写</strong>，例如 <code>Manpower</code> 和 <code>manpower</code> 是两个不同的标识符。</li>
 </ul>
 <p>下面是一些合法的标识符示例：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>mohd        zara        abc         move_name   a_123
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>myname50    _temp       j           a23b9       retVal
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>mohd        zara        abc         move_name   a_123
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>myname50    _temp       j           a23b9       retVal
 </code></pre></div>
-<hr />
-<h2 id="c-关键字保留字">C++ 关键字（保留字）<a class="headerlink" href="#c-关键字保留字" title="Permanent link">&para;</a></h2>
+<hr/>
+<h2 id="c-关键字保留字">C++ 关键字（保留字）<a class="headerlink" href="#c-关键字保留字" title="Permanent link">¶</a></h2>
 <p>关键字是 C++ 语言中具有特殊含义的**保留字**，不能用作变量名、函数名或其他标识符。</p>
 <p>常见的 C++ 关键字包括：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>asm         else        new         this
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>auto        enum        operator    throw
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>bool        explicit    private     true
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>break       export      protected   try
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>case        extern      public      typedef
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>catch       false       register    typeid
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>char        float       reinterpret_cast   typename
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>class       for         return      union
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>const       friend      short       unsigned
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>const_cast  goto        signed      using
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>continue    if          sizeof      virtual
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>default     inline      static      void
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>delete      int         static_cast volatile
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>do          long        struct      wchar_t
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>double      mutable     switch      while
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>dynamic_cast namespace template
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>asm         else        new         this
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>auto        enum        operator    throw
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>bool        explicit    private     true
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>break       export      protected   try
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>case        extern      public      typedef
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>catch       false       register    typeid
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>char        float       reinterpret_cast   typename
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>class       for         return      union
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a>const       friend      short       unsigned
+<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a>const_cast  goto        signed      using
+<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a>continue    if          sizeof      virtual
+<a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a>default     inline      static      void
+<a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a>delete      int         static_cast volatile
+<a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a>do          long        struct      wchar_t
+<a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a>double      mutable     switch      while
+<a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a>dynamic_cast namespace template
 </code></pre></div>
 <p>完整关键字列表可参考：<strong>C++ 关键字（保留字）完整介绍</strong>。</p>
-<hr />
-<h2 id="三字符组trigraphs">三字符组（Trigraphs）<a class="headerlink" href="#三字符组trigraphs" title="Permanent link">&para;</a></h2>
+<hr/>
+<h2 id="三字符组trigraphs">三字符组（Trigraphs）<a class="headerlink" href="#三字符组trigraphs" title="Permanent link">¶</a></h2>
 <p><strong>三字符组</strong>（又称三字符序列）是用于表示另一个字符的三字符组合，特点是**以两个问号 <code>??</code> 开头**。</p>
 <p>三字符组在早期主要用于解决某些键盘无法输入特定字符的问题。虽然如今已经很少使用，但 C++ 标准仍然支持。</p>
 <p>三字符组可以出现在代码的任何位置，包括字符串、字符常量、注释和预处理指令中。</p>
@@ -5196,11 +5196,11 @@
 <li>转义序列：<code>"...?\?..."</code></li>
 </ul>
 <p>从 <strong>Microsoft Visual C++ 2010</strong> 开始，编译器默认不再自动替换三字符组。如需启用，可使用编译选项：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>/Zc:trigraphs
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>/Zc:trigraphs
 </code></pre></div>
 <p><code>g++</code> 编译器仍然默认支持三字符组，但会给出编译警告。</p>
-<hr />
-<h2 id="c-中的空格whitespace">C++ 中的空格（Whitespace）<a class="headerlink" href="#c-中的空格whitespace" title="Permanent link">&para;</a></h2>
+<hr/>
+<h2 id="c-中的空格whitespace">C++ 中的空格（Whitespace）<a class="headerlink" href="#c-中的空格whitespace" title="Permanent link">¶</a></h2>
 <p>只包含空格或注释的行称为空白行，<strong>C++ 编译器会完全忽略它们</strong>。</p>
 <p>在 C++ 中，空格用于表示：</p>
 <ul>
@@ -5210,11 +5210,11 @@
 <li>注释</li>
 </ul>
 <p>空格的主要作用是**分隔语法元素**，以便编译器正确解析代码。例如：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>int age;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>int age;
 </code></pre></div>
 <p>在这里，<code>int</code> 和 <code>age</code> 之间必须至少有一个空格，否则编译器无法区分它们。</p>
 <p>而在下面的语句中：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>fruit = apples + oranges;   // 获取水果的总数
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>fruit = apples + oranges;   // 获取水果的总数
 </code></pre></div>
 <p><code>fruit</code> 与 <code>=</code>，或 <code>=</code> 与 <code>apples</code> 之间的空格并不是必需的，但为了增强代码的**可读性**，通常建议合理使用空格。</p>
 
@@ -5329,8 +5329,6 @@
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
       
     
   </body>

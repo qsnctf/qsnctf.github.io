@@ -5186,7 +5186,7 @@
   
 
 
-<h1 id="c-与-c">C 与 C++<a class="headerlink" href="#c-与-c" title="Permanent link">&para;</a></h1>
+<h1 id="c-与-c">C 与 C++<a class="headerlink" href="#c-与-c" title="Permanent link">¶</a></h1>
 <p>C 和 C++ 关系很近，但 <strong>定位、设计思想和能力差别挺大</strong> 。可以把它们理解为：<strong>C 是“面向过程的底层工具”，C++ 是“在 C 基础上发展出来的多范式语言”</strong>。</p>
 <ul>
 <li>
@@ -5200,63 +5200,63 @@
 <p>**C 语言**诞生于 20 世纪 70 年代初，由贝尔实验室的 Dennis Ritchie 为了重写 UNIX 操作系统而设计，它在 B 语言的基础上发展而来，目标是在保证接近汇编语言效率的同时提供更好的可读性和可移植性。由于 C 语言结构简单、性能高、对硬件控制能力强，很快成为操作系统、编译器和各类系统软件的核心语言，并在之后通过 ANSI C 等标准化过程长期保持稳定。</p>
 <p><strong>C++</strong> 起源于 20 世纪 80 年代，由同样在贝尔实验室工作的 Bjarne Stroustrup 在 C 语言基础上扩展而成，最初名为 “C with Classes”，旨在解决 C 语言在大型程序开发中抽象能力不足、维护成本高的问题。C++ 在保留 C 高性能和底层控制能力的同时，引入了面向对象、泛型编程和丰富的标准库，并通过持续的标准演进发展为一种既适合底层系统又能支撑大型复杂工程的多范式语言。</p>
 </blockquote>
-<p><img alt="" src="../assets/%E6%97%A0%E6%A0%87%E9%A2%98-2026-01-26-1054.png" /></p>
-<h2 id="编程范式不同">编程范式不同<a class="headerlink" href="#编程范式不同" title="Permanent link">&para;</a></h2>
-<h3 id="c是面向过程的">C是面向过程的<a class="headerlink" href="#c是面向过程的" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+<p><img alt="" src="../assets/%E6%97%A0%E6%A0%87%E9%A2%98-2026-01-26-1054.png"/></p>
+<h2 id="编程范式不同">编程范式不同<a class="headerlink" href="#编程范式不同" title="Permanent link">¶</a></h2>
+<h3 id="c是面向过程的">C是面向过程的<a class="headerlink" href="#c是面向过程的" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="c是多范式的">C++是多范式的<a class="headerlink" href="#c是多范式的" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Calculator</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">public</span><span class="o">:</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">};</span>
+<h3 id="c是多范式的">C++是多范式的<a class="headerlink" href="#c是多范式的" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Calculator</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">public</span><span class="o">:</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">};</span>
 </code></pre></div>
 <blockquote>
 <p>C++ 可以像 C 一样写，但 C 不能用 C++ 的对象思想。</p>
 </blockquote>
-<h2 id="面向对象支持">面向对象支持<a class="headerlink" href="#面向对象支持" title="Permanent link">&para;</a></h2>
+<h2 id="面向对象支持">面向对象支持<a class="headerlink" href="#面向对象支持" title="Permanent link">¶</a></h2>
 <p>C++ 支持：</p>
 <ul>
 <li>类（class）</li>
 <li>封装、继承、多态</li>
 <li>构造函数 / 析构函数</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">public</span><span class="o">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">Person</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="o">~</span><span class="n">Person</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">};</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">public</span><span class="o">:</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="n">Person</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="o">~</span><span class="n">Person</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">};</span>
 </code></pre></div>
 <blockquote>
 <p>C：完全不支持这些，只能靠结构体 + 函数“硬模拟”。</p>
 </blockquote>
-<h2 id="类型系统">类型系统<a class="headerlink" href="#类型系统" title="Permanent link">&para;</a></h2>
-<h3 id="c">C<a class="headerlink" href="#c" title="Permanent link">&para;</a></h3>
+<h2 id="类型系统">类型系统<a class="headerlink" href="#类型系统" title="Permanent link">¶</a></h2>
+<h3 id="c">C<a class="headerlink" href="#c" title="Permanent link">¶</a></h3>
 <ul>
 <li>类型检查 <strong>较弱</strong></li>
 <li><code>void*</code> 随便转</li>
 </ul>
-<h3 id="c_1">C++<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h3>
+<h3 id="c_1">C++<a class="headerlink" href="#c_1" title="Permanent link">¶</a></h3>
 <ul>
 <li>类型检查 <strong>更严格</strong></li>
 <li>引入 <code>bool</code>、<code>nullptr</code></li>
 <li>支持函数重载</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">double</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kt">double</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
 </code></pre></div>
-<h2 id="内存管理方式">内存管理方式<a class="headerlink" href="#内存管理方式" title="Permanent link">&para;</a></h2>
-<h3 id="c_2">C<a class="headerlink" href="#c_2" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">malloc</span><span class="p">();</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">free</span><span class="p">();</span>
+<h2 id="内存管理方式">内存管理方式<a class="headerlink" href="#内存管理方式" title="Permanent link">¶</a></h2>
+<h3 id="c_2">C<a class="headerlink" href="#c_2" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">malloc</span><span class="p">();</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">free</span><span class="p">();</span>
 </code></pre></div>
-<h3 id="c_3">C++<a class="headerlink" href="#c_3" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">new</span><span class="p">;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">delete</span><span class="p">;</span>
+<h3 id="c_3">C++<a class="headerlink" href="#c_3" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">new</span><span class="p">;</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">delete</span><span class="p">;</span>
 </code></pre></div>
 <p>并且 C++ 还有：</p>
 <ul>
@@ -5265,13 +5265,13 @@
 <li>智能指针（<code>unique_ptr</code>, <code>shared_ptr</code>）</li>
 </ul>
 <p><strong>C++ 更安全，C 更原始</strong></p>
-<h2 id="标准库差距巨大">标准库差距巨大<a class="headerlink" href="#标准库差距巨大" title="Permanent link">&para;</a></h2>
-<h3 id="c_4">C<a class="headerlink" href="#c_4" title="Permanent link">&para;</a></h3>
+<h2 id="标准库差距巨大">标准库差距巨大<a class="headerlink" href="#标准库差距巨大" title="Permanent link">¶</a></h2>
+<h3 id="c_4">C<a class="headerlink" href="#c_4" title="Permanent link">¶</a></h3>
 <ul>
 <li>标准库很小（stdio.h、stdlib.h）</li>
 <li>偏底层</li>
 </ul>
-<h3 id="c_5">C++<a class="headerlink" href="#c_5" title="Permanent link">&para;</a></h3>
+<h3 id="c_5">C++<a class="headerlink" href="#c_5" title="Permanent link">¶</a></h3>
 <ul>
 <li>超强标准库（STL）</li>
 <li><code>vector</code></li>
@@ -5279,20 +5279,20 @@
 <li><code>unordered_map</code></li>
 <li><code>algorithm</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
 </code></pre></div>
 <blockquote>
 <p>C：要自己造轮子 </p>
 </blockquote>
-<h2 id="异常处理">异常处理<a class="headerlink" href="#异常处理" title="Permanent link">&para;</a></h2>
+<h2 id="异常处理">异常处理<a class="headerlink" href="#异常处理" title="Permanent link">¶</a></h2>
 <p><strong>C</strong>：靠返回值 / <code>errno</code></p>
 <p><strong>C++</strong>：支持 <code>try / catch</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="p">}</span>
 </code></pre></div>
-<h2 id="兼容性">兼容性<a class="headerlink" href="#兼容性" title="Permanent link">&para;</a></h2>
+<h2 id="兼容性">兼容性<a class="headerlink" href="#兼容性" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>C++ 基本兼容 C</strong></li>
 <li><strong>C 不兼容 C++</strong></li>
@@ -5300,7 +5300,7 @@
 <blockquote>
 <p><code>.c</code> 文件 ≠ <code>.cpp</code> 文件</p>
 </blockquote>
-<h2 id="使用场景对比">使用场景对比<a class="headerlink" href="#使用场景对比" title="Permanent link">&para;</a></h2>
+<h2 id="使用场景对比">使用场景对比<a class="headerlink" href="#使用场景对比" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -5447,8 +5447,6 @@ C++ 是“给你强大工具，但也更复杂的语言”</p>
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
       
     
   </body>

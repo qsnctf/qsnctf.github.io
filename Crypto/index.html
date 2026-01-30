@@ -4931,8 +4931,8 @@
   <h1>介绍</h1>
 
 <p>在CTF（Capture The Flag）竞赛中，Crypto(密码)是指与密码学相关的题目。这类题目主要考察参赛者对 <strong>加密、解密、编码、哈希等</strong> 密码学知识的理解和应用能力。Crypto题目通常涉及多种加密算法、编码方式以及解密技巧，涵盖从基础到高级的密码学知识。</p>
-<h2 id="认识crypto">认识Crypto<a class="headerlink" href="#认识crypto" title="Permanent link">&para;</a></h2>
-<h3 id="crypto题到底在考什么">Crypto题到底在考什么？<a class="headerlink" href="#crypto题到底在考什么" title="Permanent link">&para;</a></h3>
+<h2 id="认识crypto">认识Crypto<a class="headerlink" href="#认识crypto" title="Permanent link">¶</a></h2>
+<h3 id="crypto题到底在考什么">Crypto题到底在考什么？<a class="headerlink" href="#crypto题到底在考什么" title="Permanent link">¶</a></h3>
 <p>很多人刷 CTF Crypto，会卡在一个错觉里：</p>
 <p>“Crypto = 很难的数学推导”。</p>
 <p>但真实情况更像——<strong>比赛把现实里最常见的密码学错误，打包成一个可解的谜题</strong>。你不需要发明新理论，你需要做的是：<strong>识别系统、还原链条、抓住薄弱环节</strong>。</p>
@@ -4941,9 +4941,9 @@
 <p>把题目里那套“密码系统的设计/实现流程”逆向拆回去：它依赖什么安全前提？哪一步没满足？一旦没满足，攻击者能推出什么？</p>
 </blockquote>
 <p>Crypto 的核心考点，也可以归结为三件事（对应 MISC 的“识别-处理-提取”）：</p>
-<h3 id="1-识别这是哪一种密码体制题目在让你相信什么"><strong>1. 识别：这是哪一种密码体制？题目在让你相信什么？</strong><a class="headerlink" href="#1-识别这是哪一种密码体制题目在让你相信什么" title="Permanent link">&para;</a></h3>
+<h3 id="1-识别这是哪一种密码体制题目在让你相信什么"><strong>1. 识别：这是哪一种密码体制？题目在让你相信什么？</strong><a class="headerlink" href="#1-识别这是哪一种密码体制题目在让你相信什么" title="Permanent link">¶</a></h3>
 <p>你拿到题目的第一步，不是算式，而是判断“它属于哪类密码问题”。常见分类：</p>
-<h4 id="1-古典密码统计特征--结构规律"><strong>(1) 古典密码：统计特征 + 结构规律</strong><a class="headerlink" href="#1-古典密码统计特征--结构规律" title="Permanent link">&para;</a></h4>
+<h4 id="1-古典密码统计特征--结构规律"><strong>(1) 古典密码：统计特征 + 结构规律</strong><a class="headerlink" href="#1-古典密码统计特征--结构规律" title="Permanent link">¶</a></h4>
 <p>典型如：凯撒、维吉尼亚、仿射、替换、栅栏等。</p>
 <p>它们的“安全性”其实依赖：<strong>人看不出规律</strong>。所以比赛通常给你：</p>
 <ul>
@@ -4952,7 +4952,7 @@
 <li>key 很短 / 可爆破</li>
 </ul>
 <p><strong>识别信号</strong>：全是字母、密文长度不大、flag 格式明显、频率很像自然语言。</p>
-<h4 id="2-现代密码算法本身通常安全漏洞在用法"><strong>(2) 现代密码：算法本身通常安全，漏洞在“用法”</strong><a class="headerlink" href="#2-现代密码算法本身通常安全漏洞在用法" title="Permanent link">&para;</a></h4>
+<h4 id="2-现代密码算法本身通常安全漏洞在用法"><strong>(2) 现代密码：算法本身通常安全，漏洞在“用法”</strong><a class="headerlink" href="#2-现代密码算法本身通常安全漏洞在用法" title="Permanent link">¶</a></h4>
 <p>你看到 AES/RSA/ECC/Hash，别下意识觉得“算法会被破”。CTF 里更多考：</p>
 <ul>
 <li>模式选错（ECB、CTR nonce 重用）</li>
@@ -4961,7 +4961,7 @@
 <li>协议拼装错（签名/认证流程漏洞）</li>
 </ul>
 <p><strong>识别信号</strong>：题目出现 n,e,c、iv,nonce、p,q、signature、token、mac、hash 等关键词，或者给了“服务端交互”。</p>
-<h4 id="3-协议实现题信息泄露与可区分性"><strong>(3) 协议/实现题：信息泄露与“可区分性”</strong><a class="headerlink" href="#3-协议实现题信息泄露与可区分性" title="Permanent link">&para;</a></h4>
+<h4 id="3-协议实现题信息泄露与可区分性"><strong>(3) 协议/实现题：信息泄露与“可区分性”</strong><a class="headerlink" href="#3-协议实现题信息泄露与可区分性" title="Permanent link">¶</a></h4>
 <p>比如 padding oracle、错误回显、时间差、长度差、重复请求可观察等。</p>
 <p>这类题考的不是数学，而是你能否意识到：</p>
 <blockquote>
@@ -4977,8 +4977,8 @@
 <blockquote>
 <p>Crypto 的本质：逆向“安全假设”——当假设被破坏，整个系统就从“不可解”变成“可推”。</p>
 </blockquote>
-<h2 id="常见的的子类型与典型套路">常见的的子类型与典型套路<a class="headerlink" href="#常见的的子类型与典型套路" title="Permanent link">&para;</a></h2>
-<h3 id="1-古典密码classical-ciphers"><strong>1) 古典密码（Classical Ciphers）</strong><a class="headerlink" href="#1-古典密码classical-ciphers" title="Permanent link">&para;</a></h3>
+<h2 id="常见的的子类型与典型套路">常见的的子类型与典型套路<a class="headerlink" href="#常见的的子类型与典型套路" title="Permanent link">¶</a></h2>
+<h3 id="1-古典密码classical-ciphers"><strong>1) 古典密码（Classical Ciphers）</strong><a class="headerlink" href="#1-古典密码classical-ciphers" title="Permanent link">¶</a></h3>
 <p><strong>题面信号</strong>：全是字母/少量符号；密文不长；flag 格式明显（如 flag{}）；提示“key is word / shift”。</p>
 <p><strong>典型套路</strong></p>
 <ul>
@@ -4990,7 +4990,7 @@
 <blockquote>
 <p>核心逻辑：语言统计 + 格式约束 + 可枚举参数。</p>
 </blockquote>
-<h3 id="2-xor-与流密码one-time-pad--stream-cipher"><strong>2) XOR 与流密码（One-time pad / Stream Cipher）</strong><a class="headerlink" href="#2-xor-与流密码one-time-pad--stream-cipher" title="Permanent link">&para;</a></h3>
+<h3 id="2-xor-与流密码one-time-pad--stream-cipher"><strong>2) XOR 与流密码（One-time pad / Stream Cipher）</strong><a class="headerlink" href="#2-xor-与流密码one-time-pad--stream-cipher" title="Permanent link">¶</a></h3>
 <p><strong>题面信号</strong>：出现 xor、key reused、stream、keystream；或给你两段密文；或密文是 hex/base64 且长度相同。</p>
 <p><strong>典型套路</strong></p>
 <ul>
@@ -5008,27 +5008,27 @@
 <blockquote>
 <p>核心逻辑：流密码最怕“重复”；一重复就能把系统变成代数题。</p>
 </blockquote>
-<h3 id="3-aes-对称加密ecbcbcctrgcm"><strong>3) AES 对称加密（ECB/CBC/CTR/GCM）</strong><a class="headerlink" href="#3-aes-对称加密ecbcbcctrgcm" title="Permanent link">&para;</a></h3>
+<h3 id="3-aes-对称加密ecbcbcctrgcm"><strong>3) AES 对称加密（ECB/CBC/CTR/GCM）</strong><a class="headerlink" href="#3-aes-对称加密ecbcbcctrgcm" title="Permanent link">¶</a></h3>
 <p><strong>题面信号</strong>：出现 AES、iv、mode、padding、oracle，或提供一个“加密/解密接口”。</p>
-<h4 id="31-ecb-模式泄露结构"><strong>3.1 ECB 模式（泄露结构）</strong><a class="headerlink" href="#31-ecb-模式泄露结构" title="Permanent link">&para;</a></h4>
+<h4 id="31-ecb-模式泄露结构"><strong>3.1 ECB 模式（泄露结构）</strong><a class="headerlink" href="#31-ecb-模式泄露结构" title="Permanent link">¶</a></h4>
 <p><strong>套路</strong>：相同明文块→相同密文块。</p>
 <ul>
 <li>图片/重复块可视化（“企鹅题”）</li>
 <li><strong>字节对齐 + 字典攻击</strong>（byte-at-a-time）：服务端给你 encrypt(prefix + secret)，你靠枚举每个字节匹配输出块。</li>
 </ul>
-<h4 id="32-cbc-模式padding-oracle--位翻转"><strong>3.2 CBC 模式（Padding Oracle / 位翻转）</strong><a class="headerlink" href="#32-cbc-模式padding-oracle--位翻转" title="Permanent link">&para;</a></h4>
+<h4 id="32-cbc-模式padding-oracle--位翻转"><strong>3.2 CBC 模式（Padding Oracle / 位翻转）</strong><a class="headerlink" href="#32-cbc-模式padding-oracle--位翻转" title="Permanent link">¶</a></h4>
 <p><strong>套路</strong></p>
 <ul>
 <li><strong>Padding Oracle</strong>：错误回显能区分 padding 正误 → 逐字节解密。</li>
 <li><strong>CBC Bit Flipping</strong>：你可控前一块密文 → 可控下一块明文的特定位，构造 admin=true 等。</li>
 </ul>
-<h4 id="33-ctr-模式流密码化"><strong>3.3 CTR 模式（流密码化）</strong><a class="headerlink" href="#33-ctr-模式流密码化" title="Permanent link">&para;</a></h4>
+<h4 id="33-ctr-模式流密码化"><strong>3.3 CTR 模式（流密码化）</strong><a class="headerlink" href="#33-ctr-模式流密码化" title="Permanent link">¶</a></h4>
 <p><strong>套路</strong></p>
 <ul>
 <li>nonce 重用同 XOR</li>
 <li>可编辑 oracle（提供 edit 接口）可直接恢复 keystream</li>
 </ul>
-<h4 id="34-gcmaead实现细节坑"><strong>3.4 GCM/AEAD（实现细节坑）</strong><a class="headerlink" href="#34-gcmaead实现细节坑" title="Permanent link">&para;</a></h4>
+<h4 id="34-gcmaead实现细节坑"><strong>3.4 GCM/AEAD（实现细节坑）</strong><a class="headerlink" href="#34-gcmaead实现细节坑" title="Permanent link">¶</a></h4>
 <p><strong>套路</strong>（比赛常见方向）</p>
 <ul>
 <li>nonce 重用导致严重问题（取决于实现与泄露）</li>
@@ -5037,7 +5037,7 @@
 <blockquote>
 <p>核心逻辑：AES 本体很难破，能破的几乎都是**模式/接口/错误信息**。</p>
 </blockquote>
-<h3 id="4-rsa最常见的公钥题型"><strong>4) RSA（最常见的公钥题型）</strong><a class="headerlink" href="#4-rsa最常见的公钥题型" title="Permanent link">&para;</a></h3>
+<h3 id="4-rsa最常见的公钥题型"><strong>4) RSA（最常见的公钥题型）</strong><a class="headerlink" href="#4-rsa最常见的公钥题型" title="Permanent link">¶</a></h3>
 <p><strong>题面信号</strong>：给 n, e, c，或者多个 n/多个 c；或者小e，p和q</p>
 <p><strong>典型套路</strong></p>
 <ul>
@@ -5048,7 +5048,7 @@
 <p><strong>p、q 太近</strong>：费马分解（p≈q）。</p>
 </li>
 <li>
-<p><strong>低指数 e（如 &#8535;）+ 无 padding</strong>：</p>
+<p><strong>低指数 e（如 ⅗）+ 无 padding</strong>：</p>
 </li>
 </ul>
 <p>明文太小或结构简单 → 低指数开方/广播攻击（同 m 对不同 n）。</p>
@@ -5063,7 +5063,7 @@
 <blockquote>
 <p>核心逻辑：RSA 题多数在考“分解变简单了”或“padding/参数不规范”。</p>
 </blockquote>
-<h3 id="7-lcgmt19937弱-prng随机数题"><strong>7) LCG/MT19937/弱 PRNG（随机数题）</strong><a class="headerlink" href="#7-lcgmt19937弱-prng随机数题" title="Permanent link">&para;</a></h3>
+<h3 id="7-lcgmt19937弱-prng随机数题"><strong>7) LCG/MT19937/弱 PRNG（随机数题）</strong><a class="headerlink" href="#7-lcgmt19937弱-prng随机数题" title="Permanent link">¶</a></h3>
 <p><strong>题面信号</strong>：出现 “random”、“seed”、“timestamp”、“next()”、或给你一串输出让你预测下一个。</p>
 <p><strong>典型套路</strong></p>
 <ul>
@@ -5074,7 +5074,7 @@
 <blockquote>
 <p>核心逻辑：密码系统的“钥匙”往往是随机数；随机数弱 = 密钥弱。</p>
 </blockquote>
-<h2 id="常见坑点">常见坑点<a class="headerlink" href="#常见坑点" title="Permanent link">&para;</a></h2>
+<h2 id="常见坑点">常见坑点<a class="headerlink" href="#常见坑点" title="Permanent link">¶</a></h2>
 <p>很多编码就会设置坑，比如BASE系列可能就会换表</p>
 <p>算法没问题，问题在“用法”</p>
 <p>AES/RSA/ECC 通常不直接破，优先看：模式（ECB/CBC/CTR/GCM）、接口回显、验证顺序、错误信息是否可区分（oracle）。</p>
@@ -5193,8 +5193,6 @@
         <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
       
     
   </body>

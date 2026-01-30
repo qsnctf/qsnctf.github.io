@@ -4916,8 +4916,8 @@
 
 <p>Base36是一个二进制到文本编码表示方案的二进制数据以ASCII通过将其转化为一个字符串格式基数 -36表示。选择36十分方便，因为可以使用阿拉伯数字 0–9和拉丁字母 A–Z [1]（ISO基本拉丁字母）表示数字。
 每个base36位需要少于6位的信息来表示</p>
-<h2 id="base36">base36<a class="headerlink" href="#base36" title="Permanent link">&para;</a></h2>
-<h3 id="1-核心思想">(1) 核心思想<a class="headerlink" href="#1-核心思想" title="Permanent link">&para;</a></h3>
+<h2 id="base36">base36<a class="headerlink" href="#base36" title="Permanent link">¶</a></h2>
+<h3 id="1-核心思想">(1) 核心思想<a class="headerlink" href="#1-核心思想" title="Permanent link">¶</a></h3>
 <p>每个base36需要少于6位的信息来表示。</p>
 <p>字符集：共有 36 个字符。</p>
 <ul>
@@ -4926,7 +4926,7 @@
 <li>无填充字符：与Base64 以及Base32 不同，Base36 编码之后通常不需要填充字符来对齐。</li>
 <li>值得注意的一点是，由于base系列的编码的字典表都是可以自定义的，如果在base36中，将大学字母转化为小写，A，a都是代表10。</li>
 </ul>
-<h3 id="2-具体流程编码">(2) 具体流程（编码）<a class="headerlink" href="#2-具体流程编码" title="Permanent link">&para;</a></h3>
+<h3 id="2-具体流程编码">(2) 具体流程（编码）<a class="headerlink" href="#2-具体流程编码" title="Permanent link">¶</a></h3>
 <p>先去建立字符与数值的对应关系：</p>
 <ul>
 <li>0 - 9 对应映射 0 - 9</li>
@@ -4934,7 +4934,7 @@
 </ul>
 <p>执行连续除法：</p>
 <p>我们将要编码的字符，按 <strong>UTF-8</strong> 编码成字节序列，然后将字节序列视为一个大整数（大端序）</p>
-<h4 id="示例">示例：<a class="headerlink" href="#示例" title="Permanent link">&para;</a></h4>
+<h4 id="示例">示例：<a class="headerlink" href="#示例" title="Permanent link">¶</a></h4>
 <p>编码**<code>AB123</code>**</p>
 <p>字节序列（十六进制）：41 42 31 32 33
 转十进制整数：
@@ -4948,39 +4948,39 @@ $$
 280283381760 + 12800 = 280283394560
 280283394560 + 51 = 280283394611
 $$</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>0x4142313233 = 
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>0x41 * 256^4 + 0x42 * 256^3 + 0x31 * 256^2 + 0x32 * 256^1 + 0x33
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>= 65 * 4294967296 + 66 * 16777216 + 49 * 65536 + 50 * 256 + 51
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>= 279172874240 + 1107296256 + 3211264 + 12800 + 51
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>= 279172874240 + 1107296256 = 280280170496
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>280280170496 + 3211264 = 280283381760
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>280283381760 + 12800 = 280283394560
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>280283394560 + 51 = 280283394611
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>0x4142313233 = 
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>0x41 * 256^4 + 0x42 * 256^3 + 0x31 * 256^2 + 0x32 * 256^1 + 0x33
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>= 65 * 4294967296 + 66 * 16777216 + 49 * 65536 + 50 * 256 + 51
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>= 279172874240 + 1107296256 + 3211264 + 12800 + 51
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>= 279172874240 + 1107296256 = 280280170496
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>280280170496 + 3211264 = 280283381760
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>280283381760 + 12800 = 280283394560
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>280283394560 + 51 = 280283394611
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>1) 280283394611 ÷ 36 = 7785649850 余 11 → &#39;B&#39;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2) 7785649850 ÷ 36 = 216268051 余 14 → &#39;E&#39;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>3) 216268051 ÷ 36 = 6007445 余 31 → &#39;V&#39;
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>4) 6007445 ÷ 36 = 166873 余 17 → &#39;H&#39;
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>5) 166873 ÷ 36 = 4635 余 13 → &#39;D&#39;
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>6) 4635 ÷ 36 = 128 余 27 → &#39;R&#39;
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>7) 128 ÷ 36 = 3 余 20 → &#39;K&#39;
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>8) 3 ÷ 36 = 0 余 3 → &#39;3&#39;
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>反向排列余数：3 K R D H V E B
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>所以 &quot;AB123&quot; 的 Base36 编码结果是 &quot;3KRDHVEB&quot;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>1) 280283394611 ÷ 36 = 7785649850 余 11 → 'B'
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>2) 7785649850 ÷ 36 = 216268051 余 14 → 'E'
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>3) 216268051 ÷ 36 = 6007445 余 31 → 'V'
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>4) 6007445 ÷ 36 = 166873 余 17 → 'H'
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>5) 166873 ÷ 36 = 4635 余 13 → 'D'
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>6) 4635 ÷ 36 = 128 余 27 → 'R'
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>7) 128 ÷ 36 = 3 余 20 → 'K'
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>8) 3 ÷ 36 = 0 余 3 → '3'
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>反向排列余数：3 K R D H V E B
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>所以 "AB123" 的 Base36 编码结果是 "3KRDHVEB"
 </code></pre></div>
 <p>Python 脚本如下：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">base36</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;AB123&quot;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">encoded</span> <span class="o">=</span> <span class="n">base36</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="s1">&#39;big&#39;</span><span class="p">))</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">encoded</span><span class="p">)</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">decoded_int</span> <span class="o">=</span> <span class="n">base36</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">encoded</span><span class="p">)</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">decoded_bytes</span> <span class="o">=</span> <span class="n">decoded_int</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">((</span><span class="n">decoded_int</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span> <span class="o">//</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;big&#39;</span><span class="p">)</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">decoded_bytes</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">base36</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">text</span> <span class="o">=</span> <span class="s2">"AB123"</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">encoded</span> <span class="o">=</span> <span class="n">base36</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">),</span> <span class="s1">'big'</span><span class="p">))</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">encoded</span><span class="p">)</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">decoded_int</span> <span class="o">=</span> <span class="n">base36</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">encoded</span><span class="p">)</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">decoded_bytes</span> <span class="o">=</span> <span class="n">decoded_int</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">((</span><span class="n">decoded_int</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span> <span class="o">//</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">'big'</span><span class="p">)</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">decoded_bytes</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">))</span>
 </code></pre></div>
 
 
@@ -5094,8 +5094,6 @@ $$</p>
         <script src="../../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
       
     
   </body>

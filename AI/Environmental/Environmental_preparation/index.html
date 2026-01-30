@@ -4975,91 +4975,91 @@
   <h1>环境准备</h1>
 
 <p>每一个方向都需要一个环境的准备，当然AI安全当然不例外</p>
-<h2 id="环境准备">环境准备<a class="headerlink" href="#环境准备" title="Permanent link">&para;</a></h2>
+<h2 id="环境准备">环境准备<a class="headerlink" href="#环境准备" title="Permanent link">¶</a></h2>
 <p>安装anaconda</p>
-<h3 id="windows">windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<h3 id="windows">windows<a class="headerlink" href="#windows" title="Permanent link">¶</a></h3>
 <p>打开 <a href="https://www.anaconda.com/products/distribution">Anaconda 官方网站</a>。</p>
 <p>在页面右上角选择 <strong>用户登录 (Sign In)</strong> 或 <strong>注册新用户 (Sign Up)</strong>，登录后即可点击 <strong>Free Download</strong> 按钮免费下载适合你操作系统的 Anaconda 安装包。</p>
 <p>后面正常安装即可，并没有什么麻烦的地方。</p>
 <p>安装完成之后，开一个终端输入</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda --version
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>conda --version
 </code></pre></div>
 <p>查看版本是否和安装的相符，如果相符合，说明安装成功。</p>
-<h3 id="linux">linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
-<h4 id="查看linux系统内核">查看Linux系统内核<a class="headerlink" href="#查看linux系统内核" title="Permanent link">&para;</a></h4>
+<h3 id="linux">linux<a class="headerlink" href="#linux" title="Permanent link">¶</a></h3>
+<h4 id="查看linux系统内核">查看Linux系统内核<a class="headerlink" href="#查看linux系统内核" title="Permanent link">¶</a></h4>
 <p>Linux系统内核有两种,一种为arch64,另一种为X86_64
 使用命令<code>uname -a</code> 查看系统内核</p>
 <p>下载地址如下：</p>
 <p><a href="https://repo.anaconda.com/archive/">anaconda安装包下载地址</a></p>
 <p>在控制台输入</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>wget https://repo.anaconda.com/archive/Anaconda3-xxxx.sh
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>wget https://repo.anaconda.com/archive/Anaconda3-xxxx.sh
 </code></pre></div>
 <p>下载完输入</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./Anaconda3-xxxx.sh
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>./Anaconda3-xxxx.sh
 </code></pre></div>
 <p>开始安装,一直enter ,yes 直到安装完</p>
 <p>点击enter，等待安装完成之后。</p>
-<h4 id="配置anaconda环境">配置Anaconda环境<a class="headerlink" href="#配置anaconda环境" title="Permanent link">&para;</a></h4>
+<h4 id="配置anaconda环境">配置Anaconda环境<a class="headerlink" href="#配置anaconda环境" title="Permanent link">¶</a></h4>
 <p>打开/etc/profile</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>vim /etc/profile
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>vim /etc/profile
 </code></pre></div>
 <p>在末尾添加环境变量</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>export PATH=~/anaconda3/bin:$PATH
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>export PATH=~/anaconda3/bin:$PATH
 </code></pre></div>
 <p>如果你使用的是bash，那么打开 <code>~/.bashrc</code>，如果使用的是zsh，那么就打开zsh的配置</p>
 <p>这里给出是bash的方法，zsh同样适用。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>vim ~/.bashrc
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>vim ~/.bashrc
 </code></pre></div>
 <p>在末尾添加环境变量</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>export PATH=~/anaconda3/bin:$PATH
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>export PATH=~/anaconda3/bin:$PATH
 </code></pre></div>
 <p>刷新环境变量或者新开一个终端</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>source /etc/profile
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>source ~/.bashrc
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>source /etc/profile
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>source ~/.bashrc
 </code></pre></div>
 <p>输入<code>conda -V</code>，出现conda xx.xx 安装成功。</p>
-<h3 id="anaconda-命令">Anaconda 命令<a class="headerlink" href="#anaconda-命令" title="Permanent link">&para;</a></h3>
+<h3 id="anaconda-命令">Anaconda 命令<a class="headerlink" href="#anaconda-命令" title="Permanent link">¶</a></h3>
 <p>在windows中，如果想要安装的虚拟环境在anaconda安装目录下，需要<code>Anaconda Powershell Prompt</code>以管理员身份运行。</p>
 <p><strong>查看Conda版本</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>conda --version
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>conda --version
 </code></pre></div>
 <p><strong>创建新环境</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>conda create --name myenv python=3.8
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>conda create --name myenv python=3.8
 </code></pre></div>
 <ul>
 <li><strong>作用</strong>：创建一个名为 <code>myenv</code> 的新虚拟环境，并指定使用 Python 3.8 版本。每个环境可以独立安装不同的包和 Python 版本，不会相互干扰。</li>
 </ul>
 <p><strong>激活环境</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>conda activate myenv
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>conda activate myenv
 </code></pre></div>
 <ul>
 <li><strong>作用</strong>：激活您创建的虚拟环境 <code>myenv</code>。激活后，您可以在该环境中安装库或运行 Python 程序。</li>
 </ul>
 <p><strong>查看已有的虚拟环境</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>conda env list
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>conda env list
 </code></pre></div>
 <ul>
 <li><strong>作用</strong>：列出系统中所有已创建的虚拟环境，方便查看和管理环境。</li>
 </ul>
 <p><strong>退出当前环境</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>conda deactivate
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>conda deactivate
 </code></pre></div>
 <ul>
 <li><strong>作用</strong>：退出当前激活的虚拟环境，返回 base 环境</li>
 </ul>
 <p><strong>删除虚拟环境</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>conda remove --name myenv --all
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>conda remove --name myenv --all
 </code></pre></div>
-<h2 id="ollama">Ollama<a class="headerlink" href="#ollama" title="Permanent link">&para;</a></h2>
+<h2 id="ollama">Ollama<a class="headerlink" href="#ollama" title="Permanent link">¶</a></h2>
 <p>在现在新版的ollama中安装是安装到默认位置的，如果你的C盘足够大，那么你可以选择安装的位置为默认。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>OllamaSetup.exe /DIR=&quot;d:\some\location&quot;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>OllamaSetup.exe /DIR="d:\some\location"
 </code></pre></div>
 <p>即可更改安装地址，当然安装的model也是在默认的位置，可以在环境变量里面设置下路径，将下载的模型放到其他盘。</p>
-<p><img alt="" src="../attachments/index.PNG" /></p>
-<h3 id="ollama命令">Ollama命令<a class="headerlink" href="#ollama命令" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../attachments/index.PNG"/></p>
+<h3 id="ollama命令">Ollama命令<a class="headerlink" href="#ollama命令" title="Permanent link">¶</a></h3>
 <p>Ollama 提供了多种命令行工具（CLI）供用户与本地运行的模型进行交互。</p>
 <p>基本格式：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>ollama &lt;command&gt; [args]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>ollama &lt;command&gt; [args]
 </code></pre></div>
 <ul>
 <li>serve：启动 ollama 服务。</li>
@@ -5076,37 +5076,37 @@
 <li>help：获取关于任何命令的帮助信息。</li>
 </ul>
 <p><strong>拉取与删除模型</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>ollama pull &lt;model&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>ollama pull &lt;model&gt;
 </code></pre></div>
 <p><strong>删除本地模型</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>ollama rm &lt;model&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>ollama rm &lt;model&gt;
 </code></pre></div>
 <p><strong>列出所有本地模型</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ollama list
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>ollama list
 </code></pre></div>
 <p><strong>交互模式运行模型，不退出</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>ollama run &lt;model&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>ollama run &lt;model&gt;
 </code></pre></div>
 <p><strong>可带系统信息与 prompt</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>ollama run &lt;model&gt; -s &quot;&lt;system&gt;&quot; -p &quot;&lt;prompt&gt;&quot;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>ollama run &lt;model&gt; -s "&lt;system&gt;" -p "&lt;prompt&gt;"
 </code></pre></div>
 <p><strong>generate</strong>
 执行单次推理，输出文本</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>ollama generate &lt;model&gt; -p &quot;&lt;prompt&gt;&quot;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>ollama generate &lt;model&gt; -p "&lt;prompt&gt;"
 </code></pre></div>
 <p><strong>创建与修改模型</strong></p>
 <p>用 Modelfile 创建本地模型</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>ollama create &lt;model-name&gt; -f Modelfile
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>ollama create &lt;model-name&gt; -f Modelfile
 </code></pre></div>
 <p><strong>Modelfile 指令</strong></p>
 <p>构建模型时使用：</p>
 <ul>
-<li><strong>FROM <model></strong>：基础模型</li>
+<li><strong>FROM <model></model></strong>：基础模型</li>
 <li><strong>SYSTEM "xxx"</strong>：设定系统提示</li>
 <li><strong>PARAMETER key=value</strong>：设定默认参数</li>
 <li><strong>TEMPLATE "xxx"</strong>：自定义 Chat 模板</li>
 <li><strong>LICENSE "xxx"</strong>：设置 License</li>
-<li><strong>ADAPTER <file></strong> / <strong>WEIGHTS <file></strong>：加载 LoRA 或额外权重</li>
+<li><strong>ADAPTER <file></file></strong> / <strong>WEIGHTS <file></file></strong>：加载 LoRA 或额外权重</li>
 </ul>
 
 
@@ -5220,8 +5220,6 @@
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
       
     
   </body>

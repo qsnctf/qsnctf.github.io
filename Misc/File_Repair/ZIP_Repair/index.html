@@ -4741,16 +4741,16 @@
   
 
 
-<h1 id="zip文件修复">ZIP文件修复<a class="headerlink" href="#zip文件修复" title="Permanent link">&para;</a></h1>
+<h1 id="zip文件修复">ZIP文件修复<a class="headerlink" href="#zip文件修复" title="Permanent link">¶</a></h1>
 <p>对于ZIP来说，它的十六进制还是比较容易看明白的。</p>
 <p>如图所示：</p>
-<p><img alt="" src="../attachments/image2.png" /></p>
+<p><img alt="" src="../attachments/image2.png"/></p>
 <p>通常我们要去修复的只有它的文件头，一般出题人会去骚乱它的文件头，例如将文件头进行删除，或者将原本的文件头<code>50 4B 03 04</code>改变为<code>50 4B 04 03</code>这样就会在打开压缩包的时候出现分卷的问题。</p>
 <p>还有一种方式我们后面会讲到，也就是有关压缩包的伪加密，将原本没有加密的压缩包，转化为加密过后的压缩包。</p>
 <p>总的来说，对于全部的文件都会出现一种情况，文件进行逆序，文件的十六进制逆序存放，这里给出解题脚本。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;challenge&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">res</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;challenge1&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">res</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">f</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'challenge'</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">res</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'challenge1'</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">res</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">f</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </code></pre></div>
 
 
@@ -4864,8 +4864,6 @@
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
       
     
   </body>

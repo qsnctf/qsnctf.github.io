@@ -4741,10 +4741,10 @@
   
 
 
-<h1 id="jpg修复">JPG修复<a class="headerlink" href="#jpg修复" title="Permanent link">&para;</a></h1>
+<h1 id="jpg修复">JPG修复<a class="headerlink" href="#jpg修复" title="Permanent link">¶</a></h1>
 <p>在JPG修复中，我们一般只关注JPG的高宽问题，对于JPG，它没有想PNG那么明显的块，它的文件头很短很短<code>FFD8</code>。</p>
 <p>如图所示：
-<img alt="" src="attachments/JPGRepair.png" /></p>
+<img alt="" src="attachments/JPGRepair.png"/></p>
 <p>我们可以清晰的看到在里面存在一个块的名字<code>struct SOFx sof0</code></p>
 <p>在这里面存放的是JPG的高宽数据</p>
 <p>我们只要在这里进行修改即可，原理和PNG同理，只不过在这里面我们没办法精确的计算它的高宽，只有自己去修改。</p>
@@ -4860,8 +4860,6 @@
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
       
     
   </body>

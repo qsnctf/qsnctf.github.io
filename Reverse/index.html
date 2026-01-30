@@ -5075,10 +5075,10 @@
   
 
 
-<h1 id="ctf-reverse">CTF Reverse<a class="headerlink" href="#ctf-reverse" title="Permanent link">&para;</a></h1>
-<h2 id="什么是逆向工程">什么是逆向工程？<a class="headerlink" href="#什么是逆向工程" title="Permanent link">&para;</a></h2>
+<h1 id="ctf-reverse">CTF Reverse<a class="headerlink" href="#ctf-reverse" title="Permanent link">¶</a></h1>
+<h2 id="什么是逆向工程">什么是逆向工程？<a class="headerlink" href="#什么是逆向工程" title="Permanent link">¶</a></h2>
 <p>逆向工程就是"反着来"的技术。想象一下，你拿到一个已经做好的蛋糕，通过品尝、分析成分，来还原出制作这个蛋糕的配方和步骤。在CTF中，逆向工程就是分析已经编译好的程序，理解它的工作原理，找到隐藏的flag或者破解它的保护机制。</p>
-<h2 id="为什么逆向工程重要">为什么逆向工程重要？<a class="headerlink" href="#为什么逆向工程重要" title="Permanent link">&para;</a></h2>
+<h2 id="为什么逆向工程重要">为什么逆向工程重要？<a class="headerlink" href="#为什么逆向工程重要" title="Permanent link">¶</a></h2>
 <p>在CTF比赛中，逆向题目非常常见。通过逆向分析，你可以：</p>
 <ul>
 <li>理解恶意软件的工作原理</li>
@@ -5087,8 +5087,8 @@
 <li>分析加密算法</li>
 <li>提取隐藏信息</li>
 </ul>
-<h2 id="基础工具准备">基础工具准备<a class="headerlink" href="#基础工具准备" title="Permanent link">&para;</a></h2>
-<h3 id="必备工具清单">必备工具清单<a class="headerlink" href="#必备工具清单" title="Permanent link">&para;</a></h3>
+<h2 id="基础工具准备">基础工具准备<a class="headerlink" href="#基础工具准备" title="Permanent link">¶</a></h2>
+<h3 id="必备工具清单">必备工具清单<a class="headerlink" href="#必备工具清单" title="Permanent link">¶</a></h3>
 <p><strong>静态分析工具（看代码）</strong>：
 - IDA Pro：功能最强大的反汇编器，但价格昂贵
 - Ghidra：NSA开源的免费替代品，功能强大
@@ -5104,26 +5104,26 @@
 - Detect It Easy：文件类型检测
 - UPX：加壳脱壳工具
 - Process Monitor：监控程序行为</p>
-<h3 id="环境搭建">环境搭建<a class="headerlink" href="#环境搭建" title="Permanent link">&para;</a></h3>
+<h3 id="环境搭建">环境搭建<a class="headerlink" href="#环境搭建" title="Permanent link">¶</a></h3>
 <p>对于初学者，建议这样配置：</p>
 <ol>
 <li><strong>Windows环境</strong>：安装x64dbg + Ghidra</li>
 <li><strong>Linux环境</strong>：安装GDB + Radare2</li>
 <li><strong>虚拟机</strong>：准备一个干净的测试环境</li>
 </ol>
-<h2 id="基础知识">基础知识<a class="headerlink" href="#基础知识" title="Permanent link">&para;</a></h2>
-<h3 id="汇编语言入门">汇编语言入门<a class="headerlink" href="#汇编语言入门" title="Permanent link">&para;</a></h3>
+<h2 id="基础知识">基础知识<a class="headerlink" href="#基础知识" title="Permanent link">¶</a></h2>
+<h3 id="汇编语言入门">汇编语言入门<a class="headerlink" href="#汇编语言入门" title="Permanent link">¶</a></h3>
 <p>逆向工程离不开汇编语言。不需要成为汇编专家，但要能看懂基本指令：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>; 常见指令示例
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mov eax, 123        ; 把123放到eax寄存器
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>add eax, ebx        ; eax = eax + ebx
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>sub eax, ecx        ; eax = eax - ecx
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>cmp eax, 100        ; 比较eax和100
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>jz label           ; 如果相等就跳转
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>call function      ; 调用函数
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>ret                ; 函数返回
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>; 常见指令示例
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>mov eax, 123        ; 把123放到eax寄存器
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>add eax, ebx        ; eax = eax + ebx
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>sub eax, ecx        ; eax = eax - ecx
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>cmp eax, 100        ; 比较eax和100
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>jz label           ; 如果相等就跳转
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>call function      ; 调用函数
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>ret                ; 函数返回
 </code></pre></div>
-<h3 id="程序结构理解">程序结构理解<a class="headerlink" href="#程序结构理解" title="Permanent link">&para;</a></h3>
+<h3 id="程序结构理解">程序结构理解<a class="headerlink" href="#程序结构理解" title="Permanent link">¶</a></h3>
 <p><strong>PE文件（Windows程序）结构</strong>：
 - DOS头：以"MZ"开头
 - PE头：以"PE"开头
@@ -5137,8 +5137,8 @@
 - 节头表：描述各个节区
 - 代码段：.text节
 - 数据段：.data节</p>
-<h2 id="常见题目类型">常见题目类型<a class="headerlink" href="#常见题目类型" title="Permanent link">&para;</a></h2>
-<h3 id="1-crackme题目">1. CrackMe题目<a class="headerlink" href="#1-crackme题目" title="Permanent link">&para;</a></h3>
+<h2 id="常见题目类型">常见题目类型<a class="headerlink" href="#常见题目类型" title="Permanent link">¶</a></h2>
+<h3 id="1-crackme题目">1. CrackMe题目<a class="headerlink" href="#1-crackme题目" title="Permanent link">¶</a></h3>
 <p>这类题目要求你破解程序的注册机制。比如：</p>
 <ul>
 <li>输入用户名和序列号，验证是否正确</li>
@@ -5150,7 +5150,7 @@
 2. 用IDA打开，找到关键比较代码
 3. 分析验证逻辑
 4. 逆向算法，写出注册机</p>
-<h3 id="2-算法逆向">2. 算法逆向<a class="headerlink" href="#2-算法逆向" title="Permanent link">&para;</a></h3>
+<h3 id="2-算法逆向">2. 算法逆向<a class="headerlink" href="#2-算法逆向" title="Permanent link">¶</a></h3>
 <p>程序对输入数据进行处理，需要你理解算法逻辑：</p>
 <ul>
 <li>加密解密算法</li>
@@ -5162,7 +5162,7 @@
 2. 识别算法类型（XOR、RC4、Base64等）
 3. 逆向算法步骤
 4. 实现解密函数</p>
-<h3 id="3-恶意软件分析">3. 恶意软件分析<a class="headerlink" href="#3-恶意软件分析" title="Permanent link">&para;</a></h3>
+<h3 id="3-恶意软件分析">3. 恶意软件分析<a class="headerlink" href="#3-恶意软件分析" title="Permanent link">¶</a></h3>
 <p>分析恶意程序的行为：</p>
 <ul>
 <li>网络通信行为</li>
@@ -5174,26 +5174,26 @@
 2. 监控程序行为
 3. 分析通信协议
 4. 提取配置信息</p>
-<h2 id="实战技巧">实战技巧<a class="headerlink" href="#实战技巧" title="Permanent link">&para;</a></h2>
-<h3 id="静态分析技巧">静态分析技巧<a class="headerlink" href="#静态分析技巧" title="Permanent link">&para;</a></h3>
+<h2 id="实战技巧">实战技巧<a class="headerlink" href="#实战技巧" title="Permanent link">¶</a></h2>
+<h3 id="静态分析技巧">静态分析技巧<a class="headerlink" href="#静态分析技巧" title="Permanent link">¶</a></h3>
 <p><strong>字符串搜索</strong>：程序中的字符串往往包含重要线索</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 简单字符串提取脚本</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">find_strings</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="c1"># 查找可读字符串</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">strings</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;[</span><span class="se">\x20</span><span class="s1">-</span><span class="se">\x7e</span><span class="s1">]{4,}&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="k">return</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">strings</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 简单字符串提取脚本</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">find_strings</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="c1"># 查找可读字符串</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="n">strings</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">b</span><span class="s1">'[</span><span class="se">\x20</span><span class="s1">-</span><span class="se">\x7e</span><span class="s1">]{4,}'</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>    <span class="k">return</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'ascii'</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">strings</span><span class="p">]</span>
 </code></pre></div>
 <p><strong>函数识别</strong>：
 - main函数：程序入口
 - 字符串比较函数：strcmp、strncmp
 - 加密函数：可能包含加密逻辑
 - 自定义函数：需要重点分析</p>
-<h3 id="动态分析技巧">动态分析技巧<a class="headerlink" href="#动态分析技巧" title="Permanent link">&para;</a></h3>
+<h3 id="动态分析技巧">动态分析技巧<a class="headerlink" href="#动态分析技巧" title="Permanent link">¶</a></h3>
 <p><strong>断点设置</strong>：在关键位置设置断点
 - 字符串比较处
 - 文件操作处
@@ -5204,8 +5204,8 @@
 - 分析堆栈数据
 - 监控内存变化
 - 提取关键数据</p>
-<h2 id="实际案例">实际案例<a class="headerlink" href="#实际案例" title="Permanent link">&para;</a></h2>
-<h3 id="案例1简单crackme">案例1：简单CrackMe<a class="headerlink" href="#案例1简单crackme" title="Permanent link">&para;</a></h3>
+<h2 id="实际案例">实际案例<a class="headerlink" href="#实际案例" title="Permanent link">¶</a></h2>
+<h3 id="案例1简单crackme">案例1：简单CrackMe<a class="headerlink" href="#案例1简单crackme" title="Permanent link">¶</a></h3>
 <p>题目：输入用户名和密码，验证是否正确</p>
 <p>分析步骤：
 1. 运行程序，发现需要输入用户名和密码
@@ -5213,36 +5213,36 @@
 3. 找到验证函数，分析逻辑
 4. 发现密码是用户名的简单变换
 5. 写出注册机</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">generate_password</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">username</span><span class="p">:</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="c1"># 逆向得到的算法</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="n">new_char</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">((</span><span class="nb">ord</span><span class="p">(</span><span class="n">char</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">%</span> <span class="mi">256</span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="n">password</span> <span class="o">+=</span> <span class="n">new_char</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="k">return</span> <span class="n">password</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">generate_password</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="n">password</span> <span class="o">=</span> <span class="s2">""</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">username</span><span class="p">:</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="c1"># 逆向得到的算法</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="n">new_char</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">((</span><span class="nb">ord</span><span class="p">(</span><span class="n">char</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">%</span> <span class="mi">256</span><span class="p">)</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>        <span class="n">password</span> <span class="o">+=</span> <span class="n">new_char</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="k">return</span> <span class="n">password</span>
 </code></pre></div>
-<h3 id="案例2加密算法逆向">案例2：加密算法逆向<a class="headerlink" href="#案例2加密算法逆向" title="Permanent link">&para;</a></h3>
+<h3 id="案例2加密算法逆向">案例2：加密算法逆向<a class="headerlink" href="#案例2加密算法逆向" title="Permanent link">¶</a></h3>
 <p>题目：程序对flag进行加密，需要解密</p>
 <p>分析步骤：
 1. 运行程序，输入测试数据
 2. 用调试器跟踪加密过程
 3. 发现是简单的XOR加密
 4. 提取密钥，写出解密脚本</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">decrypt_flag</span><span class="p">(</span><span class="n">encrypted_data</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">flag</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">byte</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">encrypted_data</span><span class="p">):</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="n">flag</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">byte</span> <span class="o">^</span> <span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="k">return</span> <span class="n">flag</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">decrypt_flag</span><span class="p">(</span><span class="n">encrypted_data</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="n">flag</span> <span class="o">=</span> <span class="s2">""</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">byte</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">encrypted_data</span><span class="p">):</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="n">flag</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">byte</span> <span class="o">^</span> <span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="k">return</span> <span class="n">flag</span>
 </code></pre></div>
-<h2 id="常见保护技术">常见保护技术<a class="headerlink" href="#常见保护技术" title="Permanent link">&para;</a></h2>
-<h3 id="加壳保护">加壳保护<a class="headerlink" href="#加壳保护" title="Permanent link">&para;</a></h3>
+<h2 id="常见保护技术">常见保护技术<a class="headerlink" href="#常见保护技术" title="Permanent link">¶</a></h2>
+<h3 id="加壳保护">加壳保护<a class="headerlink" href="#加壳保护" title="Permanent link">¶</a></h3>
 <p>程序被压缩或加密，需要先脱壳：</p>
 <ul>
 <li>UPX壳：使用UPX工具脱壳</li>
 <li>ASPack壳：专用脱壳工具</li>
 <li>自定义壳：需要动态分析脱壳</li>
 </ul>
-<h3 id="反调试技术">反调试技术<a class="headerlink" href="#反调试技术" title="Permanent link">&para;</a></h3>
+<h3 id="反调试技术">反调试技术<a class="headerlink" href="#反调试技术" title="Permanent link">¶</a></h3>
 <p>程序检测是否被调试：</p>
 <ul>
 <li>IsDebuggerPresent：检测调试器</li>
@@ -5253,8 +5253,8 @@
 - 修改检测函数返回值
 - 跳过检测代码
 - 使用插件绕过</p>
-<h2 id="学习建议">学习建议<a class="headerlink" href="#学习建议" title="Permanent link">&para;</a></h2>
-<h3 id="学习路径">学习路径<a class="headerlink" href="#学习路径" title="Permanent link">&para;</a></h3>
+<h2 id="学习建议">学习建议<a class="headerlink" href="#学习建议" title="Permanent link">¶</a></h2>
+<h3 id="学习路径">学习路径<a class="headerlink" href="#学习路径" title="Permanent link">¶</a></h3>
 <p><strong>第一阶段（1个月）</strong>：
 - 学习基本汇编指令
 - 掌握IDA或Ghidra基本使用
@@ -5267,7 +5267,7 @@
 - 研究高级保护技术
 - 分析真实恶意软件
 - 开发逆向工具</p>
-<h3 id="练习资源">练习资源<a class="headerlink" href="#练习资源" title="Permanent link">&para;</a></h3>
+<h3 id="练习资源">练习资源<a class="headerlink" href="#练习资源" title="Permanent link">¶</a></h3>
 <p><strong>在线平台</strong>：
 - CrackMes.one：CrackMe题目集合
 - Reverse Engineering Challenges：逆向挑战
@@ -5276,55 +5276,55 @@
 - 自己编写简单程序进行逆向
 - 分析开源程序的二进制文件
 - 参加本地CTF比赛</p>
-<h2 id="实用脚本">实用脚本<a class="headerlink" href="#实用脚本" title="Permanent link">&para;</a></h2>
-<h3 id="字符串提取脚本">字符串提取脚本<a class="headerlink" href="#字符串提取脚本" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">extract_strings</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="n">strings</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="c1"># 查找ASCII字符串</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">pattern</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;[</span><span class="se">\x20</span><span class="s1">-</span><span class="se">\x7e</span><span class="s1">]{&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">min_length</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span> <span class="o">+</span> <span class="sa">b</span><span class="s1">&#39;,}&#39;</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        <span class="n">string</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        <span class="n">strings</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">match</span><span class="o">.</span><span class="n">start</span><span class="p">(),</span> <span class="n">string</span><span class="p">))</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="k">return</span> <span class="n">strings</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;用法: python extract_strings.py &lt;文件名&gt;&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="n">strings</span> <span class="o">=</span> <span class="n">extract_strings</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    <span class="k">for</span> <span class="n">offset</span><span class="p">,</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">strings</span><span class="p">:</span>
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;0x</span><span class="si">{</span><span class="n">offset</span><span class="si">:</span><span class="s2">08x</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">string</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<h2 id="实用脚本">实用脚本<a class="headerlink" href="#实用脚本" title="Permanent link">¶</a></h2>
+<h3 id="字符串提取脚本">字符串提取脚本<a class="headerlink" href="#字符串提取脚本" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">extract_strings</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="n">strings</span> <span class="o">=</span> <span class="p">[]</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>    <span class="c1"># 查找ASCII字符串</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>    <span class="n">pattern</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">'[</span><span class="se">\x20</span><span class="s1">-</span><span class="se">\x7e</span><span class="s1">]{'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">min_length</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span> <span class="o">+</span> <span class="sa">b</span><span class="s1">',}'</span>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>    <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>        <span class="n">string</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'ascii'</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>        <span class="n">strings</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">match</span><span class="o">.</span><span class="n">start</span><span class="p">(),</span> <span class="n">string</span><span class="p">))</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>    <span class="k">return</span> <span class="n">strings</span>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"用法: python extract_strings.py &lt;文件名&gt;"</span><span class="p">)</span>
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>
+<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>    <span class="n">strings</span> <span class="o">=</span> <span class="n">extract_strings</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a>    <span class="k">for</span> <span class="n">offset</span><span class="p">,</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">strings</span><span class="p">:</span>
+<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"0x</span><span class="si">{</span><span class="n">offset</span><span class="si">:</span><span class="s2">08x</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">string</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="简单调试脚本">简单调试脚本<a class="headerlink" href="#简单调试脚本" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># GDB自动化脚本示例</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">debug_program</span><span class="p">(</span><span class="n">program_path</span><span class="p">,</span> <span class="n">breakpoints</span><span class="p">):</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">gdb_commands</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;file &quot;</span> <span class="o">+</span> <span class="n">program_path</span><span class="p">]</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="k">for</span> <span class="n">bp</span> <span class="ow">in</span> <span class="n">breakpoints</span><span class="p">:</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        <span class="n">gdb_commands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;break *</span><span class="si">{</span><span class="n">bp</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="n">gdb_commands</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        <span class="s2">&quot;run&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        <span class="s2">&quot;info registers&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>        <span class="s2">&quot;x/10i $eip&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>        <span class="s2">&quot;continue&quot;</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    <span class="p">])</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    <span class="n">command</span> <span class="o">=</span> <span class="s2">&quot;gdb -batch &quot;</span> <span class="o">+</span> <span class="s2">&quot; -ex </span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2"> -ex </span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">gdb_commands</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+<h3 id="简单调试脚本">简单调试脚本<a class="headerlink" href="#简单调试脚本" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># GDB自动化脚本示例</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">debug_program</span><span class="p">(</span><span class="n">program_path</span><span class="p">,</span> <span class="n">breakpoints</span><span class="p">):</span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="n">gdb_commands</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"file "</span> <span class="o">+</span> <span class="n">program_path</span><span class="p">]</span>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a>    <span class="k">for</span> <span class="n">bp</span> <span class="ow">in</span> <span class="n">breakpoints</span><span class="p">:</span>
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>        <span class="n">gdb_commands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"break *</span><span class="si">{</span><span class="n">bp</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a>
+<a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a>    <span class="n">gdb_commands</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span>
+<a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a>        <span class="s2">"run"</span><span class="p">,</span>
+<a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a>        <span class="s2">"info registers"</span><span class="p">,</span>
+<a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a>        <span class="s2">"x/10i $eip"</span><span class="p">,</span>
+<a href="#__codelineno-5-14" id="__codelineno-5-14" name="__codelineno-5-14"></a>        <span class="s2">"continue"</span>
+<a href="#__codelineno-5-15" id="__codelineno-5-15" name="__codelineno-5-15"></a>    <span class="p">])</span>
+<a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a>
+<a href="#__codelineno-5-17" id="__codelineno-5-17" name="__codelineno-5-17"></a>    <span class="n">command</span> <span class="o">=</span> <span class="s2">"gdb -batch "</span> <span class="o">+</span> <span class="s2">" -ex </span><span class="se">\"</span><span class="s2">"</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\"</span><span class="s2"> -ex </span><span class="se">\"</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">gdb_commands</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\"</span><span class="s2">"</span>
+<a href="#__codelineno-5-18" id="__codelineno-5-18" name="__codelineno-5-18"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a href="#__codelineno-5-19" id="__codelineno-5-19" name="__codelineno-5-19"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
 </code></pre></div>
-<h2 id="总结">总结<a class="headerlink" href="#总结" title="Permanent link">&para;</a></h2>
+<h2 id="总结">总结<a class="headerlink" href="#总结" title="Permanent link">¶</a></h2>
 <p>逆向工程是一门需要耐心和实践的技术。开始可能会觉得困难，但随着经验的积累，你会逐渐掌握其中的技巧。记住几个关键点：</p>
 <ol>
 <li><strong>多动手</strong>：理论知识很重要，但实践更重要</li>
@@ -5334,7 +5334,7 @@
 <li><strong>持续学习</strong>：逆向技术不断发展，需要持续学习</li>
 </ol>
 <p>最好的学习方法就是实际动手。找一些简单的CrackMe题目开始练习，逐步提高难度。相信通过努力，你一定能掌握逆向工程这门有趣的技术！</p>
-<hr />
+<hr/>
 <p><em>本文档由CTF爱好者编写，旨在帮助初学者入门逆向工程</em></p>
 
 
@@ -5448,8 +5448,6 @@
         <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
       
     
   </body>
