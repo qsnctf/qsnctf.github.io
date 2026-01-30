@@ -22,15 +22,14 @@ body::before {
 </svg>");
 }
 
-
-html[data-md-color-scheme="slate"] body::before {
+html[data-md-color-scheme="slate"]::before {
     background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' width='240' height='160'>\
   <text x='50%' y='50%' \
         text-anchor='middle' \
         dominant-baseline='middle' \
         transform='rotate(-35 120 80)' \
-        fill='rgba(255,255,255,0.045)' \
+        fill='rgba(255,255,255,0.055)' \
         font-size='26' \
         font-family='Segoe UI, Arial, sans-serif'>\
     青少年CTF文库\
