@@ -24,6 +24,15 @@
   box-shadow: 0 6px 18px rgba(0,0,0,.08);
 }
 
+/* === 导航栏现代化 === */
+.md-header {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,.8);
+}
+
+html[data-md-color-scheme="slate"] .md-header {
+  background-color: rgba(26,27,38,.85);
+}
 
 /* 防盗水印
 Author: Moxin
