@@ -4,8 +4,8 @@
 
 /* === 容器自适应 & 高度控制 === */
 .language-markmap.mkdocs-markmap {
-    height: 90vh !important;       /* 高度可按需调整 */
-    min-height: 600px !important;
+    height: 60vh !important;       /* 高度可按需调整 */
+    min-height: 500px !important;
     width: 100% !important;
     padding: 1rem;
     background-color: #f9f9f9;     /* 背景色，可自定义 */
