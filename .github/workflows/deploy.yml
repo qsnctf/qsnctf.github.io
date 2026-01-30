@@ -30,7 +30,7 @@ jobs:
 
       - name: Install MkDocs & plugins
         run: |
-          pip install mkdocs mkdocs-material mkdocs-git-committers-plugin-2 mkdocs-git-authors-plugin
+          pip install mkdocs mkdocs-material mkdocs-git-committers-plugin-2 mkdocs-git-authors-plugin mkdocs-markmap
 
       - name: Build site into temporary directory
         env:

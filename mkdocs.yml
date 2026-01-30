@@ -64,6 +64,7 @@ plugins:
   # - git-authors # 展示作者
   - search # 内置搜索
   - tags # 标签
+  - markmap # 思维导图
 
 
 docs_dir: docs
@@ -84,7 +85,6 @@ extra:
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3
 
 
 
