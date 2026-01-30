@@ -156,3 +156,22 @@
   background-color: #1a1b26;
   border-color: #333;
 }
+
+/* === 防盗水印 === */
+.language-markmap.mkdocs-markmap::after {
+    content: "青少年CTF文库";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-35deg);
+    font-size: 3rem;           /* 可根据需要调整 */
+    color: rgba(0, 0, 0, 0.08); /* 半透明效果 */
+    pointer-events: none;       /* 不影响点击操作 */
+    white-space: nowrap;
+    z-index: 1000;              /* 确保在最上层 */
+}
+
+/* === 保证容器为相对定位 === */
+.language-markmap.mkdocs-markmap {
+    position: relative;
+}
