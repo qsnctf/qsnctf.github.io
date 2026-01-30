@@ -9,3 +9,12 @@
   width: 100% !important;
   height: 100% !important;
 }
+
+.language-markmap.mkdocs-markmap {
+    height: 90vh !important;
+    min-height: 600px !important; /* 保证最小高度 */
+}
+.language-markmap.mkdocs-markmap > svg {
+    width: 100% !important;
+    height: 100% !important;
+}
