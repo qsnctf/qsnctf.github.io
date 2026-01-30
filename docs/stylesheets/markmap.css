@@ -157,21 +157,33 @@
   border-color: #333;
 }
 
-/* === 防盗水印 === */
-.language-markmap.mkdocs-markmap::after {
-    content: "青少年CTF文库";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-35deg);
-    font-size: 3rem;           /* 可根据需要调整 */
-    color: rgba(0, 0, 0, 0.08); /* 半透明效果 */
-    pointer-events: none;       /* 不影响点击操作 */
-    white-space: nowrap;
-    z-index: 1000;              /* 确保在最上层 */
-}
 
-/* === 保证容器为相对定位 === */
-.language-markmap.mkdocs-markmap {
-    position: relative;
+/* === 平铺防盗水印 === */
+.language-markmap.mkdocs-markmap::before {
+    content: "青少年CTF文库知识树";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;       /* 不影响交互 */
+    z-index: 1000;              /* 确保在最上层 */
+    font-size: 2rem;            /* 可调大小 */
+    color: rgba(0, 0, 0, 0.05); /* 半透明效果 */
+    white-space: nowrap;
+    transform: rotate(-35deg);
+    
+    /* 重复平铺 */
+    background: repeating-linear-gradient(
+        -35deg,
+        rgba(0,0,0,0.05),
+        rgba(0,0,0,0.05) 1px,
+        transparent 1px,
+        transparent 100px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
 }
