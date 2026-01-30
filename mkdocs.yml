@@ -159,6 +159,9 @@ nav:
       - C/C++介绍: Code/CPP/cpp-tutorial.md
       - C++基本语法: Code/CPP/cpp-basic-syntax.md
       - C++注释: Code/CPP/cpp-comments.md
+      - C++数据类型: Code/CPP/cpp-data-types.md
+      - C++变量类型: Code/CPP/cpp-variable-types.md
+      - C++变量作用域: Code/CPP/cpp-variable-scope.md
     - Python:
       - Python介绍: Code/Python/Python_Intro.md
       - Python基础语法: Code/Python/Python_Basic_Syntax.md
