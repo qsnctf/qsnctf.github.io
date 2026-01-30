@@ -1,3 +1,5 @@
+/* === 内容区域 === */
+/* 内容的主体卡片样式 */
 .md-content {
   padding-bottom: 3rem;
 }
@@ -8,6 +10,20 @@
   padding: 2rem 2.5rem;
   box-shadow: 0 10px 30px rgba(0,0,0,.06);
 }
+
+/* === 代码块圆角 === */
+.highlight pre {
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.05);
+}
+
+/* === 提示块现代化 === */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
 
 /* 防盗水印
 Author: Moxin
