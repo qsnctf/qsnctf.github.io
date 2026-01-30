@@ -34,24 +34,133 @@ html[data-md-color-scheme="slate"] .md-header {
   background-color: rgba(26,27,38,.85);
 }
 
-/* === 侧边栏现代化 === */
-.md-sidebar--secondary {
-  font-size: 0.85rem;
+/* ======================================
+   右侧目录（TOC）美化 - 卡片风格
+   ====================================== */
+
+/* === 目录整体容器 === */
+.md-nav--secondary {
+  background: var(--md-default-bg-color);
+  border-radius: 16px;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
 }
 
-.md-nav__link--active {
-  font-weight: 600;
+/* === 目录标题 === */
+.md-nav--secondary .md-nav__title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding-bottom: .6rem;
+  margin-bottom: .6rem;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  color: var(--md-typeset-color);
+}
+
+/* === 目录列表整体 === */
+.md-nav--secondary .md-nav__list {
+  padding-left: 0;
+}
+
+/* === 每一项 === */
+.md-nav--secondary .md-nav__item {
+  margin: .15rem 0;
+}
+
+/* === 目录链接（通用） === */
+.md-nav--secondary .md-nav__link {
+  display: block;
+  padding: .35rem .6rem;
+  border-radius: 8px;
+  font-size: .9rem;
+  line-height: 1.4;
+  color: var(--md-default-fg-color--light);
+  transition: all .2s ease;
+}
+
+/* === hover 效果 === */
+.md-nav--secondary .md-nav__link:hover {
+  background: rgba(0,0,0,.05);
   color: var(--md-accent-fg-color);
 }
+
+/* === 当前高亮标题 === */
+.md-nav--secondary .md-nav__link--active {
+  background: rgba(var(--md-accent-fg-color--rgb), .12);
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* =====================================================
+   分级效果（关键）
+   ===================================================== */
+
+/* 一级标题（##） */
+.md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+/* 二级标题（###） */
+.md-nav--secondary .md-nav__item .md-nav__list .md-nav__link {
+  padding-left: 1.4rem;
+  font-size: .88rem;
+  opacity: .95;
+  position: relative;
+}
+
+/* 二级标题前的小竖线 */
+.md-nav--secondary .md-nav__item .md-nav__list .md-nav__link::before {
+  content: "";
+  position: absolute;
+  left: .6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 60%;
+  background: rgba(0,0,0,.15);
+  border-radius: 2px;
+}
+
+/* 三级标题（####） */
+.md-nav--secondary .md-nav__item .md-nav__item .md-nav__list .md-nav__link {
+  padding-left: 2.2rem;
+  font-size: .84rem;
+  opacity: .85;
+}
+
+/* =====================================================
+   深色模式适配
+   ===================================================== */
+
+html[data-md-color-scheme="slate"] .md-nav--secondary {
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+html[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__title {
+  border-bottom-color: rgba(255,255,255,.12);
+}
+
+html[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link:hover {
+  background: rgba(255,255,255,.08);
+}
+
+html[data-md-color-scheme="slate"]
+.md-nav--secondary
+.md-nav__item
+.md-nav__list
+.md-nav__link::before {
+  background: rgba(255,255,255,.25);
+}
+
 
 /* ================================
    MkDocs Material 全局图片居中
    ================================ */
-
-.md-typeset img {
+.md-content .md-typeset img {
   display: block;
   margin: 1.2em auto;
 }
+
 
 
 
