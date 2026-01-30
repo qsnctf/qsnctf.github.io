@@ -1,0 +1,11 @@
+/* mkdocs-markmap 容器高度调整 */
+.markmap {
+  height: 80vh !important;   /* 视口高度的 80% */
+  width: 100%;
+}
+
+/* SVG 自适应 */
+.markmap > svg {
+  width: 100% !important;
+  height: 100% !important;
+}
