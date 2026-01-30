@@ -5007,26 +5007,26 @@
 
 <h1 id="c-变量作用域">C++ 变量作用域<a class="headerlink" href="#c-变量作用域" title="Permanent link">&para;</a></h1>
 <p>在 C++ 中，变量并不是在程序的任意位置都可访问的。
-<strong>变量的作用域（Scope）**指的是程序中**可以访问该变量的区域</strong>。</p>
+<strong>变量的作用域（Scope）</strong> 指的是程序中 <strong>可以访问该变量的区域</strong> 。</p>
 <p>一般来说，变量可以在以下三个位置定义：</p>
 <ol>
-<li><strong>函数或代码块内部**定义的变量，称为**局部变量</strong></li>
-<li><strong>函数参数列表中**定义的变量，称为**形式参数</strong></li>
-<li><strong>所有函数外部**定义的变量，称为**全局变量</strong></li>
+<li><strong>函数或代码块内部</strong> 定义的变量，称为 <strong>局部变量</strong></li>
+<li><strong>函数参数列表中</strong> 定义的变量，称为 <strong>形式参数</strong></li>
+<li><strong>所有函数外部</strong> 定义的变量，称为 <strong>全局变量</strong></li>
 </ol>
 <hr />
 <h2 id="一作用域的分类">一、作用域的分类<a class="headerlink" href="#一作用域的分类" title="Permanent link">&para;</a></h2>
 <p>根据变量声明的位置不同，C++ 中常见的作用域包括：</p>
 <h3 id="局部作用域local-scope">局部作用域（Local Scope）<a class="headerlink" href="#局部作用域local-scope" title="Permanent link">&para;</a></h3>
 <ul>
-<li>在**函数内部**声明的变量</li>
+<li>在 **函数内部 ** 声明的变量</li>
 <li>只能在该函数内部访问</li>
 <li>函数被调用时创建，函数结束时销毁</li>
 </ul>
 <hr />
 <h3 id="全局作用域global-scope">全局作用域（Global Scope）<a class="headerlink" href="#全局作用域global-scope" title="Permanent link">&para;</a></h3>
 <ul>
-<li>在**所有函数和代码块之外**声明的变量</li>
+<li>在 <strong>所有函数和代码块之外</strong> 声明的变量</li>
 <li>可被程序中任意函数访问</li>
 <li>程序启动时创建，程序结束时销毁</li>
 </ul>
@@ -5047,11 +5047,11 @@
 <hr />
 <blockquote>
 <p>⚠️ 注意：
-如果在**内部作用域**中声明了一个与外部作用域**同名**的变量，内部变量会**隐藏（覆盖）**外部变量。</p>
+如果在 <strong>内部作用域</strong> 中声明了一个与外部作用域 <strong>同名</strong> 的变量，内部变量会 <strong>隐藏（覆盖）</strong> 外部变量。</p>
 </blockquote>
 <hr />
 <h2 id="二局部变量">二、局部变量<a class="headerlink" href="#二局部变量" title="Permanent link">&para;</a></h2>
-<p>在函数或代码块内部声明的变量称为**局部变量**，只能在其声明的作用域内使用。</p>
+<p>在函数或代码块内部声明的变量称为 <strong>局部变量</strong> ，只能在其声明的作用域内使用。</p>
 <p><strong>示例：</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
@@ -5074,7 +5074,7 @@
 </code></pre></div>
 <hr />
 <h2 id="三全局变量">三、全局变量<a class="headerlink" href="#三全局变量" title="Permanent link">&para;</a></h2>
-<p>在所有函数外部定义的变量称为**全局变量**。
+<p>在所有函数外部定义的变量称为 <strong>全局变量</strong> 。
 全局变量在程序的整个生命周期内都有效。</p>
 <p><strong>示例：</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
@@ -5123,7 +5123,7 @@
 <h3 id="局部变量">局部变量<a class="headerlink" href="#局部变量" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>不会被自动初始化</strong></li>
-<li>若未初始化，其值是**未定义的**</li>
+<li>若未初始化，其值是 <strong>未定义的</strong></li>
 </ul>
 <h3 id="全局变量以及静态变量">全局变量（以及静态变量）<a class="headerlink" href="#全局变量以及静态变量" title="Permanent link">&para;</a></h3>
 <ul>
@@ -5192,7 +5192,7 @@
 </ul>
 <hr />
 <h2 id="六类作用域">六、类作用域<a class="headerlink" href="#六类作用域" title="Permanent link">&para;</a></h2>
-<p>类作用域是指**在类内部声明的成员变量**。</p>
+<p>类作用域是指 <strong>在类内部声明的成员变量</strong> 。</p>
 <p><strong>示例：</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
@@ -5220,7 +5220,7 @@
 <hr />
 <h2 id="七本章小结">七、本章小结<a class="headerlink" href="#七本章小结" title="Permanent link">&para;</a></h2>
 <ul>
-<li>作用域决定了变量的**可见性和生命周期**</li>
+<li>作用域决定了变量的 <strong>可见性和生命周期</strong></li>
 <li>局部变量 &gt; 块变量 &gt; 全局变量：<strong>作用范围逐级扩大</strong></li>
 <li>内层作用域变量会隐藏外层同名变量</li>
 <li>合理控制变量作用域有助于：</li>
