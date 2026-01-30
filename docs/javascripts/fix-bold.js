@@ -3,35 +3,40 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!root) return;
 
   const EXCLUDE_TAGS = new Set([
-    "CODE", "PRE", "SCRIPT", "STYLE",
-    "KBD", "MATH", "SVG"
+    "PRE", "CODE", "SCRIPT", "STYLE", "KBD", "MATH", "SVG"
   ]);
 
   function walk(node) {
-    // 跳过不该处理的元素
     if (node.nodeType === Node.ELEMENT_NODE) {
       if (EXCLUDE_TAGS.has(node.tagName)) return;
-      for (const child of node.childNodes) {
-        walk(child);
-      }
+      for (const child of node.childNodes) walk(child);
       return;
     }
 
-    // 只处理纯文本
     if (node.nodeType !== Node.TEXT_NODE) return;
 
-    const text = node.nodeValue;
+    let text = node.nodeValue;
     if (!text || !text.includes("**")) return;
 
-    const replaced = text.replace(
-      /(^|\S)\*\*([^*\n]+?)\*\*/g,
-      (_, prefix, content) =>
-        `${prefix}<strong>${content}</strong>`
+    // 保护行内 code
+    const codes = [];
+    text = text.replace(/`[^`]+`/g, m => {
+      codes.push(m);
+      return `@@CODE_${codes.length - 1}@@`;
+    });
+
+    // ✅ 修复 **内容**
+    text = text.replace(
+      /\*\*([\s\S]+?)\*\*/g,
+      "<strong>$1</strong>"
     );
 
-    if (replaced !== text) {
+    // 还原 code
+    text = text.replace(/@@CODE_(\d+)@@/g, (_, i) => codes[i]);
+
+    if (text !== node.nodeValue) {
       const span = document.createElement("span");
-      span.innerHTML = replaced;
+      span.innerHTML = text;
       node.replaceWith(span);
     }
   }
