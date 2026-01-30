@@ -4,11 +4,11 @@
 # CTF
 ## MISC
 ### 编码
-#### HEX编码
+#### [HEX编码](https://qsnctf.github.io/Misc/encoding/Hex/)
 #### [ASCII编码](https://qsnctf.github.io/Misc/encoding/ASCII/)
 #### Base家族
-##### Base64编码
-##### Base32编码
+##### [Base64编码](https://qsnctf.github.io/Misc/encoding/Base/Base64/)
+##### [Base32编码](https://qsnctf.github.io/Misc/encoding/Base/Base32/)
 ### 文件的结构
 #### 各种文件的文件结构
 ##### PNG
