@@ -7,7 +7,7 @@
 .md-content article {
   background: var(--md-default-bg-color);
   border-radius: 16px;
-  padding: 2rem 2.5rem;
+  padding: 1rem 2.5rem;
   box-shadow: 0 10px 30px rgba(0,0,0,.06);
 }
 
