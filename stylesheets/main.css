@@ -25,245 +25,183 @@
 }
 
 
-/* ======================================
-   右侧目录（TOC）美化 - 卡片风格
-   ====================================== */
+/* =====================================================
+   右侧目录（TOC）- 高级卡片风格（紧凑版）
+   ===================================================== */
 
-/* === 目录整体容器 === */
 .md-nav--secondary {
   background: var(--md-default-bg-color);
-  border-radius: 16px;
-  padding: 1rem .9rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  border-radius: 14px;
+  padding: .7rem .7rem;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.04),
+    inset 0 0 0 1px rgba(255,255,255,.4);
 }
 
-/* === 目录标题 === */
+/* 标题 */
 .md-nav--secondary .md-nav__title {
-  font-weight: 700;
-  font-size: .95rem;
-  padding-bottom: .45rem;
-  margin-bottom: .5rem;
-  border-bottom: 1px solid rgba(0,0,0,.08);
-  color: var(--md-typeset-color);
+  font-size: .85rem;
+  font-weight: 600;
+  padding-bottom: .35rem;
+  margin-bottom: .4rem;
+  border-bottom: 1px dashed rgba(0,0,0,.12);
+  color: var(--md-default-fg-color);
 }
 
-/* === 目录列表整体 === */
+/* 列表 */
 .md-nav--secondary .md-nav__list {
   padding-left: 0;
 }
 
-/* === 每一项 === */
+/* 单项 */
 .md-nav--secondary .md-nav__item {
-  margin: .05rem 0;
+  margin: 0;
 }
 
-/* === 目录链接（通用） === */
+/* 链接 */
 .md-nav--secondary .md-nav__link {
-  display: block;
-  padding: .22rem .55rem;
-  border-radius: 8px;
-  font-size: .85rem;
+  padding: .18rem .45rem;
+  font-size: .78rem;
   line-height: 1.25;
+  border-radius: 6px;
   color: var(--md-default-fg-color--light);
-  transition: all .2s ease;
+  transition: background .15s ease, color .15s ease;
 }
 
-/* === hover 效果 === */
+/* hover */
 .md-nav--secondary .md-nav__link:hover {
-  background: rgba(0,0,0,.05);
+  background: rgba(var(--md-accent-fg-color--rgb), .08);
   color: var(--md-accent-fg-color);
 }
 
-/* === 当前高亮标题 === */
+/* 当前高亮 */
 .md-nav--secondary .md-nav__link--active {
-  background: rgba(var(--md-accent-fg-color--rgb), .12);
+  background: rgba(var(--md-accent-fg-color--rgb), .14);
   color: var(--md-accent-fg-color);
   font-weight: 600;
 }
 
-/* =====================================================
-   分级效果（关键）
-   ===================================================== */
+/* === 层级 === */
 
-/* 一级标题（##） */
+/* 一级 */
 .md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-size: .82rem;
   font-weight: 600;
-  font-size: .88rem;
 }
 
-/* 二级标题（###） */
+/* 二级 */
 .md-nav--secondary .md-nav__item .md-nav__list .md-nav__link {
-  padding-left: 1.2rem;
-  font-size: .82rem;
+  padding-left: 1.1rem;
+  font-size: .76rem;
   opacity: .95;
   position: relative;
 }
 
-/* 二级标题前的小竖线 */
+/* 二级竖线 */
 .md-nav--secondary .md-nav__item .md-nav__list .md-nav__link::before {
   content: "";
   position: absolute;
-  left: .5rem;
+  left: .45rem;
   top: 50%;
   transform: translateY(-50%);
   width: 2px;
-  height: 55%;
+  height: 50%;
   background: rgba(0,0,0,.15);
   border-radius: 2px;
 }
 
-/* 三级标题（####） */
+/* 三级 */
 .md-nav--secondary .md-nav__item .md-nav__item .md-nav__list .md-nav__link {
-  padding-left: 1.9rem;
-  font-size: .78rem;
+  padding-left: 1.8rem;
+  font-size: .72rem;
   opacity: .85;
 }
 
-/* =====================================================
-   深色模式适配
-   ===================================================== */
-
+/* 深色模式 */
 html[data-md-color-scheme="slate"] .md-nav--secondary {
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
-}
-
-html[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__title {
-  border-bottom-color: rgba(255,255,255,.12);
-}
-
-html[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link:hover {
-  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,.45);
 }
 
 html[data-md-color-scheme="slate"]
-.md-nav--secondary
-.md-nav__item
-.md-nav__list
-.md-nav__link::before {
+.md-nav--secondary .md-nav__item .md-nav__list .md-nav__link::before {
   background: rgba(255,255,255,.25);
 }
 
 /* =====================================================
-   左侧导航栏（Primary Sidebar）整体优化
+   左侧导航栏（Primary Sidebar）- 紧凑卡片式
    ===================================================== */
 
-/* === 整体容器 === */
 .md-sidebar--primary {
-  font-size: 0.92rem;
+  font-size: .88rem;
 }
 
-/* 滚动区域 */
+/* 滚动区 */
 .md-sidebar__scrollwrap {
-  padding: 0.6rem 0.4rem;
-  scrollbar-width: thin;
+  padding: .4rem .35rem;
 }
 
-/* WebKit 滚动条 */
-.md-sidebar__scrollwrap::-webkit-scrollbar {
-  width: 6px;
-}
-.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-  background-color: rgba(120,120,120,.35);
-  border-radius: 4px;
-}
-
-/* =====================================================
-   导航项通用样式
-   ===================================================== */
-
+/* 单项通用 */
 .md-nav__link {
-  display: flex;
-  align-items: center;
-
-  padding: 0.38rem 0.65rem;
-  margin: 0.1rem 0;
-
-  line-height: 1.5;
-  border-radius: 8px;
-
+  padding: .3rem .55rem;
+  margin: 0;
+  line-height: 1.35;
+  border-radius: 6px;
   color: var(--md-default-fg-color--light);
-  transition: all 0.2s ease;
+  transition: background .15s ease, color .15s ease;
 }
 
 /* hover */
 .md-nav__link:hover {
-  background: rgba(0,0,0,.045);
+  background: rgba(var(--md-accent-fg-color--rgb), .07);
   color: var(--md-accent-fg-color);
 }
 
-/* =====================================================
-   当前页面高亮（非常关键）
-   ===================================================== */
-
+/* 当前项 */
 .md-nav__link--active {
-  background: rgba(var(--md-accent-fg-color--rgb), .14);
+  background: rgba(var(--md-accent-fg-color--rgb), .16);
   color: var(--md-accent-fg-color);
   font-weight: 600;
 }
 
 /* 左侧强调条 */
 .md-nav__item--active > .md-nav__link {
-  border-left: 3px solid var(--md-accent-fg-color);
-  padding-left: calc(0.65rem - 3px);
+  border-left: 2px solid var(--md-accent-fg-color);
+  padding-left: calc(.55rem - 2px);
 }
 
-/* =====================================================
-   分级层次控制（重点）
-   ===================================================== */
+/* === 层级 === */
 
-/* 一级（站点主分类） */
+/* 一级 */
 .md-nav[data-md-level="1"] > .md-nav__list > .md-nav__item > .md-nav__link {
-  font-size: 0.95rem;
+  font-size: .9rem;
   font-weight: 600;
-  margin-top: 0.25rem;
+  margin-top: .15rem;
 }
 
 /* 二级 */
 .md-nav[data-md-level="2"] .md-nav__link {
-  padding-left: 1.4rem;
-  font-size: 0.9rem;
-  opacity: 0.95;
+  padding-left: 1.3rem;
+  font-size: .85rem;
+  opacity: .95;
 }
 
 /* 三级 */
 .md-nav[data-md-level="3"] .md-nav__link {
-  padding-left: 2.2rem;
-  font-size: 0.86rem;
-  opacity: 0.88;
+  padding-left: 2.1rem;
+  font-size: .8rem;
+  opacity: .88;
 }
 
-/* 四级（不建议太多，但给你兜底） */
+/* 四级兜底 */
 .md-nav[data-md-level="4"] .md-nav__link {
-  padding-left: 3rem;
-  font-size: 0.83rem;
-  opacity: 0.82;
+  padding-left: 2.8rem;
+  font-size: .76rem;
+  opacity: .8;
 }
 
-/* =====================================================
-   折叠 / 展开节点优化
-   ===================================================== */
-
-.md-nav__item--nested > .md-nav__link {
-  font-weight: 500;
-}
-
-/* 展开动画更柔和 */
-.md-nav {
-  transition: max-height 0.25s ease;
-}
-
-/* =====================================================
-   导航分组之间留白（防止压迫感）
-   ===================================================== */
-
-.md-nav__item {
-  margin: 0.08rem 0;
-}
-
-/* =====================================================
-   深色模式适配
-   ===================================================== */
-
+/* 深色模式 */
 html[data-md-color-scheme="slate"] .md-nav__link {
   color: rgba(255,255,255,.8);
 }
@@ -273,11 +211,7 @@ html[data-md-color-scheme="slate"] .md-nav__link:hover {
 }
 
 html[data-md-color-scheme="slate"] .md-nav__link--active {
-  background: rgba(var(--md-accent-fg-color--rgb), .25);
-}
-
-html[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-  background-color: rgba(255,255,255,.25);
+  background: rgba(var(--md-accent-fg-color--rgb), .28);
 }
 
 
