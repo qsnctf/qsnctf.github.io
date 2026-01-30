@@ -152,6 +152,144 @@ html[data-md-color-scheme="slate"]
   background: rgba(255,255,255,.25);
 }
 
+/* =====================================================
+   左侧导航栏（Primary Sidebar）整体优化
+   ===================================================== */
+
+/* === 整体容器 === */
+.md-sidebar--primary {
+  font-size: 0.92rem;
+}
+
+/* 滚动区域 */
+.md-sidebar__scrollwrap {
+  padding: 0.6rem 0.4rem;
+  scrollbar-width: thin;
+}
+
+/* WebKit 滚动条 */
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+  width: 6px;
+}
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background-color: rgba(120,120,120,.35);
+  border-radius: 4px;
+}
+
+/* =====================================================
+   导航项通用样式
+   ===================================================== */
+
+.md-nav__link {
+  display: flex;
+  align-items: center;
+
+  padding: 0.38rem 0.65rem;
+  margin: 0.1rem 0;
+
+  line-height: 1.5;
+  border-radius: 8px;
+
+  color: var(--md-default-fg-color--light);
+  transition: all 0.2s ease;
+}
+
+/* hover */
+.md-nav__link:hover {
+  background: rgba(0,0,0,.045);
+  color: var(--md-accent-fg-color);
+}
+
+/* =====================================================
+   当前页面高亮（非常关键）
+   ===================================================== */
+
+.md-nav__link--active {
+  background: rgba(var(--md-accent-fg-color--rgb), .14);
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* 左侧强调条 */
+.md-nav__item--active > .md-nav__link {
+  border-left: 3px solid var(--md-accent-fg-color);
+  padding-left: calc(0.65rem - 3px);
+}
+
+/* =====================================================
+   分级层次控制（重点）
+   ===================================================== */
+
+/* 一级（站点主分类） */
+.md-nav[data-md-level="1"] > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+/* 二级 */
+.md-nav[data-md-level="2"] .md-nav__link {
+  padding-left: 1.4rem;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+/* 三级 */
+.md-nav[data-md-level="3"] .md-nav__link {
+  padding-left: 2.2rem;
+  font-size: 0.86rem;
+  opacity: 0.88;
+}
+
+/* 四级（不建议太多，但给你兜底） */
+.md-nav[data-md-level="4"] .md-nav__link {
+  padding-left: 3rem;
+  font-size: 0.83rem;
+  opacity: 0.82;
+}
+
+/* =====================================================
+   折叠 / 展开节点优化
+   ===================================================== */
+
+.md-nav__item--nested > .md-nav__link {
+  font-weight: 500;
+}
+
+/* 展开动画更柔和 */
+.md-nav {
+  transition: max-height 0.25s ease;
+}
+
+/* =====================================================
+   导航分组之间留白（防止压迫感）
+   ===================================================== */
+
+.md-nav__item {
+  margin: 0.08rem 0;
+}
+
+/* =====================================================
+   深色模式适配
+   ===================================================== */
+
+html[data-md-color-scheme="slate"] .md-nav__link {
+  color: rgba(255,255,255,.8);
+}
+
+html[data-md-color-scheme="slate"] .md-nav__link:hover {
+  background: rgba(255,255,255,.06);
+}
+
+html[data-md-color-scheme="slate"] .md-nav__link--active {
+  background: rgba(var(--md-accent-fg-color--rgb), .25);
+}
+
+html[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,.25);
+}
+
+
 
 /* ======================================
    面包屑导航（Breadcrumb / md-path）
@@ -212,7 +350,6 @@ html[data-md-color-scheme="slate"]
    ===================================================== */
 
 .md-path__item:not(:last-child)::after {
-  content: "›";
   margin: 0 .35rem;
   color: rgba(0,0,0,.35);
   font-size: 1rem;
