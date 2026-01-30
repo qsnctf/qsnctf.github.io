@@ -90,6 +90,9 @@ extra_javascript:
 
 copyright: Copyright 青少年CTF &copy; 2025 版权所有
 
+extra_css:
+  - stylesheets/markmap.css
+  
 # markdown 拓展
 markdown_extensions:
 # 详细参考 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
