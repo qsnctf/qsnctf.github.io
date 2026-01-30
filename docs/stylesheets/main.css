@@ -34,6 +34,17 @@ html[data-md-color-scheme="slate"] .md-header {
   background-color: rgba(26,27,38,.85);
 }
 
+/* === 侧边栏现代化 === */
+.md-sidebar--secondary {
+  font-size: 0.85rem;
+}
+
+.md-nav__link--active {
+  font-weight: 600;
+  color: var(--md-accent-fg-color);
+}
+
+
 /* 防盗水印
 Author: Moxin
 Date: 2026-01-30
