@@ -5,6 +5,7 @@
 ## MISC
 ### 编码
 #### HEX编码
+#### [ASCII编码](https://qsnctf.github.io/Misc/encoding/ASCII/)
 #### Base家族
 ##### Base64编码
 ##### Base32编码
