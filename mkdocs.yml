@@ -158,6 +158,7 @@ nav:
     - C/C++: 
       - C/C++介绍: Code/CPP/cpp-tutorial.md
       - C++基本语法: Code/CPP/cpp-basic-syntax.md
+      - C++注释: Code/CPP/cpp-comments.md
     - Python:
       - Python介绍: Code/Python/Python_Intro.md
       - Python基础语法: Code/Python/Python_Basic_Syntax.md
