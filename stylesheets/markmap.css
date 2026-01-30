@@ -1,23 +1,31 @@
 /* ======================================
-   mkdocs-markmap 完整自适应 CSS（美化版）
+   mkdocs-markmap 完整自适应 CSS（美化 + 防盗水印最终版）
    ====================================== */
 
 /* === 容器自适应 & 高度控制 === */
 .language-markmap.mkdocs-markmap {
-    height: 60vh !important;       /* 高度可按需调整 */
+    height: 60vh !important;
     min-height: 500px !important;
     width: 100% !important;
     padding: 1rem;
-    background-color: #f9f9f9;     /* 背景色，可自定义 */
-    border: 2px solid #e0e0e0;    /* 边框 */
-    border-radius: 12px;           /* 圆角 */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* 阴影立体感 */
+    background-color: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+    /* 🔴 关键：建立 stacking context */
+    position: relative;
+    overflow: hidden;
 }
 
-/* === SVG 自适应容器大小 === */
+/* === SVG 自适应 & 层级控制（必须） === */
 .language-markmap.mkdocs-markmap > svg {
     width: 100% !important;
     height: 100% !important;
+
+    /* 🔴 SVG 必须在水印下面 */
+    position: relative;
+    z-index: 1;
 }
 
 /* === markmap 主题变量 === */
@@ -38,11 +46,12 @@
   color: var(--markmap-text-color);
 }
 
-/* === 链接节点样式 === */
+/* === 连线 === */
 .markmap-link {
     fill: none;
 }
 
+/* === 节点圆点 === */
 .markmap-node > circle {
     cursor: pointer;
     stroke-width: 1.5;
@@ -57,7 +66,7 @@
     fill: #e0f7ff;
 }
 
-/* === 外部节点样式 === */
+/* === 外部节点内容 === */
 .markmap-foreign {
     display: inline-block;
 }
@@ -94,16 +103,12 @@
     display: block;
 }
 
-.markmap-foreign del {
-    text-decoration: line-through;
+.markmap-foreign strong {
+    font-weight: bold;
 }
 
 .markmap-foreign em {
     font-style: italic;
-}
-
-.markmap-foreign strong {
-    font-weight: bold;
 }
 
 .markmap-foreign mark {
@@ -119,62 +124,36 @@
     border-collapse: collapse;
     border: var(--markmap-table-border);
     padding: 2px 6px;
-    border-radius: 4px;
 }
 
 .markmap-foreign img {
-    display: inline-block;
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* === 内联容器 === */
-.markmap-foreign > div {
-    width: var(--markmap-max-width);
-    text-align: left;
-}
-
-.markmap-foreign > div > div {
-    display: inline-block;
 }
 
 /* === 节点高亮 === */
 .markmap-highlight rect {
     fill: var(--markmap-highlight-node-bg);
-    rx: 6; /* 圆角高亮 */
+    rx: 6;
     ry: 6;
     stroke: #ffc107;
     stroke-width: 1.5;
 }
 
-/* === 深色模式 === */
-.markmap-dark .markmap {
-  --markmap-code-bg: #1a1b26;
-  --markmap-code-color: #ddd;
-  --markmap-circle-open-bg: #444;
-  --markmap-text-color: #eee;
-  background-color: #1a1b26;
-  border-color: #333;
-}
+/* =====================================================
+   平铺防盗水印（在所有文本 / 节点 / 线条之上）
+   ===================================================== */
 
-
-/* === 平铺防盗水印 === */
-/* === 容器相对定位 === */
-.language-markmap.mkdocs-markmap {
-    position: relative;
-    overflow: hidden;
-}
-
-/* === 平铺文字水印 === */
+/* === 亮色模式水印 === */
 .language-markmap.mkdocs-markmap::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: 999;
+    z-index: 10;               /* 🔴 水印在最上层 */
     pointer-events: none;
 
     background-repeat: repeat;
-    background-size: 320px 200px; /* 控制水印密度 */
+    background-size: 320px 200px;
 
     background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' width='320' height='200'>\
@@ -190,6 +169,20 @@
 </svg>");
 }
 
+/* === 深色模式 === */
+.markmap-dark .language-markmap.mkdocs-markmap {
+    background-color: #1a1b26;
+    border-color: #333;
+}
+
+.markmap-dark .markmap {
+    --markmap-code-bg: #1a1b26;
+    --markmap-code-color: #ddd;
+    --markmap-circle-open-bg: #444;
+    --markmap-text-color: #eee;
+}
+
+/* === 深色模式水印 === */
 .markmap-dark .language-markmap.mkdocs-markmap::before {
     background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' width='320' height='200'>\
