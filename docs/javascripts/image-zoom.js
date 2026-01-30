@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelectorAll(".md-content article img:not([data-zoomable])")
+    .forEach(img => {
+      img.setAttribute("data-zoomable", "");
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".md-content img").forEach(img => {
     img.addEventListener("click", () => {
       const overlay = document.createElement("div");
@@ -27,3 +36,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
