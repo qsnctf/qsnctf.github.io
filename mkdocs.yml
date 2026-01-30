@@ -1,4 +1,4 @@
-site_name: 青少年CTF文库
+extra_javascriptsite_name: 青少年CTF文库
 site_url: https://docs.qsnctf.com
 site_description: 适合你快速入门的CTF百科全书
 theme:
@@ -84,6 +84,7 @@ extra:
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3
 
 
 
@@ -138,7 +139,9 @@ markdown_extensions:
 # nav
 nav:
   - 首页: index.html
-  - 起始页: home.md
+  - 起始页: 
+    - 起始页: home.md
+    - 知识树: Knowledge_Tree.md
   - 基础知识:
     - 什么是 CTF: basic/intro.md
     - CTF的历史: basic/history.md
