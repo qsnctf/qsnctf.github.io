@@ -44,6 +44,16 @@ html[data-md-color-scheme="slate"] .md-header {
   color: var(--md-accent-fg-color);
 }
 
+/* ================================
+   MkDocs Material 全局图片居中
+   ================================ */
+
+.md-typeset img {
+  display: block;
+  margin: 1.2em auto;
+}
+
+
 
 /* 防盗水印
 Author: Moxin
