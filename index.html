@@ -79,11 +79,28 @@
 
     /* 渐变标题 */
     .title-gradient {
-      background: linear-gradient(135deg, #111827 0%, var(--accent-color) 100%);
+      background: linear-gradient(
+        90deg,
+        #111827,
+        #0066ff,
+        #22c1ff,
+        #111827
+      );
+      background-size: 300% 300%;
+      animation: gradientMove 6s ease infinite;
+
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
     }
+
+    /* 渐变流动动画 */
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
 
     .hero p {
       max-width: 650px;
