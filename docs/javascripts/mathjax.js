@@ -5,15 +5,12 @@ window.MathJax = {
     processEscapes: true,
   },
   options: {
-    // 只处理 arithmatex，避免污染整页
     ignoreHtmlClass: "^(?!arithmatex).*$",
   },
 };
 
-/**
- * 安全渲染 MathJax
- */
-function typesetMath(nodes) {
+/* ============ 核心渲染函数（已重写） ============ */
+function safeTypeset(nodes) {
   if (!window.MathJax?.typesetPromise) return false;
 
   const targets =
@@ -22,58 +19,68 @@ function typesetMath(nodes) {
 
   if (!targets || targets.length === 0) return false;
 
-  window.MathJax.typesetClear?.(targets);
-  window.MathJax.typesetPromise(targets);
-  return true;
+  try {
+    // 关键：先清理旧渲染，再延迟重渲染
+    window.MathJax.typesetClear?.(targets);
+
+    // 非常关键：微延迟，避免被 Material DOM 更新覆盖
+    setTimeout(() => {
+      window.MathJax.typesetPromise(targets);
+    }, 30);
+
+    return true;
+  } catch (e) {
+    console.warn("MathJax render failed, retrying:", e);
+    setTimeout(() => safeTypeset(targets), 100);
+    return false;
+  }
 }
 
-/* ===========================
-   三重兜底策略（关键）
-   =========================== */
-
-/* —— 1️⃣ Material 切页时触发（必须保留） —— */
+/* ============ 兜底策略 A：Material 切页 ============ */
 document$.subscribe(() => {
-  // 先立刻尝试
-  typesetMath();
-
-  // 50ms 后再补一刀
-  setTimeout(() => typesetMath(), 50);
-
-  // 500ms 再补一刀（兜慢加载）
-  setTimeout(() => typesetMath(), 500);
+  // 三级重试
+  safeTypeset();
+  setTimeout(() => safeTypeset(), 80);
+  setTimeout(() => safeTypeset(), 400);
 });
 
-/* —— 2️⃣ 页面首次加载兜底 —— */
+/* ============ 兜底策略 B：页面首次加载 ============ */
 window.addEventListener("load", () => {
-  typesetMath();
+  safeTypeset();
 });
 
-/* —— 3️⃣ 监听动态插入（markmap / tab / 折叠块必备） —— */
+/* ============ 兜底策略 C：监听动态内容（关键修复空白） ============ */
 const observer = new MutationObserver(muts => {
+  let needRender = false;
+
   for (const m of muts) {
     for (const node of m.addedNodes) {
       if (node.nodeType === 1) {
-        const found =
+        if (
           node.matches?.(".arithmatex") ||
-          node.querySelector?.(".arithmatex");
-
-        if (found) {
-          typesetMath(node.querySelectorAll?.(".arithmatex"));
+          node.querySelector?.(".arithmatex")
+        ) {
+          needRender = true;
         }
       }
     }
+  }
+
+  if (needRender) {
+    // 延迟一下，防止和 Material 冲突
+    setTimeout(() => safeTypeset(), 40);
   }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.querySelector(".md-content article");
-  if (root) {
-    observer.observe(root, {
-      childList: true,
-      subtree: true
-    });
+  if (!root) return;
 
-    // 最后再渲染一次
-    typesetMath();
-  }
+  observer.observe(root, {
+    childList: true,
+    subtree: true,
+  });
+
+  // 最后兜一遍
+  safeTypeset();
 });

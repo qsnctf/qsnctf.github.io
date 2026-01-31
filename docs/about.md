@@ -29,6 +29,10 @@
 | <a href="https://github.com/qsnctf"><img src="https://github.com/qsnctf.png?size=120" width="72" height="72"><br><sub>@qsnctf</sub></a> | <a href="https://github.com/Moxin1044"><img src="https://github.com/Moxin1044.png?size=120" width="72" height="72"><br><sub>@Moxin1044</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/duckpigdog.png?size=120" width="72" height="72"><br><sub>@duckpigdog</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/Abyssun.png?size=120" width="72" height="72"><br/><sub>@Abyssun</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/xinyi72.png?size=120" width="72" height="72"><br/><sub>@xinyi72</sub></a> |
 | <a href="https://github.com/duckpigdog"><img src="https://github.com/tangjunyi23.png?size=120" width="72" height="72"><br/><sub>@tangjunyi23</sub></a> | <a href="https://github.com/duckpigdog"><img src="https://github.com/xhh1h.png?size=120" width="72" height="72"><br/><sub>@xhh1h</sub></a> |                                                              |                                                              |                                                              |
 
+!!! note "提示"
+
+    当然，也欢迎大家一起维护本文库，可以参考Github的内容。
+
 ## 关于靶场
 
 !!! warning "关于靶场的文件传输"
