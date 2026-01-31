@@ -43,3 +43,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   walk(root);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".language-markmap");
+  if (!container) return;
+
+  // 先插个加载提示
+  const tip = document.createElement("div");
+  tip.innerText = "⏳ 知识树加载中...";
+  tip.style.cssText = `
+    text-align:center;
+    padding: 2rem;
+    color: var(--md-accent-fg-color);
+    font-weight: 600;
+  `;
+  container.prepend(tip);
+
+  let tries = 0;
+  const maxTries = 20;
+  const interval = 500;
+
+  const checker = setInterval(() => {
+    tries++;
+
+    const svg = container.querySelector("svg");
+    if (!svg || svg.getBoundingClientRect().height < 10) {
+      const data = container.querySelector("markmap-data");
+      if (data) data.dispatchEvent(new Event("markmap:rerender"));
+    } else {
+      tip.remove();      // 渲染成功就移除提示
+      clearInterval(checker);
+    }
+
+    if (tries >= maxTries) clearInterval(checker);
+  }, interval);
+});
+
