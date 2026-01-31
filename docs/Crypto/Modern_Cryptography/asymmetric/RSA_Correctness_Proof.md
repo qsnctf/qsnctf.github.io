@@ -30,7 +30,7 @@ $$(m^{e})^{d} \equiv m \pmod{n}$$
 
 - **情况 2**：若 $m \not\equiv 0 \pmod p$，根据费马小定理：
 
-  $$m^{ed} = m \cdot m^{ed-1} = m \cdot m^{k_1(p-1)} = m \cdot (m^{p-1})^{k_1} \equiv m \cdot 1^{k_1} \equiv m \pmod p$$
+  $m^{ed} = m \cdot m^{ed-1} = m \cdot m^{k_1(p-1)} = m \cdot (m^{p-1})^{k_1} \equiv m \cdot 1^{k_1} \equiv m \pmod p$
 
 同理可证，$m^{ed} \equiv m \pmod q$。
 
