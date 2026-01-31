@@ -31,19 +31,18 @@
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
 }
-
 /* =================================================== */
-/* 👉👉👉 关键修改：三级以下标题（h1-h3）蓝色下划线 */
+/* 👉👉👉 三级以下标题（h1-h3）——全宽 + 流光 + 悬停加粗 */
 /* =================================================== */
 
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
   position: relative;
-  padding-bottom: 0.45em;
+  padding-bottom: 0.55em;
 }
 
-/* 下划线本体 */
+/* ========== 默认：全宽流光下划线 ========== */
 .md-typeset h1::after,
 .md-typeset h2::after,
 .md-typeset h3::after {
@@ -51,19 +50,41 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 80px;
-  height: 3px;
-  background: #4287ff;
-  border-radius: 3px;
-  transition: width .25s ease;
+  width: 100%;              /* 👉 全长 */
+  height: 3px;              /* 默认粗细 */
+  border-radius: 4px;
+
+  /* 渐变流光条 */
+  background: linear-gradient(
+    90deg,
+    #4287ff 0%,
+    #8bb5ff 30%,
+    #4287ff 60%,
+    #8bb5ff 100%
+  );
+
+  background-size: 200% 100%;
+  animation: headline-flow 2.5s linear infinite;
+  transition: height .15s ease;
 }
 
-/* 鼠标悬停下划线变长 */
+/* ========== 悬停：下划线加粗 ========== */
 .md-typeset h1:hover::after,
 .md-typeset h2:hover::after,
 .md-typeset h3:hover::after {
-  width: 140px;
+  height: 6px;              /* 👉 悬停加粗 */
 }
+
+/* ========== 流光动画关键帧 ========== */
+@keyframes headline-flow {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 200% 50%;
+  }
+}
+
 
 /* =================================================== */
 /* 👉👉👉 表格美化 */
@@ -521,6 +542,80 @@ html[data-md-color-scheme="slate"]
 .md-content .md-typeset img:hover {
   transform: scale(1.01);
   box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+
+/* =============================== */
+/* ====== TAB 卡片风格美化 ====== */
+/* =============================== */
+
+/* 整体外层变成“浮动卡片” */
+.tabbed-set.tabbed-alternate {
+  margin: 1.2em 0;
+  padding: 1rem;
+  border-radius: 16px;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 10px 28px rgba(0,0,0,.08);
+  border: 1px solid rgba(0,0,0,.04);
+}
+
+/* 标签栏整体风格 */
+.tabbed-labels {
+  background: #f3f6ff;
+  border-radius: 12px 12px 0 0;
+  padding: .4rem .6rem;
+  display: flex;
+  gap: .5rem;
+}
+
+/* 单个标签 */
+.tabbed-labels label {
+  border-radius: 10px;
+  padding: .35rem .9rem;
+  transition: all .15s ease;
+  cursor: pointer;
+}
+
+/* 选中状态（关键） */
+.tabbed-set input:checked + label,
+.tabbed-set input:checked + input + label {
+  background: #4287ff;
+  color: white;
+  box-shadow: 0 4px 10px rgba(66,135,255,.25);
+}
+
+/* 未选中标签悬停 */
+.tabbed-labels label:hover {
+  background: rgba(66,135,255,.08);
+}
+
+/* 内容区卡片化 */
+.tabbed-content {
+  border: 1px solid #e5e7eb;
+  border-top: none;
+  border-radius: 0 0 14px 14px;
+  padding: 1rem;
+  background: white;
+}
+
+/* 按钮统一风格 */
+.tabbed-content .md-button {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+/* 按钮悬停动效 */
+.tabbed-content .md-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,.12);
+}
+
+/* 让按钮排版更好看 */
+.tabbed-block p {
+  display: flex;
+  gap: .7rem;
+  flex-wrap: wrap;
 }
 
 
