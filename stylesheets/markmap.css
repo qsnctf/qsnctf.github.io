@@ -1,141 +1,107 @@
 /* ======================================
-   mkdocs-markmap 完整自适应 CSS（美化 + 防盗水印最终版）
+   mkdocs-markmap 优化版（轻量边框 + 精致阴影）
    ====================================== */
 
-/* === 容器自适应 & 高度控制 === */
+/* === 容器自适应 & 细节优化 === */
 .language-markmap.mkdocs-markmap {
+    /* 调整为更轻盈的 1px 边框 */
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    
+    /* 稍微收紧内边距，增加内容区 */
+    padding: 0.5rem;
+    
+    /* 高度与布局保持稳定 */
     height: 60vh !important;
     min-height: 500px !important;
     width: 100% !important;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    background-color: #ffffff; /* 改为纯白，更显干净 */
+    border-radius: 8px; /* 圆角略微减小，更硬朗精致 */
+    
+    /* 优化阴影：使用更浅、更弥散的阴影 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 
-    /* 🔴 关键：建立 stacking context */
     position: relative;
     overflow: hidden;
 }
 
-/* === SVG 自适应 & 层级控制（必须） === */
+/* === SVG 层级控制 === */
 .language-markmap.mkdocs-markmap > svg {
     width: 100% !important;
     height: 100% !important;
-
-    /* 🔴 SVG 必须在水印下面 */
     position: relative;
     z-index: 1;
 }
 
-/* === markmap 主题变量 === */
+/* === Markmap 变量与字体优化 === */
 .markmap {
   --markmap-max-width: 9999px;
   --markmap-a-color: #0097e6;
   --markmap-a-hover-color: #00a8ff;
-  --markmap-code-bg: #f0f0f0;
-  --markmap-code-color: #555;
-  --markmap-highlight-bg: #ffeaa7;
-  --markmap-table-border: 1px solid currentColor;
-  --markmap-font: 300 16px/20px "Segoe UI", sans-serif;
+  --markmap-code-bg: #f8f9fa;
+  --markmap-code-color: #e83e8c; /* 典型的代码粉色 */
+  --markmap-highlight-bg: #fff3bf;
+  --markmap-table-border: 1px solid #dee2e6;
+  --markmap-font: 400 15px/1.5 "Inter", "Segoe UI", Roboto, sans-serif;
   --markmap-circle-open-bg: #fff;
-  --markmap-text-color: #333;
-  --markmap-highlight-node-bg: #fffae6;
+  --markmap-text-color: #2d3436;
+  --markmap-highlight-node-bg: #fffbe6;
 
   font: var(--markmap-font);
   color: var(--markmap-text-color);
 }
 
-/* === 连线 === */
+/* === 连线平滑度 === */
 .markmap-link {
     fill: none;
+    stroke-opacity: 0.6; /* 让连线不那么刺眼 */
 }
 
-/* === 节点圆点 === */
+/* === 节点圆点优化 === */
 .markmap-node > circle {
     cursor: pointer;
-    stroke-width: 1.5;
-    stroke: #888;
+    stroke-width: 1px; /* 边框减细 */
+    stroke: #b2bec3;
     fill: var(--markmap-circle-open-bg);
-    transition: all 0.3s;
+    transition: all 0.2s ease;
 }
 
 .markmap-node > circle:hover {
     stroke: #0097e6;
-    stroke-width: 2;
-    fill: #e0f7ff;
+    stroke-width: 1.5px;
+    fill: #f0faff;
 }
 
-/* === 外部节点内容 === */
+/* === 富文本内容优化 === */
 .markmap-foreign {
     display: inline-block;
-}
-
-.markmap-foreign p {
-    margin: 0;
-}
-
-.markmap-foreign a {
-    color: var(--markmap-a-color);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.markmap-foreign a:hover {
-    color: var(--markmap-a-hover-color);
-    text-decoration: underline;
+    line-height: 1.4;
 }
 
 .markmap-foreign code {
-    padding: 0.25em 0.4em;
-    font-size: calc(1em - 2px);
+    padding: 0.15em 0.3em;
+    font-size: 0.9em;
     color: var(--markmap-code-color);
     background-color: var(--markmap-code-bg);
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.05); /* 给 code 加个极细边框 */
+    border-radius: 3px;
 }
 
-.markmap-foreign pre {
-    margin: 0;
-}
-
-.markmap-foreign pre > code {
-    display: block;
-}
-
-.markmap-foreign strong {
-    font-weight: bold;
-}
-
-.markmap-foreign em {
-    font-style: italic;
-}
-
-.markmap-foreign mark {
-    background: var(--markmap-highlight-bg);
-    border-radius: 2px;
-    padding: 0 2px;
-}
-
-/* === 表格 & 图片 === */
-.markmap-foreign table,
-.markmap-foreign th,
-.markmap-foreign td {
-    border-collapse: collapse;
-    border: var(--markmap-table-border);
-    padding: 2px 6px;
-}
-
+/* === 图片与表格细节 === */
 .markmap-foreign img {
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
-/* === 节点高亮 === */
+.markmap-foreign table {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* === 节点高亮框优化 === */
 .markmap-highlight rect {
     fill: var(--markmap-highlight-node-bg);
-    rx: 6;
-    ry: 6;
-    stroke: #ffc107;
-    stroke-width: 1.5;
+    rx: 4;
+    ry: 4;
+    stroke: #ffe066;
+    stroke-width: 1px; /* 边框减细 */
 }
