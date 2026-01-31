@@ -78,46 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".language-markmap");
-  if (!container) return;
-
-  // 先插个加载提示
-  const tip = document.createElement("div");
-  tip.innerText = "⏳ 知识树加载中...";
-  tip.style.cssText = `
-    text-align:center;
-    padding: 2rem;
-    color: var(--md-accent-fg-color);
-    font-weight: 600;
-  `;
-  container.prepend(tip);
-
-  let tries = 0;
-  const maxTries = 20;
-  const interval = 500;
-
-  const checker = setInterval(() => {
-    tries++;
-
-    const svg = container.querySelector("svg");
-    if (!svg || svg.getBoundingClientRect().height < 10) {
-      const data = container.querySelector("markmap-data");
-      if (data) data.dispatchEvent(new Event("markmap:rerender"));
-    } else {
-      tip.remove();      // 渲染成功就移除提示
-      clearInterval(checker);
-    }
-
-    if (tries >= maxTries) clearInterval(checker);
-  }, interval);
-});
-
-/* ======================================================
-   修复 Markmap Base64 中文解码错误（必加）
-   Fix: InvalidCharacterError: Failed to execute 'atob'
-   ====================================================== */
-
 (function patchMarkmapDecoder() {
   const originalAtob = window.atob;
 
@@ -128,12 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e instanceof DOMException || e.name === "InvalidCharacterError") {
         console.warn("🔧 Markmap Base64 UTF-8 修复已启用");
 
-        // 关键修复：UTF-8 安全解码
-        const binary = Uint8Array.from(
-          atob(str.replace(/-/g, "+").replace(/_/g, "/")),
-          c => c.charCodeAt(0)
-        );
-
+        const safe = str.replace(/-/g, "+").replace(/_/g, "/");
+        const binary = Uint8Array.from(atob(safe), c => c.charCodeAt(0));
         const decoder = new TextDecoder("utf-8");
         return decoder.decode(binary);
       }
@@ -141,3 +97,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 })();
+
+function forceRerenderMarkmap() {
+  const container = document.querySelector(".language-markmap");
+  if (!container) return false;
+
+  const data = container.querySelector("markmap-data");
+  if (!data) return false;
+
+  console.log("♻️ 强制重建 markmap 容器...");
+
+  const clone = container.cloneNode(true);
+  container.replaceWith(clone);
+
+  // 触发渲染事件
+  const newData = clone.querySelector("markmap-data");
+  newData.dispatchEvent(new Event("markmap:rerender"));
+
+  return true;
+}
+
+
+window.addEventListener("load", () => {
+  setTimeout(forceRerenderMarkmap, 50);
+  setTimeout(forceRerenderMarkmap, 300);
+  setTimeout(forceRerenderMarkmap, 800);
+});
+
+document$.subscribe(() => {
+  setTimeout(forceRerenderMarkmap, 0);
+  setTimeout(forceRerenderMarkmap, 200);
+});
+
+const observer = new MutationObserver(() => {
+  if (document.querySelector(".language-markmap svg")) return;
+  forceRerenderMarkmap();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.querySelector(".md-content article");
+  if (root) {
+    observer.observe(root, {
+      childList: true,
+      subtree: true
+    });
+  }
+});
