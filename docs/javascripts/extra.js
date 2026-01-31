@@ -22,25 +22,51 @@
 
 /* ============ 2. 各功能模块定义 ============ */
 
-// --- 模块 A: Markmap 强制重绘 (核心修复) ---
-function forceMarkmap() {
+// --- 模块 A: Markmap 强力手动渲染 (核心修复) ---
+async function forceMarkmapRender() {
     const containers = document.querySelectorAll(".language-markmap");
-    containers.forEach(container => {
+    if (containers.length === 0) return;
+
+    // 检查 Markmap 全局库是否已加载
+    if (!window.markmap || !window.markmap.Markmap) {
+        return;
+    }
+
+    const { Markmap, loadPlugins, deriveOptions } = window.markmap;
+
+    containers.forEach(async (container) => {
         // 如果已经渲染出了 svg 且内部有内容，则不再处理
         if (container.querySelector("svg g")) return;
 
-        console.log("♻️ 正在强制激活 Markmap...");
-        
-        // 关键：通过分发自定义事件通知 Markmap 插件
         const dataTag = container.querySelector("markmap-data");
-        if (dataTag) {
-            dataTag.dispatchEvent(new Event("markmap:rerender"));
-        }
+        if (!dataTag) return;
 
-        // 补救措施：针对部分版本，重新触发渲染属性
-        const svg = container.querySelector("svg");
-        if (svg && !svg.innerHTML.trim()) {
-            svg.remove(); // 移除空的 SVG 让插件有机会重新生成
+        try {
+            console.log("♻️ 正在执行 Markmap 强力重绘...");
+            const json = JSON.parse(dataTag.textContent);
+            
+            // 清理旧的残余 SVG
+            const oldSvg = container.querySelector("svg");
+            if (oldSvg) oldSvg.remove();
+
+            // 创建新的 SVG 容器
+            const newSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            newSvg.classList.add("markmap");
+            newSvg.style.cssText = "width: 100%; min-height: 400px;";
+            container.appendChild(newSvg);
+
+            // 手动渲染
+            const opts = deriveOptions(json.opts);
+            const mm = Markmap.create(newSvg, opts, json.root);
+            
+            if (json.features) {
+                await loadPlugins(json.features);
+                mm.setData(json.root);
+                mm.fit();
+            }
+        } catch (err) {
+            console.warn("Markmap 手动渲染尝试失败，改用事件触发:", err);
+            dataTag.dispatchEvent(new Event("markmap:rerender"));
         }
     });
 }
@@ -73,7 +99,6 @@ function fixBold(root) {
             let val = node.nodeValue;
             if (val && val.includes("**")) {
                 const span = document.createElement("span");
-                // 支持跨行加粗修复
                 span.innerHTML = val.replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>");
                 node.replaceWith(span);
             }
@@ -91,10 +116,10 @@ function initImageZoom(root) {
         img.addEventListener("click", () => {
             let scale = 1, rotate = 0;
             const overlay = document.createElement("div");
-            overlay.style.cssText = `position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;z-index:999999;backdrop-filter:blur(5px);`;
+            overlay.style.cssText = `position:fixed;inset:0;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;z-index:999999;backdrop-filter:blur(5px);cursor:zoom-out;`;
 
             const wrapper = document.createElement("div");
-            wrapper.style.cssText = `display:flex;flex-direction:column;align-items:center;gap:15px;`;
+            wrapper.style.cssText = `display:flex;flex-direction:column;align-items:center;gap:15px;cursor:default;`;
 
             const clone = img.cloneNode();
             clone.style.cssText = `max-width:90vw;max-height:80vh;border-radius:8px;box-shadow:0 10px 50px rgba(0,0,0,0.5);transition:transform 0.2s cubic-bezier(0.4,0,0.2,1);`;
@@ -105,7 +130,7 @@ function initImageZoom(root) {
                 <button data-a="l">⟲</button><button data-a="r">⟳</button>
                 <button data-a="reset">↺</button><button data-a="close">✕</button>
             `;
-            panel.style.cssText = `display:flex;gap:10px;background:rgba(255,255,255,0.1);padding:10px;border-radius:50px;`;
+            panel.style.cssText = `display:flex;gap:10px;background:rgba(0,0,0,0.6);padding:10px;border-radius:50px;backdrop-filter:blur(10px);`;
 
             panel.querySelectorAll("button").forEach(b => {
                 b.style.cssText = `background:none;border:none;color:white;cursor:pointer;font-size:18px;padding:5px 10px;`;
@@ -134,38 +159,29 @@ function initImageZoom(root) {
 
 /* ============ 3. 运行调度 (MkDocs Material 专用) ============ */
 
-// 动画样式注入
-const styleTag = document.createElement("style");
-styleTag.innerHTML = `
-    @keyframes zoomIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
-    .language-markmap { min-height: 300px; } /* 防止跳转时高度塌陷导致插件不工作 */
-`;
-document.head.append(styleTag);
-
-document$.subscribe(() => {
+const runAllFixes = () => {
     const article = document.querySelector(".md-content article");
     if (!article) return;
+    
+    fixBold(article);
+    initImageZoom(article);
+    renderMath();
+    forceMarkmapRender();
+};
 
-    // 核心执行逻辑
-    const triggerAll = () => {
-        fixBold(article);
-        initImageZoom(article);
-        renderMath();
-        forceMarkmap();
-    };
+document$.subscribe(() => {
+    // 1. 初始执行
+    runAllFixes();
 
-    // 1. 立即执行
-    triggerAll();
-
-    // 2. 针对 Markmap 和 MathJax 的异步性，进行波次补救
-    // 这是解决“只有刷新才显示”的最有效手段
-    [50, 200, 500, 1000, 2000].forEach(delay => {
-        setTimeout(triggerAll, delay);
+    // 2. 针对异步内容的“波次”补偿执行 (5秒内分5次)
+    [100, 500, 1200, 2500, 5000].forEach(delay => {
+        setTimeout(runAllFixes, delay);
     });
 
-    // 3. 监听 DOM 动态注入 (如 Instant loading 替换内容)
-    const observer = new MutationObserver((mutations) => {
-        triggerAll();
-    });
-    observer.observe(article, { childList: true, subtree: true });
+    // 3. 实时监听内容变化
+    const article = document.querySelector(".md-content article");
+    if (article) {
+        const observer = new MutationObserver(runAllFixes);
+        observer.observe(article, { childList: true, subtree: true });
+    }
 });
