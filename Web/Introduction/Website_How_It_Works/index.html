@@ -5074,16 +5074,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#第二步服务器返回响应response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：服务器返回响应（Response）
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#http-vs-https" class="md-nav__link">
     <span class="md-ellipsis">
       
-        
+        HTTP vs HTTPS
       
     </span>
   </a>
@@ -5187,7 +5198,26 @@
 <p class="admonition-title">这相当于在说：</p>
 <p>“你好服务器，我想要你网站根目录下的 index.html 页面。”</p>
 </div>
-<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<h4 id="第二步服务器返回响应response"><strong>第二步：服务器返回响应（Response）</strong><a class="headerlink" href="#第二步服务器返回响应response" title="Permanent link">¶</a></h4>
+<p>服务器会返回类似：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>HTTP/1.1 200 OK
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>Content-Type: text/html
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>&lt;html&gt;
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>  &lt;head&gt;...&lt;/head&gt;
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>  &lt;body&gt;你好，世界！&lt;/body&gt;
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>&lt;/html&gt;
+</code></pre></div>
+<p>浏览器拿到这些 HTML 文本后，开始解析并展示页面。</p>
+<h3 id="http-vs-https">HTTP vs HTTPS<a class="headerlink" href="#http-vs-https" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>HTTP</strong> = 明文传输（不安全）</li>
+<li><strong>HTTPS</strong> = 加密传输（更安全）</li>
+</ul>
+<p>现在大多数网站都使用 HTTPS：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>https://docs.qsnctf.com
+</code></pre></div>
+<p>HTTPS = HTTP + SSL/TLS 加密。</p>
 
 
 
