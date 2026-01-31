@@ -537,3 +537,19 @@ body::before {
 </svg>");
 }
 
+
+/* 默认状态 */
+.md-search__input {
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+/* 鼠标悬停阴影 */
+.md-search__input:hover {
+  box-shadow: 0 4px 10px rgba(64, 132, 249, 0.25);
+}
+
+/* 可选：聚焦时更明显 */
+.md-search__input:focus {
+  box-shadow: 0 0 0 2px rgba(64, 132, 249, 0.25),
+              0 4px 12px rgba(64, 132, 249, 0.2);
+}
