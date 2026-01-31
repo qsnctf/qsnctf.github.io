@@ -5879,8 +5879,8 @@
 <p>当你访问一个网页时，大致流程是：</p>
 <h4 id="第一步浏览器发送请求request"><strong>第一步：浏览器发送请求（Request）</strong><a class="headerlink" href="#第一步浏览器发送请求request" title="Permanent link">¶</a></h4>
 <p>浏览器向服务器发送类似这样的请求：</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>GET /index.html HTTP/1.1
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>Host: www.example.com
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">GET</span><span class="w"> </span><span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">html</span><span class="w"> </span><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">Host</span><span class="p">:</span><span class="w"> </span><span class="n">www</span><span class="p">.</span><span class="n">example</span><span class="p">.</span><span class="n">com</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">这相当于在说：</p>
@@ -6036,16 +6036,16 @@
 <hr/>
 <h2 id="七没有浏览器时网页是什么样的">七、没有浏览器时，网页是什么样的？<a class="headerlink" href="#七没有浏览器时网页是什么样的" title="Permanent link">¶</a></h2>
 <p>如果你**直接打开 HTML 文件**（不用浏览器），你会看到类似这样：</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>&lt;!DOCTYPE html&gt;
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>&lt;html&gt;
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>&lt;head&gt;
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>  &lt;title&gt;我的网页&lt;/title&gt;
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>&lt;/head&gt;
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>&lt;body&gt;
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>  &lt;h1&gt;欢迎访问&lt;/h1&gt;
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>  &lt;p&gt;这是一个网页&lt;/p&gt;
-<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>&lt;/body&gt;
-<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>&lt;/html&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>我的网页<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>欢迎访问<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>这是一个网页<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>👉 这就是网页的**原始形态**：
  👉 <strong>一堆结构化的文本 + 标签</strong></p>
@@ -6090,21 +6090,16 @@
 <p>最终把内容画到屏幕上，你就看到网页了。</p>
 <hr/>
 <h2 id="九总结">九、总结<a class="headerlink" href="#九总结" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>你输入网址
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>      ↓
-<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>DNS 找到服务器
-<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>      ↓
-<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>浏览器发送 HTTP 请求
-<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>      ↓
-<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a>Nginx/Apache 处理
-<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>      ↓
-<a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a>服务器返回 HTML
-<a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a>      ↓
-<a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a>浏览器解析 HTML + CSS + JS
-<a href="#__codelineno-6-12" id="__codelineno-6-12" name="__codelineno-6-12"></a>      ↓
-<a href="#__codelineno-6-13" id="__codelineno-6-13" name="__codelineno-6-13"></a>渲染页面
-<a href="#__codelineno-6-14" id="__codelineno-6-14" name="__codelineno-6-14"></a>      ↓
-<a href="#__codelineno-6-15" id="__codelineno-6-15" name="__codelineno-6-15"></a>你看到网站 🎉
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>flowchart TD
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>A[用户输入网址] --&gt; B[DNS 解析域名]
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>B --&gt; C[获得服务器 IP]
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>C --&gt; D[浏览器发送 HTTP/HTTPS 请求]
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>D --&gt; E[Nginx / Apache 处理请求]
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>E --&gt; F[后端服务器执行业务]
+<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a>F --&gt; G[服务器返回 HTML + 资源]
+<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>G --&gt; H[浏览器解析 HTML/CSS/JS]
+<a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a>H --&gt; I[构建 DOM → 渲染树 → 布局 → 绘制]
+<a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a>I --&gt; J[用户看到网页]
 </code></pre></div>
 
 
