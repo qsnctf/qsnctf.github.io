@@ -547,17 +547,9 @@ html[data-md-color-scheme="slate"]
 
 /* =============================== */
 /* ====== TAB 卡片风格美化 ====== */
-/* ====== ✅ 已适配深色模式 ====== */
 /* =============================== */
 
-/* 整体外层变成“浮动卡片” */
-.tabbed-set.tabbed-alternate {
-  margin: 1.2em 0;
-  padding: 1rem;
-  border-radius: 16px;
-  background: var(--md-default-bg-color);
-  border: 1px solid var(--md-typeset-table-color);
-}
+
 
 /* 标签栏整体风格（浅/深色自适应） */
 .tabbed-labels {
