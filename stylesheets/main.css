@@ -32,7 +32,7 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
 }
 /* =================================================== */
-/* 👉👉👉 三级以下标题（h1-h3）——全宽 + 流光 + 悬停加粗 */
+/* 👉👉👉 三级以下标题（h1-h3）——智能宽度 + 分级粗细 + 流光 */
 /* =================================================== */
 
 .md-typeset h1,
@@ -40,9 +40,11 @@
 .md-typeset h3 {
   position: relative;
   padding-bottom: 0.55em;
+  display: inline-block;   /* 👉 关键：让 h1 宽度跟文字一致 */
+  min-width: 100%;         /* 👉 保证布局不塌 */
 }
 
-/* ========== 默认：全宽流光下划线 ========== */
+/* ========== 默认：流光下划线（分级粗细） ========== */
 .md-typeset h1::after,
 .md-typeset h2::after,
 .md-typeset h3::after {
@@ -50,8 +52,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;              /* 👉 全长 */
-  height: 3px;              /* 默认粗细 */
+  width: 100%;              /* 👉 现在 = 标题文字宽度 */
   border-radius: 4px;
 
   /* 渐变流光条 */
@@ -68,22 +69,22 @@
   transition: height .15s ease;
 }
 
-/* ========== 悬停：下划线加粗 ========== */
-.md-typeset h1:hover::after,
-.md-typeset h2:hover::after,
-.md-typeset h3:hover::after {
-  height: 6px;              /* 👉 悬停加粗 */
-}
+/* 👉 不同级别不同粗细 */
+.md-typeset h1::after { height: 4px; }  /* 最粗 */
+.md-typeset h2::after { height: 3px; }  /* 中等 */
+.md-typeset h3::after { height: 2px; }  /* 最细 */
+
+/* ========== 悬停：整体加粗 ========== */
+.md-typeset h1:hover::after { height: 7px; }
+.md-typeset h2:hover::after { height: 5px; }
+.md-typeset h3:hover::after { height: 4px; }
 
 /* ========== 流光动画关键帧 ========== */
 @keyframes headline-flow {
-  from {
-    background-position: 0% 50%;
-  }
-  to {
-    background-position: 200% 50%;
-  }
+  from { background-position: 0% 50%; }
+  to   { background-position: 200% 50%; }
 }
+
 
 
 /* =================================================== */
