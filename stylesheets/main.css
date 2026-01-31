@@ -412,89 +412,122 @@ html[data-md-color-scheme="slate"]
 }
 
 /* =====================================================
-   左侧导航栏（Primary Sidebar）- 紧凑卡片式
+   左侧导航 - 结构化卡片风格（与右侧同体系）
    ===================================================== */
 
-.md-sidebar--primary {
-  font-size: .88rem;
+/* === 外层整体卡片 === */
+.md-nav--primary {
+  background: var(--md-default-bg-color);
+  border-radius: 14px;
+  padding: .7rem .6rem;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.04),
+    inset 0 0 0 1px rgba(255,255,255,.35);
 }
 
-/* 滚动区 */
-.md-sidebar__scrollwrap {
-  padding: .4rem .35rem;
+/* 一级分区之间留间距 */
+.md-nav--primary > .md-nav__list > .md-nav__item {
+  margin-bottom: .35rem;
 }
 
-/* 单项通用 */
-.md-nav__link {
-  padding: .3rem .55rem;
-  margin: 0;
-  line-height: 1.35;
-  border-radius: 6px;
-  color: var(--md-default-fg-color--light);
-  transition: background .15s ease, color .15s ease;
+/* === 所有链接基础样式 === */
+.md-nav--primary .md-nav__link {
+  border-radius: 8px;
+  transition: background .15s ease, color .15s ease, transform .05s ease;
 }
 
-/* hover */
-.md-nav__link:hover {
+/* hover 微动效 */
+.md-nav--primary .md-nav__link:hover {
   background: rgba(var(--md-accent-fg-color--rgb), .07);
-  color: var(--md-accent-fg-color);
+  transform: translateX(2px);
 }
 
-/* 当前项 */
-.md-nav__link--active {
-  background: rgba(var(--md-accent-fg-color--rgb), .16);
-  color: var(--md-accent-fg-color);
-  font-weight: 600;
-}
-
-/* 左侧强调条 */
-.md-nav__item--active > .md-nav__link {
-  border-left: 2px solid var(--md-accent-fg-color);
-  padding-left: calc(.55rem - 2px);
-}
-
-/* === 层级 === */
-
-/* 一级 */
-.md-nav[data-md-level="1"] > .md-nav__list > .md-nav__item > .md-nav__link {
-  font-size: .9rem;
-  font-weight: 600;
-  margin-top: .15rem;
-}
-
-/* 二级 */
-.md-nav[data-md-level="2"] .md-nav__link {
-  padding-left: 1.3rem;
+/* === 一级标题（章节级） === */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link,
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__container > a {
+  font-weight: 700;
   font-size: .85rem;
+  padding: .32rem .5rem;
+  letter-spacing: .01em;
+}
+
+/* 一级折叠区背景 */
+.md-nav--primary .md-nav[data-md-level="1"] {
+  background: rgba(0,0,0,.02);
+  border-radius: 10px;
+  margin: .25rem 0 .25rem .2rem;
+  padding: .25rem .2rem;
+}
+
+/* === 二级条目 === */
+.md-nav--primary .md-nav[data-md-level="1"] .md-nav__link {
+  font-size: .80rem;
+  padding: .28rem .6rem .28rem 1rem;
+  position: relative;
   opacity: .95;
 }
 
-/* 三级 */
-.md-nav[data-md-level="3"] .md-nav__link {
-  padding-left: 2.1rem;
-  font-size: .8rem;
+/* 二级竖线（结构感） */
+.md-nav--primary .md-nav[data-md-level="1"] .md-nav__link::before {
+  content: "";
+  position: absolute;
+  left: .45rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 50%;
+  background: rgba(0,0,0,.15);
+  border-radius: 2px;
+}
+
+/* === 三级条目 === */
+.md-nav--primary .md-nav[data-md-level="2"] .md-nav__link {
+  font-size: .76rem;
+  padding-left: 1.7rem;
   opacity: .88;
 }
 
-/* 四级兜底 */
-.md-nav[data-md-level="4"] .md-nav__link {
-  padding-left: 2.8rem;
-  font-size: .76rem;
-  opacity: .8;
+/* === 当前页面高亮（重点） === */
+.md-nav--primary .md-nav__link--active {
+  background: rgba(var(--md-accent-fg-color--rgb), .14);
+  color: var(--md-accent-fg-color);
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 var(--md-accent-fg-color);
 }
 
-/* 深色模式 */
-html[data-md-color-scheme="slate"] .md-nav__link {
-  color: rgba(255,255,255,.8);
+/* 展开的父级也微高亮 */
+.md-nav--primary .md-nav__item--active > .md-nav__link {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
 }
 
-html[data-md-color-scheme="slate"] .md-nav__link:hover {
-  background: rgba(255,255,255,.06);
+/* === 折叠箭头优化 === */
+.md-nav--primary .md-nav__icon {
+  opacity: .65;
+  transition: transform .15s ease, opacity .15s ease;
 }
 
-html[data-md-color-scheme="slate"] .md-nav__link--active {
-  background: rgba(var(--md-accent-fg-color--rgb), .28);
+.md-nav--primary .md-nav__item--active > .md-nav__link .md-nav__icon {
+  opacity: 1;
 }
+
+/* === 深色模式适配 === */
+html[data-md-color-scheme="slate"] .md-nav--primary {
+  border-color: rgba(255,255,255,.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,.45);
+}
+
+html[data-md-color-scheme="slate"]
+.md-nav--primary .md-nav[data-md-level="1"] {
+  background: rgba(255,255,255,.03);
+}
+
+html[data-md-color-scheme="slate"]
+.md-nav--primary .md-nav[data-md-level="1"] .md-nav__link::before {
+  background: rgba(255,255,255,.25);
+}
+
 
 /* 图片可点击提示 */
 .md-content .md-typeset img {
