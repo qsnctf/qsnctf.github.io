@@ -642,7 +642,7 @@ body::before {
         text-anchor='middle' \
         dominant-baseline='middle' \
         transform='rotate(-35 120 80)' \
-        fill='rgba(0,0,0,0.025)' \
+        fill='rgba(0,0,0,0.005)' \
         font-size='26' \
         font-family='Segoe UI, Arial, sans-serif'>\
     青少年CTF文库\
