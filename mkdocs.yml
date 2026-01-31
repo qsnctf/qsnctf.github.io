@@ -236,7 +236,7 @@ nav:
         - 维吉尼亚密码: Crypto/Classical_Cryptography/Multi_table_replacement/Vigen.md
       - 其他密码:
         - 培根密码: Crypto/Other_Cryptography/Baconian.md
-    - 图形密码: 
+    - 图形密码:
       - 介绍: Crypto/Graphic_Cryptography/index.md
   - Web: 
     - 介绍: Web/index.md
