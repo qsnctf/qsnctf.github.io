@@ -1,5 +1,7 @@
-/* === 内容区域 === */
-/* 内容的主体卡片样式 */
+/* =============================== */
+/* ========== 内容区域 ========== */
+/* =============================== */
+
 .md-content {
   padding-bottom: 3rem;
 }
@@ -8,20 +10,117 @@
   background: var(--md-default-bg-color);
   border-radius: 16px;
   padding: 1rem 2.5rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
 }
 
-/* === 代码块圆角 === */
+/* =============================== */
+/* ========== 代码块 ========== */
+/* =============================== */
+
 .highlight pre {
   border-radius: 12px;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.05);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .05);
 }
 
-/* === 提示块现代化 === */
+/* =============================== */
+/* ========== 提示块 ========== */
+/* =============================== */
+
 .md-typeset .admonition,
 .md-typeset details {
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+}
+
+/* =================================================== */
+/* 👉👉👉 关键修改：三级以下标题（h1-h3）蓝色下划线 */
+/* =================================================== */
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  position: relative;
+  padding-bottom: 0.45em;
+}
+
+/* 下划线本体 */
+.md-typeset h1::after,
+.md-typeset h2::after,
+.md-typeset h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  background: #4287ff;
+  border-radius: 3px;
+  transition: width .25s ease;
+}
+
+/* 鼠标悬停下划线变长 */
+.md-typeset h1:hover::after,
+.md-typeset h2:hover::after,
+.md-typeset h3:hover::after {
+  width: 140px;
+}
+
+/* =================================================== */
+/* 👉👉👉 表格美化 */
+/* =================================================== */
+
+.md-typeset table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+}
+
+/* 表头 */
+.md-typeset table thead th {
+  background: #f3f6ff;
+  color: #1f2937;
+  font-weight: 600;
+  padding: .8rem;
+  border-bottom: 2px solid #4287ff;
+}
+
+/* 单元格 */
+.md-typeset table td,
+.md-typeset table th {
+  padding: .75rem .9rem;
+  border: 1px solid #e5e7eb;
+}
+
+/* 斑马纹 */
+.md-typeset table tbody tr:nth-child(odd) {
+  background: #fafbff;
+}
+
+/* 悬停高亮 */
+.md-typeset table tbody tr:hover {
+  background: #eef2ff;
+  transition: background .15s ease;
+}
+
+/* 表格外间距 */
+.md-typeset .md-typeset__table {
+  margin: 1.2em 0;
+}
+
+/* =================================================== */
+/* 👉👉👉 小细节优化（可选但推荐） */
+/* =================================================== */
+
+.md-typeset ul,
+.md-typeset ol {
+  margin: .6em 0 1em 1.2em;
+}
+
+.md-typeset p {
+  line-height: 1.75;
 }
 
 
