@@ -536,3 +536,34 @@ body::before {
   </text>\
 </svg>");
 }
+
+
+/* 整体搜索框容器 */
+.md-search__inner {
+  border: 1px solid #4084f9;
+  border-radius: 24px;
+  padding: 2px 8px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* 输入框本身 */
+.md-search__input {
+  border-radius: 20px;
+}
+
+/* 聚焦时更好看 */
+.md-search__inner:focus-within {
+  border-color: #4084f9;
+  box-shadow: 0 0 0 2px rgba(64, 132, 249, 0.2);
+}
+
+/* 去掉默认边框（如果你看到双重边框） */
+.md-search__input {
+  border: none !important;
+  outline: none !important;
+}
+
+/* 可选：让图标更协调 */
+.md-search__icon svg {
+  fill: #4084f9;
+}
