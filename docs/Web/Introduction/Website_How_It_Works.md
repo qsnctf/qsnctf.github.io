@@ -283,7 +283,7 @@ Web 服务器就像**网站门口的保安**：
 
 ## 九、总结
 
-```Mermaid
+```mermaid
 flowchart TD
 A[用户输入网址] --> B[DNS 解析域名]
 B --> C[获得服务器 IP]

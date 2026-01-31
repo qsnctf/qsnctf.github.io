@@ -36,10 +36,10 @@ theme:
     - content.tabs.link # 标签链接
     - content.tooltips  # 工具提示
     - navigation.indexes # 导航索引
-    # - navigation.instant # 即时加载
+    - navigation.instant # 即时加载
     - navigation.tabs # 导航标签
-    # - navigation.instant.prefetch # 预加载
-    # - navigation.instant.progress # 指示进度器
+    - navigation.instant.prefetch # 预加载
+    - navigation.instant.progress # 指示进度器
     - navigation.tracking # 锚点跟踪
     - navigation.path # 面包屑导航
     - navigation.top # 导航顶部
@@ -251,6 +251,7 @@ nav:
     - 介绍: Web/index.md
     - 基础知识:
       - 网站是如何工作的？ : Web/Introduction/Website_How_It_Works.md
+      - 网站的状态管理: Web/Introduction/Website_Status_Management.md
   - Reverse: 
     - 介绍: Reverse/index.md
   - Pwn: 
