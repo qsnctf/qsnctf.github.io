@@ -547,6 +547,7 @@ html[data-md-color-scheme="slate"]
 
 /* =============================== */
 /* ====== TAB 卡片风格美化 ====== */
+/* ====== ✅ 已适配深色模式 ====== */
 /* =============================== */
 
 /* 整体外层变成“浮动卡片” */
@@ -555,13 +556,12 @@ html[data-md-color-scheme="slate"]
   padding: 1rem;
   border-radius: 16px;
   background: var(--md-default-bg-color);
-  /* box-shadow: 0 10px 28px rgba(0,0,0,.08); */
-  border: 1px solid rgba(0,0,0,.04);
+  border: 1px solid var(--md-typeset-table-color);
 }
 
-/* 标签栏整体风格 */
+/* 标签栏整体风格（浅/深色自适应） */
 .tabbed-labels {
-  background: #f3f6ff;
+  background: color-mix(in srgb, var(--md-accent-fg-color) 8%, var(--md-default-bg-color));
   border-radius: 12px 12px 0 0;
   padding: .4rem .6rem;
   display: flex;
@@ -574,41 +574,42 @@ html[data-md-color-scheme="slate"]
   padding: .35rem .9rem;
   transition: all .15s ease;
   cursor: pointer;
+  color: var(--md-default-fg-color);
 }
 
-/* 选中状态（关键） */
+/* 选中状态（关键）——自动适配亮/暗 */
 .tabbed-set input:checked + label,
 .tabbed-set input:checked + input + label {
-  background: #4287ff;
+  background: var(--md-accent-fg-color);
   color: white;
-  box-shadow: 0 4px 10px rgba(66,135,255,.25);
+  box-shadow: 0 4px 10px color-mix(in srgb, var(--md-accent-fg-color) 35%, transparent);
 }
 
 /* 未选中标签悬停 */
 .tabbed-labels label:hover {
-  background: rgba(66,135,255,.08);
+  background: color-mix(in srgb, var(--md-accent-fg-color) 10%, transparent);
 }
 
-/* 内容区卡片化 */
+/* 内容区卡片化（适配深色） */
 .tabbed-content {
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--md-typeset-table-color);
   border-top: none;
   border-radius: 0 0 14px 14px;
   padding: 1rem;
-  background: white;
+  background: var(--md-default-bg-color);
 }
 
-/* 按钮统一风格 */
+/* 按钮统一风格（深色友好） */
 .tabbed-content .md-button {
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
   transition: transform .12s ease, box-shadow .12s ease;
 }
 
 /* 按钮悬停动效 */
 .tabbed-content .md-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(0,0,0,.12);
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
 }
 
 /* 让按钮排版更好看 */
@@ -617,6 +618,7 @@ html[data-md-color-scheme="slate"]
   gap: .7rem;
   flex-wrap: wrap;
 }
+
 
 
 /* 防盗水印
