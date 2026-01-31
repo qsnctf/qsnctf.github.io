@@ -60,4 +60,31 @@ Host: www.example.com
 
     “你好服务器，我想要你网站根目录下的 index.html 页面。”
 
-### 
+#### **第二步：服务器返回响应（Response）**
+
+服务器会返回类似：
+
+```
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+<html>
+  <head>...</head>
+  <body>你好，世界！</body>
+</html>
+```
+
+浏览器拿到这些 HTML 文本后，开始解析并展示页面。
+
+### HTTP vs HTTPS
+
+- **HTTP** = 明文传输（不安全）
+- **HTTPS** = 加密传输（更安全）
+
+现在大多数网站都使用 HTTPS：
+
+```
+https://docs.qsnctf.com
+```
+
+HTTPS = HTTP + SSL/TLS 加密。
