@@ -97,42 +97,55 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+  border: 1px solid var(--md-typeset-table-color);
 }
 
-/* 表头 */
+/* 表头 — 浅/深色自适应 */
 .md-typeset table thead th {
-  background: #f3f6ff;
-  color: #1f2937;
+  background: color-mix(
+    in srgb,
+    var(--md-accent-fg-color) 8%,
+    var(--md-default-bg-color)
+  );
+  color: var(--md-default-fg-color);
   font-weight: 600;
   padding: .8rem;
-  border-bottom: 2px solid #4287ff;
+  border-bottom: 2px solid var(--md-accent-fg-color);
 }
 
-/* 单元格 */
+/* 单元格边框统一使用主题色 */
 .md-typeset table td,
 .md-typeset table th {
   padding: .75rem .9rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--md-typeset-table-color);
 }
 
-/* 斑马纹 */
+/* 斑马纹（自动变深/变浅） */
 .md-typeset table tbody tr:nth-child(odd) {
-  background: #fafbff;
+  background: color-mix(
+    in srgb,
+    var(--md-accent-fg-color) 4%,
+    var(--md-default-bg-color)
+  );
 }
 
-/* 悬停高亮 */
+/* 悬停高亮（深色友好） */
 .md-typeset table tbody tr:hover {
-  background: #eef2ff;
+  background: color-mix(
+    in srgb,
+    var(--md-accent-fg-color) 12%,
+    var(--md-default-bg-color)
+  );
   transition: background .15s ease;
 }
 
-/* 表格外间距 */
+/* 表格外间距（保持你原有节奏） */
 .md-typeset .md-typeset__table {
   margin: 1.2em 0;
 }
 
 /* =================================================== */
-/* 👉👉👉 小细节优化（可选但推荐） */
+/* 👉👉👉 小细节优化 */
 /* =================================================== */
 
 .md-typeset ul,
