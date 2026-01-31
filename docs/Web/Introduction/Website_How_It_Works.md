@@ -26,8 +26,6 @@ https://docs.qsnctf.com
 
 ## 二、HTTP 协议
 
-
-
 !!! note "HTTP协议"
 
     网页通信的“共同语言”
@@ -44,3 +42,22 @@ https://docs.qsnctf.com
 > - 浏览器 = 你（收件人）
 > - 服务器 = 商家（发货人）
 > - HTTP = 快递流程和格式标准
+
+### 2. HTTP 的基本工作流程
+
+当你访问一个网页时，大致流程是：
+
+#### **第一步：浏览器发送请求（Request）**
+
+浏览器向服务器发送类似这样的请求：
+
+```
+GET /index.html HTTP/1.1
+Host: www.example.com
+```
+
+!!! note "这相当于在说："
+
+    “你好服务器，我想要你网站根目录下的 index.html 页面。”
+
+### 
