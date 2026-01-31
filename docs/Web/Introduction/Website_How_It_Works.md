@@ -51,7 +51,7 @@ https://docs.qsnctf.com
 
 浏览器向服务器发送类似这样的请求：
 
-```
+```vbnet
 GET /index.html HTTP/1.1
 Host: www.example.com
 ```
@@ -64,7 +64,7 @@ Host: www.example.com
 
 服务器会返回类似：
 
-```
+```php+HTML
 HTTP/1.1 200 OK
 Content-Type: text/html
 
@@ -205,7 +205,7 @@ Web 服务器就像**网站门口的保安**：
 
 如果你**直接打开 HTML 文件**（不用浏览器），你会看到类似这样：
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -283,20 +283,15 @@ Web 服务器就像**网站门口的保安**：
 
 ## 九、总结
 
-```
-你输入网址
-      ↓
-DNS 找到服务器
-      ↓
-浏览器发送 HTTP 请求
-      ↓
-Nginx/Apache 处理
-      ↓
-服务器返回 HTML
-      ↓
-浏览器解析 HTML + CSS + JS
-      ↓
-渲染页面
-      ↓
-你看到网站 🎉
+```Mermaid
+flowchart TD
+A[用户输入网址] --> B[DNS 解析域名]
+B --> C[获得服务器 IP]
+C --> D[浏览器发送 HTTP/HTTPS 请求]
+D --> E[Nginx / Apache 处理请求]
+E --> F[后端服务器执行业务]
+F --> G[服务器返回 HTML + 资源]
+G --> H[浏览器解析 HTML/CSS/JS]
+H --> I[构建 DOM → 渲染树 → 布局 → 绘制]
+I --> J[用户看到网页]
 ```
