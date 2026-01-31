@@ -250,7 +250,7 @@ nav:
   - Web: 
     - 介绍: Web/index.md
     - 基础知识:
-      - 网站是如何工作的？ : Web/Introduction/Website_How_It_Works.md
+      - 网站的工作原理 : Web/Introduction/Website_How_It_Works.md
       - 网站的状态管理: Web/Introduction/Website_Status_Management.md
     - Web基础漏洞:
       - 跨站脚本攻击(XSS):
