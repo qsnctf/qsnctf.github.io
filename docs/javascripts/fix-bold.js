@@ -113,3 +113,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }, interval);
 });
 
+/* ======================================================
+   修复 Markmap Base64 中文解码错误（必加）
+   Fix: InvalidCharacterError: Failed to execute 'atob'
+   ====================================================== */
+
+(function patchMarkmapDecoder() {
+  const originalAtob = window.atob;
+
+  window.atob = function (str) {
+    try {
+      return originalAtob(str);
+    } catch (e) {
+      if (e instanceof DOMException || e.name === "InvalidCharacterError") {
+        console.warn("🔧 Markmap Base64 UTF-8 修复已启用");
+
+        // 关键修复：UTF-8 安全解码
+        const binary = Uint8Array.from(
+          atob(str.replace(/-/g, "+").replace(/_/g, "/")),
+          c => c.charCodeAt(0)
+        );
+
+        const decoder = new TextDecoder("utf-8");
+        return decoder.decode(binary);
+      }
+      throw e;
+    }
+  };
+})();
