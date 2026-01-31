@@ -252,6 +252,10 @@ nav:
     - 基础知识:
       - 网站是如何工作的？ : Web/Introduction/Website_How_It_Works.md
       - 网站的状态管理: Web/Introduction/Website_Status_Management.md
+    - Web基础漏洞:
+      - 跨站脚本攻击(XSS):
+        - XSS原理: Web/Web_Security_Basic_Vulnerabilities/Cross_Site_Scripting.md
+        - XSS-LAB: Web/Web_Security_Basic_Vulnerabilities/XSS_LAB/XSS_LAB.md
   - Reverse: 
     - 介绍: Reverse/index.md
   - Pwn: 
