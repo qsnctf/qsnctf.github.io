@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.qsnctf.com/basic/intro/">
+        <link rel="canonical" href="https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/Introd_RSA/">
       
       
-        <link rel="prev" href="../../Knowledge_Tree/">
+        <link rel="prev" href="../../../Graphic_Cryptography/">
       
       
-        <link rel="next" href="../history/">
+        <link rel="next" href="../../../../Web/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/logo.png">
+      <link rel="icon" href="../../../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>什么是 CTF - 青少年CTF文库</title>
+        <title>RSA介绍 - 青少年CTF文库</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,11 +53,11 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/markmap.css">
+      <link rel="stylesheet" href="../../../../stylesheets/markmap.css">
     
-      <link rel="stylesheet" href="../../stylesheets/main.css">
+      <link rel="stylesheet" href="../../../../stylesheets/main.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#什么是ctf" class="md-skip">
+        <a href="#1-rsa的历史" class="md-skip">
           跳转至
         </a>
       
@@ -96,9 +96,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="青少年CTF文库" class="md-header__button md-logo" aria-label="青少年CTF文库" data-md-component="logo">
+    <a href="../../../.." title="青少年CTF文库" class="md-header__button md-logo" aria-label="青少年CTF文库" data-md-component="logo">
       
-  <img src="../../assets/logo.png" alt="logo">
+  <img src="../../../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              什么是 CTF
+              RSA介绍
             
           </span>
         </div>
@@ -233,7 +233,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
   
@@ -254,7 +254,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../home/" class="md-tabs__link">
+        <a href="../../../../home/" class="md-tabs__link">
           
   
   
@@ -272,13 +272,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../basic/intro/" class="md-tabs__link">
           
   
   
@@ -300,7 +298,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Code/" class="md-tabs__link">
+        <a href="../../../../Code/" class="md-tabs__link">
           
   
   
@@ -322,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Misc/" class="md-tabs__link">
+        <a href="../../../../Misc/" class="md-tabs__link">
           
   
   
@@ -340,11 +338,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Crypto/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
           
   
   
@@ -366,7 +366,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Web/" class="md-tabs__link">
+        <a href="../../../../Web/" class="md-tabs__link">
           
   
   
@@ -388,7 +388,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Reverse/" class="md-tabs__link">
+        <a href="../../../../Reverse/" class="md-tabs__link">
           
   
   
@@ -410,7 +410,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Pwn/" class="md-tabs__link">
+        <a href="../../../../Pwn/" class="md-tabs__link">
           
   
   
@@ -432,7 +432,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../AI/" class="md-tabs__link">
+        <a href="../../../../AI/" class="md-tabs__link">
           
   
   
@@ -454,7 +454,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Tools/" class="md-tabs__link">
+        <a href="../../../../Tools/" class="md-tabs__link">
           
   
   
@@ -476,7 +476,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/" class="md-tabs__link">
+        <a href="../../../../about/" class="md-tabs__link">
           
   
   
@@ -512,9 +512,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="青少年CTF文库" class="md-nav__button md-logo" aria-label="青少年CTF文库" data-md-component="logo">
+    <a href="../../../.." title="青少年CTF文库" class="md-nav__button md-logo" aria-label="青少年CTF文库" data-md-component="logo">
       
-  <img src="../../assets/logo.png" alt="logo">
+  <img src="../../../../assets/logo.png" alt="logo">
 
     </a>
     青少年CTF文库
@@ -541,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -624,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/" class="md-nav__link">
+      <a href="../../../../home/" class="md-nav__link">
         
   
   
@@ -652,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Knowledge_Tree/" class="md-nav__link">
+      <a href="../../../../Knowledge_Tree/" class="md-nav__link">
         
   
   
@@ -684,10 +684,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -705,20 +703,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -736,7 +731,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -751,37 +746,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    什么是 CTF
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../basic/intro/" class="md-nav__link">
         
   
   
@@ -797,204 +765,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ctf的介绍" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CTF的介绍
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#旗子是什么" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        旗子是什么？
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ctf-有哪些比赛形式" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CTF 有哪些比赛形式？
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="CTF 有哪些比赛形式？">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jeopardy解题赛" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Jeopardy（解题赛）
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Jeopardy（解题赛）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-一血--二血--三血first-blood-系统" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🩸 一血 / 二血 / 三血（First Blood 系统）
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-降分机制动态分值" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📉 降分机制（动态分值）
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jeopardy-题目主要类别" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📚Jeopardy 题目主要类别
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#awd攻防对抗-attack--defense" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        AWD（攻防对抗 Attack &amp; Defense）
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AWD（攻防对抗 Attack &amp; Defense）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#attack--defense-基本规则" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Attack &amp; Defense 基本规则
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#网络环境" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        网络环境
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="网络环境">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#拓扑结构1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        拓扑结构1
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#拓扑结构2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        拓扑结构2
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#拓扑结构3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        拓扑结构3
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#拓扑结构4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        拓扑结构4
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1007,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../history/" class="md-nav__link">
+      <a href="../../../../basic/history/" class="md-nav__link">
         
   
   
@@ -1035,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../practice/" class="md-nav__link">
+      <a href="../../../../basic/practice/" class="md-nav__link">
         
   
   
@@ -1119,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../How_does_a_computer_work/" class="md-nav__link">
+      <a href="../../../../basic/How_does_a_computer_work/" class="md-nav__link">
         
   
   
@@ -1147,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../operating_system/" class="md-nav__link">
+      <a href="../../../../basic/operating_system/" class="md-nav__link">
         
   
   
@@ -1239,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network/intro/" class="md-nav__link">
+      <a href="../../../../basic/network/intro/" class="md-nav__link">
         
   
   
@@ -1267,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network/osi/" class="md-nav__link">
+      <a href="../../../../basic/network/osi/" class="md-nav__link">
         
   
   
@@ -1339,7 +1109,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Code/" class="md-nav__link ">
+            <a href="../../../../Code/" class="md-nav__link ">
               
   
   
@@ -1441,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Assembly/instruction_set/" class="md-nav__link">
+      <a href="../../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -1469,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Assembly/register/" class="md-nav__link">
+      <a href="../../../../Code/Assembly/register/" class="md-nav__link">
         
   
   
@@ -1497,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Assembly/stack_operation/" class="md-nav__link">
+      <a href="../../../../Code/Assembly/stack_operation/" class="md-nav__link">
         
   
   
@@ -1599,7 +1369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/CPP/cpp-tutorial/" class="md-nav__link">
+      <a href="../../../../Code/CPP/cpp-tutorial/" class="md-nav__link">
         
   
   
@@ -1627,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/CPP/cpp-basic-syntax/" class="md-nav__link">
+      <a href="../../../../Code/CPP/cpp-basic-syntax/" class="md-nav__link">
         
   
   
@@ -1655,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/CPP/cpp-comments/" class="md-nav__link">
+      <a href="../../../../Code/CPP/cpp-comments/" class="md-nav__link">
         
   
   
@@ -1683,7 +1453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/CPP/cpp-data-types/" class="md-nav__link">
+      <a href="../../../../Code/CPP/cpp-data-types/" class="md-nav__link">
         
   
   
@@ -1711,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/CPP/cpp-variable-types/" class="md-nav__link">
+      <a href="../../../../Code/CPP/cpp-variable-types/" class="md-nav__link">
         
   
   
@@ -1739,7 +1509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/CPP/cpp-variable-scope/" class="md-nav__link">
+      <a href="../../../../Code/CPP/cpp-variable-scope/" class="md-nav__link">
         
   
   
@@ -1767,7 +1537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/CPP/cpp-constants-literals/" class="md-nav__link">
+      <a href="../../../../Code/CPP/cpp-constants-literals/" class="md-nav__link">
         
   
   
@@ -1905,7 +1675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Intro/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Intro/" class="md-nav__link">
         
   
   
@@ -1933,7 +1703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Basic_Syntax/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Basic_Syntax/" class="md-nav__link">
         
   
   
@@ -1961,7 +1731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Data_Type/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Data_Type/" class="md-nav__link">
         
   
   
@@ -1989,7 +1759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Type_Conversion/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Type_Conversion/" class="md-nav__link">
         
   
   
@@ -2017,7 +1787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Comment/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Comment/" class="md-nav__link">
         
   
   
@@ -2045,7 +1815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Basic_Operators/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Basic_Operators/" class="md-nav__link">
         
   
   
@@ -2073,7 +1843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Conditional_Statements/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Conditional_Statements/" class="md-nav__link">
         
   
   
@@ -2101,7 +1871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Loop/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Loop/" class="md-nav__link">
         
   
   
@@ -2129,7 +1899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Comprehensions/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Comprehensions/" class="md-nav__link">
         
   
   
@@ -2157,7 +1927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Iterator-Generator/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Iterator-Generator/" class="md-nav__link">
         
   
   
@@ -2185,7 +1955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_With/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_With/" class="md-nav__link">
         
   
   
@@ -2213,7 +1983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Functions/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Functions/" class="md-nav__link">
         
   
   
@@ -2241,7 +2011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_lambda/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_lambda/" class="md-nav__link">
         
   
   
@@ -2269,7 +2039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Decorators/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Decorators/" class="md-nav__link">
         
   
   
@@ -2297,7 +2067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Data_Structure/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Data_Structure/" class="md-nav__link">
         
   
   
@@ -2325,7 +2095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_module/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_module/" class="md-nav__link">
         
   
   
@@ -2353,7 +2123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Internal_Variable/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Internal_Variable/" class="md-nav__link">
         
   
   
@@ -2381,7 +2151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_File/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_File/" class="md-nav__link">
         
   
   
@@ -2409,7 +2179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_OS/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_OS/" class="md-nav__link">
         
   
   
@@ -2437,7 +2207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Errors_Execptions/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Errors_Execptions/" class="md-nav__link">
         
   
   
@@ -2465,7 +2235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Class/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Class/" class="md-nav__link">
         
   
   
@@ -2493,7 +2263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Namespace_Scope/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Namespace_Scope/" class="md-nav__link">
         
   
   
@@ -2521,7 +2291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Venv/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Venv/" class="md-nav__link">
         
   
   
@@ -2549,7 +2319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_stdlib/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_stdlib/" class="md-nav__link">
         
   
   
@@ -2577,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/Python/Python_Type_Hints/" class="md-nav__link">
+      <a href="../../../../Code/Python/Python_Type_Hints/" class="md-nav__link">
         
   
   
@@ -2613,7 +2383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Code/PHP/" class="md-nav__link">
+      <a href="../../../../Code/PHP/" class="md-nav__link">
         
   
   
@@ -2677,7 +2447,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Misc/" class="md-nav__link ">
+            <a href="../../../../Misc/" class="md-nav__link ">
               
   
   
@@ -2779,7 +2549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/encoding/ASCII/" class="md-nav__link">
+      <a href="../../../../Misc/encoding/ASCII/" class="md-nav__link">
         
   
   
@@ -2807,7 +2577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/encoding/Hex/" class="md-nav__link">
+      <a href="../../../../Misc/encoding/Hex/" class="md-nav__link">
         
   
   
@@ -2895,7 +2665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/encoding/Base/Base64/" class="md-nav__link">
+      <a href="../../../../Misc/encoding/Base/Base64/" class="md-nav__link">
         
   
   
@@ -2923,7 +2693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/encoding/Base/Base32/" class="md-nav__link">
+      <a href="../../../../Misc/encoding/Base/Base32/" class="md-nav__link">
         
   
   
@@ -2951,7 +2721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/encoding/Base/Base36/" class="md-nav__link">
+      <a href="../../../../Misc/encoding/Base/Base36/" class="md-nav__link">
         
   
   
@@ -2979,7 +2749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/encoding/Base/Base58/" class="md-nav__link">
+      <a href="../../../../Misc/encoding/Base/Base58/" class="md-nav__link">
         
   
   
@@ -3141,7 +2911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/File_Structure/File_Structure/PNG_Structure/" class="md-nav__link">
+      <a href="../../../../Misc/File_Structure/File_Structure/PNG_Structure/" class="md-nav__link">
         
   
   
@@ -3169,7 +2939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/File_Structure/File_Structure/JPG_Structure/" class="md-nav__link">
+      <a href="../../../../Misc/File_Structure/File_Structure/JPG_Structure/" class="md-nav__link">
         
   
   
@@ -3197,7 +2967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/File_Structure/File_Structure/ZIP_Structure/" class="md-nav__link">
+      <a href="../../../../Misc/File_Structure/File_Structure/ZIP_Structure/" class="md-nav__link">
         
   
   
@@ -3225,7 +2995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/File_Structure/File_Structure/GIF_Structure/" class="md-nav__link">
+      <a href="../../../../Misc/File_Structure/File_Structure/GIF_Structure/" class="md-nav__link">
         
   
   
@@ -3253,7 +3023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/File_Structure/File_Structure/WAV_Structure/" class="md-nav__link">
+      <a href="../../../../Misc/File_Structure/File_Structure/WAV_Structure/" class="md-nav__link">
         
   
   
@@ -3281,7 +3051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/File_Structure/File_Structure/MP3_Structure/" class="md-nav__link">
+      <a href="../../../../Misc/File_Structure/File_Structure/MP3_Structure/" class="md-nav__link">
         
   
   
@@ -3383,7 +3153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/File_Repair/PNG_Repair/" class="md-nav__link">
+      <a href="../../../../Misc/File_Repair/PNG_Repair/" class="md-nav__link">
         
   
   
@@ -3411,7 +3181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/File_Repair/JPG_Repair/" class="md-nav__link">
+      <a href="../../../../Misc/File_Repair/JPG_Repair/" class="md-nav__link">
         
   
   
@@ -3439,7 +3209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/File_Repair/ZIP_Repair/" class="md-nav__link">
+      <a href="../../../../Misc/File_Repair/ZIP_Repair/" class="md-nav__link">
         
   
   
@@ -3535,7 +3305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/Steganography/PNG_Steganography/" class="md-nav__link">
+      <a href="../../../../Misc/Steganography/PNG_Steganography/" class="md-nav__link">
         
   
   
@@ -3563,7 +3333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/Steganography/JPG_Steganography/" class="md-nav__link">
+      <a href="../../../../Misc/Steganography/JPG_Steganography/" class="md-nav__link">
         
   
   
@@ -3591,7 +3361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/Steganography/BMP_Steganography/" class="md-nav__link">
+      <a href="../../../../Misc/Steganography/BMP_Steganography/" class="md-nav__link">
         
   
   
@@ -3619,7 +3389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/Steganography/WAV_Steganography/" class="md-nav__link">
+      <a href="../../../../Misc/Steganography/WAV_Steganography/" class="md-nav__link">
         
   
   
@@ -3659,6 +3429,8 @@
       
   
   
+    
+  
   
   
     
@@ -3678,18 +3450,21 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Crypto/" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   
@@ -3707,13 +3482,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3847,7 +3622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Crypto/Classical_Cryptography/Single_Table_Replacement/Caesar/" class="md-nav__link">
+      <a href="../../../Classical_Cryptography/Single_Table_Replacement/Caesar/" class="md-nav__link">
         
   
   
@@ -3875,7 +3650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Crypto/Classical_Cryptography/Single_Table_Replacement/Atbash/" class="md-nav__link">
+      <a href="../../../Classical_Cryptography/Single_Table_Replacement/Atbash/" class="md-nav__link">
         
   
   
@@ -3969,7 +3744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Crypto/Classical_Cryptography/Multi_table_replacement/Playfair/" class="md-nav__link">
+      <a href="../../../Classical_Cryptography/Multi_table_replacement/Playfair/" class="md-nav__link">
         
   
   
@@ -3997,7 +3772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Crypto/Classical_Cryptography/Multi_table_replacement/HILL/" class="md-nav__link">
+      <a href="../../../Classical_Cryptography/Multi_table_replacement/HILL/" class="md-nav__link">
         
   
   
@@ -4025,7 +3800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Crypto/Classical_Cryptography/Multi_table_replacement/Vigen/" class="md-nav__link">
+      <a href="../../../Classical_Cryptography/Multi_table_replacement/Vigen/" class="md-nav__link">
         
   
   
@@ -4115,7 +3890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Crypto/Other_Cryptography/Baconian/" class="md-nav__link">
+      <a href="../../../Other_Cryptography/Baconian/" class="md-nav__link">
         
   
   
@@ -4180,7 +3955,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Crypto/Graphic_Cryptography/" class="md-nav__link ">
+            <a href="../../../Graphic_Cryptography/" class="md-nav__link ">
               
   
   
@@ -4224,8 +3999,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -4238,11 +4015,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" checked>
         
           
           <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
@@ -4263,7 +4040,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4278,10 +4055,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Crypto/Modern_Cryptography/asymmetric/Introd_RSA/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RSA介绍
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -4297,6 +4099,495 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-rsa的历史" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. RSA的历史
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-基本原理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 基本原理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-公钥与私钥的产生" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 公钥与私钥的产生
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 公钥与私钥的产生">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#步骤-1选择素数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 1：选择素数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#步骤-2计算模数-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 2：计算模数 \(n\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#步骤-3计算卡迈克尔函数-lambdan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 3：计算卡迈克尔函数 \(\lambda(n)\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#步骤-4选择公钥指数-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 4：选择公钥指数 \(e\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#步骤-5计算私钥指数-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 5：计算私钥指数 \(d\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#关于欧拉函数与卡迈克尔函数的区别" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关于欧拉函数与卡迈克尔函数的区别
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#密钥生成方向的历史变化" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        密钥生成方向的历史变化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4关键分发" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.关键分发
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-消息加密" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 消息加密
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-消息解密" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 消息解密
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-正确性证明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 正确性证明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 正确性证明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#一基于费马小定理的证明接近原始-rsa-论文" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、基于费马小定理的证明（接近原始 RSA 论文）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、基于费马小定理的证明（接近原始 RSA 论文）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#数学基础" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数学基础
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#关键思路逐模证明--中国剩余定理思想" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键思路：逐模证明 + 中国剩余定理思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#对模-p-的证明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对模 \(p\) 的证明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对模 \(p\) 的证明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#情况-1m-equiv-0-pmodp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        情况 1：\(m \equiv 0 \pmod{p}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#情况-2m-notequiv-0-pmodp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        情况 2：\(m \not\equiv 0 \pmod{p}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#对模-q-的证明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对模 \(q\) 的证明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#综合结论" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        综合结论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#重要注记" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要注记
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#二基于欧拉定理的证明现代标准版本" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、基于欧拉定理的证明（现代标准版本）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、基于欧拉定理的证明（现代标准版本）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#数学基础欧拉定理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数学基础：欧拉定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#证明过程" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        证明过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#更一般的情形使用卡迈克尔函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更一般的情形：使用卡迈克尔函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#当-m-与-n-不互质时怎么办" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        当 \(m\) 与 \(n\) 不互质时怎么办？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#步骤操作" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤操作
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#示例1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="示例1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-密钥生成步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 密钥生成步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-加密演示" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 加密演示
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-解密演示" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 解密演示
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#示例2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#基于中国剩余定理crt的加速" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基于中国剩余定理（CRT）的加速
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rsa数字签名" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSA数字签名
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RSA数字签名">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#签名" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        签名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#验证" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#为什么必须先做哈希" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么必须先做哈希？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4345,7 +4636,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Web/" class="md-nav__link ">
+            <a href="../../../../Web/" class="md-nav__link ">
               
   
   
@@ -4412,7 +4703,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Reverse/" class="md-nav__link ">
+            <a href="../../../../Reverse/" class="md-nav__link ">
               
   
   
@@ -4479,7 +4770,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Pwn/" class="md-nav__link ">
+            <a href="../../../../Pwn/" class="md-nav__link ">
               
   
   
@@ -4552,7 +4843,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AI/" class="md-nav__link ">
+            <a href="../../../../AI/" class="md-nav__link ">
               
   
   
@@ -4596,7 +4887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/Environmental/Environmental_preparation/" class="md-nav__link">
+      <a href="../../../../AI/Environmental/Environmental_preparation/" class="md-nav__link">
         
   
   
@@ -4624,7 +4915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/Basic/Basic_knowledge/" class="md-nav__link">
+      <a href="../../../../AI/Basic/Basic_knowledge/" class="md-nav__link">
         
   
   
@@ -4652,7 +4943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/Basic/Basic_knowledge_2/" class="md-nav__link">
+      <a href="../../../../AI/Basic/Basic_knowledge_2/" class="md-nav__link">
         
   
   
@@ -4710,7 +5001,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Tools/" class="md-nav__link ">
+            <a href="../../../../Tools/" class="md-nav__link ">
               
   
   
@@ -4808,7 +5099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/encoding/CyberChef/" class="md-nav__link">
+      <a href="../../../../Tools/encoding/CyberChef/" class="md-nav__link">
         
   
   
@@ -4905,7 +5196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../../../about/" class="md-nav__link">
         
   
   
@@ -4950,8 +5241,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4960,10 +5249,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ctf的介绍" class="md-nav__link">
+  <a href="#1-rsa的历史" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CTF的介绍
+        1. RSA的历史
       
     </span>
   </a>
@@ -4971,10 +5260,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#旗子是什么" class="md-nav__link">
+  <a href="#2-基本原理" class="md-nav__link">
     <span class="md-ellipsis">
       
-        旗子是什么？
+        2. 基本原理
       
     </span>
   </a>
@@ -4982,34 +5271,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ctf-有哪些比赛形式" class="md-nav__link">
+  <a href="#3-公钥与私钥的产生" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CTF 有哪些比赛形式？
+        3. 公钥与私钥的产生
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="CTF 有哪些比赛形式？">
+    <nav class="md-nav" aria-label="3. 公钥与私钥的产生">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#jeopardy解题赛" class="md-nav__link">
+  <a href="#步骤-1选择素数" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Jeopardy（解题赛）
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Jeopardy（解题赛）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-一血--二血--三血first-blood-系统" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🩸 一血 / 二血 / 三血（First Blood 系统）
+        步骤 1：选择素数
       
     </span>
   </a>
@@ -5017,10 +5294,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-降分机制动态分值" class="md-nav__link">
+  <a href="#步骤-2计算模数-n" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📉 降分机制（动态分值）
+        步骤 2：计算模数 \(n\)
       
     </span>
   </a>
@@ -5028,10 +5305,172 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#jeopardy-题目主要类别" class="md-nav__link">
+  <a href="#步骤-3计算卡迈克尔函数-lambdan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚Jeopardy 题目主要类别
+        步骤 3：计算卡迈克尔函数 \(\lambda(n)\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#步骤-4选择公钥指数-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 4：选择公钥指数 \(e\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#步骤-5计算私钥指数-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 5：计算私钥指数 \(d\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#关于欧拉函数与卡迈克尔函数的区别" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关于欧拉函数与卡迈克尔函数的区别
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#密钥生成方向的历史变化" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        密钥生成方向的历史变化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4关键分发" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.关键分发
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-消息加密" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 消息加密
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-消息解密" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 消息解密
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-正确性证明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 正确性证明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 正确性证明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#一基于费马小定理的证明接近原始-rsa-论文" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、基于费马小定理的证明（接近原始 RSA 论文）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、基于费马小定理的证明（接近原始 RSA 论文）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#数学基础" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数学基础
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#关键思路逐模证明--中国剩余定理思想" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键思路：逐模证明 + 中国剩余定理思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#对模-p-的证明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对模 \(p\) 的证明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对模 \(p\) 的证明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#情况-1m-equiv-0-pmodp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        情况 1：\(m \equiv 0 \pmod{p}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#情况-2m-notequiv-0-pmodp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        情况 2：\(m \not\equiv 0 \pmod{p}\)
       
     </span>
   </a>
@@ -5044,22 +5483,60 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#awd攻防对抗-attack--defense" class="md-nav__link">
+  <a href="#对模-q-的证明" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AWD（攻防对抗 Attack &amp; Defense）
+        对模 \(q\) 的证明
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="AWD（攻防对抗 Attack &amp; Defense）">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#综合结论" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        综合结论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#重要注记" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要注记
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#二基于欧拉定理的证明现代标准版本" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、基于欧拉定理的证明（现代标准版本）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、基于欧拉定理的证明（现代标准版本）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#attack--defense-基本规则" class="md-nav__link">
+  <a href="#数学基础欧拉定理" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Attack &amp; Defense 基本规则
+        数学基础：欧拉定理
       
     </span>
   </a>
@@ -5067,22 +5544,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#网络环境" class="md-nav__link">
+  <a href="#证明过程" class="md-nav__link">
     <span class="md-ellipsis">
       
-        网络环境
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="网络环境">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#拓扑结构1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        拓扑结构1
+        证明过程
       
     </span>
   </a>
@@ -5090,10 +5555,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#拓扑结构2" class="md-nav__link">
+  <a href="#更一般的情形使用卡迈克尔函数" class="md-nav__link">
     <span class="md-ellipsis">
       
-        拓扑结构2
+        更一般的情形：使用卡迈克尔函数
       
     </span>
   </a>
@@ -5101,21 +5566,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#拓扑结构3" class="md-nav__link">
+  <a href="#当-m-与-n-不互质时怎么办" class="md-nav__link">
     <span class="md-ellipsis">
       
-        拓扑结构3
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#拓扑结构4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        拓扑结构4
+        当 \(m\) 与 \(n\) 不互质时怎么办？
       
     </span>
   </a>
@@ -5129,6 +5583,134 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#步骤操作" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤操作
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#示例1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="示例1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-密钥生成步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 密钥生成步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-加密演示" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 加密演示
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-解密演示" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 解密演示
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#示例2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#基于中国剩余定理crt的加速" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基于中国剩余定理（CRT）的加速
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rsa数字签名" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSA数字签名
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RSA数字签名">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#签名" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        签名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#验证" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#为什么必须先做哈希" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么必须先做哈希？
+      
+    </span>
+  </a>
   
 </li>
         
@@ -5162,7 +5744,7 @@
   
   
     <li class="md-path__item">
-      <a href="../.." class="md-path__link">
+      <a href="../../../.." class="md-path__link">
         
   <span class="md-ellipsis">
     首页
@@ -5180,10 +5762,28 @@
     
     
       <li class="md-path__item">
+        <a href="../../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Crypto
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
         <a href="./" class="md-path__link">
           
   <span class="md-ellipsis">
-    基础知识
+    现代密码
   </span>
 
         </a>
@@ -5202,7 +5802,7 @@
 
 
   
-    <a href="https://github.com/qsnctf/qsnctf.github.io/edit/docs/docs/basic/intro.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/qsnctf/qsnctf.github.io/edit/docs/docs/Crypto/Modern_Cryptography/asymmetric/Introd_RSA.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -5211,105 +5811,531 @@
     
       
     
-    <a href="https://github.com/qsnctf/qsnctf.github.io/raw/docs/docs/basic/intro.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/qsnctf/qsnctf.github.io/raw/docs/docs/Crypto/Modern_Cryptography/asymmetric/Introd_RSA.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="什么是ctf">什么是CTF？<a class="headerlink" href="#什么是ctf" title="Permanent link">¶</a></h1>
-<h2 id="ctf的介绍">CTF的介绍<a class="headerlink" href="#ctf的介绍" title="Permanent link">¶</a></h2>
-<p><img alt="" src="../attachments/image-20251129233528182.png"/></p>
-<p><strong>CTF（Capture The Flag）中文叫“夺旗赛”</strong>，是一种模拟真实网络攻防场景的竞赛形式。
- 参赛者通过分析、逆向、破解、构造 payload、发现漏洞等方式来“夺取”目标系统中的 <strong>Flag（旗子）</strong>，以此得分。它是目前全世界最流行的 <strong>网络安全技术竞赛形式</strong>。</p>
-<p>比赛中，主办方会将一个特定的字符串、文件或代码片段（即“Flag”，旗子）秘密地隐藏在预先设置好漏洞的系统、程序或网站中。参赛队伍需要运用专业的安全知识和技术，通过解密、分析、渗透等方式找到这个“旗子”并提交给裁判系统，从而得分。</p>
-<p>CTF 比赛不仅考验选手的个人技术水平，也强调团队合作、临场应变和压力下的快速学习能力。</p>
-<h2 id="旗子是什么">旗子是什么？<a class="headerlink" href="#旗子是什么" title="Permanent link">¶</a></h2>
-<p>Flag 是一个“隐藏的秘密字符串”，通常形如：</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>flag{S0m3_RanD0m_Str1nG}
-</code></pre></div>
-<p>当你成功利用漏洞、解密算法或逆向程序后，就能从系统中拿到这个字符串，这表示：</p>
-<p>✔ 你成功突破了题目的安全防护</p>
-<p>✔ 你完成了挑战</p>
-<p>✔ 你获得了得分</p>
-<h2 id="ctf-有哪些比赛形式">CTF 有哪些比赛形式？<a class="headerlink" href="#ctf-有哪些比赛形式" title="Permanent link">¶</a></h2>
-<h3 id="jeopardy解题赛">Jeopardy（解题赛）<a class="headerlink" href="#jeopardy解题赛" title="Permanent link">¶</a></h3>
-<p>解题模式（Jeopardy）常见于线上选拔比赛。在解题模式 CTF 赛制中，参赛队伍可以通过互联网或现场网络参与，通过与在线环境交互或对题目文件进行离线分析，解决网络安全技术挑战并获取相应分值。</p>
-<p>这种模式类似于 <strong>ACM 编程竞赛</strong> 或 <strong>信息学奥林匹克竞赛</strong>，根据 <strong>总分与解题时间</strong> 来排名。</p>
-<p>简单地说就是，每道题独立解题 → 拿到 Flag → 得分。</p>
-<h4 id="-一血--二血--三血first-blood-系统">🩸 一血 / 二血 / 三血（First Blood 系统）<a class="headerlink" href="#-一血--二血--三血first-blood-系统" title="Permanent link">¶</a></h4>
-<p>解题模式下通常会设置：</p>
+  <h1>RSA介绍</h1>
+
+<p>RSA 是一种基于数论的**非对称公钥密码算法**，可同时用于**加密**和**数字签名**，是现代密码学和互联网安全基础设施（如 TLS/SSL、HTTPS、PKI）的核心算法之一。其安全性建立在**大整数分解困难性**之上，即：将两个大素数相乘很容易，但反过来从其乘积还原出原始素数在计算上极其困难。</p>
+<p>“RSA”这一名称取自三位发明者姓氏的首字母：<strong>Rivest、Shamir、Adleman</strong>。</p>
+<h2 id="1-rsa的历史">1. RSA的历史<a class="headerlink" href="#1-rsa的历史" title="Permanent link">¶</a></h2>
+<p>1976 年，美国密码学家**惠特菲尔德·迪菲（Whitfield Diffie）**和**马丁·赫尔曼（Martin Hellman）**发表了开创性的论文，首次提出了**公钥密码（非对称密码）**的概念，打破了“通信双方必须事先共享秘密密钥”的传统范式。</p>
+<p>1977 年，麻省理工学院（MIT）的**罗纳德·李维斯特（Ron Rivest）**、**阿迪·萨莫尔（Adi Shamir）**和**伦纳德·阿德曼（Leonard Adleman）**共同提出了 RSA 算法。</p>
+<p>在此之前的一年多时间里，三人一直在寻找一个**易于正向计算但难以逆向求解的单向函数**，以实现真正的公钥加密与数字签名。他们尝试了多种数学构造，包括：</p>
 <ul>
-<li><strong>一血（First Blood）</strong></li>
-<li><strong>二血（Second Blood）</strong></li>
-<li><strong>三血（Third Blood）</strong></li>
+<li>基于背包问题的方案</li>
+<li>基于置换多项式的方法</li>
+<li>其他组合数学和数论构造</li>
 </ul>
-<p>即最先解出该题目的三支队伍会获得额外积分，用于鼓励快速且准确的解题能力。这也是团队整体实力的体现。</p>
-<h4 id="-降分机制动态分值">📉 降分机制（动态分值）<a class="headerlink" href="#-降分机制动态分值" title="Permanent link">¶</a></h4>
-<p>一些比赛采用所谓的 <strong>降分机制（Dynamic Score）</strong>：</p>
+<p>这些尝试均存在安全缺陷或可逆性问题，一度让他们怀疑目标是否可能实现。</p>
+<p>据三位发明者回忆，关键突破出现在 1977 年逾越节期间。里维斯特在失眠时重新思考问题，最终意识到**大整数分解**可作为单向陷门函数的基础，并在清晨完成了论文的大部分数学框架。随后，他们正式提出了现在广为人知的 <strong>RSA 算法</strong>。</p>
+<p>RSA 不仅支持加密，还天然支持**数字签名**，弥补了迪菲–赫尔曼体系中“缺乏可实现签名机制”的空白。</p>
+<p>值得注意的是，英国政府通信总部（GCHQ）的数学家**克利福德·科克斯（Clifford Cocks）*<em>早在 **1973 年**就在内部文件中独立提出了一种**与 RSA 等价的系统*</em>，同样基于大素数乘积与模幂运算。</p>
+<p>然而，由于：</p>
 <ul>
-<li>题目刚发布时具有较高初始分</li>
-<li>随着解出该题的队伍变多</li>
-<li>题目分值逐渐下降</li>
-<li>最终下降到一个最低保底分</li>
+<li>当时计算机性能有限</li>
+<li>实际部署成本极高</li>
+<li>工作属于高度机密</li>
 </ul>
-<p>这使得题目难度与得分更加平衡，也增加了比赛的策略性。</p>
-<h4 id="jeopardy-题目主要类别">📚Jeopardy 题目主要类别<a class="headerlink" href="#jeopardy-题目主要类别" title="Permanent link">¶</a></h4>
-<p>目前 CTF 解题模式主要包含 8 大类别：</p>
+<p>该方案主要被视为理论性成果，从未在公开系统中使用。科克斯的工作直到 **1997 年**才被解密并公之于众，此后才被历史正式承认为“RSA 的先行发现”。</p>
+<p>1997 年，研究人员提出了 <strong>Kid-RSA（KRSA）</strong>，这是一种**简化且不安全的教学版 RSA**，用于帮助学生理解：</p>
 <ul>
-<li><strong>Web</strong> — 网站与网络攻防</li>
-<li><strong>Reverse</strong> — 程序逆向分析</li>
-<li><strong>Pwn</strong> — 二进制漏洞利用</li>
-<li><strong>Crypto</strong> — 密码学攻击</li>
-<li><strong>Mobile</strong> — 移动安全</li>
-<li><strong>Misc</strong> — 其他杂项安全挑战（隐写、取证、奇怪题型等）</li>
-<li><strong>IOT</strong> — 物联网方向挑战</li>
-<li><strong>Osint</strong> — 开源情报方向挑战</li>
+<li>公钥与私钥的关系</li>
+<li>模幂运算</li>
+<li>欧拉函数</li>
+<li>大整数分解与安全性的关联</li>
 </ul>
-<h3 id="awd攻防对抗-attack--defense">AWD（攻防对抗  Attack &amp; Defense）<a class="headerlink" href="#awd攻防对抗-attack--defense" title="Permanent link">¶</a></h3>
-<p>攻防赛常见于 <strong>线下决赛</strong>，模式真实、激烈、节奏快。</p>
-<p>所有参赛队伍会获得一套相同的系统环境，通常称为：<code>gamebox</code>（靶机），每个 Gamebox 上运行多个带漏洞的服务。</p>
-<p><img alt="" src="../attachments/image-20251130001351652.png"/></p>
-<p>参赛队伍必须：</p>
+<p>Kid-RSA 在教育中的地位类似于密码学中的 <strong>Simplified DES（S-DES）</strong>：
+ 它**不适用于真实安全通信**，但非常适合课堂演示与实验教学。</p>
+<p>RSA 的提出具有里程碑意义：</p>
 <ul>
-<li><strong>攻击别人</strong> → 拿 Flag 得分</li>
-<li><strong>修补自己</strong> → 防止丢分</li>
+<li>奠定了现代互联网安全基础</li>
+<li>支撑了 HTTPS、电子签名、数字证书和 PKI</li>
+<li>推动了计算数论、复杂性理论和量子安全研究</li>
+<li>促进了密码学从“军事机密”走向公开学术领域</li>
 </ul>
-<p>攻防赛同时比拼：</p>
+<p>尽管量子计算的发展可能在未来威胁 RSA，但目前它仍是全球最重要的公钥密码算法之一。</p>
+<h2 id="2-基本原理">2. 基本原理<a class="headerlink" href="#2-基本原理" title="Permanent link">¶</a></h2>
+<p>RSA的安全性建立在**大整数分解的困难性**之上。</p>
 <ul>
-<li>漏洞挖掘能力</li>
-<li>实时防御能力</li>
-<li>团队协作</li>
+<li>将两个大素数相乘在计算上是非常容易的。</li>
+<li>但要将它们的乘积（极大的数）重新分解为原始的素数，在现有的计算能力下（对于足够长的密钥，如2048位）几乎是不可能的。</li>
 </ul>
-<p>团队之间互相攻防，一边修漏洞、一边攻击其他队伍。（参赛选手既是一个hacker，又是一个manager）</p>
+<h2 id="3-公钥与私钥的产生">3. 公钥与私钥的产生<a class="headerlink" href="#3-公钥与私钥的产生" title="Permanent link">¶</a></h2>
+<p>RSA 密钥由**公钥（n, e）**和**私钥 d**组成。</p>
+<h3 id="步骤-1选择素数"><strong>步骤 1：选择素数</strong><a class="headerlink" href="#步骤-1选择素数" title="Permanent link">¶</a></h3>
+<p>选择两个**大且互异的素数** <span class="arithmatex">\(p\)</span> 和 <span class="arithmatex">\(q\)</span>：</p>
+<ul>
+<li>在现代系统中，通常选择**每个约 1024 比特**的素数；</li>
+<li>这使得 <span class="arithmatex">\(n = pq\)</span> 约为 <strong>2048 比特</strong>（2048 位 RSA）；</li>
+<li><span class="arithmatex">\(p\)</span> 和 <span class="arithmatex">\(q\)</span> 必须**随机且独立**地从极大的素数空间中选取；</li>
+<li><strong><span class="arithmatex">\(p\)</span> 和 <span class="arithmatex">\(q\)</span> 必须严格保密。</strong></li>
+</ul>
+<hr/>
+<h3 id="步骤-2计算模数-n"><strong>步骤 2：计算模数 <span class="arithmatex">\(n\)</span></strong><a class="headerlink" href="#步骤-2计算模数-n" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[
+n = p \cdot q
+\]</div>
+<ul>
+<li><span class="arithmatex">\(n\)</span> 是**公钥和私钥的共同模数**；</li>
+<li><span class="arithmatex">\(n\)</span> 的比特长度通常被称为“RSA 密钥长度”；</li>
+<li><strong><span class="arithmatex">\(n\)</span> 会公开发布。</strong></li>
+</ul>
+<hr/>
+<h3 id="步骤-3计算卡迈克尔函数-lambdan"><strong>步骤 3：计算卡迈克尔函数 <span class="arithmatex">\(\lambda(n)\)</span></strong><a class="headerlink" href="#步骤-3计算卡迈克尔函数-lambdan" title="Permanent link">¶</a></h3>
+<p>令：
+$$
+\lambda(n) = \operatorname{lcm}(p-1,\, q-1)
+$$
+因为：</p>
+<ul>
+<li><span class="arithmatex">\(p, q\)</span> 为素数；</li>
+<li><span class="arithmatex">\(\lambda(p)=p-1,\ \lambda(q)=q-1\)</span>；</li>
+</ul>
+<p>所以：
+$$
+\lambda(n)=\operatorname{lcm}(p-1,q-1)
+$$
+可通过欧几里得算法计算，因为：
+$$
+\operatorname{lcm}(a,b)=\frac{|ab|}{\gcd(a,b)}
+$$
+<strong><span class="arithmatex">\(\lambda(n)\)</span> 必须保密。</strong></p>
+<hr/>
+<h3 id="步骤-4选择公钥指数-e"><strong>步骤 4：选择公钥指数 <span class="arithmatex">\(e\)</span></strong><a class="headerlink" href="#步骤-4选择公钥指数-e" title="Permanent link">¶</a></h3>
+<p>选择整数 <span class="arithmatex">\(e\)</span>，满足：
+$$
+1 &lt; e &lt; \lambda(n),\quad \gcd(e,\lambda(n)) = 1
+$$
+常见选择：</p>
+<ul>
+<li><strong>最常用：</strong> <span class="arithmatex">\(e = 2^{16}+1 = 65537\)</span></li>
+<li>优点：运算快、结构简单、安全性良好</li>
+<li>理论上最小可选值是 <span class="arithmatex">\(e=3\)</span>，但在不安全填充下可能导致攻击，因此**很少使用**。</li>
+</ul>
+<p><strong><span class="arithmatex">\(e\)</span> 会作为公钥的一部分公开。</strong></p>
+<hr/>
+<h3 id="步骤-5计算私钥指数-d"><strong>步骤 5：计算私钥指数 <span class="arithmatex">\(d\)</span></strong><a class="headerlink" href="#步骤-5计算私钥指数-d" title="Permanent link">¶</a></h3>
+<p>计算：
+$$
+d \equiv e^{-1} \pmod{\lambda(n)}
+$$
+即求解：
+$$
+de \equiv 1 \pmod{\lambda(n)}
+$$
+这等价于求解**贝祖等式**，可用**扩展欧几里得算法**高效计算。</p>
+<ul>
+<li><strong><span class="arithmatex">\(d\)</span> 必须严格保密。</strong></li>
+<li>一旦计算出 <span class="arithmatex">\(d\)</span>，在理论上可以丢弃 <span class="arithmatex">\(p,q,\lambda(n)\)</span>，但在高性能实现中通常保留它们。</li>
+</ul>
+<hr/>
+<h3 id="关于欧拉函数与卡迈克尔函数的区别"><strong>关于欧拉函数与卡迈克尔函数的区别</strong><a class="headerlink" href="#关于欧拉函数与卡迈克尔函数的区别" title="Permanent link">¶</a></h3>
+<p>原始 RSA 论文使用的是：
+$$
+\varphi(n) = (p-1)(q-1)
+$$
+而现代实现更倾向使用：
+$$
+\lambda(n)=\operatorname{lcm}(p-1,q-1)
+$$
+原因：</p>
+<ul>
+<li><span class="arithmatex">\(\lambda(n) \mid \varphi(n)\)</span>，因此两者都能工作；</li>
+<li>但用 <span class="arithmatex">\(\varphi(n)\)</span> 计算的 <span class="arithmatex">\(d\)</span> 可能比必要的大；</li>
+<li>一些标准（如 FIPS 186-4）要求 <span class="arithmatex">\(d &lt; \lambda(n)\)</span>。</li>
+</ul>
+<p>若得到过大的 <span class="arithmatex">\(d\)</span>，可简单取：
+$$
+d := d \bmod \lambda(n)
+$$
+即可修正。</p>
+<hr/>
+<h3 id="密钥生成方向的历史变化"><strong>密钥生成方向的历史变化</strong><a class="headerlink" href="#密钥生成方向的历史变化" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>原始 RSA（1977）：</strong>
+   先选 <span class="arithmatex">\(d\)</span>，再计算 <span class="arithmatex">\(e\)</span>。</li>
+<li><strong>现代实现（如 <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/PKCS/issues/1" title="GitHub Issue: squidfunk/PKCS #1">PKCS#1</a>）：</strong>
+   先选固定小 <span class="arithmatex">\(e\)</span>，再计算 <span class="arithmatex">\(d\)</span>。</li>
+</ul>
+<p>原因：</p>
+<ul>
+<li>小而固定的 <span class="arithmatex">\(e\)</span> 让**公钥运算更快**；</li>
+<li><span class="arithmatex">\(d\)</span> 仍足够大，<strong>不损害安全性</strong>。</li>
+</ul>
+<h2 id="4关键分发">4.关键分发<a class="headerlink" href="#4关键分发" title="Permanent link">¶</a></h2>
+<p>设 Alice（接收方）和 Bob（发送方）使用 RSA：</p>
+<ul>
+<li>Alice 公开：<strong>公钥 <span class="arithmatex">\((n,e)\)</span></strong></li>
+<li>Alice 私有：<strong>私钥 <span class="arithmatex">\(d\)</span></strong></li>
+<li>Bob 需要 Alice 的公钥才能加密或验证签名；</li>
+<li><strong>私钥永远不能被分发。</strong></li>
+</ul>
+<p>公钥可通过**公开但可信的渠道**传输，如数字证书、PKI 或 CA。</p>
+<h2 id="5-消息加密">5. 消息加密<a class="headerlink" href="#5-消息加密" title="Permanent link">¶</a></h2>
+<p>Bob 想发送消息 <span class="arithmatex">\(M\)</span> 给 Alice：</p>
+<ol>
+<li>
+<p>先用**填充方案**（如 OAEP）将 <span class="arithmatex">\(M\)</span> 转换为整数 <span class="arithmatex">\(m\)</span>，满足：
+   $$
+   0 \le m &lt; n
+   $$</p>
+</li>
+<li>
+<p>计算密文：
+   $$
+   c \equiv m^e \pmod n
+   $$</p>
+</li>
+<li>
+<p>将 <span class="arithmatex">\(c\)</span> 发送给 Alice。</p>
+</li>
+</ol>
+<p>此运算可用**快速模幂算法（平方乘算法）**高效完成。</p>
 <blockquote>
-<p>一般情况下，主办方会提供网线，但并不会提供网线转接口，对于部分使用没有 RJ45 网口的笔记本设备的选手而言，其通常需要自行准备转换器。</p>
+<p>说明：理论上存在少量固定点 <span class="arithmatex">\(m\)</span> 使得 <span class="arithmatex">\(m^e \equiv m \pmod n\)</span>，但在正确填充下几乎不会影响安全性。</p>
 </blockquote>
-<h4 id="attack--defense-基本规则">Attack &amp; Defense 基本规则<a class="headerlink" href="#attack--defense-基本规则" title="Permanent link">¶</a></h4>
-<p><img alt="" src="../attachments/image-20251130001412807.png"/></p>
+<h2 id="6-消息解密">6. 消息解密<a class="headerlink" href="#6-消息解密" title="Permanent link">¶</a></h2>
+<p>Alice 使用私钥 <span class="arithmatex">\(d\)</span> 计算：
+$$
+m \equiv c^d \pmod n
+$$
+再反转填充得到原始消息 <span class="arithmatex">\(M\)</span>。</p>
+<p><strong>重要安全原则：</strong>
+ 若填充无效，Alice <strong>必须直接丢弃消息，不给任何错误提示细节</strong>，否则可能遭受“填充预言机攻击”。</p>
+<h2 id="7-正确性证明">7. 正确性证明<a class="headerlink" href="#7-正确性证明" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>RSA 的正确性源于数论：当 <span class="arithmatex">\(ed\equiv1\pmod{\lambda(n)}\)</span> 时，对任意整数 <span class="arithmatex">\(m\)</span> 都有 <span class="arithmatex">\((m^{e})^{d}\equiv m \pmod n\)</span>。该结论既可用费马小定理逐模证明，也可用欧拉定理或其卡迈克尔推广整体证明。</p>
+</blockquote>
+<p>RSA 的正确性是指：
+ 对于任意整数 <span class="arithmatex">\(m\)</span>，当公钥指数 <span class="arithmatex">\(e\)</span> 与私钥指数 <span class="arithmatex">\(d\)</span> 满足
+$$
+ed \equiv 1 \pmod{\lambda(n)}
+$$
+且 <span class="arithmatex">\(n = pq\)</span> 为两个不同素数的乘积时，始终有：
+$$
+(m<sup d="d">{e})</sup>.
+$$
+也就是说：} \equiv m \pmod{n<strong>先加密再解密一定能还原原文（模 <span class="arithmatex">\(n\)</span> 意义下）</strong>。</p>
+<p>以下给出两种常见证明方式。</p>
+<hr/>
+<h3 id="一基于费马小定理的证明接近原始-rsa-论文"><strong>一、基于费马小定理的证明（接近原始 RSA 论文）</strong><a class="headerlink" href="#一基于费马小定理的证明接近原始-rsa-论文" title="Permanent link">¶</a></h3>
+<h4 id="数学基础"><strong>数学基础</strong><a class="headerlink" href="#数学基础" title="Permanent link">¶</a></h4>
+<p><strong>费马小定理：</strong>
+ 若 <span class="arithmatex">\(p\)</span> 为素数且 <span class="arithmatex">\(p\nmid a\)</span>，则：
+$$
+a^{p-1} \equiv 1 \pmod{p}.
+$$
+在 RSA 中：
+$$
+n = pq,\qquad 
+\lambda(n)=\operatorname{lcm}(p-1,q-1).
+$$
+由条件 <span class="arithmatex">\(ed \equiv 1 \pmod{\lambda(n)}\)</span>，可写成：
+$$
+ed - 1 = h(p-1) = k(q-1)
+$$
+其中 <span class="arithmatex">\(h,k\)</span> 为非负整数。</p>
+<hr/>
+<h4 id="关键思路逐模证明--中国剩余定理思想"><strong>关键思路：逐模证明 + 中国剩余定理思想</strong><a class="headerlink" href="#关键思路逐模证明--中国剩余定理思想" title="Permanent link">¶</a></h4>
+<p>要证明：
+$$
+m^{ed} \equiv m \pmod{pq},
+$$
+只需分别证明：
+$$
+m^{ed} \equiv m \pmod{p}
+\quad \text{且} \quad
+m^{ed} \equiv m \pmod{q},
+$$
+因为对 <span class="arithmatex">\(p\)</span> 与 <span class="arithmatex">\(q\)</span> 都成立的同余式，必然对 <span class="arithmatex">\(pq\)</span> 成立（中国剩余定理的基本思想）。</p>
+<hr/>
+<h4 id="对模-p-的证明"><strong>对模 <span class="arithmatex">\(p\)</span> 的证明</strong><a class="headerlink" href="#对模-p-的证明" title="Permanent link">¶</a></h4>
+<p>分两种情况讨论：</p>
+<h5 id="情况-1m-equiv-0-pmodp"><strong>情况 1：<span class="arithmatex">\(m \equiv 0 \pmod{p}\)</span></strong><a class="headerlink" href="#情况-1m-equiv-0-pmodp" title="Permanent link">¶</a></h5>
+<p>则 <span class="arithmatex">\(m\)</span> 是 <span class="arithmatex">\(p\)</span> 的倍数，因而 <span class="arithmatex">\(m^{ed}\)</span> 也是 <span class="arithmatex">\(p\)</span> 的倍数：
+$$
+m^{ed} \equiv 0 \equiv m \pmod{p}.
+$$
+结论成立。</p>
+<hr/>
+<h5 id="情况-2m-notequiv-0-pmodp"><strong>情况 2：<span class="arithmatex">\(m \not\equiv 0 \pmod{p}\)</span></strong><a class="headerlink" href="#情况-2m-notequiv-0-pmodp" title="Permanent link">¶</a></h5>
+<p>利用 <span class="arithmatex">\(ed-1 = h(p-1)\)</span>，有：
+$$
+\begin{aligned}
+m^{ed}
+&amp;= m^{ed-1}\, m \
+&amp;= m^{h(p-1)}\, m \
+&amp;= (m<sup h="h">{p-1})</sup> m \
+&amp;\equiv 1^{h} m \pmod{p} \quad (\text{由费马小定理})\
+&amp;\equiv m \pmod{p}.
+\end{aligned}
+$$
+因此对所有 <span class="arithmatex">\(m\)</span>：
+$$
+m^{ed} \equiv m \pmod{p}.
+$$</p>
+<hr/>
+<h4 id="对模-q-的证明"><strong>对模 <span class="arithmatex">\(q\)</span> 的证明</strong><a class="headerlink" href="#对模-q-的证明" title="Permanent link">¶</a></h4>
+<p>同样分两种情况：</p>
 <ul>
-<li>战队初始分数均为指值分。</li>
-<li>比赛以指定时间段（通常为 5/10 分钟）为一个回合，每回合主办方会更新已放出服务的 Flag。</li>
-<li>每回合内，一个战队的一个服务被渗透攻击成功（被拿 Flag 并提交），则扣除一定分数，攻击成功的战队平分这些分数。</li>
-<li>每回合内，如果战队能够维护自己的服务正常运行，则分数不会减少（如果防御成功加分则会加分）。</li>
-<li>如果一个服务宕机或异常无法通过测试，则可能会扣分，服务正常的战队平分这些分。往往服务异常会扣除较多的分数。</li>
-<li>如果该回合内所有战队的服务都异常，则认为是不可抗拒因素造成，分数都不减少。</li>
-<li>每回合内，服务异常和被拿 Flag 可以同时发生，即战队在一个回合内单个服务可能会扣除两者叠加的分数。</li>
-<li>禁止队伍使用通用防御方法。</li>
-<li>请参赛队伍在比赛开始时对所有服务进行备份，若因自身原因导致服务永久损坏或丢失，无法恢复，主办方不提供重置服务。</li>
-<li>禁止对赛题以外的比赛平台发起攻击，包括但不限于在 gamebox 提权 root、利用主办方平台漏洞等，违规者立刻被取消参赛资格。</li>
+<li>若 <span class="arithmatex">\(m \equiv 0 \pmod{q}\)</span>，显然有 <span class="arithmatex">\(m^{ed} \equiv m \pmod{q}\)</span>；</li>
+<li>若 <span class="arithmatex">\(m \not\equiv 0 \pmod{q}\)</span>，利用 <span class="arithmatex">\(ed-1 = k(q-1)\)</span> 与费马小定理，可得：</li>
 </ul>
-<h4 id="网络环境">网络环境<a class="headerlink" href="#网络环境" title="Permanent link">¶</a></h4>
-<p>一般AWD比赛在开始前会给选手同步文档，你需要根据主办方提供的文档熟悉环境，文档上一般都会有比赛环境的 <strong>网络拓扑图</strong> （如下图），每支队伍会维护若干的 <strong>Gamebox（己方服务器）</strong> ，Gamebox 上部署有存在漏洞的服务。</p>
-<h5 id="拓扑结构1">拓扑结构1<a class="headerlink" href="#拓扑结构1" title="Permanent link">¶</a></h5>
-<p><img alt="" src="../attachments/image-20251130001436617.png"/></p>
-<h5 id="拓扑结构2">拓扑结构2<a class="headerlink" href="#拓扑结构2" title="Permanent link">¶</a></h5>
-<p><img alt="" src="../attachments/image-20251130001508122.png"/></p>
-<h5 id="拓扑结构3">拓扑结构3<a class="headerlink" href="#拓扑结构3" title="Permanent link">¶</a></h5>
-<p><img alt="" src="../attachments/image-20251130001522779.png"/></p>
-<h5 id="拓扑结构4">拓扑结构4<a class="headerlink" href="#拓扑结构4" title="Permanent link">¶</a></h5>
-<p><img alt="" src="../attachments/network.jpg"/></p>
+<div class="arithmatex">\[
+m^{ed} \equiv m \pmod{q}.
+\]</div>
+<hr/>
+<h4 id="综合结论"><strong>综合结论</strong><a class="headerlink" href="#综合结论" title="Permanent link">¶</a></h4>
+<p>因为：
+$$
+m^{ed} \equiv m \pmod{p}
+\quad \text{且} \quad
+m^{ed} \equiv m \pmod{q},
+$$
+由中国剩余定理可得：
+$$
+(m<sup d="d">{e})</sup>.
+$$
+这完成了 RSA 正确性的证明。} = m^{ed} \equiv m \pmod{pq</p>
+<hr/>
+<h4 id="重要注记"><strong>重要注记</strong><a class="headerlink" href="#重要注记" title="Permanent link">¶</a></h4>
+<ol>
+<li>
+<p><strong>不能直接对模 <span class="arithmatex">\(pq\)</span> 应用费马小定理。</strong>
+    因为 <span class="arithmatex">\(pq\)</span> 不是素数，费马小定理只适用于素数模。</p>
+</li>
+<li>
+<p><strong>为何现代实现可用更弱条件？</strong>
+    只要满足
+   $$
+   ed \equiv 1 \pmod{\lambda(pq)},
+   $$
+   上述证明仍然成立；并不需要更强的
+   $$
+   ed \equiv 1 \pmod{(p-1)(q-1)}.
+   $$</p>
+</li>
+<li>
+<p><strong>与中国剩余定理的关系。</strong>
+    上述“分别对 <span class="arithmatex">\(p\)</span> 与 <span class="arithmatex">\(q\)</span> 证明，再合并结论”的方法，本质上是中国剩余定理思想的一部分。</p>
+</li>
+</ol>
+<hr/>
+<h3 id="二基于欧拉定理的证明现代标准版本"><strong>二、基于欧拉定理的证明（现代标准版本）</strong><a class="headerlink" href="#二基于欧拉定理的证明现代标准版本" title="Permanent link">¶</a></h3>
+<h4 id="数学基础欧拉定理"><strong>数学基础：欧拉定理</strong><a class="headerlink" href="#数学基础欧拉定理" title="Permanent link">¶</a></h4>
+<p>若 <span class="arithmatex">\(\gcd(m,n)=1\)</span>，则：
+$$
+m^{\varphi(n)} \equiv 1 \pmod{n},
+$$
+其中：
+$$
+\varphi(n) = (p-1)(q-1).
+$$</p>
+<hr/>
+<h4 id="证明过程"><strong>证明过程</strong><a class="headerlink" href="#证明过程" title="Permanent link">¶</a></h4>
+<p>设：
+$$
+ed = 1 + h\varphi(n)
+$$
+则当 <span class="arithmatex">\(\gcd(m,n)=1\)</span> 时：
+$$
+\begin{aligned}
+m^{ed}
+&amp;= m^{1 + h\varphi(n)} \
+&amp;= m\,(m<sup h="h">{\varphi(n)})</sup> \
+&amp;\equiv m\cdot 1^{h} \pmod{n} \
+&amp;\equiv m \pmod{n}.
+\end{aligned}
+$$
+这就证明了：
+$$
+m^{ed} \equiv m \pmod{n}.
+$$</p>
+<hr/>
+<h4 id="更一般的情形使用卡迈克尔函数"><strong>更一般的情形：使用卡迈克尔函数</strong><a class="headerlink" href="#更一般的情形使用卡迈克尔函数" title="Permanent link">¶</a></h4>
+<p>若仅满足：
+$$
+ed \equiv 1 \pmod{\lambda(n)},
+$$
+则可使用 Carmichael 定理（欧拉定理的推广）：
+$$
+m^{\lambda(n)} \equiv 1 \pmod{n}
+\quad (\gcd(m,n)=1),
+$$
+同样可推出：
+$$
+m^{ed} \equiv m \pmod{n}.
+$$</p>
+<hr/>
+<h4 id="当-m-与-n-不互质时怎么办"><strong>当 <span class="arithmatex">\(m\)</span> 与 <span class="arithmatex">\(n\)</span> 不互质时怎么办？</strong><a class="headerlink" href="#当-m-与-n-不互质时怎么办" title="Permanent link">¶</a></h4>
+<p>这种情况极少发生（概率约为 <span class="arithmatex">\(1/p + 1/q - 1/(pq)\)</span>），但即使发生，仍然有：</p>
+<ul>
+<li>若 <span class="arithmatex">\(m \equiv 0 \pmod{p}\)</span>，则 <span class="arithmatex">\(m^{ed} \equiv m \pmod{p}\)</span>；</li>
+<li>若 <span class="arithmatex">\(m \equiv 0 \pmod{q}\)</span>，则 <span class="arithmatex">\(m^{ed} \equiv m \pmod{q}\)</span>；</li>
+</ul>
+<p>因此**回退到第一种费马小定理证明**即可覆盖这些边界情况。</p>
+<h2 id="步骤操作">步骤操作<a class="headerlink" href="#步骤操作" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>步骤</strong></th>
+<th><strong>操作</strong></th>
+<th><strong>公式</strong></th>
+<th><strong>涉及参数</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>准备</strong></td>
+<td>生成密钥</td>
+<td><span class="arithmatex">\(n=pq, \phi(n)=(p-1)(q-1)\)</span></td>
+<td><span class="arithmatex">\(p, q\)</span> (销毁)</td>
+</tr>
+<tr>
+<td><strong>加密</strong></td>
+<td>使用公钥</td>
+<td><span class="arithmatex">\(C = M^e \pmod{n}\)</span></td>
+<td><span class="arithmatex">\(n, e\)</span></td>
+</tr>
+<tr>
+<td><strong>解密</strong></td>
+<td>使用私钥</td>
+<td><span class="arithmatex">\(M = C^d \pmod{n}\)</span></td>
+<td><span class="arithmatex">\(n, d\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="示例1">示例1<a class="headerlink" href="#示例1" title="Permanent link">¶</a></h2>
+<h3 id="1-密钥生成步骤">1. 密钥生成步骤<a class="headerlink" href="#1-密钥生成步骤" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>选择素数</strong>：令 <span class="arithmatex">\(p = 3, q = 11\)</span>。</li>
+<li><strong>计算模数</strong>：<span class="arithmatex">\(n = p \times q = 33\)</span>。</li>
+<li><strong>计算欧拉函数</strong>：<span class="arithmatex">\(\phi(n) = (3-1) \times (11-1) = 2 \times 10 = 20\)</span>。</li>
+<li><strong>选择公钥指数 <span class="arithmatex">\(e\)</span></strong>：我们需要一个与 20 互质的数，选 <span class="arithmatex">\(e = 3\)</span>。</li>
+<li><strong>计算私钥指数 <span class="arithmatex">\(d\)</span></strong>：需满足 <span class="arithmatex">\(3d \equiv 1 \pmod{20}\)</span>。</li>
+<li>通过试算：<span class="arithmatex">\(3 \times 7 = 21\)</span>，而 <span class="arithmatex">\(21 \div 20\)</span> 余 <span class="arithmatex">\(1\)</span>。</li>
+<li>所以 <strong><span class="arithmatex">\(d = 7\)</span></strong>。</li>
+</ol>
+<p><strong>结果：</strong></p>
+<ul>
+<li><strong>公钥</strong>：<span class="arithmatex">\((n=33, e=3)\)</span></li>
+<li><strong>私钥</strong>：<span class="arithmatex">\((n=33, d=7)\)</span></li>
+</ul>
+<h3 id="2-加密演示">2. 加密演示<a class="headerlink" href="#2-加密演示" title="Permanent link">¶</a></h3>
+<p>假设我们要发送的消息明文 <strong><span class="arithmatex">\(M = 5\)</span></strong>：</p>
+<div class="arithmatex">\[C = M^e \pmod{n}\]</div>
+<div class="arithmatex">\[C = 5^3 \pmod{33} = 125 \pmod{33}\]</div>
+<p>计算 <span class="arithmatex">\(125 \div 33 = 3\)</span> 余 <span class="arithmatex">\(26\)</span>，所以 <strong>密文 <span class="arithmatex">\(C = 26\)</span></strong>。</p>
+<h3 id="3-解密演示">3. 解密演示<a class="headerlink" href="#3-解密演示" title="Permanent link">¶</a></h3>
+<p>接收方收到密文 <span class="arithmatex">\(26\)</span>，使用私钥 <span class="arithmatex">\(d=7\)</span> 进行还原：</p>
+<div class="arithmatex">\[M = C^d \pmod{n}\]</div>
+<div class="arithmatex">\[M = 26^7 \pmod{33}\]</div>
+<p>为了计算方便，我们可以拆解幂运算：</p>
+<ul>
+<li><span class="arithmatex">\(26^1 \equiv 26 \equiv -7 \pmod{33}\)</span></li>
+<li><span class="arithmatex">\(26^2 \equiv (-7)^2 = 49 \equiv 16 \pmod{33}\)</span></li>
+<li><span class="arithmatex">\(26^4 \equiv 16^2 = 256 \equiv 25 \pmod{33}\)</span></li>
+<li><span class="arithmatex">\(26^7 = 26^4 \times 26^2 \times 26^1 \equiv 25 \times 16 \times (-7) \pmod{33}\)</span></li>
+<li>计算得出结果为 <strong><span class="arithmatex">\(5\)</span></strong>。</li>
+</ul>
+<p><strong>明文还原成功！</strong></p>
+<h2 id="示例2">示例2<a class="headerlink" href="#示例2" title="Permanent link">¶</a></h2>
+<p>取：
+$$
+p=61,\quad q=53
+$$
+则：
+$$
+n = 61 \cdot 53 = 3233
+$$
+计算：
+$$
+\lambda(n)=\operatorname{lcm}(60,52)=780
+$$
+选：
+$$
+e=17
+$$
+求逆得到：
+$$
+d=413
+$$
+<strong>公钥：</strong> <span class="arithmatex">\((n=3233, e=17)\)</span>
+<strong>私钥：</strong> <span class="arithmatex">\(d=413\)</span></p>
+<p>加密 <span class="arithmatex">\(m=65\)</span>：
+$$
+c = 65^{17} \bmod 3233 = 2790
+$$
+解密：
+$$
+m = 2790^{413} \bmod 3233 = 65
+$$</p>
+<h2 id="基于中国剩余定理crt的加速">基于中国剩余定理（CRT）的加速<a class="headerlink" href="#基于中国剩余定理crt的加速" title="Permanent link">¶</a></h2>
+<p>为提升解密效率，实际私钥通常还包含：
+$$
+d_p = d \bmod (p-1),\quad<br/>
+d_q = d \bmod (q-1),\quad<br/>
+q^{-1} \bmod p
+$$
+先分别计算：
+$$
+m_1 = c^{d_p} \bmod p,\quad<br/>
+m_2 = c^{d_q} \bmod q
+$$
+再用中国剩余定理合成得到最终 <span class="arithmatex">\(m\)</span>。</p>
+<p>该方法可使解密速度提升约 <strong>4 倍</strong>。</p>
+<h2 id="rsa数字签名">RSA数字签名<a class="headerlink" href="#rsa数字签名" title="Permanent link">¶</a></h2>
+<h3 id="签名"><strong>签名</strong><a class="headerlink" href="#签名" title="Permanent link">¶</a></h3>
+<p>Alice 对消息 <span class="arithmatex">\(M\)</span>：</p>
+<ol>
+<li>
+<p>计算哈希：
+   $$
+   h = \text{hash}(M)
+   $$</p>
+</li>
+<li>
+<p>生成签名：
+   $$
+   s = h^d \bmod n
+   $$</p>
+</li>
+<li>
+<p>发送 <span class="arithmatex">\((M, s)\)</span> 给 Bob。</p>
+</li>
+</ol>
+<hr/>
+<h3 id="验证"><strong>验证</strong><a class="headerlink" href="#验证" title="Permanent link">¶</a></h3>
+<p>Bob 计算：
+$$
+h = \text{hash}(M)
+$$
+并检查：
+$$
+s^e \stackrel{?}{\equiv} h \pmod n
+$$
+若成立，则：</p>
+<ul>
+<li>消息确实来自 Alice；</li>
+<li>消息未被篡改。</li>
+</ul>
+<p>数学依据：
+$$
+s^e = (h<sup>d)</sup>e = h^{de} \equiv h \pmod n
+$$</p>
+<hr/>
+<h3 id="为什么必须先做哈希"><strong>为什么必须先做哈希？</strong><a class="headerlink" href="#为什么必须先做哈希" title="Permanent link">¶</a></h3>
+<p>若直接签名原始消息 <span class="arithmatex">\(m\)</span>，则存在可乘法伪造的漏洞：</p>
+<ul>
+<li>可伪造 <span class="arithmatex">\((m_1 m_2, s_1 s_2)\)</span>；</li>
+<li>可对 <span class="arithmatex">\(m=1\)</span> 伪造签名 <span class="arithmatex">\(s=1\)</span>。</li>
+</ul>
+<p>因此**现代 RSA 签名必须先哈希，再签名**（如 RSA-PSS）。</p>
 
 
 
@@ -5412,12 +6438,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/extra.js"></script>
+        <script src="../../../../javascripts/extra.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
