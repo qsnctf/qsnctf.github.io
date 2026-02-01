@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#过程" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -4728,6 +4733,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XSS-LAB
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -4744,6 +4767,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#过程" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        过程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5340,6 +5419,53 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#过程" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        过程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5465,7 +5591,42 @@
 
   <h1>XSS-LAB</h1>
 
-<p>等待更新中</p>
+<p><img alt="" src="../attachments/image-20260201145715075.png"/></p>
+<p>题目地址：<a href="https://www.qsnctf.com/#/main/driving-range?page=1&amp;category=15&amp;difficulty=&amp;keyword=&amp;user_answer=&amp;user_favorite=&amp;tag_ids=&amp;challenge_id=23">https://www.qsnctf.com/#/main/driving-range?page=1&amp;category=15&amp;difficulty=&amp;keyword=&amp;user_answer=&amp;user_favorite=&amp;tag_ids=&amp;challenge_id=23</a></p>
+<h2 id="过程">过程<a class="headerlink" href="#过程" title="Permanent link">¶</a></h2>
+<p><img alt="" src="../image-20260201150258154.png"/></p>
+<p>点击中间的图片开始</p>
+<h3 id="level1">Level1<a class="headerlink" href="#level1" title="Permanent link">¶</a></h3>
+<p><img alt="image-20260201150336840" src="../attachments/image-20260201150336840.png"/></p>
+<p>在页面内，发现test，在链接中，发现一个参数，name</p>
+<p>name=test</p>
+<p>尝试修改test，修改为1234<img alt="image-20260201150429485" src="../attachments/image-20260201150429485.png"/></p>
+<p>发现欢迎用户变成1234了</p>
+<p>查看网页源码</p>
+<p><img alt="image-20260201150539709" src="../attachments/image-20260201150539709.png"/></p>
+<p>当我们在地址栏修改name等于<code>&lt;script&gt;alert("1")&lt;/script&gt;</code></p>
+<p><img alt="image-20260201150743851" src="../attachments/image-20260201150743851.png"/></p>
+<p>发现页面是存在html的渲染</p>
+<p><img alt="" src="../attachments/image-20260201150830371.png"/></p>
+<h3 id="level2">Level2<a class="headerlink" href="#level2" title="Permanent link">¶</a></h3>
+<p><img alt="" src="../attachments/image-20260201150943593.png"/></p>
+<p><img alt="image-20260201151001287" src="../attachments/image-20260201151001287.png"/></p>
+<p>修改完一个位置，都同时更改了</p>
+<p><img alt="image-20260201151055304" src="../attachments/image-20260201151055304.png"/></p>
+<p>继续使用上一关的Payload</p>
+<p><img alt="" src="../attachments/image-20260201151147166.png"/></p>
+<p>发现在“没有找到”这个位置的提示是有转义的，将xss的代码转义成了非可执行字符。</p>
+<p>但是在input位置，是没有转义的。</p>
+<p><img alt="" src="../attachments/image-20260201151321789.png"/></p>
+<p>回到渲染页面，发现双引号有问题</p>
+<p><img alt="image-20260201151356930" src="../attachments/image-20260201151356930.png"/></p>
+<p>双引号导致闭合了</p>
+<p><img alt="image-20260201151554979" src="../attachments/image-20260201151554979.png"/></p>
+<p>双引号的位置可以先提前闭合</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>"&gt;&lt;script&gt;alert("1")&lt;/script&gt;&lt;"
+</code></pre></div>
+<p><img alt="" src="../attachments/image-20260201151654758.png"/></p>
+<p><img alt="" src="../attachments/image-20260201151719432.png"/></p>
 
 
 
