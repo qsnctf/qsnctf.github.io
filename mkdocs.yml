@@ -159,9 +159,19 @@ nav:
   - 编程: 
     - 介绍: Code/index.md
     - 汇编语言: 
-      - 常见指令集: Code/Assembly/instruction_set.md
-      - 寄存器: Code/Assembly/register.md
-      - 栈操作: Code/Assembly/stack_operation.md
+      - 汇编语言概述: Code/Assembly/daiding.md
+      - 基础环境与工具: Code/Assembly/daiding.md
+      - 计算机底层基础: Code/Assembly/daiding.md
+      - 寄存器: Code/Assembly/daiding.md
+      - 内存与栈: Code/Assembly/daiding.md
+      - 指令系统: Code/Assembly/daiding.md
+      - 控制流: Code/Assembly/daiding.md
+      - 函数与调用约定: Code/Assembly/daiding.md
+      - 数据与变量: Code/Assembly/daiding.md
+      - 常见体系结构: Code/Assembly/daiding.md
+      - 汇编与高级语言的关系: Code/Assembly/daiding.md
+      - 汇编调试与分析: Code/Assembly/daiding.md
+      - 汇编在CTF中的应用: Code/Assembly/daiding.md
     - C/C++: 
       - C/C++介绍: Code/CPP/cpp-tutorial.md
       - C++基本语法: Code/CPP/cpp-basic-syntax.md
