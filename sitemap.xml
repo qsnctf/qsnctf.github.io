@@ -41,55 +41,15 @@
          <lastmod>2026-02-03</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Assembly_Debugging_and_Analysis/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Assembly_in_CTF/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Basic_Environment_and_Tools/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Common_Architectures/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Computer_Low-Level_Fundamentals/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Control_Flow/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Data_and_Variables/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Functions_and_Calling_Conventions/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Language_Overview/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Memory_and_Stack/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Registers/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Relationship_Between_Assembly_and_High-Level_Languages/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/instruction_set/</loc>
+         <lastmod>2026-02-03</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Assembly/register/</loc>
+         <lastmod>2026-02-03</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Assembly/stack_operation/</loc>
          <lastmod>2026-02-03</lastmod>
     </url>
     <url>
@@ -322,10 +282,6 @@
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/Steganography/JPG_Steganography/</loc>
-         <lastmod>2026-02-03</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Misc/Steganography/MP3_Steganography/</loc>
          <lastmod>2026-02-03</lastmod>
     </url>
     <url>
