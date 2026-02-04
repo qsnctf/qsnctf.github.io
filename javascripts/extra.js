@@ -138,6 +138,14 @@ async function forceMarkmapRender(article) {
 }
 
 /* ---- B. MathJax 渲染 ---- */
+/* ---- B. MathJax 渲染（SPA 安全版） ---- */
+function resetMathJaxStyles() {
+  // 删除旧的 MathJax 样式（关键修复）
+  document
+    .querySelectorAll("style[data-mjx-styles], mjx-styles")
+    .forEach(el => el.remove());
+}
+
 function renderMath(article) {
   if (!window.MathJax?.typesetPromise) return;
 
@@ -147,14 +155,24 @@ function renderMath(article) {
 
   if (!targets.length) return;
 
+  // 先清理旧样式（🔥 关键）
+  resetMathJaxStyles();
+
   targets.forEach(t => markDone(t, "data-math-fixed"));
 
   try {
     window.MathJax.typesetPromise(targets);
   } catch (e) {
-    console.warn("MathJax error:", e);
+    console.warn("MathJax error, retrying after reset:", e);
+
+    // 失败后再兜底重试一次
+    resetMathJaxStyles();
+    setTimeout(() => {
+      window.MathJax.typesetPromise(targets);
+    }, 300);
   }
 }
+
 
 /* ---- C. 加粗修复 ---- */
 function fixBold(article) {
