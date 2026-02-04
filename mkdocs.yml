@@ -252,7 +252,7 @@ nav:
       - 其他密码:
         - 培根密码: Crypto/Other_Cryptography/Baconian.md
         - 栅栏密码: Crypto/Other_Cryptography/Fence.md
-        - 波利比奥斯方阵密码: Crypto/Other_Cryptography/Polybius_Square.md
+        - 波利比奥斯（Polybius）方阵密码: Crypto/Other_Cryptography/Polybius_Square.md
     - 图形密码:
       - 介绍: Crypto/Graphic_Cryptography/Introduction.md
       - 猪圈密码: Crypto/Graphic_Cryptography/Piggy_Bank.md
