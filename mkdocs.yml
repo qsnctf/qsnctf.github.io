@@ -158,6 +158,14 @@ nav:
       - OSI七层模型: basic/network/osi.md
   - 编程: 
     - 介绍: Code/index.md
+    - C/C++: 
+      - C/C++介绍: Code/CPP/cpp-tutorial.md
+      - C++基本语法: Code/CPP/cpp-basic-syntax.md
+      - C++注释: Code/CPP/cpp-comments.md
+      - C++数据类型: Code/CPP/cpp-data-types.md
+      - C++变量类型: Code/CPP/cpp-variable-types.md
+      - C++变量作用域: Code/CPP/cpp-variable-scope.md
+      - C++常量: Code/CPP/cpp-constants-literals.md
     - 汇编语言: 
       - 汇编语言概述: Code/Assembly/Language_Overview.md
       - 基础环境与工具: Code/Assembly/Basic_Environment_and_Tools.md
@@ -172,14 +180,6 @@ nav:
       - 汇编与高级语言的关系: Code/Assembly/Relationship_Between_Assembly_and_High-Level_Languages.md
       - 汇编调试与分析: Code/Assembly/Assembly_Debugging_and_Analysis.md
       - 汇编在CTF中的应用: Code/Assembly/Assembly_in_CTF.md
-    - C/C++: 
-      - C/C++介绍: Code/CPP/cpp-tutorial.md
-      - C++基本语法: Code/CPP/cpp-basic-syntax.md
-      - C++注释: Code/CPP/cpp-comments.md
-      - C++数据类型: Code/CPP/cpp-data-types.md
-      - C++变量类型: Code/CPP/cpp-variable-types.md
-      - C++变量作用域: Code/CPP/cpp-variable-scope.md
-      - C++常量: Code/CPP/cpp-constants-literals.md
     - Python:
       - Python介绍: Code/Python/Python_Intro.md
       - Python基础语法: Code/Python/Python_Basic_Syntax.md
