@@ -84,7 +84,8 @@ extra:
 
 extra_javascript:
   - javascripts/extra.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/mathjax.js
+  - https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
 
 
 
@@ -93,6 +94,7 @@ copyright: Copyright 青少年CTF &copy; 2025 版权所有
 extra_css:
   - stylesheets/markmap.css
   - stylesheets/main.css
+  - 
   
 # markdown 拓展
 markdown_extensions:
