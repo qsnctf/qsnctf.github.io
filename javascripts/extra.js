@@ -12,25 +12,7 @@
  * =====================================================
  */
 
-/* ===================== 1. MathJax 全局配置 ===================== */
 
-window.MathJax = {
-  loader: { load: ["input/tex", "output/svg"] }, // SVG 渲染（关键）
-  tex: {
-    inlineMath: [["\\(", "\\)"]],
-    displayMath: [["\\[", "\\]"]],
-    packages: { "[+]": ["ams"] }
-  },
-  svg: {
-    fontCache: "local"
-  },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore",
-    processHtmlClass: "arithmatex"
-  },
-  showProcessingMessages: false,
-  messageStyle: "none"
-};
 
 /* ===================== 2. Markmap Base64 修复 ===================== */
 
@@ -135,27 +117,7 @@ async function forceMarkmapRender(article) {
   }
 }
 
-/* ---- B. MathJax 渲染（SVG + SPA 安全版） ---- */
-function renderMath(article) {
-  if (!window.MathJax?.typesetPromise) return;
 
-  const targets = article.querySelectorAll(
-    ".arithmatex:not([data-math-fixed])"
-  );
-
-  if (!targets.length) return;
-
-  targets.forEach(t => markDone(t, "data-math-fixed"));
-
-  try {
-    window.MathJax.typesetPromise(targets);
-  } catch (e) {
-    console.warn("MathJax render failed, retrying:", e);
-    setTimeout(() => {
-      window.MathJax.typesetPromise(targets);
-    }, 300);
-  }
-}
 
 /* ---- C. 加粗修复 ---- */
 function fixBold(article) {
@@ -278,7 +240,6 @@ function runAllFixes() {
   restoreTheme();
   fixBold(article);
   initImageZoom(article);
-  renderMath(article);
   forceMarkmapRender(article);
   applyPangu(article);
 }
