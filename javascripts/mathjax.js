@@ -1,11 +1,12 @@
-/* ===================== MathJax v3 配置 ===================== */
+/* ===================== MathJax v3 Final Fix ===================== */
 window.MathJax = {
   tex: {
-    inlineMath: [["\\(","\\)"], ["$","$"]],
-    displayMath: [["\\[","\\]"], ["$$","$$"]],
+    inlineMath: [["\\(", "\\)"], ["$", "$"]],
+    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
     processEscapes: true,
     processEnvironments: true,
-    tags: "ams"
+    tags: "ams",
+    packages: {'[+]': ['ams']}
   },
   options: {
     ignoreHtmlClass: ".*|",
@@ -14,21 +15,43 @@ window.MathJax = {
   startup: { typeset: false }
 };
 
+let isRendering = false;
 
 if (typeof document$ !== "undefined") {
   document$.subscribe(() => {
-    if (window.MathJax && MathJax.startup) {
-      MathJax.startup.promise.then(() => {
-        MathJax.texReset();
-        MathJax.typesetClear();
+    if (window.MathJax && MathJax.startup && !isRendering) {
+      isRendering = true;
 
-        // ✅ 关键修复：必须传可迭代对象
-        const targets =
-          document.querySelectorAll(".md-content") ||
-          document.querySelectorAll("body");
+      // Small delay to let the SPA transition finish DOM manipulations
+      requestAnimationFrame(() => {
+        MathJax.startup.promise.then(() => {
+          if (!document.head) {
+            isRendering = false;
+            return;
+          }
 
-        MathJax.typesetPromise(targets).catch(err => {
-          console.error("MathJax rendering error:", err);
+          // Force MathJax to forget previous page's CSS/State
+          if (MathJax.startup.output && MathJax.startup.output.clearCache) {
+            MathJax.startup.output.clearCache();
+          }
+          
+          MathJax.texReset();
+
+          const content = document.querySelector('.md-content article');
+          if (content) {
+            MathJax.typesetPromise([content])
+              .catch(err => {
+                // Silently swallow insertRule errors during fast navigation
+                if (!err.message?.includes('insertRule')) {
+                  console.warn("MathJax notice:", err);
+                }
+              })
+              .finally(() => {
+                isRendering = false;
+              });
+          } else {
+            isRendering = false;
+          }
         });
       });
     }
