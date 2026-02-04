@@ -1,14 +1,41 @@
 /**
- * ================================
- * MkDocs Material 稳定修复脚本（重构版）
- * 兼容：Markmap + MathJax + 图片缩放 + 加粗修复
+ * =====================================================
+ * MkDocs Material 增强修复脚本（统一版）
+ * 功能：
+ *  - Markmap 修复 + 强制渲染
+ *  - MathJax 渲染 + 公式配置
+ *  - 图片点击缩放
+ *  - 加粗修复
+ *  - 主题配色持久化
+ *  - 中英自动排版（pangu）
  * 适配：MkDocs Material SPA 导航
- * ================================
+ * =====================================================
  */
 
-/* ===================== 1. 全局补丁 ===================== */
+/* ===================== 1. 全局配置 ===================== */
 
-// 修复 Markmap 的 Base64 UTF-8 问题
+// -------- MathJax 全局配置 --------
+window.MathJax = {
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+  },
+  TeX: {
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    equationNumbers: {
+      autoNumber: "AMS",
+    },
+    unicode: {
+      fonts: "STIXGeneral,'Arial Unicode MS'",
+    },
+  },
+  showProcessingMessages: false,
+  messageStyle: "none",
+};
+
+// -------- 修复 Markmap 的 Base64 UTF-8 问题 --------
 (function patchAtob() {
   const originalAtob = window.atob;
   window.atob = function (str) {
@@ -17,7 +44,9 @@
     } catch (e) {
       if (e instanceof DOMException || e.name === "InvalidCharacterError") {
         const safe = str.replace(/-/g, "+").replace(/_/g, "/");
-        const binary = Uint8Array.from(originalAtob(safe), c => c.charCodeAt(0));
+        const binary = Uint8Array.from(originalAtob(safe), c =>
+          c.charCodeAt(0)
+        );
         return new TextDecoder("utf-8").decode(binary);
       }
       throw e;
@@ -27,7 +56,7 @@
 
 /* ===================== 2. 工具函数 ===================== */
 
-// 防抖执行（关键：避免风暴）
+// 防抖 + requestIdleCallback
 let runScheduled = false;
 function schedule(fn) {
   if (runScheduled) return;
@@ -47,12 +76,26 @@ function isDone(el, key = "data-fixed") {
   return el.hasAttribute(key);
 }
 
-/* ===================== 3. 功能模块 ===================== */
+/* ===================== 3. 主题恢复模块 ===================== */
+
+function restoreTheme() {
+  const body = document.body;
+
+  const p = localStorage.getItem("data-md-color-primary");
+  if (p) body.setAttribute("data-md-color-primary", p);
+
+  const a = localStorage.getItem("data-md-color-accent");
+  if (a) body.setAttribute("data-md-color-accent", a);
+
+  const s = localStorage.getItem("data-md-color-scheme");
+  if (s) body.setAttribute("data-md-color-scheme", s);
+}
+
+/* ===================== 4. 功能模块 ===================== */
 
 /* ---- A. Markmap 强制渲染 ---- */
 async function forceMarkmapRender(article) {
   const containers = article.querySelectorAll(".language-markmap");
-
   if (!containers.length) return;
   if (!window.markmap || !window.markmap.Markmap) return;
 
@@ -67,10 +110,8 @@ async function forceMarkmapRender(article) {
     try {
       const json = JSON.parse(dataTag.textContent);
 
-      // 清理旧 SVG
       container.querySelector("svg")?.remove();
 
-      // 创建新 SVG
       const svg = document.createElementNS(
         "http://www.w3.org/2000/svg",
         "svg"
@@ -91,7 +132,7 @@ async function forceMarkmapRender(article) {
       markDone(container, "data-markmap-fixed");
       console.log("✅ Markmap 渲染完成");
     } catch (err) {
-      console.warn("Markmap 渲染失败，等待下次重试", err);
+      console.warn("Markmap 渲染失败，等待重试", err);
     }
   }
 }
@@ -100,7 +141,9 @@ async function forceMarkmapRender(article) {
 function renderMath(article) {
   if (!window.MathJax?.typesetPromise) return;
 
-  const targets = article.querySelectorAll(".arithmatex:not([data-math-fixed])");
+  const targets = article.querySelectorAll(
+    ".arithmatex:not([data-math-fixed])"
+  );
 
   if (!targets.length) return;
 
@@ -113,10 +156,16 @@ function renderMath(article) {
   }
 }
 
-/* ---- C. 加粗修复（安全版） ---- */
+/* ---- C. 加粗修复 ---- */
 function fixBold(article) {
   const EXCLUDE = new Set([
-    "PRE","CODE","SCRIPT","STYLE","KBD","MATH","SVG"
+    "PRE",
+    "CODE",
+    "SCRIPT",
+    "STYLE",
+    "KBD",
+    "MATH",
+    "SVG",
   ]);
 
   function walk(node) {
@@ -124,13 +173,15 @@ function fixBold(article) {
       if (EXCLUDE.has(node.tagName)) return;
       if (isDone(node, "data-bold-fixed")) return;
       Array.from(node.childNodes).forEach(walk);
-    }
-    else if (node.nodeType === 3) {
+    } else if (node.nodeType === 3) {
       const val = node.nodeValue;
       if (val && val.includes("**")) {
         const span = document.createElement("span");
         span.dataset.boldFixed = "true";
-        span.innerHTML = val.replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>");
+        span.innerHTML = val.replace(
+          /\*\*([\s\S]+?)\*\*/g,
+          "<strong>$1</strong>"
+        );
         node.replaceWith(span);
       }
     }
@@ -139,17 +190,20 @@ function fixBold(article) {
   walk(article);
 }
 
-/* ---- D. 图片点击缩放（防重复绑定） ---- */
+/* ---- D. 图片点击缩放 ---- */
 function initImageZoom(article) {
-  article.querySelectorAll("img:not([data-zoom-bound])").forEach(img => {
-    markDone(img, "data-zoom-bound");
-    img.style.cursor = "zoom-in";
+  article
+    .querySelectorAll("img:not([data-zoom-bound])")
+    .forEach(img => {
+      markDone(img, "data-zoom-bound");
+      img.style.cursor = "zoom-in";
 
-    img.addEventListener("click", () => {
-      let scale = 1, rotate = 0;
+      img.addEventListener("click", () => {
+        let scale = 1,
+          rotate = 0;
 
-      const overlay = document.createElement("div");
-      overlay.style.cssText = `
+        const overlay = document.createElement("div");
+        overlay.style.cssText = `
         position:fixed;inset:0;
         background:rgba(0,0,0,.88);
         display:flex;align-items:center;justify-content:center;
@@ -157,22 +211,22 @@ function initImageZoom(article) {
         cursor:zoom-out;
       `;
 
-      const wrapper = document.createElement("div");
-      wrapper.style.cssText = `
+        const wrapper = document.createElement("div");
+        wrapper.style.cssText = `
         display:flex;flex-direction:column;
         align-items:center;gap:15px;
       `;
 
-      const clone = img.cloneNode();
-      clone.style.cssText = `
+        const clone = img.cloneNode();
+        clone.style.cssText = `
         max-width:90vw;max-height:80vh;
         border-radius:8px;
         box-shadow:0 10px 50px rgba(0,0,0,0.5);
         transition:transform .2s;
       `;
 
-      const panel = document.createElement("div");
-      panel.innerHTML = `
+        const panel = document.createElement("div");
+        panel.innerHTML = `
         <button data-a="in">➕</button>
         <button data-a="out">➖</button>
         <button data-a="l">⟲</button>
@@ -180,77 +234,71 @@ function initImageZoom(article) {
         <button data-a="reset">↺</button>
         <button data-a="close">✕</button>
       `;
-      panel.style.cssText = `
-        display:flex;gap:10px;
-        background:rgba(0,0,0,0.6);
-        padding:10px;border-radius:50px;
-      `;
 
-      panel.querySelectorAll("button").forEach(b => {
-        b.style.cssText = `
-          background:none;border:none;color:white;
-          cursor:pointer;font-size:18px;
-          padding:5px 10px;
-        `;
+        panel.onclick = e => {
+          const a = e.target.dataset.a;
+          if (a === "in") scale += 0.2;
+          if (a === "out") scale = Math.max(0.2, scale - 0.2);
+          if (a === "l") rotate -= 90;
+          if (a === "r") rotate += 90;
+          if (a === "reset") {
+            scale = 1;
+            rotate = 0;
+          }
+          if (a === "close") overlay.remove();
+
+          clone.style.transform = `scale(${scale}) rotate(${rotate}deg)`;
+        };
+
+        overlay.onclick = e => {
+          if (e.target === overlay) overlay.remove();
+        };
+
+        wrapper.append(clone, panel);
+        overlay.append(wrapper);
+        document.body.append(overlay);
       });
-
-      const update = () => {
-        clone.style.transform = `scale(${scale}) rotate(${rotate}deg)`;
-      };
-
-      panel.onclick = e => {
-        const a = e.target.dataset.a;
-        if (a === "in") scale += 0.2;
-        if (a === "out") scale = Math.max(0.2, scale - 0.2);
-        if (a === "l") rotate -= 90;
-        if (a === "r") rotate += 90;
-        if (a === "reset") { scale = 1; rotate = 0; }
-        if (a === "close") overlay.remove();
-        update();
-      };
-
-      overlay.onclick = e => {
-        if (e.target === overlay) overlay.remove();
-      };
-
-      wrapper.append(clone, panel);
-      overlay.append(wrapper);
-      document.body.append(overlay);
     });
-  });
 }
 
-/* ===================== 4. 统一入口 ===================== */
+/* ---- E. Pangu 自动加空格 ---- */
+function applyPangu(article) {
+  if (window.pangu) {
+    window.pangu.spacingElement(article);
+  }
+}
+
+/* ===================== 5. 统一入口 ===================== */
 
 function runAllFixes() {
   const article = document.querySelector(".md-content article");
   if (!article) return;
 
+  restoreTheme();
   fixBold(article);
   initImageZoom(article);
   renderMath(article);
   forceMarkmapRender(article);
+  applyPangu(article);
 }
 
-/* ===================== 5. MkDocs Material 适配 ===================== */
+/* ===================== 6. MkDocs Material SPA 适配 ===================== */
 
 document$.subscribe(() => {
-
-  // 首次执行
   schedule(runAllFixes);
 
-  // 三次补偿（不会卡死）
   [300, 1500, 4000].forEach(d =>
     setTimeout(() => schedule(runAllFixes), d)
   );
 
-  // 监听“结构变化”，但不监听文本变动
   const article = document.querySelector(".md-content article");
   if (article) {
-    const observer = new MutationObserver(() => schedule(runAllFixes));
+    const observer = new MutationObserver(() =>
+      schedule(runAllFixes)
+    );
     observer.observe(article, {
       childList: true,
-      subtree: false   // 🔥 关键：避免风暴
+      subtree: false,
     });
   }
 });
