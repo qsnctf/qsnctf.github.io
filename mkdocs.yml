@@ -133,6 +133,7 @@ markdown_extensions:
       repo_url_shorthand: true
       user: squidfunk
       repo: mkdocs-material
+  - pymdownx.critic
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.tabbed:
