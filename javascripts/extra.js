@@ -16,24 +16,23 @@
 
 // -------- MathJax 全局配置 --------
 window.MathJax = {
-  tex2jax: {
+  loader: { load: ["input/tex", "output/svg"] }, // 👈 关键
+  tex: {
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
+    packages: { "[+]": ["ams"] }
   },
-  TeX: {
-    TagSide: "right",
-    TagIndent: ".8em",
-    MultLineWidth: "85%",
-    equationNumbers: {
-      autoNumber: "AMS",
-    },
-    unicode: {
-      fonts: "STIXGeneral,'Arial Unicode MS'",
-    },
+  svg: {
+    fontCache: "local"
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "arithmatex"
   },
   showProcessingMessages: false,
-  messageStyle: "none",
+  messageStyle: "none"
 };
+
 
 // -------- 修复 Markmap 的 Base64 UTF-8 问题 --------
 (function patchAtob() {
