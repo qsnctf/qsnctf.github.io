@@ -1,22 +1,21 @@
 /**
  * =====================================================
- * MkDocs Material 增强修复脚本（统一版）
+ * MkDocs Material 增强修复脚本（统一稳定版）
  * 功能：
  *  - Markmap 修复 + 强制渲染
- *  - MathJax 渲染 + 公式配置
+ *  - MathJax SVG 渲染（无 CSS 报错）
  *  - 图片点击缩放
- *  - 加粗修复
+ *  - Markdown **加粗** 修复
  *  - 主题配色持久化
  *  - 中英自动排版（pangu）
  * 适配：MkDocs Material SPA 导航
  * =====================================================
  */
 
-/* ===================== 1. 全局配置 ===================== */
+/* ===================== 1. MathJax 全局配置 ===================== */
 
-// -------- MathJax 全局配置 --------
 window.MathJax = {
-  loader: { load: ["input/tex", "output/svg"] }, // 👈 关键
+  loader: { load: ["input/tex", "output/svg"] }, // SVG 渲染（关键）
   tex: {
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
@@ -33,8 +32,8 @@ window.MathJax = {
   messageStyle: "none"
 };
 
+/* ===================== 2. Markmap Base64 修复 ===================== */
 
-// -------- 修复 Markmap 的 Base64 UTF-8 问题 --------
 (function patchAtob() {
   const originalAtob = window.atob;
   window.atob = function (str) {
@@ -53,9 +52,9 @@ window.MathJax = {
   };
 })();
 
-/* ===================== 2. 工具函数 ===================== */
+/* ===================== 3. 工具函数 ===================== */
 
-// 防抖 + requestIdleCallback
+// 防抖 + requestIdleCallback（防止渲染风暴）
 let runScheduled = false;
 function schedule(fn) {
   if (runScheduled) return;
@@ -75,7 +74,7 @@ function isDone(el, key = "data-fixed") {
   return el.hasAttribute(key);
 }
 
-/* ===================== 3. 主题恢复模块 ===================== */
+/* ===================== 4. 主题恢复 ===================== */
 
 function restoreTheme() {
   const body = document.body;
@@ -90,7 +89,7 @@ function restoreTheme() {
   if (s) body.setAttribute("data-md-color-scheme", s);
 }
 
-/* ===================== 4. 功能模块 ===================== */
+/* ===================== 5. 功能模块 ===================== */
 
 /* ---- A. Markmap 强制渲染 ---- */
 async function forceMarkmapRender(article) {
@@ -136,15 +135,7 @@ async function forceMarkmapRender(article) {
   }
 }
 
-/* ---- B. MathJax 渲染 ---- */
-/* ---- B. MathJax 渲染（SPA 安全版） ---- */
-function resetMathJaxStyles() {
-  // 删除旧的 MathJax 样式（关键修复）
-  document
-    .querySelectorAll("style[data-mjx-styles], mjx-styles")
-    .forEach(el => el.remove());
-}
-
+/* ---- B. MathJax 渲染（SVG + SPA 安全版） ---- */
 function renderMath(article) {
   if (!window.MathJax?.typesetPromise) return;
 
@@ -154,24 +145,17 @@ function renderMath(article) {
 
   if (!targets.length) return;
 
-  // 先清理旧样式（🔥 关键）
-  resetMathJaxStyles();
-
   targets.forEach(t => markDone(t, "data-math-fixed"));
 
   try {
     window.MathJax.typesetPromise(targets);
   } catch (e) {
-    console.warn("MathJax error, retrying after reset:", e);
-
-    // 失败后再兜底重试一次
-    resetMathJaxStyles();
+    console.warn("MathJax render failed, retrying:", e);
     setTimeout(() => {
       window.MathJax.typesetPromise(targets);
     }, 300);
   }
 }
-
 
 /* ---- C. 加粗修复 ---- */
 function fixBold(article) {
@@ -285,7 +269,7 @@ function applyPangu(article) {
   }
 }
 
-/* ===================== 5. 统一入口 ===================== */
+/* ===================== 6. 统一入口 ===================== */
 
 function runAllFixes() {
   const article = document.querySelector(".md-content article");
@@ -299,7 +283,7 @@ function runAllFixes() {
   applyPangu(article);
 }
 
-/* ===================== 6. MkDocs Material SPA 适配 ===================== */
+/* ===================== 7. MkDocs Material SPA 适配 ===================== */
 
 document$.subscribe(() => {
   schedule(runAllFixes);
