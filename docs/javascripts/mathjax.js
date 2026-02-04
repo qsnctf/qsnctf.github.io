@@ -18,6 +18,7 @@ window.MathJax = {
     showProcessingMessages: false,
     messageStyle: "none"
   };
+  
 window.addEventListener('load', function() { 
     var p=localStorage.getItem("data-md-color-primary");
     if (p){
@@ -33,3 +34,10 @@ window.addEventListener('load', function() {
     }
 
 }, false);
+
+document$.subscribe(() => { 
+  MathJax.startup.output.clearCache()
+  MathJax.typesetClear()
+  MathJax.texReset()
+  MathJax.typesetPromise()
+})
