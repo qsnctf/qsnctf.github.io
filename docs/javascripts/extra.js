@@ -165,3 +165,11 @@ document$.subscribe(() => {
     });
   }
 });
+
+
+document.addEventListener("DOMContentSwitch", function() {
+  // 触发 Markmap 重新扫描 DOM 并渲染
+  if (typeof markmap !== 'undefined' && markmap.autoLoader) {
+    markmap.autoLoader.renderAll();
+  }
+});
