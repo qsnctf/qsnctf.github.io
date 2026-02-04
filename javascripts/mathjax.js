@@ -1,7 +1,8 @@
 window.MathJax = {
     tex2jax: {
-      inlineMath: [ ["\\(","\\)"] ],
-      displayMath: [ ["\\[","\\]"] ]
+    inlineMath: [ ["\\(","\\)"], ["$","$"] ], // Added $ support
+    displayMath: [ ["\\[","\\]"], ["$$","$$"] ], // Ensure $$ support
+    processEscapes: true
     },
     TeX: {
       TagSide: "right",
