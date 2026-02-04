@@ -1,0 +1,107 @@
+/* ======================================
+   mkdocs-markmap 优化版（轻量边框 + 精致阴影）
+   ====================================== */
+
+/* === 容器自适应 & 细节优化 === */
+.language-markmap.mkdocs-markmap {
+    /* 调整为更轻盈的 1px 边框 */
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    
+    /* 稍微收紧内边距，增加内容区 */
+    padding: 0.5rem;
+    
+    /* 高度与布局保持稳定 */
+    height: 60vh !important;
+    min-height: 500px !important;
+    width: 100% !important;
+    background-color: #ffffff; /* 改为纯白，更显干净 */
+    border-radius: 8px; /* 圆角略微减小，更硬朗精致 */
+    
+    /* 优化阴影：使用更浅、更弥散的阴影 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* === SVG 层级控制 === */
+.language-markmap.mkdocs-markmap > svg {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* === Markmap 变量与字体优化 === */
+.markmap {
+  --markmap-max-width: 9999px;
+  --markmap-a-color: #0097e6;
+  --markmap-a-hover-color: #00a8ff;
+  --markmap-code-bg: #f8f9fa;
+  --markmap-code-color: #e83e8c; /* 典型的代码粉色 */
+  --markmap-highlight-bg: #fff3bf;
+  --markmap-table-border: 1px solid #dee2e6;
+  --markmap-font: 400 15px/1.5 "Inter", "Segoe UI", Roboto, sans-serif;
+  --markmap-circle-open-bg: #fff;
+  --markmap-text-color: #2d3436;
+  --markmap-highlight-node-bg: #fffbe6;
+
+  font: var(--markmap-font);
+  color: var(--markmap-text-color);
+}
+
+/* === 连线平滑度 === */
+.markmap-link {
+    fill: none;
+    stroke-opacity: 0.6; /* 让连线不那么刺眼 */
+}
+
+/* === 节点圆点优化 === */
+.markmap-node > circle {
+    cursor: pointer;
+    stroke-width: 1px; /* 边框减细 */
+    stroke: #b2bec3;
+    fill: var(--markmap-circle-open-bg);
+    transition: all 0.2s ease;
+}
+
+.markmap-node > circle:hover {
+    stroke: #0097e6;
+    stroke-width: 1.5px;
+    fill: #f0faff;
+}
+
+/* === 富文本内容优化 === */
+.markmap-foreign {
+    display: inline-block;
+    line-height: 1.4;
+}
+
+.markmap-foreign code {
+    padding: 0.15em 0.3em;
+    font-size: 0.9em;
+    color: var(--markmap-code-color);
+    background-color: var(--markmap-code-bg);
+    border: 1px solid rgba(0,0,0,0.05); /* 给 code 加个极细边框 */
+    border-radius: 3px;
+}
+
+/* === 图片与表格细节 === */
+.markmap-foreign img {
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.markmap-foreign table {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* === 节点高亮框优化 === */
+.markmap-highlight rect {
+    fill: var(--markmap-highlight-node-bg);
+    rx: 4;
+    ry: 4;
+    stroke: #ffe066;
+    stroke-width: 1px; /* 边框减细 */
+}
