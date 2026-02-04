@@ -22,10 +22,12 @@ if (typeof document$ !== "undefined") {
         MathJax.texReset();
         MathJax.typesetClear();
 
-        // ✅ 只重排正文（更快、更稳）
-        const content = document.querySelector(".md-content") || document.body;
+        // ✅ 关键修复：必须传可迭代对象
+        const targets =
+          document.querySelectorAll(".md-content") ||
+          document.querySelectorAll("body");
 
-        MathJax.typesetPromise(content).catch(err => {
+        MathJax.typesetPromise(targets).catch(err => {
           console.error("MathJax rendering error:", err);
         });
       });
