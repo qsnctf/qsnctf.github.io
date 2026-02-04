@@ -167,8 +167,8 @@ objdump -d program
 - **IDA**：功能强大，偏专业
 - **Ghidra**：免费开源，非常适合学习
 
-![IDA](assets\605091717ff17.jpg)
+![IDA](./assets\605091717ff17.jpg)
 
 
 
-![Ghidra](assets\cb6ccf3b4ec6d447239e796adbbe2480.png)
+![Ghidra](.\assets\cb6ccf3b4ec6d447239e796adbbe2480.png)
