@@ -96,7 +96,6 @@ copyright: Copyright 青少年CTF &copy; 2025 版权所有
 extra_css:
   - stylesheets/markmap.css
   - stylesheets/main.css
-  - 
   
 # markdown 拓展
 markdown_extensions:
