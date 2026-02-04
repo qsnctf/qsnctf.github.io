@@ -1712,6 +1712,84 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#可执行文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可执行文件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#反汇编工具ctf中最常用" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反汇编工具(CTF中最常用)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="反汇编工具(CTF中最常用)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#什么是反汇编" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是“反汇编”？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#常见反汇编工具" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见反汇编工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见反汇编工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-objdump命令行工具" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 objdump（命令行工具）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-ida--ghidra图形化工具" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 IDA / Ghidra（图形化工具）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5924,6 +6002,84 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#可执行文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可执行文件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#反汇编工具ctf中最常用" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反汇编工具(CTF中最常用)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="反汇编工具(CTF中最常用)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#什么是反汇编" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是“反汇编”？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#常见反汇编工具" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见反汇编工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见反汇编工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-objdump命令行工具" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 objdump（命令行工具）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-ida--ghidra图形化工具" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 IDA / Ghidra（图形化工具）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6076,9 +6232,9 @@
 <h4 id="-masm">🔹 MASM<a class="headerlink" href="#-masm" title="Permanent link">¶</a></h4>
 <ul>
 <li>Windows 平台常见</li>
+<li>更偏向系统级开发</li>
+<li>在 CTF 中出现较少</li>
 </ul>
-<p>更偏向系统级开发</p>
-<p>在 CTF 中出现较少</p>
 <hr/>
 <h2 id="链接器linker">链接器（Linker）<a class="headerlink" href="#链接器linker" title="Permanent link">¶</a></h2>
 <h3 id="为什么需要链接器">为什么需要链接器？<a class="headerlink" href="#为什么需要链接器" title="Permanent link">¶</a></h3>
@@ -6095,6 +6251,86 @@
 <p>🔗 <strong>把“零件”组装成“整台机器”</strong></p>
 </blockquote>
 <p>在 Linux 中，最常见的链接器是 <code>ld</code>。</p>
+<hr/>
+<h2 id="可执行文件">可执行文件<a class="headerlink" href="#可执行文件" title="Permanent link">¶</a></h2>
+<p>当汇编器和链接器工作完成后，我们得到的就是：</p>
+<ul>
+<li>ELF 文件（Linux）</li>
+<li>EXE 文件（Windows）</li>
+</ul>
+<p>🎯 <strong>这一步非常关键</strong>，因为：</p>
+<ul>
+<li>CTF 中给你的，往往就是这个文件</li>
+<li>Reverse / Pwn 的分析对象，几乎永远是它</li>
+</ul>
+<hr/>
+<h2 id="反汇编工具ctf中最常用">反汇编工具(CTF中最常用)<a class="headerlink" href="#反汇编工具ctf中最常用" title="Permanent link">¶</a></h2>
+<h3 id="什么是反汇编">什么是“反汇编”？<a class="headerlink" href="#什么是反汇编" title="Permanent link">¶</a></h3>
+<p>如果说：</p>
+<ul>
+<li>汇编器：<strong>汇编 → 机器码</strong></li>
+</ul>
+<p>那么反汇编工具就是：</p>
+<ul>
+<li>🔍 <strong>机器码 → 汇编</strong></li>
+</ul>
+<p>在安全分析中，这是最常见的操作之一。</p>
+<hr/>
+<h3 id="常见反汇编工具">常见反汇编工具<a class="headerlink" href="#常见反汇编工具" title="Permanent link">¶</a></h3>
+<h4 id="-objdump命令行工具">🔹 objdump（命令行工具）<a class="headerlink" href="#-objdump命令行工具" title="Permanent link">¶</a></h4>
+<ul>
+<li>Linux 自带</li>
+<li>适合快速查看汇编</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>objdump<span class="w"> </span>-d<span class="w"> </span>program
+</code></pre></div>
+<p>✅ 优点</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">特性</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>轻量</strong></td>
+<td style="text-align: left;">资源占用少，对系统负担低</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>快速</strong></td>
+<td style="text-align: left;">响应迅速，执行效率高</td>
+</tr>
+</tbody>
+</table>
+<p>❌ 缺点</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">特性</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>可视化不足</strong></td>
+<td style="text-align: left;">界面不够直观，学习成本较高</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h4 id="-ida--ghidra图形化工具">🔹 IDA / Ghidra（图形化工具）<a class="headerlink" href="#-ida--ghidra图形化工具" title="Permanent link">¶</a></h4>
+<ul>
+<li>逆向工程中的“标配工具”</li>
+<li>自动分析函数、跳转、调用关系</li>
+</ul>
+<p>你以后会大量和它们打交道 😊</p>
+<ul>
+<li><strong>IDA</strong>：功能强大，偏专业</li>
+<li><strong>Ghidra</strong>：免费开源，非常适合学习</li>
+</ul>
+<p><img alt="IDA" src="G:\0docs-qsnctf\qsnctf.github.io\docs\Code\Assembly\assets\605091717ff17.jpg"/></p>
+<p><img alt="Ghidra" src="G:\0docs-qsnctf\qsnctf.github.io\docs\Code\Assembly\assets\cb6ccf3b4ec6d447239e796adbbe2480.png"/></p>
 
 
 
