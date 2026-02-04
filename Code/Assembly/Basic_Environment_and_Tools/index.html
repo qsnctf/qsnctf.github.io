@@ -1790,6 +1790,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#调试器debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调试器（Debugger）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="调试器（Debugger）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#为什么需要调试器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么需要调试器？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb重点工具" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gdb（重点工具）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#为什么初学阶段不用记命令" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么初学阶段不用记命令？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#小结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小结
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6080,6 +6141,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#调试器debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调试器（Debugger）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="调试器（Debugger）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#为什么需要调试器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么需要调试器？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb重点工具" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gdb（重点工具）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#为什么初学阶段不用记命令" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么初学阶段不用记命令？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#小结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小结
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6331,6 +6453,56 @@
 </ul>
 <p><img alt="IDA" src="assets\605091717ff17.jpg"/></p>
 <p><img alt="Ghidra" src="assets\cb6ccf3b4ec6d447239e796adbbe2480.png"/></p>
+<hr/>
+<h2 id="调试器debugger">调试器（Debugger）<a class="headerlink" href="#调试器debugger" title="Permanent link">¶</a></h2>
+<h3 id="为什么需要调试器">为什么需要调试器？<a class="headerlink" href="#为什么需要调试器" title="Permanent link">¶</a></h3>
+<p>有些程序：</p>
+<ul>
+<li>不是“看一眼汇编就能懂”</li>
+<li>必须**一步一步跟着它执行**</li>
+</ul>
+<p>这时就需要调试器。</p>
+<hr/>
+<h3 id="gdb重点工具">gdb（重点工具）<a class="headerlink" href="#gdb重点工具" title="Permanent link">¶</a></h3>
+<p>在 Linux + CTF 环境中，<strong>gdb 是必会工具</strong>。</p>
+<p>它可以：</p>
+<ul>
+<li>单步执行指令</li>
+<li>查看寄存器内容</li>
+<li>查看内存和栈</li>
+<li>在关键位置停下来观察程序行为</li>
+</ul>
+<p>可以理解为：</p>
+<blockquote>
+<p>🧠 <strong>让程序“慢下来”，方便你思考</strong></p>
+</blockquote>
+<p><img alt="Linux下gdb调试工具介绍和gdb常用调试方法介绍_linux gdb调试-CSDN博客" src="assets\674550d279404f418f4959ab7685d6a7.png"/></p>
+<hr/>
+<h2 id="为什么初学阶段不用记命令">为什么初学阶段不用记命令？<a class="headerlink" href="#为什么初学阶段不用记命令" title="Permanent link">¶</a></h2>
+<p>如果你发现自己现在：</p>
+<ul>
+<li>记不住参数</li>
+<li>看不懂输出</li>
+<li>不知道什么时候用哪个工具</li>
+</ul>
+<p>👉 <strong>完全正常</strong>。</p>
+<p>在这一阶段，你只需要做到：</p>
+<ul>
+<li>知道“世界上有这些工具”</li>
+<li>明白“它们分别解决什么问题”</li>
+</ul>
+<p>随着后续章节（寄存器 / 栈 / 函数调用）的展开，
+ 这些工具会**自然地反复出现**，你会在实战中慢慢熟悉它们。</p>
+<hr/>
+<h2 id="小结">小结<a class="headerlink" href="#小结" title="Permanent link">¶</a></h2>
+<p>在汇编学习的起点，我们需要认识几类核心工具：</p>
+<ul>
+<li>🛠️ <strong>汇编器</strong>：把汇编翻译成机器指令</li>
+<li>🔗 <strong>链接器</strong>：生成可执行文件</li>
+<li>🔍 <strong>反汇编工具</strong>：从程序中“看回汇编”</li>
+<li>🧠 <strong>调试器</strong>：观察程序真实执行过程</li>
+</ul>
+<p>它们共同构成了你进入汇编与安全分析世界的**基础装备**。</p>
 
 
 
