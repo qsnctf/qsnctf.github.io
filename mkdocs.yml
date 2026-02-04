@@ -250,6 +250,7 @@ nav:
         - 维吉尼亚密码: Crypto/Classical_Cryptography/Multi_table_replacement/Vigen.md
       - 其他密码:
         - 培根密码: Crypto/Other_Cryptography/Baconian.md
+        - 栅栏密码: Crypto/Other_Cryptography/Fence.md
     - 图形密码:
       - 介绍: Crypto/Graphic_Cryptography/Introduction.md
       - 猪圈密码: Crypto/Graphic_Cryptography/Piggy_Bank.md
