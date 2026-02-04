@@ -95,5 +95,22 @@ HELLO
 
 ![](attachments/image-20260201025035942.png)
 
+## 变种.圣堂武士密码
 
+![](assets/eeUfQzM.png!web)
 
+圣堂武士密码是共济会的”猪圈密码“的一个变种，一直被共济会圣殿骑士用。
+
+## 其他变种
+
+### 变种1
+
+![](assets/7vYjyyz.jpg!web)
+
+### 变种2
+
+![](assets/2aYnaqR.jpg!web)
+
+### 变种3
+
+![](assets/Nnqme2b.png!web)
