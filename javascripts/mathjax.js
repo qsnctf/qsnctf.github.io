@@ -32,6 +32,3 @@ window.addEventListener('load', function() {
     }
 
 }, false);
-
-//添加空格
-pangu.spacingPageBody();
