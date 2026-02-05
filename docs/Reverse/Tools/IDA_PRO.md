@@ -7,3 +7,44 @@ IDA Pro（Interactive DisAssembler Professional）是由 Hex-Rays 公司开发�
 ![](assets/image-20260205142147820.png)
 
 ![](assets/image-20260205142159048.png)
+
+此外，Hex-Rays 公司还推出了基于云端分析引擎的免费逆向工具 **IDA Free**，但目前仅支持 x86 架构的反汇编与分析。
+
+## IDA基础
+
+> 其他未提及内容，请参考官方文档：https://docs.hex-rays.com/getting-started/install-ida
+>
+> 由于篇幅限制，不额外赘述。
+
+### 使用
+
+#### Quick Start页面
+
+![image-20260205142946021](assets/image-20260205142946021.png)
+
+这是**IDA Pro 启动时的“快速开始（Quick start）”引导界面**，作用是帮助用户**选择接下来要做什么工作**。
+ 可以把它理解为 IDA 的“项目入口页”。
+
+你可以理解为
+
+> **你是要新分析一个文件？继 续自己的工作？还是打开之前的分析？**
+
+##### **New — “Disassemble a new file”**
+
+**含义：开始反汇编一个全新的可执行文件**
+
+点击后，你会进入典型流程：
+
+1. 选择要分析的文件（.exe / .dll / .bin / .so / .elf 等）
+2. IDA 识别文件格式（PE、ELF、Mach-O 等）
+3. 选择 CPU 架构（x86、x64、ARM、MIPS 等，取决于你的插件）
+4. IDA 开始自动分析（反汇编 + 代码识别）
+5. 进入主界面查看反汇编结果
+
+ **适用场景：**
+
+- 你有一个新的程序要逆向
+- 第一次分析某个目标文件
+- 做恶意代码分析、漏洞研究、破解分析等
+
+**这应该是你以后最常点击的按钮。**
