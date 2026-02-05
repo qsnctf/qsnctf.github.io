@@ -98,3 +98,51 @@ IDA Pro（Interactive DisAssembler Professional）是由 Hex-Rays 公司开发�
 
 - 你昨天分析了一半，今天继续
 - 需要重新查看历史分析结果
+
+### 基础程序演示
+
+使用C语言写一个简单的hello world程序
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+
+编译一下
+
+```bash
+gcc .\hello.c -o hello.exe
+```
+
+在IDA的`Quick Start`页面选择`New`打开这一编译出的`hello.exe`
+
+![](assets/image-20260205144128072.png)
+
+这个界面是 **IDA 在正式开始反汇编之前的“装载与识别配置窗口”**，主要做三件事：
+
+1. **告诉 IDA：这是什么类型的文件**
+2. **告诉 IDA：目标 CPU 架构是什么**
+3. **告诉 IDA：用什么方式加载与分析**
+
+**你可以把它理解为：反汇编的“预处理与参数设置页面”。**
+
+> 如果没有其他需要操作的，我们在这里可以直接点击`OK`进入分析。
+
+比如该程序，`Load file C:\Users\Moxin\Desktop\1\hello.exe as`表示位置在`C:\Users\Moxin\Desktop\1\hello.exe`
+
+下面还有三个选项，
+
+**Portable executable for AMD64 (PE) [pe.dll]  **（当前被选中）
+
+这表示：
+
+- IDA **自动识别出这是一个 Windows 可执行文件（PE格式）**
+- 目标平台是 **x64（AMD64）**
+- IDA 会使用 **pe.dll 加载器**来解析这个文件
+
+**一般情况下你几乎永远保持默认，不需要改。**
