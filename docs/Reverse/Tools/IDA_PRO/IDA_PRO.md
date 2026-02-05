@@ -16,6 +16,10 @@ IDA Pro（Interactive DisAssembler Professional）是由 Hex-Rays 公司开发�
 >
 > 由于篇幅限制，不额外赘述。
 
+!!! question "提醒"
+
+    在较早版本的 IDA 中，通常会同时提供 ida.exe 和 ida64.exe 两个启动程序，分别用于分析 32 位（x86）和 64 位（x64）可执行文件。因此，在使用 IDA 分析某个二进制程序时，必须根据目标程序的指令集位宽选择对应的启动器。如今的 IDA 已不再采用这种区分方式，只需使用一个统一的启动器即可完成不同架构程序的分析。
+
 ### 使用
 
 #### Quick Start页面
@@ -135,9 +139,11 @@ gcc .\hello.c -o hello.exe
 
 比如该程序，`Load file C:\Users\Moxin\Desktop\1\hello.exe as`表示位置在`C:\Users\Moxin\Desktop\1\hello.exe`
 
+![](assets/image-20260205144908196.png)
+
 下面还有三个选项，
 
-**Portable executable for AMD64 (PE) [pe.dll]  **（当前被选中）
+1. **Portable executable for AMD64 (PE) [pe.dll]  **（当前被选中）
 
 这表示：
 
@@ -146,3 +152,31 @@ gcc .\hello.c -o hello.exe
 - IDA 会使用 **pe.dll 加载器**来解析这个文件
 
 **一般情况下你几乎永远保持默认，不需要改。**
+
+2. **MS-DOS executable (EXE) [dos.dll]**
+
+如果你选择这个：
+
+- IDA 会把文件当作 **老式 16 位 DOS 程序**来解析
+- 适用于：
+  - 非常古老的 DOS 程序
+  - 早期 16 位可执行文件
+
+**对现代 Windows 程序基本不用这个。**
+
+3. **Binary file**
+
+含义：
+
+- 把文件当作**纯二进制数据**
+- **不会使用 PE 解析器**
+- IDA 不会自动识别函数、段、导入表等
+
+适用于：
+
+- 固件（firmware）
+- 嵌入式二进制
+- 无格式裸文件
+- 自定义加壳文件
+
+**逆向嵌入式设备时会经常用到。**
