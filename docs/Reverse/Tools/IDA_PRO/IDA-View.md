@@ -124,3 +124,102 @@ IDA-View 并不是孤立存在的，它与多个窗口联动：
    你在 IDA-View 选中某地址，Hex View 会同步定位到相同内存区域。
 - **Structures / Enums**：
    你可以在 IDA-View 中将某块数据应用为结构体，自动格式化显示。
+
+## 汇编分析
+
+![](assets/image-20260205171521328.png)
+
+```assembly
+; ============================================================
+; 目标平台：Windows x64
+; 功能：打印 "Hello, World!" 然后返回 0
+; ============================================================
+
+.data
+; -------------------------------
+; 数据段：存放字符串常量
+; -------------------------------
+Buffer db "Hello, World!", 0      ; C 风格字符串，以 0 结尾
+
+.code
+; -------------------------------
+; 代码段
+; -------------------------------
+
+; 等价 C 原型：
+; int __fastcall main(int argc, const char **argv, const char **envp)
+
+public main
+main proc near
+
+; ========== 【函数序言 Prologue】 ==========
+
+push    rbp
+; 把调用者的 rbp 压栈保存
+
+mov     rbp, rsp
+; 建立新的栈帧：rbp 作为本函数的基址指针
+
+sub     rsp, 20h
+; 为本函数分配 32 字节栈空间：
+; 1) 局部变量（即使没用也会保留）
+; 2) 保证调用前 16 字节对齐（Windows x64 ABI 要求）
+
+; ========== 【运行时初始化】 ==========
+
+call    __main
+; MSVC 特有的运行时初始化函数：
+; - 初始化 C 运行库
+; - 构造全局对象
+; - 设置异常处理环境
+; 对用户逻辑来说是“模板代码”
+
+; ========== 【真正的程序逻辑】 ==========
+
+lea     rax, Buffer      ; rax = &Buffer
+; 取字符串地址 "Hello, World!" 的内存地址
+
+mov     rcx, rax         ; rcx = rax
+; Windows x64 下第 1 个函数参数必须放在 rcx
+; 所以这里是在准备：
+; puts(Buffer)
+
+call    puts_0
+; 调用 C 库的 puts：
+; 等价于 C：
+; puts("Hello, World!");
+
+; ========== 【设置返回值】 ==========
+
+mov     eax, 0
+; main 返回 0，相当于：
+; return 0;
+
+; ========== 【函数尾声 Epilogue】 ==========
+
+add     rsp, 20h
+; 释放之前分配的 32 字节栈空间
+
+pop     rbp
+; 恢复调用者的 rbp
+
+retn
+; 返回到操作系统（或调用者）
+
+main endp
+
+end
+
+```
+
+等价C代码
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    puts("Hello, World!");
+    return 0;
+}
+```
+
