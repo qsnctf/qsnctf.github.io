@@ -13,6 +13,13 @@ blockquote.page-copyright {
     z-index: auto !important;
 }
 
+/* 文档内图片居中 */
+.md-typeset img {
+    display: block;
+    margin: 0 auto;
+}
+
+
 /* 防盗水印
 Author: Moxin
 Date: 2026-01-30

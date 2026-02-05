@@ -87,26 +87,61 @@ function initImageZoom(article) {
 
         const wrapper = document.createElement("div");
         wrapper.style.cssText = `
-        display:flex;flex-direction:column;
-        align-items:center;gap:15px;
-      `;
-
-        const clone = img.cloneNode();
-        clone.style.cssText = `
-        max-width:90vw;max-height:80vh;
-        border-radius:8px;
-        box-shadow:0 10px 50px rgba(0,0,0,0.5);
-        transition:transform .2s;
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:20px;
+        max-width:95vw;
+        max-height:90vh;
       `;
 
         const panel = document.createElement("div");
+        panel.style.cssText = `
+        position:absolute;
+        bottom:20px;
+        left:50%;
+        transform:translateX(-50%);
+        display:flex;
+        gap:12px;
+        background:rgba(0,0,0,0.7);
+        padding:12px 16px;
+        border-radius:12px;
+        backdrop-filter:blur(10px);
+        z-index:10;
+        box-shadow:0 4px 20px rgba(0,0,0,0.3);
+      `;
+        
         panel.innerHTML = `
-        <button data-a="in">➕</button>
-        <button data-a="out">➖</button>
-        <button data-a="l">⟲</button>
-        <button data-a="r">⟳</button>
-        <button data-a="reset">↺</button>
-        <button data-a="close">✕</button>
+        <button data-a="in" title="放大" style="background:#4CAF50;color:white;border:none;border-radius:6px;width:36px;height:36px;font-size:16px;cursor:pointer;transition:all 0.2s;">➕</button>
+        <button data-a="out" title="缩小" style="background:#f44336;color:white;border:none;border-radius:6px;width:36px;height:36px;font-size:16px;cursor:pointer;transition:all 0.2s;">➖</button>
+        <button data-a="l" title="左旋转" style="background:#2196F3;color:white;border:none;border-radius:6px;width:36px;height:36px;font-size:16px;cursor:pointer;transition:all 0.2s;">⟲</button>
+        <button data-a="r" title="右旋转" style="background:#2196F3;color:white;border:none;border-radius:6px;width:36px;height:36px;font-size:16px;cursor:pointer;transition:all 0.2s;">⟳</button>
+        <button data-a="reset" title="重置" style="background:#FF9800;color:white;border:none;border-radius:6px;width:36px;height:36px;font-size:16px;cursor:pointer;transition:all 0.2s;">↺</button>
+        <button data-a="close" title="关闭" style="background:#9E9E9E;color:white;border:none;border-radius:6px;width:36px;height:36px;font-size:16px;cursor:pointer;transition:all 0.2s;">✕</button>
+      `;
+
+        // 按钮悬停效果
+        panel.querySelectorAll('button').forEach(btn => {
+          btn.addEventListener('mouseenter', () => {
+            btn.style.transform = 'scale(1.1)';
+            btn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.3)';
+          });
+          btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'scale(1)';
+            btn.style.boxShadow = 'none';
+          });
+        });
+
+        const clone = img.cloneNode();
+        clone.style.cssText = `
+        max-width:90vw;
+        max-height:80vh;
+        border-radius:8px;
+        box-shadow:0 15px 60px rgba(0,0,0,0.5);
+        transition:transform 0.3s ease;
+        z-index:1;
       `;
 
         panel.onclick = e => {
@@ -127,6 +162,24 @@ function initImageZoom(article) {
         overlay.onclick = e => {
           if (e.target === overlay) overlay.remove();
         };
+
+        // 添加键盘快捷键支持
+        const handleKeydown = (e) => {
+          if (e.key === 'Escape') overlay.remove();
+          if (e.key === '+' || e.key === '=') scale += 0.2;
+          if (e.key === '-' || e.key === '_') scale = Math.max(0.2, scale - 0.2);
+          if (e.key === '[') rotate -= 90;
+          if (e.key === ']') rotate += 90;
+          if (e.key === 'r' || e.key === 'R') {
+            scale = 1;
+            rotate = 0;
+          }
+          clone.style.transform = `scale(${scale}) rotate(${rotate}deg)`;
+        };
+        
+        overlay.addEventListener('keydown', handleKeydown);
+        overlay.setAttribute('tabindex', '0');
+        overlay.focus();
 
         wrapper.append(clone, panel);
         overlay.append(wrapper);
