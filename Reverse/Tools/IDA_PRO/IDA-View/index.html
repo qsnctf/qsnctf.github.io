@@ -16,7 +16,7 @@
         <link rel="prev" href="../IDA_User_Interface/">
       
       
-        <link rel="next" href="../../../../Pwn/">
+        <link rel="next" href="../IDA-Pesudocode-A/">
       
       
         
@@ -5296,6 +5296,8 @@
       
         
       
+        
+      
     
     
     
@@ -5496,10 +5498,110 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ida-view-中每一行的含义" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IDA-View 中每一行的含义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ida-view-可进行的核心操作" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IDA-View 可进行的核心操作
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IDA-View 可进行的核心操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-重命名函数与变量" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 重命名函数与变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-添加注释" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 添加注释
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-切换代码数据" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 切换代码/数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ida-view-与其他窗口的关系" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IDA-View 与其他窗口的关系
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDA-Pesudocode-A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDA Pro 伪代码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -6073,6 +6175,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ida-view-中每一行的含义" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IDA-View 中每一行的含义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ida-view-可进行的核心操作" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IDA-View 可进行的核心操作
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IDA-View 可进行的核心操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-重命名函数与变量" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 重命名函数与变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-添加注释" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 添加注释
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-切换代码数据" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 切换代码/数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ida-view-与其他窗口的关系" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IDA-View 与其他窗口的关系
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6235,6 +6409,65 @@
 <p>“点击空格即可切换”</p>
 </blockquote>
 <p><img alt="" src="../assets/image-20260205164720743.png"/></p>
+<h2 id="ida-view-中每一行的含义"><strong>IDA-View 中每一行的含义</strong><a class="headerlink" href="#ida-view-中每一行的含义" title="Permanent link">¶</a></h2>
+<p>在 IDA-View 里，一行典型反汇编代码通常包含以下部分：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>.text:0000000140001000 push rbp
+</code></pre></div>
+<p>可以拆解为：</p>
+<ol>
+<li><strong>段名（Segment）</strong>：<code>.text</code>
+    表示该指令位于代码段</li>
+<li><strong>地址（Address）</strong>：<code>0000000140001000</code>
+    表示该指令在虚拟内存中的位置</li>
+<li><strong>指令（Instruction）</strong>：<code>push rbp</code>
+    真正的汇编操作</li>
+</ol>
+<p>IDA 会自动区分：</p>
+<ul>
+<li>代码（Code）</li>
+<li>数据（Data）</li>
+<li>未定义区域（Undefined）</li>
+</ul>
+<p>并用不同颜色或格式进行区分。</p>
+<hr/>
+<h2 id="ida-view-可进行的核心操作"><strong>IDA-View 可进行的核心操作</strong><a class="headerlink" href="#ida-view-可进行的核心操作" title="Permanent link">¶</a></h2>
+<p>在 IDA-View 中，你可以直接进行大量逆向操作，例如：</p>
+<h3 id="1-重命名函数与变量"><strong>1. 重命名函数与变量</strong><a class="headerlink" href="#1-重命名函数与变量" title="Permanent link">¶</a></h3>
+<p>右键某个函数名（如 <code>sub_401000</code>）→ Rename
+ 可以改成：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>sub_401000 → main
+</code></pre></div>
+<p>这对提升可读性非常重要。</p>
+<hr/>
+<h3 id="2-添加注释"><strong>2. 添加注释</strong><a class="headerlink" href="#2-添加注释" title="Permanent link">¶</a></h3>
+<p>你可以：</p>
+<ul>
+<li>在指令上添加行内注释</li>
+<li>在函数开头添加整体注释</li>
+</ul>
+<p>例如：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>push rbp   ; 保存栈帧
+</code></pre></div>
+<p>这对写博客、做笔记或分享分析非常有用。</p>
+<hr/>
+<h3 id="3-切换代码数据"><strong>3. 切换代码/数据</strong><a class="headerlink" href="#3-切换代码数据" title="Permanent link">¶</a></h3>
+<p>如果 IDA 误判某段数据为代码，你可以手动修正：</p>
+<ul>
+<li>右键 → Make Data</li>
+<li>或 Make Code</li>
+</ul>
+<p>这是逆向过程中非常常见的操作。</p>
+<hr/>
+<h2 id="ida-view-与其他窗口的关系"><strong>IDA-View 与其他窗口的关系</strong><a class="headerlink" href="#ida-view-与其他窗口的关系" title="Permanent link">¶</a></h2>
+<p>IDA-View 并不是孤立存在的，它与多个窗口联动：</p>
+<ul>
+<li><strong>Function Window</strong>：
+   你在函数列表中双击某函数，IDA-View 会自动跳转到对应位置。</li>
+<li><strong>Hex View</strong>：
+   你在 IDA-View 选中某地址，Hex View 会同步定位到相同内存区域。</li>
+<li><strong>Structures / Enums</strong>：
+   你可以在 IDA-View 中将某块数据应用为结构体，自动格式化显示。</li>
+</ul>
 
 
 
