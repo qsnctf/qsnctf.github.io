@@ -139,7 +139,7 @@ gcc .\hello.c -o hello.exe
 
 比如该程序，`Load file C:\Users\Moxin\Desktop\1\hello.exe as`表示位置在`C:\Users\Moxin\Desktop\1\hello.exe`
 
-![](assets/image-20260205144908196.png)
+<img style="display:block; margin: 0 auto;" src="assets/image-20260205144908196.png" />
 
 下面还有三个选项，
 
