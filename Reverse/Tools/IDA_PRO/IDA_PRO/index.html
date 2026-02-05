@@ -5429,6 +5429,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="基础程序演示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#文件识别选项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文件识别选项
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#处理器类型选项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        处理器类型选项
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
 </li>
         
       </ul>
@@ -6054,6 +6093,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="基础程序演示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#文件识别选项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文件识别选项
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#处理器类型选项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        处理器类型选项
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
 </li>
         
       </ul>
@@ -6274,6 +6352,7 @@
 <p>如果没有其他需要操作的，我们在这里可以直接点击<code>OK</code>进入分析。</p>
 </blockquote>
 <p>比如该程序，<code>Load file C:\Users\Moxin\Desktop\1\hello.exe as</code>表示位置在<code>C:\Users\Moxin\Desktop\1\hello.exe</code></p>
+<h4 id="文件识别选项">文件识别选项<a class="headerlink" href="#文件识别选项" title="Permanent link">¶</a></h4>
 <p><img src="assets/image-20260205144908196.png" style="display:block; margin: 0 auto;"/></p>
 <p>下面还有三个选项，</p>
 <ol>
@@ -6314,6 +6393,31 @@
 <li>自定义加壳文件</li>
 </ul>
 <p><strong>逆向嵌入式设备时会经常用到。</strong></p>
+<h4 id="处理器类型选项">处理器类型选项<a class="headerlink" href="#处理器类型选项" title="Permanent link">¶</a></h4>
+<p><img alt="" src="../assets/image-20260205150938510.png"/></p>
+<p>这是**非常重要的一栏**，决定了**反汇编使用哪种指令集**。</p>
+<p>默认一般是<code>MetaPC (disassemble all opcodes)   metapc</code></p>
+<p>MetaPC 是一种**通用 x86 反汇编模式**：</p>
+<ul>
+<li>不严格区分 8086 / 386 / 486 / Pentium</li>
+<li>尽量把**所有 x86 指令都能反汇编出来**</li>
+<li>兼容性最好，但**不是最精准的模式**</li>
+</ul>
+<p><strong>优点：不容易出错，能处理大多数 x86 代码</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">什么时候需要手动更改？</p>
+<p>如果你非常清楚目标程序是为某一代 CPU 编译的，可以指定更精确的处理器，例如：</p>
+<ul>
+<li>
+<p>只想分析老程序 → 选 80386</p>
+</li>
+<li>
+<p>现代程序 → 选 Pentium Pro 或 Core</p>
+</li>
+</ul>
+<p>但一般新手保持 MetaPC 没问题。</p>
+</div>
+<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
 
 
 
