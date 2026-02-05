@@ -139,6 +139,8 @@ gcc .\hello.c -o hello.exe
 
 比如该程序，`Load file C:\Users\Moxin\Desktop\1\hello.exe as`表示位置在`C:\Users\Moxin\Desktop\1\hello.exe`
 
+#### 文件识别选项
+
 <img style="display:block; margin: 0 auto;" src="assets/image-20260205144908196.png" />
 
 下面还有三个选项，
@@ -180,3 +182,31 @@ gcc .\hello.c -o hello.exe
 - 自定义加壳文件
 
 **逆向嵌入式设备时会经常用到。**
+
+#### 处理器类型选项
+
+![](assets/image-20260205150938510.png)
+
+这是**非常重要的一栏**，决定了**反汇编使用哪种指令集**。
+
+默认一般是`MetaPC (disassemble all opcodes)   metapc`
+
+MetaPC 是一种**通用 x86 反汇编模式**：
+
+- 不严格区分 8086 / 386 / 486 / Pentium
+- 尽量把**所有 x86 指令都能反汇编出来**
+- 兼容性最好，但**不是最精准的模式**
+
+**优点：不容易出错，能处理大多数 x86 代码**
+
+!!! tip "什么时候需要手动更改？"
+
+    如果你非常清楚目标程序是为某一代 CPU 编译的，可以指定更精确的处理器，例如：
+    
+    - 只想分析老程序 → 选 80386
+    
+    - 现代程序 → 选 Pentium Pro 或 Core
+    
+    但一般新手保持 MetaPC 没问题。
+
+### 
