@@ -276,7 +276,7 @@ nav:
   - Reverse: 
     - 介绍: Reverse/index.md
     - 工具:
-      - IDA Pro: Reverse/Tools/IDA_PRO/IDA_Pro.md
+      - IDA Pro: Reverse/Tools/IDA_PRO/IDA_PRO.md
   - Pwn: 
     - 介绍: Pwn/index.md
   - AI:
