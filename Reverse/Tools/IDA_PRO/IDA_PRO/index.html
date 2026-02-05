@@ -5273,7 +5273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../IDA_Pro/IDA_Pro.md" class="md-nav__link">
+      <a href="../IDA_Pro.md" class="md-nav__link">
         
   
   
@@ -5862,6 +5862,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#go--work-on-your-own新手容易忽略但很重要" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Go — “Work on your own”（新手容易忽略，但很重要）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#previous--load-the-old-disassembly继续工作" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Previous — “Load the old disassembly”（继续工作）
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5957,6 +5979,51 @@
 <li>做恶意代码分析、漏洞研究、破解分析等</li>
 </ul>
 <p><strong>这应该是你以后最常点击的按钮。</strong></p>
+<h5 id="go--work-on-your-own新手容易忽略但很重要"><strong>Go — “Work on your own”</strong>（新手容易忽略，但很重要）<a class="headerlink" href="#go--work-on-your-own新手容易忽略但很重要" title="Permanent link">¶</a></h5>
+<p>这个选项**不是去分析文件**，而是：</p>
+<p><strong>进入 IDA 主界面，但不加载任何目标文件</strong></p>
+<p>简单说：</p>
+<ul>
+<li>打开一个“空白 IDA 工作环境”</li>
+<li>你可以：</li>
+<li>写 Python 脚本（IDA Python）</li>
+<li>测试插件</li>
+<li>学习 IDA API</li>
+<li>调试 UI</li>
+<li>研究数据库结构</li>
+<li>开发自动化工具</li>
+</ul>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>开发 IDA 插件</li>
+<li>学习 IDA 脚本</li>
+<li>调试自己的逆向工具</li>
+<li>做研究，而不是分析某个二进制文件</li>
+<li>稍后再打开一个二进制文件</li>
+</ul>
+<h5 id="previous--load-the-old-disassembly继续工作"><strong>Previous — “Load the old disassembly”</strong>（继续工作）<a class="headerlink" href="#previous--load-the-old-disassembly继续工作" title="Permanent link">¶</a></h5>
+<p><strong>打开你之前分析过的 IDA 数据库（.idb / .i64）</strong></p>
+<p>当你在 IDA 里分析一个文件时，IDA 会保存一个数据库文件：</p>
+<ul>
+<li>32 位分析 → <code>.idb</code></li>
+<li>64 位分析 → <code>.i64</code></li>
+</ul>
+<p>点击 <strong>Previous</strong> 后，你可以：</p>
+<ul>
+<li>选择之前的 <code>.idb / .i64</code> 文件</li>
+<li>直接回到你上次的分析状态</li>
+<li>包含你：</li>
+<li>重命名的函数</li>
+<li>添加的注释</li>
+<li>标记的代码</li>
+<li>自定义结构</li>
+<li>修改的符号</li>
+</ul>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>你昨天分析了一半，今天继续</li>
+<li>需要重新查看历史分析结果</li>
+</ul>
 
 
 
