@@ -53,7 +53,7 @@ IDA Pro（Interactive DisAssembler Professional）是由 Hex-Rays 公司开发�
 
 **这应该是你以后最常点击的按钮。**
 
-##### **Go — “Work on your own”**（新手容易忽略，但很重要）
+##### **Go — “Work on your own”**
 
 这个选项**不是去分析文件**，而是：
 
@@ -78,7 +78,7 @@ IDA Pro（Interactive DisAssembler Professional）是由 Hex-Rays 公司开发�
 - 做研究，而不是分析某个二进制文件
 - 稍后再打开一个二进制文件
 
-##### **Previous — “Load the old disassembly”**（继续工作）
+##### **Previous — “Load the old disassembly”**
 
 **打开你之前分析过的 IDA 数据库（.idb / .i64）**
 
