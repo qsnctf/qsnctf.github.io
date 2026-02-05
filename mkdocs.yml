@@ -279,6 +279,7 @@ nav:
       - IDA Pro: 
         - 介绍: Reverse/Tools/IDA_PRO/IDA_PRO.md
         - IDA Pro 用户界面: Reverse/Tools/IDA_PRO/IDA_User_Interface.md
+        - IDA Pro IDA-View: Reverse/Tools/IDA_PRO/IDA-View.md
 
   - Pwn: 
     - 介绍: Pwn/index.md
