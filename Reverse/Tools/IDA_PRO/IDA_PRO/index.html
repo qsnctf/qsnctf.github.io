@@ -5454,19 +5454,41 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#加载地址" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        加载地址
+      
+    </span>
+  </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#分析选项" class="md-nav__link">
     <span class="md-ellipsis">
       
-        
+        分析选项
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#加载选项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        加载选项
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -6118,19 +6140,41 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#加载地址" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        加载地址
+      
+    </span>
+  </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#分析选项" class="md-nav__link">
     <span class="md-ellipsis">
       
-        
+        分析选项
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#加载选项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        加载选项
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -6353,7 +6397,7 @@
 </blockquote>
 <p>比如该程序，<code>Load file C:\Users\Moxin\Desktop\1\hello.exe as</code>表示位置在<code>C:\Users\Moxin\Desktop\1\hello.exe</code></p>
 <h4 id="文件识别选项">文件识别选项<a class="headerlink" href="#文件识别选项" title="Permanent link">¶</a></h4>
-<p><img src="assets/image-20260205144908196.png" style="display:block; margin: 0 auto;"/></p>
+<p><img alt="" src="../assets/image-20260205144908196.png"/></p>
 <p>下面还有三个选项，</p>
 <ol>
 <li>**Portable executable for AMD64 (PE) [pe.dll]  **（当前被选中）</li>
@@ -6417,7 +6461,48 @@
 </ul>
 <p>但一般新手保持 MetaPC 没问题。</p>
 </div>
-<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<h4 id="加载地址">加载地址<a class="headerlink" href="#加载地址" title="Permanent link">¶</a></h4>
+<p>在左下角：</p>
+<p><img alt="" src="../assets/image-20260205151144636.png"/></p>
+<p>这决定：<strong>IDA 把程序加载到什么虚拟地址进行分析</strong></p>
+<p>一般情况下：</p>
+<ul>
+<li><strong>保持默认 0</strong></li>
+<li>只有在：</li>
+<li>固件分析</li>
+<li>嵌入式逆向</li>
+<li>非标准二进制</li>
+<li>内存镜像分析</li>
+</ul>
+<p>时才会手动修改。</p>
+<h4 id="分析选项">分析选项<a class="headerlink" href="#分析选项" title="Permanent link">¶</a></h4>
+<p><img alt="" src="../assets/image-20260205151215678.png"/></p>
+<p>中间有两个勾选框：</p>
+<ol>
+<li><strong>Enabled</strong></li>
+</ol>
+<p>表示：<strong>开启 IDA 的自动分析引擎</strong></p>
+<p>IDA 会自动：</p>
+<ul>
+<li>识别函数</li>
+<li>识别代码块</li>
+<li>识别调用关系</li>
+<li>识别数据结构</li>
+</ul>
+<p><strong>几乎永远保持勾选。</strong></p>
+<ol>
+<li><strong>Indicator enable</strong></li>
+</ol>
+<p>这是 UI 相关选项：</p>
+<ul>
+<li>会在 IDA 界面底部显示**分析进度条**</li>
+<li>告诉你：</li>
+<li>分析进行到哪一步</li>
+<li>还剩多少</li>
+</ul>
+<p>建议：<strong>保持勾选。</strong></p>
+<h4 id="加载选项">加载选项<a class="headerlink" href="#加载选项" title="Permanent link">¶</a></h4>
+<p><img alt="" src="../assets/image-20260205151400550.png"/></p>
 
 
 
