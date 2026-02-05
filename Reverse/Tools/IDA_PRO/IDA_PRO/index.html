@@ -6173,6 +6173,10 @@
 <p>其他未提及内容，请参考官方文档：<a href="https://docs.hex-rays.com/getting-started/install-ida">https://docs.hex-rays.com/getting-started/install-ida</a></p>
 <p>由于篇幅限制，不额外赘述。</p>
 </blockquote>
+<div class="admonition question">
+<p class="admonition-title">提醒</p>
+<p>在较早版本的 IDA 中，通常会同时提供 ida.exe 和 ida64.exe 两个启动程序，分别用于分析 32 位（x86）和 64 位（x64）可执行文件。因此，在使用 IDA 分析某个二进制程序时，必须根据目标程序的指令集位宽选择对应的启动器。如今的 IDA 已不再采用这种区分方式，只需使用一个统一的启动器即可完成不同架构程序的分析。</p>
+</div>
 <h3 id="使用">使用<a class="headerlink" href="#使用" title="Permanent link">¶</a></h3>
 <h4 id="quick-start页面">Quick Start页面<a class="headerlink" href="#quick-start页面" title="Permanent link">¶</a></h4>
 <p><img alt="image-20260205142946021" src="../assets/image-20260205142946021.png"/></p>
@@ -6270,8 +6274,11 @@
 <p>如果没有其他需要操作的，我们在这里可以直接点击<code>OK</code>进入分析。</p>
 </blockquote>
 <p>比如该程序，<code>Load file C:\Users\Moxin\Desktop\1\hello.exe as</code>表示位置在<code>C:\Users\Moxin\Desktop\1\hello.exe</code></p>
+<p><img alt="" src="../assets/image-20260205144908196.png"/></p>
 <p>下面还有三个选项，</p>
-<p>**Portable executable for AMD64 (PE) [pe.dll]  **（当前被选中）</p>
+<ol>
+<li>**Portable executable for AMD64 (PE) [pe.dll]  **（当前被选中）</li>
+</ol>
 <p>这表示：</p>
 <ul>
 <li>IDA <strong>自动识别出这是一个 Windows 可执行文件（PE格式）</strong></li>
@@ -6279,6 +6286,34 @@
 <li>IDA 会使用 **pe.dll 加载器**来解析这个文件</li>
 </ul>
 <p><strong>一般情况下你几乎永远保持默认，不需要改。</strong></p>
+<ol>
+<li><strong>MS-DOS executable (EXE) [dos.dll]</strong></li>
+</ol>
+<p>如果你选择这个：</p>
+<ul>
+<li>IDA 会把文件当作 **老式 16 位 DOS 程序**来解析</li>
+<li>适用于：</li>
+<li>非常古老的 DOS 程序</li>
+<li>早期 16 位可执行文件</li>
+</ul>
+<p><strong>对现代 Windows 程序基本不用这个。</strong></p>
+<ol>
+<li><strong>Binary file</strong></li>
+</ol>
+<p>含义：</p>
+<ul>
+<li>把文件当作**纯二进制数据**</li>
+<li><strong>不会使用 PE 解析器</strong></li>
+<li>IDA 不会自动识别函数、段、导入表等</li>
+</ul>
+<p>适用于：</p>
+<ul>
+<li>固件（firmware）</li>
+<li>嵌入式二进制</li>
+<li>无格式裸文件</li>
+<li>自定义加壳文件</li>
+</ul>
+<p><strong>逆向嵌入式设备时会经常用到。</strong></p>
 
 
 
