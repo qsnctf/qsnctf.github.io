@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ida基础" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -5876,6 +5881,76 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ida基础" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IDA基础
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IDA基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#使用" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-start页面" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start页面
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Start页面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new--disassemble-a-new-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New — “Disassemble a new file”
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5922,6 +5997,38 @@
 <p><img alt="" src="../assets/image-20260205142107658.png"/></p>
 <p><img alt="" src="../assets/image-20260205142147820.png"/></p>
 <p><img alt="" src="../assets/image-20260205142159048.png"/></p>
+<p>此外，Hex-Rays 公司还推出了基于云端分析引擎的免费逆向工具 <strong>IDA Free</strong>，但目前仅支持 x86 架构的反汇编与分析。</p>
+<h2 id="ida基础">IDA基础<a class="headerlink" href="#ida基础" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>其他未提及内容，请参考官方文档：<a href="https://docs.hex-rays.com/getting-started/install-ida">https://docs.hex-rays.com/getting-started/install-ida</a></p>
+<p>由于篇幅限制，不额外赘述。</p>
+</blockquote>
+<h3 id="使用">使用<a class="headerlink" href="#使用" title="Permanent link">¶</a></h3>
+<h4 id="quick-start页面">Quick Start页面<a class="headerlink" href="#quick-start页面" title="Permanent link">¶</a></h4>
+<p><img alt="image-20260205142946021" src="../assets/image-20260205142946021.png"/></p>
+<p>这是**IDA Pro 启动时的“快速开始（Quick start）”引导界面**，作用是帮助用户**选择接下来要做什么工作**。
+ 可以把它理解为 IDA 的“项目入口页”。</p>
+<p>你可以理解为</p>
+<blockquote>
+<p><strong>你是要新分析一个文件？继 续自己的工作？还是打开之前的分析？</strong></p>
+</blockquote>
+<h5 id="new--disassemble-a-new-file"><strong>New — “Disassemble a new file”</strong><a class="headerlink" href="#new--disassemble-a-new-file" title="Permanent link">¶</a></h5>
+<p><strong>含义：开始反汇编一个全新的可执行文件</strong></p>
+<p>点击后，你会进入典型流程：</p>
+<ol>
+<li>选择要分析的文件（.exe / .dll / .bin / .so / .elf 等）</li>
+<li>IDA 识别文件格式（PE、ELF、Mach-O 等）</li>
+<li>选择 CPU 架构（x86、x64、ARM、MIPS 等，取决于你的插件）</li>
+<li>IDA 开始自动分析（反汇编 + 代码识别）</li>
+<li>进入主界面查看反汇编结果</li>
+</ol>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>你有一个新的程序要逆向</li>
+<li>第一次分析某个目标文件</li>
+<li>做恶意代码分析、漏洞研究、破解分析等</li>
+</ul>
+<p><strong>这应该是你以后最常点击的按钮。</strong></p>
 
 
 
