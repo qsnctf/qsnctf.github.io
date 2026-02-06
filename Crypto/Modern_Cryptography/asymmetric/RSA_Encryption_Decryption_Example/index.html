@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Encryption_Decryption_Example/">
       
       
+        <link rel="prev" href="../RSA_Encryption_Decryption/">
+      
+      
+        <link rel="next" href="../RSA_Correctness_Proof/">
       
       
         
@@ -23,7 +27,7 @@
     
     
       
-        <title>RSA Encryption Decryption Example - 青少年CTF文库</title>
+        <title>RSA加解密示例 - 青少年CTF文库</title>
       
     
     
@@ -48,6 +52,10 @@
         <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Source Code Pro"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../../stylesheets/markmap.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/main.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -107,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RSA Encryption Decryption Example
+              RSA加解密示例
             
           </span>
         </div>
@@ -243,17 +251,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../../home/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../home/" class="md-tabs__link">
+          
   
   
     
   
   起始页
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -327,10 +338,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../../" class="md-tabs__link">
           
   
@@ -554,6 +567,62 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    起始页
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    起始页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../../home/" class="md-nav__link">
         
@@ -571,6 +640,42 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Knowledge_Tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    知识树
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1056,6 +1161,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1077,7 +1190,7 @@
   <span class="md-ellipsis">
     
   
-    汇编语言
+    C/C++
   
 
     
@@ -1093,7 +1206,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    汇编语言
+    C/C++
   
 
           </label>
@@ -1106,14 +1219,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/instruction_set/" class="md-nav__link">
+      <a href="../../../../Code/CPP/cpp-tutorial/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    常见指令集
+    C/C++介绍
   
 
     
@@ -1134,14 +1247,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/register.md" class="md-nav__link">
+      <a href="../../../../Code/CPP/cpp-basic-syntax/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    寄存器
+    C++基本语法
   
 
     
@@ -1162,14 +1275,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/stack_operation.md" class="md-nav__link">
+      <a href="../../../../Code/CPP/cpp-comments/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    栈操作
+    C++注释
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/CPP/cpp-data-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++数据类型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/CPP/cpp-variable-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++变量类型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/CPP/cpp-variable-scope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++变量作用域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/CPP/cpp-constants-literals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++常量
   
 
     
@@ -1202,6 +1427,30 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1223,7 +1472,7 @@
   <span class="md-ellipsis">
     
   
-    C/C++
+    汇编语言
   
 
     
@@ -1239,7 +1488,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    C/C++
+    汇编语言
   
 
           </label>
@@ -1252,14 +1501,350 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/CPP/cpp-tutorial/" class="md-nav__link">
+      <a href="../../../../Code/Assembly/Language_Overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    C/C++介绍
+    汇编语言概述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/Assembly/Basic_Environment_and_Tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础环境与工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/Assembly/Computer_Low-Level_Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机底层基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/Assembly/Registers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    寄存器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/Assembly/Memory_and_Stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    内存与栈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    指令系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/Assembly/Control_Flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    控制流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/Assembly/Functions_and_Calling_Conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    函数与调用约定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/Assembly/Data_and_Variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据与变量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/Assembly/Common_Architectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常见体系结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/Assembly/Relationship_Between_Assembly_and_High-Level_Languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    汇编与高级语言的关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/Assembly/Assembly_Debugging_and_Analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    汇编调试与分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Code/Assembly/Assembly_in_CTF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    汇编在CTF中的应用
   
 
     
@@ -3266,6 +3851,8 @@
       
   
   
+    
+  
   
   
     
@@ -3279,18 +3866,23 @@
       
         
       
-    
-    
-    
-      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -3312,13 +3904,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3397,6 +3989,8 @@
   
     
     
+      
+        
       
         
       
@@ -3488,6 +4082,34 @@
     
   
     埃特巴什码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Classical_Cryptography/Single_Table_Replacement/ROT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROT5/13/18/47
   
 
     
@@ -3670,6 +4292,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3741,6 +4367,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Other_Cryptography/Fence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    栅栏密码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Other_Cryptography/Polybius_Square/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    波利比奥斯（Polybius）方阵密码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3765,6 +4447,8 @@
   
     
     
+      
+        
       
         
       
@@ -3818,7 +4502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Graphic_Cryptography/index.md" class="md-nav__link">
+      <a href="../../../Graphic_Cryptography/Introduction/" class="md-nav__link">
         
   
   
@@ -3834,6 +4518,539 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Graphic_Cryptography/Piggy_Bank/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    猪圈密码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    现代密码
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    现代密码
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_1" id="__nav_6_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    非对称加密
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    非对称加密
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_1_1" id="__nav_6_4_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RSA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_4_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_4_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RSA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introd_RSA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RSA介绍
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RSA_Key_Generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RSA秘钥生成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RSA_Encryption_Decryption/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RSA加密解密
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RSA加解密示例
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RSA加解密示例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#示例1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="示例1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-密钥生成步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 密钥生成步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-加密演示" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 加密演示
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-解密演示" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 解密演示
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#示例2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#基于中国剩余定理crt的加速" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基于中国剩余定理（CRT）的加速
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rsa数字签名" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSA数字签名
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RSA数字签名">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#签名" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        签名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#验证" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#为什么必须先做哈希" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么必须先做哈希？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RSA_Correctness_Proof/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RSA正确性证明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3865,6 +5082,10 @@
       
         
           
+        
+      
+        
+      
         
       
     
@@ -3899,6 +5120,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
@@ -3912,6 +5138,308 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    基础知识
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Web/Introduction/Website_How_It_Works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网站的工作原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Web/Introduction/Website_Status_Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网站的状态管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web基础漏洞
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Web基础漏洞
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3_1" id="__nav_7_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    跨站脚本攻击(XSS)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    跨站脚本攻击(XSS)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Web/Web_Security_Basic_Vulnerabilities/Cross_Site_Scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XSS原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Web/Web_Security_Basic_Vulnerabilities/XSS_LAB/XSS_LAB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XSS-LAB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
               
             
           </ul>
@@ -3932,6 +5460,8 @@
       
         
           
+        
+      
         
       
     
@@ -3966,6 +5496,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
@@ -3979,6 +5514,248 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    工具
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2_1" id="__nav_8_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDA Pro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IDA Pro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Reverse/Tools/IDA_PRO/IDA_PRO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    介绍
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Reverse/Tools/IDA_PRO/IDA_User_Interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDA Pro 用户界面
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Reverse/Tools/IDA_PRO/IDA-View/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDA Pro IDA-View
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Reverse/Tools/IDA_PRO/IDA-Pesudocode-A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDA Pro 伪代码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
               
             
           </ul>
@@ -4634,6 +6411,124 @@
   
 
 
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Crypto
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../Introd_RSA/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    现代密码
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../Introd_RSA/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    非对称加密
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../Introd_RSA/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    RSA
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
@@ -4657,10 +6552,10 @@
   
 
 
-  <h1>RSA Encryption Decryption Example</h1>
+  <h1>RSA加解密示例</h1>
 
-<h2 id="示例1">示例1<a class="headerlink" href="#示例1" title="Permanent link">&para;</a></h2>
-<h3 id="1-密钥生成步骤">1. 密钥生成步骤<a class="headerlink" href="#1-密钥生成步骤" title="Permanent link">&para;</a></h3>
+<h2 id="示例1">示例1<a class="headerlink" href="#示例1" title="Permanent link">¶</a></h2>
+<h3 id="1-密钥生成步骤">1. 密钥生成步骤<a class="headerlink" href="#1-密钥生成步骤" title="Permanent link">¶</a></h3>
 <ol>
 <li><strong>选择素数</strong>：令 <span class="arithmatex">\(p = 3, q = 11\)</span>。</li>
 <li><strong>计算模数</strong>：<span class="arithmatex">\(n = p \times q = 33\)</span>。</li>
@@ -4675,12 +6570,12 @@
 <li><strong>公钥</strong>：<span class="arithmatex">\((n=33, e=3)\)</span></li>
 <li><strong>私钥</strong>：<span class="arithmatex">\((n=33, d=7)\)</span></li>
 </ul>
-<h3 id="2-加密演示">2. 加密演示<a class="headerlink" href="#2-加密演示" title="Permanent link">&para;</a></h3>
+<h3 id="2-加密演示">2. 加密演示<a class="headerlink" href="#2-加密演示" title="Permanent link">¶</a></h3>
 <p>假设我们要发送的消息明文 <strong><span class="arithmatex">\(M = 5\)</span></strong>：</p>
 <div class="arithmatex">\[C = M^e \pmod{n}\]</div>
 <div class="arithmatex">\[C = 5^3 \pmod{33} = 125 \pmod{33}\]</div>
 <p>计算 <span class="arithmatex">\(125 \div 33 = 3\)</span> 余 <span class="arithmatex">\(26\)</span>，所以 <strong>密文 <span class="arithmatex">\(C = 26\)</span></strong>。</p>
-<h3 id="3-解密演示">3. 解密演示<a class="headerlink" href="#3-解密演示" title="Permanent link">&para;</a></h3>
+<h3 id="3-解密演示">3. 解密演示<a class="headerlink" href="#3-解密演示" title="Permanent link">¶</a></h3>
 <p>接收方收到密文 <span class="arithmatex">\(26\)</span>，使用私钥 <span class="arithmatex">\(d=7\)</span> 进行还原：</p>
 <div class="arithmatex">\[M = C^d \pmod{n}\]</div>
 <div class="arithmatex">\[M = 26^7 \pmod{33}\]</div>
@@ -4693,7 +6588,7 @@
 <li>计算得出结果为 <strong><span class="arithmatex">\(5\)</span></strong>。</li>
 </ul>
 <p><strong>明文还原成功！</strong></p>
-<h2 id="示例2">示例2<a class="headerlink" href="#示例2" title="Permanent link">&para;</a></h2>
+<h2 id="示例2">示例2<a class="headerlink" href="#示例2" title="Permanent link">¶</a></h2>
 <p>取：
 $$
 p=61,\quad q=53
@@ -4724,22 +6619,22 @@ $$
 $$
 m = 2790^{413} \bmod 3233 = 65
 $$</p>
-<h2 id="基于中国剩余定理crt的加速">基于中国剩余定理（CRT）的加速<a class="headerlink" href="#基于中国剩余定理crt的加速" title="Permanent link">&para;</a></h2>
+<h2 id="基于中国剩余定理crt的加速">基于中国剩余定理（CRT）的加速<a class="headerlink" href="#基于中国剩余定理crt的加速" title="Permanent link">¶</a></h2>
 <p>为提升解密效率，实际私钥通常还包含：
 $$
-d_p = d \bmod (p-1),\quad<br />
-d_q = d \bmod (q-1),\quad<br />
+d_p = d \bmod (p-1),\quad<br/>
+d_q = d \bmod (q-1),\quad<br/>
 q^{-1} \bmod p
 $$
 先分别计算：
 $$
-m_1 = c^{d_p} \bmod p,\quad<br />
+m_1 = c^{d_p} \bmod p,\quad<br/>
 m_2 = c^{d_q} \bmod q
 $$
 再用中国剩余定理合成得到最终 <span class="arithmatex">\(m\)</span>。</p>
 <p>该方法可使解密速度提升约 <strong>4 倍</strong>。</p>
-<h2 id="rsa数字签名">RSA数字签名<a class="headerlink" href="#rsa数字签名" title="Permanent link">&para;</a></h2>
-<h3 id="签名"><strong>签名</strong><a class="headerlink" href="#签名" title="Permanent link">&para;</a></h3>
+<h2 id="rsa数字签名">RSA数字签名<a class="headerlink" href="#rsa数字签名" title="Permanent link">¶</a></h2>
+<h3 id="签名"><strong>签名</strong><a class="headerlink" href="#签名" title="Permanent link">¶</a></h3>
 <p>Alice 对消息 <span class="arithmatex">\(M\)</span>：</p>
 <ol>
 <li>
@@ -4758,8 +6653,8 @@ $$
 <p>发送 <span class="arithmatex">\((M, s)\)</span> 给 Bob。</p>
 </li>
 </ol>
-<hr />
-<h3 id="验证"><strong>验证</strong><a class="headerlink" href="#验证" title="Permanent link">&para;</a></h3>
+<hr/>
+<h3 id="验证"><strong>验证</strong><a class="headerlink" href="#验证" title="Permanent link">¶</a></h3>
 <p>Bob 计算：
 $$
 h = \text{hash}(M)
@@ -4777,8 +6672,8 @@ $$
 $$
 s^e = (h<sup>d)</sup>e = h^{de} \equiv h \pmod n
 $$</p>
-<hr />
-<h3 id="为什么必须先做哈希"><strong>为什么必须先做哈希？</strong><a class="headerlink" href="#为什么必须先做哈希" title="Permanent link">&para;</a></h3>
+<hr/>
+<h3 id="为什么必须先做哈希"><strong>为什么必须先做哈希？</strong><a class="headerlink" href="#为什么必须先做哈希" title="Permanent link">¶</a></h3>
 <p>若直接签名原始消息 <span class="arithmatex">\(m\)</span>，则存在可乘法伪造的漏洞：</p>
 <ul>
 <li>可伪造 <span class="arithmatex">\((m_1 m_2, s_1 s_2)\)</span>；</li>
@@ -4894,7 +6789,11 @@ $$</p>
     
       <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
+        <script src="../../../../javascripts/extra.js"></script>
+      
         <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/pangu/3.3.0/pangu.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
