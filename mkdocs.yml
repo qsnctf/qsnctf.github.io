@@ -64,6 +64,7 @@ plugins:
   # - git-authors # 展示作者
   - search # 内置搜索
   - tags # 标签
+  - markmap # 思维导图
 
 
 docs_dir: docs
@@ -82,13 +83,20 @@ extra:
       link: mailto:lqn@sierting.com
 
 extra_javascript:
+  - javascripts/extra.js
   - javascripts/mathjax.js
+  - https://cdnjs.loli.net/ajax/libs/pangu/3.3.0/pangu.min.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 
 
 
 copyright: Copyright 青少年CTF &copy; 2025 版权所有
 
+extra_css:
+  - stylesheets/markmap.css
+  - stylesheets/main.css
+  
 # markdown 拓展
 markdown_extensions:
 # 详细参考 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
@@ -124,6 +132,7 @@ markdown_extensions:
       repo_url_shorthand: true
       user: squidfunk
       repo: mkdocs-material
+  - pymdownx.critic
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.tabbed:
@@ -138,7 +147,9 @@ markdown_extensions:
 # nav
 nav:
   - 首页: index.html
-  - 起始页: home.md
+  - 起始页: 
+    - 起始页: home.md
+    - 知识树: Knowledge_Tree.md
   - 基础知识:
     - 什么是 CTF: basic/intro.md
     - CTF的历史: basic/history.md
@@ -151,12 +162,28 @@ nav:
       - OSI七层模型: basic/network/osi.md
   - 编程: 
     - 介绍: Code/index.md
-    - 汇编语言: 
-      - 常见指令集: Code/Assembly/instruction_set.md
-      - 寄存器: Code/Assembly/register.md
-      - 栈操作: Code/Assembly/stack_operation.md
     - C/C++: 
       - C/C++介绍: Code/CPP/cpp-tutorial.md
+      - C++基本语法: Code/CPP/cpp-basic-syntax.md
+      - C++注释: Code/CPP/cpp-comments.md
+      - C++数据类型: Code/CPP/cpp-data-types.md
+      - C++变量类型: Code/CPP/cpp-variable-types.md
+      - C++变量作用域: Code/CPP/cpp-variable-scope.md
+      - C++常量: Code/CPP/cpp-constants-literals.md
+    - 汇编语言: 
+      - 汇编语言概述: Code/Assembly/Language_Overview.md
+      - 基础环境与工具: Code/Assembly/Basic_Environment_and_Tools.md
+      - 计算机底层基础: Code/Assembly/Computer_Low-Level_Fundamentals.md
+      - 寄存器: Code/Assembly/Registers.md
+      - 内存与栈: Code/Assembly/Memory_and_Stack.md
+      - 指令系统: Code/Assembly/Instruction_Set.md
+      - 控制流: Code/Assembly/Control_Flow.md
+      - 函数与调用约定: Code/Assembly/Functions_and_Calling_Conventions.md
+      - 数据与变量: Code/Assembly/Data_and_Variables.md
+      - 常见体系结构: Code/Assembly/Common_Architectures.md
+      - 汇编与高级语言的关系: Code/Assembly/Relationship_Between_Assembly_and_High-Level_Languages.md
+      - 汇编调试与分析: Code/Assembly/Assembly_Debugging_and_Analysis.md
+      - 汇编在CTF中的应用: Code/Assembly/Assembly_in_CTF.md
     - Python:
       - Python介绍: Code/Python/Python_Intro.md
       - Python基础语法: Code/Python/Python_Basic_Syntax.md
@@ -220,18 +247,44 @@ nav:
       - 单表替换:
         - 凯撒密码: Crypto/Classical_Cryptography/Single_Table_Replacement/Caesar.md
         - 埃特巴什码: Crypto/Classical_Cryptography/Single_Table_Replacement/Atbash.md
+        - ROT5/13/18/47: Crypto/Classical_Cryptography/Single_Table_Replacement/ROT.md
       - 多表替换:
         - Playfair密码: Crypto/Classical_Cryptography/Multi_table_replacement/Playfair.md
         - HILL密码: Crypto/Classical_Cryptography/Multi_table_replacement/HILL.md
         - 维吉尼亚密码: Crypto/Classical_Cryptography/Multi_table_replacement/Vigen.md
       - 其他密码:
         - 培根密码: Crypto/Other_Cryptography/Baconian.md
-    - 图形密码: 
-      - 介绍: Crypto/Graphic_Cryptography/index.md
+        - 栅栏密码: Crypto/Other_Cryptography/Fence.md
+        - 波利比奥斯（Polybius）方阵密码: Crypto/Other_Cryptography/Polybius_Square.md
+    - 图形密码:
+      - 介绍: Crypto/Graphic_Cryptography/Introduction.md
+      - 猪圈密码: Crypto/Graphic_Cryptography/Piggy_Bank.md
+    - 现代密码:
+      - 非对称加密: 
+        - RSA:
+          - RSA介绍: Crypto/Modern_Cryptography/asymmetric/Introd_RSA.md
+          - RSA秘钥生成: Crypto/Modern_Cryptography/asymmetric/RSA_Key_Generation.md
+          - RSA加密解密: Crypto/Modern_Cryptography/asymmetric/RSA_Encryption_Decryption.md
+          - RSA加解密示例: Crypto/Modern_Cryptography/asymmetric/RSA_Encryption_Decryption_Example.md
+          - RSA正确性证明: Crypto/Modern_Cryptography/asymmetric/RSA_Correctness_Proof.md
   - Web: 
     - 介绍: Web/index.md
+    - 基础知识:
+      - 网站的工作原理 : Web/Introduction/Website_How_It_Works.md
+      - 网站的状态管理: Web/Introduction/Website_Status_Management.md
+    - Web基础漏洞:
+      - 跨站脚本攻击(XSS):
+        - XSS原理: Web/Web_Security_Basic_Vulnerabilities/Cross_Site_Scripting.md
+        - XSS-LAB: Web/Web_Security_Basic_Vulnerabilities/XSS_LAB/XSS_LAB.md
   - Reverse: 
     - 介绍: Reverse/index.md
+    - 工具:
+      - IDA Pro: 
+        - 介绍: Reverse/Tools/IDA_PRO/IDA_PRO.md
+        - IDA Pro 用户界面: Reverse/Tools/IDA_PRO/IDA_User_Interface.md
+        - IDA Pro IDA-View: Reverse/Tools/IDA_PRO/IDA-View.md
+        - IDA Pro 伪代码: Reverse/Tools/IDA_PRO/IDA-Pesudocode-A.md
+
   - Pwn: 
     - 介绍: Pwn/index.md
   - AI:
