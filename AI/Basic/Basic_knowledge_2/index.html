@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-线性判别函数和决策边界" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -5675,6 +5680,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -5691,6 +5714,1451 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-线性判别函数和决策边界" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 线性判别函数和决策边界
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 线性判别函数和决策边界">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-二分类" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 二分类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 二分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#线性判别函数的定义" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性判别函数的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#增广表示" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        增广表示
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#决策规则" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        决策规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#决策边界与决策区域" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        决策边界与决策区域
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#权重向量的几何意义" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        权重向量的几何意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#样本点到决策边界的距离" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样本点到决策边界的距离
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#函数间隔与几何间隔" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        函数间隔与几何间隔
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#线性可分性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性可分性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-多分类" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 多分类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 多分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#多分类问题的形式化" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多分类问题的形式化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#一对其余one-vs-rest-ovr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一对其余（One-vs-Rest, OvR）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#一对一one-vs-one-ovo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一对一（One-vs-One, OvO）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#多类线性判别函数直接法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多类线性判别函数（直接法）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#多类决策边界分析" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多类决策边界分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#参数冗余性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参数冗余性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-logistic回归" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Logistic回归
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 Logistic回归">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#为什么不能直接用线性函数分类" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么不能直接用线性函数分类？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#激活函数的选择" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        激活函数的选择
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-sigmoid函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Sigmoid函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Sigmoid函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#定义与基本形式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义与基本形式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#图像特征" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        图像特征
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#重要性质" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-logistic回归模型" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Logistic回归模型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Logistic回归模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#模型定义" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模型定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#决策规则_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        决策规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-对数几率log-odds解释" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 对数几率（Log-Odds）解释
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 对数几率（Log-Odds）解释">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#几率与对数几率" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几率与对数几率
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心定理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#参数的解释" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参数的解释
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-广义线性模型视角" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 广义线性模型视角
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 广义线性模型视角">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#glm的三要素" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GLM的三要素
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logistic回归作为glm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logistic回归作为GLM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-参数学习" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 参数学习
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 参数学习">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#最大似然估计框架" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最大似然估计框架
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#似然函数的推导" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        似然函数的推导
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#对数似然函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对数似然函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#交叉熵损失函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        交叉熵损失函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#梯度的详细推导" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        梯度的详细推导
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#梯度下降算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        梯度下降算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#牛顿法与irls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        牛顿法与IRLS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-正则化" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 正则化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 正则化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l2正则化ridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L2正则化（Ridge）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l1正则化lasso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L1正则化（Lasso）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#弹性网elastic-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        弹性网（Elastic Net）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-logistic回归的理论性质" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Logistic回归的理论性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 Logistic回归的理论性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#凸性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        凸性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#解的唯一性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        解的唯一性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-softmax回归" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Softmax回归
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Softmax回归">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-从二分类到多分类" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 从二分类到多分类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 从二分类到多分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#问题设定" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题设定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#推广思路" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推广思路
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-softmax函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Softmax函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Softmax函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#定义" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#重要性质_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#softmax的导数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Softmax的导数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-softmax回归模型" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Softmax回归模型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Softmax回归模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#模型定义_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模型定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3332-参数冗余与消除" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3.2 参数冗余与消除
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-参数学习" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 参数学习
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 参数学习">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#标签编码" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        标签编码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#交叉熵损失函数_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        交叉熵损失函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#梯度推导" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        梯度推导
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#梯度下降更新" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        梯度下降更新
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-感知器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 感知器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 感知器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-感知器模型" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 感知器模型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 感知器模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#模型定义_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模型定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#几何解释" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何解释
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-感知器学习算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 感知器学习算法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 感知器学习算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#损失函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        损失函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#梯度计算" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        梯度计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#感知器学习算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        感知器学习算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-感知器的收敛性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 感知器的收敛性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 感知器的收敛性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#收敛定理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        收敛定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#详细证明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        详细证明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#收敛性的意义与局限" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        收敛性的意义与局限
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-参数平均感知器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 参数平均感知器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 参数平均感知器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本思想" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#高效实现" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        高效实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-多分类感知器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 多分类感知器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 多分类感知器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#模型定义_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模型定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#更新规则" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更新规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-支持向量机" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 支持向量机
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 支持向量机">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-最大间隔分类器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 最大间隔分类器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 最大间隔分类器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#动机" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        动机
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#间隔的定义" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        间隔的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#最大间隔优化问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最大间隔优化问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-对偶问题与支持向量" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 对偶问题与支持向量
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 对偶问题与支持向量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#拉格朗日函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        拉格朗日函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#对偶问题推导" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶问题推导
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kkt条件" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KKT条件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#支持向量" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        支持向量
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-核函数与核技巧" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 核函数与核技巧
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 核函数与核技巧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#非线性可分问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        非线性可分问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核技巧" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核技巧
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#常用核函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用核函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mercer条件" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mercer条件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-软间隔svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 软间隔SVM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 软间隔SVM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#动机_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        动机
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#松弛变量" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        松弛变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#软间隔svm优化问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        软间隔SVM优化问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#对偶问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hinge损失" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hinge损失
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-损失函数对比" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 损失函数对比
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 损失函数对比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-统一框架" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 统一框架
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-常见损失函数详解" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 常见损失函数详解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 常见损失函数详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#损失" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        损失
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#感知器损失" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        感知器损失
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hinge损失svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hinge损失（SVM）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logistic损失" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logistic损失
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#指数损失adaboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        指数损失（AdaBoost）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-损失函数比较表" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 损失函数比较表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-损失函数的关系" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 损失函数的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5975,6 +7443,1442 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-线性判别函数和决策边界" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 线性判别函数和决策边界
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 线性判别函数和决策边界">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-二分类" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 二分类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 二分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#线性判别函数的定义" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性判别函数的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#增广表示" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        增广表示
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#决策规则" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        决策规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#决策边界与决策区域" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        决策边界与决策区域
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#权重向量的几何意义" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        权重向量的几何意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#样本点到决策边界的距离" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样本点到决策边界的距离
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#函数间隔与几何间隔" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        函数间隔与几何间隔
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#线性可分性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性可分性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-多分类" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 多分类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 多分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#多分类问题的形式化" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多分类问题的形式化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#一对其余one-vs-rest-ovr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一对其余（One-vs-Rest, OvR）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#一对一one-vs-one-ovo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一对一（One-vs-One, OvO）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#多类线性判别函数直接法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多类线性判别函数（直接法）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#多类决策边界分析" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多类决策边界分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#参数冗余性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参数冗余性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-logistic回归" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Logistic回归
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 Logistic回归">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#为什么不能直接用线性函数分类" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么不能直接用线性函数分类？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#激活函数的选择" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        激活函数的选择
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-sigmoid函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Sigmoid函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Sigmoid函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#定义与基本形式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义与基本形式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#图像特征" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        图像特征
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#重要性质" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-logistic回归模型" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Logistic回归模型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Logistic回归模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#模型定义" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模型定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#决策规则_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        决策规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-对数几率log-odds解释" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 对数几率（Log-Odds）解释
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 对数几率（Log-Odds）解释">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#几率与对数几率" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几率与对数几率
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核心定理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#参数的解释" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参数的解释
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-广义线性模型视角" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 广义线性模型视角
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 广义线性模型视角">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#glm的三要素" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GLM的三要素
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logistic回归作为glm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logistic回归作为GLM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-参数学习" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 参数学习
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 参数学习">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#最大似然估计框架" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最大似然估计框架
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#似然函数的推导" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        似然函数的推导
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#对数似然函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对数似然函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#交叉熵损失函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        交叉熵损失函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#梯度的详细推导" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        梯度的详细推导
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#梯度下降算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        梯度下降算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#牛顿法与irls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        牛顿法与IRLS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-正则化" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 正则化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 正则化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l2正则化ridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L2正则化（Ridge）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l1正则化lasso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L1正则化（Lasso）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#弹性网elastic-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        弹性网（Elastic Net）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-logistic回归的理论性质" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Logistic回归的理论性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 Logistic回归的理论性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#凸性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        凸性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#解的唯一性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        解的唯一性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-softmax回归" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Softmax回归
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Softmax回归">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-从二分类到多分类" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 从二分类到多分类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 从二分类到多分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#问题设定" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题设定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#推广思路" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推广思路
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-softmax函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Softmax函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Softmax函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#定义" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#重要性质_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#softmax的导数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Softmax的导数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-softmax回归模型" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Softmax回归模型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Softmax回归模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#模型定义_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模型定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3332-参数冗余与消除" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3.2 参数冗余与消除
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-参数学习" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 参数学习
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 参数学习">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#标签编码" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        标签编码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#交叉熵损失函数_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        交叉熵损失函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#梯度推导" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        梯度推导
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#梯度下降更新" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        梯度下降更新
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-感知器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 感知器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 感知器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-感知器模型" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 感知器模型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 感知器模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#模型定义_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模型定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#几何解释" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何解释
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-感知器学习算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 感知器学习算法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 感知器学习算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#损失函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        损失函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#梯度计算" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        梯度计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#感知器学习算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        感知器学习算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-感知器的收敛性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 感知器的收敛性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 感知器的收敛性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#收敛定理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        收敛定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#详细证明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        详细证明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#收敛性的意义与局限" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        收敛性的意义与局限
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-参数平均感知器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 参数平均感知器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 参数平均感知器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基本思想" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#高效实现" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        高效实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-多分类感知器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 多分类感知器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 多分类感知器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#模型定义_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模型定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#更新规则" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更新规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-支持向量机" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 支持向量机
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 支持向量机">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-最大间隔分类器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 最大间隔分类器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 最大间隔分类器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#动机" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        动机
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#间隔的定义" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        间隔的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#最大间隔优化问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最大间隔优化问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-对偶问题与支持向量" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 对偶问题与支持向量
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 对偶问题与支持向量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#拉格朗日函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        拉格朗日函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#对偶问题推导" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶问题推导
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kkt条件" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KKT条件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#支持向量" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        支持向量
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-核函数与核技巧" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 核函数与核技巧
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 核函数与核技巧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#非线性可分问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        非线性可分问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#核技巧" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核技巧
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#常用核函数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用核函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mercer条件" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mercer条件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-软间隔svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 软间隔SVM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 软间隔SVM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#动机_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        动机
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#松弛变量" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        松弛变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#软间隔svm优化问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        软间隔SVM优化问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#对偶问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hinge损失" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hinge损失
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-损失函数对比" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 损失函数对比
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 损失函数对比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-统一框架" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 统一框架
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-常见损失函数详解" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 常见损失函数详解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 常见损失函数详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#损失" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        损失
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#感知器损失" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        感知器损失
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hinge损失svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hinge损失（SVM）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logistic损失" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logistic损失
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#指数损失adaboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        指数损失（AdaBoost）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-损失函数比较表" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 损失函数比较表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-损失函数的关系" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 损失函数的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6056,7 +8960,1970 @@
 
   <h1>基础知识2</h1>
 
-
+<p>线性模型（Linear Model）是机器学习和统计学习中最基础、最重要的一类模型。尽管其形式相对简单，但线性模型在理论研究和实际应用中都占有举足轻重的地位。</p>
+<h2 id="1-线性判别函数和决策边界">1 线性判别函数和决策边界<a class="headerlink" href="#1-线性判别函数和决策边界" title="Permanent link">¶</a></h2>
+<p>线性判别函数是线性分类模型的核心概念。本节将从二分类问题入手，逐步扩展到多分类问题，深入探讨线性分类的几何意义和数学性质。</p>
+<h3 id="11-二分类">1.1 二分类<a class="headerlink" href="#11-二分类" title="Permanent link">¶</a></h3>
+<p>二分类（Binary Classification）是最基本的分类问题，目标是将输入样本划分为两个互斥的类别。</p>
+<h4 id="线性判别函数的定义">线性判别函数的定义<a class="headerlink" href="#线性判别函数的定义" title="Permanent link">¶</a></h4>
+<p>给定<span class="arithmatex">\(D\)</span>维输入空间<span class="arithmatex">\(\mathcal{X} = \mathbb{R}^D\)</span>，线性判别函数是一个从<span class="arithmatex">\(\mathcal{X}\)</span>到<span class="arithmatex">\(\mathbb{R}\)</span>的仿射映射：</p>
+<div class="arithmatex">\[
+f: \mathbb{R}^D \rightarrow \mathbb{R}, \quad f(\boldsymbol{x}) = \boldsymbol{w}^{\top}\boldsymbol{x} + b
+\]</div>
+<p>其中：</p>
+<ul>
+<li><span class="arithmatex">\(\boldsymbol{x} = [x_1, x_2, \ldots, x_D]^{\top} \in \mathbb{R}^D\)</span> 是输入特征向量</li>
+<li><span class="arithmatex">\(\boldsymbol{w} = [w_1, w_2, \ldots, w_D]^{\top} \in \mathbb{R}^D\)</span> 是权重向量（weight vector）</li>
+<li><span class="arithmatex">\(b \in \mathbb{R}\)</span> 是偏置项（bias term），也称为截距（intercept）</li>
+</ul>
+<p><strong>展开形式</strong>：</p>
+<div class="arithmatex">\[
+f(\boldsymbol{x}) = w_1 x_1 + w_2 x_2 + \cdots + w_D x_D + b = \sum_{d=1}^{D} w_d x_d + b
+\]</div>
+<p><strong>几何解释</strong>：</p>
+<ul>
+<li>权重向量<span class="arithmatex">\(\boldsymbol{w}\)</span>决定了决策超平面的**法向量方向**</li>
+<li>偏置项<span class="arithmatex">\(b\)</span>决定了超平面相对于原点的**位置（平移量）**</li>
+<li><span class="arithmatex">\(\|\boldsymbol{w}\|\)</span>（权重向量的模）影响判别函数值的**尺度**</li>
+</ul>
+<p>设<span class="arithmatex">\(D=2\)</span>，<span class="arithmatex">\(\boldsymbol{w} = [2, 1]^{\top}\)</span>，<span class="arithmatex">\(b = -3\)</span>，则判别函数为：</p>
+<div class="arithmatex">\[
+f(x_1, x_2) = 2x_1 + x_2 - 3
+\]</div>
+<p>对于点<span class="arithmatex">\((2, 1)\)</span>：<span class="arithmatex">\(f(2, 1) = 2 \times 2 + 1 - 3 = 2 &gt; 0\)</span>，属于正类。
+对于点<span class="arithmatex">\((0, 0)\)</span>：<span class="arithmatex">\(f(0, 0) = -3 &lt; 0\)</span>，属于负类。</p>
+<h4 id="增广表示">增广表示<a class="headerlink" href="#增广表示" title="Permanent link">¶</a></h4>
+<p>为了简化数学表达，我们通常采用增广表示（Augmented Representation）。</p>
+<p>定义增广权重向量和增广特征向量：</p>
+<div class="arithmatex">\[
+\hat{\boldsymbol{w}} = \begin{bmatrix} \boldsymbol{w} \\ b \end{bmatrix} = \begin{bmatrix} w_1 \\ w_2 \\ \vdots \\ w_D \\ b \end{bmatrix} \in \mathbb{R}^{D+1}
+\]</div>
+<div class="arithmatex">\[
+\hat{\boldsymbol{x}} = \begin{bmatrix} \boldsymbol{x} \\ 1 \end{bmatrix} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_D \\ 1 \end{bmatrix} \in \mathbb{R}^{D+1}
+\]</div>
+<p>则线性判别函数可简写为：</p>
+<div class="arithmatex">\[
+f(\boldsymbol{x}) = \hat{\boldsymbol{w}}^{\top}\hat{\boldsymbol{x}}
+\]</div>
+<p><strong>验证</strong>：</p>
+<div class="arithmatex">\[
+\hat{\boldsymbol{w}}^{\top}\hat{\boldsymbol{x}} = [w_1, w_2, \ldots, w_D, b] \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_D \\ 1 \end{bmatrix} = \sum_{d=1}^{D} w_d x_d + b = \boldsymbol{w}^{\top}\boldsymbol{x} + b
+\]</div>
+<p><strong>增广表示的优点</strong>：</p>
+<ol>
+<li>将仿射函数转化为线性函数，简化数学推导</li>
+<li>便于矩阵运算和向量化实现</li>
+<li>统一处理权重和偏置，代码实现更简洁</li>
+</ol>
+<h4 id="决策规则">决策规则<a class="headerlink" href="#决策规则" title="Permanent link">¶</a></h4>
+<p>基于线性判别函数，我们定义分类决策规则。</p>
+<p>线性分类器的决策规则：</p>
+<p><strong>情形一</strong>：标签<span class="arithmatex">\(y \in \{-1, +1\}\)</span>
+$$
+h(\boldsymbol{x}) = \text{sign}(f(\boldsymbol{x})) = \text{sign}(\boldsymbol{w}^{\top}\boldsymbol{x} + b)
+$$</p>
+<p>其中符号函数（sign function）定义为：</p>
+<div class="arithmatex">\[
+\text{sign}(z) = \begin{cases}
++1, &amp; \text{if } z &gt; 0 \\
+0, &amp; \text{if } z = 0 \\
+-1, &amp; \text{if } z &lt; 0
+\end{cases}
+\]</div>
+<p>或者简化为（将<span class="arithmatex">\(z=0\)</span>归为正类）：</p>
+<div class="arithmatex">\[
+\text{sign}(z) = \begin{cases}
++1, &amp; \text{if } z \geq 0 \\
+-1, &amp; \text{if } z &lt; 0
+\end{cases}
+\]</div>
+<p><strong>情形二</strong>：标签<span class="arithmatex">\(y \in \{0, 1\}\)</span></p>
+<div class="arithmatex">\[
+h(\boldsymbol{x}) = \mathbb{I}(f(\boldsymbol{x}) \geq 0) = \begin{cases}
+1, &amp; \text{if } \boldsymbol{w}^{\top}\boldsymbol{x} + b \geq 0 \\
+0, &amp; \text{if } \boldsymbol{w}^{\top}\boldsymbol{x} + b &lt; 0
+\end{cases}
+\]</div>
+<p>其中<span class="arithmatex">\(\mathbb{I}(\cdot)\)</span>是指示函数（indicator function）。</p>
+<p><strong>两种标签表示的转换</strong>：</p>
+<ul>
+<li>从<span class="arithmatex">\(\{0, 1\}\)</span>到<span class="arithmatex">\(\{-1, +1\}\)</span>：<span class="arithmatex">\(y' = 2y - 1\)</span></li>
+<li>从<span class="arithmatex">\(\{-1, +1\}\)</span>到<span class="arithmatex">\(\{0, 1\}\)</span>：<span class="arithmatex">\(y' = (y + 1)/2\)</span></li>
+</ul>
+<h4 id="决策边界与决策区域">决策边界与决策区域<a class="headerlink" href="#决策边界与决策区域" title="Permanent link">¶</a></h4>
+<p>决策边界：决策边界（Decision Boundary）是使判别函数值为零的所有点构成的集合：</p>
+<div class="arithmatex">\[
+\mathcal{B} = \{\boldsymbol{x} \in \mathbb{R}^D \mid f(\boldsymbol{x}) = 0\} = \{\boldsymbol{x} \in \mathbb{R}^D \mid \boldsymbol{w}^{\top}\boldsymbol{x} + b = 0\}
+\]</div>
+<p><strong>几何性质</strong>：</p>
+<ul>
+<li>在<span class="arithmatex">\(D\)</span>维空间中，决策边界是一个<span class="arithmatex">\((D-1)\)</span>维的**超平面**（hyperplane）</li>
+<li>当<span class="arithmatex">\(D=2\)</span>时，决策边界是一条**直线**</li>
+<li>当<span class="arithmatex">\(D=3\)</span>时，决策边界是一个**平面**</li>
+<li>超平面将<span class="arithmatex">\(\mathbb{R}^D\)</span>分成两个**半空间**</li>
+</ul>
+<p>决策区域：决策边界将特征空间划分为两个决策区域：</p>
+<p><strong>正类区域</strong>：
+$$
+\mathcal{R}_{+1} = {\boldsymbol{x} \in \mathbb{R}^D \mid f(\boldsymbol{x}) &gt; 0}
+$$</p>
+<p><strong>负类区域</strong>：
+$$
+\mathcal{R}_{-1} = {\boldsymbol{x} \in \mathbb{R}^D \mid f(\boldsymbol{x}) &lt; 0}
+$$</p>
+<p>决策区域的凸性：线性分类器的决策区域是凸集（convex set）。</p>
+<p><strong>证明</strong>：设<span class="arithmatex">\(\boldsymbol{x}_1, \boldsymbol{x}_2 \in \mathcal{R}_{+1}\)</span>，则<span class="arithmatex">\(f(\boldsymbol{x}_1) &gt; 0\)</span>且<span class="arithmatex">\(f(\boldsymbol{x}_2) &gt; 0\)</span>。</p>
+<p>对于任意<span class="arithmatex">\(\lambda \in [0, 1]\)</span>，考虑凸组合<span class="arithmatex">\(\boldsymbol{x}_\lambda = \lambda \boldsymbol{x}_1 + (1-\lambda) \boldsymbol{x}_2\)</span>：</p>
+<div class="arithmatex">\[
+f(\boldsymbol{x}_\lambda) = \boldsymbol{w}^{\top}(\lambda \boldsymbol{x}_1 + (1-\lambda) \boldsymbol{x}_2) + b
+\]</div>
+<div class="arithmatex">\[
+= \lambda(\boldsymbol{w}^{\top}\boldsymbol{x}_1 + b) + (1-\lambda)(\boldsymbol{w}^{\top}\boldsymbol{x}_2 + b)
+\]</div>
+<div class="arithmatex">\[
+= \lambda f(\boldsymbol{x}_1) + (1-\lambda) f(\boldsymbol{x}_2)
+\]</div>
+<p>由于<span class="arithmatex">\(\lambda \geq 0\)</span>，<span class="arithmatex">\((1-\lambda) \geq 0\)</span>，<span class="arithmatex">\(f(\boldsymbol{x}_1) &gt; 0\)</span>，<span class="arithmatex">\(f(\boldsymbol{x}_2) &gt; 0\)</span>，所以：</p>
+<div class="arithmatex">\[
+f(\boldsymbol{x}_\lambda) = \lambda f(\boldsymbol{x}_1) + (1-\lambda) f(\boldsymbol{x}_2) &gt; 0
+\]</div>
+<p>因此<span class="arithmatex">\(\boldsymbol{x}_\lambda \in \mathcal{R}_{+1}\)</span>，证明<span class="arithmatex">\(\mathcal{R}_{+1}\)</span>是凸集。同理可证<span class="arithmatex">\(\mathcal{R}_{-1}\)</span>也是凸集。<span class="arithmatex">\(\square\)</span></p>
+<p><strong>凸性的意义</strong>：</p>
+<ul>
+<li>凸决策区域意味着不存在"孤岛"，同一类别的样本在特征空间中是"连通"的</li>
+<li>这是线性分类器的局限性：无法处理类别区域非凸的情况（如XOR问题）</li>
+</ul>
+<h4 id="权重向量的几何意义">权重向量的几何意义<a class="headerlink" href="#权重向量的几何意义" title="Permanent link">¶</a></h4>
+<p>权重向量<span class="arithmatex">\(\boldsymbol{w}\)</span>是决策超平面的法向量，指向正类区域。</p>
+<p><strong>证明</strong>：设<span class="arithmatex">\(\boldsymbol{x}_1, \boldsymbol{x}_2\)</span>是决策边界上的任意两点，则：</p>
+<div class="arithmatex">\[
+\boldsymbol{w}^{\top}\boldsymbol{x}_1 + b = 0
+\]</div>
+<div class="arithmatex">\[
+\boldsymbol{w}^{\top}\boldsymbol{x}_2 + b = 0
+\]</div>
+<p>两式相减得：</p>
+<div class="arithmatex">\[
+\boldsymbol{w}^{\top}(\boldsymbol{x}_1 - \boldsymbol{x}_2) = 0
+\]</div>
+<p>这说明<span class="arithmatex">\(\boldsymbol{w}\)</span>与决策边界上任意方向向量<span class="arithmatex">\((\boldsymbol{x}_1 - \boldsymbol{x}_2)\)</span>正交，因此<span class="arithmatex">\(\boldsymbol{w}\)</span>是**法向量**。</p>
+<p>对于<span class="arithmatex">\(f(\boldsymbol{x}) &gt; 0\)</span>的点，有<span class="arithmatex">\(\boldsymbol{w}^{\top}\boldsymbol{x} &gt; -b\)</span>，说明<span class="arithmatex">\(\boldsymbol{x}\)</span>在沿<span class="arithmatex">\(\boldsymbol{w}\)</span>方向上位于超平面的正侧。因此<span class="arithmatex">\(\boldsymbol{w}\)</span><strong>指向正类区域</strong>。<span class="arithmatex">\(\square\)</span></p>
+<p><strong>几何直观</strong>：</p>
+<ul>
+<li>想象站在决策边界上，面朝<span class="arithmatex">\(\boldsymbol{w}\)</span>方向</li>
+<li>前方是正类区域，后方是负类区域</li>
+<li><span class="arithmatex">\(\boldsymbol{w}\)</span>的模<span class="arithmatex">\(\|\boldsymbol{w}\|\)</span>不影响决策边界的方向，只影响判别函数值的尺度</li>
+</ul>
+<h4 id="样本点到决策边界的距离">样本点到决策边界的距离<a class="headerlink" href="#样本点到决策边界的距离" title="Permanent link">¶</a></h4>
+<p>点到超平面的距离公式：任意点<span class="arithmatex">\(\boldsymbol{x}_0 \in \mathbb{R}^D\)</span>到超平面<span class="arithmatex">\(\boldsymbol{w}^{\top}\boldsymbol{x} + b = 0\)</span>的距离为：</p>
+<p><strong>有符号距离</strong>：
+$$
+d_{\text{signed}}(\boldsymbol{x}_0) = \frac{\boldsymbol{w}^{\top}\boldsymbol{x}_0 + b}{|\boldsymbol{w}|_2}
+$$</p>
+<p><strong>无符号距离（绝对距离）</strong>：
+$$
+d(\boldsymbol{x}_0) = \frac{|\boldsymbol{w}^{\top}\boldsymbol{x}_0 + b|}{|\boldsymbol{w}|_2}
+$$</p>
+<p>其中<span class="arithmatex">\(\|\boldsymbol{w}\|_2 = \sqrt{\sum_{d=1}^{D} w_d^2}\)</span>是权重向量的<span class="arithmatex">\(L_2\)</span>范数（欧几里得范数）。</p>
+<p><strong>详细证明</strong>：</p>
+<p><strong>方法一：投影法</strong></p>
+<p>设<span class="arithmatex">\(\boldsymbol{x}_p\)</span>是<span class="arithmatex">\(\boldsymbol{x}_0\)</span>在超平面上的投影点（即最近点），则<span class="arithmatex">\(\boldsymbol{x}_p\)</span>满足两个条件：</p>
+<ol>
+<li><span class="arithmatex">\(\boldsymbol{x}_p\)</span>在超平面上：<span class="arithmatex">\(\boldsymbol{w}^{\top}\boldsymbol{x}_p + b = 0\)</span></li>
+<li><span class="arithmatex">\(\boldsymbol{x}_0 - \boldsymbol{x}_p\)</span>与超平面垂直，即平行于法向量<span class="arithmatex">\(\boldsymbol{w}\)</span></li>
+</ol>
+<p>由条件2，存在<span class="arithmatex">\(\lambda \in \mathbb{R}\)</span>使得：
+$$
+\boldsymbol{x}_0 - \boldsymbol{x}_p = \lambda \boldsymbol{w}
+$$</p>
+<p>即：
+$$
+\boldsymbol{x}_p = \boldsymbol{x}_0 - \lambda \boldsymbol{w}
+$$</p>
+<p>将<span class="arithmatex">\(\boldsymbol{x}_p\)</span>代入条件1：
+$$
+\boldsymbol{w}^{\top}(\boldsymbol{x}_0 - \lambda \boldsymbol{w}) + b = 0
+$$</p>
+<div class="arithmatex">\[
+\boldsymbol{w}^{\top}\boldsymbol{x}_0 - \lambda \boldsymbol{w}^{\top}\boldsymbol{w} + b = 0
+\]</div>
+<div class="arithmatex">\[
+\boldsymbol{w}^{\top}\boldsymbol{x}_0 + b = \lambda \|\boldsymbol{w}\|_2^2
+\]</div>
+<div class="arithmatex">\[
+\lambda = \frac{\boldsymbol{w}^{\top}\boldsymbol{x}_0 + b}{\|\boldsymbol{w}\|_2^2}
+\]</div>
+<p><span class="arithmatex">\(\boldsymbol{x}_0\)</span>到超平面的距离为：
+$$
+d = |\boldsymbol{x}_0 - \boldsymbol{x}_p|_2 = |\lambda \boldsymbol{w}|_2 = |\lambda| \cdot |\boldsymbol{w}|_2
+$$</p>
+<div class="arithmatex">\[
+= \left|\frac{\boldsymbol{w}^{\top}\boldsymbol{x}_0 + b}{\|\boldsymbol{w}\|_2^2}\right| \cdot \|\boldsymbol{w}\|_2 = \frac{|\boldsymbol{w}^{\top}\boldsymbol{x}_0 + b|}{\|\boldsymbol{w}\|_2}
+\]</div>
+<p><span class="arithmatex">\(\square\)</span></p>
+<p><strong>方法二：解析几何法</strong></p>
+<p>超平面上任取一点<span class="arithmatex">\(\boldsymbol{x}^*\)</span>，满足<span class="arithmatex">\(\boldsymbol{w}^{\top}\boldsymbol{x}^* + b = 0\)</span>。</p>
+<p><span class="arithmatex">\(\boldsymbol{x}_0\)</span>到超平面的距离等于向量<span class="arithmatex">\((\boldsymbol{x}_0 - \boldsymbol{x}^*)\)</span>在法向量方向上的投影长度：</p>
+<div class="arithmatex">\[
+d = \left|\frac{\boldsymbol{w}^{\top}(\boldsymbol{x}_0 - \boldsymbol{x}^*)}{\|\boldsymbol{w}\|_2}\right| = \left|\frac{\boldsymbol{w}^{\top}\boldsymbol{x}_0 - \boldsymbol{w}^{\top}\boldsymbol{x}^*}{\|\boldsymbol{w}\|_2}\right|
+\]</div>
+<p>由于<span class="arithmatex">\(\boldsymbol{w}^{\top}\boldsymbol{x}^* = -b\)</span>：</p>
+<div class="arithmatex">\[
+d = \left|\frac{\boldsymbol{w}^{\top}\boldsymbol{x}_0 + b}{\|\boldsymbol{w}\|_2}\right| = \frac{|\boldsymbol{w}^{\top}\boldsymbol{x}_0 + b|}{\|\boldsymbol{w}\|_2}
+\]</div>
+<p><span class="arithmatex">\(\square\)</span></p>
+<p><strong>推论 3.1</strong>：原点到超平面<span class="arithmatex">\(\boldsymbol{w}^{\top}\boldsymbol{x} + b = 0\)</span>的距离为：
+$$
+d_{\text{origin}} = \frac{|b|}{|\boldsymbol{w}|_2}
+$$</p>
+<p><strong>推论 3.2</strong>：如果<span class="arithmatex">\(\|\boldsymbol{w}\|_2 = 1\)</span>（单位法向量），则：
+$$
+d(\boldsymbol{x}_0) = |\boldsymbol{w}^{\top}\boldsymbol{x}_0 + b|
+$$</p>
+<p>即判别函数值的绝对值直接等于距离。</p>
+<p><strong>例 3.2</strong>：考虑二维空间中的超平面<span class="arithmatex">\(2x_1 + x_2 - 2 = 0\)</span>。</p>
+<ul>
+<li>权重向量：<span class="arithmatex">\(\boldsymbol{w} = [2, 1]^{\top}\)</span></li>
+<li>偏置：<span class="arithmatex">\(b = -2\)</span></li>
+<li>法向量的模：<span class="arithmatex">\(\|\boldsymbol{w}\|_2 = \sqrt{4 + 1} = \sqrt{5}\)</span></li>
+<li>单位法向量：<span class="arithmatex">\(\hat{\boldsymbol{w}} = \frac{1}{\sqrt{5}}[2, 1]^{\top}\)</span></li>
+</ul>
+<p>计算各点到超平面的距离：</p>
+<table>
+<thead>
+<tr>
+<th>点</th>
+<th><span class="arithmatex">\(f(\boldsymbol{x})\)</span></th>
+<th>距离</th>
+<th>类别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\((0, 0)\)</span></td>
+<td><span class="arithmatex">\(-2\)</span></td>
+<td>$\frac{</td>
+<td>-2</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((1, 1)\)</span></td>
+<td><span class="arithmatex">\(1\)</span></td>
+<td>$\frac{</td>
+<td>1</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((1, 0)\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+<td>边界上</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((2, 2)\)</span></td>
+<td><span class="arithmatex">\(4\)</span></td>
+<td><span class="arithmatex">\(\frac{4}{\sqrt{5}} = \frac{4\sqrt{5}}{5} \approx 1.789\)</span></td>
+<td>正类</td>
+</tr>
+</tbody>
+</table>
+<h4 id="函数间隔与几何间隔">函数间隔与几何间隔<a class="headerlink" href="#函数间隔与几何间隔" title="Permanent link">¶</a></h4>
+<p>在分类问题中，我们不仅关心样本是否被正确分类，还关心分类的**置信度**。</p>
+<p>函数间隔：给定超平面<span class="arithmatex">\((\boldsymbol{w}, b)\)</span>和样本点<span class="arithmatex">\((\boldsymbol{x}, y)\)</span>，其中<span class="arithmatex">\(y \in \{-1, +1\}\)</span>，定义**函数间隔**（functional margin）为：</p>
+<div class="arithmatex">\[
+\hat{\gamma} = y \cdot f(\boldsymbol{x}) = y(\boldsymbol{w}^{\top}\boldsymbol{x} + b)
+\]</div>
+<p><strong>函数间隔的性质</strong>：</p>
+<ul>
+<li>当<span class="arithmatex">\(\hat{\gamma} &gt; 0\)</span>时，样本被**正确分类**</li>
+<li>当<span class="arithmatex">\(\hat{\gamma} &lt; 0\)</span>时，样本被**错误分类**</li>
+<li>当<span class="arithmatex">\(\hat{\gamma} = 0\)</span>时，样本在**决策边界上**</li>
+<li><span class="arithmatex">\(|\hat{\gamma}|\)</span>越大，分类的**置信度越高**</li>
+</ul>
+<p><strong>函数间隔的问题</strong>：函数间隔依赖于<span class="arithmatex">\(\boldsymbol{w}\)</span>的尺度。如果将<span class="arithmatex">\(\boldsymbol{w}\)</span>和<span class="arithmatex">\(b\)</span>同时乘以常数<span class="arithmatex">\(k &gt; 0\)</span>：</p>
+<ul>
+<li>超平面不变（决策边界相同）</li>
+<li>但函数间隔变为<span class="arithmatex">\(k\hat{\gamma}\)</span></li>
+</ul>
+<p>这意味着我们可以通过简单的缩放使函数间隔任意大，因此函数间隔不是一个好的度量。</p>
+<p>几何间隔：定义**几何间隔**（geometric margin）为：</p>
+<div class="arithmatex">\[
+\gamma = \frac{y(\boldsymbol{w}^{\top}\boldsymbol{x} + b)}{\|\boldsymbol{w}\|_2} = \frac{\hat{\gamma}}{\|\boldsymbol{w}\|_2}
+\]</div>
+<p><strong>几何间隔的性质</strong>：</p>
+<ul>
+<li>几何间隔等于样本点到超平面的**有符号距离**（带正负号）</li>
+<li>几何间隔**不随<span class="arithmatex">\(\boldsymbol{w}\)</span>的尺度变化**而变化</li>
+<li>几何间隔具有明确的**物理意义**：正确分类时为正的距离，错误分类时为负的距离</li>
+</ul>
+<p><strong>验证尺度不变性</strong>：将<span class="arithmatex">\((\boldsymbol{w}, b)\)</span>替换为<span class="arithmatex">\((k\boldsymbol{w}, kb)\)</span>，<span class="arithmatex">\(k &gt; 0\)</span>：</p>
+<div class="arithmatex">\[
+\gamma' = \frac{y(k\boldsymbol{w}^{\top}\boldsymbol{x} + kb)}{\|k\boldsymbol{w}\|_2} = \frac{k \cdot y(\boldsymbol{w}^{\top}\boldsymbol{x} + b)}{|k| \cdot \|\boldsymbol{w}\|_2} = \frac{y(\boldsymbol{w}^{\top}\boldsymbol{x} + b)}{\|\boldsymbol{w}\|_2} = \gamma
+\]</div>
+<p>数据集的间隔：给定数据集<span class="arithmatex">\(\mathcal{D} = \{(\boldsymbol{x}^{(n)}, y^{(n)})\}_{n=1}^N\)</span>，定义数据集相对于超平面<span class="arithmatex">\((\boldsymbol{w}, b)\)</span>的**间隔**为所有样本几何间隔的最小值：</p>
+<div class="arithmatex">\[
+\gamma_{\mathcal{D}} = \min_{n=1,\ldots,N} \gamma^{(n)} = \min_{n=1,\ldots,N} \frac{y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b)}{\|\boldsymbol{w}\|_2}
+\]</div>
+<p><strong>解释</strong>：数据集的间隔表示**最难分类的样本**（离决策边界最近的样本）到决策边界的距离。如果<span class="arithmatex">\(\gamma_{\mathcal{D}} &gt; 0\)</span>，则所有样本都被正确分类。</p>
+<h4 id="线性可分性">线性可分性<a class="headerlink" href="#线性可分性" title="Permanent link">¶</a></h4>
+<p>线性可分：给定数据集<span class="arithmatex">\(\mathcal{D} = \{(\boldsymbol{x}^{(n)}, y^{(n)})\}_{n=1}^N\)</span>，其中<span class="arithmatex">\(y^{(n)} \in \{-1, +1\}\)</span>。如果存在超平面<span class="arithmatex">\((\boldsymbol{w}, b)\)</span>使得：</p>
+<div class="arithmatex">\[
+y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b) &gt; 0, \quad \forall n = 1, \ldots, N
+\]</div>
+<p>则称数据集是**线性可分**（linearly separable）的。</p>
+<p><strong>等价表述</strong>：</p>
+<ul>
+<li>存在超平面能够将正类样本和负类样本完全分开</li>
+<li>数据集的间隔<span class="arithmatex">\(\gamma_{\mathcal{D}} &gt; 0\)</span></li>
+</ul>
+<p>凸包：点集<span class="arithmatex">\(\mathcal{S} = \{\boldsymbol{x}^{(1)}, \ldots, \boldsymbol{x}^{(m)}\}\)</span>的**凸包**（convex hull）定义为：</p>
+<div class="arithmatex">\[
+\text{conv}(\mathcal{S}) = \left\{ \sum_{i=1}^{m} \lambda_i \boldsymbol{x}^{(i)} \mid \lambda_i \geq 0, \sum_{i=1}^{m} \lambda_i = 1 \right\}
+\]</div>
+<p>即所有点的凸组合构成的集合。</p>
+<p>线性可分的几何刻画：数据集<span class="arithmatex">\(\mathcal{D}\)</span>线性可分，当且仅当正类样本集合的凸包与负类样本集合的凸包**不相交**。</p>
+<div class="arithmatex">\[
+\text{conv}(\{\boldsymbol{x}^{(n)} \mid y^{(n)} = +1\}) \cap \text{conv}(\{\boldsymbol{x}^{(n)} \mid y^{(n)} = -1\}) = \emptyset
+\]</div>
+<p>线性不可分的例子——XOR问题：</p>
+<p>考虑以下四个样本：</p>
+<ul>
+<li><span class="arithmatex">\((0, 0), y = -1\)</span></li>
+<li><span class="arithmatex">\((1, 1), y = -1\)</span></li>
+<li><span class="arithmatex">\((0, 1), y = +1\)</span></li>
+<li><span class="arithmatex">\((1, 0), y = +1\)</span></li>
+</ul>
+<p>正类凸包是连接<span class="arithmatex">\((0,1)\)</span>和<span class="arithmatex">\((1,0)\)</span>的线段。
+负类凸包是连接<span class="arithmatex">\((0,0)\)</span>和<span class="arithmatex">\((1,1)\)</span>的线段。
+这两条线段在点<span class="arithmatex">\((0.5, 0.5)\)</span>相交，因此数据线性不可分。</p>
+<p>这就是著名的**XOR问题**，它说明了单层感知器的局限性，也是促使多层神经网络发展的重要动力。</p>
+<h3 id="12-多分类">1.2 多分类<a class="headerlink" href="#12-多分类" title="Permanent link">¶</a></h3>
+<p>当类别数<span class="arithmatex">\(C &gt; 2\)</span>时，我们需要将二分类方法扩展到多分类问题。</p>
+<h4 id="多分类问题的形式化">多分类问题的形式化<a class="headerlink" href="#多分类问题的形式化" title="Permanent link">¶</a></h4>
+<p><strong>问题设定</strong>：给定输入<span class="arithmatex">\(\boldsymbol{x} \in \mathbb{R}^D\)</span>，预测其类别标签<span class="arithmatex">\(y \in \{1, 2, \ldots, C\}\)</span>。</p>
+<p><strong>方法分类</strong>：</p>
+<ol>
+<li><strong>分解法</strong>：将多分类问题分解为多个二分类问题</li>
+<li><strong>直接法</strong>：直接建立多类判别函数</li>
+</ol>
+<h4 id="一对其余one-vs-rest-ovr">一对其余（One-vs-Rest, OvR）<a class="headerlink" href="#一对其余one-vs-rest-ovr" title="Permanent link">¶</a></h4>
+<p><strong>又称</strong>：One-vs-All (OvA)</p>
+<p><strong>基本思想</strong>：为每个类别<span class="arithmatex">\(c\)</span>训练一个二分类器，判断样本是否属于类别<span class="arithmatex">\(c\)</span>。</p>
+<p><strong>具体方法</strong>：</p>
+<p>对于类别<span class="arithmatex">\(c = 1, 2, \ldots, C\)</span>，构建训练集：</p>
+<ul>
+<li><strong>正类</strong>：所有标签为<span class="arithmatex">\(c\)</span>的样本，标记为<span class="arithmatex">\(+1\)</span></li>
+<li><strong>负类</strong>：所有标签不为<span class="arithmatex">\(c\)</span>的样本，标记为<span class="arithmatex">\(-1\)</span></li>
+</ul>
+<p>训练得到<span class="arithmatex">\(C\)</span>个二分类器：
+$$
+f_c(\boldsymbol{x}) = \boldsymbol{w}_c^{\top}\boldsymbol{x} + b_c, \quad c = 1, 2, \ldots, C
+$$</p>
+<p><strong>预测规则</strong>：
+$$
+\hat{y} = \arg\max_{c \in {1, 2, \ldots, C}} f_c(\boldsymbol{x})
+$$</p>
+<p><strong>算法 3.1</strong>：OvR多分类</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>训练阶段：
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>for c = 1 to C do
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    构建二分类数据集：
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>        正类：{x^(n) | y^(n) = c}
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>        负类：{x^(n) | y^(n) ≠ c}
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    训练二分类器 f_c(x) = w_c^T x + b_c
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>end for
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>预测阶段：
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>输入：新样本 x
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>输出：ŷ = argmax_c f_c(x)
+</code></pre></div>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>实现简单</li>
+<li>只需训练<span class="arithmatex">\(C\)</span>个分类器，复杂度较低</li>
+<li>每个分类器可以独立训练，便于并行化</li>
+</ul>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li><strong>类别不平衡</strong>：每个二分类器中负类样本远多于正类（比例约为<span class="arithmatex">\((C-1):1\)</span>）</li>
+<li><strong>分数不可比</strong>：不同分类器的输出可能不具有可比性</li>
+<li><strong>模糊区域</strong>：可能存在多个分类器都给出正预测或都给出负预测的情况</li>
+</ul>
+<p><strong>处理类别不平衡</strong>：</p>
+<ul>
+<li>对负类进行下采样</li>
+<li>对正类进行上采样</li>
+<li>使用类别权重调整损失函数</li>
+</ul>
+<h4 id="一对一one-vs-one-ovo">一对一（One-vs-One, OvO）<a class="headerlink" href="#一对一one-vs-one-ovo" title="Permanent link">¶</a></h4>
+<p><strong>基本思想</strong>：为每两个类别训练一个二分类器。</p>
+<p><strong>具体方法</strong>：</p>
+<p>对于类别对<span class="arithmatex">\((i, j)\)</span>，其中<span class="arithmatex">\(1 \leq i &lt; j \leq C\)</span>，构建训练集：</p>
+<ul>
+<li><strong>正类</strong>：所有标签为<span class="arithmatex">\(i\)</span>的样本</li>
+<li><strong>负类</strong>：所有标签为<span class="arithmatex">\(j\)</span>的样本</li>
+</ul>
+<p>共训练：
+$$
+\binom{C}{2} = \frac{C(C-1)}{2}
+$$
+个二分类器。</p>
+<p><strong>预测规则（投票法）</strong>：</p>
+<p>对于新样本<span class="arithmatex">\(\boldsymbol{x}\)</span>，每个分类器<span class="arithmatex">\(f_{ij}\)</span>投票给预测的类别：</p>
+<ul>
+<li>如果<span class="arithmatex">\(f_{ij}(\boldsymbol{x}) &gt; 0\)</span>，类别<span class="arithmatex">\(i\)</span>获得一票</li>
+<li>如果<span class="arithmatex">\(f_{ij}(\boldsymbol{x}) &lt; 0\)</span>，类别<span class="arithmatex">\(j\)</span>获得一票</li>
+</ul>
+<p>最终预测：
+$$
+\hat{y} = \arg\max_{c \in {1, 2, \ldots, C}} \text{votes}©
+$$</p>
+<p><strong>算法 3.2</strong>：OvO多分类</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>训练阶段：
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>for i = 1 to C-1 do
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>    for j = i+1 to C do
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>        构建二分类数据集：
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>            正类：{x^(n) | y^(n) = i}
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>            负类：{x^(n) | y^(n) = j}
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>        训练二分类器 f_{ij}(x)
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>    end for
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>end for
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>预测阶段：
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>输入：新样本 x
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a>初始化：votes[1..C] = 0
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>for i = 1 to C-1 do
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>    for j = i+1 to C do
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>        if f_{ij}(x) &gt; 0 then
+<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a>            votes[i] += 1
+<a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>        else
+<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a>            votes[j] += 1
+<a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>        end if
+<a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a>    end for
+<a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>end for
+<a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a>输出：ŷ = argmax_c votes[c]
+</code></pre></div>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>每个分类器只使用两个类别的数据，<strong>训练更快</strong></li>
+<li>类别**平衡性较好**</li>
+<li>对于某些算法（如SVM），OvO的总训练时间可能比OvR更短</li>
+</ul>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li>需要训练<span class="arithmatex">\(O(C^2)\)</span>个分类器，类别数多时**存储开销大**</li>
+<li>预测时需要运行<span class="arithmatex">\(O(C^2)\)</span>个分类器，<strong>预测较慢</strong></li>
+<li>投票可能产生**平局**</li>
+</ul>
+<p><strong>处理平局</strong>：</p>
+<ul>
+<li>随机选择一个得票最多的类别</li>
+<li>使用分类器输出的绝对值作为置信度进行加权投票</li>
+<li>引入额外的规则打破平局</li>
+</ul>
+<h4 id="多类线性判别函数直接法">多类线性判别函数（直接法）<a class="headerlink" href="#多类线性判别函数直接法" title="Permanent link">¶</a></h4>
+<p><strong>基本思想</strong>：直接定义<span class="arithmatex">\(C\)</span>个线性判别函数，每个类别一个。</p>
+<p><strong>模型定义</strong>：</p>
+<div class="arithmatex">\[
+f_c(\boldsymbol{x}) = \boldsymbol{w}_c^{\top}\boldsymbol{x} + b_c, \quad c = 1, 2, \ldots, C
+\]</div>
+<p><strong>矩阵形式</strong>：设：</p>
+<div class="arithmatex">\[
+\boldsymbol{W} = [\boldsymbol{w}_1, \boldsymbol{w}_2, \ldots, \boldsymbol{w}_C] \in \mathbb{R}^{D \times C}
+\]</div>
+<div class="arithmatex">\[
+\boldsymbol{b} = [b_1, b_2, \ldots, b_C]^{\top} \in \mathbb{R}^C
+\]</div>
+<p>则所有判别函数值可以表示为：</p>
+<div class="arithmatex">\[
+\boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{W}^{\top}\boldsymbol{x} + \boldsymbol{b} \in \mathbb{R}^C
+\]</div>
+<p><strong>预测规则</strong>：</p>
+<div class="arithmatex">\[
+\hat{y} = \arg\max_{c \in \{1, 2, \ldots, C\}} f_c(\boldsymbol{x})
+\]</div>
+<h4 id="多类决策边界分析">多类决策边界分析<a class="headerlink" href="#多类决策边界分析" title="Permanent link">¶</a></h4>
+<p>类别<span class="arithmatex">\(i\)</span>和类别<span class="arithmatex">\(j\)</span>之间的决策边界是满足<span class="arithmatex">\(f_i(\boldsymbol{x}) = f_j(\boldsymbol{x})\)</span>的点的集合：</p>
+<div class="arithmatex">\[
+\mathcal{B}_{ij} = \{\boldsymbol{x} \mid f_i(\boldsymbol{x}) = f_j(\boldsymbol{x})\}
+\]</div>
+<div class="arithmatex">\[
+= \{\boldsymbol{x} \mid (\boldsymbol{w}_i - \boldsymbol{w}_j)^{\top}\boldsymbol{x} + (b_i - b_j) = 0\}
+\]</div>
+<p>这仍然是一个**超平面**，法向量为<span class="arithmatex">\(\boldsymbol{w}_i - \boldsymbol{w}_j\)</span>。</p>
+<p><strong>推论</strong>：多类线性分类器的所有决策边界都是超平面，共有<span class="arithmatex">\(\binom{C}{2}\)</span>个成对边界。</p>
+<p>决策区域：类别<span class="arithmatex">\(c\)</span>的决策区域为：</p>
+<div class="arithmatex">\[
+\mathcal{R}_c = \{\boldsymbol{x} \mid f_c(\boldsymbol{x}) &gt; f_j(\boldsymbol{x}), \forall j \neq c\}
+\]</div>
+<div class="arithmatex">\[
+= \bigcap_{j \neq c} \{\boldsymbol{x} \mid (\boldsymbol{w}_c - \boldsymbol{w}_j)^{\top}\boldsymbol{x} + (b_c - b_j) &gt; 0\}
+\]</div>
+<p>多类线性分类器的决策区域<span class="arithmatex">\(\mathcal{R}_c\)</span>是**凸多面体**（convex polytope）。</p>
+<p><strong>证明</strong>：每个决策区域<span class="arithmatex">\(\mathcal{R}_c\)</span>是<span class="arithmatex">\(C-1\)</span>个半空间的交集：</p>
+<div class="arithmatex">\[
+\mathcal{R}_c = \bigcap_{j \neq c} H_{cj}^{+}
+\]</div>
+<p>其中<span class="arithmatex">\(H_{cj}^{+} = \{\boldsymbol{x} \mid (\boldsymbol{w}_c - \boldsymbol{w}_j)^{\top}\boldsymbol{x} + (b_c - b_j) &gt; 0\}\)</span>是一个开半空间。</p>
+<p>半空间是凸集，凸集的交集仍是凸集，因此<span class="arithmatex">\(\mathcal{R}_c\)</span>是凸集。</p>
+<p>具体地，它是由有限个半空间界定的凸多面体。<span class="arithmatex">\(\square\)</span></p>
+<p><strong>几何直观</strong>：</p>
+<ul>
+<li>每个类别的决策区域是一个"楔形"或"锥形"区域</li>
+<li>所有决策区域的并集覆盖整个特征空间</li>
+<li>决策区域两两之间只通过边界相邻</li>
+</ul>
+<h4 id="参数冗余性">参数冗余性<a class="headerlink" href="#参数冗余性" title="Permanent link">¶</a></h4>
+<p><strong>观察</strong>：在多类线性判别函数中，存在参数冗余。</p>
+<p>平移不变性：如果将所有权重向量和偏置同时加上相同的量：</p>
+<div class="arithmatex">\[
+\tilde{\boldsymbol{w}}_c = \boldsymbol{w}_c + \boldsymbol{v}, \quad \tilde{b}_c = b_c + \beta, \quad \forall c
+\]</div>
+<p>则分类决策不变。</p>
+<p><strong>证明</strong>：</p>
+<div class="arithmatex">\[
+\tilde{f}_c(\boldsymbol{x}) = \tilde{\boldsymbol{w}}_c^{\top}\boldsymbol{x} + \tilde{b}_c
+\]</div>
+<div class="arithmatex">\[
+= (\boldsymbol{w}_c + \boldsymbol{v})^{\top}\boldsymbol{x} + (b_c + \beta)
+\]</div>
+<div class="arithmatex">\[
+= \boldsymbol{w}_c^{\top}\boldsymbol{x} + b_c + \boldsymbol{v}^{\top}\boldsymbol{x} + \beta
+\]</div>
+<div class="arithmatex">\[
+= f_c(\boldsymbol{x}) + (\boldsymbol{v}^{\top}\boldsymbol{x} + \beta)
+\]</div>
+<p>由于<span class="arithmatex">\(\boldsymbol{v}^{\top}\boldsymbol{x} + \beta\)</span>对所有类别<span class="arithmatex">\(c\)</span>相同，因此：</p>
+<div class="arithmatex">\[
+\arg\max_c \tilde{f}_c(\boldsymbol{x}) = \arg\max_c [f_c(\boldsymbol{x}) + (\boldsymbol{v}^{\top}\boldsymbol{x} + \beta)] = \arg\max_c f_c(\boldsymbol{x})
+\]</div>
+<p><strong>消除冗余的方法</strong>：</p>
+<p><strong>方法一</strong>：设置某一类（通常是最后一类<span class="arithmatex">\(C\)</span>）的参数为零：
+$$
+\boldsymbol{w}_C = \boldsymbol{0}, \quad b_C = 0
+$$</p>
+<p>这样只需学习<span class="arithmatex">\(C-1\)</span>个权重向量和偏置，总参数量从<span class="arithmatex">\(C(D+1)\)</span>减少到<span class="arithmatex">\((C-1)(D+1)\)</span>。</p>
+<p><strong>方法二</strong>：添加约束条件：
+$$
+\sum_{c=1}^{C} \boldsymbol{w}<em c="1">c = \boldsymbol{0}, \quad \sum</em> b_c = 0
+$$}^{C</p>
+<p><strong>在Softmax回归中的应用</strong>：Softmax回归中常用方法一，将最后一类的参数设为零作为参考类别。</p>
+<h2 id="2-logistic回归">2 Logistic回归<a class="headerlink" href="#2-logistic回归" title="Permanent link">¶</a></h2>
+<p>Logistic回归（Logistic Regression）是一种广泛使用的线性分类模型。尽管名称中包含"回归"，但它实际上是一种**分类方法**。Logistic回归的核心思想是使用Sigmoid函数将线性判别函数的输出转换为概率值，从而实现概率化的分类预测。</p>
+<h4 id="为什么不能直接用线性函数分类">为什么不能直接用线性函数分类？<a class="headerlink" href="#为什么不能直接用线性函数分类" title="Permanent link">¶</a></h4>
+<p>考虑二分类问题，标签<span class="arithmatex">\(y \in \{0, 1\}\)</span>。如果直接使用线性函数<span class="arithmatex">\(f(\boldsymbol{x}) = \boldsymbol{w}^{\top}\boldsymbol{x} + b\)</span>预测<span class="arithmatex">\(y\)</span>，存在以下问题：</p>
+<p><strong>问题一：输出范围不受限</strong></p>
+<ul>
+<li>线性函数<span class="arithmatex">\(f(\boldsymbol{x})\)</span>可以是任意实数<span class="arithmatex">\((-\infty, +\infty)\)</span></li>
+<li>但标签<span class="arithmatex">\(y\)</span>只能是<span class="arithmatex">\(0\)</span>或<span class="arithmatex">\(1\)</span></li>
+<li>无法直接将线性输出解释为类别</li>
+</ul>
+<p><strong>问题二：无法给出概率解释</strong></p>
+<ul>
+<li>我们希望模型输出"样本属于某类的概率"</li>
+<li>概率值必须在<span class="arithmatex">\([0, 1]\)</span>范围内</li>
+<li>线性函数无法满足这一要求</li>
+</ul>
+<p><strong>问题三：对离群点敏感</strong></p>
+<ul>
+<li>如果使用最小二乘法拟合</li>
+<li>远离决策边界的点会对决策边界产生过大影响</li>
+<li>导致分类效果不佳</li>
+</ul>
+<p><strong>解决方案</strong>：引入一个将<span class="arithmatex">\(\mathbb{R}\)</span>映射到<span class="arithmatex">\((0, 1)\)</span>的**激活函数**，将线性输出转换为概率。</p>
+<h4 id="激活函数的选择">激活函数的选择<a class="headerlink" href="#激活函数的选择" title="Permanent link">¶</a></h4>
+<p>理想的激活函数<span class="arithmatex">\(\sigma: \mathbb{R} \rightarrow (0, 1)\)</span>应满足：</p>
+<ol>
+<li><strong>值域为<span class="arithmatex">\((0, 1)\)</span></strong>：输出可解释为概率</li>
+<li><strong>单调递增</strong>：输入越大，正类概率越高</li>
+<li><strong>平滑可微</strong>：便于使用梯度优化方法</li>
+<li><strong>计算简单</strong>：便于实际应用</li>
+</ol>
+<p>Sigmoid函数完美满足这些要求。</p>
+<h3 id="21-sigmoid函数">2.1 Sigmoid函数<a class="headerlink" href="#21-sigmoid函数" title="Permanent link">¶</a></h3>
+<h4 id="定义与基本形式">定义与基本形式<a class="headerlink" href="#定义与基本形式" title="Permanent link">¶</a></h4>
+<p>Sigmoid函数：Sigmoid函数，也称为**Logistic函数**或**S形函数**，定义为：</p>
+<div class="arithmatex">\[
+\sigma(z) = \frac{1}{1 + e^{-z}}
+\]</div>
+<p><strong>等价形式</strong>：</p>
+<div class="arithmatex">\[
+\sigma(z) = \frac{e^z}{1 + e^z} = \frac{e^z}{e^z + 1}
+\]</div>
+<p><strong>验证等价性</strong>：
+$$
+\frac{1}{1 + e^{-z}} = \frac{1}{1 + e^{-z}} \cdot \frac{e<sup>z}{e</sup>z} = \frac{e<sup>z}{e</sup>z + 1}
+$$</p>
+<h4 id="图像特征">图像特征<a class="headerlink" href="#图像特征" title="Permanent link">¶</a></h4>
+<p>Sigmoid函数的图像呈**S形曲线**：</p>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义域</td>
+<td><span class="arithmatex">\((-\infty, +\infty)\)</span></td>
+</tr>
+<tr>
+<td>值域</td>
+<td><span class="arithmatex">\((0, 1)\)</span>（开区间，不包含0和1）</td>
+</tr>
+<tr>
+<td>单调性</td>
+<td>严格单调递增</td>
+</tr>
+<tr>
+<td>对称中心</td>
+<td>点<span class="arithmatex">\((0, 0.5)\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(z = 0\)</span>处的值</td>
+<td><span class="arithmatex">\(\sigma(0) = 0.5\)</span></td>
+</tr>
+<tr>
+<td>左极限</td>
+<td><span class="arithmatex">\(\lim_{z \to -\infty} \sigma(z) = 0\)</span></td>
+</tr>
+<tr>
+<td>右极限</td>
+<td><span class="arithmatex">\(\lim_{z \to +\infty} \sigma(z) = 1\)</span></td>
+</tr>
+<tr>
+<td>拐点</td>
+<td><span class="arithmatex">\(z = 0\)</span>，此处曲率最大</td>
+</tr>
+</tbody>
+</table>
+<h4 id="重要性质">重要性质<a class="headerlink" href="#重要性质" title="Permanent link">¶</a></h4>
+<p>对称性/互补性：</p>
+<div class="arithmatex">\[
+\sigma(-z) = 1 - \sigma(z)
+\]</div>
+<p><strong>详细证明</strong>：
+$$
+\sigma(-z) = \frac{1}{1 + e^{-(-z)}} = \frac{1}{1 + e^{z}}
+$$</p>
+<div class="arithmatex">\[
+1 - \sigma(z) = 1 - \frac{1}{1 + e^{-z}} = \frac{1 + e^{-z} - 1}{1 + e^{-z}} = \frac{e^{-z}}{1 + e^{-z}}
+\]</div>
+<div class="arithmatex">\[
+= \frac{e^{-z}}{1 + e^{-z}} \cdot \frac{e^z}{e^z} = \frac{1}{e^z + 1} = \frac{1}{1 + e^z}
+\]</div>
+<p>因此<span class="arithmatex">\(\sigma(-z) = 1 - \sigma(z)\)</span>。</p>
+<p><strong>几何意义</strong>：Sigmoid曲线关于点<span class="arithmatex">\((0, 0.5)\)</span>中心对称。</p>
+<p>导数的优美形式：
+$$
+\sigma'(z) = \sigma(z)(1 - \sigma(z))
+$$</p>
+<p><strong>详细证明</strong>：</p>
+<p>使用商法则，设<span class="arithmatex">\(u = 1\)</span>，<span class="arithmatex">\(v = 1 + e^{-z}\)</span>：</p>
+<div class="arithmatex">\[
+\sigma'(z) = \frac{d}{dz}\left(\frac{1}{1 + e^{-z}}\right) = -\frac{1}{(1 + e^{-z})^2} \cdot \frac{d}{dz}(1 + e^{-z})
+\]</div>
+<div class="arithmatex">\[
+= -\frac{1}{(1 + e^{-z})^2} \cdot (-e^{-z}) = \frac{e^{-z}}{(1 + e^{-z})^2}
+\]</div>
+<p>将其改写为<span class="arithmatex">\(\sigma(z)\)</span>和<span class="arithmatex">\(1-\sigma(z)\)</span>的乘积：</p>
+<div class="arithmatex">\[
+\sigma(z) = \frac{1}{1 + e^{-z}}
+\]</div>
+<div class="arithmatex">\[
+1 - \sigma(z) = \frac{e^{-z}}{1 + e^{-z}}
+\]</div>
+<div class="arithmatex">\[
+\sigma(z)(1 - \sigma(z)) = \frac{1}{1 + e^{-z}} \cdot \frac{e^{-z}}{1 + e^{-z}} = \frac{e^{-z}}{(1 + e^{-z})^2}
+\]</div>
+<p>因此<span class="arithmatex">\(\sigma'(z) = \sigma(z)(1 - \sigma(z))\)</span>。</p>
+<p><strong>导数的性质</strong>：</p>
+<ul>
+<li><span class="arithmatex">\(\sigma'(z) &gt; 0\)</span>对所有<span class="arithmatex">\(z\)</span>成立（单调递增）</li>
+<li><span class="arithmatex">\(\sigma'(z)\)</span>的最大值在<span class="arithmatex">\(z = 0\)</span>处取得：<span class="arithmatex">\(\sigma'(0) = 0.5 \times 0.5 = 0.25\)</span></li>
+<li>当<span class="arithmatex">\(|z|\)</span>很大时，<span class="arithmatex">\(\sigma'(z) \approx 0\)</span>（<strong>梯度消失</strong>）</li>
+</ul>
+<p>逆函数——logit函数：</p>
+<p>Sigmoid函数的逆函数称为**logit函数**：</p>
+<div class="arithmatex">\[
+\sigma^{-1}(p) = \text{logit}(p) = \log\frac{p}{1-p}
+\]</div>
+<p>其中<span class="arithmatex">\(p \in (0, 1)\)</span>。</p>
+<p><strong>验证</strong>：设<span class="arithmatex">\(p = \sigma(z)\)</span>，则：
+$$
+\frac{p}{1-p} = \frac{\sigma(z)}{1-\sigma(z)} = \frac{\frac{1}{1+e<sup -z="-z">{-z}}}{\frac{e</sup> = e^z
+$$}}{1+e^{-z}}} = \frac{1}{e^{-z}</p>
+<div class="arithmatex">\[
+\log\frac{p}{1-p} = \log e^z = z
+\]</div>
+<p>因此<span class="arithmatex">\(\text{logit}(\sigma(z)) = z\)</span>。<span class="arithmatex">\(\square\)</span></p>
+<p>与双曲正切函数的关系：</p>
+<div class="arithmatex">\[
+\sigma(z) = \frac{1 + \tanh(z/2)}{2}
+\]</div>
+<p>或等价地：</p>
+<div class="arithmatex">\[
+\tanh(z) = 2\sigma(2z) - 1
+\]</div>
+<h3 id="22-logistic回归模型">2.2 Logistic回归模型<a class="headerlink" href="#22-logistic回归模型" title="Permanent link">¶</a></h3>
+<h4 id="模型定义">模型定义<a class="headerlink" href="#模型定义" title="Permanent link">¶</a></h4>
+<p>Logistic回归模型：Logistic回归模型定义样本<span class="arithmatex">\(\boldsymbol{x}\)</span>属于**类别1**的条件概率为：</p>
+<div class="arithmatex">\[
+P(y = 1 \mid \boldsymbol{x}; \boldsymbol{w}, b) = \sigma(\boldsymbol{w}^{\top}\boldsymbol{x} + b) = \frac{1}{1 + e^{-(\boldsymbol{w}^{\top}\boldsymbol{x} + b)}}
+\]</div>
+<p>相应地，属于**类别0**的概率为：</p>
+<div class="arithmatex">\[
+P(y = 0 \mid \boldsymbol{x}; \boldsymbol{w}, b) = 1 - \sigma(\boldsymbol{w}^{\top}\boldsymbol{x} + b) = \frac{e^{-(\boldsymbol{w}^{\top}\boldsymbol{x} + b)}}{1 + e^{-(\boldsymbol{w}^{\top}\boldsymbol{x} + b)}}
+\]</div>
+<p><strong>统一表达式</strong>（伯努利分布形式）：</p>
+<div class="arithmatex">\[
+P(y \mid \boldsymbol{x}; \boldsymbol{w}, b) = \sigma(\boldsymbol{w}^{\top}\boldsymbol{x} + b)^y \cdot (1 - \sigma(\boldsymbol{w}^{\top}\boldsymbol{x} + b))^{1-y}
+\]</div>
+<p>其中<span class="arithmatex">\(y \in \{0, 1\}\)</span>。</p>
+<p><strong>简化记号</strong>：令<span class="arithmatex">\(\hat{y} = \sigma(\boldsymbol{w}^{\top}\boldsymbol{x} + b)\)</span>表示预测的正类概率，令<span class="arithmatex">\(z = \boldsymbol{w}^{\top}\boldsymbol{x} + b\)</span>，则：</p>
+<div class="arithmatex">\[
+\hat{y} = \sigma(z) = P(y = 1 \mid \boldsymbol{x})
+\]</div>
+<div class="arithmatex">\[
+P(y \mid \boldsymbol{x}) = \hat{y}^y (1 - \hat{y})^{1-y}
+\]</div>
+<h4 id="决策规则_1">决策规则<a class="headerlink" href="#决策规则_1" title="Permanent link">¶</a></h4>
+<p><strong>概率阈值决策</strong>：</p>
+<div class="arithmatex">\[
+\hat{y}_{\text{class}} = \begin{cases}
+1, &amp; \text{if } P(y = 1 \mid \boldsymbol{x}) \geq \theta \\
+0, &amp; \text{if } P(y = 1 \mid \boldsymbol{x}) &lt; \theta
+\end{cases}
+\]</div>
+<p>其中<span class="arithmatex">\(\theta \in (0, 1)\)</span>是决策阈值，通常取<span class="arithmatex">\(\theta = 0.5\)</span>。</p>
+<p><strong>当<span class="arithmatex">\(\theta = 0.5\)</span>时</strong>：</p>
+<div class="arithmatex">\[
+P(y = 1 \mid \boldsymbol{x}) \geq 0.5 \Leftrightarrow \sigma(z) \geq 0.5 \Leftrightarrow z \geq 0 \Leftrightarrow \boldsymbol{w}^{\top}\boldsymbol{x} + b \geq 0
+\]</div>
+<p>因此决策规则等价于：</p>
+<div class="arithmatex">\[
+\hat{y}_{\text{class}} = \mathbb{I}(\boldsymbol{w}^{\top}\boldsymbol{x} + b \geq 0)
+\]</div>
+<p>这与线性分类器的决策规则一致。</p>
+<h3 id="23-对数几率log-odds解释">2.3 对数几率（Log-Odds）解释<a class="headerlink" href="#23-对数几率log-odds解释" title="Permanent link">¶</a></h3>
+<p>Logistic回归有一个非常优雅的概率解释，揭示了模型的本质。</p>
+<h4 id="几率与对数几率">几率与对数几率<a class="headerlink" href="#几率与对数几率" title="Permanent link">¶</a></h4>
+<p>几率：事件发生的**几率**（odds）定义为该事件发生概率与不发生概率之比：</p>
+<div class="arithmatex">\[
+\text{odds} = \frac{P(y = 1 \mid \boldsymbol{x})}{P(y = 0 \mid \boldsymbol{x})} = \frac{P(y = 1 \mid \boldsymbol{x})}{1 - P(y = 1 \mid \boldsymbol{x})}
+\]</div>
+<p><strong>几率的直观理解</strong>：</p>
+<ul>
+<li><span class="arithmatex">\(\text{odds} = 1\)</span>：正负类等可能</li>
+<li><span class="arithmatex">\(\text{odds} = 2\)</span>：正类概率是负类的2倍（正类概率<span class="arithmatex">\(\frac{2}{3}\)</span>）</li>
+<li><span class="arithmatex">\(\text{odds} = 9\)</span>：正类概率是负类的9倍（正类概率<span class="arithmatex">\(\frac{9}{10}\)</span>）</li>
+</ul>
+<p>对数几率：<strong>对数几率</strong>（log-odds），也称为**logit**，是几率的自然对数：</p>
+<div class="arithmatex">\[
+\text{logit}(p) = \log \frac{p}{1-p}
+\]</div>
+<p>其中<span class="arithmatex">\(p = P(y = 1 \mid \boldsymbol{x})\)</span>。</p>
+<h4 id="核心定理">核心定理<a class="headerlink" href="#核心定理" title="Permanent link">¶</a></h4>
+<p>Logistic回归的对数几率线性性：在Logistic回归模型中，对数几率是输入特征的**线性函数**：</p>
+<div class="arithmatex">\[
+\log \frac{P(y = 1 \mid \boldsymbol{x})}{P(y = 0 \mid \boldsymbol{x})} = \boldsymbol{w}^{\top}\boldsymbol{x} + b
+\]</div>
+<p><strong>详细证明</strong>：</p>
+<p>设<span class="arithmatex">\(p = P(y = 1 \mid \boldsymbol{x}) = \sigma(z)\)</span>，其中<span class="arithmatex">\(z = \boldsymbol{w}^{\top}\boldsymbol{x} + b\)</span>。</p>
+<div class="arithmatex">\[
+\log \frac{p}{1-p} = \log \frac{\sigma(z)}{1 - \sigma(z)}
+\]</div>
+<p>代入<span class="arithmatex">\(\sigma(z) = \frac{1}{1+e^{-z}}\)</span>和<span class="arithmatex">\(1 - \sigma(z) = \frac{e^{-z}}{1+e^{-z}}\)</span>：</p>
+<div class="arithmatex">\[
+= \log \frac{\frac{1}{1+e^{-z}}}{\frac{e^{-z}}{1+e^{-z}}} = \log \frac{1}{e^{-z}} = \log e^z = z = \boldsymbol{w}^{\top}\boldsymbol{x} + b
+\]</div>
+<h4 id="参数的解释">参数的解释<a class="headerlink" href="#参数的解释" title="Permanent link">¶</a></h4>
+<p><strong>定理 3.9</strong>（权重的对数几率解释）：权重<span class="arithmatex">\(w_d\)</span>表示特征<span class="arithmatex">\(x_d\)</span><strong>增加一个单位**时，**对数几率的变化量</strong>。</p>
+<p><strong>证明</strong>：设<span class="arithmatex">\(\boldsymbol{x}' = \boldsymbol{x} + \boldsymbol{e}_d\)</span>，其中<span class="arithmatex">\(\boldsymbol{e}_d\)</span>是第<span class="arithmatex">\(d\)</span>个坐标为1、其余为0的单位向量。则：</p>
+<div class="arithmatex">\[
+\log \frac{P(y=1 \mid \boldsymbol{x}')}{P(y=0 \mid \boldsymbol{x}')} - \log \frac{P(y=1 \mid \boldsymbol{x})}{P(y=0 \mid \boldsymbol{x})}
+\]</div>
+<div class="arithmatex">\[
+= (\boldsymbol{w}^{\top}\boldsymbol{x}' + b) - (\boldsymbol{w}^{\top}\boldsymbol{x} + b) = \boldsymbol{w}^{\top}(\boldsymbol{x}' - \boldsymbol{x}) = \boldsymbol{w}^{\top}\boldsymbol{e}_d = w_d
+\]</div>
+<p>几率比解释：特征<span class="arithmatex">\(x_d\)</span>增加一个单位时，几率变为原来的<span class="arithmatex">\(e^{w_d}\)</span>倍。</p>
+<p><strong>证明</strong>：
+$$
+\frac{\text{odds}'}{\text{odds}} = \exp\left(\log \text{odds}' - \log \text{odds}\right) = \exp(w_d) = e^{w_d}
+$$</p>
+<p>医学诊断：假设Logistic回归模型预测患病概率，特征<span class="arithmatex">\(x_1\)</span>表示年龄（岁），对应权重<span class="arithmatex">\(w_1 = 0.05\)</span>。</p>
+<ul>
+<li><strong>对数几率解释</strong>：年龄每增加1岁，患病的对数几率增加0.05</li>
+<li><strong>几率比解释</strong>：年龄每增加1岁，患病几率变为原来的<span class="arithmatex">\(e^{0.05} \approx 1.051\)</span>倍，即增加约5.1%</li>
+<li><strong>10年效应</strong>：年龄增加10岁，几率变为原来的<span class="arithmatex">\(e^{0.5} \approx 1.649\)</span>倍，即增加约65%</li>
+</ul>
+<h3 id="24-广义线性模型视角">2.4 广义线性模型视角<a class="headerlink" href="#24-广义线性模型视角" title="Permanent link">¶</a></h3>
+<p>Logistic回归可以从**广义线性模型**（Generalized Linear Model, GLM）的框架来理解。</p>
+<h4 id="glm的三要素">GLM的三要素<a class="headerlink" href="#glm的三要素" title="Permanent link">¶</a></h4>
+<p>广义线性模型由三个部分组成：</p>
+<p><strong>1. 随机成分（Random Component）</strong>：响应变量<span class="arithmatex">\(y\)</span>服从指数族分布。</p>
+<p><strong>2. 系统成分（Systematic Component）</strong>：线性预测子<span class="arithmatex">\(\eta = \boldsymbol{w}^{\top}\boldsymbol{x} + b\)</span>。</p>
+<p><strong>3. 连接函数（Link Function）</strong>：将期望<span class="arithmatex">\(\mu = E[y \mid \boldsymbol{x}]\)</span>与线性预测子联系起来：<span class="arithmatex">\(g(\mu) = \eta\)</span>。</p>
+<h4 id="logistic回归作为glm">Logistic回归作为GLM<a class="headerlink" href="#logistic回归作为glm" title="Permanent link">¶</a></h4>
+<p>对于Logistic回归：</p>
+<p><strong>随机成分</strong>：<span class="arithmatex">\(y \mid \boldsymbol{x} \sim \text{Bernoulli}(p)\)</span>，即伯努利分布，其中<span class="arithmatex">\(p = P(y = 1 \mid \boldsymbol{x})\)</span>。</p>
+<p>伯努利分布的概率质量函数：
+$$
+P(y \mid p) = p^y (1-p)^{1-y}, \quad y \in {0, 1}
+$$</p>
+<p>可以写成指数族形式：
+$$
+P(y \mid p) = \exp\left(y \log\frac{p}{1-p} + \log(1-p)\right)
+$$</p>
+<p><strong>系统成分</strong>：<span class="arithmatex">\(\eta = \boldsymbol{w}^{\top}\boldsymbol{x} + b\)</span></p>
+<p><strong>连接函数</strong>：logit连接
+$$
+g(\mu) = \text{logit}(\mu) = \log\frac{\mu}{1-\mu}
+$$</p>
+<p>由于<span class="arithmatex">\(\mu = E[y] = p\)</span>，连接函数将概率<span class="arithmatex">\(p\)</span>映射到线性预测子<span class="arithmatex">\(\eta\)</span>。</p>
+<p><strong>典则连接</strong>：logit是伯努利分布的**典则连接函数**（canonical link function），这使得Logistic回归具有一些优良的统计性质。</p>
+<h3 id="25-参数学习">2.5 参数学习<a class="headerlink" href="#25-参数学习" title="Permanent link">¶</a></h3>
+<h4 id="最大似然估计框架">最大似然估计框架<a class="headerlink" href="#最大似然估计框架" title="Permanent link">¶</a></h4>
+<p>给定训练数据集<span class="arithmatex">\(\mathcal{D} = \{(\boldsymbol{x}^{(n)}, y^{(n)})\}_{n=1}^{N}\)</span>，其中<span class="arithmatex">\(y^{(n)} \in \{0, 1\}\)</span>，我们使用**最大似然估计**（Maximum Likelihood Estimation, MLE）来学习参数<span class="arithmatex">\((\boldsymbol{w}, b)\)</span>。</p>
+<p><strong>假设</strong>：样本独立同分布（i.i.d.）。</p>
+<h4 id="似然函数的推导">似然函数的推导<a class="headerlink" href="#似然函数的推导" title="Permanent link">¶</a></h4>
+<p>似然函数：参数的似然函数定义为观测数据出现的概率：</p>
+<div class="arithmatex">\[
+L(\boldsymbol{w}, b) = P(\mathcal{D} \mid \boldsymbol{w}, b) = \prod_{n=1}^{N} P(y^{(n)} \mid \boldsymbol{x}^{(n)}; \boldsymbol{w}, b)
+\]</div>
+<p>代入Logistic回归的概率模型：</p>
+<div class="arithmatex">\[
+L(\boldsymbol{w}, b) = \prod_{n=1}^{N} \hat{y}^{(n)^{y^{(n)}}} (1 - \hat{y}^{(n)})^{1 - y^{(n)}}
+\]</div>
+<p>其中<span class="arithmatex">\(\hat{y}^{(n)} = \sigma(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b)\)</span>。</p>
+<p><strong>展开形式</strong>：</p>
+<div class="arithmatex">\[
+L(\boldsymbol{w}, b) = \prod_{n: y^{(n)}=1} \hat{y}^{(n)} \cdot \prod_{n: y^{(n)}=0} (1 - \hat{y}^{(n)})
+\]</div>
+<h4 id="对数似然函数">对数似然函数<a class="headerlink" href="#对数似然函数" title="Permanent link">¶</a></h4>
+<p>取对数得到**对数似然函数**（log-likelihood）：</p>
+<div class="arithmatex">\[
+\ell(\boldsymbol{w}, b) = \log L(\boldsymbol{w}, b)
+\]</div>
+<div class="arithmatex">\[
+= \sum_{n=1}^{N} \left[ y^{(n)} \log \hat{y}^{(n)} + (1 - y^{(n)}) \log(1 - \hat{y}^{(n)}) \right]
+\]</div>
+<p><strong>记号简化</strong>：令<span class="arithmatex">\(z^{(n)} = \boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b\)</span>，则<span class="arithmatex">\(\hat{y}^{(n)} = \sigma(z^{(n)})\)</span>。</p>
+<p>利用<span class="arithmatex">\(\log \sigma(z) = z - \log(1 + e^z) = -\log(1 + e^{-z})\)</span>和<span class="arithmatex">\(\log(1 - \sigma(z)) = -\log(1 + e^z)\)</span>：</p>
+<div class="arithmatex">\[
+\ell(\boldsymbol{w}, b) = \sum_{n=1}^{N} \left[ -y^{(n)} \log(1 + e^{-z^{(n)}}) - (1 - y^{(n)}) \log(1 + e^{z^{(n)}}) \right]
+\]</div>
+<p><strong>进一步简化</strong>：注意<span class="arithmatex">\(\log(1 + e^z) = z + \log(1 + e^{-z})\)</span>，可得：</p>
+<div class="arithmatex">\[
+\ell(\boldsymbol{w}, b) = \sum_{n=1}^{N} \left[ y^{(n)} z^{(n)} - \log(1 + e^{z^{(n)}}) \right]
+\]</div>
+<h4 id="交叉熵损失函数">交叉熵损失函数<a class="headerlink" href="#交叉熵损失函数" title="Permanent link">¶</a></h4>
+<p>交叉熵：对于两个概率分布<span class="arithmatex">\(p\)</span>（真实分布）和<span class="arithmatex">\(q\)</span>（预测分布），它们的**交叉熵**（cross-entropy）定义为：</p>
+<div class="arithmatex">\[
+H(p, q) = -\sum_x p(x) \log q(x) = -E_{p}[\log q]
+\]</div>
+<p>对于二分类问题：</p>
+<ul>
+<li>真实分布<span class="arithmatex">\(p\)</span>：<span class="arithmatex">\(P(y=1) = y\)</span>，<span class="arithmatex">\(P(y=0) = 1-y\)</span>（one-hot编码）</li>
+<li>预测分布<span class="arithmatex">\(q\)</span>：<span class="arithmatex">\(P(y=1) = \hat{y}\)</span>，<span class="arithmatex">\(P(y=0) = 1-\hat{y}\)</span></li>
+</ul>
+<p>二元交叉熵损失：单个样本的**二元交叉熵损失**（Binary Cross-Entropy Loss，BCE）定义为：</p>
+<div class="arithmatex">\[
+\mathcal{L}_{\text{BCE}}(\hat{y}, y) = -[y \log \hat{y} + (1-y) \log(1-\hat{y})]
+\]</div>
+<p><strong>数据集上的平均损失</strong>：</p>
+<div class="arithmatex">\[
+\mathcal{L}(\boldsymbol{w}, b) = \frac{1}{N} \sum_{n=1}^{N} \mathcal{L}_{\text{BCE}}(\hat{y}^{(n)}, y^{(n)})
+\]</div>
+<div class="arithmatex">\[
+= -\frac{1}{N} \sum_{n=1}^{N} \left[ y^{(n)} \log \hat{y}^{(n)} + (1 - y^{(n)}) \log(1 - \hat{y}^{(n)}) \right]
+\]</div>
+<p><strong>关系</strong>：</p>
+<div class="arithmatex">\[
+\mathcal{L}(\boldsymbol{w}, b) = -\frac{1}{N} \ell(\boldsymbol{w}, b)
+\]</div>
+<p>因此：
+$$
+\arg\max_{\boldsymbol{w}, b} \ell(\boldsymbol{w}, b) = \arg\min_{\boldsymbol{w}, b} \mathcal{L}(\boldsymbol{w}, b)
+$$</p>
+<p><strong>最大化对数似然 <span class="arithmatex">\(\Leftrightarrow\)</span> 最小化交叉熵损失</strong></p>
+<h4 id="梯度的详细推导">梯度的详细推导<a class="headerlink" href="#梯度的详细推导" title="Permanent link">¶</a></h4>
+<p>为了使用梯度下降法优化参数，我们需要计算损失函数（或对数似然函数）关于参数的梯度。</p>
+<p>设<span class="arithmatex">\(z = \boldsymbol{w}^{\top}\boldsymbol{x} + b\)</span>，<span class="arithmatex">\(\hat{y} = \sigma(z)\)</span>，则：</p>
+<div class="arithmatex">\[
+\frac{\partial \hat{y}}{\partial z} = \hat{y}(1 - \hat{y})
+\]</div>
+<div class="arithmatex">\[
+\frac{\partial z}{\partial \boldsymbol{w}} = \boldsymbol{x}, \quad \frac{\partial z}{\partial b} = 1
+\]</div>
+<p>对数似然函数关于参数的梯度为：</p>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial \boldsymbol{w}} = \sum_{n=1}^{N} (y^{(n)} - \hat{y}^{(n)}) \boldsymbol{x}^{(n)}
+\]</div>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial b} = \sum_{n=1}^{N} (y^{(n)} - \hat{y}^{(n)})
+\]</div>
+<p><strong>详细证明</strong>：</p>
+<p>对于单个样本<span class="arithmatex">\((\boldsymbol{x}, y)\)</span>，其对数似然为：</p>
+<div class="arithmatex">\[
+\ell = y \log \hat{y} + (1-y) \log(1-\hat{y})
+\]</div>
+<p><strong>Step 1</strong>：计算<span class="arithmatex">\(\frac{\partial \ell}{\partial \hat{y}}\)</span></p>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial \hat{y}} = \frac{y}{\hat{y}} - \frac{1-y}{1-\hat{y}}
+\]</div>
+<p>通分：
+$$
+= \frac{y(1-\hat{y}) - (1-y)\hat{y}}{\hat{y}(1-\hat{y})} = \frac{y - y\hat{y} - \hat{y} + y\hat{y}}{\hat{y}(1-\hat{y})} = \frac{y - \hat{y}}{\hat{y}(1-\hat{y})}
+$$</p>
+<p><strong>Step 2</strong>：计算<span class="arithmatex">\(\frac{\partial \hat{y}}{\partial z}\)</span></p>
+<p>由Sigmoid函数的导数性质：
+$$
+\frac{\partial \hat{y}}{\partial z} = \sigma'(z) = \sigma(z)(1-\sigma(z)) = \hat{y}(1-\hat{y})
+$$</p>
+<p><strong>Step 3</strong>：应用链式法则计算<span class="arithmatex">\(\frac{\partial \ell}{\partial z}\)</span></p>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial z} = \frac{\partial \ell}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial z} = \frac{y - \hat{y}}{\hat{y}(1-\hat{y})} \cdot \hat{y}(1-\hat{y}) = y - \hat{y}
+\]</div>
+<p><strong>关键观察</strong>：梯度形式非常简洁！<span class="arithmatex">\(\frac{\partial \ell}{\partial z} = y - \hat{y}\)</span>，即**真实标签与预测概率之差**。</p>
+<p><strong>Step 4</strong>：计算<span class="arithmatex">\(\frac{\partial \ell}{\partial \boldsymbol{w}}\)</span>和<span class="arithmatex">\(\frac{\partial \ell}{\partial b}\)</span></p>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial \boldsymbol{w}} = \frac{\partial \ell}{\partial z} \cdot \frac{\partial z}{\partial \boldsymbol{w}} = (y - \hat{y}) \boldsymbol{x}
+\]</div>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial b} = \frac{\partial \ell}{\partial z} \cdot \frac{\partial z}{\partial b} = (y - \hat{y}) \cdot 1 = y - \hat{y}
+\]</div>
+<p><strong>Step 5</strong>：对所有样本求和</p>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial \boldsymbol{w}} = \sum_{n=1}^{N} (y^{(n)} - \hat{y}^{(n)}) \boldsymbol{x}^{(n)}
+\]</div>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial b} = \sum_{n=1}^{N} (y^{(n)} - \hat{y}^{(n)})
+\]</div>
+<p>交叉熵损失函数的梯度为（带负号和<span class="arithmatex">\(1/N\)</span>因子）：</p>
+<div class="arithmatex">\[
+\frac{\partial \mathcal{L}}{\partial \boldsymbol{w}} = -\frac{1}{N}\sum_{n=1}^{N} (y^{(n)} - \hat{y}^{(n)}) \boldsymbol{x}^{(n)} = \frac{1}{N}\sum_{n=1}^{N} (\hat{y}^{(n)} - y^{(n)}) \boldsymbol{x}^{(n)}
+\]</div>
+<div class="arithmatex">\[
+\frac{\partial \mathcal{L}}{\partial b} = \frac{1}{N}\sum_{n=1}^{N} (\hat{y}^{(n)} - y^{(n)})
+\]</div>
+<p><strong>向量化形式</strong>：设<span class="arithmatex">\(\boldsymbol{X} \in \mathbb{R}^{N \times D}\)</span>为数据矩阵，<span class="arithmatex">\(\boldsymbol{y} \in \mathbb{R}^N\)</span>为标签向量，<span class="arithmatex">\(\hat{\boldsymbol{y}} \in \mathbb{R}^N\)</span>为预测概率向量，则：</p>
+<div class="arithmatex">\[
+\frac{\partial \mathcal{L}}{\partial \boldsymbol{w}} = \frac{1}{N} \boldsymbol{X}^{\top}(\hat{\boldsymbol{y}} - \boldsymbol{y})
+\]</div>
+<h4 id="梯度下降算法">梯度下降算法<a class="headerlink" href="#梯度下降算法" title="Permanent link">¶</a></h4>
+<p><strong>批量梯度下降（Batch Gradient Descent, BGD）</strong>：</p>
+<p>每次使用全部样本计算梯度并更新参数。</p>
+<p><strong>更新规则</strong>（最大化对数似然）：
+$$
+\boldsymbol{w} \leftarrow \boldsymbol{w} + \eta \sum_{n=1}^{N} (y^{(n)} - \hat{y}^{(n)}) \boldsymbol{x}^{(n)}
+$$</p>
+<div class="arithmatex">\[
+b \leftarrow b + \eta \sum_{n=1}^{N} (y^{(n)} - \hat{y}^{(n)})
+\]</div>
+<p>其中<span class="arithmatex">\(\eta &gt; 0\)</span>是学习率。</p>
+<p>Logistic回归的批量梯度下降</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>输入：训练集 D = {(x^(n), y^(n))}_{n=1}^N
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>      学习率 η &gt; 0
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>      最大迭代次数 T
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>      收敛阈值 ε &gt; 0
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>输出：参数 w, b
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>1.  初始化：w ← 0 ∈ R^D，b ← 0
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>2.  for t = 1 to T do
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>3.      // 前向传播：计算预测概率
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>4.      for n = 1 to N do
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>5.          z^(n) ← w^T x^(n) + b
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>6.          ŷ^(n) ← σ(z^(n)) = 1/(1 + exp(-z^(n)))
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>7.      end for
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>8.
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>9.      // 计算梯度
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>10.     g_w ← Σ_{n=1}^N (y^(n) - ŷ^(n)) x^(n)
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>11.     g_b ← Σ_{n=1}^N (y^(n) - ŷ^(n))
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>12.
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>13.     // 更新参数（梯度上升，最大化对数似然）
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>14.     w ← w + η · g_w
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>15.     b ← b + η · g_b
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>16.
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>17.     // 检查收敛
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>18.     if ||g_w||_2 &lt; ε and |g_b| &lt; ε then
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>19.         break
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>20.     end if
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>21. end for
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>22. return w, b
+</code></pre></div>
+<p><strong>随机梯度下降（Stochastic Gradient Descent, SGD）</strong>：</p>
+<p>每次只使用一个随机样本更新参数。</p>
+<div class="arithmatex">\[
+\boldsymbol{w} \leftarrow \boldsymbol{w} + \eta (y^{(n)} - \hat{y}^{(n)}) \boldsymbol{x}^{(n)}
+\]</div>
+<div class="arithmatex">\[
+b \leftarrow b + \eta (y^{(n)} - \hat{y}^{(n)})
+\]</div>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>每次更新计算量小，<span class="arithmatex">\(O(D)\)</span></li>
+<li>可以处理大规模数据</li>
+<li>引入噪声有助于跳出局部最优</li>
+</ul>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li>收敛不稳定，需要精心调节学习率</li>
+<li>难以利用向量化加速</li>
+</ul>
+<p><strong>小批量梯度下降（Mini-batch Gradient Descent）</strong>：</p>
+<p>折中方案，每次使用一小批样本（batch）。</p>
+<p>设批量大小为<span class="arithmatex">\(B\)</span>，第<span class="arithmatex">\(t\)</span>次迭代选取的小批量索引集合为<span class="arithmatex">\(\mathcal{B}_t\)</span>：</p>
+<div class="arithmatex">\[
+\boldsymbol{w} \leftarrow \boldsymbol{w} + \frac{\eta}{B} \sum_{n \in \mathcal{B}_t} (y^{(n)} - \hat{y}^{(n)}) \boldsymbol{x}^{(n)}
+\]</div>
+<p><strong>典型批量大小</strong>：32, 64, 128, 256</p>
+<h4 id="牛顿法与irls">牛顿法与IRLS<a class="headerlink" href="#牛顿法与irls" title="Permanent link">¶</a></h4>
+<p>由于Logistic回归的损失函数是凸的且二阶可微，可以使用**牛顿法**（Newton's Method）加速收敛。</p>
+<p><strong>Hessian矩阵</strong>：</p>
+<p>对数似然函数关于<span class="arithmatex">\(\boldsymbol{w}\)</span>的Hessian矩阵为：</p>
+<div class="arithmatex">\[
+\boldsymbol{H} = \frac{\partial^2 \ell}{\partial \boldsymbol{w} \partial \boldsymbol{w}^{\top}} = -\sum_{n=1}^{N} \hat{y}^{(n)}(1 - \hat{y}^{(n)}) \boldsymbol{x}^{(n)} \boldsymbol{x}^{(n)\top}
+\]</div>
+<p><strong>推导</strong>：
+$$
+\frac{\partial}{\partial w_j}\left(\frac{\partial \ell}{\partial w_i}\right) = \frac{\partial}{\partial w_j}\left(\sum_n (y^{(n)} - \hat{y}^{(n)}) x_i^{(n)}\right)
+$$</p>
+<div class="arithmatex">\[
+= -\sum_n x_i^{(n)} \frac{\partial \hat{y}^{(n)}}{\partial w_j} = -\sum_n x_i^{(n)} \hat{y}^{(n)}(1-\hat{y}^{(n)}) x_j^{(n)}
+\]</div>
+<p><strong>矩阵形式</strong>：</p>
+<div class="arithmatex">\[
+\boldsymbol{H} = -\boldsymbol{X}^{\top} \boldsymbol{S} \boldsymbol{X}
+\]</div>
+<p>其中<span class="arithmatex">\(\boldsymbol{S} = \text{diag}(\hat{y}^{(1)}(1-\hat{y}^{(1)}), \ldots, \hat{y}^{(N)}(1-\hat{y}^{(N)}))\)</span>是对角矩阵。</p>
+<p><strong>牛顿更新</strong>：</p>
+<div class="arithmatex">\[
+\boldsymbol{w} \leftarrow \boldsymbol{w} - \boldsymbol{H}^{-1} \nabla_{\boldsymbol{w}} \ell
+\]</div>
+<div class="arithmatex">\[
+= \boldsymbol{w} + (\boldsymbol{X}^{\top} \boldsymbol{S} \boldsymbol{X})^{-1} \boldsymbol{X}^{\top}(\boldsymbol{y} - \hat{\boldsymbol{y}})
+\]</div>
+<p><strong>IRLS算法</strong>：<strong>迭代重加权最小二乘</strong>（Iteratively Reweighted Least Squares）是牛顿法在Logistic回归中的具体实现形式。</p>
+<p>定义加权响应变量：
+$$
+\boldsymbol{z} = \boldsymbol{X}\boldsymbol{w} + \boldsymbol{S}^{-1}(\boldsymbol{y} - \hat{\boldsymbol{y}})
+$$</p>
+<p>则牛顿更新等价于求解加权最小二乘问题：
+$$
+\boldsymbol{w}^{\text{new}} = (\boldsymbol{X}<sup -1="-1">{\top}\boldsymbol{S}\boldsymbol{X})</sup>
+$$}\boldsymbol{X}^{\top}\boldsymbol{S}\boldsymbol{z</p>
+<p><strong>收敛性</strong>：牛顿法通常具有**二次收敛**速度，比梯度下降快得多，但每步计算量更大。</p>
+<h3 id="26-正则化">2.6 正则化<a class="headerlink" href="#26-正则化" title="Permanent link">¶</a></h3>
+<p>为了防止过拟合，通常在损失函数中加入正则化项。</p>
+<h4 id="l2正则化ridge">L2正则化（Ridge）<a class="headerlink" href="#l2正则化ridge" title="Permanent link">¶</a></h4>
+<p><strong>定义</strong>：L2正则化在损失函数中加入权重的平方和：
+$$
+\mathcal{L}_{\text{reg}}(\boldsymbol{w}, b) = \mathcal{L}(\boldsymbol{w}, b) + \frac{\lambda}{2} |\boldsymbol{w}|_2^2
+$$</p>
+<div class="arithmatex">\[
+= -\frac{1}{N}\sum_{n=1}^{N} \left[ y^{(n)} \log \hat{y}^{(n)} + (1 - y^{(n)}) \log(1 - \hat{y}^{(n)}) \right] + \frac{\lambda}{2} \sum_{d=1}^{D} w_d^2
+\]</div>
+<p>其中<span class="arithmatex">\(\lambda &gt; 0\)</span>是正则化系数（超参数）。</p>
+<p><strong>梯度</strong>：</p>
+<div class="arithmatex">\[
+\frac{\partial \mathcal{L}_{\text{reg}}}{\partial \boldsymbol{w}} = \frac{\partial \mathcal{L}}{\partial \boldsymbol{w}} + \lambda \boldsymbol{w}
+\]</div>
+<p><strong>更新规则</strong>：</p>
+<div class="arithmatex">\[
+\boldsymbol{w} \leftarrow \boldsymbol{w} - \eta\left(\frac{\partial \mathcal{L}}{\partial \boldsymbol{w}} + \lambda \boldsymbol{w}\right) = \boldsymbol{w}(1 - \eta\lambda) - \eta\frac{\partial \mathcal{L}}{\partial \boldsymbol{w}}
+\]</div>
+<p>注意因子<span class="arithmatex">\((1 - \eta\lambda)\)</span>，这就是**权重衰减**（weight decay）。</p>
+<p><strong>效果</strong>：</p>
+<ul>
+<li>倾向于使权重较小</li>
+<li>防止某些特征的权重过大</li>
+<li>提高模型的泛化能力</li>
+</ul>
+<h4 id="l1正则化lasso">L1正则化（Lasso）<a class="headerlink" href="#l1正则化lasso" title="Permanent link">¶</a></h4>
+<p><strong>定义</strong>：</p>
+<div class="arithmatex">\[
+\mathcal{L}_{\text{reg}}(\boldsymbol{w}, b) = \mathcal{L}(\boldsymbol{w}, b) + \lambda \|\boldsymbol{w}\|_1 = \mathcal{L}(\boldsymbol{w}, b) + \lambda \sum_{d=1}^{D} |w_d|
+\]</div>
+<p><strong>效果</strong>：</p>
+<ul>
+<li>产生**稀疏解**，部分权重恰好为零</li>
+<li>实现自动**特征选择**</li>
+<li>在<span class="arithmatex">\(w_d = 0\)</span>处不可微，需要使用次梯度或坐标下降</li>
+</ul>
+<h4 id="弹性网elastic-net">弹性网（Elastic Net）<a class="headerlink" href="#弹性网elastic-net" title="Permanent link">¶</a></h4>
+<p><strong>定义</strong>：结合L1和L2正则化：</p>
+<div class="arithmatex">\[
+\mathcal{L}_{\text{reg}}(\boldsymbol{w}, b) = \mathcal{L}(\boldsymbol{w}, b) + \lambda_1 \|\boldsymbol{w}\|_1 + \frac{\lambda_2}{2} \|\boldsymbol{w}\|_2^2
+\]</div>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>兼具L1的稀疏性和L2的稳定性</li>
+<li>当特征高度相关时表现更好</li>
+</ul>
+<h3 id="27-logistic回归的理论性质">2.7 Logistic回归的理论性质<a class="headerlink" href="#27-logistic回归的理论性质" title="Permanent link">¶</a></h3>
+<h4 id="凸性">凸性<a class="headerlink" href="#凸性" title="Permanent link">¶</a></h4>
+<p>Logistic回归的交叉熵损失函数是关于参数<span class="arithmatex">\((\boldsymbol{w}, b)\)</span>的**凸函数**。</p>
+<p><strong>证明</strong>：只需证明Hessian矩阵是半正定的。</p>
+<div class="arithmatex">\[
+\boldsymbol{H} = \frac{\partial^2 \mathcal{L}}{\partial \boldsymbol{w} \partial \boldsymbol{w}^{\top}} = \frac{1}{N} \sum_{n=1}^{N} \hat{y}^{(n)}(1 - \hat{y}^{(n)}) \boldsymbol{x}^{(n)} \boldsymbol{x}^{(n)\top}
+\]</div>
+<p>对任意向量<span class="arithmatex">\(\boldsymbol{v} \in \mathbb{R}^D\)</span>：</p>
+<div class="arithmatex">\[
+\boldsymbol{v}^{\top}\boldsymbol{H}\boldsymbol{v} = \frac{1}{N} \sum_{n=1}^{N} \hat{y}^{(n)}(1 - \hat{y}^{(n)}) (\boldsymbol{v}^{\top}\boldsymbol{x}^{(n)})^2
+\]</div>
+<p>由于：</p>
+<ul>
+<li><span class="arithmatex">\(\hat{y}^{(n)} \in (0, 1)\)</span></li>
+<li>因此<span class="arithmatex">\(\hat{y}^{(n)}(1 - \hat{y}^{(n)}) &gt; 0\)</span></li>
+<li><span class="arithmatex">\((\boldsymbol{v}^{\top}\boldsymbol{x}^{(n)})^2 \geq 0\)</span></li>
+</ul>
+<p>所以<span class="arithmatex">\(\boldsymbol{v}^{\top}\boldsymbol{H}\boldsymbol{v} \geq 0\)</span>，Hessian矩阵半正定，损失函数是凸函数。</p>
+<ol>
+<li>局部最优解就是全局最优解</li>
+<li>梯度下降法保证收敛到全局最优</li>
+</ol>
+<h4 id="解的唯一性">解的唯一性<a class="headerlink" href="#解的唯一性" title="Permanent link">¶</a></h4>
+<p>如果数据矩阵<span class="arithmatex">\(\boldsymbol{X}\)</span>列满秩（即特征之间线性无关），则加了L2正则化的Logistic回归的最优解唯一。</p>
+<p><strong>注意</strong>：不加正则化时，如果数据线性可分，最优解可能不唯一（参数可以无限增大）。</p>
+<h2 id="3-softmax回归">3 Softmax回归<a class="headerlink" href="#3-softmax回归" title="Permanent link">¶</a></h2>
+<p>Softmax回归（Softmax Regression），又称**多项Logistic回归**（Multinomial Logistic Regression）或**多类Logistic回归**，是Logistic回归在多分类问题上的自然推广。</p>
+<h3 id="31-从二分类到多分类">3.1 从二分类到多分类<a class="headerlink" href="#31-从二分类到多分类" title="Permanent link">¶</a></h3>
+<h4 id="问题设定">问题设定<a class="headerlink" href="#问题设定" title="Permanent link">¶</a></h4>
+<p><strong>多分类问题</strong>：给定输入<span class="arithmatex">\(\boldsymbol{x} \in \mathbb{R}^D\)</span>，预测其类别标签<span class="arithmatex">\(y \in \{1, 2, \ldots, C\}\)</span>，其中<span class="arithmatex">\(C &gt; 2\)</span>是类别数。</p>
+<p><strong>目标</strong>：学习一个模型，输出样本属于每个类别的概率分布：
+$$
+P(y = c \mid \boldsymbol{x}), \quad c = 1, 2, \ldots, C
+$$</p>
+<p><strong>约束</strong>：输出必须是有效的概率分布</p>
+<ul>
+<li><span class="arithmatex">\(P(y = c \mid \boldsymbol{x}) \geq 0, \quad \forall c\)</span></li>
+<li><span class="arithmatex">\(\sum_{c=1}^{C} P(y = c \mid \boldsymbol{x}) = 1\)</span></li>
+</ul>
+<h4 id="推广思路">推广思路<a class="headerlink" href="#推广思路" title="Permanent link">¶</a></h4>
+<p>在Logistic回归中，我们使用Sigmoid函数将单个线性输出转换为概率。对于多分类：</p>
+<ul>
+<li>需要<span class="arithmatex">\(C\)</span>个线性函数，每个类别一个</li>
+<li>需要一个函数将<span class="arithmatex">\(C\)</span>个实数转换为概率分布</li>
+</ul>
+<p>**Softmax函数**正是这样的函数。</p>
+<h3 id="32-softmax函数">3.2 Softmax函数<a class="headerlink" href="#32-softmax函数" title="Permanent link">¶</a></h3>
+<h4 id="定义">定义<a class="headerlink" href="#定义" title="Permanent link">¶</a></h4>
+<p>Softmax函数：Softmax函数将<span class="arithmatex">\(C\)</span>维向量<span class="arithmatex">\(\boldsymbol{z} = [z_1, z_2, \ldots, z_C]^{\top} \in \mathbb{R}^C\)</span>映射为概率分布：</p>
+<div class="arithmatex">\[
+\text{softmax}(\boldsymbol{z})_c = \frac{\exp(z_c)}{\sum_{j=1}^{C} \exp(z_j)}, \quad c = 1, 2, \ldots, C
+\]</div>
+<p><strong>向量形式</strong>：
+$$
+\text{softmax}(\boldsymbol{z}) = \frac{\exp(\boldsymbol{z})}{\mathbf{1}^{\top}\exp(\boldsymbol{z})} = \frac{1}{\sum_{j=1}^{C} e^{z_j}} \begin{bmatrix} e^{z_1} \ e^{z_2} \ \vdots \ e^{z_C} \end{bmatrix}
+$$</p>
+<p>其中<span class="arithmatex">\(\exp(\boldsymbol{z})\)</span>表示逐元素指数运算。</p>
+<h4 id="重要性质_1">重要性质<a class="headerlink" href="#重要性质_1" title="Permanent link">¶</a></h4>
+<p>概率分布性：Softmax的输出是有效的概率分布。</p>
+<p><strong>证明</strong>：</p>
+<ol>
+<li>非负性：<span class="arithmatex">\(\exp(z_c) &gt; 0\)</span>，且分母<span class="arithmatex">\(\sum_j \exp(z_j) &gt; 0\)</span>，因此<span class="arithmatex">\(\text{softmax}(\boldsymbol{z})_c &gt; 0\)</span></li>
+<li>归一化：<span class="arithmatex">\(\sum_{c=1}^{C} \text{softmax}(\boldsymbol{z})_c = \sum_{c=1}^{C} \frac{\exp(z_c)}{\sum_{j=1}^{C} \exp(z_j)} = \frac{\sum_{c=1}^{C} \exp(z_c)}{\sum_{j=1}^{C} \exp(z_j)} = 1\)</span></li>
+</ol>
+<p>平移不变性：对任意常数<span class="arithmatex">\(a \in \mathbb{R}\)</span>：
+$$
+\text{softmax}(\boldsymbol{z} + a\mathbf{1}) = \text{softmax}(\boldsymbol{z})
+$$</p>
+<p><strong>证明</strong>：
+$$
+\text{softmax}(\boldsymbol{z} + a\mathbf{1})<em j="1">c = \frac{\exp(z_c + a)}{\sum</em>
+$$}^{C} \exp(z_j + a)} = \frac{e^a \exp(z_c)}{e^a \sum_{j=1}^{C} \exp(z_j)} = \frac{\exp(z_c)}{\sum_{j=1}^{C} \exp(z_j)</p>
+<p><strong>应用</strong>：在数值计算中，为避免指数溢出，通常减去最大值：
+$$
+\text{softmax}(\boldsymbol{z}) = \text{softmax}(\boldsymbol{z} - \max_j z_j \cdot \mathbf{1})
+$$</p>
+<p>与argmax的关系：
+$$
+\arg\max_c \text{softmax}(\boldsymbol{z})_c = \arg\max_c z_c
+$$</p>
+<p>Softmax保持了元素的相对大小关系。</p>
+<p>温度参数：带温度参数<span class="arithmatex">\(T &gt; 0\)</span>的Softmax：</p>
+<div class="arithmatex">\[
+\text{softmax}(\boldsymbol{z}/T)_c = \frac{\exp(z_c/T)}{\sum_{j=1}^{C} \exp(z_j/T)}
+\]</div>
+<ul>
+<li>当<span class="arithmatex">\(T \to 0^+\)</span>时，Softmax趋近于**argmax**（硬选择）</li>
+<li>当<span class="arithmatex">\(T \to +\infty\)</span>时，Softmax趋近于**均匀分布**</li>
+<li><span class="arithmatex">\(T = 1\)</span>是标准Softmax</li>
+</ul>
+<h4 id="softmax的导数">Softmax的导数<a class="headerlink" href="#softmax的导数" title="Permanent link">¶</a></h4>
+<p>Softmax的Jacobian矩阵：设<span class="arithmatex">\(\boldsymbol{p} = \text{softmax}(\boldsymbol{z})\)</span>，则：</p>
+<div class="arithmatex">\[
+\frac{\partial p_i}{\partial z_j} = \begin{cases}
+p_i(1 - p_i), &amp; \text{if } i = j \\
+-p_i p_j, &amp; \text{if } i \neq j
+\end{cases}
+\]</div>
+<p><strong>矩阵形式</strong>：
+$$
+\frac{\partial \boldsymbol{p}}{\partial \boldsymbol{z}} = \text{diag}(\boldsymbol{p}) - \boldsymbol{p}\boldsymbol{p}^{\top}
+$$</p>
+<p><strong>证明</strong>：</p>
+<p>当<span class="arithmatex">\(i = j\)</span>时：
+$$
+\frac{\partial p_i}{\partial z_i} = \frac{\partial}{\partial z_i}\left(\frac{e^{z_i}}{\sum_k e^{z_k}}\right)
+$$</p>
+<p>使用商法则：
+$$
+= \frac{e^{z_i} \cdot \sum_k e^{z_k} - e^{z_i} \cdot e^{z_i}}{(\sum_k e<sup>{z_k})</sup>2} = \frac{e^{z_i}}{\sum_k e^{z_k}} - \frac{e^{2z_i}}{(\sum_k e<sup>{z_k})</sup>2}
+$$</p>
+<div class="arithmatex">\[
+= p_i - p_i^2 = p_i(1 - p_i)
+\]</div>
+<p>当<span class="arithmatex">\(i \neq j\)</span>时：
+$$
+\frac{\partial p_i}{\partial z_j} = \frac{\partial}{\partial z_j}\left(\frac{e^{z_i}}{\sum_k e^{z_k}}\right) = \frac{0 - e^{z_i} \cdot e^{z_j}}{(\sum_k e<sup>{z_k})</sup>2} = -p_i p_j
+$$</p>
+<h3 id="33-softmax回归模型">3.3 Softmax回归模型<a class="headerlink" href="#33-softmax回归模型" title="Permanent link">¶</a></h3>
+<h4 id="模型定义_1">模型定义<a class="headerlink" href="#模型定义_1" title="Permanent link">¶</a></h4>
+<p>Softmax回归模型：Softmax回归为每个类别定义一个线性函数：</p>
+<div class="arithmatex">\[
+z_c = \boldsymbol{w}_c^{\top}\boldsymbol{x} + b_c, \quad c = 1, 2, \ldots, C
+\]</div>
+<p>然后通过Softmax函数转换为概率：</p>
+<div class="arithmatex">\[
+P(y = c \mid \boldsymbol{x}; \boldsymbol{W}, \boldsymbol{b}) = \text{softmax}(\boldsymbol{z})_c = \frac{\exp(\boldsymbol{w}_c^{\top}\boldsymbol{x} + b_c)}{\sum_{j=1}^{C} \exp(\boldsymbol{w}_j^{\top}\boldsymbol{x} + b_j)}
+\]</div>
+<p><strong>参数</strong>：</p>
+<ul>
+<li>权重矩阵：<span class="arithmatex">\(\boldsymbol{W} = [\boldsymbol{w}_1, \boldsymbol{w}_2, \ldots, \boldsymbol{w}_C] \in \mathbb{R}^{D \times C}\)</span></li>
+<li>偏置向量：<span class="arithmatex">\(\boldsymbol{b} = [b_1, b_2, \ldots, b_C]^{\top} \in \mathbb{R}^C\)</span></li>
+<li>总参数数量：<span class="arithmatex">\((D + 1) \times C\)</span></li>
+</ul>
+<p><strong>矩阵形式</strong>：
+$$
+\boldsymbol{z} = \boldsymbol{W}^{\top}\boldsymbol{x} + \boldsymbol{b} \in \mathbb{R}^C
+$$</p>
+<div class="arithmatex">\[
+\boldsymbol{p} = \text{softmax}(\boldsymbol{z}) \in \mathbb{R}^C
+\]</div>
+<h4 id="3332-参数冗余与消除">3.3.3.2 参数冗余与消除<a class="headerlink" href="#3332-参数冗余与消除" title="Permanent link">¶</a></h4>
+<p>由于Softmax的平移不变性，参数存在冗余。</p>
+<p><strong>消除冗余</strong>：设<span class="arithmatex">\(\boldsymbol{w}_C = \boldsymbol{0}\)</span>，<span class="arithmatex">\(b_C = 0\)</span>（以第<span class="arithmatex">\(C\)</span>类为参考类）。</p>
+<p>则：
+$$
+P(y = c \mid \boldsymbol{x}) = \frac{\exp(\boldsymbol{w}<em j="1">c^{\top}\boldsymbol{x} + b_c)}{1 + \sum</em>, \quad c = 1, \ldots, C-1
+$$}^{C-1} \exp(\boldsymbol{w}_j^{\top}\boldsymbol{x} + b_j)</p>
+<div class="arithmatex">\[
+P(y = C \mid \boldsymbol{x}) = \frac{1}{1 + \sum_{j=1}^{C-1} \exp(\boldsymbol{w}_j^{\top}\boldsymbol{x} + b_j)}
+\]</div>
+<p>参数数量减少为<span class="arithmatex">\((D + 1) \times (C - 1)\)</span>。</p>
+<p><strong>与Logistic回归的关系</strong>：当<span class="arithmatex">\(C = 2\)</span>时，消除冗余后的Softmax回归退化为Logistic回归：
+$$
+P(y = 1 \mid \boldsymbol{x}) = \frac{\exp(\boldsymbol{w}_1^{\top}\boldsymbol{x} + b_1)}{1 + \exp(\boldsymbol{w}_1^{\top}\boldsymbol{x} + b_1)} = \sigma(\boldsymbol{w}_1^{\top}\boldsymbol{x} + b_1)
+$$</p>
+<h3 id="34-参数学习">3.4 参数学习<a class="headerlink" href="#34-参数学习" title="Permanent link">¶</a></h3>
+<h4 id="标签编码">标签编码<a class="headerlink" href="#标签编码" title="Permanent link">¶</a></h4>
+<p><strong>One-hot编码</strong>：将类别标签<span class="arithmatex">\(y \in \{1, 2, \ldots, C\}\)</span>编码为向量<span class="arithmatex">\(\boldsymbol{y} \in \{0, 1\}^C\)</span>：</p>
+<div class="arithmatex">\[
+\boldsymbol{y} = [y_1, y_2, \ldots, y_C]^{\top}, \quad y_c = \begin{cases}
+1, &amp; \text{if } y = c \\
+0, &amp; \text{otherwise}
+\end{cases}
+\]</div>
+<p><strong>例如</strong>：对于3分类问题，类别2的one-hot编码为<span class="arithmatex">\(\boldsymbol{y} = [0, 1, 0]^{\top}\)</span>。</p>
+<h4 id="交叉熵损失函数_1">交叉熵损失函数<a class="headerlink" href="#交叉熵损失函数_1" title="Permanent link">¶</a></h4>
+<p>多类交叉熵损失：单个样本的交叉熵损失：</p>
+<div class="arithmatex">\[
+\mathcal{L}(\boldsymbol{p}, \boldsymbol{y}) = -\sum_{c=1}^{C} y_c \log p_c = -\boldsymbol{y}^{\top} \log \boldsymbol{p}
+\]</div>
+<p>由于<span class="arithmatex">\(\boldsymbol{y}\)</span>是one-hot向量，只有一个分量为1（设为第<span class="arithmatex">\(c^*\)</span>类），因此：
+$$
+\mathcal{L}(\boldsymbol{p}, \boldsymbol{y}) = -\log p_{c^<em>} = -\log P(y = c^</em> \mid \boldsymbol{x})
+$$</p>
+<p>这就是**负对数似然**（Negative Log-Likelihood, NLL）。</p>
+<p><strong>数据集上的平均损失</strong>：</p>
+<div class="arithmatex">\[
+\mathcal{L}(\boldsymbol{W}, \boldsymbol{b}) = -\frac{1}{N}\sum_{n=1}^{N}\sum_{c=1}^{C} y_c^{(n)} \log p_c^{(n)}
+\]</div>
+<div class="arithmatex">\[
+= -\frac{1}{N}\sum_{n=1}^{N} \log P(y = c^{(n)} \mid \boldsymbol{x}^{(n)})
+\]</div>
+<p>其中<span class="arithmatex">\(c^{(n)}\)</span>是第<span class="arithmatex">\(n\)</span>个样本的真实类别。</p>
+<h4 id="梯度推导">梯度推导<a class="headerlink" href="#梯度推导" title="Permanent link">¶</a></h4>
+<p>交叉熵损失关于参数的梯度为：</p>
+<div class="arithmatex">\[
+\frac{\partial \mathcal{L}}{\partial \boldsymbol{w}_c} = \frac{1}{N}\sum_{n=1}^{N} (p_c^{(n)} - y_c^{(n)}) \boldsymbol{x}^{(n)}
+\]</div>
+<div class="arithmatex">\[
+\frac{\partial \mathcal{L}}{\partial b_c} = \frac{1}{N}\sum_{n=1}^{N} (p_c^{(n)} - y_c^{(n)})
+\]</div>
+<p><strong>简洁形式</strong>：对所有类别：
+$$
+\frac{\partial \mathcal{L}}{\partial \boldsymbol{W}} = \frac{1}{N} \boldsymbol{X}^{\top}(\boldsymbol{P} - \boldsymbol{Y})
+$$</p>
+<p>其中<span class="arithmatex">\(\boldsymbol{X} \in \mathbb{R}^{N \times D}\)</span>是数据矩阵，<span class="arithmatex">\(\boldsymbol{P}, \boldsymbol{Y} \in \mathbb{R}^{N \times C}\)</span>分别是预测概率矩阵和标签矩阵。</p>
+<p><strong>证明</strong>（单样本情况）：</p>
+<p>设<span class="arithmatex">\(\ell = -\sum_c y_c \log p_c\)</span>，<span class="arithmatex">\(p_c = \text{softmax}(\boldsymbol{z})_c\)</span>，<span class="arithmatex">\(z_c = \boldsymbol{w}_c^{\top}\boldsymbol{x} + b_c\)</span>。</p>
+<p><strong>Step 1</strong>：计算<span class="arithmatex">\(\frac{\partial \ell}{\partial z_k}\)</span></p>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial z_k} = -\sum_c y_c \frac{1}{p_c} \frac{\partial p_c}{\partial z_k}
+\]</div>
+<p>利用Softmax的导数：
+$$
+\frac{\partial p_c}{\partial z_k} = p_c(\delta_{ck} - p_k)
+$$</p>
+<p>其中<span class="arithmatex">\(\delta_{ck}\)</span>是Kronecker delta。</p>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial z_k} = -\sum_c y_c \frac{p_c(\delta_{ck} - p_k)}{p_c} = -\sum_c y_c(\delta_{ck} - p_k)
+\]</div>
+<div class="arithmatex">\[
+= -y_k + p_k \sum_c y_c = -y_k + p_k \cdot 1 = p_k - y_k
+\]</div>
+<p><strong>Step 2</strong>：计算<span class="arithmatex">\(\frac{\partial \ell}{\partial \boldsymbol{w}_c}\)</span>和<span class="arithmatex">\(\frac{\partial \ell}{\partial b_c}\)</span></p>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial \boldsymbol{w}_c} = \frac{\partial \ell}{\partial z_c} \cdot \frac{\partial z_c}{\partial \boldsymbol{w}_c} = (p_c - y_c) \boldsymbol{x}
+\]</div>
+<div class="arithmatex">\[
+\frac{\partial \ell}{\partial b_c} = \frac{\partial \ell}{\partial z_c} \cdot \frac{\partial z_c}{\partial b_c} = p_c - y_c
+\]</div>
+<p><strong>观察</strong>：梯度形式与Logistic回归完全一致！这体现了两者的统一性。</p>
+<h4 id="梯度下降更新">梯度下降更新<a class="headerlink" href="#梯度下降更新" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[
+\boldsymbol{w}_c \leftarrow \boldsymbol{w}_c - \frac{\eta}{N}\sum_{n=1}^{N} (p_c^{(n)} - y_c^{(n)}) \boldsymbol{x}^{(n)}
+\]</div>
+<div class="arithmatex">\[
+b_c \leftarrow b_c - \frac{\eta}{N}\sum_{n=1}^{N} (p_c^{(n)} - y_c^{(n)})
+\]</div>
+<h2 id="4-感知器">4 感知器<a class="headerlink" href="#4-感知器" title="Permanent link">¶</a></h2>
+<p>感知器（Perceptron）是由Frank Rosenblatt于1958年提出的一种最简单的神经网络模型，是神经网络和深度学习的历史起点。</p>
+<h3 id="41-感知器模型">4.1 感知器模型<a class="headerlink" href="#41-感知器模型" title="Permanent link">¶</a></h3>
+<h4 id="模型定义_2">模型定义<a class="headerlink" href="#模型定义_2" title="Permanent link">¶</a></h4>
+<p>感知器：感知器是一个二分类模型，其决策函数为：</p>
+<div class="arithmatex">\[
+h(\boldsymbol{x}) = \text{sign}(f(\boldsymbol{x})) = \text{sign}(\boldsymbol{w}^{\top}\boldsymbol{x} + b)
+\]</div>
+<p>其中：</p>
+<ul>
+<li><span class="arithmatex">\(\boldsymbol{w} \in \mathbb{R}^D\)</span>是权重向量</li>
+<li><span class="arithmatex">\(b \in \mathbb{R}\)</span>是偏置</li>
+<li>标签<span class="arithmatex">\(y \in \{-1, +1\}\)</span></li>
+</ul>
+<p><strong>神经元视角</strong>：感知器可以看作一个人工神经元</p>
+<ul>
+<li>输入：<span class="arithmatex">\(\boldsymbol{x} = [x_1, \ldots, x_D]^{\top}\)</span></li>
+<li>加权求和：<span class="arithmatex">\(z = \sum_{d=1}^{D} w_d x_d + b\)</span></li>
+<li>激活函数：<span class="arithmatex">\(h = \text{sign}(z)\)</span></li>
+<li>输出：<span class="arithmatex">\(h \in \{-1, +1\}\)</span></li>
+</ul>
+<h4 id="几何解释">几何解释<a class="headerlink" href="#几何解释" title="Permanent link">¶</a></h4>
+<p>感知器定义了一个超平面<span class="arithmatex">\(\boldsymbol{w}^{\top}\boldsymbol{x} + b = 0\)</span>：</p>
+<ul>
+<li>超平面一侧的点被分为正类</li>
+<li>另一侧的点被分为负类</li>
+<li>权重向量<span class="arithmatex">\(\boldsymbol{w}\)</span>是超平面的法向量，指向正类区域</li>
+</ul>
+<h3 id="42-感知器学习算法">4.2 感知器学习算法<a class="headerlink" href="#42-感知器学习算法" title="Permanent link">¶</a></h3>
+<h4 id="损失函数">损失函数<a class="headerlink" href="#损失函数" title="Permanent link">¶</a></h4>
+<p>感知器使用的损失函数是**感知器损失**：</p>
+<div class="arithmatex">\[
+\mathcal{L}(\boldsymbol{w}, b) = -\sum_{\boldsymbol{x}^{(n)} \in \mathcal{M}} y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b)
+\]</div>
+<p>其中<span class="arithmatex">\(\mathcal{M}\)</span>是所有被**错误分类**的样本集合。</p>
+<p><strong>性质分析</strong>：</p>
+<ul>
+<li>对于正确分类的样本：<span class="arithmatex">\(y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b) &gt; 0\)</span>，不计入损失</li>
+<li>对于错误分类的样本：<span class="arithmatex">\(y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b) &lt; 0\)</span>，损失为正</li>
+<li>损失函数非负，且仅当所有样本被正确分类时为零</li>
+</ul>
+<h4 id="梯度计算">梯度计算<a class="headerlink" href="#梯度计算" title="Permanent link">¶</a></h4>
+<p>对于单个错误分类样本<span class="arithmatex">\((\boldsymbol{x}, y)\)</span>，损失为<span class="arithmatex">\(-y(\boldsymbol{w}^{\top}\boldsymbol{x} + b)\)</span>。</p>
+<div class="arithmatex">\[
+\frac{\partial \mathcal{L}}{\partial \boldsymbol{w}} = -y\boldsymbol{x}
+\]</div>
+<div class="arithmatex">\[
+\frac{\partial \mathcal{L}}{\partial b} = -y
+\]</div>
+<h4 id="感知器学习算法">感知器学习算法<a class="headerlink" href="#感知器学习算法" title="Permanent link">¶</a></h4>
+<p><strong>算法 3.4</strong>：感知器学习算法（原始形式）</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>输入：训练集 D = {(x^(n), y^(n))}_{n=1}^N，其中 y^(n) ∈ {-1, +1}
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>      学习率 η &gt; 0（通常取 η = 1）
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>      最大迭代轮数 T_max
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>输出：参数 w, b
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>1.  初始化：w ← 0 ∈ R^D，b ← 0
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>2.  for epoch = 1 to T_max do
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>3.      误分类样本数 ← 0
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>4.      for n = 1 to N do
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>5.          if y^(n)(w^T x^(n) + b) ≤ 0 then    // 样本被错误分类
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>6.              w ← w + η y^(n) x^(n)            // 更新权重
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>7.              b ← b + η y^(n)                  // 更新偏置
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a>8.              误分类样本数 ← 误分类样本数 + 1
+<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>9.          end if
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a>10.     end for
+<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a>11.     if 误分类样本数 = 0 then
+<a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a>12.         break    // 所有样本正确分类，算法收敛
+<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a>13.     end if
+<a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a>14. end for
+<a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a>15. return w, b
+</code></pre></div>
+<p><strong>更新规则的直观理解</strong>：</p>
+<p>当样本<span class="arithmatex">\((\boldsymbol{x}, y)\)</span>被错误分类时：</p>
+<p><strong>情况1</strong>：<span class="arithmatex">\(y = +1\)</span>但<span class="arithmatex">\(\boldsymbol{w}^{\top}\boldsymbol{x} + b &lt; 0\)</span>（正类样本被误判为负类）</p>
+<ul>
+<li>更新：<span class="arithmatex">\(\boldsymbol{w} \leftarrow \boldsymbol{w} + \boldsymbol{x}\)</span></li>
+<li>效果：使<span class="arithmatex">\(\boldsymbol{w}^{\top}\boldsymbol{x}\)</span>增大，推动决策边界使该样本落入正类区域</li>
+</ul>
+<p><strong>情况2</strong>：<span class="arithmatex">\(y = -1\)</span>但<span class="arithmatex">\(\boldsymbol{w}^{\top}\boldsymbol{x} + b &gt; 0\)</span>（负类样本被误判为正类）</p>
+<ul>
+<li>更新：<span class="arithmatex">\(\boldsymbol{w} \leftarrow \boldsymbol{w} - \boldsymbol{x}\)</span></li>
+<li>效果：使<span class="arithmatex">\(\boldsymbol{w}^{\top}\boldsymbol{x}\)</span>减小，推动决策边界使该样本落入负类区域</li>
+</ul>
+<h3 id="43-感知器的收敛性">4.3 感知器的收敛性<a class="headerlink" href="#43-感知器的收敛性" title="Permanent link">¶</a></h3>
+<p>感知器收敛定理是感知器算法最重要的理论结果。</p>
+<h4 id="收敛定理">收敛定理<a class="headerlink" href="#收敛定理" title="Permanent link">¶</a></h4>
+<p>感知器收敛定理，Novikoff, 1962：设训练数据集<span class="arithmatex">\(\mathcal{D}\)</span>是线性可分的，存在超平面<span class="arithmatex">\(\boldsymbol{w}^* \cdot \boldsymbol{x} + b^* = 0\)</span>能够将正负样本完全分开。设：</p>
+<div class="arithmatex">\[
+R = \max_{n} \|\hat{\boldsymbol{x}}^{(n)}\|_2
+\]</div>
+<p>是增广样本向量的最大模长，</p>
+<div class="arithmatex">\[
+\gamma = \min_{n} \frac{y^{(n)}(\boldsymbol{w}^{*\top}\boldsymbol{x}^{(n)} + b^*)}{\|\hat{\boldsymbol{w}}^*\|_2}
+\]</div>
+<p>是数据集的几何间隔。</p>
+<p>则感知器算法的**误分类更新次数**<span class="arithmatex">\(k\)</span>满足：</p>
+<div class="arithmatex">\[
+k \leq \left(\frac{R}{\gamma}\right)^2
+\]</div>
+<h4 id="详细证明">详细证明<a class="headerlink" href="#详细证明" title="Permanent link">¶</a></h4>
+<p>为简化证明，使用增广表示：<span class="arithmatex">\(\hat{\boldsymbol{w}} = [\boldsymbol{w}; b]\)</span>，<span class="arithmatex">\(\hat{\boldsymbol{x}} = [\boldsymbol{x}; 1]\)</span>。</p>
+<p>设<span class="arithmatex">\(\hat{\boldsymbol{w}}^*\)</span>是使数据线性可分的最优增广权重向量，且<span class="arithmatex">\(\|\hat{\boldsymbol{w}}^*\|_2 = 1\)</span>。</p>
+<p>设<span class="arithmatex">\(\gamma = \min_n y^{(n)} \hat{\boldsymbol{w}}^{*\top} \hat{\boldsymbol{x}}^{(n)} &gt; 0\)</span>（归一化的几何间隔）。</p>
+<p>设<span class="arithmatex">\(R = \max_n \|\hat{\boldsymbol{x}}^{(n)}\|_2\)</span>。</p>
+<p>设算法在第<span class="arithmatex">\(k\)</span>次更新后的参数为<span class="arithmatex">\(\hat{\boldsymbol{w}}^{(k)}\)</span>，初始<span class="arithmatex">\(\hat{\boldsymbol{w}}^{(0)} = \boldsymbol{0}\)</span>。</p>
+<p><strong>Step 1：分析<span class="arithmatex">\(\hat{\boldsymbol{w}}^{(k)\top}\hat{\boldsymbol{w}}^*\)</span>的下界</strong></p>
+<p>每次更新时，设当前误分类样本为<span class="arithmatex">\((\hat{\boldsymbol{x}}^{(n)}, y^{(n)})\)</span>：</p>
+<div class="arithmatex">\[
+\hat{\boldsymbol{w}}^{(k)} = \hat{\boldsymbol{w}}^{(k-1)} + y^{(n)}\hat{\boldsymbol{x}}^{(n)}
+\]</div>
+<p>计算与<span class="arithmatex">\(\hat{\boldsymbol{w}}^*\)</span>的内积：</p>
+<div class="arithmatex">\[
+\hat{\boldsymbol{w}}^{(k)\top}\hat{\boldsymbol{w}}^* = \hat{\boldsymbol{w}}^{(k-1)\top}\hat{\boldsymbol{w}}^* + y^{(n)}\hat{\boldsymbol{x}}^{(n)\top}\hat{\boldsymbol{w}}^*
+\]</div>
+<div class="arithmatex">\[
+\geq \hat{\boldsymbol{w}}^{(k-1)\top}\hat{\boldsymbol{w}}^* + \gamma
+\]</div>
+<p>递推得：</p>
+<div class="arithmatex">\[
+\hat{\boldsymbol{w}}^{(k)\top}\hat{\boldsymbol{w}}^* \geq k\gamma
+\]</div>
+<p><strong>Step 2：分析<span class="arithmatex">\(\|\hat{\boldsymbol{w}}^{(k)}\|_2^2\)</span>的上界</strong></p>
+<div class="arithmatex">\[
+\|\hat{\boldsymbol{w}}^{(k)}\|_2^2 = \|\hat{\boldsymbol{w}}^{(k-1)} + y^{(n)}\hat{\boldsymbol{x}}^{(n)}\|_2^2
+\]</div>
+<div class="arithmatex">\[
+= \|\hat{\boldsymbol{w}}^{(k-1)}\|_2^2 + 2y^{(n)}\hat{\boldsymbol{w}}^{(k-1)\top}\hat{\boldsymbol{x}}^{(n)} + \|\hat{\boldsymbol{x}}^{(n)}\|_2^2
+\]</div>
+<p>由于样本被误分类：<span class="arithmatex">\(y^{(n)}\hat{\boldsymbol{w}}^{(k-1)\top}\hat{\boldsymbol{x}}^{(n)} \leq 0\)</span></p>
+<div class="arithmatex">\[
+\|\hat{\boldsymbol{w}}^{(k)}\|_2^2 \leq \|\hat{\boldsymbol{w}}^{(k-1)}\|_2^2 + R^2
+\]</div>
+<p>递推得：</p>
+<div class="arithmatex">\[
+\|\hat{\boldsymbol{w}}^{(k)}\|_2^2 \leq kR^2
+\]</div>
+<p><strong>Step 3：综合两个不等式</strong></p>
+<p>由Cauchy-Schwarz不等式：</p>
+<div class="arithmatex">\[
+\hat{\boldsymbol{w}}^{(k)\top}\hat{\boldsymbol{w}}^* \leq \|\hat{\boldsymbol{w}}^{(k)}\|_2 \cdot \|\hat{\boldsymbol{w}}^*\|_2 = \|\hat{\boldsymbol{w}}^{(k)}\|_2
+\]</div>
+<p>结合Step 1和Step 2：</p>
+<div class="arithmatex">\[
+k\gamma \leq \hat{\boldsymbol{w}}^{(k)\top}\hat{\boldsymbol{w}}^* \leq \|\hat{\boldsymbol{w}}^{(k)}\|_2 \leq \sqrt{kR^2} = \sqrt{k}R
+\]</div>
+<div class="arithmatex">\[
+k\gamma \leq \sqrt{k}R
+\]</div>
+<div class="arithmatex">\[
+k \leq \left(\frac{R}{\gamma}\right)^2
+\]</div>
+<h4 id="收敛性的意义与局限">收敛性的意义与局限<a class="headerlink" href="#收敛性的意义与局限" title="Permanent link">¶</a></h4>
+<p><strong>意义</strong>：</p>
+<ol>
+<li>对于线性可分数据，算法**保证在有限步内收敛**</li>
+<li>收敛速度与数据的**间隔**<span class="arithmatex">\(\gamma\)</span>成反比：间隔越大，收敛越快</li>
+<li>收敛速度与样本的**范围**<span class="arithmatex">\(R\)</span>成正比：样本范围越大，收敛越慢</li>
+</ol>
+<p><strong>局限</strong>：</p>
+<ol>
+<li><strong>线性不可分</strong>：算法无法收敛，会在不同解之间震荡</li>
+<li><strong>解不唯一</strong>：最终解依赖于样本的遍历顺序和初始化</li>
+<li><strong>无法输出概率</strong>：只能给出硬分类结果</li>
+</ol>
+<h3 id="44-参数平均感知器">4.4 参数平均感知器<a class="headerlink" href="#44-参数平均感知器" title="Permanent link">¶</a></h3>
+<p>为了提高感知器的泛化能力，Collins (2002) 提出了平均感知器算法。</p>
+<h4 id="基本思想">基本思想<a class="headerlink" href="#基本思想" title="Permanent link">¶</a></h4>
+<p>不使用最后一轮迭代的参数，而是使用训练过程中**所有参数的平均值**：</p>
+<div class="arithmatex">\[
+\bar{\boldsymbol{w}} = \frac{1}{T}\sum_{t=1}^{T}\boldsymbol{w}^{(t)}
+\]</div>
+<div class="arithmatex">\[
+\bar{b} = \frac{1}{T}\sum_{t=1}^{T}b^{(t)}
+\]</div>
+<p>其中<span class="arithmatex">\(T\)</span>是总的参数状态数（或更新次数）。</p>
+<p><strong>直观理解</strong>：平均化相当于对参数进行**投票**，减少了对单个误分类样本的过度响应，提高了模型的稳定性。</p>
+<h4 id="高效实现">高效实现<a class="headerlink" href="#高效实现" title="Permanent link">¶</a></h4>
+<p>直接计算平均值需要存储所有中间参数，空间复杂度为<span class="arithmatex">\(O(TD)\)</span>。</p>
+<p><strong>累积技巧</strong>：维护一个累积向量<span class="arithmatex">\(\boldsymbol{w}_{\text{sum}}\)</span>：</p>
+<p>每次更新后：
+$$
+\boldsymbol{w}<em _text_sum="\text{sum">{\text{sum}} \leftarrow \boldsymbol{w}</em>
+$$}} + \boldsymbol{w</p>
+<p>最后：
+$$
+\bar{\boldsymbol{w}} = \frac{\boldsymbol{w}_{\text{sum}}}{T}
+$$</p>
+<p><strong>更高效的实现</strong>：考虑参数在多次迭代中保持不变的情况。</p>
+<h3 id="45-多分类感知器">4.5 多分类感知器<a class="headerlink" href="#45-多分类感知器" title="Permanent link">¶</a></h3>
+<h4 id="模型定义_3">模型定义<a class="headerlink" href="#模型定义_3" title="Permanent link">¶</a></h4>
+<p>对于<span class="arithmatex">\(C\)</span>类分类问题，定义<span class="arithmatex">\(C\)</span>个权重向量<span class="arithmatex">\(\boldsymbol{w}_1, \boldsymbol{w}_2, \ldots, \boldsymbol{w}_C\)</span>。</p>
+<p><strong>预测规则</strong>：
+$$
+\hat{y} = \arg\max_{c \in {1, \ldots, C}} (\boldsymbol{w}_c^{\top}\boldsymbol{x} + b_c)
+$$</p>
+<h4 id="更新规则">更新规则<a class="headerlink" href="#更新规则" title="Permanent link">¶</a></h4>
+<p>当样本<span class="arithmatex">\((\boldsymbol{x}, y)\)</span>被错误分类为<span class="arithmatex">\(\hat{y} \neq y\)</span>时：</p>
+<div class="arithmatex">\[
+\boldsymbol{w}_y \leftarrow \boldsymbol{w}_y + \eta \boldsymbol{x} \quad \text{（增加正确类别的得分）}
+\]</div>
+<div class="arithmatex">\[
+\boldsymbol{w}_{\hat{y}} \leftarrow \boldsymbol{w}_{\hat{y}} - \eta \boldsymbol{x} \quad \text{（减少错误预测类别的得分）}
+\]</div>
+<h2 id="5-支持向量机">5 支持向量机<a class="headerlink" href="#5-支持向量机" title="Permanent link">¶</a></h2>
+<p>支持向量机（Support Vector Machine, SVM）是由Vapnik等人在1990年代提出的一种强大的监督学习算法。SVM的核心思想是寻找具有**最大间隔**的分类超平面，并通过**核技巧**处理非线性可分问题。</p>
+<h3 id="51-最大间隔分类器">5.1 最大间隔分类器<a class="headerlink" href="#51-最大间隔分类器" title="Permanent link">¶</a></h3>
+<h4 id="动机">动机<a class="headerlink" href="#动机" title="Permanent link">¶</a></h4>
+<p>对于线性可分数据，存在无穷多个超平面能够正确分类所有样本。哪个超平面最好？</p>
+<p><strong>直观想法</strong>：选择"最中间"的超平面，即离最近样本点**距离最大**的超平面。</p>
+<p><strong>原因</strong>：</p>
+<ol>
+<li>最大间隔超平面对**噪声更鲁棒**</li>
+<li>具有更好的**泛化能力**（由统计学习理论保证）</li>
+</ol>
+<h4 id="间隔的定义">间隔的定义<a class="headerlink" href="#间隔的定义" title="Permanent link">¶</a></h4>
+<p>回顾前面的定义：</p>
+<p><strong>几何间隔</strong>：样本<span class="arithmatex">\((\boldsymbol{x}^{(n)}, y^{(n)})\)</span>到超平面<span class="arithmatex">\((\boldsymbol{w}, b)\)</span>的几何间隔：
+$$
+\gamma^{(n)} = \frac{y<sup _top="\top">{(n)}(\boldsymbol{w}</sup>
+$$}\boldsymbol{x}^{(n)} + b)}{|\boldsymbol{w}|_2</p>
+<p><strong>数据集的间隔</strong>：
+$$
+\gamma = \min_{n} \gamma^{(n)}
+$$</p>
+<h4 id="最大间隔优化问题">最大间隔优化问题<a class="headerlink" href="#最大间隔优化问题" title="Permanent link">¶</a></h4>
+<p><strong>原始问题</strong>：</p>
+<div class="arithmatex">\[
+\max_{\boldsymbol{w}, b} \gamma
+\]</div>
+<div class="arithmatex">\[
+\text{s.t.} \quad \frac{y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b)}{\|\boldsymbol{w}\|_2} \geq \gamma, \quad n = 1, \ldots, N
+\]</div>
+<p><strong>标准化</strong>：由于<span class="arithmatex">\(\boldsymbol{w}\)</span>的尺度是自由的，我们可以设<span class="arithmatex">\(\hat{\gamma} = \gamma \|\boldsymbol{w}\|_2 = 1\)</span>（函数间隔为1）。</p>
+<p>则<span class="arithmatex">\(\gamma = \frac{1}{\|\boldsymbol{w}\|_2}\)</span>，最大化<span class="arithmatex">\(\gamma\)</span>等价于最小化<span class="arithmatex">\(\|\boldsymbol{w}\|_2\)</span>。</p>
+<p><strong>标准形式</strong>：</p>
+<div class="arithmatex">\[
+\min_{\boldsymbol{w}, b} \frac{1}{2}\|\boldsymbol{w}\|_2^2
+\]</div>
+<div class="arithmatex">\[
+\text{s.t.} \quad y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b) \geq 1, \quad n = 1, \ldots, N
+\]</div>
+<p>这是一个**凸二次规划**（Convex Quadratic Programming, QP）问题：</p>
+<ul>
+<li>目标函数是凸二次函数</li>
+<li>约束是线性不等式</li>
+<li>存在唯一的全局最优解</li>
+</ul>
+<h3 id="52-对偶问题与支持向量">5.2 对偶问题与支持向量<a class="headerlink" href="#52-对偶问题与支持向量" title="Permanent link">¶</a></h3>
+<h4 id="拉格朗日函数">拉格朗日函数<a class="headerlink" href="#拉格朗日函数" title="Permanent link">¶</a></h4>
+<p>引入拉格朗日乘子<span class="arithmatex">\(\alpha_n \geq 0\)</span>，<span class="arithmatex">\(n = 1, \ldots, N\)</span>：</p>
+<div class="arithmatex">\[
+L(\boldsymbol{w}, b, \boldsymbol{\alpha}) = \frac{1}{2}\|\boldsymbol{w}\|_2^2 - \sum_{n=1}^{N}\alpha_n\left[y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b) - 1\right]
+\]</div>
+<p>原始问题等价于：
+$$
+\min_{\boldsymbol{w}, b} \max_{\boldsymbol{\alpha} \geq 0} L(\boldsymbol{w}, b, \boldsymbol{\alpha})
+$$</p>
+<h4 id="对偶问题推导">对偶问题推导<a class="headerlink" href="#对偶问题推导" title="Permanent link">¶</a></h4>
+<p><strong>Step 1</strong>：对<span class="arithmatex">\(\boldsymbol{w}\)</span>求偏导并令其为0</p>
+<div class="arithmatex">\[
+\frac{\partial L}{\partial \boldsymbol{w}} = \boldsymbol{w} - \sum_{n=1}^{N}\alpha_n y^{(n)} \boldsymbol{x}^{(n)} = 0
+\]</div>
+<div class="arithmatex">\[
+\Rightarrow \boldsymbol{w} = \sum_{n=1}^{N}\alpha_n y^{(n)} \boldsymbol{x}^{(n)}
+\]</div>
+<p><strong>Step 2</strong>：对<span class="arithmatex">\(b\)</span>求偏导并令其为0</p>
+<div class="arithmatex">\[
+\frac{\partial L}{\partial b} = -\sum_{n=1}^{N}\alpha_n y^{(n)} = 0
+\]</div>
+<div class="arithmatex">\[
+\Rightarrow \sum_{n=1}^{N}\alpha_n y^{(n)} = 0
+\]</div>
+<p><strong>Step 3</strong>：代入拉格朗日函数</p>
+<p>将<span class="arithmatex">\(\boldsymbol{w} = \sum_n \alpha_n y^{(n)} \boldsymbol{x}^{(n)}\)</span>代入：</p>
+<div class="arithmatex">\[
+L = \frac{1}{2}\left\|\sum_n \alpha_n y^{(n)} \boldsymbol{x}^{(n)}\right\|^2 - \sum_n \alpha_n y^{(n)} \boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} - b\sum_n \alpha_n y^{(n)} + \sum_n \alpha_n
+\]</div>
+<p>由于<span class="arithmatex">\(\sum_n \alpha_n y^{(n)} = 0\)</span>，<span class="arithmatex">\(b\)</span>项消失。</p>
+<p>展开第一项：
+$$
+\frac{1}{2}\sum_n \sum_m \alpha_n \alpha_m y^{(n)} y^{(m)} \boldsymbol{x}<sup _m_="(m)">{(n)\top}\boldsymbol{x}</sup>
+$$</p>
+<p>第二项：
+$$
+\sum_n \alpha_n y^{(n)} \left(\sum_m \alpha_m y^{(m)} \boldsymbol{x}<sup _top="\top">{(m)}\right)</sup>}\boldsymbol{x}^{(n)} = \sum_n \sum_m \alpha_n \alpha_m y^{(n)} y^{(m)} \boldsymbol{x<sup _m_="(m)">{(n)\top}\boldsymbol{x}</sup>
+$$</p>
+<p>因此：
+$$
+L = \sum_n \alpha_n - \frac{1}{2}\sum_n \sum_m \alpha_n \alpha_m y^{(n)} y^{(m)} \boldsymbol{x}<sup _m_="(m)">{(n)\top}\boldsymbol{x}</sup>
+$$</p>
+<p><strong>对偶问题</strong>：</p>
+<div class="arithmatex">\[
+\max_{\boldsymbol{\alpha}} \sum_{n=1}^{N}\alpha_n - \frac{1}{2}\sum_{n=1}^{N}\sum_{m=1}^{N}\alpha_n\alpha_m y^{(n)}y^{(m)}\boldsymbol{x}^{(n)\top}\boldsymbol{x}^{(m)}
+\]</div>
+<div class="arithmatex">\[
+\text{s.t.} \quad \alpha_n \geq 0, \quad n = 1, \ldots, N
+\]</div>
+<div class="arithmatex">\[
+\sum_{n=1}^{N}\alpha_n y^{(n)} = 0
+\]</div>
+<h4 id="kkt条件">KKT条件<a class="headerlink" href="#kkt条件" title="Permanent link">¶</a></h4>
+<p>最优解必须满足**Karush-Kuhn-Tucker (KKT) 条件**：</p>
+<ol>
+<li>
+<p><strong>原始可行性</strong>：<span class="arithmatex">\(y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b) \geq 1\)</span></p>
+</li>
+<li>
+<p><strong>对偶可行性</strong>：<span class="arithmatex">\(\alpha_n \geq 0\)</span></p>
+</li>
+<li>
+<p><strong>互补松弛条件</strong>：</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+\alpha_n\left[y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b) - 1\right] = 0
+\]</div>
+<p><strong>互补松弛条件的含义</strong>：对于每个样本<span class="arithmatex">\(n\)</span>：</p>
+<ul>
+<li>要么<span class="arithmatex">\(\alpha_n = 0\)</span></li>
+<li>要么<span class="arithmatex">\(y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b) = 1\)</span>（样本恰好落在间隔边界上）</li>
+</ul>
+<h4 id="支持向量">支持向量<a class="headerlink" href="#支持向量" title="Permanent link">¶</a></h4>
+<p>支持向量：满足<span class="arithmatex">\(\alpha_n &gt; 0\)</span>的样本称为**支持向量**（Support Vector）。</p>
+<p>由KKT条件，支持向量满足：
+$$
+y<sup _top="\top">{(n)}(\boldsymbol{w}</sup> + b) = 1
+$$}\boldsymbol{x}^{(n)</p>
+<p>即支持向量恰好落在**间隔边界**上（距离超平面的距离为<span class="arithmatex">\(1/\|\boldsymbol{w}\|\)</span>）。</p>
+<p><strong>重要性质</strong>：</p>
+<ol>
+<li>最优超平面**完全由支持向量决定**</li>
+<li>非支持向量对决策边界**没有影响**</li>
+<li>支持向量通常只占所有样本的**一小部分**</li>
+</ol>
+<p><strong>决策函数</strong>：</p>
+<div class="arithmatex">\[
+f(\boldsymbol{x}) = \boldsymbol{w}^{\top}\boldsymbol{x} + b = \sum_{n=1}^{N}\alpha_n y^{(n)} \boldsymbol{x}^{(n)\top}\boldsymbol{x} + b
+\]</div>
+<p>由于非支持向量的<span class="arithmatex">\(\alpha_n = 0\)</span>：</p>
+<div class="arithmatex">\[
+f(\boldsymbol{x}) = \sum_{n \in \mathcal{SV}}\alpha_n y^{(n)} \boldsymbol{x}^{(n)\top}\boldsymbol{x} + b
+\]</div>
+<p>其中<span class="arithmatex">\(\mathcal{SV} = \{n \mid \alpha_n &gt; 0\}\)</span>是支持向量的索引集合。</p>
+<h3 id="53-核函数与核技巧">5.3 核函数与核技巧<a class="headerlink" href="#53-核函数与核技巧" title="Permanent link">¶</a></h3>
+<h4 id="非线性可分问题">非线性可分问题<a class="headerlink" href="#非线性可分问题" title="Permanent link">¶</a></h4>
+<p>当数据在原始空间中线性不可分时，可以通过**特征映射**将数据映射到高维空间，使其在高维空间中线性可分。</p>
+<p><strong>特征映射</strong>：<span class="arithmatex">\(\phi: \mathbb{R}^D \rightarrow \mathcal{H}\)</span></p>
+<p>其中<span class="arithmatex">\(\mathcal{H}\)</span>是高维（可能无限维）的**特征空间**或**希尔伯特空间**。</p>
+<p><strong>例子</strong>：二维到六维的映射：
+$$
+\boldsymbol{x} = [x_1, x_2]^{\top} \mapsto \phi(\boldsymbol{x}) = [1, \sqrt{2}x_1, \sqrt{2}x_2, x_1^2, x_2^2, \sqrt{2}x_1x_2]^{\top}
+$$</p>
+<p>在高维空间中，SVM的对偶问题变为：</p>
+<div class="arithmatex">\[
+\max_{\boldsymbol{\alpha}} \sum_{n=1}^{N}\alpha_n - \frac{1}{2}\sum_{n=1}^{N}\sum_{m=1}^{N}\alpha_n\alpha_m y^{(n)}y^{(m)}\phi(\boldsymbol{x}^{(n)})^{\top}\phi(\boldsymbol{x}^{(m)})
+\]</div>
+<h4 id="核技巧">核技巧<a class="headerlink" href="#核技巧" title="Permanent link">¶</a></h4>
+<p><strong>核心观察</strong>：对偶问题只涉及样本之间的**内积**<span class="arithmatex">\(\phi(\boldsymbol{x})^{\top}\phi(\boldsymbol{x}')\)</span>。</p>
+<p>核函数：核函数<span class="arithmatex">\(\kappa: \mathbb{R}^D \times \mathbb{R}^D \rightarrow \mathbb{R}\)</span>定义为特征空间中的内积：</p>
+<div class="arithmatex">\[
+\kappa(\boldsymbol{x}, \boldsymbol{x}') = \phi(\boldsymbol{x})^{\top}\phi(\boldsymbol{x}')
+\]</div>
+<p><strong>核技巧</strong>（Kernel Trick）：如果我们能够直接计算<span class="arithmatex">\(\kappa(\boldsymbol{x}, \boldsymbol{x}')\)</span>，而无需显式计算<span class="arithmatex">\(\phi(\boldsymbol{x})\)</span>，就可以**避免在高维空间中的显式计算**。</p>
+<p><strong>例子</strong>：多项式核
+$$
+\kappa(\boldsymbol{x}, \boldsymbol{x}') = (\boldsymbol{x}^{\top}\boldsymbol{x}' + 1)^2
+$$</p>
+<p>展开验证（<span class="arithmatex">\(D = 2\)</span>）：
+$$
+(\boldsymbol{x}^{\top}\boldsymbol{x}' + 1)^2 = (x_1x_1' + x_2x_2' + 1)^2
+$$</p>
+<div class="arithmatex">\[
+= 1 + 2x_1x_1' + 2x_2x_2' + x_1^2x_1'^2 + x_2^2x_2'^2 + 2x_1x_2x_1'x_2'
+\]</div>
+<div class="arithmatex">\[
+= [1, \sqrt{2}x_1, \sqrt{2}x_2, x_1^2, x_2^2, \sqrt{2}x_1x_2] \cdot [1, \sqrt{2}x_1', \sqrt{2}x_2', x_1'^2, x_2'^2, \sqrt{2}x_1'x_2']^{\top}
+\]</div>
+<div class="arithmatex">\[
+= \phi(\boldsymbol{x})^{\top}\phi(\boldsymbol{x}')
+\]</div>
+<p>计算复杂度：</p>
+<ul>
+<li>显式计算<span class="arithmatex">\(\phi(\boldsymbol{x})^{\top}\phi(\boldsymbol{x}')\)</span>：<span class="arithmatex">\(O(D^2)\)</span></li>
+<li>使用核函数：<span class="arithmatex">\(O(D)\)</span></li>
+</ul>
+<h4 id="常用核函数">常用核函数<a class="headerlink" href="#常用核函数" title="Permanent link">¶</a></h4>
+<p><strong>1. 线性核</strong>（Linear Kernel）：</p>
+<div class="arithmatex">\[
+\kappa(\boldsymbol{x}, \boldsymbol{x}') = \boldsymbol{x}^{\top}\boldsymbol{x}'
+\]</div>
+<p>对应恒等映射<span class="arithmatex">\(\phi(\boldsymbol{x}) = \boldsymbol{x}\)</span>，即原始空间中的线性SVM。</p>
+<p><strong>2. 多项式核</strong>（Polynomial Kernel）：</p>
+<div class="arithmatex">\[
+\kappa(\boldsymbol{x}, \boldsymbol{x}') = (\boldsymbol{x}^{\top}\boldsymbol{x}' + c)^d
+\]</div>
+<p>其中<span class="arithmatex">\(c \geq 0\)</span>是常数，<span class="arithmatex">\(d \in \mathbb{N}\)</span>是多项式次数。</p>
+<ul>
+<li><span class="arithmatex">\(d = 1\)</span>, <span class="arithmatex">\(c = 0\)</span>：线性核</li>
+<li><span class="arithmatex">\(d = 2\)</span>：二次核，能够捕捉二阶特征交互</li>
+</ul>
+<p><strong>3. 高斯核/RBF核</strong>（Gaussian/Radial Basis Function Kernel）：</p>
+<div class="arithmatex">\[
+\kappa(\boldsymbol{x}, \boldsymbol{x}') = \exp\left(-\frac{\|\boldsymbol{x} - \boldsymbol{x}'\|^2}{2\sigma^2}\right) = \exp\left(-\gamma\|\boldsymbol{x} - \boldsymbol{x}'\|^2\right)
+\]</div>
+<p>其中<span class="arithmatex">\(\sigma &gt; 0\)</span>是带宽参数，<span class="arithmatex">\(\gamma = \frac{1}{2\sigma^2}\)</span>。</p>
+<p><strong>重要性质</strong>：高斯核对应**无限维**的特征空间。</p>
+<p><strong>证明（简略）</strong>：利用Taylor展开：
+$$
+\exp\left(-\frac{|\boldsymbol{x} - \boldsymbol{x}'|<sup>2}{2\sigma</sup>2}\right) = \exp\left(-\frac{|\boldsymbol{x}|<sup>2}{2\sigma</sup>2}\right)\exp\left(-\frac{|\boldsymbol{x}'|<sup>2}{2\sigma</sup>2}\right)\exp\left(\frac{\boldsymbol{x}<sup>{\top}\boldsymbol{x}'}{\sigma</sup>2}\right)
+$$</p>
+<p>将<span class="arithmatex">\(\exp\left(\frac{\boldsymbol{x}^{\top}\boldsymbol{x}'}{\sigma^2}\right)\)</span>展开为无穷级数，可以得到无限维的特征映射。</p>
+<p><strong>4. Sigmoid核</strong>（Sigmoid Kernel）：</p>
+<div class="arithmatex">\[
+\kappa(\boldsymbol{x}, \boldsymbol{x}') = \tanh(\beta\boldsymbol{x}^{\top}\boldsymbol{x}' + \theta)
+\]</div>
+<p>其中<span class="arithmatex">\(\beta &gt; 0\)</span>，<span class="arithmatex">\(\theta &lt; 0\)</span>。</p>
+<p><strong>注意</strong>：Sigmoid核在某些参数下不满足Mercer条件。</p>
+<h4 id="mercer条件">Mercer条件<a class="headerlink" href="#mercer条件" title="Permanent link">¶</a></h4>
+<p>Mercer定理：一个函数<span class="arithmatex">\(\kappa(\cdot, \cdot)\)</span>是有效的核函数（即存在对应的特征映射<span class="arithmatex">\(\phi\)</span>），当且仅当对任意样本集<span class="arithmatex">\(\{\boldsymbol{x}^{(1)}, \ldots, \boldsymbol{x}^{(N)}\}\)</span>，核矩阵<span class="arithmatex">\(\boldsymbol{K}\)</span>是**半正定**的：</p>
+<div class="arithmatex">\[
+K_{nm} = \kappa(\boldsymbol{x}^{(n)}, \boldsymbol{x}^{(m)})
+\]</div>
+<div class="arithmatex">\[
+\boldsymbol{K} \succeq 0
+\]</div>
+<h3 id="54-软间隔svm">5.4 软间隔SVM<a class="headerlink" href="#54-软间隔svm" title="Permanent link">¶</a></h3>
+<h4 id="动机_1">动机<a class="headerlink" href="#动机_1" title="Permanent link">¶</a></h4>
+<p>在实际应用中，数据往往不是严格线性可分的：</p>
+<ul>
+<li>可能存在**噪声**和**异常值**</li>
+<li>硬间隔SVM会试图拟合所有样本，容易**过拟合**</li>
+</ul>
+<p><strong>软间隔</strong>（Soft Margin）允许一些样本违反间隔约束。</p>
+<h4 id="松弛变量">松弛变量<a class="headerlink" href="#松弛变量" title="Permanent link">¶</a></h4>
+<p>引入**松弛变量**（slack variable）<span class="arithmatex">\(\xi_n \geq 0\)</span>：</p>
+<div class="arithmatex">\[
+y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b) \geq 1 - \xi_n
+\]</div>
+<p><strong>松弛变量的含义</strong>：</p>
+<ul>
+<li><span class="arithmatex">\(\xi_n = 0\)</span>：样本在间隔边界上或外部（正确分类且满足间隔约束）</li>
+<li><span class="arithmatex">\(0 &lt; \xi_n &lt; 1\)</span>：样本在间隔内但被正确分类</li>
+<li><span class="arithmatex">\(\xi_n = 1\)</span>：样本恰好在决策边界上</li>
+<li><span class="arithmatex">\(\xi_n &gt; 1\)</span>：样本被错误分类</li>
+</ul>
+<h4 id="软间隔svm优化问题">软间隔SVM优化问题<a class="headerlink" href="#软间隔svm优化问题" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[
+\min_{\boldsymbol{w}, b, \boldsymbol{\xi}} \frac{1}{2}\|\boldsymbol{w}\|_2^2 + C\sum_{n=1}^{N}\xi_n
+\]</div>
+<div class="arithmatex">\[
+\text{s.t.} \quad y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b) \geq 1 - \xi_n, \quad n = 1, \ldots, N
+\]</div>
+<div class="arithmatex">\[
+\xi_n \geq 0, \quad n = 1, \ldots, N
+\]</div>
+<p><strong>参数<span class="arithmatex">\(C\)</span>的作用</strong>：</p>
+<ul>
+<li><span class="arithmatex">\(C\)</span>是**正则化参数**，控制间隔最大化与错误分类惩罚之间的权衡</li>
+<li><span class="arithmatex">\(C\)</span>大：更不容忍错误，间隔小，可能过拟合</li>
+<li><span class="arithmatex">\(C\)</span>小：更容忍错误，间隔大，可能欠拟合</li>
+</ul>
+<h4 id="对偶问题">对偶问题<a class="headerlink" href="#对偶问题" title="Permanent link">¶</a></h4>
+<p>软间隔SVM的对偶问题为：</p>
+<div class="arithmatex">\[
+\max_{\boldsymbol{\alpha}} \sum_{n=1}^{N}\alpha_n - \frac{1}{2}\sum_{n=1}^{N}\sum_{m=1}^{N}\alpha_n\alpha_m y^{(n)}y^{(m)}\kappa(\boldsymbol{x}^{(n)}, \boldsymbol{x}^{(m)})
+\]</div>
+<div class="arithmatex">\[
+\text{s.t.} \quad 0 \leq \alpha_n \leq C, \quad n = 1, \ldots, N
+\]</div>
+<div class="arithmatex">\[
+\sum_{n=1}^{N}\alpha_n y^{(n)} = 0
+\]</div>
+<p>与硬间隔SVM相比，唯一的区别是<span class="arithmatex">\(\alpha_n\)</span>有了**上界<span class="arithmatex">\(C\)</span>**（box constraint）。</p>
+<p><strong>KKT条件分析</strong>：</p>
+<ul>
+<li><span class="arithmatex">\(\alpha_n = 0\)</span>：样本在间隔外，不是支持向量</li>
+<li><span class="arithmatex">\(0 &lt; \alpha_n &lt; C\)</span>：样本在间隔边界上，<span class="arithmatex">\(\xi_n = 0\)</span></li>
+<li><span class="arithmatex">\(\alpha_n = C\)</span>：样本在间隔内或被错误分类，<span class="arithmatex">\(\xi_n &gt; 0\)</span></li>
+</ul>
+<h4 id="hinge损失">Hinge损失<a class="headerlink" href="#hinge损失" title="Permanent link">¶</a></h4>
+<p>软间隔SVM等价于最小化正则化的**Hinge损失**：</p>
+<div class="arithmatex">\[
+\min_{\boldsymbol{w}, b} \frac{1}{2}\|\boldsymbol{w}\|_2^2 + C\sum_{n=1}^{N}\max(0, 1 - y^{(n)}(\boldsymbol{w}^{\top}\boldsymbol{x}^{(n)} + b))
+\]</div>
+<p>**Hinge损失**定义为：</p>
+<div class="arithmatex">\[
+\ell_{\text{hinge}}(y, f(\boldsymbol{x})) = \max(0, 1 - yf(\boldsymbol{x})) = [1 - yf(\boldsymbol{x})]_+
+\]</div>
+<p>其中<span class="arithmatex">\([z]_+ = \max(0, z)\)</span>是**ReLU函数**。</p>
+<h2 id="6-损失函数对比">6 损失函数对比<a class="headerlink" href="#6-损失函数对比" title="Permanent link">¶</a></h2>
+<p>不同的线性分类模型采用了不同的损失函数。本节系统比较这些损失函数的性质。</p>
+<h3 id="61-统一框架">6.1 统一框架<a class="headerlink" href="#61-统一框架" title="Permanent link">¶</a></h3>
+<p>设<span class="arithmatex">\(z = y \cdot f(\boldsymbol{x}) = y(\boldsymbol{w}^{\top}\boldsymbol{x} + b)\)</span>为样本的**函数间隔**。</p>
+<p>各种损失函数都可以写成<span class="arithmatex">\(\ell(z)\)</span>的形式。</p>
+<h3 id="62-常见损失函数详解">6.2 常见损失函数详解<a class="headerlink" href="#62-常见损失函数详解" title="Permanent link">¶</a></h3>
+<h4 id="损失">损失<a class="headerlink" href="#损失" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[
+\ell_{0-1}(z) = \mathbb{I}(z \leq 0) = \begin{cases}
+1, &amp; \text{if } z \leq 0 \\
+0, &amp; \text{if } z &gt; 0
+\end{cases}
+\]</div>
+<p><strong>性质</strong>：</p>
+<ul>
+<li>直接度量分类错误</li>
+<li>非凸、不连续、不可微</li>
+<li>**NP难**优化问题</li>
+<li>实际中用其他损失函数作为代理（surrogate）</li>
+</ul>
+<h4 id="感知器损失">感知器损失<a class="headerlink" href="#感知器损失" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[
+\ell_{\text{perceptron}}(z) = \max(0, -z) = [-z]_+
+\]</div>
+<p><strong>性质</strong>：</p>
+<ul>
+<li>凸函数</li>
+<li>连续但在<span class="arithmatex">\(z = 0\)</span>处不可微</li>
+<li>只惩罚错误分类的样本</li>
+<li>是0-1损失的**松弛**</li>
+</ul>
+<h4 id="hinge损失svm">Hinge损失（SVM）<a class="headerlink" href="#hinge损失svm" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[
+\ell_{\text{hinge}}(z) = \max(0, 1 - z) = [1 - z]_+
+\]</div>
+<p><strong>性质</strong>：</p>
+<ul>
+<li>凸函数</li>
+<li>连续但在<span class="arithmatex">\(z = 1\)</span>处不可微</li>
+<li>不仅要求正确分类，还要求有**间隔**（<span class="arithmatex">\(z \geq 1\)</span>）</li>
+<li>是0-1损失的**紧致凸上界**</li>
+</ul>
+<h4 id="logistic损失">Logistic损失<a class="headerlink" href="#logistic损失" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[
+\ell_{\text{logistic}}(z) = \log(1 + e^{-z})
+\]</div>
+<p><strong>性质</strong>：</p>
+<ul>
+<li>凸函数</li>
+<li><strong>处处光滑可微</strong></li>
+<li>渐近行为：</li>
+<li><span class="arithmatex">\(z \to +\infty\)</span>：<span class="arithmatex">\(\ell \to 0\)</span></li>
+<li><span class="arithmatex">\(z \to -\infty\)</span>：<span class="arithmatex">\(\ell \approx -z\)</span>（线性增长）</li>
+</ul>
+<h4 id="指数损失adaboost">指数损失（AdaBoost）<a class="headerlink" href="#指数损失adaboost" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[
+\ell_{\text{exp}}(z) = e^{-z}
+\]</div>
+<p><strong>性质</strong>：</p>
+<ul>
+<li>凸函数</li>
+<li>处处光滑可微</li>
+<li>对离群点**非常敏感**（指数增长）</li>
+<li>是AdaBoost算法对应的损失函数</li>
+</ul>
+<h3 id="63-损失函数比较表">6.3 损失函数比较表<a class="headerlink" href="#63-损失函数比较表" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>损失函数</th>
+<th>公式</th>
+<th>凸性</th>
+<th>光滑性</th>
+<th>离群点敏感度</th>
+<th>对应模型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-1损失</td>
+<td><span class="arithmatex">\(\mathbb{I}(z \leq 0)\)</span></td>
+<td>非凸</td>
+<td>不连续</td>
+<td>低</td>
+<td>理想分类器</td>
+</tr>
+<tr>
+<td>感知器损失</td>
+<td><span class="arithmatex">\([-z]_+\)</span></td>
+<td>凸</td>
+<td>非光滑</td>
+<td>低</td>
+<td>感知器</td>
+</tr>
+<tr>
+<td>Hinge损失</td>
+<td><span class="arithmatex">\([1-z]_+\)</span></td>
+<td>凸</td>
+<td>非光滑</td>
+<td>中等</td>
+<td>SVM</td>
+</tr>
+<tr>
+<td>Logistic损失</td>
+<td><span class="arithmatex">\(\log(1+e^{-z})\)</span></td>
+<td>凸</td>
+<td>光滑</td>
+<td>中等</td>
+<td>Logistic回归</td>
+</tr>
+<tr>
+<td>指数损失</td>
+<td><span class="arithmatex">\(e^{-z}\)</span></td>
+<td>凸</td>
+<td>光滑</td>
+<td>高</td>
+<td>AdaBoost</td>
+</tr>
+</tbody>
+</table>
+<h3 id="64-损失函数的关系">6.4 损失函数的关系<a class="headerlink" href="#64-损失函数的关系" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>**感知器损失**是**Hinge损失**向左平移1个单位的结果</p>
+</li>
+<li>
+<p>当<span class="arithmatex">\(z \to +\infty\)</span>时（正确分类且置信度高）：</p>
+</li>
+<li>Hinge损失和感知器损失都趋近于0</li>
+<li>
+<p>Logistic损失和指数损失也趋近于0</p>
+</li>
+<li>
+<p>当<span class="arithmatex">\(z \to -\infty\)</span>时（错误分类且置信度高）：</p>
+</li>
+<li>Hinge损失和感知器损失线性增长</li>
+<li>Logistic损失也线性增长</li>
+<li>
+<p>指数损失**指数增长**（对离群点非常敏感）</p>
+</li>
+<li>
+<p><strong>凸上界关系</strong>：</p>
+</li>
+<li>Hinge损失、Logistic损失、指数损失都是0-1损失的凸上界</li>
+<li>最小化这些代理损失可以间接最小化0-1损失</li>
+</ol>
 
 
 
