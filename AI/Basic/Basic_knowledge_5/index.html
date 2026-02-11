@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/Introd_RSA/">
+        <link rel="canonical" href="https://docs.qsnctf.com/AI/Basic/Basic_knowledge_5/">
       
       
-        <link rel="prev" href="../../../Graphic_Cryptography/Piggy_Bank/">
+        <link rel="prev" href="../Basic_knowledge_4/">
       
       
-        <link rel="next" href="../RSA_Key_Generation/">
+        <link rel="next" href="../Basic_knowledge_6/">
       
       
         
       
       
-      <link rel="icon" href="../../../../assets/logo.png">
+      <link rel="icon" href="../../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>RSA介绍 - 青少年CTF文库</title>
+        <title>基础知识5 - 青少年CTF文库</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,11 +53,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../stylesheets/markmap.css">
+      <link rel="stylesheet" href="../../../stylesheets/markmap.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/main.css">
+      <link rel="stylesheet" href="../../../stylesheets/main.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-rsa的历史" class="md-skip">
+        <a href="#1-给网络增加记忆能力" class="md-skip">
           跳转至
         </a>
       
@@ -96,9 +96,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../.." title="青少年CTF文库" class="md-header__button md-logo" aria-label="青少年CTF文库" data-md-component="logo">
+    <a href="../../.." title="青少年CTF文库" class="md-header__button md-logo" aria-label="青少年CTF文库" data-md-component="logo">
       
-  <img src="../../../../assets/logo.png" alt="logo">
+  <img src="../../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RSA介绍
+              基础知识5
             
           </span>
         </div>
@@ -233,7 +233,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -254,7 +254,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../home/" class="md-tabs__link">
+        <a href="../../../home/" class="md-tabs__link">
           
   
   
@@ -276,7 +276,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../basic/intro/" class="md-tabs__link">
+        <a href="../../../basic/intro/" class="md-tabs__link">
           
   
   
@@ -298,7 +298,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../Code/" class="md-tabs__link">
+        <a href="../../../Code/" class="md-tabs__link">
           
   
   
@@ -320,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../Misc/" class="md-tabs__link">
+        <a href="../../../Misc/" class="md-tabs__link">
           
   
   
@@ -338,13 +338,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../Crypto/" class="md-tabs__link">
           
   
   
@@ -366,7 +364,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../Web/" class="md-tabs__link">
+        <a href="../../../Web/" class="md-tabs__link">
           
   
   
@@ -388,7 +386,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../Reverse/" class="md-tabs__link">
+        <a href="../../../Reverse/" class="md-tabs__link">
           
   
   
@@ -410,7 +408,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../Pwn/" class="md-tabs__link">
+        <a href="../../../Pwn/" class="md-tabs__link">
           
   
   
@@ -428,11 +426,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../AI/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -454,7 +454,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../Tools/" class="md-tabs__link">
+        <a href="../../../Tools/" class="md-tabs__link">
           
   
   
@@ -476,7 +476,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../about/" class="md-tabs__link">
+        <a href="../../../about/" class="md-tabs__link">
           
   
   
@@ -512,9 +512,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="青少年CTF文库" class="md-nav__button md-logo" aria-label="青少年CTF文库" data-md-component="logo">
+    <a href="../../.." title="青少年CTF文库" class="md-nav__button md-logo" aria-label="青少年CTF文库" data-md-component="logo">
       
-  <img src="../../../../assets/logo.png" alt="logo">
+  <img src="../../../assets/logo.png" alt="logo">
 
     </a>
     青少年CTF文库
@@ -541,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -624,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../home/" class="md-nav__link">
+      <a href="../../../home/" class="md-nav__link">
         
   
   
@@ -652,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Knowledge_Tree/" class="md-nav__link">
+      <a href="../../../Knowledge_Tree/" class="md-nav__link">
         
   
   
@@ -749,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic/intro/" class="md-nav__link">
+      <a href="../../../basic/intro/" class="md-nav__link">
         
   
   
@@ -777,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic/history/" class="md-nav__link">
+      <a href="../../../basic/history/" class="md-nav__link">
         
   
   
@@ -805,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic/practice/" class="md-nav__link">
+      <a href="../../../basic/practice/" class="md-nav__link">
         
   
   
@@ -889,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic/How_does_a_computer_work/" class="md-nav__link">
+      <a href="../../../basic/How_does_a_computer_work/" class="md-nav__link">
         
   
   
@@ -917,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic/operating_system/" class="md-nav__link">
+      <a href="../../../basic/operating_system/" class="md-nav__link">
         
   
   
@@ -1009,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic/network/intro/" class="md-nav__link">
+      <a href="../../../basic/network/intro/" class="md-nav__link">
         
   
   
@@ -1037,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../basic/network/osi/" class="md-nav__link">
+      <a href="../../../basic/network/osi/" class="md-nav__link">
         
   
   
@@ -1109,7 +1109,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Code/" class="md-nav__link ">
+            <a href="../../../Code/" class="md-nav__link ">
               
   
   
@@ -1219,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/CPP/cpp-tutorial/" class="md-nav__link">
+      <a href="../../../Code/CPP/cpp-tutorial/" class="md-nav__link">
         
   
   
@@ -1247,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/CPP/cpp-basic-syntax/" class="md-nav__link">
+      <a href="../../../Code/CPP/cpp-basic-syntax/" class="md-nav__link">
         
   
   
@@ -1275,7 +1275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/CPP/cpp-comments/" class="md-nav__link">
+      <a href="../../../Code/CPP/cpp-comments/" class="md-nav__link">
         
   
   
@@ -1303,7 +1303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/CPP/cpp-data-types/" class="md-nav__link">
+      <a href="../../../Code/CPP/cpp-data-types/" class="md-nav__link">
         
   
   
@@ -1331,7 +1331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/CPP/cpp-variable-types/" class="md-nav__link">
+      <a href="../../../Code/CPP/cpp-variable-types/" class="md-nav__link">
         
   
   
@@ -1359,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/CPP/cpp-variable-scope/" class="md-nav__link">
+      <a href="../../../Code/CPP/cpp-variable-scope/" class="md-nav__link">
         
   
   
@@ -1387,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/CPP/cpp-constants-literals/" class="md-nav__link">
+      <a href="../../../Code/CPP/cpp-constants-literals/" class="md-nav__link">
         
   
   
@@ -1501,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Language_Overview/" class="md-nav__link">
+      <a href="../../../Code/Assembly/Language_Overview/" class="md-nav__link">
         
   
   
@@ -1529,7 +1529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Basic_Environment_and_Tools/" class="md-nav__link">
+      <a href="../../../Code/Assembly/Basic_Environment_and_Tools/" class="md-nav__link">
         
   
   
@@ -1557,7 +1557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Computer_Low-Level_Fundamentals/" class="md-nav__link">
+      <a href="../../../Code/Assembly/Computer_Low-Level_Fundamentals/" class="md-nav__link">
         
   
   
@@ -1585,7 +1585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Registers/" class="md-nav__link">
+      <a href="../../../Code/Assembly/Registers/" class="md-nav__link">
         
   
   
@@ -1613,7 +1613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Memory_and_Stack/" class="md-nav__link">
+      <a href="../../../Code/Assembly/Memory_and_Stack/" class="md-nav__link">
         
   
   
@@ -1641,7 +1641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
         
   
   
@@ -1669,7 +1669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Control_Flow/" class="md-nav__link">
+      <a href="../../../Code/Assembly/Control_Flow/" class="md-nav__link">
         
   
   
@@ -1697,7 +1697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Functions_and_Calling_Conventions/" class="md-nav__link">
+      <a href="../../../Code/Assembly/Functions_and_Calling_Conventions/" class="md-nav__link">
         
   
   
@@ -1725,7 +1725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Data_and_Variables/" class="md-nav__link">
+      <a href="../../../Code/Assembly/Data_and_Variables/" class="md-nav__link">
         
   
   
@@ -1753,7 +1753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Common_Architectures/" class="md-nav__link">
+      <a href="../../../Code/Assembly/Common_Architectures/" class="md-nav__link">
         
   
   
@@ -1781,7 +1781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Relationship_Between_Assembly_and_High-Level_Languages/" class="md-nav__link">
+      <a href="../../../Code/Assembly/Relationship_Between_Assembly_and_High-Level_Languages/" class="md-nav__link">
         
   
   
@@ -1809,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Assembly_Debugging_and_Analysis/" class="md-nav__link">
+      <a href="../../../Code/Assembly/Assembly_Debugging_and_Analysis/" class="md-nav__link">
         
   
   
@@ -1837,7 +1837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Assembly_in_CTF/" class="md-nav__link">
+      <a href="../../../Code/Assembly/Assembly_in_CTF/" class="md-nav__link">
         
   
   
@@ -1975,7 +1975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Intro/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Intro/" class="md-nav__link">
         
   
   
@@ -2003,7 +2003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Basic_Syntax/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Basic_Syntax/" class="md-nav__link">
         
   
   
@@ -2031,7 +2031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Data_Type/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Data_Type/" class="md-nav__link">
         
   
   
@@ -2059,7 +2059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Type_Conversion/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Type_Conversion/" class="md-nav__link">
         
   
   
@@ -2087,7 +2087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Comment/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Comment/" class="md-nav__link">
         
   
   
@@ -2115,7 +2115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Basic_Operators/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Basic_Operators/" class="md-nav__link">
         
   
   
@@ -2143,7 +2143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Conditional_Statements/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Conditional_Statements/" class="md-nav__link">
         
   
   
@@ -2171,7 +2171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Loop/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Loop/" class="md-nav__link">
         
   
   
@@ -2199,7 +2199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Comprehensions/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Comprehensions/" class="md-nav__link">
         
   
   
@@ -2227,7 +2227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Iterator-Generator/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Iterator-Generator/" class="md-nav__link">
         
   
   
@@ -2255,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_With/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_With/" class="md-nav__link">
         
   
   
@@ -2283,7 +2283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Functions/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Functions/" class="md-nav__link">
         
   
   
@@ -2311,7 +2311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_lambda/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_lambda/" class="md-nav__link">
         
   
   
@@ -2339,7 +2339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Decorators/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Decorators/" class="md-nav__link">
         
   
   
@@ -2367,7 +2367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Data_Structure/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Data_Structure/" class="md-nav__link">
         
   
   
@@ -2395,7 +2395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_module/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_module/" class="md-nav__link">
         
   
   
@@ -2423,7 +2423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Internal_Variable/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Internal_Variable/" class="md-nav__link">
         
   
   
@@ -2451,7 +2451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_File/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_File/" class="md-nav__link">
         
   
   
@@ -2479,7 +2479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_OS/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_OS/" class="md-nav__link">
         
   
   
@@ -2507,7 +2507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Errors_Execptions/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Errors_Execptions/" class="md-nav__link">
         
   
   
@@ -2535,7 +2535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Class/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Class/" class="md-nav__link">
         
   
   
@@ -2563,7 +2563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Namespace_Scope/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Namespace_Scope/" class="md-nav__link">
         
   
   
@@ -2591,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Venv/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Venv/" class="md-nav__link">
         
   
   
@@ -2619,7 +2619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_stdlib/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_stdlib/" class="md-nav__link">
         
   
   
@@ -2647,7 +2647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Python/Python_Type_Hints/" class="md-nav__link">
+      <a href="../../../Code/Python/Python_Type_Hints/" class="md-nav__link">
         
   
   
@@ -2683,7 +2683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/PHP/" class="md-nav__link">
+      <a href="../../../Code/PHP/" class="md-nav__link">
         
   
   
@@ -2749,7 +2749,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Misc/" class="md-nav__link ">
+            <a href="../../../Misc/" class="md-nav__link ">
               
   
   
@@ -2851,7 +2851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/encoding/ASCII/" class="md-nav__link">
+      <a href="../../../Misc/encoding/ASCII/" class="md-nav__link">
         
   
   
@@ -2879,7 +2879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/encoding/Hex/" class="md-nav__link">
+      <a href="../../../Misc/encoding/Hex/" class="md-nav__link">
         
   
   
@@ -2967,7 +2967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/encoding/Base/Base64/" class="md-nav__link">
+      <a href="../../../Misc/encoding/Base/Base64/" class="md-nav__link">
         
   
   
@@ -2995,7 +2995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/encoding/Base/Base32/" class="md-nav__link">
+      <a href="../../../Misc/encoding/Base/Base32/" class="md-nav__link">
         
   
   
@@ -3023,7 +3023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/encoding/Base/Base36/" class="md-nav__link">
+      <a href="../../../Misc/encoding/Base/Base36/" class="md-nav__link">
         
   
   
@@ -3051,7 +3051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/encoding/Base/Base58/" class="md-nav__link">
+      <a href="../../../Misc/encoding/Base/Base58/" class="md-nav__link">
         
   
   
@@ -3213,7 +3213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/File_Structure/File_Structure/PNG_Structure/" class="md-nav__link">
+      <a href="../../../Misc/File_Structure/File_Structure/PNG_Structure/" class="md-nav__link">
         
   
   
@@ -3241,7 +3241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/File_Structure/File_Structure/JPG_Structure/" class="md-nav__link">
+      <a href="../../../Misc/File_Structure/File_Structure/JPG_Structure/" class="md-nav__link">
         
   
   
@@ -3269,7 +3269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/File_Structure/File_Structure/ZIP_Structure/" class="md-nav__link">
+      <a href="../../../Misc/File_Structure/File_Structure/ZIP_Structure/" class="md-nav__link">
         
   
   
@@ -3297,7 +3297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/File_Structure/File_Structure/GIF_Structure/" class="md-nav__link">
+      <a href="../../../Misc/File_Structure/File_Structure/GIF_Structure/" class="md-nav__link">
         
   
   
@@ -3325,7 +3325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/File_Structure/File_Structure/WAV_Structure/" class="md-nav__link">
+      <a href="../../../Misc/File_Structure/File_Structure/WAV_Structure/" class="md-nav__link">
         
   
   
@@ -3353,7 +3353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/File_Structure/File_Structure/MP3_Structure/" class="md-nav__link">
+      <a href="../../../Misc/File_Structure/File_Structure/MP3_Structure/" class="md-nav__link">
         
   
   
@@ -3455,7 +3455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/File_Repair/PNG_Repair/" class="md-nav__link">
+      <a href="../../../Misc/File_Repair/PNG_Repair/" class="md-nav__link">
         
   
   
@@ -3483,7 +3483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/File_Repair/JPG_Repair/" class="md-nav__link">
+      <a href="../../../Misc/File_Repair/JPG_Repair/" class="md-nav__link">
         
   
   
@@ -3511,7 +3511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/File_Repair/ZIP_Repair/" class="md-nav__link">
+      <a href="../../../Misc/File_Repair/ZIP_Repair/" class="md-nav__link">
         
   
   
@@ -3609,7 +3609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/Steganography/PNG_Steganography/" class="md-nav__link">
+      <a href="../../../Misc/Steganography/PNG_Steganography/" class="md-nav__link">
         
   
   
@@ -3637,7 +3637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/Steganography/JPG_Steganography/" class="md-nav__link">
+      <a href="../../../Misc/Steganography/JPG_Steganography/" class="md-nav__link">
         
   
   
@@ -3665,7 +3665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/Steganography/BMP_Steganography/" class="md-nav__link">
+      <a href="../../../Misc/Steganography/BMP_Steganography/" class="md-nav__link">
         
   
   
@@ -3693,7 +3693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/Steganography/WAV_Steganography/" class="md-nav__link">
+      <a href="../../../Misc/Steganography/WAV_Steganography/" class="md-nav__link">
         
   
   
@@ -3721,7 +3721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/Steganography/MP3_Steganography/" class="md-nav__link">
+      <a href="../../../Misc/Steganography/MP3_Steganography/" class="md-nav__link">
         
   
   
@@ -3811,7 +3811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Misc/Brute_Force/Brute_Force/" class="md-nav__link">
+      <a href="../../../Misc/Brute_Force/Brute_Force/" class="md-nav__link">
         
   
   
@@ -3851,8 +3851,6 @@
       
   
   
-    
-  
   
   
     
@@ -3872,21 +3870,18 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../../Crypto/" class="md-nav__link ">
               
   
   
@@ -3904,13 +3899,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4046,7 +4041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Classical_Cryptography/Single_Table_Replacement/Caesar/" class="md-nav__link">
+      <a href="../../../Crypto/Classical_Cryptography/Single_Table_Replacement/Caesar/" class="md-nav__link">
         
   
   
@@ -4074,7 +4069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Classical_Cryptography/Single_Table_Replacement/Atbash/" class="md-nav__link">
+      <a href="../../../Crypto/Classical_Cryptography/Single_Table_Replacement/Atbash/" class="md-nav__link">
         
   
   
@@ -4102,7 +4097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Classical_Cryptography/Single_Table_Replacement/ROT/" class="md-nav__link">
+      <a href="../../../Crypto/Classical_Cryptography/Single_Table_Replacement/ROT/" class="md-nav__link">
         
   
   
@@ -4196,7 +4191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Classical_Cryptography/Multi_table_replacement/Playfair/" class="md-nav__link">
+      <a href="../../../Crypto/Classical_Cryptography/Multi_table_replacement/Playfair/" class="md-nav__link">
         
   
   
@@ -4224,7 +4219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Classical_Cryptography/Multi_table_replacement/HILL/" class="md-nav__link">
+      <a href="../../../Crypto/Classical_Cryptography/Multi_table_replacement/HILL/" class="md-nav__link">
         
   
   
@@ -4252,7 +4247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Classical_Cryptography/Multi_table_replacement/Vigen/" class="md-nav__link">
+      <a href="../../../Crypto/Classical_Cryptography/Multi_table_replacement/Vigen/" class="md-nav__link">
         
   
   
@@ -4346,7 +4341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Other_Cryptography/Baconian/" class="md-nav__link">
+      <a href="../../../Crypto/Other_Cryptography/Baconian/" class="md-nav__link">
         
   
   
@@ -4374,7 +4369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Other_Cryptography/Fence/" class="md-nav__link">
+      <a href="../../../Crypto/Other_Cryptography/Fence/" class="md-nav__link">
         
   
   
@@ -4402,7 +4397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Other_Cryptography/Polybius_Square/" class="md-nav__link">
+      <a href="../../../Crypto/Other_Cryptography/Polybius_Square/" class="md-nav__link">
         
   
   
@@ -4502,7 +4497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Graphic_Cryptography/Introduction/" class="md-nav__link">
+      <a href="../../../Crypto/Graphic_Cryptography/Introduction/" class="md-nav__link">
         
   
   
@@ -4530,7 +4525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Graphic_Cryptography/Piggy_Bank/" class="md-nav__link">
+      <a href="../../../Crypto/Graphic_Cryptography/Piggy_Bank/" class="md-nav__link">
         
   
   
@@ -4563,8 +4558,6 @@
                 
   
   
-    
-  
   
   
     
@@ -4579,11 +4572,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
         
           
           <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
@@ -4604,7 +4597,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4619,8 +4612,6 @@
                 
   
   
-    
-  
   
   
     
@@ -4635,11 +4626,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_1" >
         
           
           <label class="md-nav__link" for="__nav_6_4_1" id="__nav_6_4_1_label" tabindex="0">
@@ -4660,7 +4651,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_4_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4675,10 +4666,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -4699,11 +4688,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_1_1" >
         
           
           <label class="md-nav__link" for="__nav_6_4_1_1" id="__nav_6_4_1_1_label" tabindex="0">
@@ -4724,7 +4713,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_4_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_4_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_4_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4739,35 +4728,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    RSA介绍
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Crypto/Modern_Cryptography/asymmetric/Introd_RSA/" class="md-nav__link">
         
   
   
@@ -4783,46 +4747,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-rsa的历史" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. RSA的历史
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-基本原理" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 基本原理
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4835,7 +4759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RSA_Key_Generation/" class="md-nav__link">
+      <a href="../../../Crypto/Modern_Cryptography/asymmetric/RSA_Key_Generation/" class="md-nav__link">
         
   
   
@@ -4863,7 +4787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RSA_Encryption_Decryption/" class="md-nav__link">
+      <a href="../../../Crypto/Modern_Cryptography/asymmetric/RSA_Encryption_Decryption/" class="md-nav__link">
         
   
   
@@ -4891,7 +4815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RSA_Encryption_Decryption_Example/" class="md-nav__link">
+      <a href="../../../Crypto/Modern_Cryptography/asymmetric/RSA_Encryption_Decryption_Example/" class="md-nav__link">
         
   
   
@@ -4919,7 +4843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RSA_Correctness_Proof/" class="md-nav__link">
+      <a href="../../../Crypto/Modern_Cryptography/asymmetric/RSA_Correctness_Proof/" class="md-nav__link">
         
   
   
@@ -5003,7 +4927,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Web/" class="md-nav__link ">
+            <a href="../../../Web/" class="md-nav__link ">
               
   
   
@@ -5103,7 +5027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web/Introduction/Website_How_It_Works/" class="md-nav__link">
+      <a href="../../../Web/Introduction/Website_How_It_Works/" class="md-nav__link">
         
   
   
@@ -5131,7 +5055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web/Introduction/Website_Status_Management/" class="md-nav__link">
+      <a href="../../../Web/Introduction/Website_Status_Management/" class="md-nav__link">
         
   
   
@@ -5277,7 +5201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web/Web_Security_Basic_Vulnerabilities/Cross_Site_Scripting/" class="md-nav__link">
+      <a href="../../../Web/Web_Security_Basic_Vulnerabilities/Cross_Site_Scripting/" class="md-nav__link">
         
   
   
@@ -5305,7 +5229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web/Web_Security_Basic_Vulnerabilities/XSS_LAB/XSS_LAB/" class="md-nav__link">
+      <a href="../../../Web/Web_Security_Basic_Vulnerabilities/XSS_LAB/XSS_LAB/" class="md-nav__link">
         
   
   
@@ -5379,7 +5303,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Reverse/" class="md-nav__link ">
+            <a href="../../../Reverse/" class="md-nav__link ">
               
   
   
@@ -5537,7 +5461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Reverse/Tools/IDA_PRO/IDA_PRO/" class="md-nav__link">
+      <a href="../../../Reverse/Tools/IDA_PRO/IDA_PRO/" class="md-nav__link">
         
   
   
@@ -5565,7 +5489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Reverse/Tools/IDA_PRO/IDA_User_Interface/" class="md-nav__link">
+      <a href="../../../Reverse/Tools/IDA_PRO/IDA_User_Interface/" class="md-nav__link">
         
   
   
@@ -5593,7 +5517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Reverse/Tools/IDA_PRO/IDA-View/" class="md-nav__link">
+      <a href="../../../Reverse/Tools/IDA_PRO/IDA-View/" class="md-nav__link">
         
   
   
@@ -5621,7 +5545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Reverse/Tools/IDA_PRO/IDA-Pesudocode-A/" class="md-nav__link">
+      <a href="../../../Reverse/Tools/IDA_PRO/IDA-Pesudocode-A/" class="md-nav__link">
         
   
   
@@ -5693,7 +5617,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Pwn/" class="md-nav__link ">
+            <a href="../../../Pwn/" class="md-nav__link ">
               
   
   
@@ -5736,6 +5660,8 @@
       
   
   
+    
+  
   
   
     
@@ -5763,18 +5689,21 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../AI/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -5792,13 +5721,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -5818,7 +5747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../AI/Environmental/Environmental_preparation/" class="md-nav__link">
+      <a href="../../Environmental/Environmental_preparation/" class="md-nav__link">
         
   
   
@@ -5846,7 +5775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../AI/Basic/Basic_knowledge/" class="md-nav__link">
+      <a href="../Basic_knowledge/" class="md-nav__link">
         
   
   
@@ -5874,7 +5803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../AI/Basic/Basic_knowledge_2/" class="md-nav__link">
+      <a href="../Basic_knowledge_2/" class="md-nav__link">
         
   
   
@@ -5902,7 +5831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../AI/Basic/Basic_knowledge_3/" class="md-nav__link">
+      <a href="../Basic_knowledge_3/" class="md-nav__link">
         
   
   
@@ -5930,7 +5859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../AI/Basic/Basic_knowledge_4/" class="md-nav__link">
+      <a href="../Basic_knowledge_4/" class="md-nav__link">
         
   
   
@@ -5955,10 +5884,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../AI/Basic/Basic_knowledge_5/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识5
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -5974,6 +5928,347 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-给网络增加记忆能力" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 给网络增加记忆能力
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 给网络增加记忆能力">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-延时神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 延时神经网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-有外部输入的非线性自回归模型" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 有外部输入的非线性自回归模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-循环神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 循环神经网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-简单循环网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 简单循环网络
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 简单循环网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-循环神经网络的计算能力" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 循环神经网络的计算能力
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-应用到机器学习" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 应用到机器学习
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 应用到机器学习">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-序列到类别模式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 序列到类别模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-同步的序列到序列模式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 同步的序列到序列模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-异步的序列到序列模式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 异步的序列到序列模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-参数学习" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 参数学习
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 参数学习">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-随时间反向传播算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 随时间反向传播算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-实时循环学习算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 实时循环学习算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-长程依赖问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 长程依赖问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 长程依赖问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-改进方案" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 改进方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-基于门控的循环神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 基于门控的循环神经网络
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 基于门控的循环神经网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-长短期记忆网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 长短期记忆网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-lstm网络的各种变体" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 LSTM网络的各种变体
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-门控循环单元网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 门控循环单元网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-深层循环神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 深层循环神经网络
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7 深层循环神经网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-堆叠循环神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 堆叠循环神经网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-双向循环神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 双向循环神经网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-扩展到图结构" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 扩展到图结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8 扩展到图结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-递归神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 递归神经网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-图神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 图神经网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5986,7 +6281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../AI/Basic/Basic_knowledge_6/" class="md-nav__link">
+      <a href="../Basic_knowledge_6/" class="md-nav__link">
         
   
   
@@ -6044,7 +6339,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Tools/" class="md-nav__link ">
+            <a href="../../../Tools/" class="md-nav__link ">
               
   
   
@@ -6142,7 +6437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Tools/encoding/CyberChef/" class="md-nav__link">
+      <a href="../../../Tools/encoding/CyberChef/" class="md-nav__link">
         
   
   
@@ -6239,7 +6534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   
@@ -6292,24 +6587,325 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-rsa的历史" class="md-nav__link">
+  <a href="#1-给网络增加记忆能力" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. RSA的历史
+        1 给网络增加记忆能力
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 给网络增加记忆能力">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-延时神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 延时神经网络
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2-基本原理" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#12-有外部输入的非线性自回归模型" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 基本原理
+        1.2 有外部输入的非线性自回归模型
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-循环神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 循环神经网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-简单循环网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 简单循环网络
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 简单循环网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-循环神经网络的计算能力" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 循环神经网络的计算能力
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-应用到机器学习" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 应用到机器学习
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 应用到机器学习">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-序列到类别模式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 序列到类别模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-同步的序列到序列模式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 同步的序列到序列模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-异步的序列到序列模式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 异步的序列到序列模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-参数学习" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 参数学习
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 参数学习">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-随时间反向传播算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 随时间反向传播算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-实时循环学习算法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 实时循环学习算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-长程依赖问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 长程依赖问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 长程依赖问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-改进方案" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 改进方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-基于门控的循环神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 基于门控的循环神经网络
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 基于门控的循环神经网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-长短期记忆网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 长短期记忆网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-lstm网络的各种变体" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 LSTM网络的各种变体
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-门控循环单元网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 门控循环单元网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-深层循环神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 深层循环神经网络
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7 深层循环神经网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-堆叠循环神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 堆叠循环神经网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-双向循环神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 双向循环神经网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-扩展到图结构" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 扩展到图结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8 扩展到图结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-递归神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 递归神经网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-图神经网络" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 图神经网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6338,7 +6934,7 @@
   
   
     <li class="md-path__item">
-      <a href="../../../.." class="md-path__link">
+      <a href="../../.." class="md-path__link">
         
   <span class="md-ellipsis">
     首页
@@ -6356,88 +6952,10 @@
     
     
       <li class="md-path__item">
-        <a href="../../../" class="md-path__link">
+        <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Crypto
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-    
-    
-      
-  
-  
-    
-    
-      
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="./" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    现代密码
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-    
-  
-
-    
-  
-
-      
-        
-  
-  
-    
-    
-      
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="./" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    非对称加密
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-    
-  
-
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="./" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    RSA
+    AI
   </span>
 
         </a>
@@ -6456,7 +6974,7 @@
 
 
   
-    <a href="https://github.com/qsnctf/qsnctf.github.io/edit/docs/docs/Crypto/Modern_Cryptography/asymmetric/Introd_RSA.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/qsnctf/qsnctf.github.io/edit/docs/docs/AI/Basic/Basic_knowledge_5.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -6465,60 +6983,266 @@
     
       
     
-    <a href="https://github.com/qsnctf/qsnctf.github.io/raw/docs/docs/Crypto/Modern_Cryptography/asymmetric/Introd_RSA.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/qsnctf/qsnctf.github.io/raw/docs/docs/AI/Basic/Basic_knowledge_5.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-  <h1>RSA介绍</h1>
+  <h1>基础知识5</h1>
 
-<p>RSA 是一种基于数论的**非对称公钥密码算法**，可同时用于**加密**和**数字签名**，是现代密码学和互联网安全基础设施（如 TLS/SSL、HTTPS、PKI）的核心算法之一。其安全性建立在**大整数分解困难性**之上，即：将两个大素数相乘很容易，但反过来从其乘积还原出原始素数在计算上极其困难。</p>
-<p>“RSA”这一名称取自三位发明者姓氏的首字母：<strong>Rivest、Shamir、Adleman</strong>。</p>
-<h2 id="1-rsa的历史">1. RSA的历史<a class="headerlink" href="#1-rsa的历史" title="Permanent link">¶</a></h2>
-<p>1976 年，美国密码学家**惠特菲尔德·迪菲（Whitfield Diffie）**和**马丁·赫尔曼（Martin Hellman）**发表了开创性的论文，首次提出了**公钥密码（非对称密码）**的概念，打破了“通信双方必须事先共享秘密密钥”的传统范式。</p>
-<p>1977 年，麻省理工学院（MIT）的**罗纳德·李维斯特（Ron Rivest）**、**阿迪·萨莫尔（Adi Shamir）**和**伦纳德·阿德曼（Leonard Adleman）**共同提出了 RSA 算法。</p>
-<p>在此之前的一年多时间里，三人一直在寻找一个**易于正向计算但难以逆向求解的单向函数**，以实现真正的公钥加密与数字签名。他们尝试了多种数学构造，包括：</p>
+<p>循环神经网络（Recurrent Neural Network, RNN）是一类专门用于处理序列数据的神经网络架构。与前馈神经网络不同，RNN在其隐藏层中引入了自反馈连接（recurrent connection），使网络具备了对历史信息的记忆能力。这一特性使得RNN天然适用于自然语言处理、语音识别、时间序列预测、音乐生成等涉及时序依赖关系的任务。从动力系统（dynamical system）的视角来看，RNN可以被视为一类离散时间非线性动力系统，其隐藏状态的演化轨迹编码了输入序列的历史信息。</p>
+<h2 id="1-给网络增加记忆能力">1 给网络增加记忆能力<a class="headerlink" href="#1-给网络增加记忆能力" title="Permanent link">¶</a></h2>
+<p>前馈神经网络的一个根本局限在于：它假设输入样本之间彼此独立，无法显式建模数据中的时序依赖关系。然而，现实世界中的大量数据本质上是序列化的——语言中词语的含义依赖于上下文，股票价格受历史走势影响，语音信号的当前帧与前后帧紧密关联。为使网络具备处理此类数据的能力，需要引入记忆机制。</p>
+<h3 id="11-延时神经网络">1.1 延时神经网络<a class="headerlink" href="#11-延时神经网络" title="Permanent link">¶</a></h3>
+<p>延时神经网络（Time-Delay Neural Network, TDNN）由Waibel等人（1989）提出，是最早将时间结构引入前馈网络的尝试之一。其核心思想是在输入层或隐藏层中引入延时单元（delay units），将当前时刻及过去若干时刻的输入信号同时作为网络的输入：</p>
+<div class="arithmatex">\[
+\mathbf{x}_t^{(\text{aug})} = [\mathbf{x}_t, \mathbf{x}_{t-1}, \mathbf{x}_{t-2}, \ldots, \mathbf{x}_{t-K}]
+\]</div>
+<p>其中 <span class="arithmatex">\(K\)</span> 为延时窗口大小。网络在此增广输入上执行标准的前馈计算。TDNN本质上是在时间维度上的一维卷积操作——同一组权重在不同时间位置上共享，使得网络能够检测与时间位置无关的局部时序模式。</p>
+<p>TDNN的主要局限在于其记忆容量受限于固定的延时窗口 <span class="arithmatex">\(K\)</span>。对于需要捕捉超出窗口范围的长程依赖关系，TDNN无能为力。此外，随着 <span class="arithmatex">\(K\)</span> 的增大，输入维度线性增长，参数量和计算开销也随之增加。</p>
+<h3 id="12-有外部输入的非线性自回归模型">1.2 有外部输入的非线性自回归模型<a class="headerlink" href="#12-有外部输入的非线性自回归模型" title="Permanent link">¶</a></h3>
+<p>有外部输入的非线性自回归模型（Nonlinear Autoregressive with Exogenous Inputs, NARX）是经典自回归模型的非线性推广：</p>
+<div class="arithmatex">\[
+y_t = f\left(y_{t-1}, y_{t-2}, \ldots, y_{t-p}, \; \mathbf{x}_t, \mathbf{x}_{t-1}, \ldots, \mathbf{x}_{t-q}\right)
+\]</div>
+<p>其中 <span class="arithmatex">\(f(\cdot)\)</span> 为非线性映射函数（可用神经网络参数化），<span class="arithmatex">\(p\)</span> 和 <span class="arithmatex">\(q\)</span> 分别为输出反馈和外部输入的延迟阶数。NARX模型将过去 <span class="arithmatex">\(p\)</span> 个时刻的输出值反馈作为当前输入的一部分，从而构建了一种显式的自回归记忆机制。</p>
+<p>NARX网络可以展开为一个深层前馈网络进行训练。Lin等人（1996）的理论分析表明，NARX网络在学习长程依赖方面优于标准RNN，因为输出反馈通路提供了更短的梯度传播路径。然而，NARX同样受限于固定的延迟阶数，且输出反馈可能导致训练不稳定。</p>
+<h3 id="13-循环神经网络">1.3 循环神经网络<a class="headerlink" href="#13-循环神经网络" title="Permanent link">¶</a></h3>
+<p>循环神经网络通过在隐藏层引入自反馈连接，提供了一种更优雅和通用的记忆机制。在每个时间步 <span class="arithmatex">\(t\)</span>，RNN根据当前输入 <span class="arithmatex">\(\mathbf{x}_t\)</span> 和前一时刻的隐藏状态 <span class="arithmatex">\(\mathbf{h}_{t-1}\)</span> 来更新隐藏状态：</p>
+<div class="arithmatex">\[
+\mathbf{h}_t = f(\mathbf{W}_h \mathbf{h}_{t-1} + \mathbf{W}_x \mathbf{x}_t + \mathbf{b})
+\]</div>
+<p>其中 <span class="arithmatex">\(\mathbf{W}_h \in \mathbb{R}^{d_h \times d_h}\)</span> 为隐藏状态到隐藏状态的循环权重矩阵，<span class="arithmatex">\(\mathbf{W}_x \in \mathbb{R}^{d_h \times d_x}\)</span> 为输入到隐藏状态的权重矩阵，<span class="arithmatex">\(\mathbf{b}\)</span> 为偏置向量，<span class="arithmatex">\(f(\cdot)\)</span> 为激活函数（通常为Tanh或ReLU）。</p>
+<p>与TDNN和NARX的固定窗口不同，RNN的隐藏状态 <span class="arithmatex">\(\mathbf{h}_t\)</span> 理论上可以编码从初始时刻到当前时刻的全部历史信息，因此具有不定长的动态记忆能力。这种通过状态递推实现的隐式记忆机制，是RNN相比其他序列建模方法的核心优势。</p>
+<h2 id="2-简单循环网络">2 简单循环网络<a class="headerlink" href="#2-简单循环网络" title="Permanent link">¶</a></h2>
+<p>简单循环网络（Simple Recurrent Network, SRN），也称Elman网络（Elman, 1990），是最基本的RNN架构。其完整的前向计算过程为：</p>
+<div class="arithmatex">\[
+\mathbf{z}_t = \mathbf{W}_h \mathbf{h}_{t-1} + \mathbf{W}_x \mathbf{x}_t + \mathbf{b}_h
+\]</div>
+<div class="arithmatex">\[
+\mathbf{h}_t = f(\mathbf{z}_t)
+\]</div>
+<div class="arithmatex">\[
+\hat{\mathbf{y}}_t = g(\mathbf{W}_o \mathbf{h}_t + \mathbf{b}_o)
+\]</div>
+<p>其中 <span class="arithmatex">\(g(\cdot)\)</span> 为输出层激活函数（分类任务通常为Softmax，回归任务为恒等映射）。网络在所有时间步共享参数 <span class="arithmatex">\(\{\mathbf{W}_h, \mathbf{W}_x, \mathbf{W}_o, \mathbf{b}_h, \mathbf{b}_o\}\)</span>，这种权值共享不仅大幅减少了参数量，还使网络能够泛化到训练中未见过的序列长度。</p>
+<h3 id="21-循环神经网络的计算能力">2.1 循环神经网络的计算能力<a class="headerlink" href="#21-循环神经网络的计算能力" title="Permanent link">¶</a></h3>
+<p>循环神经网络的计算能力与其动力学性质密切相关，这方面的理论研究揭示了RNN强大的形式化计算能力。</p>
+<p><strong>图灵完备性</strong>：Siegelmann和Sontag（1995）证明了一个关键理论结果——具有Sigmoid激活函数和有理数权重的有限大小RNN是图灵完备的（Turing complete），即它可以模拟任意图灵机的计算。这意味着RNN在理论上可以执行任何可计算的算法，其计算能力不亚于通用计算机。</p>
+<p>这一结论的直观理解是：RNN的隐藏状态可以充当图灵机的"纸带"（存储信息），循环连接实现了"读写头"的功能（根据当前状态和输入更新存储内容），而网络的非线性变换则对应图灵机的"状态转移函数"。</p>
+<p><strong>与有限状态自动机的关系</strong>：对于离散输入和离散隐藏状态的RNN，其行为等价于有限状态自动机（Finite State Automaton, FSA）。特别是，具有硬阈值激活函数的RNN可以精确实现任意有限状态自动机。Giles等人（1992）的实验表明，RNN可以从正负样本中学习正则语言（regular language）对应的有限状态自动机。</p>
+<p><strong>实际计算能力的局限</strong>：尽管理论上具有强大的计算能力，实际中RNN的计算能力受到有限精度浮点运算、有限训练时间以及梯度消失/爆炸等优化困难的严重制约。特别是，标准RNN在学习长程依赖时的困难（详见6.5节）意味着其实际可利用的记忆容量远小于理论上限。</p>
+<h2 id="3-应用到机器学习">3 应用到机器学习<a class="headerlink" href="#3-应用到机器学习" title="Permanent link">¶</a></h2>
+<p>RNN的灵活性使其能够适应多种不同的输入-输出模式。根据输入和输出序列的长度关系，可以将RNN的典型应用模式分为以下几类。</p>
+<h3 id="31-序列到类别模式">3.1 序列到类别模式<a class="headerlink" href="#31-序列到类别模式" title="Permanent link">¶</a></h3>
+<p>序列到类别（Sequence-to-Class）模式处理输入为变长序列、输出为单一类别标签的任务，如文本分类、情感分析和语音指令识别。</p>
+<p>网络逐时间步处理输入序列 <span class="arithmatex">\(\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_T\)</span>，生成隐藏状态序列 <span class="arithmatex">\(\mathbf{h}_1, \mathbf{h}_2, \ldots, \mathbf{h}_T\)</span>，然后将序列信息聚合为固定长度的向量进行分类。常见的聚合策略包括：</p>
+<p><strong>末状态法</strong>：直接使用最后一个时间步的隐藏状态 <span class="arithmatex">\(\mathbf{h}_T\)</span> 作为整个序列的表示：</p>
+<div class="arithmatex">\[
+\hat{y} = g(\mathbf{W}_o \mathbf{h}_T + \mathbf{b}_o)
+\]</div>
+<p>这种方法简单直接，但可能导致序列前端信息的丢失，尤其是当序列较长时。</p>
+<p><strong>均值汇聚法</strong>：对所有时间步的隐藏状态取平均：</p>
+<div class="arithmatex">\[
+\bar{\mathbf{h}} = \frac{1}{T} \sum_{t=1}^{T} \mathbf{h}_t, \quad \hat{y} = g(\mathbf{W}_o \bar{\mathbf{h}} + \mathbf{b}_o)
+\]</div>
+<p>均值汇聚赋予每个时间步相同的权重，可能不是最优选择。更先进的方法是引入注意力机制（Attention Mechanism），自适应地为不同时间步分配不同权重（详见后续章节）。</p>
+<h3 id="32-同步的序列到序列模式">3.2 同步的序列到序列模式<a class="headerlink" href="#32-同步的序列到序列模式" title="Permanent link">¶</a></h3>
+<p>同步的序列到序列（Synchronous Sequence-to-Sequence）模式要求输入和输出序列具有相同的长度，且在每个时间步都产生一个输出。典型应用包括词性标注（POS tagging）、命名实体识别（NER）和逐帧的视频标注。</p>
+<p>在此模式下，网络在每个时间步 <span class="arithmatex">\(t\)</span> 同时产生输出：</p>
+<div class="arithmatex">\[
+\hat{\mathbf{y}}_t = g(\mathbf{W}_o \mathbf{h}_t + \mathbf{b}_o), \quad t = 1, 2, \ldots, T
+\]</div>
+<p>训练时，总损失为所有时间步损失之和（或平均）：</p>
+<div class="arithmatex">\[
+\mathcal{L} = \sum_{t=1}^{T} \mathcal{L}_t(\hat{\mathbf{y}}_t, \mathbf{y}_t)
+\]</div>
+<p>条件随机场（CRF）可以叠加在RNN输出之上以建模标签之间的转移依赖关系（如BiLSTM-CRF模型），这在序列标注任务中往往能够带来显著的性能提升。</p>
+<h3 id="33-异步的序列到序列模式">3.3 异步的序列到序列模式<a class="headerlink" href="#33-异步的序列到序列模式" title="Permanent link">¶</a></h3>
+<p>异步的序列到序列（Asynchronous Sequence-to-Sequence）模式处理输入和输出长度不同的任务，如机器翻译、文本摘要和对话生成。这一模式通常采用编码器-解码器（Encoder-Decoder）框架（Cho et al., 2014; Sutskever et al., 2014）：</p>
+<p><strong>编码器</strong>（Encoder）逐步读入输入序列 <span class="arithmatex">\(\mathbf{x}_1, \ldots, \mathbf{x}_{T_x}\)</span>，将整个序列压缩为一个固定维度的上下文向量 <span class="arithmatex">\(\mathbf{c}\)</span>（通常取编码器最后一个隐藏状态 <span class="arithmatex">\(\mathbf{h}_{T_x}^{\text{enc}}\)</span>）：</p>
+<div class="arithmatex">\[
+\mathbf{h}_t^{\text{enc}} = f(\mathbf{W}_h^{\text{enc}} \mathbf{h}_{t-1}^{\text{enc}} + \mathbf{W}_x^{\text{enc}} \mathbf{x}_t + \mathbf{b}^{\text{enc}})
+\]</div>
+<div class="arithmatex">\[
+\mathbf{c} = \mathbf{h}_{T_x}^{\text{enc}}
+\]</div>
+<p><strong>解码器</strong>（Decoder）以上下文向量 <span class="arithmatex">\(\mathbf{c}\)</span> 为初始条件，自回归地生成输出序列 <span class="arithmatex">\(\hat{\mathbf{y}}_1, \ldots, \hat{\mathbf{y}}_{T_y}\)</span>：</p>
+<div class="arithmatex">\[
+\mathbf{h}_t^{\text{dec}} = f(\mathbf{W}_h^{\text{dec}} \mathbf{h}_{t-1}^{\text{dec}} + \mathbf{W}_y^{\text{dec}} \hat{\mathbf{y}}_{t-1} + \mathbf{b}^{\text{dec}})
+\]</div>
+<div class="arithmatex">\[
+\hat{\mathbf{y}}_t = g(\mathbf{W}_o \mathbf{h}_t^{\text{dec}} + \mathbf{b}_o)
+\]</div>
+<p>其中 <span class="arithmatex">\(\mathbf{h}_0^{\text{dec}} = \mathbf{c}\)</span>。训练时使用教师强制（Teacher Forcing），即将真实标签 <span class="arithmatex">\(\mathbf{y}_{t-1}\)</span> 而非模型预测 <span class="arithmatex">\(\hat{\mathbf{y}}_{t-1}\)</span> 作为解码器的输入，以加速收敛和稳定训练。推理时则使用自回归解码——将模型自身的预测作为下一步输入。</p>
+<p>编码器-解码器框架的一个根本瓶颈在于信息瓶颈——无论输入序列多长，所有信息都必须被压缩到固定维度的上下文向量 <span class="arithmatex">\(\mathbf{c}\)</span> 中。注意力机制（Bahdanau et al., 2015）通过允许解码器在每个生成步动态地关注编码器不同位置的信息来解决这一问题。</p>
+<h2 id="4-参数学习">4 参数学习<a class="headerlink" href="#4-参数学习" title="Permanent link">¶</a></h2>
+<p>RNN的参数学习比前馈网络更为复杂，因为参数在时间步之间共享，梯度需要沿时间维度反向传播。</p>
+<h3 id="41-随时间反向传播算法">4.1 随时间反向传播算法<a class="headerlink" href="#41-随时间反向传播算法" title="Permanent link">¶</a></h3>
+<p>随时间反向传播算法（Backpropagation Through Time, BPTT）是训练RNN的标准方法。其基本思想是将RNN沿时间轴展开为一个等效的深层前馈网络，然后对展开后的网络应用标准的反向传播算法。</p>
+<p>对于展开 <span class="arithmatex">\(T\)</span> 个时间步的RNN，总损失为 <span class="arithmatex">\(\mathcal{L} = \sum_{t=1}^{T} \mathcal{L}_t\)</span>。关于循环权重 <span class="arithmatex">\(\mathbf{W}_h\)</span> 的梯度需要对所有时间步的贡献求和：</p>
+<div class="arithmatex">\[
+\frac{\partial \mathcal{L}}{\partial \mathbf{W}_h} = \sum_{t=1}^{T} \frac{\partial \mathcal{L}_t}{\partial \mathbf{W}_h}
+\]</div>
+<p>每个时间步的梯度贡献涉及从时刻 <span class="arithmatex">\(t\)</span> 回溯到初始时刻的链式求导：</p>
+<div class="arithmatex">\[
+\frac{\partial \mathcal{L}_t}{\partial \mathbf{W}_h} = \sum_{k=1}^{t} \frac{\partial \mathcal{L}_t}{\partial \mathbf{h}_t} \left(\prod_{j=k+1}^{t} \frac{\partial \mathbf{h}_j}{\partial \mathbf{h}_{j-1}}\right) \frac{\partial \mathbf{h}_k}{\partial \mathbf{W}_h}
+\]</div>
+<p>其中 <span class="arithmatex">\(\frac{\partial \mathbf{h}_j}{\partial \mathbf{h}_{j-1}} = \text{diag}(f'(\mathbf{z}_j)) \cdot \mathbf{W}_h\)</span> 为雅可比矩阵。这一连乘结构是导致梯度消失/爆炸的根本原因（详见6.5节）。</p>
+<p><strong>截断BPTT</strong>（Truncated BPTT）是BPTT的实用近似：将长序列分割为固定长度 <span class="arithmatex">\(\tau\)</span> 的片段，每个片段独立执行反向传播，仅保留隐藏状态的前向传递。这种方法牺牲了对超出 <span class="arithmatex">\(\tau\)</span> 步的长程依赖的建模能力，但显著降低了内存消耗和计算复杂度，使得RNN能够处理极长序列。</p>
+<h3 id="42-实时循环学习算法">4.2 实时循环学习算法<a class="headerlink" href="#42-实时循环学习算法" title="Permanent link">¶</a></h3>
+<p>实时循环学习算法（Real-Time Recurrent Learning, RTRL）（Williams &amp; Zipser, 1989）是BPTT的一种在线替代方案。与BPTT的反向时间传播不同，RTRL沿前向方向实时地计算梯度。</p>
+<p>RTRL维护一个"灵敏度矩阵"（sensitivity matrix）<span class="arithmatex">\(\frac{\partial \mathbf{h}_t}{\partial \boldsymbol{\theta}}\)</span>，在每个时间步递推更新：</p>
+<div class="arithmatex">\[
+\frac{\partial \mathbf{h}_t}{\partial \boldsymbol{\theta}} = f'(\mathbf{z}_t) \left(\mathbf{W}_h \frac{\partial \mathbf{h}_{t-1}}{\partial \boldsymbol{\theta}} + \frac{\partial \mathbf{z}_t}{\partial \boldsymbol{\theta}}\right)
+\]</div>
+<p>RTRL的优势在于：无需存储完整的前向计算历史，可在在线（逐样本）模式下即时更新参数，适用于无法批量处理的实时应用场景。</p>
+<p>然而，RTRL的计算复杂度为 <span class="arithmatex">\(O(d_h^4)\)</span>（其中 <span class="arithmatex">\(d_h\)</span> 为隐藏层维度），远高于BPTT的 <span class="arithmatex">\(O(d_h^2 \cdot T)\)</span>。对于隐藏层维度较大的网络，这一开销是难以接受的。因此，在实践中BPTT仍是主流选择，而RTRL主要具有理论意义或用于极小规模的网络。近年来，一些工作尝试通过低秩近似和随机投影来降低RTRL的计算复杂度（Tallec &amp; Ollivier, 2018），但尚未成为实用的训练方法。</p>
+<h2 id="5-长程依赖问题">5 长程依赖问题<a class="headerlink" href="#5-长程依赖问题" title="Permanent link">¶</a></h2>
+<p>长程依赖问题（Long-Range Dependency Problem）是标准RNN面临的核心挑战。当序列中相关信息之间的间隔（时间跨度）较大时，RNN难以有效地传递和利用这些远距离的依赖关系。</p>
+<p>从BPTT的梯度公式可以看出，时间步 <span class="arithmatex">\(t\)</span> 的损失对 <span class="arithmatex">\(k\)</span> 步之前状态的梯度依赖于雅可比矩阵的连乘：</p>
+<div class="arithmatex">\[
+\prod_{j=k+1}^{t} \frac{\partial \mathbf{h}_j}{\partial \mathbf{h}_{j-1}} = \prod_{j=k+1}^{t} \text{diag}(f'(\mathbf{z}_j)) \cdot \mathbf{W}_h
+\]</div>
+<p>设 <span class="arithmatex">\(\mathbf{W}_h\)</span> 的特征值分解为 <span class="arithmatex">\(\mathbf{W}_h = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^{-1}\)</span>，则上述连乘的行为主要由 <span class="arithmatex">\(\mathbf{\Lambda}\)</span> 的幂次决定：</p>
 <ul>
-<li>基于背包问题的方案</li>
-<li>基于置换多项式的方法</li>
-<li>其他组合数学和数论构造</li>
+<li>当 <span class="arithmatex">\(\|\mathbf{W}_h\|\)</span> 的谱半径 <span class="arithmatex">\(\rho &lt; 1\)</span> 时，<span class="arithmatex">\(\left\|\prod_{j} \frac{\partial \mathbf{h}_j}{\partial \mathbf{h}_{j-1}}\right\| \to 0\)</span>（指数衰减），导致**梯度消失**——远距离的梯度信号无法有效传递到浅层，网络丧失学习长程依赖的能力。</li>
+<li>当谱半径 <span class="arithmatex">\(\rho &gt; 1\)</span> 时，梯度将指数增长，导致**梯度爆炸**——参数更新变得极不稳定，训练发散。</li>
 </ul>
-<p>这些尝试均存在安全缺陷或可逆性问题，一度让他们怀疑目标是否可能实现。</p>
-<p>据三位发明者回忆，关键突破出现在 1977 年逾越节期间。里维斯特在失眠时重新思考问题，最终意识到**大整数分解**可作为单向陷门函数的基础，并在清晨完成了论文的大部分数学框架。随后，他们正式提出了现在广为人知的 <strong>RSA 算法</strong>。</p>
-<p>RSA 不仅支持加密，还天然支持**数字签名**，弥补了迪菲–赫尔曼体系中“缺乏可实现签名机制”的空白。</p>
-<p>值得注意的是，英国政府通信总部（GCHQ）的数学家**克利福德·科克斯（Clifford Cocks）<strong>早在 **1973 年**就在内部文件中独立提出了一种**与 RSA 等价的系统</strong>，同样基于大素数乘积与模幂运算。</p>
-<p>然而，由于：</p>
-<ul>
-<li>当时计算机性能有限</li>
-<li>实际部署成本极高</li>
-<li>工作属于高度机密</li>
-</ul>
-<p>该方案主要被视为理论性成果，从未在公开系统中使用。科克斯的工作直到 **1997 年**才被解密并公之于众，此后才被历史正式承认为“RSA 的先行发现”。</p>
-<p>1997 年，研究人员提出了 <strong>Kid-RSA（KRSA）</strong>，这是一种**简化且不安全的教学版 RSA**，用于帮助学生理解：</p>
-<ul>
-<li>公钥与私钥的关系</li>
-<li>模幂运算</li>
-<li>欧拉函数</li>
-<li>大整数分解与安全性的关联</li>
-</ul>
-<p>Kid-RSA 在教育中的地位类似于密码学中的 <strong>Simplified DES（S-DES）</strong>：
- 它**不适用于真实安全通信**，但非常适合课堂演示与实验教学。</p>
-<p>RSA 的提出具有里程碑意义：</p>
-<ul>
-<li>奠定了现代互联网安全基础</li>
-<li>支撑了 HTTPS、电子签名、数字证书和 PKI</li>
-<li>推动了计算数论、复杂性理论和量子安全研究</li>
-<li>促进了密码学从“军事机密”走向公开学术领域</li>
-</ul>
-<p>尽管量子计算的发展可能在未来威胁 RSA，但目前它仍是全球最重要的公钥密码算法之一。</p>
-<h2 id="2-基本原理">2. 基本原理<a class="headerlink" href="#2-基本原理" title="Permanent link">¶</a></h2>
-<p>RSA的安全性建立在**大整数分解的困难性**之上。</p>
-<ul>
-<li>将两个大素数相乘在计算上是非常容易的。</li>
-<li>但要将它们的乘积（极大的数）重新分解为原始的素数，在现有的计算能力下（对于足够长的密钥，如2048位）几乎是不可能的。</li>
-</ul>
+<p>Bengio等人（1994）对这一问题给出了严格的理论分析，证明了标准RNN中长程依赖的学习难度随时间间隔呈指数增长。</p>
+<h3 id="51-改进方案">5.1 改进方案<a class="headerlink" href="#51-改进方案" title="Permanent link">¶</a></h3>
+<p>针对长程依赖问题，研究者从不同角度提出了多种改进方案：</p>
+<p><strong>梯度裁剪（Gradient Clipping）</strong>（Pascanu et al., 2013）：当梯度范数超过预设阈值 <span class="arithmatex">\(\theta\)</span> 时，对梯度进行缩放：</p>
+<div class="arithmatex">\[
+\mathbf{g} \leftarrow \frac{\theta}{\|\mathbf{g}\|} \mathbf{g}, \quad \text{if } \|\mathbf{g}\| &gt; \theta
+\]</div>
+<p>梯度裁剪有效防止了梯度爆炸，但无法解决梯度消失问题。该技术已成为训练RNN的标准实践。</p>
+<p><strong>权重正则化</strong>：通过约束 <span class="arithmatex">\(\mathbf{W}_h\)</span> 的谱范数（spectral norm）使其接近1，可以缓解梯度消失和爆炸。正交初始化（Saxe et al., 2014）将 <span class="arithmatex">\(\mathbf{W}_h\)</span> 初始化为正交矩阵（所有特征值的模为1），使得梯度在初始阶段既不衰减也不爆炸。正交RNN（Arjovsky et al., 2016）进一步约束 <span class="arithmatex">\(\mathbf{W}_h\)</span> 在整个训练过程中保持酉矩阵。</p>
+<p><strong>改进激活函数</strong>：使用ReLU替代Tanh可以在正区间避免梯度饱和（<span class="arithmatex">\(f'(z) = 1\)</span>），但可能导致隐藏状态数值不稳定。Le等人（2015）提出的IRNN（Identity RNN）结合ReLU激活与单位矩阵初始化，在一些长序列任务上取得了不错的效果。</p>
+<p><strong>门控机制</strong>：这是最成功的改进方向，通过引入可学习的门控单元来动态控制信息的流入、保留和遗忘，从根本上改变了梯度的传播路径。LSTM和GRU（详见6.6节）是门控机制的两个经典实例。</p>
+<h2 id="6-基于门控的循环神经网络">6 基于门控的循环神经网络<a class="headerlink" href="#6-基于门控的循环神经网络" title="Permanent link">¶</a></h2>
+<p>门控机制（Gating Mechanism）是解决RNN长程依赖问题最有效的方法。其核心思想是：引入由Sigmoid函数控制的门控信号（取值在 <span class="arithmatex">\((0, 1)\)</span> 之间），通过逐元素乘法动态地调节信息流。当门值接近1时，信息畅通传递；当门值接近0时，信息被阻断。</p>
+<h3 id="61-长短期记忆网络">6.1 长短期记忆网络<a class="headerlink" href="#61-长短期记忆网络" title="Permanent link">¶</a></h3>
+<p>长短期记忆网络（Long Short-Term Memory, LSTM）由Hochreiter和Schmidhuber（1997）提出，是深度学习历史上最重要的架构创新之一。LSTM在标准RNN的基础上引入了记忆单元（memory cell）<span class="arithmatex">\(\mathbf{c}_t\)</span> 和三个门控机制——遗忘门、输入门和输出门——来精细地控制信息的长期存储与访问。</p>
+<p>**遗忘门（Forget Gate）**决定记忆单元中哪些信息应被丢弃：</p>
+<div class="arithmatex">\[
+\mathbf{f}_t = \sigma(\mathbf{W}_f [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_f)
+\]</div>
+<p>**输入门（Input Gate）**决定哪些新信息应被写入记忆单元：</p>
+<div class="arithmatex">\[
+\mathbf{i}_t = \sigma(\mathbf{W}_i [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_i)
+\]</div>
+<p><strong>候选记忆（Candidate Memory）</strong>：</p>
+<div class="arithmatex">\[
+\tilde{\mathbf{c}}_t = \tanh(\mathbf{W}_c [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_c)
+\]</div>
+<p><strong>记忆单元更新</strong>：</p>
+<div class="arithmatex">\[
+\mathbf{c}_t = \mathbf{f}_t \odot \mathbf{c}_{t-1} + \mathbf{i}_t \odot \tilde{\mathbf{c}}_t
+\]</div>
+<p>**输出门（Output Gate）**决定记忆单元中哪些信息应被输出为隐藏状态：</p>
+<div class="arithmatex">\[
+\mathbf{o}_t = \sigma(\mathbf{W}_o [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_o)
+\]</div>
+<div class="arithmatex">\[
+\mathbf{h}_t = \mathbf{o}_t \odot \tanh(\mathbf{c}_t)
+\]</div>
+<p>其中 <span class="arithmatex">\(\sigma(\cdot)\)</span> 为Logistic函数，<span class="arithmatex">\(\odot\)</span> 为逐元素乘积，<span class="arithmatex">\([\cdot, \cdot]\)</span> 表示向量拼接。</p>
+<p><strong>LSTM解决长程依赖的关键机制</strong>：记忆单元 <span class="arithmatex">\(\mathbf{c}_t\)</span> 的更新规则 <span class="arithmatex">\(\mathbf{c}_t = \mathbf{f}_t \odot \mathbf{c}_{t-1} + \mathbf{i}_t \odot \tilde{\mathbf{c}}_t\)</span> 是一个线性自更新方程。当遗忘门 <span class="arithmatex">\(\mathbf{f}_t \approx 1\)</span> 且输入门 <span class="arithmatex">\(\mathbf{i}_t \approx 0\)</span> 时，<span class="arithmatex">\(\mathbf{c}_t \approx \mathbf{c}_{t-1}\)</span>，信息可以不经任何非线性变换地在时间维度上长距离传递。相应地，梯度沿记忆单元反向传播时可以近似保持不衰减：</p>
+<div class="arithmatex">\[
+\frac{\partial \mathbf{c}_t}{\partial \mathbf{c}_{t-1}} = \mathbf{f}_t
+\]</div>
+<p>当遗忘门接近1时，梯度乘子接近1，有效地缓解了梯度消失问题。这与ResNet中的残差连接具有异曲同工之妙——都是通过线性直通路径来维持梯度流。</p>
+<h3 id="62-lstm网络的各种变体">6.2 LSTM网络的各种变体<a class="headerlink" href="#62-lstm网络的各种变体" title="Permanent link">¶</a></h3>
+<p>自LSTM提出以来，研究者探索了大量变体以改进其性能或降低复杂度。</p>
+<p><strong>窥视孔连接（Peephole Connections）</strong>（Gers &amp; Schmidhuber, 2000）：允许门控信号直接访问记忆单元状态 <span class="arithmatex">\(\mathbf{c}_{t-1}\)</span>：</p>
+<div class="arithmatex">\[
+\mathbf{f}_t = \sigma(\mathbf{W}_f [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{w}_{cf} \odot \mathbf{c}_{t-1} + \mathbf{b}_f)
+\]</div>
+<p>其中 <span class="arithmatex">\(\mathbf{w}_{cf}\)</span> 为窥视孔权重向量。窥视孔连接使得门控决策能够直接基于记忆单元中存储的信息，在需要精确计时的任务中可能有所帮助。</p>
+<p><strong>耦合遗忘门和输入门</strong>：将遗忘门和输入门耦合为互补关系 <span class="arithmatex">\(\mathbf{i}_t = 1 - \mathbf{f}_t\)</span>，减少一个门的参数，同时保证记忆单元的新旧信息之间形成直接的权衡关系。</p>
+<p><strong>无遗忘门LSTM</strong>：Hochreiter和Schmidhuber（1997）的原始LSTM不包含遗忘门（等价于 <span class="arithmatex">\(\mathbf{f}_t = 1\)</span>），记忆单元只增不减。Gers等人（2000）后来引入遗忘门以允许网络主动清除过时信息，极大地增强了LSTM的实用性。</p>
+<p>Greff等人（2017）对LSTM的八种常见变体进行了大规模的系统性比较实验，得出结论：标准LSTM在大多数任务上表现稳健，各种变体之间的性能差异不显著；遗忘门和输出门是最关键的组件；窥视孔连接和耦合门的改进效果有限。</p>
+<h3 id="63-门控循环单元网络">6.3 门控循环单元网络<a class="headerlink" href="#63-门控循环单元网络" title="Permanent link">¶</a></h3>
+<p>门控循环单元（Gated Recurrent Unit, GRU）由Cho等人（2014）提出，是LSTM的一种简化变体。GRU将遗忘门和输入门合并为单一的更新门（update gate），同时取消了独立的记忆单元，直接使用隐藏状态存储信息。</p>
+<p>**重置门（Reset Gate）**控制前一时刻隐藏状态对候选激活值的影响程度：</p>
+<div class="arithmatex">\[
+\mathbf{r}_t = \sigma(\mathbf{W}_r [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_r)
+\]</div>
+<p>**更新门（Update Gate）**控制前一时刻信息的保留比例：</p>
+<div class="arithmatex">\[
+\mathbf{z}_t = \sigma(\mathbf{W}_z [\mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_z)
+\]</div>
+<p><strong>候选隐藏状态</strong>：</p>
+<div class="arithmatex">\[
+\tilde{\mathbf{h}}_t = \tanh(\mathbf{W}_h [\mathbf{r}_t \odot \mathbf{h}_{t-1}, \mathbf{x}_t] + \mathbf{b}_h)
+\]</div>
+<p><strong>隐藏状态更新</strong>：
+$$
+\mathbf{h}<em t-1="t-1">t = \mathbf{z}_t \odot \mathbf{h}</em>_t
+$$} + (1 - \mathbf{z}_t) \odot \tilde{\mathbf{h}</p>
+<p>GRU的更新门 <span class="arithmatex">\(\mathbf{z}_t\)</span> 同时扮演了LSTM中遗忘门和输入门的角色，且两者之间形成互补约束（<span class="arithmatex">\(\mathbf{z}_t\)</span> 和 <span class="arithmatex">\(1 - \mathbf{z}_t\)</span>），确保了新旧信息之间的直接权衡。</p>
+<p><strong>LSTM vs GRU</strong>：GRU的参数量约为LSTM的75%（2个门 vs 3个门，无独立记忆单元），在训练速度和计算效率上具有优势。Chung等人（2014）的实验表明，GRU在多数任务上的表现与LSTM相当，在某些小规模数据集上甚至更优（得益于更少的参数带来的正则化效果）。然而，对于需要精细控制信息读写的复杂任务（如长文本生成、程序合成），LSTM的额外容量可能提供优势。选择LSTM还是GRU更多是一个经验性问题，通常需要根据具体任务通过实验确定。</p>
+<h2 id="7-深层循环神经网络">7 深层循环神经网络<a class="headerlink" href="#7-深层循环神经网络" title="Permanent link">¶</a></h2>
+<p>单层RNN的表达能力可能不足以建模复杂的序列变换。正如前馈网络通过增加深度来提升函数逼近能力一样，深层循环神经网络通过在多个维度上增加深度来增强序列建模能力。</p>
+<h3 id="71-堆叠循环神经网络">7.1 堆叠循环神经网络<a class="headerlink" href="#71-堆叠循环神经网络" title="Permanent link">¶</a></h3>
+<p>堆叠循环神经网络（Stacked RNN），也称多层RNN或深层RNN，将多个RNN层垂直堆叠，上一层的隐藏状态序列作为下一层的输入序列：</p>
+<div class="arithmatex">\[
+\mathbf{h}_t^{(l)} = f\left(\mathbf{W}_h^{(l)} \mathbf{h}_{t-1}^{(l)} + \mathbf{W}_x^{(l)} \mathbf{h}_t^{(l-1)} + \mathbf{b}^{(l)}\right)
+\]</div>
+<p>其中 <span class="arithmatex">\(\mathbf{h}_t^{(0)} = \mathbf{x}_t\)</span>，<span class="arithmatex">\(l = 1, 2, \ldots, L\)</span> 表示层索引。</p>
+<p>堆叠RNN的直觉是：不同层可以学习不同抽象层次的时序特征。浅层可能捕捉局部的词法或声学模式，而深层则编码更抽象的语义或长程依赖关系。Hermans和Schrauwen（2013）的研究表明，深层RNN在语音识别和语言建模任务上显著优于同等参数量的单层RNN。</p>
+<p>在实践中，堆叠LSTM通常使用2-4层。Google的神经机器翻译系统（Wu et al., 2016）采用了8层LSTM编码器和8层LSTM解码器。随着层数增加，残差连接和层归一化（Layer Normalization）变得至关重要，以确保梯度的有效传播和训练的稳定性。</p>
+<h3 id="72-双向循环神经网络">7.2 双向循环神经网络<a class="headerlink" href="#72-双向循环神经网络" title="Permanent link">¶</a></h3>
+<p>双向循环神经网络（Bidirectional RNN, BiRNN）（Schuster &amp; Paliwal, 1997）同时从两个方向处理序列——前向RNN从左到右、后向RNN从右到左——从而在每个时间步同时利用过去和未来的上下文信息：</p>
+<p><strong>前向隐藏状态</strong>：</p>
+<div class="arithmatex">\[
+\overrightarrow{\mathbf{h}}_t = f(\mathbf{W}_{\overrightarrow{h}} \overrightarrow{\mathbf{h}}_{t-1} + \mathbf{W}_{\overrightarrow{x}} \mathbf{x}_t + \mathbf{b}_{\overrightarrow{h}})
+\]</div>
+<p><strong>后向隐藏状态</strong>：</p>
+<div class="arithmatex">\[
+\overleftarrow{\mathbf{h}}_t = f(\mathbf{W}_{\overleftarrow{h}} \overleftarrow{\mathbf{h}}_{t+1} + \mathbf{W}_{\overleftarrow{x}} \mathbf{x}_t + \mathbf{b}_{\overleftarrow{h}})
+\]</div>
+<p><strong>组合表示</strong>：</p>
+<div class="arithmatex">\[
+\mathbf{h}_t = [\overrightarrow{\mathbf{h}}_t ; \overleftarrow{\mathbf{h}}_t]
+\]</div>
+<p>其中 <span class="arithmatex">\([;]\)</span> 表示拼接操作。前向和后向RNN各自拥有独立的参数集。</p>
+<p>BiRNN特别适用于可以获取完整输入序列的任务。在自然语言处理中，词义通常依赖于左右两侧的上下文（如"bank"的含义取决于其在句中的语境），BiRNN可以同时捕捉这两个方向的依赖关系。BiLSTM在命名实体识别、情感分析、机器阅读理解等任务中已成为标准组件。ELMo（Peters et al., 2018）通过大规模预训练的深层BiLSTM学习上下文相关的词向量，标志着预训练语言模型时代的开端。</p>
+<p>需要注意的是，BiRNN不适用于需要实时逐步生成的任务（如自回归语言模型、实时语音合成），因为后向方向需要访问未来的输入。</p>
+<h2 id="8-扩展到图结构">8 扩展到图结构<a class="headerlink" href="#8-扩展到图结构" title="Permanent link">¶</a></h2>
+<p>标准RNN处理的是线性链式序列结构。当数据具有更复杂的树状或图状拓扑时，需要将RNN的计算范式推广到更一般的结构上。</p>
+<h3 id="81-递归神经网络">8.1 递归神经网络<a class="headerlink" href="#81-递归神经网络" title="Permanent link">¶</a></h3>
+<p>递归神经网络（Recursive Neural Network, RecNN）将RNN从线性序列推广到树结构上（注意区分recursive与recurrent）。给定一棵树（如自然语言的句法分析树），RecNN按照自底向上的顺序递归地组合子节点的表示以得到父节点的表示：</p>
+<div class="arithmatex">\[
+\mathbf{h}_p = f\left(\mathbf{W} [\mathbf{h}_{c_1} ; \mathbf{h}_{c_2}] + \mathbf{b}\right)
+\]</div>
+<p>其中 <span class="arithmatex">\(\mathbf{h}_{c_1}\)</span> 和 <span class="arithmatex">\(\mathbf{h}_{c_2}\)</span> 分别为左右子节点的表示，<span class="arithmatex">\(\mathbf{h}_p\)</span> 为父节点的表示。叶节点的表示通常通过词嵌入获得。根节点的最终表示 <span class="arithmatex">\(\mathbf{h}_{\text{root}}\)</span> 编码了整棵树（如整个句子）的语义信息。</p>
+<p>Socher等人（2013）提出的递归神经张量网络（Recursive Neural Tensor Network, RNTN）进一步引入了张量交互项以捕捉更丰富的组合语义：</p>
+<div class="arithmatex">\[
+\mathbf{h}_p = f\left(\mathbf{h}_{c_1}^\top \mathbf{T}^{[1:d]} \mathbf{h}_{c_2} + \mathbf{W} [\mathbf{h}_{c_1} ; \mathbf{h}_{c_2}] + \mathbf{b}\right)
+\]</div>
+<p>其中 <span class="arithmatex">\(\mathbf{T}^{[1:d]}\)</span> 为三阶交互张量。</p>
+<p>Tree-LSTM（Tai et al., 2015）将LSTM的门控机制推广到树结构上，为每个子节点引入独立的遗忘门，使得网络可以选择性地保留或遗忘不同子树传递的信息。Tree-LSTM在语义相似度判定和情感分析任务中展示了优于线性LSTM的性能。</p>
+<p>递归神经网络的主要局限在于需要预先给定输入数据的树结构（如依赖于外部的句法分析器），且树结构的质量直接影响模型性能。此外，树结构的不规则性给批量并行计算带来了挑战。</p>
+<h3 id="82-图神经网络">8.2 图神经网络<a class="headerlink" href="#82-图神经网络" title="Permanent link">¶</a></h3>
+<p>当数据结构从树进一步推广到任意有向或无向图时，需要图神经网络（Graph Neural Network, GNN）来处理。在RNN的框架下，图上的信息传播可以通过迭代消息传递来实现。</p>
+<p>Gated Graph Neural Network（GG-NN）（Li et al., 2016）将GRU的门控机制扩展到图结构上。对于图中的每个节点 <span class="arithmatex">\(v\)</span>，其隐藏状态通过聚合邻居信息来更新：</p>
+<div class="arithmatex">\[
+\mathbf{m}_v^{(t)} = \sum_{u \in \mathcal{N}(v)} \mathbf{W}_e \mathbf{h}_u^{(t-1)}
+\]</div>
+<div class="arithmatex">\[
+\mathbf{h}_v^{(t)} = \text{GRU}\left(\mathbf{h}_v^{(t-1)}, \mathbf{m}_v^{(t)}\right)
+\]</div>
+<p>其中 <span class="arithmatex">\(\mathcal{N}(v)\)</span> 是节点 <span class="arithmatex">\(v\)</span> 的邻居集合，<span class="arithmatex">\(\mathbf{W}_e\)</span> 为边权重矩阵（可根据边类型区分）。经过 <span class="arithmatex">\(T\)</span> 步消息传递后，节点的隐藏状态融合了其 <span class="arithmatex">\(T\)</span>-跳邻域内的结构信息。</p>
+<p>图级别的任务（如图分类）需要将所有节点的表示聚合为图的全局表示。常用的读出（readout）操作包括：</p>
+<div class="arithmatex">\[
+\mathbf{h}_G = \text{Readout}\left(\{\mathbf{h}_v^{(T)} \mid v \in \mathcal{V}\}\right)
+\]</div>
+<p>其中 Readout 可以是求和、均值、注意力加权汇聚或层次化聚合。</p>
+<p>GNN在分子性质预测（Gilmer et al., 2017）、程序分析（Allamanis et al., 2018）、组合优化（Khalil et al., 2017）和知识图谱推理（Schlichtkrull et al., 2018）等领域展示了强大的能力。随着Transformer等注意力机制在序列建模中取代RNN，基于注意力的图网络（如Graph Attention Network, GAT）也逐渐成为主流，但基于RNN的图网络在需要捕捉多步推理路径的任务中仍具有独特优势。</p>
 
 
 
@@ -6623,14 +7347,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../../../javascripts/extra.js"></script>
+        <script src="../../../javascripts/extra.js"></script>
       
-        <script src="../../../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdnjs.loli.net/ajax/libs/pangu/3.3.0/pangu.min.js"></script>
       
