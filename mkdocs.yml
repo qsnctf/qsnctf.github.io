@@ -302,6 +302,8 @@ nav:
     - 介绍: Tools/index.md
     - 编码工具:
       - CyberChef: Tools/encoding/CyberChef.md
+  - MCP:
+    - 介绍: MCP/index.md
   - 关于: 
     - 介绍: about.md
 
