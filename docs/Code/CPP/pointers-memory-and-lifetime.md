@@ -95,6 +95,7 @@ int *bad_address(void) {
 
 ```c
 #include <stddef.h>
+#include <stdint.h>
 #include <stdlib.h>
 int *make_values(size_t count) {
     if (count > SIZE_MAX / sizeof(int)) {

@@ -79,8 +79,8 @@ extra:
 extra_javascript:
   - javascripts/extra.js
   - javascripts/mathjax.js
-  - https://cdnjs.loli.net/ajax/libs/pangu/3.3.0/pangu.min.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/pangu@3.3.0/dist/browser/pangu.min.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
 
 
 
@@ -157,7 +157,7 @@ nav:
       - 网络基础: basic/network/intro.md
       - OSI七层模型: basic/network/osi.md
   - 编程: 
-    - 介绍: Code/index.md
+    - 学习路线: Code/index.md
     - C/C++:
       - C 与 C++ 学习路线: Code/CPP/index.md
       - 环境与构建: Code/CPP/environment-and-build.md
@@ -185,7 +185,19 @@ nav:
       - 文件、路径、标准库与虚拟环境: Code/Python/files-paths-stdlib-and-venv.md
       - 面向对象编程: Code/Python/object-oriented-programming.md
       - Python 在 CTF 中的安全用法: Code/Python/python-for-ctf.md
-    - PHP: Code/PHP.md
+    - PHP:
+      - PHP 学习路线: Code/PHP/index.md
+      - 环境、语法与类型: Code/PHP/environment-syntax-and-types.md
+      - 数组、控制流与函数: Code/PHP/arrays-control-flow-and-functions.md
+      - 请求、Cookie、Session 与上传: Code/PHP/web-requests-cookies-sessions-and-upload.md
+      - 数据库与 PDO: Code/PHP/database-and-pdo.md
+      - PHP 安全与 CTF: Code/PHP/php-security-and-ctf.md
+    - HTML:
+      - HTML 学习路线: Code/HTML/index.md
+      - 文档元素与语义: Code/HTML/document-elements-and-semantics.md
+      - 链接、媒体、表格与表单: Code/HTML/links-media-tables-and-forms.md
+      - 浏览器、DOM 与开发者工具: Code/HTML/browser-dom-and-developer-tools.md
+      - HTML 转义、XSS 与 CTF: Code/HTML/html-escaping-xss-and-ctf.md
   - Misc: 
     - 介绍: Misc/index.md
     - 编码:
@@ -263,6 +275,8 @@ nav:
 
   - Pwn: 
     - 介绍: Pwn/index.md
+    - 工具:
+      - GDB 在 Pwn 中的使用: Tools/Pwn/GDB.md
   - AI:
     - 介绍: AI/index.md
     - 环境准备: AI/Environmental/Environmental_preparation.md
@@ -277,6 +291,8 @@ nav:
     - 介绍: Tools/index.md
     - 逆向工具:
       - Radare2（R2）使用与插件安装: Tools/Reverse/Radare2.md
+    - Pwn 工具:
+      - GDB 在 Pwn 中的使用: Tools/Pwn/GDB.md
     - 编码工具:
       - CyberChef: Tools/encoding/CyberChef.md
   - MCP:

@@ -54,6 +54,8 @@ File open_file(const char* path) {
 无论正常返回还是异常传播，`File` 都会关闭文件。析构函数通常不应抛出异常。
 锁也使用 RAII：
 ```cpp
+#include <mutex>
+
 std::mutex mutex;
 {
     std::lock_guard<std::mutex> lock{mutex};
@@ -64,6 +66,9 @@ std::mutex mutex;
 ## Rule of Zero 与 Rule of Five
 类若只含标准值类型，通常无需手写析构、复制和移动操作，这就是 Rule of Zero：
 ```cpp
+#include <string>
+#include <vector>
+
 struct User {
     std::string name;
     std::vector<int> scores;

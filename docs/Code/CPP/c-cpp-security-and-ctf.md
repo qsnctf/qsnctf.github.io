@@ -21,6 +21,8 @@
 下面的错误在 `length > capacity` 时写出边界：
 
 ```c
+#include <stddef.h>
+
 void unsafe_copy(char *destination, const char *source, size_t length) {
     for (size_t i = 0; i < length; ++i) {
         destination[i] = source[i];

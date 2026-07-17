@@ -110,14 +110,19 @@ magic = re.search(rb"MAGIC:[0-9A-F]{8}", binary_data)
 import hashlib
 from pathlib import Path
 def sha256_file(path: Path, limit: int = 100 * 1024 * 1024) -> str:
-    if path.stat().st_size > limit:
+    if not path.is_file() or path.stat().st_size > limit:
         raise ValueError("file exceeds analysis limit")
     digest = hashlib.sha256()
+    total = 0
     with path.open("rb") as stream:
         while chunk := stream.read(64 * 1024):
+            total += len(chunk)
+            if total > limit:
+                raise ValueError("file exceeds analysis limit")
             digest.update(chunk)
     return digest.hexdigest()
 ```
+循环内再次累计实际读取量，可以限制检查后增长的普通文件。处理攻击者可同时修改的目录时，还需使用受控副本、文件描述符和操作系统级隔离降低竞态风险。
 摘要用于标识和完整性比较，不会判断文件是否恶意。
 常见文件头可辅助识别，但扩展名和魔数都可能伪造。
 ## 受限 TLV 文件解析

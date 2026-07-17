@@ -8,6 +8,10 @@
 
 - [Radare2（R2）使用与插件安装](Reverse/Radare2.md)：使用命令行完成二进制信息查看、函数分析、交叉引用定位和基础调试，并通过 `r2pm` 管理插件。
 
+### Pwn 调试
+
+- [GDB 在 Pwn 中的使用](Pwn/GDB.md)：复现输入、检查寄存器和内存、处理 PIE/ASLR、定位崩溃偏移，并与 Pwntools、Pwndbg 或 GEF 配合调试。
+
 ### 编码与数据处理
 
 - [CyberChef](encoding/CyberChef.md)：通过可视化操作链处理编码、加密、压缩、提取和格式转换任务。

@@ -140,12 +140,15 @@ import subprocess
 result = subprocess.run(
     ["python", "--version"],
     check=True,
-    capture_output=True,
+    stdout=subprocess.PIPE,
+    stderr=subprocess.STDOUT,
     text=True,
     timeout=10,
 )
+if len(result.stdout) > 16_384:
+    raise ValueError("unexpectedly large command output")
 ```
-不要把不可信输入拼入 `shell=True` 命令。还应设置超时、限制输出并处理返回码。
+上述写法只适合输出量本来就很小的可信命令，因为 `PIPE` 仍会先把完整输出保存在内存。可能产生大量输出的程序应重定向到受配额控制的临时文件，或使用 `Popen` 流式读取并在超过上限时终止。不要把不可信输入拼入 `shell=True` 命令，还应处理超时和返回码。
 ## 日志基础
 库代码使用命名 logger，不在导入时调用 `basicConfig()`：
 ```python

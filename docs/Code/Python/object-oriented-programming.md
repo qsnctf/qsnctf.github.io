@@ -134,13 +134,16 @@ class NamedCounter(Counter):
 ## 重写与多态
 子类可重写方法，但应遵守基类契约：接受兼容输入、提供兼容输出、保持关键语义。
 ```python
+from html import escape
+
 class Renderer:
     def render(self, text: str) -> str:
         raise NotImplementedError
 class HtmlRenderer(Renderer):
     def render(self, text: str) -> str:
-        return f"<p>{text}</p>"
+        return f"<p>{escape(text, quote=True)}</p>"
 ```
+渲染器接收普通文本，因此在 HTML 输出边界进行转义。如果接口接收的是可信 HTML，应使用不同的类型或方法名明确区分，避免把不可信文本误当标记。
 如果只需要接口，可使用 `abc.ABC` / `@abstractmethod`，
 或在类型层使用 `Protocol` 实现结构化子类型。
 ## 组合优于继承
