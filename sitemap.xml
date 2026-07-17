@@ -53,10 +53,6 @@
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/PHP/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
@@ -114,6 +110,50 @@
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/pointers-memory-and-lifetime/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/HTML/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/HTML/browser-dom-and-developer-tools/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/HTML/document-elements-and-semantics/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/HTML/html-escaping-xss-and-ctf/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/HTML/links-media-tables-and-forms/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/PHP/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/PHP/arrays-control-flow-and-functions/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/PHP/database-and-pdo/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/PHP/environment-syntax-and-types/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/PHP/php-security-and-ctf/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/PHP/web-requests-cookies-sessions-and-upload/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
@@ -338,6 +378,10 @@
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Tools/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Tools/Pwn/GDB/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
