@@ -231,14 +231,20 @@ nav:
       - 面向 Reverse 与 Pwn 的汇编: Code/Assembly/assembly-for-reverse-and-pwn.md
     - Python:
       - Python 3.10+ 学习路线: Code/Python/index.md
-      - 环境、语法与代码风格: Code/Python/environment-syntax-and-style.md
-      - 类型、字符串、字节与容器: Code/Python/types-strings-bytes-and-collections.md
-      - 运算符、控制流与推导式: Code/Python/operators-control-flow-and-comprehensions.md
-      - 函数、作用域、迭代器与装饰器: Code/Python/functions-scope-iterators-and-decorators.md
-      - 模块、包、异常与类型注解: Code/Python/modules-packages-errors-and-type-hints.md
-      - 文件、路径、标准库与虚拟环境: Code/Python/files-paths-stdlib-and-venv.md
-      - 面向对象编程: Code/Python/object-oriented-programming.md
-      - Python 在 CTF 中的安全用法: Code/Python/python-for-ctf.md
+      - Python3 教程:
+        - Python3 教程: Code/Python/python3/index.md
+        - 环境、语法与代码风格: Code/Python/environment-syntax-and-style.md
+        - 类型、字符串、字节与容器: Code/Python/types-strings-bytes-and-collections.md
+        - 运算符、控制流与推导式: Code/Python/operators-control-flow-and-comprehensions.md
+        - 函数、作用域、迭代器与装饰器: Code/Python/functions-scope-iterators-and-decorators.md
+        - 模块、包、异常与类型注解: Code/Python/modules-packages-errors-and-type-hints.md
+        - 文件、路径、标准库与虚拟环境: Code/Python/files-paths-stdlib-and-venv.md
+        - 面向对象编程: Code/Python/object-oriented-programming.md
+        - Python 在 CTF 中的安全用法: Code/Python/python-for-ctf.md
+      - Python3 高级教程: Code/Python/python3/advanced.md
+      - NumPy 教程: Code/Python/numpy/index.md
+      - Pandas 教程: Code/Python/pandas/index.md
+      - Matplotlib 教程: Code/Python/matplotlib/index.md
     - PHP:
       - PHP 学习路线: Code/PHP/index.md
       - 环境、语法与类型: Code/PHP/environment-syntax-and-types.md
