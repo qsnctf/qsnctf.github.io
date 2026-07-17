@@ -231,8 +231,7 @@ nav:
       - 面向 Reverse 与 Pwn 的汇编: Code/Assembly/assembly-for-reverse-and-pwn.md
     - Python:
       - Python 3.10+ 学习路线: Code/Python/index.md
-      - Python3 教程:
-        - Python3 教程: Code/Python/python3/index.md
+      - 专题综合:
         - 环境、语法与代码风格: Code/Python/environment-syntax-and-style.md
         - 类型、字符串、字节与容器: Code/Python/types-strings-bytes-and-collections.md
         - 运算符、控制流与推导式: Code/Python/operators-control-flow-and-comprehensions.md
@@ -241,10 +240,192 @@ nav:
         - 文件、路径、标准库与虚拟环境: Code/Python/files-paths-stdlib-and-venv.md
         - 面向对象编程: Code/Python/object-oriented-programming.md
         - Python 在 CTF 中的安全用法: Code/Python/python-for-ctf.md
-      - Python3 高级教程: Code/Python/python3/advanced.md
-      - NumPy 教程: Code/Python/numpy/index.md
-      - Pandas 教程: Code/Python/pandas/index.md
-      - Matplotlib 教程: Code/Python/matplotlib/index.md
+      - Python3 教程:
+        - Python3 教程: Code/Python/python3/index.md
+        - Python3 简介: Code/Python/python3/basic/introduction.md
+        - Python3 环境搭建: Code/Python/python3/basic/environment-setup.md
+        - Python3 Pycharm: Code/Python/python3/basic/pycharm.md
+        - Python3 VScode: Code/Python/python3/basic/vscode.md
+        - Python3 基础语法: Code/Python/python3/basic/basic-syntax.md
+        - Python3 基本数据类型: Code/Python/python3/basic/data-types.md
+        - Python3 数据类型转换: Code/Python/python3/basic/type-conversion.md
+        - Python3 解释器: Code/Python/python3/basic/interpreter.md
+        - Python3 注释: Code/Python/python3/basic/comments.md
+        - Python3 运算符: Code/Python/python3/basic/operators.md
+        - Python3 数字(Number): Code/Python/python3/basic/numbers.md
+        - Python3 字符串: Code/Python/python3/basic/strings.md
+        - Python3 列表: Code/Python/python3/basic/lists.md
+        - Python3 元组: Code/Python/python3/basic/tuples.md
+        - Python3 字典: Code/Python/python3/basic/dictionaries.md
+        - Python3 集合: Code/Python/python3/basic/sets.md
+        - Python3 条件控制: Code/Python/python3/basic/conditionals.md
+        - Python3 循环语句: Code/Python/python3/basic/loops.md
+        - Python3 编程第一步: Code/Python/python3/basic/first-program.md
+        - Python3 推导式: Code/Python/python3/basic/comprehensions.md
+        - Python3 迭代器与生成器: Code/Python/python3/basic/iterators-generators.md
+        - Python3 with: Code/Python/python3/basic/with-statement.md
+        - Python3 函数: Code/Python/python3/basic/functions.md
+        - Python3 lambda: Code/Python/python3/basic/lambda.md
+        - Python3 装饰器: Code/Python/python3/basic/decorators.md
+        - Python3 数据结构: Code/Python/python3/basic/data-structures.md
+        - Python3 模块: Code/Python/python3/basic/modules.md
+        - Python __name__: Code/Python/python3/basic/name-main.md
+        - Python3 输入和输出: Code/Python/python3/basic/input-output.md
+        - Python3 File: Code/Python/python3/basic/files.md
+        - Python3 OS: Code/Python/python3/basic/os.md
+        - Python3 错误和异常: Code/Python/python3/basic/errors-exceptions.md
+        - Python3 面向对象: Code/Python/python3/basic/object-oriented-programming.md
+        - Python3 命名空间/作用域: Code/Python/python3/basic/namespaces-scopes.md
+        - Python 虚拟环境的创建: Code/Python/python3/basic/virtual-environments.md
+        - Python 类型注解: Code/Python/python3/basic/type-hints.md
+        - Python3 标准库概览: Code/Python/python3/basic/standard-library-overview.md
+        - Python3 实例: Code/Python/python3/basic/examples.md
+        - Python 测验: Code/Python/python3/basic/quiz.md
+      - Python3 高级教程:
+        - Python3 高级教程: Code/Python/python3/advanced/index.md
+        - Python3 正则表达式: Code/Python/python3/advanced/regular-expressions.md
+        - Python3 CGI编程: Code/Python/python3/advanced/cgi-programming.md
+        - Python3 MySQL(mysql-connector): Code/Python/python3/advanced/mysql-connector.md
+        - Python3 MySQL(PyMySQL): Code/Python/python3/advanced/pymysql.md
+        - Python3 网络编程: Code/Python/python3/advanced/network-programming.md
+        - Python3 SMTP发送邮件: Code/Python/python3/advanced/smtp-email.md
+        - Python3 多线程: Code/Python/python3/advanced/multithreading.md
+        - Python3 XML 解析: Code/Python/python3/advanced/xml-parsing.md
+        - Python3 JSON: Code/Python/python3/advanced/json.md
+        - Python3 日期和时间: Code/Python/python3/advanced/date-time.md
+        - Python3 内置函数: Code/Python/python3/advanced/built-in-functions.md
+        - Python3 MongoDB: Code/Python/python3/advanced/mongodb.md
+        - Python3 urllib: Code/Python/python3/advanced/urllib.md
+        - Python uWSGI 安装配置: Code/Python/python3/advanced/uwsgi.md
+        - Python3 pip: Code/Python/python3/advanced/pip.md
+        - Python3 operator: Code/Python/python3/advanced/operator.md
+        - Python math: Code/Python/python3/advanced/math.md
+        - Python requests: Code/Python/python3/advanced/requests.md
+        - Python random: Code/Python/python3/advanced/random.md
+        - Python OpenAI: Code/Python/python3/advanced/openai.md
+        - Python 有用的资源: Code/Python/python3/advanced/useful-resources.md
+        - Python AI 绘画: Code/Python/python3/advanced/ai-painting.md
+        - Python statistics: Code/Python/python3/advanced/statistics.md
+        - Python hashlib: Code/Python/python3/advanced/hashlib.md
+        - Python 量化: Code/Python/python3/advanced/quantitative-finance.md
+        - Python pyecharts: Code/Python/python3/advanced/pyecharts.md
+        - Python selenium 库: Code/Python/python3/advanced/selenium.md
+        - Python 爬虫: Code/Python/python3/advanced/web-scraping.md
+        - Python Scrapy 库: Code/Python/python3/advanced/scrapy.md
+        - Python Markdown: Code/Python/python3/advanced/markdown.md
+        - Python sys 模块: Code/Python/python3/advanced/sys.md
+        - Python Pickle 模块: Code/Python/python3/advanced/pickle.md
+        - Python subprocess 模块: Code/Python/python3/advanced/subprocess.md
+        - Python queue 模块: Code/Python/python3/advanced/queue.md
+        - Python StringIO 模块: Code/Python/python3/advanced/stringio.md
+        - Python logging 模块: Code/Python/python3/advanced/logging.md
+        - Python datetime 模块: Code/Python/python3/advanced/datetime.md
+        - Python re 模块: Code/Python/python3/advanced/re.md
+        - Python csv 模块: Code/Python/python3/advanced/csv.md
+        - Python threading 模块: Code/Python/python3/advanced/threading.md
+        - Python asyncio 模块: Code/Python/python3/advanced/asyncio.md
+        - Python PyQt: Code/Python/python3/advanced/pyqt.md
+        - Python for 循环: Code/Python/python3/advanced/for-loop.md
+        - Python while 循环: Code/Python/python3/advanced/while-loop.md
+      - NumPy 教程:
+        - NumPy 教程: Code/Python/numpy/index.md
+        - NumPy 安装: Code/Python/numpy/installation.md
+        - NumPy Ndarray 对象: Code/Python/numpy/ndarray-object.md
+        - NumPy 数据类型: Code/Python/numpy/data-types.md
+        - NumPy 数组属性: Code/Python/numpy/array-attributes.md
+        - NumPy 创建数组: Code/Python/numpy/creating-arrays.md
+        - NumPy 从已有的数组创建数组: Code/Python/numpy/arrays-from-existing-data.md
+        - NumPy 从数值范围创建数组: Code/Python/numpy/arrays-from-numerical-ranges.md
+        - NumPy 切片和索引: Code/Python/numpy/slicing-and-indexing.md
+        - NumPy 高级索引: Code/Python/numpy/advanced-indexing.md
+        - NumPy 广播(Broadcast): Code/Python/numpy/broadcasting.md
+        - NumPy 迭代数组: Code/Python/numpy/iterating-arrays.md
+        - Numpy 数组操作: Code/Python/numpy/array-operations.md
+        - NumPy 位运算: Code/Python/numpy/bitwise-operations.md
+        - NumPy 字符串函数: Code/Python/numpy/string-functions.md
+        - NumPy 数学函数: Code/Python/numpy/mathematical-functions.md
+        - NumPy 算术函数: Code/Python/numpy/arithmetic-functions.md
+        - NumPy 统计函数: Code/Python/numpy/statistical-functions.md
+        - NumPy 排序、条件筛选函数: Code/Python/numpy/sorting-and-filtering.md
+        - NumPy 字节交换: Code/Python/numpy/byte-swapping.md
+        - NumPy 副本和视图: Code/Python/numpy/copies-and-views.md
+        - NumPy 矩阵库(Matrix): Code/Python/numpy/matrix-library.md
+        - NumPy 线性代数: Code/Python/numpy/linear-algebra.md
+        - NumPy IO: Code/Python/numpy/io.md
+        - NumPy Matplotlib: Code/Python/numpy/matplotlib.md
+        - Numpy 测验: Code/Python/numpy/quiz.md
+      - Pandas 教程:
+        - Pandas 教程: Code/Python/pandas/index.md
+        - pandas 简介: Code/Python/pandas/tutorial/introduction.md
+        - Pandas 安装: Code/Python/pandas/tutorial/installation.md
+        - Pandas Series: Code/Python/pandas/tutorial/series.md
+        - Pandas DataFrame: Code/Python/pandas/tutorial/dataframe.md
+        - 数据读写:
+          - 数据读写: Code/Python/pandas/io/index.md
+          - Pandas 数据读写: Code/Python/pandas/io/data-io.md
+          - Pandas CSV: Code/Python/pandas/io/csv.md
+          - Pandas Excel: Code/Python/pandas/io/excel.md
+          - Pandas JSON: Code/Python/pandas/io/json.md
+          - Pandas 读取 SQL: Code/Python/pandas/io/sql.md
+          - Pandas 读取 HTML: Code/Python/pandas/io/html.md
+          - Pandas Parquet / Feather: Code/Python/pandas/io/parquet-feather.md
+          - Pandas 数据导出: Code/Python/pandas/io/data-export.md
+        - Pandas 数据清洗: Code/Python/pandas/tutorial/data-cleaning.md
+        - Pandas 常用函数: Code/Python/pandas/tutorial/common-functions.md
+        - Pandas 相关性分析: Code/Python/pandas/tutorial/correlation-analysis.md
+        - Pandas 数据排序与聚合: Code/Python/pandas/tutorial/sorting-and-aggregation.md
+        - Pandas 数据可视化: Code/Python/pandas/tutorial/data-visualization.md
+        - Pandas 高级功能: Code/Python/pandas/tutorial/advanced-features.md
+        - Pandas 性能优化: Code/Python/pandas/tutorial/performance-optimization.md
+        - Pandas 股票数据分析: Code/Python/pandas/tutorial/stock-analysis.md
+        - Pandas Index 详解: Code/Python/pandas/tutorial/index-guide.md
+        - Pandas 多层索引: Code/Python/pandas/tutorial/multi-index.md
+        - Pandas 数据类型: Code/Python/pandas/tutorial/data-types.md
+        - Pandas 类别类型: Code/Python/pandas/tutorial/categorical-data.md
+        - 数据处理核心:
+          - 数据处理核心: Code/Python/pandas/core/index.md
+          - Pandas 数据选取: Code/Python/pandas/core/data-selection.md
+          - Pandas 过滤与条件查询: Code/Python/pandas/core/filtering-query.md
+          - Pandas 缺失值处理: Code/Python/pandas/core/missing-data.md
+          - Pandas 重复数据处理: Code/Python/pandas/core/duplicates.md
+          - Pandas 字符串操作: Code/Python/pandas/core/string-operations.md
+          - Pandas 日期与时间: Code/Python/pandas/core/datetime.md
+          - Pandas 时间序列分析: Code/Python/pandas/core/time-series.md
+          - Pandas apply / map / applymap: Code/Python/pandas/core/apply-map-applymap.md
+          - Pandas 数据合并: Code/Python/pandas/core/merge.md
+          - Pandas 数据拼接: Code/Python/pandas/core/concat.md
+          - Pandas 数据重塑: Code/Python/pandas/core/reshaping.md
+          - Pandas 分组操作: Code/Python/pandas/core/groupby.md
+          - Pandas 窗口函数: Code/Python/pandas/core/window-functions.md
+        - 参考手册:
+          - 参考手册: Code/Python/pandas/reference/index.md
+          - Pandas Input/Output API: Code/Python/pandas/reference/input-output-api.md
+          - Pandas Series API 手册: Code/Python/pandas/reference/series-api.md
+          - Pandas DataFrame API 手册: Code/Python/pandas/reference/dataframe-api.md
+          - Pandas 数组: Code/Python/pandas/reference/arrays.md
+          - Pandas Index 对象: Code/Python/pandas/reference/index-objects.md
+          - Pandas DateOffset 对象: Code/Python/pandas/reference/dateoffset.md
+          - Pandas 测验: Code/Python/pandas/reference/quiz.md
+      - Matplotlib 教程:
+        - Matplotlib 教程: Code/Python/matplotlib/index.md
+        - Matplotlib 安装: Code/Python/matplotlib/installation.md
+        - Matplotlib Pyplot: Code/Python/matplotlib/pyplot.md
+        - Matplotlib 绘图标记: Code/Python/matplotlib/plot-markers.md
+        - Matplotlib 绘图线: Code/Python/matplotlib/plot-lines.md
+        - Matplotlib 轴标签和标题: Code/Python/matplotlib/labels-and-titles.md
+        - Matplotlib 网格线: Code/Python/matplotlib/grid-lines.md
+        - Matplotlib 绘制多图: Code/Python/matplotlib/multiple-plots.md
+        - Matplotlib 散点图: Code/Python/matplotlib/scatter-plots.md
+        - Matplotlib 柱形图: Code/Python/matplotlib/bar-charts.md
+        - Matplotlib 饼图: Code/Python/matplotlib/pie-charts.md
+        - Matplotlib 直方图: Code/Python/matplotlib/histograms.md
+        - Matplotlib imshow(): Code/Python/matplotlib/imshow.md
+        - Matplotlib imsave(): Code/Python/matplotlib/imsave.md
+        - Matplotlib imread(): Code/Python/matplotlib/imread.md
+        - Matplotlib 中文显示: Code/Python/matplotlib/chinese-text.md
+        - Seaborn 教程: Code/Python/matplotlib/seaborn-tutorial.md
+        - Matplotlib 常用函数: Code/Python/matplotlib/common-functions.md
+        - Matplotlib 参考文档: Code/Python/matplotlib/reference.md
     - PHP:
       - PHP 学习路线: Code/PHP/index.md
       - 环境、语法与类型: Code/PHP/environment-syntax-and-types.md
@@ -423,6 +604,17 @@ nav:
     - 编码:
       - ASCII: Misc/encoding/ASCII.md
       - Hex: Misc/encoding/Hex.md
+      - 电话拨号编码: Misc/encoding/PhoneDial.md
+      - Morse 编码: Misc/encoding/Morse.md
+      - 敲击码: Misc/encoding/TapCode.md
+      - 曼彻斯特编码: Misc/encoding/Manchester.md
+      - 格雷编码: Misc/encoding/GrayCode.md
+      - 字母表编码: Misc/encoding/Alphabet.md
+      - 霍夫曼编码: Misc/encoding/Huffman.md
+      - XXencoding: Misc/encoding/XXencoding.md
+      - URL 编码: Misc/encoding/URL.md
+      - Unicode 编码: Misc/encoding/Unicode.md
+      - HTML 实体编码: Misc/encoding/HTMLEntity.md
       - Base家族:
         - Base64: Misc/encoding/Base/Base64.md
         - Base32: Misc/encoding/Base/Base32.md
@@ -498,8 +690,19 @@ nav:
         - XSS原理: Web/Web_Security_Basic_Vulnerabilities/Cross_Site_Scripting.md
         - XSS-LAB: Web/Web_Security_Basic_Vulnerabilities/XSS_LAB/XSS_LAB.md
       - PHP特性: Web/Web_Security_Basic_Vulnerabilities/PHP_features.md
+      - SQL注入: Web/Web_Security_Basic_Vulnerabilities/SQL_Injection.md
+      - 文件包含: Web/Web_Security_Basic_Vulnerabilities/File_Inclusion.md
+      - 文件上传: Web/Web_Security_Basic_Vulnerabilities/File_Upload.md
+      - 解析漏洞: Web/Web_Security_Basic_Vulnerabilities/Parser_Vulnerabilities.md
+      - CSRF: Web/Web_Security_Basic_Vulnerabilities/CSRF.md
+      - SSRF: Web/Web_Security_Basic_Vulnerabilities/SSRF.md
+      - 命令执行:
+        - 命令执行与命令注入: Web/Web_Security_Basic_Vulnerabilities/Command_Execution.md
+        - 命令执行过滤绕过: Web/Web_Security_Basic_Vulnerabilities/Command_Execution_Bypasses.md
   - Reverse: 
     - 介绍: Reverse/index.md
+    - 文件格式:
+      - ELF 文件: Reverse/File_Format/ELF.md
     - 工具:
       - IDA Pro: 
         - 介绍: Reverse/Tools/IDA_PRO/IDA_PRO.md

@@ -1,262 +1,74 @@
 # Pandas 教程
 
-Pandas 是 Python 数据分析核心库，基于 Series 和 DataFrame 提供结构化数据读写、清洗、聚合、时间序列和可视化能力。
+Pandas 是面向表格和时间序列数据的 Python 库。本教程按“基础入门、数据读写、分析能力、数据处理核心、API 参考”组织；示例默认使用 `import pandas as pd`。
 
-## pandas 简介
+## 版本基线
 
-Pandas 适合处理表格型数据。它提供类似电子表格和 SQL 的操作接口，也能与 NumPy、Matplotlib、SQL 数据库结合。
-
-## Pandas 安装
-
-```bash
-python -m pip install pandas
-```
-
-常用导入约定：
+本文档最低兼容 **Pandas 2.0**，主要按 Pandas 2.x 的公开 API 编写。仅 Pandas 2.1 及以上可用的功能会显式标注，例如 `DataFrame.map`；Pandas 2.0 应使用对应替代写法。建议运行以下代码确认环境：
 
 ```python
 import pandas as pd
+
+major, minor = map(int, pd.__version__.split(".")[:2])
+if (major, minor) < (2, 0):
+    raise RuntimeError("本教程要求 pandas >= 2.0")
+print("pandas version:", pd.__version__)
 ```
 
-## Pandas Series
+Pandas 未来版本可能调整默认参数或移除弃用 API。项目应固定依赖版本、把弃用警告纳入测试，并以所用版本的官方文档为最终依据。
 
-Series 是一维带索引数组。
+## 概念与用途
+
+Pandas 用 `Series` 和 `DataFrame` 表达带标签数据，适合表格读写、清洗、转换、统计和时间序列分析。学习时应同时理解数据类型、索引对齐和空值语义，而不只是记忆函数名。
+
+## 核心 API
+
+核心对象是 `pd.Series`、`pd.DataFrame` 和 `pd.Index`；高频操作包括 `read_*`、`loc`、`groupby`、`merge`、`pivot_table`、`rolling` 与 `to_*`。各分组页面会进一步说明参数、返回类型和适用边界。
+
+## 可运行示例
 
 ```python
-s = pd.Series([10, 20, 30], index=["a", "b", "c"])
+import pandas as pd
+
+sales = pd.DataFrame({"team": ["A", "A", "B"], "amount": [10, 15, 12]})
+summary = sales.groupby("team", as_index=False).agg(total=("amount", "sum"))
+print(summary)
 ```
 
-## Pandas DataFrame
-
-DataFrame 是二维表格数据结构，每列可以有不同 dtype。
-
-```python
-df = pd.DataFrame({"name": ["a", "b"], "score": [90, 80]})
-```
-
-## 数据读写
-
-Pandas 支持 CSV、Excel、JSON、SQL、HTML、Parquet、Feather 等格式。选择格式时要关注体积、速度、类型保真和跨语言支持。
-
-## Pandas 数据读写
-
-统一模式是 `read_*` 读取，`to_*` 导出。
-
-## Pandas CSV
-
-```python
-df = pd.read_csv("data.csv")
-df.to_csv("out.csv", index=False)
-```
-
-注意编码、分隔符、缺失值表示和日期解析。
-
-## Pandas Excel
-
-```python
-df = pd.read_excel("data.xlsx", sheet_name="Sheet1")
-df.to_excel("out.xlsx", index=False)
-```
-
-Excel 适合人工查看，不适合超大规模数据交换。
-
-## Pandas JSON
-
-```python
-df = pd.read_json("data.json")
-df.to_json("out.json", force_ascii=False)
-```
-
-嵌套 JSON 可能需要 `json_normalize` 展开。
-
-## Pandas 读取 SQL
-
-```python
-df = pd.read_sql("select * from users", conn)
-```
-
-真实项目中应使用参数化查询和受控连接。
-
-## Pandas 读取 HTML
-
-`read_html` 可以从 HTML 表格中读取数据：
-
-```python
-tables = pd.read_html("page.html")
-```
-
-## Pandas Parquet / Feather
-
-Parquet 和 Feather 适合高效列式存储，通常比 CSV 更快且更保留类型信息。
-
-## Pandas 数据导出
-
-常见导出包括 `to_csv`、`to_excel`、`to_json`、`to_parquet`、`to_sql`。
-
-## Pandas 数据清洗
-
-清洗包括处理缺失值、重复值、异常值、类型转换、字段拆分和标准化。
-
-## Pandas 常用函数
-
-常用函数包括 `head`、`tail`、`info`、`describe`、`value_counts`、`sort_values`、`groupby`、`merge`。
-
-## Pandas 相关性分析
-
-```python
-df.corr(numeric_only=True)
-```
-
-相关性不等于因果关系，分析时要结合业务背景。
-
-## Pandas 数据排序与聚合
-
-```python
-df.sort_values("score")
-df.groupby("class")["score"].mean()
-```
-
-## Pandas 数据可视化
-
-DataFrame 内置 `plot` 基于 Matplotlib：
-
-```python
-df.plot(kind="bar")
-```
-
-## Pandas 高级功能
-
-高级能力包括多层索引、窗口函数、时间序列、类别类型、向量化字符串和分组变换。
-
-## Pandas 性能优化
-
-优化方向：减少 Python 循环、使用向量化、选择合适 dtype、分块读取、使用 Parquet、避免不必要副本。
-
-## Pandas 股票数据分析
-
-股票数据常涉及时间索引、复权、收益率、移动平均、回撤和可视化。重点是数据来源、缺失交易日和前视偏差。
-
-## Pandas Index 详解
-
-Index 是行标签。它影响对齐、选择、连接和重采样行为。
-
-## Pandas 多层索引
-
-MultiIndex 支持多维标签，适合分组统计和层级数据。
-
-## Pandas 数据类型
-
-常见 dtype 包括整数、浮点、布尔、字符串、日期时间、类别类型。
-
-## Pandas 类别类型
-
-`category` 适合重复值较多的离散字段，可降低内存并加快部分操作。
-
-## 数据处理核心
-
-数据处理核心流程通常是读取、检查、清洗、转换、聚合、分析和导出。
-
-## Pandas 数据选取
-
-`loc` 按标签选择，`iloc` 按位置选择。
-
-```python
-df.loc[df["score"] > 80, ["name", "score"]]
-```
-
-## Pandas 过滤与条件查询
-
-布尔条件可组合使用 `&`、`|`、`~`，每个条件要加括号。
-
-## Pandas 缺失值处理
-
-```python
-df.isna().sum()
-df.dropna()
-df.fillna(0)
-```
-
-## Pandas 重复数据处理
-
-```python
-df.duplicated()
-df.drop_duplicates()
-```
-
-## Pandas 字符串操作
-
-`str` 访问器支持向量化字符串处理：
-
-```python
-df["name"].str.lower()
-```
-
-## Pandas 日期与时间
-
-```python
-df["time"] = pd.to_datetime(df["time"])
-```
-
-## Pandas 时间序列分析
-
-时间序列常用重采样、滚动窗口和日期索引。
-
-## Pandas apply / map / applymap
-
-`map` 常用于 Series 映射，`apply` 可作用于 Series/DataFrame，`applymap` 在新版中逐步被 `DataFrame.map` 替代。
-
-## Pandas 数据合并
-
-`merge` 类似 SQL join：
-
-```python
-pd.merge(left, right, on="id", how="left")
-```
-
-## Pandas 数据拼接
-
-`concat` 沿行或列拼接对象。
-
-## Pandas 数据重塑
-
-常用 `pivot`、`melt`、`stack`、`unstack`。
-
-## Pandas 分组操作
-
-`groupby` 支持 split-apply-combine 模式。
-
-## Pandas 窗口函数
-
-窗口函数包括 `rolling`、`expanding`、`ewm`，常用于移动平均和累计统计。
-
-## 参考手册
-
-参考手册用于快速定位 API。正式使用时应以当前版本官方文档为准。
-
-## Pandas Input/Output API
-
-I/O API 包括 `read_csv`、`read_excel`、`read_json`、`read_sql`、`read_parquet`、`read_html` 等。
-
-## Pandas Series API 手册
-
-Series API 包括索引、统计、字符串、日期、缺失值和转换操作。
-
-## Pandas DataFrame API 手册
-
-DataFrame API 包括选择、赋值、聚合、合并、重塑、绘图和导出。
-
-## Pandas 数组
-
-Pandas 支持扩展数组，用于 nullable integer、string、category、datetime 等类型。
-
-## Pandas Index 对象
-
-Index 对象不可变，支持对齐、集合操作和查找。
-
-## Pandas DateOffset 对象
-
-DateOffset 表示日期偏移规则，用于时间序列移动和频率处理。
-
-## Pandas 测验
-
-自检问题：`loc` 与 `iloc` 的区别是什么？`merge` 与 `concat` 适用场景有什么不同？为什么 CSV 不如 Parquet 保留类型？
+## 学习路线
+
+1. 从 [pandas 简介](tutorial/introduction.md)、[安装](tutorial/installation.md)、[Series](tutorial/series.md) 和 [DataFrame](tutorial/dataframe.md) 掌握对象模型。
+2. 使用 [数据读写](io/index.md) 选择格式并建立可靠的导入、导出流程。
+3. 进入 [数据处理核心](core/index.md)，学习选取、清洗、合并、重塑、分组和窗口计算。
+4. 结合相关性、可视化、性能与股票案例完成分析，再用 [参考手册](reference/index.md) 快速查找 API。
+
+## 基础与分析
+
+| 主题 | 页面 |
+| --- | --- |
+| pandas 简介 | [认识 Pandas](tutorial/introduction.md) |
+| Pandas 安装 | [安装与环境验证](tutorial/installation.md) |
+| Pandas Series | [一维带标签数据](tutorial/series.md) |
+| Pandas DataFrame | [二维表格对象](tutorial/dataframe.md) |
+| Pandas 数据清洗 | [清洗工作流](tutorial/data-cleaning.md) |
+| Pandas 常用函数 | [常用函数速查](tutorial/common-functions.md) |
+| Pandas 相关性分析 | [相关系数与解释](tutorial/correlation-analysis.md) |
+| Pandas 数据排序与聚合 | [排序和汇总](tutorial/sorting-and-aggregation.md) |
+| Pandas 数据可视化 | [内置绘图](tutorial/data-visualization.md) |
+| Pandas 高级功能 | [进阶能力](tutorial/advanced-features.md) |
+| Pandas 性能优化 | [内存与速度](tutorial/performance-optimization.md) |
+| Pandas 股票数据分析 | [行情分析案例](tutorial/stock-analysis.md) |
+| Pandas Index 详解 | [索引语义](tutorial/index-guide.md) |
+| Pandas 多层索引 | [MultiIndex](tutorial/multi-index.md) |
+| Pandas 数据类型 | [dtype 与转换](tutorial/data-types.md) |
+| Pandas 类别类型 | [Categorical](tutorial/categorical-data.md) |
+
+## 分组入口
+
+- [数据读写](io/index.md)：CSV、Excel、JSON、SQL、HTML、Parquet、Feather 与导出。
+- [数据处理核心](core/index.md)：选择、过滤、缺失值、字符串、时间序列、合并、重塑、分组和窗口。
+- [参考手册](reference/index.md)：I/O、Series、DataFrame、数组、Index、DateOffset 与测验。
+
+## 常见错误与工程注意事项
+
+示例尽量在内存中构造数据；涉及文件的示例会创建当前目录下的临时演示文件。生产项目应固定 Pandas 和可选 I/O 引擎版本，在写出前明确索引、时区、空值和数据类型约定，并为关键转换增加行数、主键唯一性与取值范围校验。

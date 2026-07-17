@@ -8,6 +8,17 @@
 ### 编码
 #### [HEX编码](https://docs.qsnctf.com/Misc/encoding/Hex/)
 #### [ASCII编码](https://docs.qsnctf.com/Misc/encoding/ASCII/)
+#### [电话拨号编码](https://docs.qsnctf.com/Misc/encoding/PhoneDial/)
+#### [Morse 编码](https://docs.qsnctf.com/Misc/encoding/Morse/)
+#### [敲击码](https://docs.qsnctf.com/Misc/encoding/TapCode/)
+#### [曼彻斯特编码](https://docs.qsnctf.com/Misc/encoding/Manchester/)
+#### [格雷编码](https://docs.qsnctf.com/Misc/encoding/GrayCode/)
+#### [字母表编码](https://docs.qsnctf.com/Misc/encoding/Alphabet/)
+#### [霍夫曼编码](https://docs.qsnctf.com/Misc/encoding/Huffman/)
+#### [XXencoding](https://docs.qsnctf.com/Misc/encoding/XXencoding/)
+#### [URL 编码](https://docs.qsnctf.com/Misc/encoding/URL/)
+#### [Unicode 编码](https://docs.qsnctf.com/Misc/encoding/Unicode/)
+#### [HTML 实体编码](https://docs.qsnctf.com/Misc/encoding/HTMLEntity/)
 #### Base家族
 ##### [Base64编码](https://docs.qsnctf.com/Misc/encoding/Base/Base64/)
 ###### [例题1](https://d.qsnctf.com/3dbQ)
@@ -30,6 +41,8 @@
 ## Web
 ## Crypto
 ## Reverse
+### 文件格式
+#### [ELF 文件](https://docs.qsnctf.com/Reverse/File_Format/ELF/)
 ## Pwn
 ```
 
