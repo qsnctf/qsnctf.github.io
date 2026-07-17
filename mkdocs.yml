@@ -158,54 +158,33 @@ nav:
       - OSI七层模型: basic/network/osi.md
   - 编程: 
     - 介绍: Code/index.md
-    - C/C++: 
-      - C/C++介绍: Code/CPP/cpp-tutorial.md
-      - C++基本语法: Code/CPP/cpp-basic-syntax.md
-      - C++注释: Code/CPP/cpp-comments.md
-      - C++数据类型: Code/CPP/cpp-data-types.md
-      - C++变量类型: Code/CPP/cpp-variable-types.md
-      - C++变量作用域: Code/CPP/cpp-variable-scope.md
-      - C++常量: Code/CPP/cpp-constants-literals.md
-    - 汇编语言: 
-      - 汇编语言概述: Code/Assembly/Language_Overview.md
-      - 基础环境与工具: Code/Assembly/Basic_Environment_and_Tools.md
-      - 计算机底层基础: Code/Assembly/Computer_Low-Level_Fundamentals.md
-      - 寄存器: Code/Assembly/Registers.md
-      - 内存与栈: Code/Assembly/Memory_and_Stack.md
-      - 指令系统: Code/Assembly/instruction_set.md
-      - 控制流: Code/Assembly/Control_Flow.md
-      - 函数与调用约定: Code/Assembly/Functions_and_Calling_Conventions.md
-      - 数据与变量: Code/Assembly/Data_and_Variables.md
-      - 常见体系结构: Code/Assembly/Common_Architectures.md
-      - 汇编与高级语言的关系: Code/Assembly/Relationship_Between_Assembly_and_High-Level_Languages.md
-      - 汇编调试与分析: Code/Assembly/Assembly_Debugging_and_Analysis.md
-      - 汇编在CTF中的应用: Code/Assembly/Assembly_in_CTF.md
+    - C/C++:
+      - C 与 C++ 学习路线: Code/CPP/index.md
+      - 环境与构建: Code/CPP/environment-and-build.md
+      - C 语言基础: Code/CPP/c-language-basics.md
+      - C++ 语言基础: Code/CPP/cpp-language-basics.md
+      - 函数与程序结构: Code/CPP/functions-and-program-structure.md
+      - 指针、内存与生命周期: Code/CPP/pointers-memory-and-lifetime.md
+      - C++ OOP、STL 与 RAII: Code/CPP/cpp-oop-stl-and-raii.md
+      - C/C++ 安全与 CTF: Code/CPP/c-cpp-security-and-ctf.md
+    - 汇编语言:
+      - x86-64 汇编学习路线: Code/Assembly/index.md
+      - 架构、数据与数值表示: Code/Assembly/architecture-data-and-number-representation.md
+      - 寄存器、内存与栈: Code/Assembly/registers-memory-and-stack.md
+      - 指令、寻址与控制流: Code/Assembly/instructions-addressing-and-control-flow.md
+      - 函数与调用约定: Code/Assembly/functions-and-calling-conventions.md
+      - 工具、反汇编与调试: Code/Assembly/tools-disassembly-and-debugging.md
+      - 面向 Reverse 与 Pwn 的汇编: Code/Assembly/assembly-for-reverse-and-pwn.md
     - Python:
-      - Python介绍: Code/Python/Python_Intro.md
-      - Python基础语法: Code/Python/Python_Basic_Syntax.md
-      - Python数据类型: Code/Python/Python_Data_Type.md
-      - Python类型转换: Code/Python/Python_Type_Conversion.md
-      - Python注释: Code/Python/Python_Comment.md
-      - Python运算符: Code/Python/Python_Basic_Operators.md
-      - Python条件控制: Code/Python/Python_Conditional_Statements.md
-      - Python循环控制: Code/Python/Python_Loop.md
-      - Python推导式: Code/Python/Python_Comprehensions.md
-      - Python迭代器生成器: Code/Python/Python_Iterator-Generator.md
-      - Python-With: Code/Python/Python_With.md
-      - Python函数: Code/Python/Python_Functions.md
-      - Python Lambda: Code/Python/Python_lambda.md
-      - Python 装饰器: Code/Python/Python_Decorators.md
-      - Python 数据结构: Code/Python/Python_Data_Structure.md
-      - Python模块: Code/Python/Python_module.md
-      - Python内置变量: Code/Python/Python_Internal_Variable.md
-      - Python文件操作: Code/Python/Python_File.md
-      - Python OS: Code/Python/Python_OS.md
-      - Python错误和异常处理: Code/Python/Python_Errors_Execptions.md
-      - Python面向对象: Code/Python/Python_Class.md
-      - Python命名空间/作用域: Code/Python/Python_Namespace_Scope.md
-      - Python虚拟环境: Code/Python/Python_Venv.md
-      - Python标准库: Code/Python/Python_stdlib.md
-      - Python类型注解: Code/Python/Python_Type_Hints.md
+      - Python 3.10+ 学习路线: Code/Python/index.md
+      - 环境、语法与代码风格: Code/Python/environment-syntax-and-style.md
+      - 类型、字符串、字节与容器: Code/Python/types-strings-bytes-and-collections.md
+      - 运算符、控制流与推导式: Code/Python/operators-control-flow-and-comprehensions.md
+      - 函数、作用域、迭代器与装饰器: Code/Python/functions-scope-iterators-and-decorators.md
+      - 模块、包、异常与类型注解: Code/Python/modules-packages-errors-and-type-hints.md
+      - 文件、路径、标准库与虚拟环境: Code/Python/files-paths-stdlib-and-venv.md
+      - 面向对象编程: Code/Python/object-oriented-programming.md
+      - Python 在 CTF 中的安全用法: Code/Python/python-for-ctf.md
     - PHP: Code/PHP.md
   - Misc: 
     - 介绍: Misc/index.md
@@ -296,6 +275,8 @@ nav:
     - 基础知识7: AI/Basic/Basic_knowledge_7.md
   - 工具: 
     - 介绍: Tools/index.md
+    - 逆向工具:
+      - Radare2（R2）使用与插件安装: Tools/Reverse/Radare2.md
     - 编码工具:
       - CyberChef: Tools/encoding/CyberChef.md
   - MCP:
