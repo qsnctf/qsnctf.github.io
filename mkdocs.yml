@@ -193,11 +193,94 @@ nav:
       - 数据库与 PDO: Code/PHP/database-and-pdo.md
       - PHP 安全与 CTF: Code/PHP/php-security-and-ctf.md
     - HTML:
-      - HTML 学习路线: Code/HTML/index.md
-      - 文档元素与语义: Code/HTML/document-elements-and-semantics.md
-      - 链接、媒体、表格与表单: Code/HTML/links-media-tables-and-forms.md
-      - 浏览器、DOM 与开发者工具: Code/HTML/browser-dom-and-developer-tools.md
-      - HTML 转义、XSS 与 CTF: Code/HTML/html-escaping-xss-and-ctf.md
+      - HTML 学习目录: Code/HTML/index.md
+      - HTML 教程:
+        - HTML 教程: Code/HTML/tutorial/index.md
+        - HTML 简介: Code/HTML/tutorial/introduction.md
+        - HTML 编辑器: Code/HTML/tutorial/editors.md
+        - HTML 基础: Code/HTML/tutorial/basics.md
+        - HTML 元素: Code/HTML/tutorial/elements.md
+        - HTML 属性: Code/HTML/tutorial/attributes.md
+        - HTML 标题: Code/HTML/tutorial/headings.md
+        - HTML 段落: Code/HTML/tutorial/paragraphs.md
+        - HTML 文本格式化: Code/HTML/tutorial/text-formatting.md
+        - HTML 链接: Code/HTML/tutorial/links.md
+        - HTML 头部: Code/HTML/tutorial/document-head.md
+        - HTML CSS: Code/HTML/tutorial/css-in-html.md
+        - HTML 图像: Code/HTML/tutorial/images.md
+        - HTML 表格: Code/HTML/tutorial/tables.md
+        - HTML 列表: Code/HTML/tutorial/lists.md
+        - HTML 区块: Code/HTML/tutorial/block-elements.md
+        - HTML 布局: Code/HTML/tutorial/layout.md
+        - HTML 表单: Code/HTML/tutorial/forms.md
+        - HTML 框架: Code/HTML/tutorial/frames-and-iframes.md
+        - HTML 颜色: Code/HTML/tutorial/colors.md
+        - HTML 颜色名: Code/HTML/tutorial/color-names.md
+        - HTML 颜色值: Code/HTML/tutorial/color-values.md
+        - HTML 脚本: Code/HTML/tutorial/scripts.md
+        - HTML 字符实体: Code/HTML/tutorial/entities.md
+        - HTML URL: Code/HTML/tutorial/urls.md
+        - HTML 速查列表: Code/HTML/tutorial/quick-reference.md
+        - HTML 标签简写及全称: Code/HTML/tutorial/tag-abbreviations.md
+        - HTML 总结: Code/HTML/tutorial/summary.md
+        - HTML 测验: Code/HTML/tutorial/quiz.md
+        - XHTML 简介: Code/HTML/tutorial/xhtml-introduction.md
+      - HTML5:
+        - HTML5 教程: Code/HTML/html5/index.md
+        - HTML5 浏览器支持: Code/HTML/html5/browser-support.md
+        - HTML5 新元素: Code/HTML/html5/new-elements.md
+        - HTML5 Canvas: Code/HTML/html5/canvas.md
+        - HTML5 SVG: Code/HTML/html5/svg.md
+        - HTML5 MathML: Code/HTML/html5/mathml.md
+        - HTML5 拖放: Code/HTML/html5/drag-and-drop.md
+        - HTML5 地理定位: Code/HTML/html5/geolocation.md
+        - HTML5 Video(视频): Code/HTML/html5/video-element.md
+        - HTML5 Audio(音频): Code/HTML/html5/audio-element.md
+        - HTML5 Input 类型: Code/HTML/html5/input-types.md
+        - HTML5 表单元素: Code/HTML/html5/form-elements.md
+        - HTML5 表单属性: Code/HTML/html5/form-attributes.md
+        - HTML5 语义元素: Code/HTML/html5/semantic-elements.md
+        - HTML5 Web 存储: Code/HTML/html5/web-storage.md
+        - HTML5 Web SQL: Code/HTML/html5/web-sql.md
+        - HTML5 Web IndexedDB: Code/HTML/html5/indexeddb.md
+        - HTML5 应用程序缓存: Code/HTML/html5/application-cache.md
+        - HTML5 Web Workers: Code/HTML/html5/web-workers.md
+        - HTML5 SSE: Code/HTML/html5/server-sent-events.md
+        - HTML5 WebSocket: Code/HTML/html5/websocket.md
+        - HTML5 测验: Code/HTML/html5/quiz.md
+        - HTML(5) 代码规范: Code/HTML/html5/code-style.md
+        - Service Worker 与 Cache API: Code/HTML/html5/service-worker-and-cache.md
+        - Fetch 与网络请求: Code/HTML/html5/fetch-and-networking.md
+        - HTML5 安全边界: Code/HTML/html5/security-boundaries.md
+      - HTML 媒体:
+        - HTML 媒体(Media): Code/HTML/media/index.md
+        - HTML 媒体概览: Code/HTML/media/multimedia.md
+        - HTML 插件: Code/HTML/media/legacy-plugins.md
+        - HTML 音频(Audio): Code/HTML/media/audio.md
+        - HTML 视频（Video）播放: Code/HTML/media/video.md
+        - HTML 实例: Code/HTML/media/examples.md
+      - HTML 参考手册:
+        - HTML 参考手册: Code/HTML/reference/index.md
+        - HTML 标签列表(字母排序): Code/HTML/reference/tags-alphabetical.md
+        - HTML 标签列表（功能排序）: Code/HTML/reference/tags-by-function.md
+        - HTML 属性: Code/HTML/reference/attributes.md
+        - HTML 事件: Code/HTML/reference/events.md
+        - HTML 画布: Code/HTML/reference/canvas-api.md
+        - HTML 音频/视频: Code/HTML/reference/audio-video-api.md
+        - HTML 有效 DOCTYPES: Code/HTML/reference/doctypes.md
+        - HTML 颜色名: Code/HTML/reference/color-names.md
+        - HTML 拾色器: Code/HTML/reference/color-picker.md
+        - HTML 字符集: Code/HTML/reference/character-sets.md
+        - HTML ASCII: Code/HTML/reference/ascii.md
+        - HTML ISO-8859-1: Code/HTML/reference/iso-8859-1.md
+        - HTML 符号: Code/HTML/reference/symbols.md
+        - HTML 字符实体: Code/HTML/reference/entities.md
+        - HTML URL 编码: Code/HTML/reference/url-encoding.md
+        - HTML 语言代码: Code/HTML/reference/language-codes.md
+        - HTTP 消息: Code/HTML/reference/http-messages.md
+        - HTTP 方法: Code/HTML/reference/http-methods.md
+        - HTML 标签简写及全称: Code/HTML/reference/tag-abbreviations.md
+        - HTML 校验清单: Code/HTML/reference/validation-checklist.md
   - Misc: 
     - 介绍: Misc/index.md
     - 编码:
@@ -254,6 +337,20 @@ nav:
           - RSA加密解密: Crypto/Modern_Cryptography/asymmetric/RSA_Encryption_Decryption.md
           - RSA加解密示例: Crypto/Modern_Cryptography/asymmetric/RSA_Encryption_Decryption_Example.md
           - RSA正确性证明: Crypto/Modern_Cryptography/asymmetric/RSA_Correctness_Proof.md
+          - 常见攻击方式:
+            - 素数分解:
+              - 费马分解: Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Factorization/Fermat.md
+              - GCD公因数分解: Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Factorization/GCD_Common_Factor.md
+              - Pollard p-1分解: Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Factorization/Pollard_P_Minus_1.md
+              - Williams p+1分解: Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Factorization/Williams_P_Plus_1.md
+            - 算法攻击:
+              - 低加密指数攻击: Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/Low_Encryption_Exponent.md
+              - Hastad广播攻击: Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/Hastad_Broadcast.md
+              - Common Modulus共模攻击: Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/Common_Modulus.md
+              - Wiener攻击: Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/Wiener.md
+              - dp泄露攻击: Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/dp_Leak.md
+              - e为2的幂: Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/E_Power_Of_Two.md
+              - Rabin: Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/Rabin.md
   - Web: 
     - 介绍: Web/index.md
     - 基础知识:
@@ -275,8 +372,10 @@ nav:
 
   - Pwn: 
     - 介绍: Pwn/index.md
-    - 工具:
-      - GDB 在 Pwn 中的使用: Tools/Pwn/GDB.md
+    - 栈的概念: Pwn/stack-concepts.md
+    - 栈溢出基础: Pwn/stack-overflow-basics.md
+    - 堆的概念: Pwn/heap-concepts.md
+    - 常见堆漏洞与利用思路: Pwn/common-heap-vulnerabilities.md
   - AI:
     - 介绍: AI/index.md
     - 环境准备: AI/Environmental/Environmental_preparation.md
@@ -293,6 +392,7 @@ nav:
       - Radare2（R2）使用与插件安装: Tools/Reverse/Radare2.md
     - Pwn 工具:
       - GDB 在 Pwn 中的使用: Tools/Pwn/GDB.md
+      - Pwntools 使用指南: Tools/Pwn/Pwntools.md
     - 编码工具:
       - CyberChef: Tools/encoding/CyberChef.md
   - MCP:

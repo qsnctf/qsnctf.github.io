@@ -11,6 +11,7 @@
 ### Pwn 调试
 
 - [GDB 在 Pwn 中的使用](Pwn/GDB.md)：复现输入、检查寄存器和内存、处理 PIE/ASLR、定位崩溃偏移，并与 Pwntools、Pwndbg 或 GEF 配合调试。
+- [Pwntools 使用指南](Pwn/Pwntools.md)：统一本地进程、远程连接和 GDB 调试，处理二进制数据、ELF 元数据、循环模式及脚本日志。
 
 ### 编码与数据处理
 
