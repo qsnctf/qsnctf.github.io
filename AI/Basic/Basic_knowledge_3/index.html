@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -5953,7 +5953,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-sigmoid型函数" class="md-nav__link">
+  <a href="#11-Sigmoid型函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         1.1 Sigmoid型函数
@@ -5964,7 +5964,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-relu函数" class="md-nav__link">
+  <a href="#12-ReLU函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         1.2 ReLU函数
@@ -5975,7 +5975,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#13-swish函数" class="md-nav__link">
+  <a href="#13-Swish函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         1.3 Swish函数
@@ -5986,7 +5986,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#14-gelu函数" class="md-nav__link">
+  <a href="#14-GELU函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         1.4 GELU函数
@@ -5997,7 +5997,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#15-maxout单元" class="md-nav__link">
+  <a href="#15-Maxout单元" class="md-nav__link">
     <span class="md-ellipsis">
       
         1.5 Maxout单元
@@ -6697,7 +6697,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-sigmoid型函数" class="md-nav__link">
+  <a href="#11-Sigmoid型函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         1.1 Sigmoid型函数
@@ -6708,7 +6708,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-relu函数" class="md-nav__link">
+  <a href="#12-ReLU函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         1.2 ReLU函数
@@ -6719,7 +6719,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#13-swish函数" class="md-nav__link">
+  <a href="#13-Swish函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         1.3 Swish函数
@@ -6730,7 +6730,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#14-gelu函数" class="md-nav__link">
+  <a href="#14-GELU函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         1.4 GELU函数
@@ -6741,7 +6741,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#15-maxout单元" class="md-nav__link">
+  <a href="#15-Maxout单元" class="md-nav__link">
     <span class="md-ellipsis">
       
         1.5 Maxout单元
@@ -7048,7 +7048,7 @@ y = f\left(\sum_{i=1}^{n} w_i x_i + b\right) = f(\mathbf{w}^\top \mathbf{x} + b)
 \]</div>
 <p>其中 <span class="arithmatex">\(\mathbf{w} = [w_1, w_2, \ldots, w_n]^\top\)</span> 为权重向量，<span class="arithmatex">\(b\)</span> 为偏置项，<span class="arithmatex">\(f(\cdot)\)</span> 为激活函数。激活函数的选择对网络的表达能力和训练效率具有决定性影响。净输入（net input）通常记为 <span class="arithmatex">\(z = \mathbf{w}^\top \mathbf{x} + b\)</span>。</p>
 <p>激活函数需要满足以下理想性质：连续且几乎处处可微，以便于基于梯度的优化；输出值域有界或近似有界，以保证数值稳定性；单调递增或近似单调，以确保损失函数的凸性不被破坏；近似恒等变换（即 <span class="arithmatex">\(f(0) \approx 0\)</span>），使得网络在初始化阶段能够有效传播信息。</p>
-<h3 id="11-sigmoid型函数">1.1 Sigmoid型函数<a class="headerlink" href="#11-sigmoid型函数" title="Permanent link">¶</a></h3>
+<h3 id="11-Sigmoid型函数">1.1 Sigmoid型函数<a class="headerlink" href="#11-Sigmoid型函数" title="Permanent link">¶</a></h3>
 <p>Sigmoid型函数是一类具有S形曲线特征的函数族，其中最具代表性的两个函数为Logistic函数和Tanh函数。</p>
 <p><strong>Logistic函数</strong></p>
 <p>Logistic函数将实数域映射到 <span class="arithmatex">\((0, 1)\)</span> 区间，其定义为：</p>
@@ -7079,7 +7079,7 @@ y = f\left(\sum_{i=1}^{n} w_i x_i + b\right) = f(\mathbf{w}^\top \mathbf{x} + b)
 \text{hard-}\tanh(z) = \max(-1, \min(1, z))
 \]</div>
 <p>这些近似函数在保留非线性特征的同时显著降低了计算成本，尤其适用于移动端和嵌入式设备上的推理加速。</p>
-<h3 id="12-relu函数">1.2 ReLU函数<a class="headerlink" href="#12-relu函数" title="Permanent link">¶</a></h3>
+<h3 id="12-ReLU函数">1.2 ReLU函数<a class="headerlink" href="#12-ReLU函数" title="Permanent link">¶</a></h3>
 <p>修正线性单元（Rectified Linear Unit, ReLU）由Nair和Hinton（2010）引入深度学习领域，现已成为最广泛使用的激活函数：</p>
 <div class="arithmatex">\[
 \text{ReLU}(z) = \max(0, z) = \begin{cases} z, &amp; z &gt; 0 \\ 0, &amp; z \leq 0 \end{cases}
@@ -7097,7 +7097,7 @@ y = f\left(\sum_{i=1}^{n} w_i x_i + b\right) = f(\mathbf{w}^\top \mathbf{x} + b)
 \text{ELU}(z) = \begin{cases} z, &amp; z &gt; 0 \\ \gamma(e^z - 1), &amp; z \leq 0 \end{cases}
 \]</div>
 <p>ELU在负区间具有软饱和特性，其输出均值接近零，有助于加速收敛。超参数 <span class="arithmatex">\(\gamma \geq 0\)</span> 控制负区间饱和值，通常设为1。</p>
-<h3 id="13-swish函数">1.3 Swish函数<a class="headerlink" href="#13-swish函数" title="Permanent link">¶</a></h3>
+<h3 id="13-Swish函数">1.3 Swish函数<a class="headerlink" href="#13-Swish函数" title="Permanent link">¶</a></h3>
 <p>Swish函数由Ramachandran等人（2017）通过自动化搜索（automated search）技术发现，其定义为：</p>
 <div class="arithmatex">\[
 \text{Swish}(z) = z \cdot \sigma(\beta z)
@@ -7105,7 +7105,7 @@ y = f\left(\sum_{i=1}^{n} w_i x_i + b\right) = f(\mathbf{w}^\top \mathbf{x} + b)
 <p>其中 <span class="arithmatex">\(\sigma(\cdot)\)</span> 为Logistic函数，<span class="arithmatex">\(\beta\)</span> 为可学习参数或固定超参数。当 <span class="arithmatex">\(\beta = 1\)</span> 时，该函数通常被称为SiLU（Sigmoid Linear Unit）。</p>
 <p>Swish函数具有以下特征：非单调性——在负区间存在一个"缓冲区"，小的负输入仍可产生非零输出；平滑可微，处处具有良好定义的梯度；当 <span class="arithmatex">\(\beta \to 0\)</span> 时，Swish趋近于线性函数 <span class="arithmatex">\(z/2\)</span>；当 <span class="arithmatex">\(\beta \to \infty\)</span> 时，Swish趋近于ReLU。</p>
 <p>在CIFAR、ImageNet等基准测试中，Swish在多数任务上略优于ReLU，已被广泛应用于EfficientNet、GPT等现代架构中。</p>
-<h3 id="14-gelu函数">1.4 GELU函数<a class="headerlink" href="#14-gelu函数" title="Permanent link">¶</a></h3>
+<h3 id="14-GELU函数">1.4 GELU函数<a class="headerlink" href="#14-GELU函数" title="Permanent link">¶</a></h3>
 <p>高斯误差线性单元（Gaussian Error Linear Unit, GELU）由Hendrycks和Gimpel（2016）提出：</p>
 <div class="arithmatex">\[
 \text{GELU}(z) = z \cdot P(Z \leq z) = z \cdot \Phi(z)
@@ -7115,7 +7115,7 @@ y = f\left(\sum_{i=1}^{n} w_i x_i + b\right) = f(\mathbf{w}^\top \mathbf{x} + b)
 \text{GELU}(z) \approx 0.5z\left(1 + \tanh\left[\sqrt{2/\pi}(z + 0.044715z^3)\right]\right)
 \]</div>
 <p>GELU在NLP领域尤为流行，已成为BERT、GPT系列、Vision Transformer等Transformer架构的标准激活函数。与ReLU相比，GELU在零点附近更加平滑，有助于优化过程中的梯度流动。</p>
-<h3 id="15-maxout单元">1.5 Maxout单元<a class="headerlink" href="#15-maxout单元" title="Permanent link">¶</a></h3>
+<h3 id="15-Maxout单元">1.5 Maxout单元<a class="headerlink" href="#15-Maxout单元" title="Permanent link">¶</a></h3>
 <p>Maxout单元（Goodfellow et al., 2013）采用了一种完全不同的设计理念——不对净输入施加固定的非线性变换，而是对多组线性变换的输出取最大值：</p>
 <div class="arithmatex">\[
 \text{Maxout}(\mathbf{x}) = \max_{k \in [1, K]} \left(\mathbf{w}_k^\top \mathbf{x} + b_k\right)
@@ -7338,7 +7338,7 @@ F(\mathbf{x}) = \sum_{j=1}^{N} \alpha_j f\left(\mathbf{w}_j^\top \mathbf{x} + b_
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>

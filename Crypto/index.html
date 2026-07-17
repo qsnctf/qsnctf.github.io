@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#认识crypto" class="md-skip">
+        <a href="#认识Crypto" class="md-skip">
           跳转至
         </a>
       
@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -6370,7 +6370,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#认识crypto" class="md-nav__link">
+  <a href="#认识Crypto" class="md-nav__link">
     <span class="md-ellipsis">
       
         认识Crypto
@@ -6382,7 +6382,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#crypto题到底在考什么" class="md-nav__link">
+  <a href="#Crypto题到底在考什么" class="md-nav__link">
     <span class="md-ellipsis">
       
         Crypto题到底在考什么？
@@ -6460,7 +6460,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-古典密码classical-ciphers" class="md-nav__link">
+  <a href="#1-古典密码Classical-Ciphers" class="md-nav__link">
     <span class="md-ellipsis">
       
         1) 古典密码（Classical Ciphers）
@@ -6471,7 +6471,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-xor-与流密码one-time-pad--stream-cipher" class="md-nav__link">
+  <a href="#2-XOR-与流密码One-time-pad--Stream-Cipher" class="md-nav__link">
     <span class="md-ellipsis">
       
         2) XOR 与流密码（One-time pad / Stream Cipher）
@@ -6482,7 +6482,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-aes-对称加密ecbcbcctrgcm" class="md-nav__link">
+  <a href="#3-AES-对称加密ECBCBCCTRGCM" class="md-nav__link">
     <span class="md-ellipsis">
       
         3) AES 对称加密（ECB/CBC/CTR/GCM）
@@ -6494,7 +6494,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-ecb-模式泄露结构" class="md-nav__link">
+  <a href="#31-ECB-模式泄露结构" class="md-nav__link">
     <span class="md-ellipsis">
       
         3.1 ECB 模式（泄露结构）
@@ -6505,7 +6505,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-cbc-模式padding-oracle--位翻转" class="md-nav__link">
+  <a href="#32-CBC-模式Padding-Oracle--位翻转" class="md-nav__link">
     <span class="md-ellipsis">
       
         3.2 CBC 模式（Padding Oracle / 位翻转）
@@ -6516,7 +6516,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-ctr-模式流密码化" class="md-nav__link">
+  <a href="#33-CTR-模式流密码化" class="md-nav__link">
     <span class="md-ellipsis">
       
         3.3 CTR 模式（流密码化）
@@ -6527,7 +6527,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#34-gcmaead实现细节坑" class="md-nav__link">
+  <a href="#34-GCMAEAD实现细节坑" class="md-nav__link">
     <span class="md-ellipsis">
       
         3.4 GCM/AEAD（实现细节坑）
@@ -6543,7 +6543,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-rsa最常见的公钥题型" class="md-nav__link">
+  <a href="#4-RSA最常见的公钥题型" class="md-nav__link">
     <span class="md-ellipsis">
       
         4) RSA（最常见的公钥题型）
@@ -6554,7 +6554,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-lcgmt19937弱-prng随机数题" class="md-nav__link">
+  <a href="#7-LCGMT19937弱-PRNG随机数题" class="md-nav__link">
     <span class="md-ellipsis">
       
         7) LCG/MT19937/弱 PRNG（随机数题）
@@ -6664,8 +6664,8 @@
   <h1>介绍</h1>
 
 <p>在CTF（Capture The Flag）竞赛中，Crypto(密码)是指与密码学相关的题目。这类题目主要考察参赛者对 <strong>加密、解密、编码、哈希等</strong> 密码学知识的理解和应用能力。Crypto题目通常涉及多种加密算法、编码方式以及解密技巧，涵盖从基础到高级的密码学知识。</p>
-<h2 id="认识crypto">认识Crypto<a class="headerlink" href="#认识crypto" title="Permanent link">¶</a></h2>
-<h3 id="crypto题到底在考什么">Crypto题到底在考什么？<a class="headerlink" href="#crypto题到底在考什么" title="Permanent link">¶</a></h3>
+<h2 id="认识Crypto">认识Crypto<a class="headerlink" href="#认识Crypto" title="Permanent link">¶</a></h2>
+<h3 id="Crypto题到底在考什么">Crypto题到底在考什么？<a class="headerlink" href="#Crypto题到底在考什么" title="Permanent link">¶</a></h3>
 <p>很多人刷 CTF Crypto，会卡在一个错觉里：</p>
 <p>“Crypto = 很难的数学推导”。</p>
 <p>但真实情况更像——<strong>比赛把现实里最常见的密码学错误，打包成一个可解的谜题</strong>。你不需要发明新理论，你需要做的是：<strong>识别系统、还原链条、抓住薄弱环节</strong>。</p>
@@ -6711,7 +6711,7 @@
 <p>Crypto 的本质：逆向“安全假设”——当假设被破坏，整个系统就从“不可解”变成“可推”。</p>
 </blockquote>
 <h2 id="常见的的子类型与典型套路">常见的的子类型与典型套路<a class="headerlink" href="#常见的的子类型与典型套路" title="Permanent link">¶</a></h2>
-<h3 id="1-古典密码classical-ciphers"><strong>1) 古典密码（Classical Ciphers）</strong><a class="headerlink" href="#1-古典密码classical-ciphers" title="Permanent link">¶</a></h3>
+<h3 id="1-古典密码Classical-Ciphers"><strong>1) 古典密码（Classical Ciphers）</strong><a class="headerlink" href="#1-古典密码Classical-Ciphers" title="Permanent link">¶</a></h3>
 <p><strong>题面信号</strong>：全是字母/少量符号；密文不长；flag 格式明显（如 flag{}）；提示“key is word / shift”。</p>
 <p><strong>典型套路</strong></p>
 <ul>
@@ -6723,7 +6723,7 @@
 <blockquote>
 <p>核心逻辑：语言统计 + 格式约束 + 可枚举参数。</p>
 </blockquote>
-<h3 id="2-xor-与流密码one-time-pad--stream-cipher"><strong>2) XOR 与流密码（One-time pad / Stream Cipher）</strong><a class="headerlink" href="#2-xor-与流密码one-time-pad--stream-cipher" title="Permanent link">¶</a></h3>
+<h3 id="2-XOR-与流密码One-time-pad--Stream-Cipher"><strong>2) XOR 与流密码（One-time pad / Stream Cipher）</strong><a class="headerlink" href="#2-XOR-与流密码One-time-pad--Stream-Cipher" title="Permanent link">¶</a></h3>
 <p><strong>题面信号</strong>：出现 xor、key reused、stream、keystream；或给你两段密文；或密文是 hex/base64 且长度相同。</p>
 <p><strong>典型套路</strong></p>
 <ul>
@@ -6741,27 +6741,27 @@
 <blockquote>
 <p>核心逻辑：流密码最怕“重复”；一重复就能把系统变成代数题。</p>
 </blockquote>
-<h3 id="3-aes-对称加密ecbcbcctrgcm"><strong>3) AES 对称加密（ECB/CBC/CTR/GCM）</strong><a class="headerlink" href="#3-aes-对称加密ecbcbcctrgcm" title="Permanent link">¶</a></h3>
+<h3 id="3-AES-对称加密ECBCBCCTRGCM"><strong>3) AES 对称加密（ECB/CBC/CTR/GCM）</strong><a class="headerlink" href="#3-AES-对称加密ECBCBCCTRGCM" title="Permanent link">¶</a></h3>
 <p><strong>题面信号</strong>：出现 AES、iv、mode、padding、oracle，或提供一个“加密/解密接口”。</p>
-<h4 id="31-ecb-模式泄露结构"><strong>3.1 ECB 模式（泄露结构）</strong><a class="headerlink" href="#31-ecb-模式泄露结构" title="Permanent link">¶</a></h4>
+<h4 id="31-ECB-模式泄露结构"><strong>3.1 ECB 模式（泄露结构）</strong><a class="headerlink" href="#31-ECB-模式泄露结构" title="Permanent link">¶</a></h4>
 <p><strong>套路</strong>：相同明文块→相同密文块。</p>
 <ul>
 <li>图片/重复块可视化（“企鹅题”）</li>
 <li><strong>字节对齐 + 字典攻击</strong>（byte-at-a-time）：服务端给你 encrypt(prefix + secret)，你靠枚举每个字节匹配输出块。</li>
 </ul>
-<h4 id="32-cbc-模式padding-oracle--位翻转"><strong>3.2 CBC 模式（Padding Oracle / 位翻转）</strong><a class="headerlink" href="#32-cbc-模式padding-oracle--位翻转" title="Permanent link">¶</a></h4>
+<h4 id="32-CBC-模式Padding-Oracle--位翻转"><strong>3.2 CBC 模式（Padding Oracle / 位翻转）</strong><a class="headerlink" href="#32-CBC-模式Padding-Oracle--位翻转" title="Permanent link">¶</a></h4>
 <p><strong>套路</strong></p>
 <ul>
 <li><strong>Padding Oracle</strong>：错误回显能区分 padding 正误 → 逐字节解密。</li>
 <li><strong>CBC Bit Flipping</strong>：你可控前一块密文 → 可控下一块明文的特定位，构造 admin=true 等。</li>
 </ul>
-<h4 id="33-ctr-模式流密码化"><strong>3.3 CTR 模式（流密码化）</strong><a class="headerlink" href="#33-ctr-模式流密码化" title="Permanent link">¶</a></h4>
+<h4 id="33-CTR-模式流密码化"><strong>3.3 CTR 模式（流密码化）</strong><a class="headerlink" href="#33-CTR-模式流密码化" title="Permanent link">¶</a></h4>
 <p><strong>套路</strong></p>
 <ul>
 <li>nonce 重用同 XOR</li>
 <li>可编辑 oracle（提供 edit 接口）可直接恢复 keystream</li>
 </ul>
-<h4 id="34-gcmaead实现细节坑"><strong>3.4 GCM/AEAD（实现细节坑）</strong><a class="headerlink" href="#34-gcmaead实现细节坑" title="Permanent link">¶</a></h4>
+<h4 id="34-GCMAEAD实现细节坑"><strong>3.4 GCM/AEAD（实现细节坑）</strong><a class="headerlink" href="#34-GCMAEAD实现细节坑" title="Permanent link">¶</a></h4>
 <p><strong>套路</strong>（比赛常见方向）</p>
 <ul>
 <li>nonce 重用导致严重问题（取决于实现与泄露）</li>
@@ -6770,7 +6770,7 @@
 <blockquote>
 <p>核心逻辑：AES 本体很难破，能破的几乎都是**模式/接口/错误信息**。</p>
 </blockquote>
-<h3 id="4-rsa最常见的公钥题型"><strong>4) RSA（最常见的公钥题型）</strong><a class="headerlink" href="#4-rsa最常见的公钥题型" title="Permanent link">¶</a></h3>
+<h3 id="4-RSA最常见的公钥题型"><strong>4) RSA（最常见的公钥题型）</strong><a class="headerlink" href="#4-RSA最常见的公钥题型" title="Permanent link">¶</a></h3>
 <p><strong>题面信号</strong>：给 n, e, c，或者多个 n/多个 c；或者小e，p和q</p>
 <p><strong>典型套路</strong></p>
 <ul>
@@ -6796,7 +6796,7 @@
 <blockquote>
 <p>核心逻辑：RSA 题多数在考“分解变简单了”或“padding/参数不规范”。</p>
 </blockquote>
-<h3 id="7-lcgmt19937弱-prng随机数题"><strong>7) LCG/MT19937/弱 PRNG（随机数题）</strong><a class="headerlink" href="#7-lcgmt19937弱-prng随机数题" title="Permanent link">¶</a></h3>
+<h3 id="7-LCGMT19937弱-PRNG随机数题"><strong>7) LCG/MT19937/弱 PRNG（随机数题）</strong><a class="headerlink" href="#7-LCGMT19937弱-PRNG随机数题" title="Permanent link">¶</a></h3>
 <p><strong>题面信号</strong>：出现 “random”、“seed”、“timestamp”、“next()”、或给你一串输出让你预测下一个。</p>
 <p><strong>典型套路</strong></p>
 <ul>
@@ -6918,7 +6918,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>

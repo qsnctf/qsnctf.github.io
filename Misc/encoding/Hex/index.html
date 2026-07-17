@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hex十六进制编码" class="md-skip">
+        <a href="#Hex十六进制编码" class="md-skip">
           跳转至
         </a>
       
@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -2990,7 +2990,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#16进制与ascii" class="md-nav__link">
+  <a href="#16进制与ASCII" class="md-nav__link">
     <span class="md-ellipsis">
       
         16进制与ASCII
@@ -3024,7 +3024,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#字符串ctf" class="md-nav__link">
+  <a href="#字符串CTF" class="md-nav__link">
     <span class="md-ellipsis">
       
         字符串："CTF"
@@ -3035,7 +3035,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#字符串hello" class="md-nav__link">
+  <a href="#字符串Hello" class="md-nav__link">
     <span class="md-ellipsis">
       
         字符串："Hello"
@@ -6537,7 +6537,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#16进制与ascii" class="md-nav__link">
+  <a href="#16进制与ASCII" class="md-nav__link">
     <span class="md-ellipsis">
       
         16进制与ASCII
@@ -6571,7 +6571,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#字符串ctf" class="md-nav__link">
+  <a href="#字符串CTF" class="md-nav__link">
     <span class="md-ellipsis">
       
         字符串："CTF"
@@ -6582,7 +6582,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#字符串hello" class="md-nav__link">
+  <a href="#字符串Hello" class="md-nav__link">
     <span class="md-ellipsis">
       
         字符串："Hello"
@@ -6707,12 +6707,12 @@
   
 
 
-<h1 id="hex十六进制编码">Hex（十六进制编码）<a class="headerlink" href="#hex十六进制编码" title="Permanent link">¶</a></h1>
+<h1 id="Hex十六进制编码">Hex（十六进制编码）<a class="headerlink" href="#Hex十六进制编码" title="Permanent link">¶</a></h1>
 <h2 id="什么是16进制编码">什么是16进制编码？<a class="headerlink" href="#什么是16进制编码" title="Permanent link">¶</a></h2>
 <p><strong>16 进制编码就是用十六进制（0–9 + A–F）</strong> 来表示数据的一种方式。CTF 中经常会利用 Hex 来隐藏字符串、Payload、Shellcode 或文件内容。</p>
 <h2 id="16-进制编码的基本原理">16 进制编码的基本原理<a class="headerlink" href="#16-进制编码的基本原理" title="Permanent link">¶</a></h2>
 <p>文本转16进制的原理是首先将文本中的每个字符根据其在特定字符集（如ASCII码、Unicode等）中的编码转换为二进制，然后将二进制数转换成十六进制数。具体来说，一个字符在计算机中通常占用一个或多个字节（例如，英文字符占一个字节，汉字通常占两个或更多字节），然后将这些字节的二进制值按顺序转换为十六进制表示形式。</p>
-<h2 id="16进制与ascii">16进制与ASCII<a class="headerlink" href="#16进制与ascii" title="Permanent link">¶</a></h2>
+<h2 id="16进制与ASCII">16进制与ASCII<a class="headerlink" href="#16进制与ASCII" title="Permanent link">¶</a></h2>
 <p>ASCII 是一种字符编码方式，每个字符用 <strong>1 个字节（8 bit）</strong> 表示。</p>
 <p>例如：</p>
 <ul>
@@ -6801,7 +6801,7 @@
    &amp;= 108
 \end{aligned}
 \]</div>
-<h3 id="字符串ctf">字符串："CTF"<a class="headerlink" href="#字符串ctf" title="Permanent link">¶</a></h3>
+<h3 id="字符串CTF">字符串："CTF"<a class="headerlink" href="#字符串CTF" title="Permanent link">¶</a></h3>
 <p>ASCII 字节为：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>C → 43
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>T → 54
@@ -6813,7 +6813,7 @@
 <p>也就是：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>"CTF" = 0x43 0x54 0x46
 </code></pre></div>
-<h3 id="字符串hello">字符串："Hello"<a class="headerlink" href="#字符串hello" title="Permanent link">¶</a></h3>
+<h3 id="字符串Hello">字符串："Hello"<a class="headerlink" href="#字符串Hello" title="Permanent link">¶</a></h3>
 <p>ASCII → Hex：</p>
 <table>
 <thead>
@@ -6944,7 +6944,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>

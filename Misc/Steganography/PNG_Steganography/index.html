@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#png-隐写术" class="md-skip">
+        <a href="#PNG-隐写术" class="md-skip">
           跳转至
         </a>
       
@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -3698,7 +3698,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lsb隐写" class="md-nav__link">
+  <a href="#LSB隐写" class="md-nav__link">
     <span class="md-ellipsis">
       
         LSB隐写
@@ -3822,7 +3822,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#在频域里做加法嵌入fft" class="md-nav__link">
+  <a href="#在频域里做加法嵌入FFT" class="md-nav__link">
     <span class="md-ellipsis">
       
         在频域里做加法嵌入（FFT）
@@ -3854,7 +3854,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#idat块隐写" class="md-nav__link">
+  <a href="#IDAT块隐写" class="md-nav__link">
     <span class="md-ellipsis">
       
         IDAT块隐写
@@ -6610,7 +6610,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lsb隐写" class="md-nav__link">
+  <a href="#LSB隐写" class="md-nav__link">
     <span class="md-ellipsis">
       
         LSB隐写
@@ -6734,7 +6734,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#在频域里做加法嵌入fft" class="md-nav__link">
+  <a href="#在频域里做加法嵌入FFT" class="md-nav__link">
     <span class="md-ellipsis">
       
         在频域里做加法嵌入（FFT）
@@ -6766,7 +6766,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#idat块隐写" class="md-nav__link">
+  <a href="#IDAT块隐写" class="md-nav__link">
     <span class="md-ellipsis">
       
         IDAT块隐写
@@ -6897,9 +6897,9 @@
   
 
 
-<h1 id="png-隐写术">PNG 隐写术<a class="headerlink" href="#png-隐写术" title="Permanent link">¶</a></h1>
+<h1 id="PNG-隐写术">PNG 隐写术<a class="headerlink" href="#PNG-隐写术" title="Permanent link">¶</a></h1>
 <p>对于PNG来说，隐写术有很多很多，比如我们前面所讲的一个高宽问题，针对于这种我们只需要修改高宽就可以解决，但是后面也有很多更复杂的隐写术。</p>
-<h2 id="lsb隐写">LSB隐写<a class="headerlink" href="#lsb隐写" title="Permanent link">¶</a></h2>
+<h2 id="LSB隐写">LSB隐写<a class="headerlink" href="#LSB隐写" title="Permanent link">¶</a></h2>
 <p><strong>LSB(Least Significant Bit) 隐写</strong> 是一种常见的信息隐藏技术，主要用于在图像中嵌入秘密信息。它通过修改图像像素的最低有效位来实现信息的隐藏，而这种修改对人眼几乎不可察觉。</p>
 <h3 id="原理">原理<a class="headerlink" href="#原理" title="Permanent link">¶</a></h3>
 <p>图片中的像素一般都是由RGB三原色（红绿蓝）组成，每一种颜色占用8位，取值范围为<code>0x00~0xFF</code>，即有256中颜色，一共包含了256的3次方的颜色，即16777216中颜色。而人类的眼睛可以区分约1000万种不同的颜色，这就意味着人类的眼睛无法区分余下的颜色大约有6777216种。</p>
@@ -7034,7 +7034,7 @@
 <li><code>rwn[H-i-1][W-j-1] = hwm[i][j]</code></li>
 </ul>
 <p>这样<code>rwm</code>覆盖整张图，而且带有对称结构（这样也有助于后面FFT逆变化后取实部时更“稳定”）。</p>
-<h4 id="在频域里做加法嵌入fft">在频域里做加法嵌入（FFT）<a class="headerlink" href="#在频域里做加法嵌入fft" title="Permanent link">¶</a></h4>
+<h4 id="在频域里做加法嵌入FFT">在频域里做加法嵌入（FFT）<a class="headerlink" href="#在频域里做加法嵌入FFT" title="Permanent link">¶</a></h4>
 <p>核心嵌入就是两行：</p>
 <ul>
 <li><code>f1 = fft2(img)</code>（原图频谱）</li>
@@ -7050,7 +7050,7 @@
 <li><code>rwm = real((f2 - f1) / alpha)</code> ——直接把当初加进去的扰动“减出来”</li>
 </ol>
 <p>然后再用相同的<code>seed</code>生成同样的<code>m,n</code>，把置乱逆回去（把<code>rwm</code>的上半部分按<code>m,n</code>，放回正确的位置），最后再用对称性把另一半补齐，写出水印图。</p>
-<h2 id="idat块隐写">IDAT块隐写<a class="headerlink" href="#idat块隐写" title="Permanent link">¶</a></h2>
+<h2 id="IDAT块隐写">IDAT块隐写<a class="headerlink" href="#IDAT块隐写" title="Permanent link">¶</a></h2>
 <p>在正常的图片里，所有的数据都是写入IDAT块中的，且是按顺序依次进行填充的，也就是说，第一个IDAT块填满以后才会开启第二块，并且每个IDAT块都有独属于它自己的CRC。</p>
 <p>那么这就会出现一个问题，可以通过伪造IDAT的CRC值进行编码，这是一个考点，也是一个出题点，这种会造成图片传输损坏，但是也会隐藏传输数据。</p>
 <p>另外也会出现一种情况，一个完整图片，所有的IDAT块都是正常的，那么有没有可能去添加一个不属于这张图片的IDAT块呢？</p>
@@ -7186,7 +7186,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>

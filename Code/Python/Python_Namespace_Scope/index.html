@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python3-命名空间和作用域" class="md-skip">
+        <a href="#Python3-命名空间和作用域" class="md-skip">
           跳转至
         </a>
       
@@ -1668,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -2687,7 +2687,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-内置命名空间built-in-namespace" class="md-nav__link">
+  <a href="#1-内置命名空间Built-in-Namespace" class="md-nav__link">
     <span class="md-ellipsis">
       
         1. 内置命名空间（Built-in Namespace）
@@ -2698,7 +2698,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-全局命名空间global-namespace" class="md-nav__link">
+  <a href="#2-全局命名空间Global-Namespace" class="md-nav__link">
     <span class="md-ellipsis">
       
         2. 全局命名空间（Global Namespace）
@@ -2709,7 +2709,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-局部命名空间local-namespace" class="md-nav__link">
+  <a href="#3-局部命名空间Local-Namespace" class="md-nav__link">
     <span class="md-ellipsis">
       
         3. 局部命名空间（Local Namespace）
@@ -2764,7 +2764,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#legb-规则" class="md-nav__link">
+  <a href="#LEGB-规则" class="md-nav__link">
     <span class="md-ellipsis">
       
         LEGB 规则
@@ -3103,7 +3103,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#作用域规则legb" class="md-nav__link">
+  <a href="#作用域规则LEGB" class="md-nav__link">
     <span class="md-ellipsis">
       
         作用域规则（LEGB）
@@ -6934,7 +6934,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-内置命名空间built-in-namespace" class="md-nav__link">
+  <a href="#1-内置命名空间Built-in-Namespace" class="md-nav__link">
     <span class="md-ellipsis">
       
         1. 内置命名空间（Built-in Namespace）
@@ -6945,7 +6945,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-全局命名空间global-namespace" class="md-nav__link">
+  <a href="#2-全局命名空间Global-Namespace" class="md-nav__link">
     <span class="md-ellipsis">
       
         2. 全局命名空间（Global Namespace）
@@ -6956,7 +6956,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-局部命名空间local-namespace" class="md-nav__link">
+  <a href="#3-局部命名空间Local-Namespace" class="md-nav__link">
     <span class="md-ellipsis">
       
         3. 局部命名空间（Local Namespace）
@@ -7011,7 +7011,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#legb-规则" class="md-nav__link">
+  <a href="#LEGB-规则" class="md-nav__link">
     <span class="md-ellipsis">
       
         LEGB 规则
@@ -7350,7 +7350,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#作用域规则legb" class="md-nav__link">
+  <a href="#作用域规则LEGB" class="md-nav__link">
     <span class="md-ellipsis">
       
         作用域规则（LEGB）
@@ -7475,14 +7475,14 @@
   
 
 
-<h1 id="python3-命名空间和作用域">Python3 命名空间和作用域<a class="headerlink" href="#python3-命名空间和作用域" title="Permanent link">¶</a></h1>
+<h1 id="Python3-命名空间和作用域">Python3 命名空间和作用域<a class="headerlink" href="#Python3-命名空间和作用域" title="Permanent link">¶</a></h1>
 <p>Python 的命名空间和作用域是理解变量访问和内存管理的重要概念。它们决定了变量在何处可以被访问以及如何被查找。</p>
 <h2 id="命名空间">命名空间<a class="headerlink" href="#命名空间" title="Permanent link">¶</a></h2>
 <h3 id="什么是命名空间">什么是命名空间<a class="headerlink" href="#什么是命名空间" title="Permanent link">¶</a></h3>
 <p>命名空间（Namespace）是一个从名称到对象的映射。Python 中的命名空间就像字典一样，键是变量名，值是变量的值。命名空间提供了在项目中避免命名冲突的方法。</p>
 <h3 id="命名空间的类型">命名空间的类型<a class="headerlink" href="#命名空间的类型" title="Permanent link">¶</a></h3>
 <p>Python 中有几种类型的命名空间：</p>
-<h4 id="1-内置命名空间built-in-namespace">1. 内置命名空间（Built-in Namespace）<a class="headerlink" href="#1-内置命名空间built-in-namespace" title="Permanent link">¶</a></h4>
+<h4 id="1-内置命名空间Built-in-Namespace">1. 内置命名空间（Built-in Namespace）<a class="headerlink" href="#1-内置命名空间Built-in-Namespace" title="Permanent link">¶</a></h4>
 <p>包含 Python 内置函数和异常的命名空间，在 Python 解释器启动时创建。</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 内置命名空间中的函数</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">))</span>        <span class="c1"># 5 - len 是内置函数</span>
@@ -7493,7 +7493,7 @@
 <a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">builtins</span>
 <a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">builtins</span><span class="p">)[:</span><span class="mi">10</span><span class="p">])</span>  <span class="c1"># 显示前10个内置函数</span>
 </code></pre></div>
-<h4 id="2-全局命名空间global-namespace">2. 全局命名空间（Global Namespace）<a class="headerlink" href="#2-全局命名空间global-namespace" title="Permanent link">¶</a></h4>
+<h4 id="2-全局命名空间Global-Namespace">2. 全局命名空间（Global Namespace）<a class="headerlink" href="#2-全局命名空间Global-Namespace" title="Permanent link">¶</a></h4>
 <p>每个模块（文件）都有一个全局命名空间，包含模块级别的变量、函数、类等。</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 全局命名空间示例</span>
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">module_var</span> <span class="o">=</span> <span class="s2">"这是模块级别的变量"</span>
@@ -7512,7 +7512,7 @@
 <a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'_'</span><span class="p">):</span>
 <a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">globals</span><span class="p">()[</span><span class="n">name</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div>
-<h4 id="3-局部命名空间local-namespace">3. 局部命名空间（Local Namespace）<a class="headerlink" href="#3-局部命名空间local-namespace" title="Permanent link">¶</a></h4>
+<h4 id="3-局部命名空间Local-Namespace">3. 局部命名空间（Local Namespace）<a class="headerlink" href="#3-局部命名空间Local-Namespace" title="Permanent link">¶</a></h4>
 <p>每个函数调用时都会创建一个局部命名空间，包含函数内部的变量。</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">local_namespace_demo</span><span class="p">():</span>
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="sd">"""演示局部命名空间"""</span>
@@ -7561,7 +7561,7 @@
 <h2 id="作用域">作用域<a class="headerlink" href="#作用域" title="Permanent link">¶</a></h2>
 <h3 id="什么是作用域">什么是作用域<a class="headerlink" href="#什么是作用域" title="Permanent link">¶</a></h3>
 <p>作用域（Scope）决定了变量在程序中的可访问范围。Python 使用 LEGB 规则来确定变量的查找顺序。</p>
-<h3 id="legb-规则">LEGB 规则<a class="headerlink" href="#legb-规则" title="Permanent link">¶</a></h3>
+<h3 id="LEGB-规则">LEGB 规则<a class="headerlink" href="#LEGB-规则" title="Permanent link">¶</a></h3>
 <p>LEGB 是 Python 中变量查找的四个层次：</p>
 <ol>
 <li><strong>L (Local)</strong> - 局部作用域</li>
@@ -8145,7 +8145,7 @@
 <li><strong>全局命名空间</strong>：模块级别的变量和函数</li>
 <li><strong>局部命名空间</strong>：函数内部的变量</li>
 </ol>
-<h3 id="作用域规则legb">作用域规则（LEGB）<a class="headerlink" href="#作用域规则legb" title="Permanent link">¶</a></h3>
+<h3 id="作用域规则LEGB">作用域规则（LEGB）<a class="headerlink" href="#作用域规则LEGB" title="Permanent link">¶</a></h3>
 <ol>
 <li><strong>L (Local)</strong>：局部作用域</li>
 <li><strong>E (Enclosing)</strong>：闭包函数外的函数作用域  </li>
@@ -8261,7 +8261,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>

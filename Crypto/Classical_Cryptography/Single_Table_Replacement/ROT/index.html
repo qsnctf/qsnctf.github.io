@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rot13字母" class="md-skip">
+        <a href="#ROT13字母" class="md-skip">
           跳转至
         </a>
       
@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -4184,7 +4184,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rot13字母" class="md-nav__link">
+  <a href="#ROT13字母" class="md-nav__link">
     <span class="md-ellipsis">
       
         ROT13（字母）
@@ -4195,7 +4195,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rot18字母数字" class="md-nav__link">
+  <a href="#ROT18字母数字" class="md-nav__link">
     <span class="md-ellipsis">
       
         ROT18（字母+数字）
@@ -4206,7 +4206,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rot47ascii可打印字符" class="md-nav__link">
+  <a href="#ROT47ASCII可打印字符" class="md-nav__link">
     <span class="md-ellipsis">
       
         ROT47（ASCII可打印字符）
@@ -4217,7 +4217,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python-实现" class="md-nav__link">
+  <a href="#Python-实现" class="md-nav__link">
     <span class="md-ellipsis">
       
         Python 实现
@@ -6472,7 +6472,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rot13字母" class="md-nav__link">
+  <a href="#ROT13字母" class="md-nav__link">
     <span class="md-ellipsis">
       
         ROT13（字母）
@@ -6483,7 +6483,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rot18字母数字" class="md-nav__link">
+  <a href="#ROT18字母数字" class="md-nav__link">
     <span class="md-ellipsis">
       
         ROT18（字母+数字）
@@ -6494,7 +6494,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rot47ascii可打印字符" class="md-nav__link">
+  <a href="#ROT47ASCII可打印字符" class="md-nav__link">
     <span class="md-ellipsis">
       
         ROT47（ASCII可打印字符）
@@ -6505,7 +6505,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python-实现" class="md-nav__link">
+  <a href="#Python-实现" class="md-nav__link">
     <span class="md-ellipsis">
       
         Python 实现
@@ -6737,7 +6737,7 @@
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>输入: "2019"
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>输出: "7564"
 </code></pre></div>
-<h2 id="rot13字母">ROT13（字母）<a class="headerlink" href="#rot13字母" title="Permanent link">¶</a></h2>
+<h2 id="ROT13字母">ROT13（字母）<a class="headerlink" href="#ROT13字母" title="Permanent link">¶</a></h2>
 <p><strong>规则</strong>：<code>new_letter = (ord(letter) - base + 13) % 26 + base</code></p>
 <table>
 <thead>
@@ -6774,7 +6774,7 @@
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>输出: "UryybJbeyq"
 </code></pre></div>
 <hr/>
-<h2 id="rot18字母数字">ROT18（字母+数字）<a class="headerlink" href="#rot18字母数字" title="Permanent link">¶</a></h2>
+<h2 id="ROT18字母数字">ROT18（字母+数字）<a class="headerlink" href="#ROT18字母数字" title="Permanent link">¶</a></h2>
 <p><strong>规则</strong>：字母用 ROT13，数字用 ROT5</p>
 <p><strong>示例</strong>：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>输入: "Hello123"
@@ -6791,7 +6791,7 @@
 <li>3 → 8</li>
 </ul>
 <hr/>
-<h2 id="rot47ascii可打印字符">ROT47（ASCII可打印字符）<a class="headerlink" href="#rot47ascii可打印字符" title="Permanent link">¶</a></h2>
+<h2 id="ROT47ASCII可打印字符">ROT47（ASCII可打印字符）<a class="headerlink" href="#ROT47ASCII可打印字符" title="Permanent link">¶</a></h2>
 <p><strong>规则</strong>：对 <code>!</code> 到 <code>~</code> 的 ASCII 字符循环 +47</p>
 <p><strong>示例</strong>：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>输入: "Hello 123!"
@@ -6809,7 +6809,7 @@
 <li>3 → C</li>
 <li>! → :</li>
 </ul>
-<h2 id="python-实现">Python 实现<a class="headerlink" href="#python-实现" title="Permanent link">¶</a></h2>
+<h2 id="Python-实现">Python 实现<a class="headerlink" href="#Python-实现" title="Permanent link">¶</a></h2>
 <p>这是一个通用 Python 函数，可以实现 ROT5/13/18/47 加密和解密（因为轮换对称，加密=解密）。</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">rot</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'ROT13'</span><span class="p">):</span>
 <a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="n">result</span> <span class="o">=</span> <span class="s1">''</span>
@@ -6962,7 +6962,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>

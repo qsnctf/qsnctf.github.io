@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#png文件修复" class="md-skip">
+        <a href="#PNG文件修复" class="md-skip">
           跳转至
         </a>
       
@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -3544,7 +3544,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
+  <a href="#Header" class="md-nav__link">
     <span class="md-ellipsis">
       
         Header
@@ -3555,7 +3555,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ihdr" class="md-nav__link">
+  <a href="#IHDR" class="md-nav__link">
     <span class="md-ellipsis">
       
         IHDR
@@ -3566,7 +3566,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#idat" class="md-nav__link">
+  <a href="#IDAT" class="md-nav__link">
     <span class="md-ellipsis">
       
         IDAT
@@ -6454,7 +6454,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
+  <a href="#Header" class="md-nav__link">
     <span class="md-ellipsis">
       
         Header
@@ -6465,7 +6465,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ihdr" class="md-nav__link">
+  <a href="#IHDR" class="md-nav__link">
     <span class="md-ellipsis">
       
         IHDR
@@ -6476,7 +6476,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#idat" class="md-nav__link">
+  <a href="#IDAT" class="md-nav__link">
     <span class="md-ellipsis">
       
         IDAT
@@ -6585,15 +6585,15 @@
   
 
 
-<h1 id="png文件修复">PNG文件修复<a class="headerlink" href="#png文件修复" title="Permanent link">¶</a></h1>
-<h2 id="header">Header<a class="headerlink" href="#header" title="Permanent link">¶</a></h2>
+<h1 id="PNG文件修复">PNG文件修复<a class="headerlink" href="#PNG文件修复" title="Permanent link">¶</a></h1>
+<h2 id="Header">Header<a class="headerlink" href="#Header" title="Permanent link">¶</a></h2>
 <p>在header部分中，我们可以看到，PNG是由</p>
 <p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>89 50 4E 47 0D 0A 1A 0A
 </code></pre></div>
 因此有时会进行删除PNG的文件头，在Windows中会出现无法打开的现象，在Linux环境中，会出现<code>读入PNG图像文件时发生严重错误：Not a PNG file</code>的字样</p>
 <p>修复流程，我们需要在16进制编辑器里面，例如WinHex或010editor中插入文件头数据即可。</p>
 <p><img alt="" src="../attachments/image.png"/></p>
-<h2 id="ihdr">IHDR<a class="headerlink" href="#ihdr" title="Permanent link">¶</a></h2>
+<h2 id="IHDR">IHDR<a class="headerlink" href="#IHDR" title="Permanent link">¶</a></h2>
 <p>在PNG中，IHDR部分存在着重要的信息，它定义了图像最基础、最核心的属性，没有它，解码器就无法正确地解析和显示图像。</p>
 <p>每个数据块（Chunk）都由四部分组成：</p>
 <ul>
@@ -6703,7 +6703,7 @@
 <a href="#__codelineno-6-31" id="__codelineno-6-31" name="__codelineno-6-31"></a>                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"高度: </span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">, hex: </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <a href="#__codelineno-6-32" id="__codelineno-6-32" name="__codelineno-6-32"></a>                <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="idat">IDAT<a class="headerlink" href="#idat" title="Permanent link">¶</a></h2>
+<h2 id="IDAT">IDAT<a class="headerlink" href="#IDAT" title="Permanent link">¶</a></h2>
 <p>PNG的图像数据块（IDAT）存储图像的实际数据，相当于BMP图像的图像数据，由于PNG可包含多幅图像，所以PNG的图像数据块可能是一副图像的数据组成，也可能是多幅图像的数据组成。</p>
 <p>如果图片过小，可能一个IDAT块都会装不下，因此在十六进制编辑器里面，只会存在一个IDAT块。</p>
 <p>并且在IDAT中，每一个IDAT块都存在一个CRC的值，因此计算每一个块的CRC大小，即可判断IDAT块是否发生改变。</p>
@@ -6813,7 +6813,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>

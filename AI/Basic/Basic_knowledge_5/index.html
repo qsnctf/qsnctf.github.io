@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -6215,7 +6215,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-lstm网络的各种变体" class="md-nav__link">
+  <a href="#62-LSTM网络的各种变体" class="md-nav__link">
     <span class="md-ellipsis">
       
         6.2 LSTM网络的各种变体
@@ -6954,7 +6954,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-lstm网络的各种变体" class="md-nav__link">
+  <a href="#62-LSTM网络的各种变体" class="md-nav__link">
     <span class="md-ellipsis">
       
         6.2 LSTM网络的各种变体
@@ -7304,7 +7304,7 @@ y_t = f\left(y_{t-1}, y_{t-2}, \ldots, y_{t-p}, \; \mathbf{x}_t, \mathbf{x}_{t-1
 \frac{\partial \mathbf{c}_t}{\partial \mathbf{c}_{t-1}} = \mathbf{f}_t
 \]</div>
 <p>当遗忘门接近1时，梯度乘子接近1，有效地缓解了梯度消失问题。这与ResNet中的残差连接具有异曲同工之妙——都是通过线性直通路径来维持梯度流。</p>
-<h3 id="62-lstm网络的各种变体">6.2 LSTM网络的各种变体<a class="headerlink" href="#62-lstm网络的各种变体" title="Permanent link">¶</a></h3>
+<h3 id="62-LSTM网络的各种变体">6.2 LSTM网络的各种变体<a class="headerlink" href="#62-LSTM网络的各种变体" title="Permanent link">¶</a></h3>
 <p>自LSTM提出以来，研究者探索了大量变体以改进其性能或降低复杂度。</p>
 <p><strong>窥视孔连接（Peephole Connections）</strong>（Gers &amp; Schmidhuber, 2000）：允许门控信号直接访问记忆单元状态 <span class="arithmatex">\(\mathbf{c}_{t-1}\)</span>：</p>
 <div class="arithmatex">\[
@@ -7496,7 +7496,7 @@ $$} + (1 - \mathbf{z}_t) \odot \tilde{\mathbf{h}</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>

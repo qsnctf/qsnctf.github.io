@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -4489,7 +4489,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#kasiski攻击" class="md-nav__link">
+  <a href="#Kasiski攻击" class="md-nav__link">
     <span class="md-ellipsis">
       
         Kasiski攻击
@@ -6763,7 +6763,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#kasiski攻击" class="md-nav__link">
+  <a href="#Kasiski攻击" class="md-nav__link">
     <span class="md-ellipsis">
       
         Kasiski攻击
@@ -7247,7 +7247,7 @@ $$
 <p>容易被 Kasiski /攻击：通过密文重复片段、重合指数等方法推测密钥长度，再做分组频率分析即可恢复密钥与明文</p>
 <p>短密钥很脆弱：密钥越短，周期性越强，越容易被统计方法识别</p>
 <h2 id="补充">补充<a class="headerlink" href="#补充" title="Permanent link">¶</a></h2>
-<h3 id="kasiski攻击">Kasiski攻击<a class="headerlink" href="#kasiski攻击" title="Permanent link">¶</a></h3>
+<h3 id="Kasiski攻击">Kasiski攻击<a class="headerlink" href="#Kasiski攻击" title="Permanent link">¶</a></h3>
 <p>如果我们知道了密钥的长度m，破解难度就会降低。我们使用Kasiski测试，将相同字母组找出来，然后求距离差的最大公约数gcd()，由此猜测m。</p>
 <p>因为若用给定的m个密钥表周期地对明文字母进行加密，则当明文中有两个相同的字母组（长度大于3）在明文序列中间隔得字母数为m的倍数时，这两个明文字母组对应的密文字母组必相同。但反过来，若密文中出现两个相同的字母组，它们所对应的明文字母组未必相同，但相同的可能性极大。所以我们可以在密文中寻找重复次数&gt;=3的字母组。然后计算重复字母组的两两相邻的距离差</p>
 <h2 id="练习题">练习题<a class="headerlink" href="#练习题" title="Permanent link">¶</a></h2>
@@ -7364,7 +7364,7 @@ $$
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>

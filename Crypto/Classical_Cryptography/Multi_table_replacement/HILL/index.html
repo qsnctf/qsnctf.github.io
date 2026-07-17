@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hill密码详解" class="md-skip">
+        <a href="#HILL密码详解" class="md-skip">
           跳转至
         </a>
       
@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -4355,7 +4355,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#python完整代码" class="md-nav__link">
+  <a href="#Python完整代码" class="md-nav__link">
     <span class="md-ellipsis">
       
         Python完整代码
@@ -4410,7 +4410,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hill-密码的攻击方法" class="md-nav__link">
+  <a href="#HILL-密码的攻击方法" class="md-nav__link">
     <span class="md-ellipsis">
       
         HILL 密码的攻击方法
@@ -6629,7 +6629,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#python完整代码" class="md-nav__link">
+  <a href="#Python完整代码" class="md-nav__link">
     <span class="md-ellipsis">
       
         Python完整代码
@@ -6684,7 +6684,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hill-密码的攻击方法" class="md-nav__link">
+  <a href="#HILL-密码的攻击方法" class="md-nav__link">
     <span class="md-ellipsis">
       
         HILL 密码的攻击方法
@@ -6869,7 +6869,7 @@
   
 
 
-<h1 id="hill密码详解">HILL密码详解<a class="headerlink" href="#hill密码详解" title="Permanent link">¶</a></h1>
+<h1 id="HILL密码详解">HILL密码详解<a class="headerlink" href="#HILL密码详解" title="Permanent link">¶</a></h1>
 <h2 id="概述">概述<a class="headerlink" href="#概述" title="Permanent link">¶</a></h2>
 <p>HILL密码(HILL Cipher)是一种经典的多字母替换密码，基于线性代数的矩阵乘法来对明文分组加密。它由Lester S.HILL在1929年提出：把字母映射为数字，将明文按固定长度组成向量，与一个nxn的密钥矩阵相乘并对26取模得到密文；解密则需要该密钥矩阵在模26下可逆，才能计算逆矩阵恢复明文</p>
 <h2 id="加密原理">加密原理<a class="headerlink" href="#加密原理" title="Permanent link">¶</a></h2>
@@ -6964,7 +6964,7 @@
 <p>7对应的是h</p>
 <p>5对应的是f</p>
 <h2 id="代码实现">代码实现<a class="headerlink" href="#代码实现" title="Permanent link">¶</a></h2>
-<h3 id="python完整代码">Python完整代码<a class="headerlink" href="#python完整代码" title="Permanent link">¶</a></h3>
+<h3 id="Python完整代码">Python完整代码<a class="headerlink" href="#Python完整代码" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
@@ -7129,7 +7129,7 @@
 <li><strong>密钥矩阵有可逆性限制</strong>：必须满足$ \gcd(\det(K), 26)=1$ 才能解密，这会缩小可用密钥空间</li>
 <li><strong>安全性不符合现代标准</strong>：在现代计算能力下，Hill 适合学习，不适合真实通信/数据保护</li>
 </ul>
-<h2 id="hill-密码的攻击方法">HILL 密码的攻击方法<a class="headerlink" href="#hill-密码的攻击方法" title="Permanent link">¶</a></h2>
+<h2 id="HILL-密码的攻击方法">HILL 密码的攻击方法<a class="headerlink" href="#HILL-密码的攻击方法" title="Permanent link">¶</a></h2>
 <h3 id="1-仅密文攻击">(1) 仅密文攻击<a class="headerlink" href="#1-仅密文攻击" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>n 元组频率分析</strong>：Hill 是按 n 个字母分组加密的，所以攻击者会统计密文中的二元组/三元组的出现规律，结合语言特征推测明文结构。</li>
@@ -7267,7 +7267,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>

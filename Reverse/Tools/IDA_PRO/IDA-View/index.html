@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ida-view-反汇编视图" class="md-skip">
+        <a href="#IDA-View-反汇编视图" class="md-skip">
           跳转至
         </a>
       
@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -5634,7 +5634,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ida-view-反汇编视图" class="md-nav__link">
+  <a href="#IDA-View-反汇编视图" class="md-nav__link">
     <span class="md-ellipsis">
       
         IDA-View 反汇编视图
@@ -5646,7 +5646,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#默认视图graph-view" class="md-nav__link">
+  <a href="#默认视图Graph-View" class="md-nav__link">
     <span class="md-ellipsis">
       
         默认视图：Graph View
@@ -5657,7 +5657,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#text-view线性文本视图" class="md-nav__link">
+  <a href="#Text-View线性文本视图" class="md-nav__link">
     <span class="md-ellipsis">
       
         Text View（线性文本视图）
@@ -5673,7 +5673,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ida-view-中每一行的含义" class="md-nav__link">
+  <a href="#IDA-View-中每一行的含义" class="md-nav__link">
     <span class="md-ellipsis">
       
         IDA-View 中每一行的含义
@@ -5684,7 +5684,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ida-view-可进行的核心操作" class="md-nav__link">
+  <a href="#IDA-View-可进行的核心操作" class="md-nav__link">
     <span class="md-ellipsis">
       
         IDA-View 可进行的核心操作
@@ -5734,7 +5734,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ida-view-与其他窗口的关系" class="md-nav__link">
+  <a href="#IDA-View-与其他窗口的关系" class="md-nav__link">
     <span class="md-ellipsis">
       
         IDA-View 与其他窗口的关系
@@ -6539,7 +6539,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ida-view-反汇编视图" class="md-nav__link">
+  <a href="#IDA-View-反汇编视图" class="md-nav__link">
     <span class="md-ellipsis">
       
         IDA-View 反汇编视图
@@ -6551,7 +6551,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#默认视图graph-view" class="md-nav__link">
+  <a href="#默认视图Graph-View" class="md-nav__link">
     <span class="md-ellipsis">
       
         默认视图：Graph View
@@ -6562,7 +6562,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#text-view线性文本视图" class="md-nav__link">
+  <a href="#Text-View线性文本视图" class="md-nav__link">
     <span class="md-ellipsis">
       
         Text View（线性文本视图）
@@ -6578,7 +6578,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ida-view-中每一行的含义" class="md-nav__link">
+  <a href="#IDA-View-中每一行的含义" class="md-nav__link">
     <span class="md-ellipsis">
       
         IDA-View 中每一行的含义
@@ -6589,7 +6589,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ida-view-可进行的核心操作" class="md-nav__link">
+  <a href="#IDA-View-可进行的核心操作" class="md-nav__link">
     <span class="md-ellipsis">
       
         IDA-View 可进行的核心操作
@@ -6639,7 +6639,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ida-view-与其他窗口的关系" class="md-nav__link">
+  <a href="#IDA-View-与其他窗口的关系" class="md-nav__link">
     <span class="md-ellipsis">
       
         IDA-View 与其他窗口的关系
@@ -6787,12 +6787,12 @@
 
   <h1>IDA Pro IDA-View</h1>
 
-<h2 id="ida-view-反汇编视图">IDA-View 反汇编视图<a class="headerlink" href="#ida-view-反汇编视图" title="Permanent link">¶</a></h2>
+<h2 id="IDA-View-反汇编视图">IDA-View 反汇编视图<a class="headerlink" href="#IDA-View-反汇编视图" title="Permanent link">¶</a></h2>
 <p><strong>IDA-View</strong> 是 IDA Pro 的核心工作窗口之一，也是逆向工程师花费时间最多的界面。它本质上是 IDA 展示程序反汇编结果的主视图，负责以可读形式呈现二进制代码的结构、逻辑与数据布局，是整个静态分析流程的中心。</p>
 <p>从功能上看，IDA-View既是**代码展示窗口**，也是**交互式分析界面**，用户不仅可以“看”代码，还可以在其中进行大量操作，如重命名函数、添加注释、修改类型、划分代码与数据、跳转调用关系等。</p>
 <p><img alt="" src="../assets/image-20260205161113933.png"/></p>
 <p>IDA-View 主要提供两种视图模式，可通过**空格键（Space）**在二者之间切换。</p>
-<h3 id="默认视图graph-view">默认视图：Graph View<a class="headerlink" href="#默认视图graph-view" title="Permanent link">¶</a></h3>
+<h3 id="默认视图Graph-View">默认视图：Graph View<a class="headerlink" href="#默认视图Graph-View" title="Permanent link">¶</a></h3>
 <p>默认情况下，IDA-View 以**控制流图（Control Flow Graph, CFG）**的形式展示函数。</p>
 <p>在这种模式下：</p>
 <ul>
@@ -6817,12 +6817,12 @@
 <li>逆向关键逻辑模块</li>
 </ul>
 <p>对于复杂函数，Graph View 往往比线性汇编更容易理解。</p>
-<h3 id="text-view线性文本视图">Text View（线性文本视图）<a class="headerlink" href="#text-view线性文本视图" title="Permanent link">¶</a></h3>
+<h3 id="Text-View线性文本视图">Text View（线性文本视图）<a class="headerlink" href="#Text-View线性文本视图" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>“点击空格即可切换”</p>
 </blockquote>
 <p><img alt="" src="../assets/image-20260205164720743.png"/></p>
-<h2 id="ida-view-中每一行的含义"><strong>IDA-View 中每一行的含义</strong><a class="headerlink" href="#ida-view-中每一行的含义" title="Permanent link">¶</a></h2>
+<h2 id="IDA-View-中每一行的含义"><strong>IDA-View 中每一行的含义</strong><a class="headerlink" href="#IDA-View-中每一行的含义" title="Permanent link">¶</a></h2>
 <p>在 IDA-View 里，一行典型反汇编代码通常包含以下部分：</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>.text:0000000140001000 push rbp
 </code></pre></div>
@@ -6843,7 +6843,7 @@
 </ul>
 <p>并用不同颜色或格式进行区分。</p>
 <hr/>
-<h2 id="ida-view-可进行的核心操作"><strong>IDA-View 可进行的核心操作</strong><a class="headerlink" href="#ida-view-可进行的核心操作" title="Permanent link">¶</a></h2>
+<h2 id="IDA-View-可进行的核心操作"><strong>IDA-View 可进行的核心操作</strong><a class="headerlink" href="#IDA-View-可进行的核心操作" title="Permanent link">¶</a></h2>
 <p>在 IDA-View 中，你可以直接进行大量逆向操作，例如：</p>
 <h3 id="1-重命名函数与变量"><strong>1. 重命名函数与变量</strong><a class="headerlink" href="#1-重命名函数与变量" title="Permanent link">¶</a></h3>
 <p>右键某个函数名（如 <code>sub_401000</code>）→ Rename
@@ -6871,7 +6871,7 @@
 </ul>
 <p>这是逆向过程中非常常见的操作。</p>
 <hr/>
-<h2 id="ida-view-与其他窗口的关系"><strong>IDA-View 与其他窗口的关系</strong><a class="headerlink" href="#ida-view-与其他窗口的关系" title="Permanent link">¶</a></h2>
+<h2 id="IDA-View-与其他窗口的关系"><strong>IDA-View 与其他窗口的关系</strong><a class="headerlink" href="#IDA-View-与其他窗口的关系" title="Permanent link">¶</a></h2>
 <p>IDA-View 并不是孤立存在的，它与多个窗口联动：</p>
 <ul>
 <li><strong>Function Window</strong>：
@@ -7075,7 +7075,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>

@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#c-变量作用域" class="md-skip">
+        <a href="#C-变量作用域" class="md-skip">
           跳转至
         </a>
       
@@ -1460,7 +1460,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#局部作用域local-scope" class="md-nav__link">
+  <a href="#局部作用域Local-Scope" class="md-nav__link">
     <span class="md-ellipsis">
       
         局部作用域（Local Scope）
@@ -1471,7 +1471,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#全局作用域global-scope" class="md-nav__link">
+  <a href="#全局作用域Global-Scope" class="md-nav__link">
     <span class="md-ellipsis">
       
         全局作用域（Global Scope）
@@ -1482,7 +1482,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#块作用域block-scope" class="md-nav__link">
+  <a href="#块作用域Block-Scope" class="md-nav__link">
     <span class="md-ellipsis">
       
         块作用域（Block Scope）
@@ -1493,7 +1493,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#类作用域class-scope" class="md-nav__link">
+  <a href="#类作用域Class-Scope" class="md-nav__link">
     <span class="md-ellipsis">
       
         类作用域（Class Scope）
@@ -1889,7 +1889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -6605,7 +6605,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#局部作用域local-scope" class="md-nav__link">
+  <a href="#局部作用域Local-Scope" class="md-nav__link">
     <span class="md-ellipsis">
       
         局部作用域（Local Scope）
@@ -6616,7 +6616,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#全局作用域global-scope" class="md-nav__link">
+  <a href="#全局作用域Global-Scope" class="md-nav__link">
     <span class="md-ellipsis">
       
         全局作用域（Global Scope）
@@ -6627,7 +6627,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#块作用域block-scope" class="md-nav__link">
+  <a href="#块作用域Block-Scope" class="md-nav__link">
     <span class="md-ellipsis">
       
         块作用域（Block Scope）
@@ -6638,7 +6638,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#类作用域class-scope" class="md-nav__link">
+  <a href="#类作用域Class-Scope" class="md-nav__link">
     <span class="md-ellipsis">
       
         类作用域（Class Scope）
@@ -6863,7 +6863,7 @@
   
 
 
-<h1 id="c-变量作用域">C++ 变量作用域<a class="headerlink" href="#c-变量作用域" title="Permanent link">¶</a></h1>
+<h1 id="C-变量作用域">C++ 变量作用域<a class="headerlink" href="#C-变量作用域" title="Permanent link">¶</a></h1>
 <p>在 C++ 中，变量并不是在程序的任意位置都可访问的。
 <strong>变量的作用域（Scope）</strong> 指的是程序中 <strong>可以访问该变量的区域</strong> 。</p>
 <p>一般来说，变量可以在以下三个位置定义：</p>
@@ -6875,28 +6875,28 @@
 <hr/>
 <h2 id="一作用域的分类">一、作用域的分类<a class="headerlink" href="#一作用域的分类" title="Permanent link">¶</a></h2>
 <p>根据变量声明的位置不同，C++ 中常见的作用域包括：</p>
-<h3 id="局部作用域local-scope">局部作用域（Local Scope）<a class="headerlink" href="#局部作用域local-scope" title="Permanent link">¶</a></h3>
+<h3 id="局部作用域Local-Scope">局部作用域（Local Scope）<a class="headerlink" href="#局部作用域Local-Scope" title="Permanent link">¶</a></h3>
 <ul>
 <li>在 **函数内部 ** 声明的变量</li>
 <li>只能在该函数内部访问</li>
 <li>函数被调用时创建，函数结束时销毁</li>
 </ul>
 <hr/>
-<h3 id="全局作用域global-scope">全局作用域（Global Scope）<a class="headerlink" href="#全局作用域global-scope" title="Permanent link">¶</a></h3>
+<h3 id="全局作用域Global-Scope">全局作用域（Global Scope）<a class="headerlink" href="#全局作用域Global-Scope" title="Permanent link">¶</a></h3>
 <ul>
 <li>在 <strong>所有函数和代码块之外</strong> 声明的变量</li>
 <li>可被程序中任意函数访问</li>
 <li>程序启动时创建，程序结束时销毁</li>
 </ul>
 <hr/>
-<h3 id="块作用域block-scope">块作用域（Block Scope）<a class="headerlink" href="#块作用域block-scope" title="Permanent link">¶</a></h3>
+<h3 id="块作用域Block-Scope">块作用域（Block Scope）<a class="headerlink" href="#块作用域Block-Scope" title="Permanent link">¶</a></h3>
 <ul>
 <li>在 <code>{}</code> 代码块内部声明的变量</li>
 <li>只能在该代码块内部访问</li>
 <li>每次进入代码块时创建，离开时销毁</li>
 </ul>
 <hr/>
-<h3 id="类作用域class-scope">类作用域（Class Scope）<a class="headerlink" href="#类作用域class-scope" title="Permanent link">¶</a></h3>
+<h3 id="类作用域Class-Scope">类作用域（Class Scope）<a class="headerlink" href="#类作用域Class-Scope" title="Permanent link">¶</a></h3>
 <ul>
 <li>在类内部声明的成员变量</li>
 <li>可被该类的成员函数访问</li>
@@ -7190,7 +7190,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>

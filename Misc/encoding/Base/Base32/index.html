@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#base32-的原理" class="md-skip">
+        <a href="#Base32-的原理" class="md-skip">
           跳转至
         </a>
       
@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -3082,7 +3082,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#base32-的原理" class="md-nav__link">
+  <a href="#Base32-的原理" class="md-nav__link">
     <span class="md-ellipsis">
       
         Base32 的原理
@@ -3116,7 +3116,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-为什么会有-padding" class="md-nav__link">
+  <a href="#3-为什么会有-Padding" class="md-nav__link">
     <span class="md-ellipsis">
       
         (3) 为什么会有 =（Padding）
@@ -3154,7 +3154,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rfc-4648-标准的-base32-索引表" class="md-nav__link">
+  <a href="#RFC-4648-标准的-Base32-索引表" class="md-nav__link">
     <span class="md-ellipsis">
       
         RFC 4648 标准的 Base32 索引表
@@ -6572,7 +6572,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#base32-的原理" class="md-nav__link">
+  <a href="#Base32-的原理" class="md-nav__link">
     <span class="md-ellipsis">
       
         Base32 的原理
@@ -6606,7 +6606,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-为什么会有-padding" class="md-nav__link">
+  <a href="#3-为什么会有-Padding" class="md-nav__link">
     <span class="md-ellipsis">
       
         (3) 为什么会有 =（Padding）
@@ -6644,7 +6644,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rfc-4648-标准的-base32-索引表" class="md-nav__link">
+  <a href="#RFC-4648-标准的-Base32-索引表" class="md-nav__link">
     <span class="md-ellipsis">
       
         RFC 4648 标准的 Base32 索引表
@@ -6846,7 +6846,7 @@
   <h1>Base32</h1>
 
 <p>Base32与Base64类似，都是 <strong>二进制数据文本化</strong> 的编码方式，常见字符集为 <strong><code>A–Z</code> 和 <code>2–7</code></strong>，并使用 <strong><code>=</code></strong> 作填充。它的目的是便于在只适合传文本的场景中传输/存储二进制数据。与 Base64 一样：<strong>Base32 不是加密，只是编码</strong>。</p>
-<h2 id="base32-的原理">Base32 的原理<a class="headerlink" href="#base32-的原理" title="Permanent link">¶</a></h2>
+<h2 id="Base32-的原理">Base32 的原理<a class="headerlink" href="#Base32-的原理" title="Permanent link">¶</a></h2>
 <h3 id="1-核心思想">(1) 核心思想<a class="headerlink" href="#1-核心思想" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>5 字节 → 8 个字符（因为 40 bit → 8×5 bit）</p>
@@ -6868,7 +6868,7 @@
 <blockquote>
 <p>小提示：实际实现会做“比特缓冲区”（bit buffer），不断塞入 8bit、吐出 5bit。</p>
 </blockquote>
-<h3 id="3-为什么会有-padding">(3) 为什么会有 <code>=</code>（Padding）<a class="headerlink" href="#3-为什么会有-padding" title="Permanent link">¶</a></h3>
+<h3 id="3-为什么会有-Padding">(3) 为什么会有 <code>=</code>（Padding）<a class="headerlink" href="#3-为什么会有-Padding" title="Permanent link">¶</a></h3>
 <p>当输入字节数不是 5 的倍数时，最后一组不够 40 bit，需要补齐让输出长度规整（常见做法是让输出长度是 8 的倍数）：</p>
 <ul>
 <li>先在末尾补 0 bit 到能整切 5 bit</li>
@@ -6887,7 +6887,7 @@
 <li>Base32：<strong>5 字节 → 8 字符</strong>，若按 ASCII/UTF-8 存储，体积变为 <code>8/5 = 1.6</code>，膨胀约 <strong>60%</strong>（比 Base64 的 ~33% 更大）。</li>
 <li>选择 32 是因为 <span class="arithmatex">\(2^5=32\)</span>，用 5 bit 正好表示 32 种符号，并且字符集更“保守”（适合大小写不敏感或易混淆场景的变体也很多）。</li>
 </ul>
-<h2 id="rfc-4648-标准的-base32-索引表">RFC 4648 标准的 Base32 索引表<a class="headerlink" href="#rfc-4648-标准的-base32-索引表" title="Permanent link">¶</a></h2>
+<h2 id="RFC-4648-标准的-Base32-索引表">RFC 4648 标准的 Base32 索引表<a class="headerlink" href="#RFC-4648-标准的-Base32-索引表" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -7136,7 +7136,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>

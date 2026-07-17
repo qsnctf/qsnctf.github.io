@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Code/Assembly/Instruction_Set.md" class="md-nav__link">
+      <a href="../../../Code/Assembly/instruction_set/" class="md-nav__link">
         
   
   
@@ -6131,7 +6131,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-lenet-5" class="md-nav__link">
+  <a href="#41-LeNet-5" class="md-nav__link">
     <span class="md-ellipsis">
       
         4.1 LeNet-5
@@ -6142,7 +6142,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-alexnet" class="md-nav__link">
+  <a href="#42-AlexNet" class="md-nav__link">
     <span class="md-ellipsis">
       
         4.2 AlexNet
@@ -6153,7 +6153,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-inception网络" class="md-nav__link">
+  <a href="#43-Inception网络" class="md-nav__link">
     <span class="md-ellipsis">
       
         4.3 Inception网络
@@ -6825,7 +6825,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-lenet-5" class="md-nav__link">
+  <a href="#41-LeNet-5" class="md-nav__link">
     <span class="md-ellipsis">
       
         4.1 LeNet-5
@@ -6836,7 +6836,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-alexnet" class="md-nav__link">
+  <a href="#42-AlexNet" class="md-nav__link">
     <span class="md-ellipsis">
       
         4.2 AlexNet
@@ -6847,7 +6847,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-inception网络" class="md-nav__link">
+  <a href="#43-Inception网络" class="md-nav__link">
     <span class="md-ellipsis">
       
         4.3 Inception网络
@@ -7130,19 +7130,19 @@ r_l = r_{l-1} + (k_l - 1) \cdot \prod_{i=1}^{l-1} s_i
 <p>汇聚层不含可学习参数，但需要将梯度正确传播到前一层。对于最大汇聚，梯度仅传递给汇聚窗口内的最大值位置（其余位置梯度为零）；对于平均汇聚，梯度均匀分配给窗口内所有位置。</p>
 <h2 id="4-几种典型的卷积神经网络">4 几种典型的卷积神经网络<a class="headerlink" href="#4-几种典型的卷积神经网络" title="Permanent link">¶</a></h2>
 <p>本节梳理卷积神经网络发展历程中几个里程碑式的架构，它们分别代表了不同阶段的设计理念和技术突破。</p>
-<h3 id="41-lenet-5">4.1 LeNet-5<a class="headerlink" href="#41-lenet-5" title="Permanent link">¶</a></h3>
+<h3 id="41-LeNet-5">4.1 LeNet-5<a class="headerlink" href="#41-LeNet-5" title="Permanent link">¶</a></h3>
 <p>LeNet-5（LeCun et al., 1998）是首个获得商业成功的卷积神经网络，被广泛用于手写数字识别（如银行支票识别系统）。其架构为：</p>
 <div class="arithmatex">\[
 \text{Input}(32 \times 32) \to \text{C1}(6@28 \times 28) \to \text{S2}(6@14 \times 14) \to \text{C3}(16@10 \times 10) \to \text{S4}(16@5 \times 5) \to \text{C5}(120) \to \text{F6}(84) \to \text{Output}(10)
 \]</div>
 <p>LeNet-5的设计体现了CNN的经典范式：交替的卷积层和下采样层逐步缩小空间尺寸、增加通道数，最终通过全连接层进行分类。该网络共约60,000个参数，使用Sigmoid/Tanh激活函数（ReLU尚未流行），训练采用对角近似的二阶方法。</p>
 <p>LeNet-5虽然结构简单，但它确立了CNN的基本设计原则，是后续所有深层CNN架构的思想源头。受限于当时的计算能力和数据规模，CNN在提出后的十余年间未能在大规模视觉任务上展示优势，直到2012年AlexNet的出现才重新点燃了深度学习的研究热潮。</p>
-<h3 id="42-alexnet">4.2 AlexNet<a class="headerlink" href="#42-alexnet" title="Permanent link">¶</a></h3>
+<h3 id="42-AlexNet">4.2 AlexNet<a class="headerlink" href="#42-AlexNet" title="Permanent link">¶</a></h3>
 <p>AlexNet（Krizhevsky et al., 2012）在ImageNet大规模视觉识别挑战赛（ILSVRC-2012）上以压倒性优势夺冠（top-5错误率15.3%，远超第二名的26.2%），标志着深度学习时代的正式开启。</p>
 <p><strong>架构设计</strong>：8层网络（5个卷积层 + 3个全连接层），约6000万参数。输入为 <span class="arithmatex">\(227 \times 227 \times 3\)</span> 的RGB图像，第一个卷积层使用 <span class="arithmatex">\(11 \times 11\)</span> 的大核（步长为4），后续层逐步缩小核尺寸。</p>
 <p><strong>关键技术创新</strong>：</p>
 <p>AlexNet首次在大规模CNN中使用ReLU激活函数替代Sigmoid/Tanh，显著加速了训练收敛（约6倍）。针对过拟合问题，AlexNet引入了Dropout正则化（在全连接层以概率0.5随机置零），并采用了数据增广策略（随机裁剪、水平翻转、颜色扰动等）。由于当时单块GPU（GTX 580, 3GB显存）无法容纳整个网络，AlexNet采用了双GPU并行训练方案，将网络分为两路，仅在特定层进行跨GPU通信，这也是分组卷积在深度学习中的首次应用。此外，AlexNet在卷积层之后引入了局部响应归一化（Local Response Normalization, LRN），通过通道间的竞争抑制来增强泛化能力，但后续研究表明LRN的效果有限，已被Batch Normalization取代。</p>
-<h3 id="43-inception网络">4.3 Inception网络<a class="headerlink" href="#43-inception网络" title="Permanent link">¶</a></h3>
+<h3 id="43-Inception网络">4.3 Inception网络<a class="headerlink" href="#43-Inception网络" title="Permanent link">¶</a></h3>
 <p>Inception网络（GoogLeNet / Inception v1, Szegedy et al., 2015）在ILSVRC-2014上获得冠军，其核心创新在于Inception模块——一种多尺度特征融合的计算单元。</p>
 <p>**Inception模块**的设计理念是：同一层特征图中，不同区域的最优感受野大小可能不同。因此，Inception模块在同一层并行执行多种尺度的卷积操作：</p>
 <div class="arithmatex">\[
@@ -7285,7 +7285,7 @@ r_l = r_{l-1} + (k_l - 1) \cdot \prod_{i=1}^{l-1} s_i
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
