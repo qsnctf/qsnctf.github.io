@@ -216,11 +216,94 @@ nav:
       - C 与 C++ 学习路线: Code/CPP/index.md
       - 环境与构建: Code/CPP/environment-and-build.md
       - C 语言基础: Code/CPP/c-language-basics.md
+      - C 教程:
+        - C 语言教程: Code/CPP/C_Tutorial/index.md
+        - C 基础教程: Code/CPP/C_Tutorial/basic.md
+        - C 进阶教程: Code/CPP/C_Tutorial/advanced.md
+        - C 排序算法与项目工程结构: Code/CPP/C_Tutorial/algorithms-and-projects.md
+        - C 语言实例: Code/CPP/C_Tutorial/examples.md
+        - C 经典100例: Code/CPP/C_Tutorial/classic-100.md
+        - C 测验: Code/CPP/C_Tutorial/quiz.md
+        - C 标准库: Code/CPP/C_Tutorial/standard-library.md
       - C++ 语言基础: Code/CPP/cpp-language-basics.md
+      - C++ 教程:
+        - C++ 教程: Code/CPP/Cpp_Tutorial/index.md
+        - C++ 基础教程: Code/CPP/Cpp_Tutorial/basic.md
+        - C++ 面向对象: Code/CPP/Cpp_Tutorial/oop.md
+        - C++ 高级教程: Code/CPP/Cpp_Tutorial/advanced.md
+        - C++ STL 教程: Code/CPP/Cpp_Tutorial/stl.md
+        - C++ 标准库: Code/CPP/Cpp_Tutorial/standard-library.md
+        - C++ 实例: Code/CPP/Cpp_Tutorial/examples.md
+        - C++ 测验: Code/CPP/Cpp_Tutorial/quiz.md
+        - C++ OpenCV: Code/CPP/Cpp_Tutorial/opencv.md
       - 函数与程序结构: Code/CPP/functions-and-program-structure.md
       - 指针、内存与生命周期: Code/CPP/pointers-memory-and-lifetime.md
       - C++ OOP、STL 与 RAII: Code/CPP/cpp-oop-stl-and-raii.md
       - C/C++ 安全与 CTF: Code/CPP/c-cpp-security-and-ctf.md
+    - Rust:
+      - Rust 教程: Code/Rust/index.md
+      - Rust 简介: Code/Rust/introduction.md
+      - Rust 环境搭建: Code/Rust/environment-setup.md
+      - Cargo 教程: Code/Rust/cargo.md
+      - Rust 输出到命令行: Code/Rust/command-line-output.md
+      - Rust 基础语法: Code/Rust/basic-syntax.md
+      - Rust 运算符: Code/Rust/operators.md
+      - Rust 数据类型: Code/Rust/data-types.md
+      - Rust 注释: Code/Rust/comments.md
+      - Rust 函数: Code/Rust/functions.md
+      - Rust 条件语句: Code/Rust/conditionals.md
+      - Rust 循环: Code/Rust/loops.md
+      - Rust 迭代器: Code/Rust/iterators.md
+      - Rust 闭包: Code/Rust/closures.md
+      - Rust 所有权: Code/Rust/ownership.md
+      - Rust Slice（切片）类型: Code/Rust/slices.md
+      - Rust 结构体: Code/Rust/structs.md
+      - Rust 枚举类: Code/Rust/enums.md
+      - Rust 组织管理: Code/Rust/modules.md
+      - Rust 错误处理: Code/Rust/error-handling.md
+      - Rust 泛型与特性: Code/Rust/generics-and-traits.md
+      - Rust 生命周期: Code/Rust/lifetimes.md
+      - Rust 文件与 IO: Code/Rust/files-and-io.md
+      - Rust 集合与字符串: Code/Rust/collections-and-strings.md
+      - Rust 面向对象: Code/Rust/object-oriented.md
+      - Rust 并发编程: Code/Rust/concurrency.md
+      - Rust 宏: Code/Rust/macros.md
+      - Rust 智能指针: Code/Rust/smart-pointers.md
+      - Rust 异步编程: Code/Rust/async-programming.md
+    - Go:
+      - Go 语言教程: Code/Go/index.md
+      - Go 简介: Code/Go/introduction.md
+      - Go 语言环境安装: Code/Go/installation.md
+      - Go 开发工具: Code/Go/development-tools.md
+      - Go 语言结构: Code/Go/program-structure.md
+      - Go 语言基础语法: Code/Go/basic-syntax.md
+      - Go 语言数据类型: Code/Go/data-types.md
+      - Go 语言变量: Code/Go/variables.md
+      - Go 语言常量: Code/Go/constants.md
+      - Go 语言运算符: Code/Go/operators.md
+      - Go 语言条件语句: Code/Go/conditionals.md
+      - Go 语言循环语句: Code/Go/loops.md
+      - Go 语言函数: Code/Go/functions.md
+      - Go 语言变量作用域: Code/Go/scope.md
+      - Go 语言数组: Code/Go/arrays.md
+      - Go 语言指针: Code/Go/pointers.md
+      - Go 语言结构体: Code/Go/structs.md
+      - Go 语言切片(Slice): Code/Go/slices.md
+      - Go 语言范围(Range): Code/Go/range.md
+      - Go 语言 Map(集合): Code/Go/maps.md
+      - Go 语言递归函数: Code/Go/recursion.md
+      - Go 语言类型转换: Code/Go/type-conversion.md
+      - Go 语言接口: Code/Go/interfaces.md
+      - Go 语言泛型: Code/Go/generics.md
+      - Go 错误处理: Code/Go/error-handling.md
+      - Go 并发: Code/Go/concurrency.md
+      - Go 文件处理: Code/Go/file-handling.md
+      - Go 语言正则表达式: Code/Go/regular-expressions.md
+      - Go 类型断言: Code/Go/type-assertions.md
+      - Go 继承: Code/Go/embedding.md
+      - Go 语言开发工具: Code/Go/tooling.md
+      - Go 语言测验: Code/Go/quiz.md
+      - Go Modules: Code/Go/modules.md
     - 汇编语言:
       - x86-64 汇编学习路线: Code/Assembly/index.md
       - 架构、数据与数值表示: Code/Assembly/architecture-data-and-number-representation.md
@@ -607,7 +690,6 @@ nav:
       - Git GitHub: DevOps/Git/github.md
       - Git 服务器搭建: DevOps/Git/server.md
       - Sourcetree: DevOps/Git/sourcetree.md
-      - Git 测验: DevOps/Git/quiz.md
       - GitHub Actions: DevOps/Git/github-actions.md
     - Docker:
       - Docker 教程: DevOps/Docker/index.md
