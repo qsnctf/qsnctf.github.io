@@ -877,6 +877,34 @@
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
+         <loc>https://docs.qsnctf.com/DevOps/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/DevOps/Docker/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/DevOps/Docker/compose-and-cluster/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/DevOps/Docker/container-lifecycle-and-operations/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/DevOps/Docker/dockerfile-advanced-builds/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/DevOps/Docker/image-management-and-foundation/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/DevOps/Docker/storage-and-networking/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
          <loc>https://docs.qsnctf.com/MCP/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
