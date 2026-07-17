@@ -3,7 +3,7 @@
 在JPG修复中，我们一般只关注JPG的高宽问题，对于JPG，它没有想PNG那么明显的块，它的文件头很短很短`FFD8`。
 
 如图所示：
-![](attachments/JPGRepair.png)
+![](attachments/JPGrepair.png)
 
 我们可以清晰的看到在里面存在一个块的名字`struct SOFx sof0`
 

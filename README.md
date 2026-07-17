@@ -1,44 +1,58 @@
-# 说明
+# 青少年 CTF 文库
 
-一个使用Mkdocs的类知识库网站（文库），青少年CTF文库旨在为正在学习网络安全、热爱信息攻防、准备参加 CTF 竞赛的你，提供一个 **结构化、系统化、易理解、可实战** 的知识库。
+一个使用 MkDocs Material 构建的知识库网站，旨在为正在学习网络安全、热爱信息攻防、准备参加 CTF 竞赛的你，提供一个 **结构化、系统化、易理解、可实战** 的知识库。
 
-# 共同维护
+## 共同维护
 
-请联系QQ：1044631097
+请联系 QQ：1044631097。
 
-# 维护方式
+## 本地运行
 
-## 内容编写
-大部分的插件已启用，案例可参考：[参考案例](https://squidfunk.github.io/mkdocs-material/reference/)
+建议使用 Python 3.10 或更高版本：
 
-## 拉取代码
+```bash
+python -m pip install -r requirements.txt
+mkdocs serve
+```
+
+提交前验证站点能够完整构建：
+
+```bash
+mkdocs build --strict
+```
+
+## 维护方式
+
+### 内容编写
+
+文档源文件位于 `docs/`，导航在 `mkdocs.yml` 中维护。Markdown 写法可参考 [MkDocs Material 参考文档](https://squidfunk.github.io/mkdocs-material/reference/)。
+
+### 拉取代码
 
 ```bash
 git clone https://github.com/qsnctf/qsnctf.github.io.git
 ```
 
-## 更新项目（用于慢协作）
+### 更新项目
 
 ```cmd
 update.bat
 ```
 
-## 推送项目（必须）
+### 推送项目
 
-因本项目开启了`workflows`，当代码推送后会自动构建，
+向 `docs` 分支推送后，GitHub Actions 会自动构建并发布到 `main` 分支：
 
 ```bash
-git add .
+git add <修改的文件>
 git commit -m "update docs"
-git push origin docs --force
+git push origin docs
 ```
 
-或直接执行
+也可以在已经提交修改后执行：
 
 ```cmd
 deploy_workflows.bat
 ```
 
-## 备注
-
-一般不推荐直接覆盖提交，如需覆盖提交可选择执行`deploy.bat`
+脚本不会自动暂存或提交文件，以免误提交本地内容。不要使用强制推送覆盖共享分支历史。

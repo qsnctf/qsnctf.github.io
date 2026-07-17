@@ -167,11 +167,11 @@ objdump -d program
 - **IDA**：功能强大，偏专业
 - **Ghidra**：免费开源，非常适合学习
 
-![IDA](..\assets\605091717ff17.jpg)
+![IDA](assets/605091717ff17.jpg)
 
 
 
-![Ghidra](..\assets\cb6ccf3b4ec6d447239e796adbbe2480.png)
+![Ghidra](assets/cb6ccf3b4ec6d447239e796adbbe2480.png)
 
 ---
 
@@ -203,7 +203,7 @@ objdump -d program
 
 > 🧠 **让程序“慢下来”，方便你思考**
 
-![gdb调试示意图](..\assets\674550d279404f418f4959ab7685d6a7.png)
+![gdb调试示意图](assets/674550d279404f418f4959ab7685d6a7.png)
 
 ---
 

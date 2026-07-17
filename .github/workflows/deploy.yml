@@ -18,34 +18,26 @@ jobs:
 
     steps:
       - name: Checkout docs branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: docs
           clean: true  # 清理未跟踪文件
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+          cache: pip
 
-      - name: Install MkDocs & plugins
-        run: |
-          pip install mkdocs mkdocs-material mkdocs-git-committers-plugin-2 mkdocs-git-authors-plugin mkdocs-markmap
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
 
       - name: Build site into temporary directory
-        env:
-          # 禁用插件写入 .cache (尽管我们下面会强制删除它，但保留此配置以提高安全性)
-          MKDOCS_GIT_COMMITTERS_CACHE: '0' 
-        run: |
-          mkdocs build --site-dir /tmp/site_output
+        run: mkdocs build --strict --site-dir /tmp/site_output
 
       - name: Deploy to main
         run: |
           cd "$GITHUB_WORKSPACE"
-
-          # [修复步骤] 强制删除 MkDocs 插件在构建过程中生成的缓存文件。
-          # 这一步确保工作区干净，避免 'local changes would be overwritten' 错误。
-          rm -rf .cache 
 
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"

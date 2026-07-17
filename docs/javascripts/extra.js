@@ -8,13 +8,14 @@
 
 /* ===================== 工具函数 ===================== */
 
-// 防抖 + requestIdleCallback（防止渲染风暴）
+// 防抖 + 空闲调度（防止渲染风暴）
 let runScheduled = false;
 function schedule(fn) {
   if (runScheduled) return;
   runScheduled = true;
 
-  requestIdleCallback(() => {
+  const runWhenIdle = window.requestIdleCallback || (callback => setTimeout(callback, 0));
+  runWhenIdle(() => {
     runScheduled = false;
     fn();
   });
@@ -52,10 +53,12 @@ function fixBold(article) {
       if (val && val.includes("**")) {
         const span = document.createElement("span");
         span.dataset.boldFixed = "true";
-        span.innerHTML = val.replace(
-          /\*\*([\s\S]+?)\*\*/g,
-          "<strong>$1</strong>"
-        );
+        const parts = val.split(/\*\*([\s\S]+?)\*\*/g);
+        parts.forEach((part, index) => {
+          span.append(index % 2 === 0
+            ? document.createTextNode(part)
+            : Object.assign(document.createElement("strong"), { textContent: part }));
+        });
         node.replaceWith(span);
       }
     }
