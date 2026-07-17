@@ -62,8 +62,8 @@ fn main() {
 ```
 
 ## trait object 与动态分派
-异构集合可使用 `dyn Trait`。trait object 是胖指针，包含数据地址和虚表信息，通常放在
-`Box`、引用、`Rc` 或 `Arc` 后面。
+异构集合可使用 `dyn Trait`。`dyn Trait` 是动态大小类型；指向它的 `&dyn Trait`、
+`Box<dyn Trait>`、`Rc<dyn Trait>` 或 `Arc<dyn Trait>` 通常是宽指针，包含数据地址和虚表元数据。
 
 ```rust
 trait Draw { fn draw(&self); }

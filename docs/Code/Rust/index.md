@@ -48,7 +48,7 @@ Rust 是面向系统编程的静态类型语言，强调内存安全、零成本
 安装工具链后创建项目：
 
 ```bash
-cargo new hello-rust
+cargo new --edition 2021 hello-rust
 cd hello-rust
 cargo run
 ```

@@ -22,18 +22,18 @@ fn main() {
 函数体是代码块，最后一个无分号表达式可作为返回值：
 
 ```rust
-fn absolute(value: i32) -> i32 {
-    if value < 0 {
-        -value
-    } else {
-        value
-    }
+fn absolute(value: i32) -> Option<i32> {
+    value.checked_abs()
 }
 
 fn main() {
-    println!("{}", absolute(-7));
+    assert_eq!(absolute(-7), Some(7));
+    assert_eq!(absolute(i32::MIN), None);
 }
 ```
+
+`i32::MIN` 的正绝对值无法用 `i32` 表示，因此示例使用 `checked_abs()` 明确返回失败。若需要
+无符号幅值，可使用 `unsigned_abs()` 返回 `u32`，不要直接对所有负数执行 `-value`。
 
 也可用 `return value;` 提前返回，适合先处理错误或边界条件：
 

@@ -31,6 +31,10 @@ fn main() {
 executor 线程。
 
 ```rust
+async fn add_one(value: u32) -> u32 {
+    value + 1
+}
+
 async fn calculate() -> u32 {
     let first = add_one(10).await;
     add_one(first).await
@@ -54,8 +58,10 @@ async fn transform(input: String) -> Result<u64, std::num::ParseIntError> {
 }
 ```
 
-若库需要抽象异步输入，可接收返回 future 的回调或定义 trait，但稳定 Rust 2021 中 trait 的
-异步方法设计涉及返回类型、生命周期和对象安全，公开 API 前应认真评估。
+稳定 Rust 已支持在 Trait 中使用 `async fn`，这与 Edition 选择无关。不过公共 Trait 的异步
+方法仍需考虑返回 Future 的 `Send` 等边界是否能由下游表达，以及包含异步方法的 Trait 默认
+不能直接用作 `dyn Trait`。库也可接收返回 Future 的回调，公开 API 前应评估生命周期、对象
+安全和运行时耦合。
 
 ## Tokio 示例：第三方运行时
 

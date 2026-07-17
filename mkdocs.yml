@@ -304,7 +304,16 @@ nav:
       - Go 语言开发工具: Code/Go/tooling.md
       - Go 语言测验: Code/Go/quiz.md
       - Go Modules: Code/Go/modules.md
+    - Java:
+      - Java 教程: Code/Java/index.md
+      - Java 基础教程: Code/Java/basic.md
+      - Java 面向对象: Code/Java/oop.md
+      - Java 高级教程: Code/Java/advanced.md
+      - Java 常用类库: Code/Java/libraries.md
+      - Java 实例: Code/Java/examples.md
+      - Java 测验: Code/Java/quiz.md
     - 汇编语言:
+      - 汇编语言 - 教程: Code/Assembly/tutorial.md
       - x86-64 汇编学习路线: Code/Assembly/index.md
       - 架构、数据与数值表示: Code/Assembly/architecture-data-and-number-representation.md
       - 寄存器、内存与栈: Code/Assembly/registers-memory-and-stack.md
@@ -312,6 +321,7 @@ nav:
       - 函数与调用约定: Code/Assembly/functions-and-calling-conventions.md
       - 工具、反汇编与调试: Code/Assembly/tools-disassembly-and-debugging.md
       - 面向 Reverse 与 Pwn 的汇编: Code/Assembly/assembly-for-reverse-and-pwn.md
+      - 汇编指令速查表: Code/Assembly/instruction-cheatsheet.md
     - Python:
       - Python 3.10+ 学习路线: Code/Python/index.md
       - 专题综合:

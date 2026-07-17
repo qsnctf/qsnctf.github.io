@@ -32,7 +32,8 @@ edition = "2021"
 `name` 是包名，`version` 通常遵循语义化版本，`edition` 控制语言 edition。Rust edition
 与依赖版本相互独立；不同 edition 的 crate 可以共同参与同一次构建。
 添加依赖可执行 `cargo add serde --features derive`（需要当前 Cargo 支持该子命令），或谨慎
-编辑清单。库项目通常提交 `Cargo.lock` 与否取决于仓库策略；应用程序一般应提交它。
+编辑清单。当前 Cargo 的通用建议是：不确定时将 `Cargo.lock` 提交到版本控制，应用程序尤其
+应该提交。部分库会选择不提交，以持续验证最新兼容依赖解析，但这应是明确的仓库策略。
 ## 高频命令
 ```bash
 cargo check                       # 快速类型检查，不生成最终可执行文件
