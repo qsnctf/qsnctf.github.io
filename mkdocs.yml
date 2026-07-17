@@ -85,7 +85,7 @@ extra_javascript:
 
 
 
-copyright: Copyright 青少年CTF &copy; 2025 版权所有
+copyright: Copyright 青少年CTF &copy; 2026 版权所有
 
 extra_css:
   - stylesheets/markmap.css
@@ -156,6 +156,52 @@ nav:
     - 计算机网络:
       - 网络基础: basic/network/intro.md
       - OSI七层模型: basic/network/osi.md
+      - 网络协议:
+        - 网络协议: basic/network/protocols/index.md
+        - 网络协议简介: basic/network/protocols/introduction.md
+        - 网络通信基础: basic/network/protocols/communication-basics.md
+        - 常见网络设备: basic/network/protocols/network-devices.md
+        - FTP 协议: basic/network/protocols/ftp.md
+        - SSH 协议: basic/network/protocols/ssh.md
+        - Telnet 协议: basic/network/protocols/telnet.md
+        - TCP 协议: basic/network/protocols/tcp.md
+        - SMTP 协议: basic/network/protocols/smtp.md
+        - DNS 协议: basic/network/protocols/dns.md
+        - HTTP 协议: basic/network/protocols/http.md
+        - HTTPS 协议: basic/network/protocols/https.md
+        - POP3 协议: basic/network/protocols/pop3.md
+        - IMAP 协议: basic/network/protocols/imap.md
+        - RDP 协议: basic/network/protocols/rdp.md
+        - SFTP 协议: basic/network/protocols/sftp.md
+        - UDP 协议: basic/network/protocols/udp.md
+        - SSL 协议: basic/network/protocols/ssl.md
+        - TLS 协议: basic/network/protocols/tls.md
+        - ARP 协议: basic/network/protocols/arp.md
+        - RARP 协议: basic/network/protocols/rarp.md
+        - DHCP 协议: basic/network/protocols/dhcp.md
+        - MTP 协议: basic/network/protocols/mtp.md
+        - NTP 协议: basic/network/protocols/ntp.md
+        - PPP 协议: basic/network/protocols/ppp.md
+        - ICMP 协议: basic/network/protocols/icmp.md
+        - IGMP 协议: basic/network/protocols/igmp.md
+        - GGP 协议: basic/network/protocols/ggp.md
+        - MCP 协议: basic/network/protocols/mcp.md
+      - TCP/IP 教程:
+        - TCP/IP 教程: basic/network/tcp-ip/index.md
+        - TCP/IP 介绍: basic/network/tcp-ip/introduction.md
+        - TCP/IP 寻址: basic/network/tcp-ip/addressing.md
+        - TCP/IP 协议: basic/network/tcp-ip/protocols.md
+        - TCP/IP 邮件: basic/network/tcp-ip/mail.md
+      - HTTP 教程:
+        - HTTP 教程: basic/network/http/index.md
+        - HTTP/HTTPS 简介: basic/network/http/intro.md
+        - HTTP 消息结构: basic/network/http/message-structure.md
+        - HTTP 请求方法: basic/network/http/methods.md
+        - HTTP 响应头信息: basic/network/http/response-headers.md
+        - HTTP 状态码: basic/network/http/status-codes.md
+        - HTTP content-type: basic/network/http/content-type.md
+        - MIME 类型: basic/network/http/mime-types.md
+        - HTTP2: basic/network/http/http2.md
   - 编程: 
     - 学习路线: Code/index.md
     - C/C++:
@@ -192,6 +238,74 @@ nav:
       - 请求、Cookie、Session 与上传: Code/PHP/web-requests-cookies-sessions-and-upload.md
       - 数据库与 PDO: Code/PHP/database-and-pdo.md
       - PHP 安全与 CTF: Code/PHP/php-security-and-ctf.md
+    - SQL:
+      - SQL 学习目录: Code/SQL/index.md
+      - SQL 教程:
+        - SQL 教程: Code/SQL/tutorial/index.md
+        - SQL 简介: Code/SQL/tutorial/introduction.md
+        - SQL 语法: Code/SQL/tutorial/syntax.md
+        - SQL SELECT: Code/SQL/tutorial/select.md
+        - SQL SELECT DISTINCT: Code/SQL/tutorial/select-distinct.md
+        - SQL WHERE: Code/SQL/tutorial/where.md
+        - SQL AND & OR: Code/SQL/tutorial/and-or.md
+        - SQL ORDER BY: Code/SQL/tutorial/order-by.md
+        - SQL INSERT INTO: Code/SQL/tutorial/insert-into.md
+        - SQL UPDATE: Code/SQL/tutorial/update.md
+        - SQL DELETE: Code/SQL/tutorial/delete.md
+      - SQL 高级教程:
+        - SQL 高级教程: Code/SQL/advanced/index.md
+        - SQL SELECT TOP: Code/SQL/advanced/select-top.md
+        - SQL LIKE: Code/SQL/advanced/like.md
+        - SQL 通配符: Code/SQL/advanced/wildcards.md
+        - SQL IN: Code/SQL/advanced/in.md
+        - SQL BETWEEN: Code/SQL/advanced/between.md
+        - SQL 别名: Code/SQL/advanced/aliases.md
+        - SQL 连接(JOIN): Code/SQL/advanced/join.md
+        - SQL INNER JOIN: Code/SQL/advanced/inner-join.md
+        - SQL LEFT JOIN: Code/SQL/advanced/left-join.md
+        - SQL RIGHT JOIN: Code/SQL/advanced/right-join.md
+        - SQL FULL JOIN: Code/SQL/advanced/full-join.md
+        - SQL UNION: Code/SQL/advanced/union.md
+        - SQL SELECT INTO: Code/SQL/advanced/select-into.md
+        - SQL INSERT INTO SELECT: Code/SQL/advanced/insert-into-select.md
+        - SQL CREATE DATABASE: Code/SQL/advanced/create-database.md
+        - SQL CREATE TABLE: Code/SQL/advanced/create-table.md
+        - SQL 约束: Code/SQL/advanced/constraints.md
+        - SQL NOT NULL: Code/SQL/advanced/not-null.md
+        - SQL UNIQUE: Code/SQL/advanced/unique.md
+        - SQL PRIMARY KEY: Code/SQL/advanced/primary-key.md
+        - SQL FOREIGN KEY: Code/SQL/advanced/foreign-key.md
+        - SQL CHECK: Code/SQL/advanced/check.md
+        - SQL DEFAULT: Code/SQL/advanced/default.md
+        - SQL CREATE INDEX: Code/SQL/advanced/create-index.md
+        - SQL DROP: Code/SQL/advanced/drop.md
+        - SQL ALTER: Code/SQL/advanced/alter.md
+        - SQL Auto Increment: Code/SQL/advanced/auto-increment.md
+        - SQL 视图: Code/SQL/advanced/views.md
+        - SQL 日期: Code/SQL/advanced/dates.md
+        - SQL NULL 值: Code/SQL/advanced/null-values.md
+        - SQL NULL 函数: Code/SQL/advanced/null-functions.md
+        - SQL 通用数据类型: Code/SQL/advanced/data-types-general.md
+        - SQL DB 数据类型: Code/SQL/advanced/data-types-db.md
+      - SQL 函数:
+        - SQL 函数: Code/SQL/functions/index.md
+        - SQL AVG(): Code/SQL/functions/avg.md
+        - SQL COUNT(): Code/SQL/functions/count.md
+        - SQL FIRST(): Code/SQL/functions/first.md
+        - SQL LAST(): Code/SQL/functions/last.md
+        - SQL MAX(): Code/SQL/functions/max.md
+        - SQL MIN(): Code/SQL/functions/min.md
+        - SQL SUM(): Code/SQL/functions/sum.md
+        - SQL GROUP BY: Code/SQL/functions/group-by.md
+        - SQL HAVING: Code/SQL/functions/having.md
+        - SQL EXISTS: Code/SQL/functions/exists.md
+        - SQL UCASE(): Code/SQL/functions/ucase.md
+        - SQL LCASE(): Code/SQL/functions/lcase.md
+        - SQL MID(): Code/SQL/functions/mid.md
+        - SQL LEN(): Code/SQL/functions/len.md
+        - SQL ROUND(): Code/SQL/functions/round.md
+        - SQL NOW(): Code/SQL/functions/now.md
+        - SQL FORMAT(): Code/SQL/functions/format.md
     - HTML:
       - HTML 学习目录: Code/HTML/index.md
       - HTML 教程:
