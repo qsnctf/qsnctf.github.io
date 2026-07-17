@@ -15,6 +15,33 @@ assert unique_even([3, 2, 2, 4, 1, 6]) == [2, 4, 6]
 print("实践题通过")
 ```
 
+## API 辨析表
+
+| 问题 | 应检查的概念 | 常见误区 |
+| --- | --- | --- |
+| 值还是身份 | `==` / `is` | 用 is 比较字符串 |
+| 复制还是别名 | 可变对象引用 | 以为赋值会复制 |
+| 惰性还是立即 | 生成器/list | 重复消费生成器 |
+| 缺失还是假值 | `None` / 真值 | 把 0 当缺失 |
+
+## 第二个实践题
+
+```python
+def parse_positive(text: str) -> int:
+    value = int(text)
+    if value <= 0:
+        raise ValueError("必须为正数")
+    return value
+
+assert parse_positive("5") == 5
+try:
+    parse_positive("0")
+except ValueError:
+    print("边界检查通过")
+```
+
+实践题应同时覆盖成功与失败路径。只运行 happy path 容易漏掉异常类型、边界值和资源清理问题。
+
 ## 自测题
 
 1. `==` 与 `is` 分别比较什么？

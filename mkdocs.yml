@@ -592,6 +592,23 @@ nav:
         - HTML 校验清单: Code/HTML/reference/validation-checklist.md
   - 运维/DevOps:
     - 运维/DevOps: DevOps/index.md
+    - Git:
+      - Git 教程: DevOps/Git/index.md
+      - Git 安装配置: DevOps/Git/installation-and-configuration.md
+      - Git 工作流程: DevOps/Git/workflow.md
+      - Git 工作区、暂存区和版本库: DevOps/Git/areas.md
+      - Git 创建仓库: DevOps/Git/repository.md
+      - Git 基本操作: DevOps/Git/basic-operations.md
+      - Git 分支管理: DevOps/Git/branch-management.md
+      - Git 查看提交历史: DevOps/Git/commit-history.md
+      - Git 标签: DevOps/Git/tags.md
+      - Git Flow: DevOps/Git/git-flow.md
+      - Git 进阶操作: DevOps/Git/advanced-operations.md
+      - Git GitHub: DevOps/Git/github.md
+      - Git 服务器搭建: DevOps/Git/server.md
+      - Sourcetree: DevOps/Git/sourcetree.md
+      - Git 测验: DevOps/Git/quiz.md
+      - GitHub Actions: DevOps/Git/github-actions.md
     - Docker:
       - Docker 教程: DevOps/Docker/index.md
       - Docker 镜像管理与底座: DevOps/Docker/image-management-and-foundation.md

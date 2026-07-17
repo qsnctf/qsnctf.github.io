@@ -18,6 +18,28 @@ print(math.gcd(84, 30), math.comb(5, 2))
 print(math.isclose(0.1 + 0.2, 0.3))
 ```
 
+## API 分类
+
+| 类别 | API | 边界 |
+| --- | --- | --- |
+| 取整 | `floor/ceil/trunc` | 负数方向不同 |
+| 组合 | `factorial/comb/perm` | 输入需为非负整数 |
+| 对数 | `log/log2/log10` | 输入必须为正 |
+| 精确求和 | `fsum` | 比普通 sum 减少误差 |
+
+## 示例：稳定浮点求和
+
+```python
+import math
+
+values = [1e16, 1.0, -1e16]
+print("sum:", sum(values))
+print("fsum:", math.fsum(values))
+print("有限值:", [math.isfinite(value) for value in (1.0, math.inf, math.nan)])
+```
+
+`math` 是标准库，无需安装。输入来自外部时应先拒绝 NaN/Infinity 和越界值；数学定义域错误属于可预期输入错误，而不是应忽略的运行故障。
+
 ## 常见错误与工程注意
 
 - `math.sqrt(-1)` 抛 `ValueError`，复数场景使用 `cmath.sqrt()`。

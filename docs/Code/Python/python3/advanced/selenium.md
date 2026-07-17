@@ -6,7 +6,7 @@ Selenium 通过 WebDriver 控制真实浏览器，适合端到端测试和必须
 
 ## 核心 API
 
-安装 `python -m pip install selenium`。使用 `webdriver.Chrome()` 创建浏览器，定位器放在 `By` 中，`WebDriverWait` 配合 expected conditions 做显式等待。
+本教程建议 `python -m pip install "selenium>=4.15"`。还需要兼容浏览器；Selenium Manager 通常可管理驱动，但首次运行可能需要网络下载并受代理策略影响。
 
 ```python
 from selenium import webdriver
@@ -21,6 +21,30 @@ try:
 finally:
     driver.quit()
 ```
+
+## 等待与资源
+
+| API | 用途 | 建议 |
+| --- | --- | --- |
+| `set_page_load_timeout` | 页面加载上限 | 创建后设置 |
+| `WebDriverWait` | 等元素状态 | 替代固定 sleep |
+| `implicitly_wait` | 全局隐式等待 | 不与显式等待复杂混用 |
+| `quit()` | 关闭全部窗口和驱动 | 始终 finally 调用 |
+
+## 示例：显式等待
+
+```python
+from selenium.webdriver.support.ui import WebDriverWait
+
+# 假设 driver 已按上一例创建
+# driver.set_page_load_timeout(20)
+# element = WebDriverWait(driver, 5).until(
+#     lambda current: current.find_element(By.ID, "msg")
+# )
+print("显式等待应绑定具体条件，而不是固定休眠")
+```
+
+浏览器自动化会执行站点脚本，应隔离下载目录和凭据，避免用高权限用户运行。并发实例数量受 CPU、内存和站点容量限制，必须有任务总超时和进程回收。
 
 ## 常见错误与安全注意
 

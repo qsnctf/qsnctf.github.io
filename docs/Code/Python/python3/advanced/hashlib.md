@@ -17,6 +17,30 @@ for chunk in (b"large ", b"file ", b"content"):
 print(hasher.hexdigest())
 ```
 
+## 算法与 API
+
+| API | 场景 | 注意 |
+| --- | --- | --- |
+| `sha256()` | 通用完整性摘要 | 不能隐藏内容 |
+| `blake2b()` | 快速、可加 key 摘要 | 配置摘要长度 |
+| `file_digest()` | 文件流摘要 | Python 3.11+ |
+| `pbkdf2_hmac()` | 兼容型密码派生 | 参数需按策略更新 |
+
+## 示例：分块校验文件式数据
+
+```python
+import hashlib
+from io import BytesIO
+
+stream = BytesIO(b"a" * 10_000)
+digest = hashlib.sha256()
+while chunk := stream.read(4096):
+    digest.update(chunk)
+print(digest.hexdigest())
+```
+
+`hashlib` 是标准库，无需安装。读取真实文件应使用 `with` 关闭句柄；比较安全标签用 `hmac.compare_digest()`，避免普通字符串比较暴露时序差异。
+
 ## 常见错误与安全注意
 
 - 用户密码应使用 Argon2、scrypt、bcrypt 或 PBKDF2 加盐慢哈希。

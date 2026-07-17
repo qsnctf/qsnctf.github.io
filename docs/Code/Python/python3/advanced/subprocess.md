@@ -22,6 +22,33 @@ result = subprocess.run(
 print(result.stdout.strip())
 ```
 
+## 关键参数
+
+| 参数 | 作用 | 安全/资源边界 |
+| --- | --- | --- |
+| `check=True` | 非零退出码抛异常 | 不静默继续 |
+| `timeout=` | 限制等待 | 捕获 TimeoutExpired |
+| `cwd=` | 指定工作目录 | 使用可信路径 |
+| `env=` | 指定环境 | 从最小环境构建 |
+
+## 示例：处理非零退出码
+
+```python
+import subprocess
+import sys
+
+try:
+    subprocess.run(
+        [sys.executable, "-c", "raise SystemExit(3)"],
+        check=True,
+        timeout=5,
+    )
+except subprocess.CalledProcessError as error:
+    print("退出码:", error.returncode)
+```
+
+`subprocess` 是标准库，无需安装。启动外部工具前仍需确认该可执行文件存在且版本符合要求；生产程序应记录命令标识和退出码，但不得记录含秘密的完整参数。
+
 ## 常见错误与安全注意
 
 - 用户输入参与命令时避免 `shell=True`，也不要手工拼接整条命令字符串。

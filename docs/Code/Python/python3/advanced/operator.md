@@ -17,6 +17,32 @@ clean = methodcaller("strip")
 print(clean("  Python  "))
 ```
 
+## 常用函数
+
+| 函数 | 等价操作 | 典型用途 |
+| --- | --- | --- |
+| `itemgetter(k)` | `obj[k]` | 字典/元组排序 |
+| `attrgetter(name)` | `obj.name` | 对象排序 |
+| `methodcaller(name)` | `obj.name()` | 批量调用方法 |
+| `add/mul` | `a + b` / `a * b` | 归约操作 |
+
+## 示例：对象属性排序
+
+```python
+from dataclasses import dataclass
+from operator import attrgetter
+
+@dataclass
+class Job:
+    priority: int
+    name: str
+
+jobs = [Job(2, "docs"), Job(1, "build"), Job(2, "test")]
+print(sorted(jobs, key=attrgetter("priority", "name")))
+```
+
+`operator` 是标准库，无需安装。getter 使用的字段名仍需来自可信程序配置；让用户任意选择深层属性可能暴露本不应公开的数据。
+
 ## 常见错误与工程注意
 
 - `itemgetter(1)` 对缺少索引的数据会抛异常，输入结构需先验证。

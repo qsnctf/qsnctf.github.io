@@ -17,6 +17,30 @@ parsed = urlparse(url)
 print(parsed.scheme, parsed.netloc, parse_qs(parsed.query))
 ```
 
+## 模块分工
+
+| 模块 | 作用 | 边界 |
+| --- | --- | --- |
+| `urllib.parse` | URL 解析与编码 | 不验证目标安全性 |
+| `urllib.request` | HTTP 请求 | 显式超时和关闭响应 |
+| `urllib.error` | HTTP/URL 异常 | 捕获具体类型 |
+| `robotparser` | 解析 robots.txt | 不是法律授权证明 |
+
+## 示例：无网络请求对象
+
+```python
+from urllib.request import Request
+
+request = Request(
+    "https://example.com/api",
+    headers={"User-Agent": "PythonTutorial/1.0"},
+    method="GET",
+)
+print(request.full_url, request.method, request.headers)
+```
+
+`urllib` 是标准库，无需安装。真实调用使用 `with urlopen(request, timeout=10) as response:`，并限制读取字节数；超时只约束相关阶段，不代表总业务截止时间。
+
 ## 常见错误与安全注意
 
 - 服务器端请求用户 URL 时要防 SSRF，限制协议、目标主机和重定向。

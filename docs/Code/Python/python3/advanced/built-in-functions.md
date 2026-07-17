@@ -17,6 +17,28 @@ for index, record in enumerate(sorted(records, key=lambda x: x[1], reverse=True)
 print(all(score >= 60 for score in scores))
 ```
 
+## 分类速查
+
+| 类别 | 函数 | 边界 |
+| --- | --- | --- |
+| 聚合 | `sum/min/max` | 空输入行为不同 |
+| 迭代 | `iter/next/enumerate/zip` | 多为惰性对象 |
+| 排序 | `sorted` | 返回新列表 |
+| 反射 | `getattr/hasattr` | 名称不应任意来自用户 |
+
+## 示例：带默认值的聚合
+
+```python
+values: list[int] = []
+print(sum(values, start=0))
+print(max(values, default=None))
+
+words = ["python", "api", "security"]
+print(sorted(words, key=lambda word: (len(word), word)))
+```
+
+`min()`/`max()` 的 `default` 只用于空迭代对象，不能与多个位置参数混用。对生成器执行聚合会消费它，后续如需复用应重新创建或显式保存数据。
+
 ## 常见错误与安全注意
 
 - `eval()` 和 `exec()` 不可用于不可信文本，通常应改用解析器或映射表。

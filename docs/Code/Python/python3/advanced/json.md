@@ -17,6 +17,29 @@ data["roles"] = ["reader", "writer"]
 print(json.dumps(data, ensure_ascii=False, indent=2))
 ```
 
+## 类型映射
+
+| JSON | Python | 注意 |
+| --- | --- | --- |
+| object | dict | 键必须是字符串语义 |
+| array | list | 不保证业务元素类型 |
+| number | int/float | 大数和小数精度 |
+| null | None | 与缺失字段不同 |
+
+## 示例：精确解析小数
+
+```python
+import json
+from decimal import Decimal
+
+payload = '{"price": 0.1, "quantity": 3}'
+record = json.loads(payload, parse_float=Decimal)
+total = record["price"] * record["quantity"]
+print(total, type(total).__name__)
+```
+
+`json` 是标准库，无需安装。序列化只解决表示问题，不验证业务 schema；API 边界可结合 dataclass/Pydantic 等方案检查必需字段、类型、范围和额外字段策略。
+
 ## 常见错误与工程注意
 
 - JSON 不支持集合、字节、日期和任意对象，需要显式转换或自定义编码器。

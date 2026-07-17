@@ -29,6 +29,32 @@ tasks.join()
 thread.join()
 ```
 
+## 队列类型
+
+| 类型 | 取出顺序 | 适用场景 |
+| --- | --- | --- |
+| `Queue` | FIFO | 普通任务 |
+| `LifoQueue` | LIFO | 深度优先式工作 |
+| `PriorityQueue` | 最小优先值先出 | 带优先级任务 |
+| `SimpleQueue` | FIFO、无 task tracking | 简单通信 |
+
+## 示例：有界队列与超时
+
+```python
+from queue import Full, Queue
+
+jobs: Queue[str] = Queue(maxsize=1)
+jobs.put("first", timeout=0.1)
+try:
+    jobs.put("second", timeout=0.05)
+except Full:
+    print("队列已满，触发背压")
+print(jobs.get_nowait())
+jobs.task_done()
+```
+
+`queue` 是标准库，无需安装。有界容量应根据消费者吞吐和允许内存设定；遇满时选择阻塞、丢弃、降级还是返回错误必须成为明确业务策略。
+
 ## 常见错误与工程注意
 
 - 每次成功 `get()` 都必须对应一次 `task_done()`，否则 `join()` 永远阻塞。

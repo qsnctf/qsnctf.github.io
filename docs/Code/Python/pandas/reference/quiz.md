@@ -31,6 +31,21 @@ orders["share"] = orders["amount"] / orders.groupby("customer")["amount"].transf
 print(orders)
 ```
 
+## 可运行练习二：验证连接粒度
+
+```python
+import pandas as pd
+
+orders = pd.DataFrame({"order_id": [1, 2], "customer_id": [10, 20]})
+customers = pd.DataFrame({"customer_id": [10, 20], "name": ["Ada", "Lin"]})
+joined = orders.merge(customers, on="customer_id", how="left", validate="many_to_one", indicator=True)
+assert len(joined) == len(orders)
+assert joined["_merge"].eq("both").all()
+print(joined)
+```
+
+尝试在 `customers` 中加入重复 `customer_id`，观察 `validate="many_to_one"` 如何阻止结果行数膨胀。再加入缺失客户，观察 `_merge` 的变化。
+
 ## 参考答案与注意事项
 
 1. `loc` 按标签且标签切片通常包含右端；`iloc` 按整数位置且右端不包含。

@@ -2,7 +2,7 @@
 
 ## 概念与用途
 
-OpenAI Python SDK 用于调用模型生成文本、结构化结果和其他能力。安装命令为 `python -m pip install openai`；API 密钥应通过 `OPENAI_API_KEY` 环境变量或密钥管理系统提供。
+OpenAI Python SDK 用于调用模型生成文本、结构化结果和其他能力。本页 Responses API 示例建议 `python -m pip install "openai>=1.66"`；需要网络、有效 API 密钥、可用模型和账户额度。
 
 ## 核心 API
 
@@ -19,6 +19,30 @@ response = client.responses.create(
 )
 print(response.output_text)
 ```
+
+## 客户端边界
+
+| 配置 | 用途 | 工程要求 |
+| --- | --- | --- |
+| `api_key` | 身份认证 | 仅来自秘密管理 |
+| `timeout` | 请求截止 | 按交互/批处理区分 |
+| `max_retries` | 临时故障重试 | 限制次数和成本 |
+| `model` | 能力与价格 | 配置化并允许迁移 |
+
+## 示例：先验证本地配置
+
+```python
+import os
+
+key = os.environ.get("OPENAI_API_KEY", "")
+model = os.environ.get("OPENAI_MODEL", "")
+print("密钥已配置:", bool(key))
+print("模型已配置:", model or "使用应用默认值")
+if key:
+    print("密钥长度:", len(key))  # 不打印密钥本身
+```
+
+客户端支持显式超时和重试配置，生产应用应设置总请求预算并关闭不再使用的客户端/流式响应。模型名和 SDK API 会演进，升级时需依据官方迁移文档和契约测试。
 
 ## 常见错误与安全注意
 

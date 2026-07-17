@@ -2,7 +2,7 @@
 
 ## 概念与用途
 
-PyMySQL 是纯 Python 的 MySQL/MariaDB 客户端，接口接近 Python DB-API，安装命令为 `python -m pip install PyMySQL`。它适合脚本和框架适配，但仍需外部数据库服务。
+PyMySQL 是纯 Python 的 MySQL/MariaDB 客户端，接口接近 Python DB-API。本教程建议 `python -m pip install "PyMySQL>=1.1"`；运行连接示例需要兼容数据库、网络和凭据。
 
 ## 核心 API
 
@@ -25,6 +25,29 @@ try:
 finally:
     connection.close()
 ```
+
+## 连接参数
+
+| 参数 | 用途 | 建议 |
+| --- | --- | --- |
+| `connect_timeout` | 建连上限 | 必须设置 |
+| `read_timeout` | 读取上限 | 按查询预算设置 |
+| `write_timeout` | 写入上限 | 防网络永久阻塞 |
+| `cursorclass` | 行返回形式 | DictCursor 更可读但稍有开销 |
+
+## 示例：参数化批量插入
+
+```python
+rows = [("Alice", 91), ("Bob", 88)]
+sql = "INSERT INTO score(name, value) VALUES (%s, %s)"
+print(sql)
+print("待插入参数:", rows)
+# with connection.cursor() as cursor:
+#     cursor.executemany(sql, rows)
+# connection.commit()
+```
+
+示例默认注释真实写入，复制到已授权测试库后再执行。连接应在 `finally` 关闭或交给框架连接池；异常时回滚，不能把带未提交事务的连接归还池中。
 
 ## 常见错误与安全注意
 

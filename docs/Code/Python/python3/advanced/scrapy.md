@@ -6,7 +6,7 @@ Scrapy 是事件驱动爬虫框架，内置调度器、下载器、Spider、Item
 
 ## 核心 API
 
-安装 `python -m pip install scrapy`，使用 `scrapy startproject` 创建项目。Spider 定义 `start_urls` 或 `start_requests()`，`parse()` 通过 CSS/XPath 提取并 `yield` 项目或请求。
+本教程建议 `python -m pip install "Scrapy>=2.11"`，需要网络和目标站授权。使用 `scrapy startproject` 创建项目；Spider 的解析回调通过 CSS/XPath 提取并 `yield` 项目或请求。
 
 ```python
 import scrapy
@@ -22,6 +22,30 @@ class QuoteSpider(scrapy.Spider):
 ```
 
 运行文件可用 `scrapy runspider spider.py -O output.json`。
+
+## 核心组件
+
+| 组件 | 职责 | 资源边界 |
+| --- | --- | --- |
+| Spider | 生成请求和解析响应 | 不做阻塞 I/O |
+| Scheduler | 排队与去重 | 控制队列规模 |
+| Downloader | 网络获取 | 超时、并发、重试 |
+| Pipeline | 清洗和存储 | 关闭文件/数据库 |
+
+## 示例：从本地 HTML 提取
+
+```python
+from scrapy.http import HtmlResponse
+
+response = HtmlResponse(
+    url="https://example.com/",
+    body=b"<ul><li>Python</li><li>Scrapy</li></ul>",
+    encoding="utf-8",
+)
+print(response.css("li::text").getall())
+```
+
+配置 `DOWNLOAD_TIMEOUT`、`CONCURRENT_REQUESTS_PER_DOMAIN` 和重试次数，并让 Pipeline 在 `close_spider` 清理资源。不要重试永久 4xx 或非幂等写请求。
 
 ## 常见错误与安全注意
 

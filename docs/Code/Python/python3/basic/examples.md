@@ -23,6 +23,31 @@ for word, count in word_frequency(sample):
     print(f"{word}: {count}")
 ```
 
+## 处理流程
+
+| 阶段 | 输入 | 输出 |
+| --- | --- | --- |
+| 规范化 | 原始文本 | 统一大小写文本 |
+| 提取 | 文本 | 单词序列 |
+| 聚合 | 单词序列 | Counter |
+| 展示 | 频次项 | 稳定文本输出 |
+
+## 示例：逐行处理流
+
+```python
+import re
+from collections import Counter
+from io import StringIO
+
+stream = StringIO("Python code\nPython tests\nsecure code\n")
+counts: Counter[str] = Counter()
+for line in stream:
+    counts.update(re.findall(r"[A-Za-z]+", line.casefold()))
+print(counts.most_common())
+```
+
+流式版本把内存占用限制在计数字典而不是原始文件大小。若词汇本身也可能无限增长，还需限制键数量、分区聚合或使用外部存储。
+
 ## 常见错误与工程注意
 
 - `\w` 的 Unicode 规则未必等同于业务中的“单词”，国际化分词应使用专业库。

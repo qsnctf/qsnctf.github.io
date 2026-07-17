@@ -23,6 +23,32 @@ except ZeroDivisionError:
     logger.exception("任务失败")
 ```
 
+## 组件职责
+
+| 组件 | 职责 | 工程建议 |
+| --- | --- | --- |
+| Logger | 产生分级事件 | 使用模块名 |
+| Handler | 写控制台/文件/网络 | 处理轮换与失败 |
+| Formatter | 输出字段 | 时间、级别、关联 ID |
+| Filter | 筛选或补充上下文 | 不做昂贵 I/O |
+
+## 示例：避免重复 Handler
+
+```python
+import logging
+
+logger = logging.getLogger("demo.worker")
+logger.setLevel(logging.INFO)
+if not logger.handlers:
+    handler = logging.StreamHandler()
+    handler.setFormatter(logging.Formatter("%(levelname)s %(message)s"))
+    logger.addHandler(handler)
+logger.propagate = False
+logger.info("只输出一次")
+```
+
+`logging` 是标准库，无需安装。网络 Handler 可能阻塞业务线程，生产系统可使用 `QueueHandler` 把格式化和发送移到专用消费者，并为日志后端配置容量与降级策略。
+
 ## 常见错误与安全注意
 
 - 不要记录密码、令牌、完整 Cookie 或个人敏感数据。

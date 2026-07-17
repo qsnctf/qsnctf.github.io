@@ -23,6 +23,33 @@ counter = make_counter()
 print(counter(), counter())
 ```
 
+## LEGB 规则
+
+| 层级 | 来源 | 生命周期 |
+| --- | --- | --- |
+| Local | 当前函数调用 | 调用期间 |
+| Enclosing | 外层函数闭包 | 被闭包引用期间 |
+| Global | 当前模块 | 模块对象期间 |
+| Built-in | `builtins` 模块 | 解释器期间 |
+
+## 示例：避免遮蔽内置名称
+
+```python
+import builtins
+
+values = [1, 2, 3]
+total = builtins.sum(values)
+print(total)
+
+def describe(value: int) -> str:
+    label = "local"
+    return f"{label}: {value}"
+
+print(describe(4))
+```
+
+不要把变量命名为 `list`、`sum`、`id` 等常用内置名称。静态检查工具能发现部分遮蔽问题，但清晰命名仍是最有效的预防方式。
+
 ## 常见错误与工程注意
 
 - 在函数内给名称赋值会使其成为局部变量，赋值前读取可能触发 `UnboundLocalError`。

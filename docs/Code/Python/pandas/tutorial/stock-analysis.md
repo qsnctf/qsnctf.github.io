@@ -24,6 +24,26 @@ prices["drawdown"] = wealth.div(wealth.cummax()).sub(1)
 print(prices.round(4))
 ```
 
+## 示例二：按月重采样 OHLC
+
+```python
+import pandas as pd
+
+close = pd.Series(
+    [100, 102, 101, 105, 108],
+    index=pd.date_range("2026-01-29", periods=5, freq="B"),
+    name="close",
+)
+monthly = close.resample("ME").agg(["first", "max", "min", "last"])
+print(monthly)
+```
+
+`resample` 要求日期索引，并按时间桶返回新对象。`ME` 表示月末频率；旧频率别名在不同 2.x 版本可能产生弃用提示，应以锁定版本为准。
+
+## 对齐与工程语义
+
+多只证券计算前应使用证券代码和日期的复合键，避免滚动窗口跨标的串联。不同市场交易日不一致时，横向拼接会按日期对齐并产生空值；不能随意前向填充未交易日价格。重复时间戳会让 `.loc[date]` 返回多行，必须先确认成交粒度。
+
 ## 注意事项
 
 要区分未复权与复权价格，处理拆股、分红、停牌、时区和交易日历。简单 `pct_change` 不是所有资产收益定义。回测必须避免前视偏差、幸存者偏差和未来数据泄漏，并计入手续费、滑点及成交限制；生产数据还需校验重复时间戳和价格异常。

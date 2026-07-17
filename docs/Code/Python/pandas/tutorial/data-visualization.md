@@ -21,6 +21,26 @@ plt.tight_layout()
 plt.show()
 ```
 
+## 示例二：按日期索引绘图
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+s = pd.Series([10, 13, 12], index=pd.date_range("2026-01-01", periods=3, freq="D"), name="sales")
+ax = s.plot(marker="o", figsize=(6, 3), grid=True)
+ax.axhline(s.mean(), color="tomato", linestyle="--", label="mean")
+ax.legend()
+plt.tight_layout()
+plt.show()
+```
+
+`plot` 返回 Matplotlib `Axes`，不会返回变换后的数据。DataFrame 默认以索引为横轴；若传入 `x=`，该列用于横轴但原表不会被修改。
+
+## 返回、复制与工程边界
+
+绘图前的筛选、排序和聚合通常返回新对象；绘图本身不会复制一份可供后续分析的数据。含混合字符串的数值列应先清洗。批量生成图时及时 `plt.close()`，避免累计内存；可复现报表应固定尺寸、字体、颜色、排序和 DPI。
+
 ## 注意事项
 
 绘图前应处理空值、单位和排序；时间轴先转换为日期。类别太多会使图不可读，聚合或筛选后再画。无桌面的服务器应使用非交互后端并 `savefig`；大量点可采样、分箱或预聚合，避免渲染成为瓶颈。

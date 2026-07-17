@@ -21,6 +21,34 @@ print(long)
 print(restored)
 ```
 
+## 示例二：重复键使用 pivot_table
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({"id": [1, 1, 1], "kind": ["A", "A", "B"], "value": [2, 3, 4]})
+table = df.pivot_table(index="id", columns="kind", values="value", aggfunc="sum", fill_value=0)
+print(table)
+```
+
+`pivot_table` 显式聚合重复组合；返回结果通常具有命名索引和列索引。不要用默认 `mean` 掩盖重复事实，聚合函数应来自业务定义。
+
+## 示例三：展开列表列
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({"id": [1, 2, 3], "tags": [["a", "b"], [], None]})
+expanded = df.explode("tags", ignore_index=True)
+print(expanded)
+```
+
+`explode` 会复制其他列；空列表与 `None` 的结果语义需实际检查。多列同时 explode 要求各行列表长度匹配。
+
+## 对齐、复制与性能
+
+`melt`、`pivot`、`stack` 通常分配新对象并改变索引。宽表列基数可能近似键组合数，先估算尺寸。重塑前后比较非空值数量、总额和唯一键，防止无意聚合或行膨胀。
+
 ## 注意事项
 
 `pivot` 要求索引-列组合唯一，重复时应先处理或使用带明确 `aggfunc` 的 `pivot_table`。重塑可能产生大量稀疏列并消耗内存。`explode` 会复制其他列且空列表、空值语义不同；操作前后检查行数、唯一键和汇总值。

@@ -41,7 +41,7 @@ print("optional engines:", optional)
 
 ## 兼容性边界
 
-本教程要求 Pandas 2.0 以上；`DataFrame.map` 等个别 API 要求 2.1+并在对应页面给出替代。CPU 架构、Python 版本和二进制 wheel 会影响可安装版本，CI 应在与生产一致的 Python 版本上验证导入和 I/O 引擎。
+本教程要求 Pandas >= 2.0；`DataFrame.map` 等个别 API 要求 2.1+并在对应页面给出替代。CPU 架构、Python 版本和二进制 wheel 会影响可安装版本，CI 应在与生产一致的 Python 版本上验证导入和 I/O 引擎。
 
 ## 注意事项
 

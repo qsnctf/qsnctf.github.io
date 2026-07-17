@@ -6,7 +6,7 @@ PyQt 将 Qt GUI 框架绑定到 Python，提供窗口、控件、布局、信号
 
 ## 核心 API
 
-安装 `python -m pip install PyQt6`。应用需要一个 `QApplication`，窗口调用 `show()`，最后进入 `app.exec()`；控件事件通过信号 `connect()` 到槽函数。
+本教程建议 `python -m pip install "PyQt6>=6.5"`，需要受支持的桌面系统、显示服务和 Qt 平台插件。无图形 CI 可能需要 offscreen 平台或虚拟显示环境。
 
 ```python
 import sys
@@ -19,6 +19,30 @@ button.resize(240, 80)
 button.show()
 raise SystemExit(app.exec())
 ```
+
+## 核心对象
+
+| 对象 | 作用 | 生命周期 |
+| --- | --- | --- |
+| `QApplication` | 全局事件循环 | 每进程通常一个 |
+| `QWidget` | 可视控件 | 父对象负责子对象 |
+| Signal/Slot | 解耦事件通知 | 跨线程连接需谨慎 |
+| `QThread` | Qt 线程机制 | worker 移入线程 |
+
+## 示例：无需显示的信号槽
+
+```python
+from PyQt6.QtCore import QObject, pyqtSignal
+
+class Worker(QObject):
+    completed = pyqtSignal(str)
+
+worker = Worker()
+worker.completed.connect(lambda message: print("收到:", message))
+worker.completed.emit("done")
+```
+
+窗口、线程和网络对象应建立清晰所有权，在关闭事件中停止任务并释放资源。外部请求必须配置超时；不能用强制终止线程代替协作式取消。
 
 ## 常见错误与工程注意
 
