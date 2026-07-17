@@ -57,183 +57,99 @@
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Assembly_Debugging_and_Analysis/</loc>
+         <loc>https://docs.qsnctf.com/Code/Assembly/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Assembly_in_CTF/</loc>
+         <loc>https://docs.qsnctf.com/Code/Assembly/architecture-data-and-number-representation/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Basic_Environment_and_Tools/</loc>
+         <loc>https://docs.qsnctf.com/Code/Assembly/assembly-for-reverse-and-pwn/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Common_Architectures/</loc>
+         <loc>https://docs.qsnctf.com/Code/Assembly/functions-and-calling-conventions/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Computer_Low-Level_Fundamentals/</loc>
+         <loc>https://docs.qsnctf.com/Code/Assembly/instructions-addressing-and-control-flow/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Control_Flow/</loc>
+         <loc>https://docs.qsnctf.com/Code/Assembly/registers-memory-and-stack/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Data_and_Variables/</loc>
+         <loc>https://docs.qsnctf.com/Code/Assembly/tools-disassembly-and-debugging/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Functions_and_Calling_Conventions/</loc>
+         <loc>https://docs.qsnctf.com/Code/CPP/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Language_Overview/</loc>
+         <loc>https://docs.qsnctf.com/Code/CPP/c-cpp-security-and-ctf/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Memory_and_Stack/</loc>
+         <loc>https://docs.qsnctf.com/Code/CPP/c-language-basics/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Registers/</loc>
+         <loc>https://docs.qsnctf.com/Code/CPP/cpp-language-basics/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/Relationship_Between_Assembly_and_High-Level_Languages/</loc>
+         <loc>https://docs.qsnctf.com/Code/CPP/cpp-oop-stl-and-raii/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Assembly/instruction_set/</loc>
+         <loc>https://docs.qsnctf.com/Code/CPP/environment-and-build/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/CPP/cpp-basic-syntax/</loc>
+         <loc>https://docs.qsnctf.com/Code/CPP/functions-and-program-structure/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/CPP/cpp-comments/</loc>
+         <loc>https://docs.qsnctf.com/Code/CPP/pointers-memory-and-lifetime/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/CPP/cpp-constants-literals/</loc>
+         <loc>https://docs.qsnctf.com/Code/Python/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/CPP/cpp-data-types/</loc>
+         <loc>https://docs.qsnctf.com/Code/Python/environment-syntax-and-style/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/CPP/cpp-tutorial/</loc>
+         <loc>https://docs.qsnctf.com/Code/Python/files-paths-stdlib-and-venv/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/CPP/cpp-variable-scope/</loc>
+         <loc>https://docs.qsnctf.com/Code/Python/functions-scope-iterators-and-decorators/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/CPP/cpp-variable-types/</loc>
+         <loc>https://docs.qsnctf.com/Code/Python/modules-packages-errors-and-type-hints/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Basic_Operators/</loc>
+         <loc>https://docs.qsnctf.com/Code/Python/object-oriented-programming/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Basic_Syntax/</loc>
+         <loc>https://docs.qsnctf.com/Code/Python/operators-control-flow-and-comprehensions/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Class/</loc>
+         <loc>https://docs.qsnctf.com/Code/Python/python-for-ctf/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Comment/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Comprehensions/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Conditional_Statements/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Data_Structure/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Data_Type/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Decorators/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Errors_Execptions/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_File/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Functions/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Internal_Variable/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Intro/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Iterator-Generator/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Loop/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Namespace_Scope/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_OS/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Type_Conversion/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Type_Hints/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_Venv/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_With/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_lambda/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_module/</loc>
-         <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.qsnctf.com/Code/Python/Python_stdlib/</loc>
+         <loc>https://docs.qsnctf.com/Code/Python/types-strings-bytes-and-collections/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
@@ -422,6 +338,10 @@
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Tools/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Tools/Reverse/Radare2/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
