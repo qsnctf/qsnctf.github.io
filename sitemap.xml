@@ -69,6 +69,10 @@
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
+         <loc>https://docs.qsnctf.com/Code/Assembly/instruction-cheatsheet/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/instructions-addressing-and-control-flow/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
@@ -78,6 +82,10 @@
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/tools-disassembly-and-debugging/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Assembly/tutorial/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
@@ -646,6 +654,34 @@
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/xhtml-introduction/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Java/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Java/advanced/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Java/basic/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Java/examples/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Java/libraries/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Java/oop/</loc>
+         <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Code/Java/quiz/</loc>
          <lastmod>2026-07-17</lastmod>
     </url>
     <url>
