@@ -1,445 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="青少年CTF文库——适合你快速入门的 CTF 百科全书，让网安学习之旅清晰、高效、专业。">
+  <meta name="theme-color" content="#07111f">
   <title>青少年CTF文库</title>
-  <meta name="description" content="适合你快速入门的CTF百科全书" />
-  <link rel="icon" href="/assets/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
   <style>
-    /* --- 核心变量 --- */
     :root {
-      --primary-text: #1f2937;
-      --secondary-text: #6b7280;
-      --accent-color: #0066ff;
-      --accent-hover: #0052cc;
-      --glass-bg: rgba(255, 255, 255, 0.65); /* 卡片半透明白 */
-      --glass-border: rgba(255, 255, 255, 0.8);
-      --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+      --bg: #07111f;
+      --text: #f1f7fc;
+      --muted: #91a6b9;
+      --blue: #5680ee;
+      --cyan: #5ccfc1;
+      --line: rgba(153, 190, 218, .15);
+      --font: "Microsoft YaHei UI", "PingFang SC", "Noto Sans SC", sans-serif;
+      --mono: "Cascadia Code", Consolas, monospace;
     }
 
-    body, html {
-      margin: 0; padding: 0;
-      font-family: 'Inter', sans-serif;
-      color: var(--primary-text);
-      line-height: 1.6;
-      width: 100%;
-      overflow-x: hidden;
-      /* 这是一个 fallback 背景，如果 canvas 加载失败 */
-      /* background-color: #f9fafb;  */
-    }
-
-    a { text-decoration: none; color: var(--accent-color); transition: 0.2s; }
-    a:hover { color: var(--accent-hover); }
-
-    /* --- 层级 1: 静态网格背景 (CSS 实现) --- */
-    .bg-grid {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -2;
-      background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-      background-size: 40px 40px; /* 网格大小 */
-      background-color: #ffffff; /* 底色纯白 */
-    }
-
-    /* --- 层级 2: 动态粒子画布 --- */
-    #canvas-particles {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-    }
-
-    /* --- 层级 3: 内容区域 --- */
-    .content-wrapper {
-      position: relative;
-      z-index: 1;
-    }
-
-    /* --- Hero Section --- */
-    .hero {
-      padding: 140px 20px 80px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin: 0 0 20px;
-      color: #111827;
-      letter-spacing: -0.03em;
-    }
-
-    /* 渐变标题 */
-    .title-gradient {
-      background: linear-gradient(
-        90deg,
-        #111827,
-        #0066ff,
-        #22c1ff,
-        #111827
-      );
-      background-size: 300% 300%;
-      animation: gradientMove 6s ease infinite;
-
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-    }
-
-    /* 渐变流动动画 */
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-
-    .hero p {
-      max-width: 650px;
-      margin: 0 auto;
-      font-size: 1.25rem;
-      color: var(--secondary-text);
-    }
-
-    /* 按钮组 */
-    .btn-group {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 12px 32px;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      border: 2px solid transparent;
-      position: relative;
-      overflow: hidden;
-      z-index: 10;
-    }
-
-    .btn-primary {
-      background: var(--accent-color);
-      color: #fff;
-      box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
-    }
-    .btn-primary:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
-      color: #fff;
-    }
-
-    .btn-outline {
-      background: rgba(255, 255, 255, 0.5); /* 半透明背景 */
-      backdrop-filter: blur(4px);
-      color: var(--accent-color);
-      border-color: rgba(0, 102, 255, 0.3);
-    }
-    .btn-outline:hover {
-      background: var(--accent-color);
-      color: #fff;
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-
-    /* --- Features Section (Glassmorphism) --- */
-    .features-container {
-      padding: 60px 20px 100px;
-    }
-
-    .features {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      /* 强制 4 列 */
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-    }
-
-    .feature {
-      /* 毛玻璃核心代码 */
-      background: var(--glass-bg);
-      backdrop-filter: blur(12px); 
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: var(--card-shadow);
-      transition: all 0.4s ease;
-      text-align: left;
-    }
-
-    .feature:hover {
-      transform: translateY(-8px);
-      background: rgba(255, 255, 255, 0.85); /* 悬停时更白一点，增加可读性 */
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      border-color: var(--accent-color);
-    }
-
-    .feature h3 {
-      margin: 0 0 10px;
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #111827;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    /* 标题下的装饰短线 */
-    .feature h3::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 3px;
-      background: var(--accent-color);
-      transition: width 0.3s;
-      border-radius: 2px;
-    }
-    header {
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #ffffff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    header .nav-links a {
-      margin-right: 16px;
-      color: #0066ff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    
-    
-
-    .feature p {
-      color: var(--secondary-text);
-      font-size: 0.95rem;
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
       margin: 0;
+      min-width: 320px;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 78% 25%, rgba(86, 128, 238, .13), transparent 30%),
+        linear-gradient(180deg, #07111f 0%, #091522 58%, #07111f 100%);
+      font-family: var(--font);
+      overflow-x: hidden;
     }
 
-    /* --- Footer --- */
-    footer {
-      text-align: center;
-      padding: 40px;
-      font-size: 0.9rem;
-      color: #888;
-      /* 确保 footer 也是半透明的，与环境融合 */
-      background: linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0) 100%);
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(130, 170, 202, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(130, 170, 202, .035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, #000, transparent 75%);
     }
 
-    footer a { color: #555; font-weight: 600; margin: 0 8px;}
-    footer a:hover { color: var(--accent-color); }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
+    .shell { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
 
-    /* --- 响应式 --- */
-    @media (max-width: 1024px) {
-      .features { grid-template-columns: repeat(2, 1fr); }
+    .meteor-field {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
     }
-    @media (max-width: 640px) {
-      .hero h1 { font-size: 2.5rem; }
-      .features { grid-template-columns: 1fr; }
-      .btn { width: 100%; box-sizing: border-box; }
+    .meteor {
+      position: absolute;
+      top: -12vh;
+      right: var(--start);
+      width: var(--size);
+      height: 1px;
+      opacity: 0;
+      background: linear-gradient(90deg, rgba(223, 239, 255, .76), rgba(150, 195, 255, .36) 18%, transparent);
+      box-shadow: 0 0 8px rgba(92, 146, 238, .2);
+      transform: translate(0, 0) rotate(-64deg);
+      transform-origin: left center;
+      animation: meteor-fall var(--duration) linear var(--delay) infinite;
+    }
+    .meteor::after {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: -1px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: rgba(223, 239, 255, .8);
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 10;
+      border-bottom: 1px solid rgba(153, 190, 218, .09);
+      background: rgba(7, 17, 31, .82);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand { display: inline-flex; align-items: center; gap: 13px; font-size: 18px; font-weight: 800; }
+    .brand img { width: 42px; height: 42px; object-fit: contain; }
+    .nav-links { display: flex; align-items: center; gap: 32px; color: #adbdca; font-size: 14px; }
+    .nav-links a { transition: color .2s ease; }
+    .nav-links a:hover { color: #fff; }
+    .github-link { padding-bottom: 3px; border-bottom: 1px solid rgba(241,247,252,.46); color: #fff !important; }
+
+    .hero {
+      min-height: 780px;
+      padding: 150px 0 90px;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+      gap: 72px;
+    }
+
+    .hero-copy { position: relative; z-index: 2; animation: reveal .7s both; }
+    .eyebrow { margin-bottom: 24px; color: var(--cyan); font: 700 12px var(--mono); letter-spacing: .15em; }
+    h1 { margin: 0; font-size: clamp(58px, 6.4vw, 92px); line-height: 1.03; letter-spacing: -.06em; font-weight: 900; }
+    h1 span { display: block; color: #7195f5; }
+    .lead { max-width: 620px; margin: 30px 0 40px; color: var(--muted); font-size: 18px; line-height: 1.9; }
+    .lead strong { color: #d9e7f2; font-weight: 600; }
+
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
+    .action { color: #b7c7d4; font-size: 14px; font-weight: 700; transition: color .2s ease, transform .2s ease; }
+    .action:hover { color: #fff; transform: translateX(3px); }
+    .action::after { content: " ↗"; color: #607b90; font-family: var(--mono); }
+    .action.primary {
+      min-height: 50px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      color: #07111f;
+      border-radius: 8px;
+      background: #eef6fc;
+    }
+    .action.primary:hover { color: #07111f; background: var(--cyan); transform: translateY(-2px); }
+    .action.primary::after { color: #284357; }
+
+    .hero-logo {
+      position: relative;
+      height: 500px;
+      display: grid;
+      place-items: center;
+      animation: reveal .8s .1s both;
+    }
+    .hero-logo::before {
+      content: "";
+      position: absolute;
+      width: 390px;
+      height: 390px;
+      border: 1px solid rgba(98, 140, 245, .15);
+      border-radius: 50%;
+      box-shadow: 0 0 100px rgba(63, 112, 223, .14);
+    }
+    .hero-logo::after {
+      content: "QSNCTF / KNOWLEDGE BASE";
+      position: absolute;
+      right: 0;
+      bottom: 44px;
+      color: rgba(153, 184, 209, .38);
+      font: 10px var(--mono);
+      letter-spacing: .16em;
+    }
+    .hero-logo img {
+      position: relative;
+      width: min(410px, 88%);
+      height: auto;
+      filter: drop-shadow(0 28px 60px rgba(31, 73, 170, .26));
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .section { padding: 110px 0 130px; border-top: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 80px; margin-bottom: 64px; }
+    .kicker { margin: 0 0 16px; color: var(--cyan); font: 700 11px var(--mono); letter-spacing: .16em; }
+    h2 { margin: 0; font-size: clamp(38px, 4.2vw, 58px); line-height: 1.15; letter-spacing: -.045em; }
+    .section-intro { margin: 0; color: var(--muted); line-height: 1.9; }
+
+    .feature-list { border-top: 1px solid var(--line); }
+    .feature {
+      display: grid;
+      grid-template-columns: 100px 300px 1fr;
+      gap: 32px;
+      align-items: start;
+      padding: 35px 0;
+      border-bottom: 1px solid var(--line);
+      transition: padding-left .25s ease, border-color .25s ease;
+    }
+    .feature:hover { padding-left: 12px; border-color: rgba(92,207,193,.34); }
+    .feature-number { padding-top: 5px; color: #557087; font: 11px var(--mono); }
+    .feature h3 { margin: 0; font-size: 20px; font-weight: 700; }
+    .feature p { margin: 0; max-width: 610px; color: var(--muted); font-size: 15px; line-height: 1.85; }
+
+    footer { padding: 34px 0 42px; border-top: 1px solid var(--line); }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; color: #627b8f; font: 11px var(--mono); }
+    .footer-row a { color: #9eb1c0; }
+    .footer-row a:hover { color: var(--cyan); }
+
+    @keyframes reveal { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    @keyframes meteor-fall {
+      0% { opacity: 0; transform: translate(0, 0) rotate(-64deg); }
+      8% { opacity: .72; }
+      58% { opacity: .28; }
+      68%, 100% { opacity: 0; transform: translate(-52vw, 112vh) rotate(-64deg); }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links > a:not(.github-link) { display: none; }
+      .hero { min-height: auto; grid-template-columns: 1fr; gap: 10px; padding-top: 150px; }
+      .hero-logo { height: 390px; }
+      .hero-logo::before { width: 320px; height: 320px; }
+      .section-head { grid-template-columns: 1fr; gap: 28px; }
+      .feature { grid-template-columns: 70px 240px 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      .shell { width: min(100% - 30px, 1180px); }
+      .nav { height: 66px; }
+      .brand { font-size: 16px; gap: 9px; }
+      .brand img { width: 36px; height: 36px; }
+      .github-link { font-size: 12px; }
+      .hero { padding: 125px 0 70px; }
+      h1 { font-size: clamp(50px, 16vw, 70px); }
+      .lead { font-size: 16px; margin: 24px 0 32px; }
+      .actions { gap: 18px 24px; }
+      .action.primary { width: 100%; justify-content: center; }
+      .hero-logo { height: 310px; }
+      .hero-logo::before { width: 250px; height: 250px; }
+      .hero-logo::after { bottom: 10px; }
+      .section { padding: 78px 0 90px; }
+      .section-head { margin-bottom: 45px; }
+      .feature { grid-template-columns: 48px 1fr; gap: 14px; padding: 28px 0; }
+      .feature p { grid-column: 2; }
+      .footer-row { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
   </style>
 </head>
 <body>
-<header>
-    <div class="logo"><strong>青少年CTF文库</strong></div>
-    <div class="nav-links">
-      <a href="/home/">开始学习</a>
-      <a href="https://www.qsnctf.com" target="_blank">练习平台</a>
-      <a href="https://tools.qsnctf.com" target="_blank">在线工具</a>
-      <a href="https://bbs.qsnctf.com" target="_blank">社区论坛</a>
-      <a href="https://github.com/qsnctf" target="_blank">GitHub</a>
-    </div>
-  </header>
-  <div class="bg-grid"></div>
-
-  <canvas id="canvas-particles"></canvas>
-
-  <div class="content-wrapper">
-    
-    <div class="hero">
-      <h1><span class="title-gradient">青少年CTF文库</span></h1>
-      <p>适合你快速入门的 CTF 百科全书，让网安学习之旅清晰、高效、专业。</p>
-
-      <div class="btn-group">
-        <a class="btn btn-primary" href="/home/">📘 开始学习</a>
-        <a class="btn btn-outline" href="https://www.qsnctf.com" target="_blank">⚔️ 练习平台</a>
-        <a class="btn btn-outline" href="https://tools.qsnctf.com" target="_blank">🛠️ 在线工具</a>
-        <a class="btn btn-outline" href="https://bbs.qsnctf.com" target="_blank">💬 社区论坛</a>
-      </div>
-    </div>
-
-    <div class="features-container">
-      <div class="features">
-        <div class="feature">
-          <h3>全面知识体系</h3>
-          <p>覆盖 Web、逆向、密码、Pwn、杂项等方向，从基础到进阶，构建完整技能树。</p>
-        </div>
-
-        <div class="feature">
-          <h3>实战题解与教程</h3>
-          <p>精选高质量题目与深度解析，拒绝死记硬背，注重逻辑复现与思路启发。</p>
-        </div>
-
-        <div class="feature">
-          <h3>CTF 训练生态</h3>
-          <p>无缝衔接练习平台、在线工具与社区讨论，打造学、练、赛一体化的成长闭环。</p>
-        </div>
-
-        <div class="feature">
-          <h3>社区驱动协作</h3>
-          <p>与全国各地的 CTF 爱好者一起讨论、组队、切磋，在交流中共同进步。</p>
-        </div>
-      </div>
-    </div>
-
-    <footer>
-      © 2025 青少年CTF文库 | 社区驱动 
-      <br><br>
-      加入我们：
-      <a href="https://qm.qq.com/q/wX8VEyRq6I" target="_blank">QQ群</a> ·
-      <a href="https://space.bilibili.com/2066710972" target="_blank">Bilibili</a>
-    </footer>
-
+  <div class="meteor-field" aria-hidden="true">
+    <i class="meteor" style="--start: 3vw; --size: 46px; --duration: 8.2s; --delay: -1.4s"></i>
+    <i class="meteor" style="--start: 10vw; --size: 72px; --duration: 10.6s; --delay: -7.1s"></i>
+    <i class="meteor" style="--start: 17vw; --size: 32px; --duration: 7.5s; --delay: -3.8s"></i>
+    <i class="meteor" style="--start: 24vw; --size: 88px; --duration: 12.4s; --delay: -10.2s"></i>
+    <i class="meteor" style="--start: 31vw; --size: 55px; --duration: 9.3s; --delay: -5.5s"></i>
+    <i class="meteor" style="--start: 38vw; --size: 104px; --duration: 13.1s; --delay: -2.6s"></i>
+    <i class="meteor" style="--start: 45vw; --size: 39px; --duration: 8.8s; --delay: -7.8s"></i>
+    <i class="meteor" style="--start: 52vw; --size: 64px; --duration: 11.2s; --delay: -4.2s"></i>
+    <i class="meteor" style="--start: 59vw; --size: 28px; --duration: 7.9s; --delay: -6.3s"></i>
+    <i class="meteor" style="--start: 66vw; --size: 96px; --duration: 12.8s; --delay: -9.4s"></i>
+    <i class="meteor" style="--start: 73vw; --size: 50px; --duration: 9.7s; --delay: -.8s"></i>
+    <i class="meteor" style="--start: 80vw; --size: 78px; --duration: 11.8s; --delay: -8.7s"></i>
+    <i class="meteor" style="--start: 87vw; --size: 35px; --duration: 8.5s; --delay: -3.1s"></i>
+    <i class="meteor" style="--start: 94vw; --size: 112px; --duration: 13.5s; --delay: -11.6s"></i>
+    <i class="meteor" style="--start: 100vw; --size: 60px; --duration: 10.1s; --delay: -5.9s"></i>
   </div>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="青少年CTF文库首页">
+        <img src="assets/logo.png" alt="青少年CTF文库 Logo">
+        <span>青少年CTF文库</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">知识体系</a>
+        <a href="https://www.qsnctf.com/" target="_blank" rel="noopener noreferrer">练习平台</a>
+        <a href="https://tools.qsnctf.com/" target="_blank" rel="noopener noreferrer">在线工具</a>
+        <a class="github-link" href="https://github.com/qsnctf" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </nav>
+  </header>
 
-  <script>
-    /* 动态粒子脚本 (Light Mode)
-      特点：浅灰色粒子，鼠标互动时连线变蓝
-    */
-    const canvas = document.getElementById('canvas-particles');
-    const ctx = canvas.getContext('2d');
+  <main id="top">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow">QSNCTF KNOWLEDGE BASE / 2026</div>
+        <h1 id="hero-title">青少年CTF<span>文库</span></h1>
+        <p class="lead">适合你快速入门的 <strong>CTF 百科全书</strong>，让网安学习之旅清晰、高效、专业。</p>
+        <div class="actions" aria-label="平台入口">
+          <a class="action primary" href="https://docs.qsnctf.com/home/" target="_blank" rel="noopener noreferrer">开始学习</a>
+          <a class="action" href="https://www.qsnctf.com/" target="_blank" rel="noopener noreferrer">练习平台</a>
+          <a class="action" href="https://tools.qsnctf.com/" target="_blank" rel="noopener noreferrer">在线工具</a>
+          <a class="action" href="https://rag.qsnctf.com" target="_blank" rel="noopener noreferrer">RAG 引擎</a>
+          <a class="action" href="https://bbs.qsnctf.com/" target="_blank" rel="noopener noreferrer">社区论坛</a>
+        </div>
+      </div>
+      <div class="hero-logo" aria-hidden="true">
+        <img src="assets/logo.png" alt="">
+      </div>
+    </section>
 
-    let w, h;
-    let particles = [];
-    
-    // 配置
-    const config = {
-      count: 80, // 粒子数量
-      radius: 2,
-      distance: 120, // 连线距离
-      mouseDist: 150, // 鼠标互动距离
-      color: 'rgba(31, 41, 55, 0.15)', // 粒子颜色 (深灰，低透明度)
-      lineColor: 'rgba(0, 102, 255, 0.05)', // 普通连线颜色
-      activeColor: 'rgba(0, 102, 255, 0.2)' // 激活连线颜色 (蓝色)
-    };
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="shell">
+        <div class="section-head">
+          <div><p class="kicker">CORE CAPABILITIES</p><h2 id="features-title">从入门到实战，<br>构建完整成长路径</h2></div>
+          <p class="section-intro">不只是文档集合，更是一套围绕青少年网安学习设计的成长系统。知识、练习、工具与社区彼此连接，让每一次学习都有清晰的下一步。</p>
+        </div>
 
-    const mouse = { x: null, y: null };
+        <div class="feature-list">
+          <article class="feature"><span class="feature-number">01</span><h3>全面知识体系</h3><p>覆盖 Web、逆向、密码、Pwn、杂项等方向，从基础到进阶，构建完整技能树。</p></article>
+          <article class="feature"><span class="feature-number">02</span><h3>实战题解与教程</h3><p>精选高质量题目与深度解析，拒绝死记硬背，注重逻辑复现与思路启发。</p></article>
+          <article class="feature"><span class="feature-number">03</span><h3>CTF 训练生态</h3><p>无缝衔接练习平台、在线工具与社区讨论，打造学、练、赛一体化的成长闭环。</p></article>
+          <article class="feature"><span class="feature-number">04</span><h3>社区驱动协作</h3><p>与全国各地的 CTF 爱好者一起讨论、组队、切磋，在交流中共同进步。</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    // 监听窗口大小和鼠标
-    window.addEventListener('resize', init);
-    window.addEventListener('mousemove', e => {
-      mouse.x = e.x;
-      mouse.y = e.y;
-    });
-    // 鼠标移出窗口时清除坐标
-    window.addEventListener('mouseout', () => {
-      mouse.x = null;
-      mouse.y = null;
-    });
-
-    function init() {
-      w = canvas.width = window.innerWidth;
-      h = canvas.height = window.innerHeight;
-      createParticles();
-    }
-
-    class Particle {
-      constructor() {
-        this.x = Math.random() * w;
-        this.y = Math.random() * h;
-        // 速度稍慢一点，保持优雅
-        this.vx = (Math.random() - 0.5) * 0.8;
-        this.vy = (Math.random() - 0.5) * 0.8;
-      }
-
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-
-        // 边界反弹
-        if(this.x < 0 || this.x > w) this.vx *= -1;
-        if(this.y < 0 || this.y > h) this.vy *= -1;
-      }
-
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, config.radius, 0, Math.PI * 2);
-        ctx.fillStyle = config.color;
-        ctx.fill();
-      }
-    }
-
-    function createParticles() {
-      particles = [];
-      let count = window.innerWidth < 768 ? 40 : config.count;
-      for(let i=0; i<count; i++) particles.push(new Particle());
-    }
-
-    function animate() {
-      ctx.clearRect(0, 0, w, h);
-
-      for (let i = 0; i < particles.length; i++) {
-        let p1 = particles[i];
-        p1.update();
-        p1.draw();
-
-        // 粒子间连线
-        for (let j = i; j < particles.length; j++) {
-          let p2 = particles[j];
-          let dx = p1.x - p2.x;
-          let dy = p1.y - p2.y;
-          let dist = Math.sqrt(dx*dx + dy*dy);
-
-          if (dist < config.distance) {
-            ctx.beginPath();
-            ctx.strokeStyle = config.lineColor;
-            ctx.lineWidth = 1;
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.stroke();
-          }
-        }
-
-        // 鼠标连线互动
-        if (mouse.x) {
-          let dx = mouse.x - p1.x;
-          let dy = mouse.y - p1.y;
-          let dist = Math.sqrt(dx*dx + dy*dy);
-
-          if (dist < config.mouseDist) {
-            ctx.beginPath();
-            // 距离越近，线条越明显
-            ctx.strokeStyle = config.activeColor; 
-            ctx.lineWidth = 1.5;
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(mouse.x, mouse.y);
-            ctx.stroke();
-          }
-        }
-      }
-      requestAnimationFrame(animate);
-    }
-
-    // 启动
-    init();
-    animate();
-  </script>
+  <footer>
+    <div class="shell footer-row"><span>© 2026 青少年CTF文库 | 社区驱动</span><a href="https://github.com/qsnctf" target="_blank" rel="noopener noreferrer">GITHUB / QSNCTF ↗</a></div>
+  </footer>
 </body>
 </html>
