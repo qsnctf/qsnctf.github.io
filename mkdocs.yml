@@ -202,6 +202,14 @@ nav:
         - HTTP content-type: basic/network/http/content-type.md
         - MIME 类型: basic/network/http/mime-types.md
         - HTTP2: basic/network/http/http2.md
+    - 数据结构:
+      - 数据结构: basic/data-structures/index.md
+      - 数据结构与算法: basic/data-structures/data-structures-and-algorithms.md
+      - 排序算法: basic/data-structures/sorting/index.md
+      - 堆: basic/data-structures/heap/index.md
+      - 二分搜索树: basic/data-structures/binary-search-tree/index.md
+      - 并查集: basic/data-structures/union-find/index.md
+      - 图论: basic/data-structures/graph/index.md
   - 编程: 
     - 学习路线: Code/index.md
     - C/C++:
