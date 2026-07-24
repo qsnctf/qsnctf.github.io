@@ -827,6 +827,7 @@ nav:
     - 常见堆漏洞与利用思路: Pwn/common-heap-vulnerabilities.md
   - 应急响应:
     - 介绍: Emergency_Response/index.md
+    - Solar 应急响应靶场训练合集: Emergency_Response/solar-training-collection.md
   - AI:
     - 介绍: AI/index.md
     - 环境准备: AI/Environmental/Environmental_preparation.md
