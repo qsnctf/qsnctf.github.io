@@ -2,2514 +2,2518 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.qsnctf.com/Knowledge_Tree/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/about/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/home/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/AI/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/AI/Basic/Basic_knowledge/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/AI/Basic/Basic_knowledge_2/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/AI/Basic/Basic_knowledge_3/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/AI/Basic/Basic_knowledge_4/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/AI/Basic/Basic_knowledge_5/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/AI/Basic/Basic_knowledge_6/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/AI/Basic/Basic_knowledge_7/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/AI/Environmental/Environmental_preparation/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/architecture-data-and-number-representation/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/assembly-for-reverse-and-pwn/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/functions-and-calling-conventions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/instruction-cheatsheet/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/instructions-addressing-and-control-flow/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/registers-memory-and-stack/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/tools-disassembly-and-debugging/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Assembly/tutorial/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/c-cpp-security-and-ctf/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/c-language-basics/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/cpp-language-basics/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/cpp-oop-stl-and-raii/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/environment-and-build/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/functions-and-program-structure/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/pointers-memory-and-lifetime/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/C_Tutorial/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/C_Tutorial/advanced/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/C_Tutorial/algorithms-and-projects/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/C_Tutorial/basic/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/C_Tutorial/classic-100/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/C_Tutorial/examples/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/C_Tutorial/quiz/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/C_Tutorial/standard-library/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/Cpp_Tutorial/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/Cpp_Tutorial/advanced/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/Cpp_Tutorial/basic/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/Cpp_Tutorial/examples/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/Cpp_Tutorial/oop/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/Cpp_Tutorial/opencv/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/Cpp_Tutorial/quiz/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/Cpp_Tutorial/standard-library/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/CPP/Cpp_Tutorial/stl/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/arrays/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/basic-syntax/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/concurrency/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/conditionals/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/constants/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/data-types/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/development-tools/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/embedding/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/error-handling/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/file-handling/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/generics/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/installation/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/interfaces/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/introduction/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/loops/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/maps/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/modules/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/operators/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/pointers/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/program-structure/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/quiz/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/range/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/recursion/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/regular-expressions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/scope/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/slices/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/structs/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/tooling/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/type-assertions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/type-conversion/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Go/variables/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/application-cache/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/audio-element/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/browser-support/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/canvas/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/code-style/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/drag-and-drop/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/fetch-and-networking/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/form-attributes/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/form-elements/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/geolocation/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/indexeddb/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/input-types/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/mathml/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/new-elements/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/quiz/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/security-boundaries/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/semantic-elements/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/server-sent-events/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/service-worker-and-cache/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/svg/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/video-element/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/web-sql/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/web-storage/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/web-workers/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/html5/websocket/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/media/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/media/audio/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/media/examples/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/media/legacy-plugins/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/media/multimedia/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/media/video/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/ascii/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/attributes/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/audio-video-api/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/canvas-api/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/character-sets/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/color-names/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/color-picker/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/doctypes/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/entities/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/events/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/http-messages/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/http-methods/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/iso-8859-1/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/language-codes/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/symbols/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/tag-abbreviations/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/tags-alphabetical/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/tags-by-function/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/url-encoding/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/reference/validation-checklist/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/attributes/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/basics/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/block-elements/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/color-names/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/color-values/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/colors/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/css-in-html/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/document-head/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/editors/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/elements/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/entities/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/forms/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/frames-and-iframes/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/headings/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/images/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/introduction/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/layout/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/links/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/lists/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/paragraphs/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/quick-reference/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/quiz/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/scripts/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/summary/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/tables/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/tag-abbreviations/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/text-formatting/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/urls/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/HTML/tutorial/xhtml-introduction/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Java/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Java/advanced/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Java/basic/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Java/examples/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Java/libraries/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Java/oop/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Java/quiz/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/PHP/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/PHP/arrays-control-flow-and-functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/PHP/database-and-pdo/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/PHP/environment-syntax-and-types/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/PHP/php-security-and-ctf/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/PHP/web-requests-cookies-sessions-and-upload/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/environment-syntax-and-style/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/files-paths-stdlib-and-venv/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/functions-scope-iterators-and-decorators/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/modules-packages-errors-and-type-hints/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/object-oriented-programming/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/operators-control-flow-and-comprehensions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python-for-ctf/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/types-strings-bytes-and-collections/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/bar-charts/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/chinese-text/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/common-functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/grid-lines/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/histograms/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/imread/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/imsave/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/imshow/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/installation/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/labels-and-titles/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/multiple-plots/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/pie-charts/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/plot-lines/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/plot-markers/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/pyplot/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/reference/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/scatter-plots/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/matplotlib/seaborn-tutorial/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/advanced-indexing/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/arithmetic-functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/array-attributes/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/array-operations/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/arrays-from-existing-data/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/arrays-from-numerical-ranges/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/bitwise-operations/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/broadcasting/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/byte-swapping/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/copies-and-views/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/creating-arrays/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/data-types/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/installation/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/io/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/iterating-arrays/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/linear-algebra/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/mathematical-functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/matplotlib/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/matrix-library/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/ndarray-object/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/quiz/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/slicing-and-indexing/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/sorting-and-filtering/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/statistical-functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/numpy/string-functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/apply-map-applymap/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/concat/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/data-selection/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/datetime/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/duplicates/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/filtering-query/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/groupby/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/merge/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/missing-data/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/reshaping/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/string-operations/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/time-series/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/core/window-functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/io/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/io/csv/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/io/data-export/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/io/data-io/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/io/excel/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/io/html/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/io/json/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/io/parquet-feather/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/io/sql/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/reference/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/reference/arrays/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/reference/dataframe-api/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/reference/dateoffset/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/reference/index-objects/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/reference/input-output-api/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/reference/quiz/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/reference/series-api/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/advanced-features/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/categorical-data/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/common-functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/correlation-analysis/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/data-cleaning/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/data-types/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/data-visualization/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/dataframe/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/index-guide/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/installation/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/introduction/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/multi-index/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/performance-optimization/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/series/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/sorting-and-aggregation/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/pandas/tutorial/stock-analysis/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/ai-painting/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/asyncio/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/built-in-functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/cgi-programming/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/csv/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/date-time/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/datetime/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/for-loop/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/hashlib/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/json/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/logging/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/markdown/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/math/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/mongodb/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/multithreading/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/mysql-connector/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/network-programming/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/openai/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/operator/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/pickle/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/pip/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/pyecharts/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/pymysql/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/pyqt/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/quantitative-finance/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/queue/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/random/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/re/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/regular-expressions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/requests/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/scrapy/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/selenium/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/smtp-email/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/statistics/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/stringio/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/subprocess/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/sys/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/threading/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/urllib/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/useful-resources/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/uwsgi/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/web-scraping/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/while-loop/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/advanced/xml-parsing/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/basic-syntax/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/comments/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/comprehensions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/conditionals/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/data-structures/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/data-types/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/decorators/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/dictionaries/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/environment-setup/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/errors-exceptions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/examples/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/files/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/first-program/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/input-output/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/interpreter/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/introduction/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/iterators-generators/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/lambda/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/lists/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/loops/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/modules/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/name-main/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/namespaces-scopes/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/numbers/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/object-oriented-programming/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/operators/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/os/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/pycharm/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/quiz/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/sets/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/standard-library-overview/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/strings/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/tuples/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/type-conversion/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/type-hints/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/virtual-environments/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/vscode/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Python/python3/basic/with-statement/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/async-programming/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/basic-syntax/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/cargo/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/closures/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/collections-and-strings/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/command-line-output/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/comments/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/concurrency/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/conditionals/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/data-types/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/enums/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/environment-setup/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/error-handling/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/files-and-io/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/generics-and-traits/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/introduction/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/iterators/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/lifetimes/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/loops/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/macros/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/modules/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/object-oriented/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/operators/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/ownership/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/slices/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/smart-pointers/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/Rust/structs/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/aliases/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/alter/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/auto-increment/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/between/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/check/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/constraints/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/create-database/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/create-index/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/create-table/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/data-types-db/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/data-types-general/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/dates/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/default/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/drop/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/foreign-key/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/full-join/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/in/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/inner-join/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/insert-into-select/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/join/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/left-join/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/like/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/not-null/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/null-functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/null-values/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/primary-key/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/right-join/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/select-into/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/select-top/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/union/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/unique/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/views/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/advanced/wildcards/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/avg/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/count/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/exists/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/first/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/format/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/group-by/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/having/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/last/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/lcase/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/len/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/max/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/mid/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/min/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/now/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/round/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/sum/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/functions/ucase/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/tutorial/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/tutorial/and-or/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/tutorial/delete/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/tutorial/insert-into/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/tutorial/introduction/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/tutorial/order-by/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/tutorial/select-distinct/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/tutorial/select/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/tutorial/syntax/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/tutorial/update/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Code/SQL/tutorial/where/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Classical_Cryptography/Multi_table_replacement/HILL/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Classical_Cryptography/Multi_table_replacement/Playfair/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Classical_Cryptography/Multi_table_replacement/Vigen/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Classical_Cryptography/Single_Table_Replacement/Atbash/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Classical_Cryptography/Single_Table_Replacement/Caesar/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Classical_Cryptography/Single_Table_Replacement/ROT/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Graphic_Cryptography/Introduction/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Graphic_Cryptography/Piggy_Bank/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/Introd_RSA/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Correctness_Proof/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Encryption_Decryption/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Encryption_Decryption_Example/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Key_Generation/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/Common_Modulus/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/E_Power_Of_Two/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/Hastad_Broadcast/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/Low_Encryption_Exponent/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/Rabin/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/Wiener/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Algorithm/dp_Leak/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Factorization/Fermat/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Factorization/GCD_Common_Factor/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Factorization/Pollard_P_Minus_1/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Modern_Cryptography/asymmetric/RSA_Attacks/Factorization/Williams_P_Plus_1/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Other_Cryptography/Baconian/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Other_Cryptography/Fence/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Crypto/Other_Cryptography/Polybius_Square/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Docker/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Docker/compose-and-cluster/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Docker/container-lifecycle-and-operations/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Docker/dockerfile-advanced-builds/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Docker/image-management-and-foundation/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Docker/storage-and-networking/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/advanced-operations/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/areas/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/basic-operations/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/branch-management/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/commit-history/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/git-flow/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/github-actions/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/github/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/installation-and-configuration/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/repository/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/server/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/sourcetree/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/tags/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/DevOps/Git/workflow/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.qsnctf.com/Emergency_Response/</loc>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/MCP/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/Brute_Force/Brute_Force/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/File_Repair/JPG_Repair/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/File_Repair/PNG_Repair/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/File_Repair/ZIP_Repair/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/File_Structure/File_Structure/GIF_Structure/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/File_Structure/File_Structure/JPG_Structure/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/File_Structure/File_Structure/MP3_Structure/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/File_Structure/File_Structure/PNG_Structure/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/File_Structure/File_Structure/WAV_Structure/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/File_Structure/File_Structure/ZIP_Structure/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/Steganography/BMP_Steganography/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/Steganography/JPG_Steganography/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/Steganography/MP3_Steganography/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/Steganography/PNG_Steganography/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/Steganography/WAV_Steganography/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/ASCII/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/Alphabet/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/GrayCode/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/HTMLEntity/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/Hex/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/Huffman/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/Manchester/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/Morse/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/PhoneDial/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/TapCode/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/URL/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/Unicode/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/XXencoding/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/Base/Base32/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/Base/Base36/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/Base/Base58/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Misc/encoding/Base/Base64/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Pwn/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Pwn/common-heap-vulnerabilities/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Pwn/heap-concepts/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Pwn/stack-concepts/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Pwn/stack-overflow-basics/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Reverse/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Reverse/File_Format/ELF/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Reverse/Tools/IDA_PRO/IDA-Pesudocode-A/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Reverse/Tools/IDA_PRO/IDA-View/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Reverse/Tools/IDA_PRO/IDA_PRO/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Reverse/Tools/IDA_PRO/IDA_User_Interface/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Tools/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Tools/Pwn/GDB/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Tools/Pwn/Pwntools/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Tools/Reverse/Radare2/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Tools/encoding/CyberChef/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Introduction/Website_How_It_Works/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Introduction/Website_Status_Management/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Web_Security_Basic_Vulnerabilities/CSRF/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Web_Security_Basic_Vulnerabilities/Command_Execution/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Web_Security_Basic_Vulnerabilities/Command_Execution_Bypasses/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Web_Security_Basic_Vulnerabilities/Cross_Site_Scripting/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Web_Security_Basic_Vulnerabilities/File_Inclusion/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Web_Security_Basic_Vulnerabilities/File_Upload/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Web_Security_Basic_Vulnerabilities/PHP_features/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Web_Security_Basic_Vulnerabilities/Parser_Vulnerabilities/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Web_Security_Basic_Vulnerabilities/SQL_Injection/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Web_Security_Basic_Vulnerabilities/SSRF/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/Web/Web_Security_Basic_Vulnerabilities/XSS_LAB/XSS_LAB/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/How_does_a_computer_work/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/history/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/intro/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/operating_system/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/practice/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/data-structures/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/data-structures/data-structures-and-algorithms/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/data-structures/binary-search-tree/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/data-structures/graph/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/data-structures/heap/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/data-structures/sorting/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/data-structures/union-find/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/intro/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/osi/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/http/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/http/content-type/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/http/http2/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/http/intro/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/http/message-structure/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/http/methods/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/http/mime-types/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/http/response-headers/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/http/status-codes/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/arp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/communication-basics/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/dhcp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/dns/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/ftp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/ggp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/http/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/https/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/icmp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/igmp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/imap/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/introduction/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/mcp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/mtp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/network-devices/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/ntp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/pop3/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/ppp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/rarp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/rdp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/sftp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/smtp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/ssh/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/ssl/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/tcp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/telnet/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/tls/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/protocols/udp/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/tcp-ip/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/tcp-ip/addressing/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/tcp-ip/introduction/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/tcp-ip/mail/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
          <loc>https://docs.qsnctf.com/basic/network/tcp-ip/protocols/</loc>
-         <lastmod>2026-07-17</lastmod>
+         <lastmod>2026-07-24</lastmod>
     </url>
 </urlset>
